@@ -1,38 +1,44 @@
 # yzh119.github.io
 
-A minimalist blog built with [Jekyll](https://jekyllrb.com) and hosted on GitHub Pages.
+A minimalist blog built with [Hugo](https://gohugo.io) and hosted on GitHub Pages.
 
 ## Write a post
 
-Add a Markdown file to `_posts/` named `YYYY-MM-DD-title.md`:
+```bash
+hugo new content posts/my-post.md
+```
+
+Or add a Markdown file to `content/posts/` with front matter:
 
 ```markdown
 ---
-layout: post
 title: "My Post"
-date: 2025-09-06 12:00:00 +0800
+date: 2025-09-06T12:00:00+08:00
+tags: ["example"]
 ---
 
 Your content here.
 ```
 
-Push to `main` — GitHub Pages builds and deploys automatically.
+Push to `main` — GitHub Actions builds and deploys automatically.
 
-## Local preview (optional)
+## Local preview
 
 ```bash
-bundle install
-bundle exec jekyll serve
-# open http://localhost:4000
+hugo server -D          # includes drafts, open http://localhost:1313
 ```
 
 ## Structure
 
 ```
-_config.yml        site config
-_layouts/          page templates (default, post)
-_posts/            blog posts (Markdown)
-assets/css/        styles
-index.html         post list (home)
-about.md           about page
+hugo.toml              site config
+layouts/               templates (baseof, index, list, single)
+content/posts/         blog posts (Markdown)
+content/about.md       about page
+static/css/            styles
+.github/workflows/     GitHub Actions deploy
 ```
+
+## First-time setup on GitHub
+
+Repo → **Settings → Pages → Build and deployment → Source: GitHub Actions**.

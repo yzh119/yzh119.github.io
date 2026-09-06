@@ -1,0 +1,38 @@
+baseURL = "https://yzh119.github.io/"
+title = "yzh119"
+
+[languages.en]
+  locale = "en-us"
+
+# Pretty output & summaries
+summaryLength = 30
+enableRobotsTXT = true
+
+[params]
+  tagline = "notes & writing"
+  author = "Zihao Ye"
+  description = "A minimalist blog."
+
+[menu]
+  [[menu.main]]
+    name = "home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "about"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "rss"
+    url = "/index.xml"
+    weight = 3
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.goldmark.renderer]
+    unsafe = true
+
+[taxonomies]
+  tag = "tags"

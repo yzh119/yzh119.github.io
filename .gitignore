@@ -1,8 +1,4 @@
-_site/
-.sass-cache/
-.jekyll-cache/
-.jekyll-metadata
-vendor/
-Gemfile.lock
+public/
+resources/_gen/
+.hugo_build.lock
 .DS_Store
-.bundle/

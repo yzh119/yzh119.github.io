@@ -55,11 +55,15 @@ a:hover { text-decoration: underline; }
 }
 .post-list time { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 0.9rem; flex-shrink: 0; }
 
+.page-title { margin-bottom: 1.5rem; }
 .post-title { margin-bottom: 0.25rem; }
 .post-meta { color: var(--muted); font-size: 0.9rem; margin-top: 0; }
 
 .post-content { margin-top: 2rem; }
 .post-content h2 { margin-top: 2rem; }
+
+.post-tags { margin-top: 2.5rem; color: var(--muted); font-size: 0.9rem; }
+.post-tags a { color: var(--muted); }
 
 pre, code {
   font-family: "SF Mono", Menlo, Consolas, monospace;

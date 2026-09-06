@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="post">
+  <h1 class="post-title">{{ .Title }}</h1>
+  {{ if not .Date.IsZero }}
+  <p class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></p>
+  {{ end }}
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+  {{ with .Params.tags }}
+  <p class="post-tags">
+    {{ range . }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a> {{ end }}
+  </p>
+  {{ end }}
+</article>
+{{ end }}
