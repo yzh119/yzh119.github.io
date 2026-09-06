@@ -1,0 +1,65 @@
+---
+title: "[AI]用数字而不是形容词控制比例"
+date: 2026-09-06T19:00:00+08:00
+series: ["英雄无敌3"]
+ai: true
+tags: ["vcmi", "ai", "graphics"]
+---
+
+上一篇里，墓园城十四个兵种的概念稿只有八个通过比例检查，六个偏宽，一个偏窄的都没有。
+这篇讲怎么修好的，以及第一个 3D 模型。
+
+## 形容词把事情弄得更糟
+
+偏差是单向的，所以改法很直接：在 prompt 里告诉模型要收紧。我按量到的宽高比给每个兵种
+配了一句形容，比如骨龙（0.76）配的是 "broad and low, only slightly taller than it is wide"。
+
+结果骨龙从 +35% 变成 **+51%**。
+
+原因事后看很清楚：形容词描述的不只是形状，还有姿态。"broad and low" 读起来像在描述一个
+张开翅膀、压低身体的姿势，模型照做了。幽灵那条也一样，从 +16% 过头到 -18%。
+
+换成数字就没有这个问题：
+
+```
+The whole silhouette fits in a box about 1.3 times as tall as it is wide.
+```
+
+这句话只约束外框，不暗示任何姿态。而且它是从原版量到的宽高比算出来的，一行代码，
+不用给十四个兵种各写一句。
+
+十四个全部落进 15% 区间，骨龙 +51% → +9%。
+
+<figure>
+  <img src="/images/vcmi/necropolis-v2.jpg" alt="墓园城十四个兵种概念稿">
+  <figcaption>十四个全绿。上一版是八个。</figcaption>
+</figure>
+
+## 内容审核会拦僵尸
+
+两个僵尸的 prompt 被 FLUX 拒了，理由是 Violence。触发词是 "rotting flesh"、
+"dried blood"、"bloated" 这类。
+
+改成 desiccated、grey-green skin drawn tight、tattered rags 就过了，形象没丢。
+我把这条记进了 roster 文件的注释里——不然过几周有人觉得措辞太绕，"优化"回去，又会被拦。
+
+## 第一个 3D 模型
+
+概念稿定下来之后，骷髅送去 Meshy 做图生 3D：quad 拓扑，目标两万面，带贴图。
+
+<figure>
+  <img src="/images/vcmi/skeleton-mesh.jpg" alt="骷髅的 3D 模型">
+  <figcaption>37508 顶点，46034 三角面，base color 贴图。30 credits。</figcaption>
+</figure>
+
+上传前先按 alpha 把图裁到主体。概念稿是 1024×1440 的画布，主体只占其中 19%，
+剩下全是透明区域——重建的是你给的东西，裁一下不花钱。
+
+分工是明确的：概念稿一直用 BFL 的 FLUX.2 [pro]，Meshy 只做这一步。
+
+## 下一步
+
+绑骨。骷髅是人形，Meshy 的绑骨 API 能覆盖；但兵种表里一大半不是人形，那部分要用别的。
+
+代码在 [PR #10](https://github.com/yzh119/vcmi/pull/10)：比例提示、审核绕过的措辞、
+以及 `gen_mesh.py`。
