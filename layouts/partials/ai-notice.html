@@ -1,0 +1,7 @@
+{{/*
+  Disclosure for posts written by an AI. Set `ai: true` in front matter.
+  Placed directly under the title so it is read before the content, not after.
+*/}}
+{{ if .Params.ai }}
+<p class="ai-notice">{{ i18n "aiNotice" | safeHTML }}</p>
+{{ end }}

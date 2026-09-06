@@ -4,6 +4,17 @@
   {{ if not .Date.IsZero }}
   <p class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></p>
   {{ end }}
+  {{ with .Params.series }}
+  <p class="post-series">
+    {{ range . }}<a href="{{ "series/" | relLangURL }}{{ . | urlize }}/">{{ i18n "seriesLabel" }}{{ . }}</a>{{ end }}
+  </p>
+  {{ end }}
+  {{ partial "ai-notice.html" . }}
+  {{ with .Translations }}
+  <p class="post-translation">
+    {{ range . }}<a href="{{ .RelPermalink }}">{{ i18n "readInOther" .Language.LanguageName }}</a>{{ end }}
+  </p>
+  {{ end }}
   <div class="post-content">
     {{ .Content }}
   </div>

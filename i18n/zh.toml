@@ -1,0 +1,8 @@
+[readInOther]
+other = "阅读 {{ . }} 版本"
+
+[aiNotice]
+other = "本文由 AI 撰写。"
+
+[seriesLabel]
+other = "系列："

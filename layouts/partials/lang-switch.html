@@ -1,0 +1,27 @@
+{{/*
+  Language switch. On a page that has a translation this links to that exact
+  page, so the reader keeps their place instead of being dropped on the home
+  page of the other language. Elsewhere it falls back to the language home.
+*/}}
+{{ $page := . }}
+{{ if gt (len site.Languages) 1 }}
+<span class="lang-switch">
+  {{ range site.Languages }}
+    {{ $lang := . }}
+    {{ $target := "" }}
+    {{ if eq $lang.Lang $page.Language.Lang }}
+      {{ $target = "" }}
+    {{ else }}
+      {{ range $page.Translations }}
+        {{ if eq .Language.Lang $lang.Lang }}{{ $target = .RelPermalink }}{{ end }}
+      {{ end }}
+      {{ if not $target }}
+        {{ $target = $lang.Lang | relLangURL }}
+      {{ end }}
+    {{ end }}
+    {{ if $target }}<a href="{{ $target }}">{{ $lang.LanguageName }}</a>
+    {{ else }}<span class="on">{{ $lang.LanguageName }}</span>
+    {{ end }}
+  {{ end }}
+</span>
+{{ end }}

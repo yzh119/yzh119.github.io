@@ -1,31 +1,66 @@
 baseURL = "https://yzh119.github.io/"
 title = "yzh119"
 
-[languages.en]
-  locale = "en-us"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 
 # Pretty output & summaries
 summaryLength = 30
 enableRobotsTXT = true
 
 [params]
-  tagline = "notes & writing"
   author = "Zihao Ye"
-  description = "A minimalist blog."
 
-[menu]
-  [[menu.main]]
-    name = "home"
-    url = "/"
+[languages]
+  [languages.en]
+    languageName = "EN"
+    languageCode = "en-us"
     weight = 1
-  [[menu.main]]
-    name = "about"
-    url = "/about/"
+    title = "yzh119"
+    [languages.en.params]
+      tagline = "notes & writing"
+      description = "A minimalist blog."
+    [[languages.en.menu.main]]
+      name = "home"
+      url = "/"
+      weight = 1
+    [[languages.en.menu.main]]
+      name = "about"
+      url = "/about/"
+      weight = 2
+    [[languages.en.menu.main]]
+      name = "series"
+      url = "/series/"
+      weight = 3
+    [[languages.en.menu.main]]
+      name = "rss"
+      url = "/index.xml"
+      weight = 4
+
+  [languages.zh]
+    languageName = "中文"
+    languageCode = "zh-cn"
     weight = 2
-  [[menu.main]]
-    name = "rss"
-    url = "/index.xml"
-    weight = 3
+    title = "yzh119"
+    [languages.zh.params]
+      tagline = "笔记与写作"
+      description = "一个极简博客。"
+    [[languages.zh.menu.main]]
+      name = "首页"
+      url = "/zh/"
+      weight = 1
+    [[languages.zh.menu.main]]
+      name = "关于"
+      url = "/zh/about/"
+      weight = 2
+    [[languages.zh.menu.main]]
+      name = "系列"
+      url = "/zh/series/"
+      weight = 3
+    [[languages.zh.menu.main]]
+      name = "RSS"
+      url = "/zh/index.xml"
+      weight = 4
 
 [markup]
   [markup.highlight]
@@ -36,3 +71,4 @@ enableRobotsTXT = true
 
 [taxonomies]
   tag = "tags"
+  series = "series"

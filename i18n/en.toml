@@ -1,0 +1,8 @@
+[readInOther]
+other = "Read this in {{ . }}"
+
+[aiNotice]
+other = "Written by AI."
+
+[seriesLabel]
+other = "Series: "

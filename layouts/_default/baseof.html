@@ -15,8 +15,9 @@
     <a class="site-title" href="{{ "/" | relURL }}">{{ site.Title }}</a>
     <nav class="site-nav">
       {{ range site.Menus.main }}
-      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      <a href="{{ .URL }}">{{ .Name }}</a>
       {{ end }}
+      {{ partial "lang-switch.html" . }}
     </nav>
   </header>
 
