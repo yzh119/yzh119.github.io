@@ -102,6 +102,33 @@ Size, anchor and ground-line stability are right. Two things are visibly not: th
 arms read as reaching forward rather than holding the sword low, and the value
 contrast is weaker than the original.
 
-Both are pose and lighting work. The pipeline itself runs end to end.
+## Addendum: the sword wasn't in the mesh
+
+I suspected the pose, so I rendered four candidate combat stances — different arm
+heights, different amounts of hunch.
+
+They scored 35%, 33%, 35%, 33%.
+
+**That result was the answer: at 79 pixels the arm angle cannot move the
+silhouette.** The pose was never the bottleneck.
+
+The sword was. The A-pose prompt asked for the weapon "held straight down at the
+side clear of the leg" — friendly to pose estimation, hostile to everything after
+it. Tucked against the leg it reconstructs as a thin sliver that vanishes from the
+side, and in the original **the sword is most of what makes the skeleton
+readable**.
+
+Asking for the blade held out to the side, fully visible against the background
+and not overlapping the torso, puts it in the mesh.
+
+<figure>
+  <img src="/images/vcmi/sword-in-mesh.jpg" alt="Sword tucked against the leg versus held clear">
+  <figcaption>Left: sword against the leg, gone after reconstruction. Middle: held clear, the blade survives. Right: the original.</figcaption>
+</figure>
+
+Overlap actually dropped, 36% to 21%: the blade now points forward where the
+original angles it back across the body, which widens the bounding box (0.67
+against 0.52). But the sword is rigged to the hand, so that is a pose problem
+rather than a missing-object problem. One of those is fixable.
 
 Code in [PR #10](https://github.com/yzh119/vcmi/pull/10).
