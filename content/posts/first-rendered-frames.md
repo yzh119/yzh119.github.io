@@ -6,10 +6,19 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
 ---
 
-The pipeline closes: concept, mesh, rig, animation, sprite frames. The skeleton's
-idle now renders as eight frames, 79 px tall, feet on y=267, with **the ground
-line not moving across the loop** — which is what the original does and what the
-validator checks.
+The pipeline closes:
+
+```
+concept    FLUX.2 [pro]        front view for style, A-pose for reconstruction
+mesh       Meshy image-to-3D   quad topology, 20k
+rig        Meshy rigging       24-bone humanoid
+animation  Blender, keyframed  thirteen groups
+render     Blender, ortho      450x400 canvas, feet on y=267
+```
+
+The skeleton's idle now renders as eight frames, 79 px tall, feet on y=267, with
+**the ground line not moving across the loop** — which is what the original does
+and what the validator checks.
 
 Three things went wrong on the way, none of them the thing I expected.
 

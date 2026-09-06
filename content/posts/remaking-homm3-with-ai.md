@@ -20,6 +20,24 @@ JSON-defined animations, data-driven creatures and skills, Lua wired into combat
 
 So the tracks below can move independently.
 
+## The workflow
+
+What is used where, and why:
+
+| Stage | Tool | Notes |
+|---|---|---|
+| **Concept** | FLUX.2 [pro] (Black Forest Labs) | Two views per creature: a front view that fixes style and proportion, and an A-pose for reconstruction |
+| **Mesh** | Meshy image-to-3D | Quad topology, remeshed to 20k |
+| **Rig** | Meshy rigging | 24-bone humanoid. **Non-humanoids need Tripo** — Meshy's rigging API is documented as humanoid-only, and most of the roster is dragons, hydras and serpents |
+| **Animation** | Blender, keyframed by hand | Thirteen groups. The originals are short and stylised; no motion library matches them |
+| **Render** | Blender, orthographic | Three passes: body, ground shadow, white outline |
+| **Validation** | Our own tooling | Canvas consistency, anchor, ground-line drift, layer completeness |
+
+The split is deliberate: **concepts stay with FLUX, Meshy does mesh and rig only,
+Blender does animation and render.** Every stage writes a json alongside its output
+recording the task id, parameters and cost, so a result traces back to the request
+that produced it.
+
 ## Art
 
 The whole creature roster replaced, through a 3D pipeline: concept → image-to-3D →
