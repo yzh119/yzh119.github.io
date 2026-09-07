@@ -161,11 +161,19 @@ Calibrating once on the idle and rendering every group through that camera:
 | guard | 82–109 | 80–111 |
 | forward attack | 69–108 | 79–103 |
 
-The widths still lag on the walk — 41–53 against 54–72. That one is not the
-stride: swinging the legs 45% further moved the silhouette by a single pixel,
-because at this camera angle the stride runs almost straight into the lens. The
-original gets its width from carrying the sword out horizontally, and on this
-mesh the blade is welded in line with the forearm, so the wrist cannot aim it.
+The widths still lagged on the walk — 41–53 against 54–72. Not the stride:
+swinging the legs 45% further moved the silhouette by a single pixel, because at
+this camera angle the stride runs almost straight into the lens. The original
+gets its width from carrying the sword out level rather than letting it hang.
+
+I first wrote that off as impossible, on the grounds that the blade is welded in
+line with the forearm. That was true when the sword was weighted to a foot. It
+is not true now: the rebind gives the hand bone full weight over the blade, so
+the wrist aims it directly — **-70° puts it at +3 above horizontal where 0
+leaves it at -68**. Reaching for the same angle with the shoulder instead threw
+the whole silhouette out to 64–81 px wide and dropped it to 59 tall.
+
+Fixing one thing had removed a constraint I was still reasoning under.
 
 ## Camera angle
 
