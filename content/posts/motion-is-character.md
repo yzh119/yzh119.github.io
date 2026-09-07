@@ -17,6 +17,44 @@ and none of the skeleton's smooth-tube problem.
 Then the validator reported zero errors and zero warnings, and two things were
 wrong.
 
+## The mesh itself
+
+<figure>
+  <img src="/images/vcmi/zombie-mesh.jpg" alt="Four views of the zombie mesh">
+  <figcaption>The mesh Meshy produced, at 0/90/180/270. 25890 vertices, 37280 triangles.</figcaption>
+</figure>
+
+Better than I expected: ribs reading under the skin, collarbones, shoulder blades,
+kneecaps, articulated toes, folds and a torn edge on the loincloth. **The back is
+complete**, from two views that showed only front and side.
+
+Against the skeleton the contrast is clear — same service, same parameters. A
+solid body reconstructs well; the skeleton's separated thin bones fused into
+smooth tubes. The difference isn't the tool, it's what is being reconstructed.
+
+Two problems, though.
+
+**Most of the colour is gone.** The concept has grey-green skin and a brown
+loincloth; on the mesh only the loincloth keeps any brown and the body is near
+uniform grey-white. That explains why the rendered sprites look washed out next to
+the original's blue-grey skin, dark trousers and red wounds.
+
+**And it reads as a gaunt living man rather than a zombie.** No decay, no wounds,
+no layering in the rags.
+
+That one is mine. As [an earlier post](/posts/prompt-ratios-and-first-mesh/) noted,
+FLUX's content filter rejected "rotting flesh" and "dried blood" as Violence, and
+I reworded to "desiccated" and "skin drawn tight" to get through. I treated it as a
+wording problem — **and got a lean, intact body, having written the creature's
+defining feature out of the prompt.**
+
+Working around a filter has a cost, and the cost doesn't show up at the rejection.
+It shows up two steps later in the mesh.
+
+It should be recoverable without tripping the filter: `sunken hollow cheeks`,
+`exposed ribcage`, `torn hanging rags`, `mottled discolored skin`. Those describe
+form and colour rather than violence.
+
 ## First: frame counts inherited from the skeleton
 
 The zombie's death animation is nine frames in the original. I rendered six. Its
