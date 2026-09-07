@@ -250,6 +250,49 @@ rendering at azimuth 0 — straight on — which foreshortened every swing towar
 the lens. The default is now **-40°**. Same model and same poses; the arc is
 now visible.
 
-Code in [PR #10](https://github.com/yzh119/vcmi/pull/10), which now carries the
-material fix, the hop-distance rebind, pose mirroring and the corrected strike
-keys.
+
+## Deltas on a shared stance
+
+Every group in `poses.py` is stored as a **delta on one shared combat stance**.
+That keeps a creature recognisable across all thirteen, and it is the wrong unit
+whenever the stance is already doing what the group needs to *replace*.
+
+The walk showed it. The stance holds a wide combat stride; the walk cycle swung
+the legs again on top of it; the two compounded into a **126° split** and the
+skeleton scissored in place instead of walking. Stating the walk's legs
+absolutely and subtracting the stance decouples them — 47°.
+
+Worse, the stance carries a 100° inward roll on the weapon arm, which is what
+keeps the blade on the sword's own side of the body. Anything layered on top has
+its idea of "forward" rotated by that much, so the forward attack's strike hung
+the blade nose-down through all five strike frames while the original thrusts
+level. No amount of offset tuning fixed it; solving the strike in absolute
+angles and storing `absolute - stance` did, first try.
+
+I changed the stance five times in one sitting before this was clear. Each time
+something got better and something else broke: fix the blade's side, the idle
+gets 8 px wider; fix the width, the attack loses its reach.
+
+## Angles are the cause; positions are what you can compare
+
+Three rounds went into the walk's buried skull, all of them adjusting the neck
+angle, each one making it worse. The neck bone points up, so turning it swings
+the skull forward and **down** along an arc rather than lifting it:
+
+| neck angle | skull underside above the top of the chest |
+|---|---|
+| +50 | −0.05 |
+| +34 | −0.01 |
+| +18 | +0.02 |
+| **−25** | **+0.09** |
+
+Monotonic, and my "fix" had moved it from −14 to +18 — one step further the
+wrong way.
+
+What found it was not another angle. It was measuring the **skull mesh's
+underside against the top of the ribcage**, and comparing that to the idle frame,
+which reads correctly at +0.10. The walk was at +0.02: the head was sitting on
+the chest. An angle can only be compared to another angle you also guessed. A
+position can be compared to a frame that already looks right.
+
+Code in [PR #10](https://github.com/yzh119/vcmi/pull/10).
