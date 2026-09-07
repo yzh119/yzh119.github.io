@@ -116,6 +116,36 @@ The resting guard sits at 0.4 with the blade crossing the shins, which is where
 the original holds it. The old stance left it hanging off the hip on the far
 side from the direction the creature faces.
 
+## The arms were not trading places
+
+A body swinging a weapon puts the weapon hand back and the free hand forward on
+the wind-up, then trades them on the strike. Measured against the hips:
+
+| `ATTACK_FRONT` | rest | wind-up | strike |
+|---|---|---|---|
+| weapon hand | +0.29 | +0.03 | +0.42 |
+| free hand, before | +0.33 | +0.33 | +0.33 |
+| free hand, after | +0.33 | +0.39 | −0.04 |
+
+The weapon hand was already doing its job — drawing back to +0.03, driving
+through to +0.42. The free hand sat at +0.33 in every frame of every attack,
+because the keys never named it, so it stayed in the base stance while
+everything else moved.
+
+<figure>
+  <img src="/images/vcmi/arm-counterswing.jpg" alt="Wind-up and strike, showing the two hands trading places">
+  <figcaption>Wind-up and strike. The free hand leads on the left and trails on the right.</figcaption>
+</figure>
+
+The free arm takes the same sign convention as the weapon arm: negative X on the
+upper arm carries the hand forward, +0.46 at −30° against −0.21 at +60°. With
+the counterswing the free hand leads the weapon hand by 0.30 to 0.46 at the
+wind-up and trails it by 0.21 to 0.52 at the strike, in all three attacks.
+
+`ATTACK_UP` needed more than the other two. An upward strike does not carry the
+weapon hand far forward, so at +30 the two hands still sat at the same depth;
++48 separates them.
+
 ## The poses were the wrong shape
 
 With the sword working, the frames could finally be compared to the original as
