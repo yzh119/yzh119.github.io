@@ -295,4 +295,29 @@ which reads correctly at +0.10. The walk was at +0.02: the head was sitting on
 the chest. An angle can only be compared to another angle you also guessed. A
 position can be compared to a frame that already looks right.
 
+## The turn that never turned
+
+`TURN_L/R` is two frames: the creature pivots from its three-quarter view to face
+the viewer. Ours stayed where it was, 48–58 px wide against the original's 38–39
+and 80–81 tall against 82–108, because the body never rotated.
+
+The keys yawed the hips on Z. Measured against the direction that faces the
+camera, the stance sits at **−40.7°** and the old keys took it to **−78.8°** —
+they were turning the creature further away.
+
+So I tried Y, the roll about the bone's own axis. It measured beautifully: +60
+landed at **+6.1°**, nearly square to the camera. It rendered the skeleton lying
+on its side.
+
+The metric was a shoulder line projected onto the ground plane, and **a fallen
+body's shoulder line rotates too**. It could not tell a yaw from a fall. This is
+the third time in this post that a measurement was true and the conclusion drawn
+from it was wrong, and the pattern is the same each time: the number described
+something narrower than the thing I cared about.
+
+A bone's axes are not the world's. Turning a creature is a rotation of the whole
+model about the world vertical — a property of the group, not of any bone. Groups
+now carry an optional `yaw` and the renderer rotates the armature object.
+41–47 × 80–105, sword raised, against 38–39 × 82–108.
+
 Code in [PR #10](https://github.com/yzh119/vcmi/pull/10).
