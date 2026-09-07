@@ -117,7 +117,7 @@ obvious once written down as numbers.
 |---|---|---|---|
 | idle, width × height | 44 × 80 | 29 × 80 | 40 × 80 |
 | guard | 36–61 × 82–109 | 40–85 × 70–80 | 40–68 × 80–111 |
-| walk | 54–72 × 71–76 | 37–54 × 78–85 | — |
+| walk | 54–72 × 71–76 | 37–54 × 78–85 | 41–53 × 71–73 |
 
 **The idle was a column.** Legs nearly together, knees barely bent, which reads
 as standing to attention rather than braced. Opening the stride and bending both
@@ -136,6 +136,36 @@ is what a vertical spine does to a side view.
 
 The zombie's profile now pins its own feet rather than inheriting the skeleton's,
 since a shamble should not pick up the brace.
+
+The walk overshot first. Twice these values folded the torso double and swung
+the sword out in front of it, at 73–91 wide. The values in the table are the
+midpoint of the two measurements.
+
+## Calibrating on the wrong frame
+
+The walk's height would not come down, and the reason was in the camera, not the
+pose. Each render calibrated the camera against the group it was about to draw —
+render a probe frame, measure the alpha bounding box, correct until the creature
+is 79 px tall. That is right for one group and wrong across thirteen, because it
+forces **every** group's first frame to exactly 79.
+
+The original does not work that way. It walks at 71–76 and guards at 82–109
+against an 80 px idle: it crouches to move and reaches up to parry. Rescaling
+each group to a fixed height flattens both.
+
+Calibrating once on the idle and rendering every group through that camera:
+
+| | original | ours |
+|---|---|---|
+| walk | 71–76 | 71–74 |
+| guard | 82–109 | 80–111 |
+| forward attack | 69–108 | 79–103 |
+
+The widths still lag on the walk — 41–53 against 54–72. That one is not the
+stride: swinging the legs 45% further moved the silhouette by a single pixel,
+because at this camera angle the stride runs almost straight into the lens. The
+original gets its width from carrying the sword out horizontally, and on this
+mesh the blade is welded in line with the forearm, so the wrist cannot aim it.
 
 ## Camera angle
 
