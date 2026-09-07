@@ -49,6 +49,11 @@ On the next mesh it found a 604-vertex component spanning **z 0.80 to 1.38**,
 running *upward* from a hand at z 0.94. Arm bones are longer than the visible
 part of a blade and start closer to the joint, so the humerus wins that test.
 
+<figure>
+  <img src="/images/vcmi/sword-components.jpg" alt="The skeleton mesh with its longest components colour-coded">
+  <figcaption>The mesh is 799 separate components. Colour-coded by length: the blade is blue, red and green; yellow and magenta are the shin bones it sits beside. The arm bones the old test picked are the plain white ones at the shoulder.</figcaption>
+</figure>
+
 Distance to the nearest bone does not separate them either. I tried it: ribs bow
 further from the spine than the blade does from the leg.
 
@@ -102,6 +107,11 @@ setting the keys from that table:
 | `ATTACK_FRONT` | 2.6 | 1.0 | 0.4 |
 | `ATTACK_DOWN` | 2.5 | 0.2 | 0.3 |
 
+<figure>
+  <img src="/images/vcmi/attack-arc.jpg" alt="Three frames of the forward attack, original and ours">
+  <figcaption>Forward attack at wind-up, extension and follow-through. Original left of each pair, ours right.</figcaption>
+</figure>
+
 The resting guard sits at 0.4 with the blade crossing the shins, which is where
 the original holds it. The old stance left it hanging off the hip on the far
 side from the direction the creature faces.
@@ -128,6 +138,11 @@ knees brings it to 40.
 out sideways and crouched behind it, which came out wider than its own idle and
 shorter. Raising the arm and folding the elbow hard puts the blade at 68° above
 horizontal.
+
+<figure>
+  <img src="/images/vcmi/pose-shapes.jpg" alt="Idle, guard and walk, original and ours">
+  <figcaption>Idle, guard, walk. Original left of each pair, ours right. The guard still opens to 68° where the original is nearly vertical.</figcaption>
+</figure>
 
 **The walk stood up straight.** The original creeps — torso pitched well
 forward, head ahead of the hips, sword carried out horizontally instead of
