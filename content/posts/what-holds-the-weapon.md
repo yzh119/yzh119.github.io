@@ -138,11 +138,22 @@ reaching forward across the chest with the blade already pointing the way it was
 about to travel. The measurement was true and the conclusion drawn from it was
 wrong.
 
-A wind-up needs positive X on the upper arm, the opposite sign from the strike.
-And the shoulder alone cannot do it: the blade follows the forearm, so however
-far back the arm goes the sword still points forward. The wrist has to turn it
-over. Solving for a target — hand behind the hips, tip behind and above — rather
-than guessing again gives the tip at −0.57 behind and +0.93 above.
+The shoulder alone cannot fix it, and swinging it back made things worse. The
+hand went behind the hips and the sword lost all its height: `ATTACK_FRONT`
+collapsed from 79–103 px tall to **79–81**, against the original's 69–108. The
+silhouette no longer had a raised sword in it at all.
+
+Back and high at once comes from the **elbow**. Upper arm raised, elbow folded
+hard so the hand returns past the head, wrist turning the blade over — the blade
+follows the forearm, so without the wrist it points forward however far back the
+arm goes.
+
+I solved for a target instead of guessing a fourth time: grid-search the
+shoulder, elbow and wrist angles, score against "hand behind the hips, tip
+behind and well above". Two rounds, because the first target asked for the hand
+behind without asking for the tip high, and produced exactly the collapse above.
+Peaks now run 121–129 px against the original's 108–119 — above it rather than
+flattened.
 
 <figure>
   <img src="/images/vcmi/arm-counterswing.jpg" alt="Wind-up and strike, showing the two hands trading places">
