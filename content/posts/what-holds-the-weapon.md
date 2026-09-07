@@ -262,6 +262,11 @@ the legs again on top of it; the two compounded into a **126° split** and the
 skeleton scissored in place instead of walking. Stating the walk's legs
 absolutely and subtracting the stance decouples them — 47°.
 
+<figure>
+  <img src="/images/vcmi/walk-cycle.jpg" alt="The eight-frame walk cycle, original above and ours below">
+  <figcaption>The walk cycle, original above and ours below. Before this the two strides compounded into a 126° split and the skeleton scissored in place.</figcaption>
+</figure>
+
 Worse, the stance carries a 100° inward roll on the weapon arm, which is what
 keeps the blade on the sword's own side of the body. Anything layered on top has
 its idea of "forward" rotated by that much, so the forward attack's strike hung
@@ -314,6 +319,11 @@ body's shoulder line rotates too**. It could not tell a yaw from a fall. This is
 the third time in this post that a measurement was true and the conclusion drawn
 from it was wrong, and the pattern is the same each time: the number described
 something narrower than the thing I cared about.
+
+<figure>
+  <img src="/images/vcmi/turn-pivot.jpg" alt="Both frames of the turn, original and ours">
+  <figcaption>Both frames of the turn, original left of each pair. The creature pivots from its three-quarter view to face the viewer, sword raised.</figcaption>
+</figure>
 
 A bone's axes are not the world's. Turning a creature is a rotation of the whole
 model about the world vertical — a property of the group, not of any bone. Groups
