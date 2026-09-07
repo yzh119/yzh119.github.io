@@ -121,20 +121,32 @@ side from the direction the creature faces.
 A body swinging a weapon puts the weapon hand back and the free hand forward on
 the wind-up, then trades them on the strike. Measured against the hips:
 
-| `ATTACK_FRONT` | rest | wind-up | strike |
+| `ATTACK_FRONT`, hand vs hips | rest | wind-up | strike |
 |---|---|---|---|
-| weapon hand | +0.29 | +0.03 | +0.42 |
 | free hand, before | +0.33 | +0.33 | +0.33 |
 | free hand, after | +0.33 | +0.39 | −0.04 |
+| weapon hand, before | +0.29 | +0.03 | +0.42 |
+| weapon hand, after | +0.29 | **−0.11** | +0.42 |
 
-The weapon hand was already doing its job — drawing back to +0.03, driving
-through to +0.42. The free hand sat at +0.33 in every frame of every attack,
-because the keys never named it, so it stayed in the base stance while
-everything else moved.
+The free hand sat at +0.33 in every frame of every attack, because the keys
+never named it: it stayed in the base stance while everything else moved.
+
+The weapon hand needed fixing too, and its number is why I nearly missed it.
++0.03 at the wind-up against the free hand's +0.39 reads like a draw-back. It is
+not one. **Raising an arm pulls the hand up, not back** — the whole arm was
+reaching forward across the chest with the blade already pointing the way it was
+about to travel. The measurement was true and the conclusion drawn from it was
+wrong.
+
+A wind-up needs positive X on the upper arm, the opposite sign from the strike.
+And the shoulder alone cannot do it: the blade follows the forearm, so however
+far back the arm goes the sword still points forward. The wrist has to turn it
+over. Solving for a target — hand behind the hips, tip behind and above — rather
+than guessing again gives the tip at −0.57 behind and +0.93 above.
 
 <figure>
   <img src="/images/vcmi/arm-counterswing.jpg" alt="Wind-up and strike, showing the two hands trading places">
-  <figcaption>Wind-up and strike. The free hand leads on the left and trails on the right.</figcaption>
+  <figcaption>Wind-up and strike. The sword is cocked behind the shoulder with the free hand forward, then they trade.</figcaption>
 </figure>
 
 The free arm takes the same sign convention as the weapon arm: negative X on the
