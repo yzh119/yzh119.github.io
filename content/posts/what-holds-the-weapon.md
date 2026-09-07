@@ -106,16 +106,36 @@ The resting guard sits at 0.4 with the blade crossing the shins, which is where
 the original holds it. The old stance left it hanging off the hip on the far
 side from the direction the creature faces.
 
-## The stance was a column
+## The poses were the wrong shape
 
-With the sword working, the remaining gap was width. The original's idle frame is
-**44 px across at 80 tall**; ours came out **29**. Side by side the difference
-reads immediately — the original braces in a wide stride with both knees bent,
-and ours stood to attention.
+With the sword working, the frames could finally be compared to the original as
+shapes. Every `.def` frame stores its own content box, so the original's
+dimensions are readable directly — and three groups were wrong in ways that are
+obvious once written down as numbers.
 
-Opening the legs, bending both knees and rolling the feet outward takes it to
-**40**. The zombie's profile now pins its own feet rather than inheriting the
-skeleton's, since a shambling walk should not get the same brace.
+| | original | before | after |
+|---|---|---|---|
+| idle, width × height | 44 × 80 | 29 × 80 | 40 × 80 |
+| guard | 36–61 × 82–109 | 40–85 × 70–80 | 40–68 × 80–111 |
+| walk | 54–72 × 71–76 | 37–54 × 78–85 | — |
+
+**The idle was a column.** Legs nearly together, knees barely bent, which reads
+as standing to attention rather than braced. Opening the stride and bending both
+knees brings it to 40.
+
+**The guard was inverted.** The original's parry is its *tallest* and one of its
+*narrowest* poses — the blade goes up in front of the body. Ours swung the blade
+out sideways and crouched behind it, which came out wider than its own idle and
+shorter. Raising the arm and folding the elbow hard puts the blade at 68° above
+horizontal.
+
+**The walk stood up straight.** The original creeps — torso pitched well
+forward, head ahead of the hips, sword carried out horizontally instead of
+hanging. Standing upright gave a silhouette both too narrow and too tall, which
+is what a vertical spine does to a side view.
+
+The zombie's profile now pins its own feet rather than inheriting the skeleton's,
+since a shamble should not pick up the brace.
 
 ## Camera angle
 
