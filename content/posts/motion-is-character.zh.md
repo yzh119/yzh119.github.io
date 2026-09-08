@@ -4,7 +4,22 @@ date: 2026-09-07T01:30:00+08:00
 series: ["英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "testing"]
+lastmod: 2026-09-09T05:48:54+08:00
 ---
+
+## 僵尸的早期动作试验
+
+首轮僵尸模型证明了带皮肤的躯体可以继续用于本地动画，但旧动作忽略了原版砍刀，也没有形成可信的拖步。后续十三组动画重建了持刀手、装备和关节控制。
+
+后续采用的模型与动画见[完整动画](/zh/posts/zombie-study/)。
+
+**截至 2026-09-09：**兵种 mod 为 **0.11.1**，已安装十种墓园兵种。本文涉及的安装数字按各次交付版本注明；最近一次扩展见[吸血鬼与蝙蝠形态](/zh/posts/necropolis-vampires/)。
+
+工具在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护；模型和完整 mod 留在本地。[工具迁移与复现](/zh/posts/h3-art-tools/)。
+
+## 历史记录
+
+{{< history title="历史原文与修订记录（展开阅读）" note="以下完整保留本次整理前的原文、图片和删除线。这里的“当前”“尚未完成”和“下一步”均指各段写作或标注时的状态；旧版本号、旧工具路径与试稿不能作为现行操作说明。" >}}
 
 > **2026-09-09 工具迁移：** 后续代码在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护，原 `tools/creature-art/` 与 `tools/town-art/` 对应新仓库的 `creature-art/` 与 `town-art/`。本文的旧路径和 PR 链接保留作历史记录。[迁移与复现说明](/zh/posts/h3-art-tools/)。
 
@@ -101,3 +116,5 @@ amplitude  每组的动作幅度倍率，1.0 是原始值
 手段能判断**，和上一篇里"膝盖朝哪边弯"是同一类问题。
 
 代码在 [PR #10](https://github.com/yzh119/vcmi/pull/10)。
+
+{{< /history >}}

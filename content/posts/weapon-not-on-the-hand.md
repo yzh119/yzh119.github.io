@@ -4,7 +4,22 @@ date: 2026-09-06T23:50:00+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
+lastmod: 2026-09-09T05:48:54+08:00
 ---
+
+## Weapon proportions and the first binding attempt
+
+This attempt addressed an oversized sword and a weapon that did not follow the hand. Later inspection found that the first equipment detector could select the wrong mesh. The delivered skeleton uses rebuilt hands and a separate weapon attachment.
+
+The later model and motion are shown in [the complete animation](/posts/skeleton-motion/).
+
+**As of September 9, 2026:** creature mod **0.11.1** contains ten Necropolis creatures. Installation counts in this article belong to the named delivery version. The latest expansion is [Vampire and bat forms](/posts/necropolis-vampires/).
+
+Tools live in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline); models and complete mods stay local. [Migration and reproduction](/posts/h3-art-tools/).
+
+## History
+
+{{< history title="Earlier article and revision notes (expand)" note="The text, images and strikethrough annotations below are preserved from before this editorial pass. “Current”, unfinished work and next steps refer to the time each passage or annotation was written. Old versions, paths and trial renders are historical records." >}}
 
 > **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
 
@@ -93,3 +108,5 @@ you are not adjusting the thing you think you are.** I should have stopped at th
 first five identical frames instead of running five more.
 
 Code in [PR #10](https://github.com/yzh119/vcmi/pull/10).
+
+{{< /history >}}

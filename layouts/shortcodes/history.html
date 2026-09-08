@@ -1,0 +1,8 @@
+{{ $history := .Page.RenderString (dict "display" "block") .Inner }}
+{{ $history = replaceRE `id="([^"]+)"` `id="history-$1"` $history }}
+{{ $history = replaceRE `href="#([^"]+)"` `href="#history-$1"` $history }}
+<details class="post-history">
+  <summary>{{ .Get "title" }}</summary>
+  <p class="history-context">{{ .Get "note" }}</p>
+  <div class="history-content">{{ $history | safeHTML }}</div>
+</details>

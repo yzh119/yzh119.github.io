@@ -18,6 +18,9 @@
   <div class="post-content">
     {{ .Content }}
   </div>
+  {{ if .HasShortcode "history" }}
+  <script defer src="{{ "js/post-history.js" | relURL }}"></script>
+  {{ end }}
   {{ with .Params.tags }}
   <p class="post-tags">
     {{ range . }}<a href="{{ "tags/" | relURL }}{{ . | urlize }}/">#{{ . }}</a> {{ end }}

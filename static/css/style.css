@@ -130,3 +130,11 @@ figure figcaption {
 }
 
 .post-series { color: var(--muted); font-size: 0.9rem; margin: -0.25rem 0 0.5rem; }
+
+/* Older drafts are readable on demand, with their own version context. */
+.post-history { margin: 2rem 0; padding: 1rem; border: 1px solid #8886; border-radius: .35rem; }
+.post-history > summary { cursor: pointer; font-weight: 600; }
+.post-history > summary:focus-visible { outline: 2px solid currentColor; outline-offset: .3rem; }
+.history-context { padding: .75rem; border-left: 3px solid #888; }
+.history-content { border-top: 1px solid #8886; padding-top: 1rem; }
+@media print { .post-history { break-before: page; } }

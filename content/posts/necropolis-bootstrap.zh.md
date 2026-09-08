@@ -4,7 +4,22 @@ date: 2026-09-09T01:16:08+08:00
 series: ["英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
+lastmod: 2026-09-09T05:48:54+08:00
 ---
+
+## 被否定的幽灵和尸巫试稿
+
+程序拼出的幽灵和尸巫外观被否定后，改用 imagegen 概念图与 Meshy 带贴图模型，再本地绑定和制作动作。失败造型、错误校准和最初静态模型都保留作过程记录；这些失败程序原型没有装入游戏。
+
+[幽灵和阴魂](/zh/posts/necropolis-ghosts/)与[尸巫和尸巫王](/zh/posts/necropolis-liches/)已另文交付。幽灵获得了明确外观验收。
+
+**截至 2026-09-09：**兵种 mod 为 **0.11.1**，已安装十种墓园兵种。本文涉及的安装数字按各次交付版本注明；最近一次扩展见[吸血鬼与蝙蝠形态](/zh/posts/necropolis-vampires/)。
+
+工具在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护；模型和完整 mod 留在本地。[工具迁移与复现](/zh/posts/h3-art-tools/)。
+
+## 历史记录
+
+{{< history title="历史原文与修订记录（展开阅读）" note="以下完整保留本次整理前的原文、图片和删除线。这里的“当前”“尚未完成”和“下一步”均指各段写作或标注时的状态；旧版本号、旧工具路径与试稿不能作为现行操作说明。" >}}
 
 > **2026-09-09 工具迁移：** 后续代码在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护，原 `tools/creature-art/` 与 `tools/town-art/` 对应新仓库的 `creature-art/` 与 `town-art/`。本文的旧路径和 PR 链接保留作历史记录。[迁移与复现说明](/zh/posts/h3-art-tools/)。
 
@@ -90,3 +105,5 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 > 2026-09-09 更新：截至本次标注，本地为0.10.0，已安装八种兵种。失败程序原型从未安装。
 
 本文两种试做没有替换现有游戏资源。相关原型、生成参数记录和静态渲染工具放在 [PR #10](https://github.com/yzh119/vcmi/pull/10)，失败原型明确标记为未通过外观验收。
+
+{{< /history >}}

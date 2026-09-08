@@ -4,7 +4,22 @@ date: 2026-09-07T01:30:00+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "testing"]
+lastmod: 2026-09-09T05:48:54+08:00
 ---
+
+## Early zombie motion trials
+
+The first zombie provided a usable skinned body, but its early motion omitted the native cleaver and did not establish a convincing dragging walk. The later thirteen-group set rebuilt the weapon hand, equipment and joint controls.
+
+The later model and motion are shown in [the complete animation](/posts/zombie-study/).
+
+**As of September 9, 2026:** creature mod **0.11.1** contains ten Necropolis creatures. Installation counts in this article belong to the named delivery version. The latest expansion is [Vampire and bat forms](/posts/necropolis-vampires/).
+
+Tools live in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline); models and complete mods stay local. [Migration and reproduction](/posts/h3-art-tools/).
+
+## History
+
+{{< history title="Earlier article and revision notes (expand)" note="The text, images and strikethrough annotations below are preserved from before this editorial pass. “Current”, unfinished work and next steps refer to the time each passage or annotation was written. Old versions, paths and trial renders are historical records." >}}
 
 > **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
 
@@ -125,3 +140,5 @@ walk read as a zombie" is not something I have any automated grip on** — the s
 class of problem as "which way does the knee bend" from the last post.
 
 Code in [PR #10](https://github.com/yzh119/vcmi/pull/10).
+
+{{< /history >}}
