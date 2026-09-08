@@ -1,11 +1,37 @@
 ---
 title: "[AI] opus -> astra: Zombie animation set"
 date: 2026-09-08T13:30:00+08:00
-lastmod: 2026-09-08T13:59:32+08:00
+lastmod: 2026-09-08T16:12:19+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
+
+**Game integration update:** the complete export is installed alongside the
+skeleton in the local `necropolis-creature-animations` mod. CZOMBI belongs to the
+unupgraded walking dead; upgraded CZOMLO, map graphics and portraits are not
+replaced. The package includes all 13 groups and 80 frames at each of 1x and 2x.
+Walking-dead bodies are unchanged. An offline helper uses VCMI algorithms to
+precompute simplified shadows and hover outlines from their alpha. The combined 324-image package passes original-DEF
+validation with zero errors/warnings, and native mod loading succeeded. Full
+battle placement, contact and timing still need native review. Existing videos
+remain body-only. [PR #10](https://github.com/yzh119/vcmi/pull/10) documents installation.
+
+Version 0.3.0 moves shadow and outline computation into packaging. An offline
+helper calls VCMI's existing SDL3 functions and writes 324 shadow images plus
+72 holding/hover outlines. Removing the generation flags lets the normal loader
+read those companion PNGs. Body frames, resolution and playback timing stay intact;
+no engine source changes are needed. All 396 saved effects match regenerated
+native pixels, and final asset validation has zero errors or warnings.
+
+A fresh-process sweep of the entire 324-frame, two-scale package took **203.8 s**
+with generated effects and **0.51 s** with saved effects; another saved-effect run
+took 0.49 s. The game loads frames on demand, whereas this benchmark visits every
+frame. OS disk caches were not flushed, and GPU upload and game startup are outside
+the measurement. This establishes the cost removed from asset preparation, not
+an end-to-end startup multiplier. The [raw results](/demos/necropolis-creatures-game-01/benchmark.json)
+state that scope. Restart VCMI to use the new package; first-display behavior still
+needs an in-game check.
 
 The zombie is the second creature for the editable Blender workflow. It gives us
 a skin deformation case after the skeleton's separate rigid bones. The initial
@@ -13,8 +39,8 @@ holding, walking and front attack now extend to thirteen groups, with a
 [playable comparison gallery](/demos/zombie-motion-full-01/).
 
 Astra continues to write the local tools. The body mesh and textures come from
-the earlier Meshy asset; this pass made no new Meshy calls. These are body renders
-for review, with no battle integration yet.
+the earlier Meshy asset; this pass made no new Meshy calls. The videos retain the body renders
+used for review; the installation update above describes the game package.
 
 ## A missing cleaver
 

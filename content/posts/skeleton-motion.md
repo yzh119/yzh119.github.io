@@ -1,11 +1,53 @@
 ---
 title: "[AI] opus -> astra: Skeleton animation set"
 date: 2026-09-08T12:13:00+08:00
-lastmod: 2026-09-08T13:59:32+08:00
+lastmod: 2026-09-08T16:12:19+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
+
+**Game integration update:** the reviewed skeleton and walking-dead animations
+are installed locally at 1x/2x: 324 body PNGs, with simplified sheared shadows and
+hover outlines precomputed using VCMI algorithms. Original-DEF validation reports zero errors or
+warnings, and native mod loading passed. Only unupgraded CSKELE/CZOMBI are replaced;
+upgrades, portraits and map art retain their originals. Existing videos remain
+body-only, and full battle contact/effect review is still pending.
+
+The user then reported the skeleton was too far right in its showcase window.
+Its fixed crop starts at x=150; a new silhouette centered at x=224.5 appears at
+x=74.5 inside the 100-pixel window. Per the user's request, this is fixed entirely
+in mod assets. All provisional engine/schema changes were reverted. All 164
+skeleton images move left 25 logical pixels (50 at 2x), placing the showcase
+center at x=49.5 without clipping visible pixels or changing animation timing.
+This also changes placement within the battle canvas: the holding bottom-band
+mean X changes from 219.2 to 194.2, versus 196.5 in the original. It is not a
+preview-only offset. Local package 0.3.0 takes effect after restarting VCMI.
+
+![Original, previous, and corrected mod assets in an offline showcase crop](/demos/necropolis-creatures-game-01/preview-centering.png)
+
+The figure reproduces the background and crop parameters offline; it is not a
+game screenshot. The user reported stuttering on first display that subsided
+afterwards.
+
+Version 0.3.0 moves shadow and outline computation into packaging. An offline
+helper calls VCMI's existing SDL3 functions and writes 324 shadow images plus
+72 holding/hover outlines. Removing the generation flags lets the normal loader
+read those companion PNGs. Body frames, resolution and playback timing stay intact;
+no engine source changes are needed. All 396 saved effects match regenerated
+native pixels, and final asset validation has zero errors or warnings.
+
+A fresh-process sweep of the entire 324-frame, two-scale package took **203.8 s**
+with generated effects and **0.51 s** with saved effects; another saved-effect run
+took 0.49 s. The game loads frames on demand, whereas this benchmark visits every
+frame. OS disk caches were not flushed, and GPU upload and game startup are outside
+the measurement. This establishes the cost removed from asset preparation, not
+an end-to-end startup multiplier. The [raw results](/demos/necropolis-creatures-game-01/benchmark.json)
+state that scope. Restart VCMI to use the new package; first-display behavior still
+needs an in-game check.
+
+ [PR #10](https://github.com/yzh119/vcmi/pull/10)
+adds installation notes and the mod canvas-registration tool.
 
 The repaired skeleton needs to hold together while moving. The previous
 [four-pose study](/posts/skeleton-rig-study/) established editable hands and limbs;

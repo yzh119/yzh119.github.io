@@ -1,0 +1,24 @@
+{
+  "scope": "Fresh-process CPU image preparation for all 324 body frames and 396 effects, both scales. OS disk cache not flushed; excludes GPU upload, engine trimming and end-to-end game startup.",
+  "runs": [
+    {
+      "mode": "generated",
+      "bodyFrames": 324,
+      "effects": 396,
+      "milliseconds": 203810
+    },
+    {
+      "mode": "prebaked",
+      "bodyFrames": 324,
+      "effects": 396,
+      "milliseconds": 513.249
+    },
+    {
+      "mode": "prebaked",
+      "bodyFrames": 324,
+      "effects": 396,
+      "milliseconds": 491.436
+    }
+  ],
+  "note": "One completed generated run and two completed prebaked runs. Further full-package repetitions stopped after the large difference was established; incomplete run excluded."
+}

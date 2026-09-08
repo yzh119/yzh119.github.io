@@ -1,0 +1,1478 @@
+[
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "9d03d42f30804013fc51b3901af3aad6a4c59427acf6bda1d029e1d3e71731f2",
+    "outputSHA256": "131b3420a100563e5b93a165d01826a72496da4ad4126a5995ded2e37cb53c38"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "bd1aab391888b1bd8ef6883a851252ec59dcc3dd727d7baa6549fcbcbcec6b3e",
+    "outputSHA256": "732af5676f2dc62e2628f01ab6cb8156ba9fa0788729f920076b8ddd31f066a0"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "204d0b48357ad8a84580192a71485b2700dba485c009bcdc689799e3dc87985f",
+    "outputSHA256": "796583f4a5f970ffc4587742c11919b2d941794ceb6e9183dd3247493b00f347"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "ee381c877e8b0b4da992e2edb077d59c3d29246bf3163d5466256eea67f675df",
+    "outputSHA256": "57dee73e89530a7522e167ebaef2ff4f3a145ff9b13fac6bb42423705874c278"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "08f6b200cbe15aab61bd82718125eca0797e9981cc79794390c2c0f6919e6b9e",
+    "outputSHA256": "abe18e0f7aa24ca6fc35942513a8b1c3d8e6d98b3871ac815561ac120d4343dc"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "4ba15976b5e3bc3b67a3358e4a470e3feff09674b61bb02a5648abd0e85f630e",
+    "outputSHA256": "cbbb55a5cadafa6b5e87fb25b1986de61485a5e7520de3f78d856bcc589ee6e0"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_06.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "d234fd42d2d1a65c9bc45e5bde3db67fb71b2d65230bfc5f25e2146010f39f74",
+    "outputSHA256": "f3ebb0d0f04d32c953b106233f614c1e5884c18b24dac10cbd4de0e468257a52"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_down_07.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "4b3c5c4e89b8cc801709d86750b43c595dbfa423e158879cd34faa5a89623e56",
+    "outputSHA256": "cbe1b2e51c92cfc88656547743d98cc56b8641693322006f359e101348002233"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "4d308db899bf07eed907a485805c02d938eaa665ade81aa6fdabb3060c84851f",
+    "outputSHA256": "131b3420a100563e5b93a165d01826a72496da4ad4126a5995ded2e37cb53c38"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "da3b12be0505db0f818f12a24a3c110f39fb6b2511998db9e6012bd5e9571913",
+    "outputSHA256": "e60ded27d3e151858a86e7d11a64dc707912ca96c3686ebc7a24cc875b60094b"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "68d3d5a20635312f081d04618be8d11a86d089c1165e68ed33dacf7fa0425f9e",
+    "outputSHA256": "fff087f46d7d3be08dc45f5fe2fc6e2c1b0f3cf91fe5294dbeef940118451e31"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "ae10f49b66d320396b7fe41efd1a5bfcee96ff2977d4452af142ba88cda727b6",
+    "outputSHA256": "15f701a1f5ec01af95aa726d873c09297ce465b27c0d1704f8e124647a8a1512"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "ca367649db38c624aa4242269cc6f121843533332c82a0313950843a78a58c78",
+    "outputSHA256": "fe0af858a22ded258eed5e99aa0deef9ee86a640ab54c406be99feb5eef0793e"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "cb571c93a3e6b8dbfe377e6861c97cb3bf25de7c57ec30a40437c53f9cb31890",
+    "outputSHA256": "2ca0d9b6ad036724ab3ab9feaac2cf0aec03a00729690ecc63f0faf568276f11"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_06.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "80bccdf737de56d317821ec1507c014fe58b755c66b1fabd0e966bf7eaff2acc",
+    "outputSHA256": "063e584db5ab87f2521738812c228441474137127babdfa15a78930dc0cc293a"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_front_07.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "e1548bdec075e24ddc9a76b184cb396b17fc7201bd26025abc5a1c89e6c17113",
+    "outputSHA256": "131b3420a100563e5b93a165d01826a72496da4ad4126a5995ded2e37cb53c38"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "3a24f3937358532e4273587979e639add095457ee6c6c53a3e97290736640827",
+    "outputSHA256": "60ebc0ad47916b108aaf63c120bcae105661c1b1f5bf5da1fb63ae06f24bc357"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "e55775303f67b768f1abd8f657e84ae92a77067b958110313ab3010c57c8b18a",
+    "outputSHA256": "e60ded27d3e151858a86e7d11a64dc707912ca96c3686ebc7a24cc875b60094b"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "c69f6b23d7423a188970a9eabfd7c2bd622cc5a49809ae6cfe7bcae6a0dd9609",
+    "outputSHA256": "8f17ae6b2be091c5898d1db5bddec0e6e388997331ecb18462c954f5f8b028fa"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "8cfa14262d44f300e75522d9fee81a1142d2c30a1495544f5105e062a1e2554a",
+    "outputSHA256": "af0392d9d48d151ca658b42622a2211e52e002f9c8a3fe1a32459961011dbdc1"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "91fac9391163ab53639313c0a59174d607d885c2d9e97e1e97b8f8558e8e073c",
+    "outputSHA256": "d5636c8424ae7acb7eb7541c199b42c63bd202fa9f1f4627f0f19e2345893472"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "69e9d37ec98f36203d4b4376fa942c1748fe8f7faa3fc828160e2a573077cfbc",
+    "outputSHA256": "03806ad2b633a5e5ca0eec56006043848e49e1a6bec320fe3eb043e89e14a64e"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_06.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "aaa280aa4d6e2b06a7dcaa552a4c17a5006b2d0e975b5e71c01493e224a26fec",
+    "outputSHA256": "f3ebb0d0f04d32c953b106233f614c1e5884c18b24dac10cbd4de0e468257a52"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/attack_up_07.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "0c06975f5411a56a8f71bb627456e4ca8bb325192e49166de7b68045385ae299",
+    "outputSHA256": "131b3420a100563e5b93a165d01826a72496da4ad4126a5995ded2e37cb53c38"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/death_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "5b02b7b12d1037da371b580a3d7da3bb61779aecbae18c517c0bf4728df51a00",
+    "outputSHA256": "b64e74bff343ccc37a0978d28a78f1d6c915aad97e973866a00a4f55268d5fa3"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/death_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "1e93d61314bc7faf978bd44727eeab877e5406f854fdf2a569ec282e11673fec",
+    "outputSHA256": "fe65d40ba65db5cb40f3d12e1155ddcfbb9462572e4a86a773a8068403bca863"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/death_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "9cb0414ebf89ba85f947a5ac4ed51a964157e838356aac3c4b1f64713aa2675b",
+    "outputSHA256": "43dbeb1e8ecbc948d56d26768e18a1a46fb1502266d251a5e8d84b23183bad5b"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/death_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "b959654a1756490615ca881035bff07731085fd91a4c747a395bb920cafdcc4a",
+    "outputSHA256": "c8cdf93f24bccd6eda2c66d1750e6432464129423c5c10f172cc274c9ac11efd"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/death_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "b496b9dc774f388adcfbd42efce4b6dd280e0f5bfb682c5bd13dc0ba585af49a",
+    "outputSHA256": "bd6d9865870e4b8b21f47718a8e033c63b277bdb9ace1e245d1efd29323407a1"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/death_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "89e7f8e9f46efcd56d100bf94bbe501353fb7b779bacdc689c3f243515939261",
+    "outputSHA256": "8393e097a41da040d693703db111788ae4ed2177ee9ad8747ac2a292a5c4e10b"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "5b8c1f29f6b00786a63e8b291e90d141e4ed7ae253e54d3156235134b10c74f1",
+    "outputSHA256": "131b3420a100563e5b93a165d01826a72496da4ad4126a5995ded2e37cb53c38"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "fb15ba242b1291fd2b41a83cd0b09b40bf6e71768103d166c23650228888038c",
+    "outputSHA256": "4f8933b465dc9092d52a81cb821ce2b6621d168709f355fc8487ba482472a0a4"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "f922d2835f8e44f211327827dc63258b9805127725a5a3bef245dd5f2e098839",
+    "outputSHA256": "f78ab79e62f050b50e22fd90bc5a660b91e56661fd5179450639475951bc6ded"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "97c56632148a8f7aec441969525841f5f680f72ad15f97357ae4de2b01e31e37",
+    "outputSHA256": "ea261cb14e956439b8c4a57f88c9a2e4387c23b9046e643dbbba627a92012eb0"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "7d381949ad8a5340119b23ed968bc72e0b959de6770cc6e2a371c18aa62676a2",
+    "outputSHA256": "20f0c4984d88750057303ddac910c4fcf39cecd421616ecc6e70b0e67bb66b7e"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "3e092cef04ca39109e5229ce80e35504884933bd6222a4cd924c8783996ffba1",
+    "outputSHA256": "43c5d83b5223e9e97ac3f57a5060193e8185df24b2daca8bbf29d9f158837b39"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_06.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "0de3ab1d6b7d5868301021933f7449597d449322145ba021e49d032d24c386f3",
+    "outputSHA256": "8cdda33a0ebb8eaa58a7d4d470f4ff480d7f7e1a7d6658d4923bd1d6da4cecd8"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_07.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "7fc7aae9d37a9231582b901ca2f23066dda1588e5af1d55d8d24eb51166ce36e",
+    "outputSHA256": "c7685c3746fca1cfcb18de139524406051e1ef5a3069d68835ea79ea737435fb"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_08.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "2306ed6503345734ff160a99bbb65147362d92494afbca7e68815fbfd921802f",
+    "outputSHA256": "eca492a6b378e5f2a473b8dd7ddba58188f704573f2ffddb6ba15b79afec87ef"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_09.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "5258279590c66f70c3858fb0421210e6a33a0829932538d3b07dddeaecdccdb8",
+    "outputSHA256": "d732bac1ed4ed91f702ed606544c538127f9ee4d04b7706c7a4bf5fc6e423535"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/defence_10.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "132ef646365af7556eb1c6fe843bc870fe2b538e2495579e581df26c1a457415",
+    "outputSHA256": "131b3420a100563e5b93a165d01826a72496da4ad4126a5995ded2e37cb53c38"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/hitted_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "d2c7b85d17a470eed931578c2c163f53e522b76d052ae91cf113389accd5d0e4",
+    "outputSHA256": "131b3420a100563e5b93a165d01826a72496da4ad4126a5995ded2e37cb53c38"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/hitted_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "47b1d8ef5e9296c055bf8b6b0f3059b04e572151557237c624c11a309d8c51c9",
+    "outputSHA256": "1fee787154471699e6eba2c77d9210b4dd8b40a524bef6fa3bf973abc8c9f030"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/hitted_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "0cbdfbe167fdc7ad98d9f28b5ba604040df3485ee4c3193bb790b7d4a7e252ca",
+    "outputSHA256": "341f6884d05ace4740a0b6ac7535758f9d873af889da8ce64753c04061c5ab4c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/hitted_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "387de69b30a54c4c75ae05062e14369cb1d415784c0876df61ad0bf01b425994",
+    "outputSHA256": "ef1dfbc7d875031f49ad4510b1cde26b669b2b0a02e09fbd67364c8402b2a4a9"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/hitted_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "0d32dfbcd2cef17d99cd9af51890d48e84c83f970201ab15cbc1761081b72e81",
+    "outputSHA256": "ba0c51c2847f5314a8bca308f2109718d1dc0eb033e8d630e9ee970b5e055180"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/hitted_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "9d1b837795a8f807607a67c6f6046776e79164a0f9c68e1ffc29aead9daa50cd",
+    "outputSHA256": "4365cc23dadbeadd0ce23fae2a9a7ee730cd50bce22e404b89fe037e8a75b98c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "ae9c8fe4b29689b7a14bc939e21f133c6cfdcf2f93a67e37eac9989c62e27eae",
+    "outputSHA256": "cbe1b2e51c92cfc88656547743d98cc56b8641693322006f359e101348002233"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "f15e66a40969469b37a9a24df23ae3ac6c439ead69c97b1d32d9a0ca63776833",
+    "outputSHA256": "ca999f10b1dba3e5b1489ea74f9fc68e891d44ff7306c6db99487d2482661101"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "8a500fe51dc92facd56f9b224bf8293e1627a9d024494a4eb3604c2e885ba269",
+    "outputSHA256": "a4299137413e2c1134a6dc5aac398ab4db2e4e32873643291241f625cf6bfe7e"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "edf20b7c39ed8fc8e0a4a50b652967bf3e9de44384b926b90512a21086095c67",
+    "outputSHA256": "0d144f496fd9fbca10e4e70421e95ced513a70682c36917d9c0c7d69935a72a2"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "0581ed3eb429594382a0877d141f3f4be7763621e395d03315b815abae75c6dd",
+    "outputSHA256": "cbe1b2e51c92cfc88656547743d98cc56b8641693322006f359e101348002233"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "7d8731091e6a9610dbeddcaaff2737f72df16a4a434e1ffb7d94ad8937eb00ee",
+    "outputSHA256": "3367ad04a334dd93a057d97821bf98cc4c20071abfdb30979e49ca82dc772b1c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_06.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "2c1c80fe871d33c3fd3ee003727211958a5784a45e52a2a75216f79dc0ea6c58",
+    "outputSHA256": "68ea0b05875610a12a2c5eeea03036f515675d9cda7011f9453f755859048cf4"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/holding_07.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "fa53dc7a5727312ed1ac4a15d98c738d2e38fa44ce80d2a9e5de31cf2b6ac294",
+    "outputSHA256": "93f65fd9e75c354c8cb56e97d7a5f9e92f31eb4ec718ce9bee1edb7981b6c06f"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "6a23eb49c24f7052dd0d66a799d415d4fbc38b83b7e970e6bd6aed0af61f11e3",
+    "outputSHA256": "4365cc23dadbeadd0ce23fae2a9a7ee730cd50bce22e404b89fe037e8a75b98c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "e345316c373670bfbae069c35e276af1754a11f4673552bc1b510a83d0931726",
+    "outputSHA256": "54bd5561aeab47d11fbc6c65513b5dc356d53527800b074bcc06de338babce78"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "cd2963b0a709001704a14202a717a9164e5de5ecf2bb8dab4a57c71cb4b71127",
+    "outputSHA256": "67ad47fa00bf82139b8a3deaa7911547aa8958a4e54cd856eae670d3d5e6b825"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "1c1c0b8f1ebc4f9021120692fd2ea23f9b65d8fb11fe352ab53db4166a1f6115",
+    "outputSHA256": "bb2d77a3b66c2d8cc961a2004a1cb2178410727e2d0041706ecfed55bc4becdd"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "51d3056c2c2aff03c31d568998f3659cd628b1ebe5f1809bc30d7d409e2e76e8",
+    "outputSHA256": "e4fb8257d3e3286ef7ad7f10ac3789139faa947e228fbd9c10b53984fdee19fb"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "d874d7564076e0fc375b4d7c7173e3460ddefe39c3e550ee3ae76341f10e1163",
+    "outputSHA256": "64790cd9998ab3c5b1f797ac1da08f4538a3539a7c8544cc6058db3a692b930a"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_06.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "c413891de1ef4a6658374fb5a6ee6a3ebf6c67da10d67c42d7fe576c96a41fbf",
+    "outputSHA256": "cbd20ec2d256d32d569cfdc3072167c61702fe58145e08495aecbaa90f48e1c5"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_07.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "4ab6e8a47fbcdd6d7dc74f6d03ba67d7a86c27639fd3a2d76e8e33d86d1556f4",
+    "outputSHA256": "11a6e8d52ad058e08018a042aa9d4237dd7d66e316710f8406d2aab07ea0a00c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_08.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "613c69b8908e3015926386913e87e61a9fff9cde1165809d473b872ed2569447",
+    "outputSHA256": "d9f18e27976f4d1cc358dd4884f3bd3fda3edddf36e934b1f352b12afcc64c2a"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_09.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "7715cb4c3d7b6e6c1901e1020e21a012dce0c17189ef0d095b35c958ea0622f4",
+    "outputSHA256": "e92300e894ddbaa04acc760aefbce6be518e66156b65dc44b3f698f3cb953001"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/mouseon_10.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "1a23a4e296cd522826e0247dfa3bb1c01421fdbcb70c7d68d6099188087aec7f",
+    "outputSHA256": "4365cc23dadbeadd0ce23fae2a9a7ee730cd50bce22e404b89fe037e8a75b98c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/move_end_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "50565bfb8a2c9843847a01d1191a0d396eb8ad8b468494bc5e64f4e9e618f175",
+    "outputSHA256": "da8385ba54eacc26b8095ad706adbf28b6ee765022ddb1b03b9243a348ae79c2"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/move_end_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "15c8da9905f53a6bc533f69c2fce8484b9ce0721dc63cc8e8b5e7626389445eb",
+    "outputSHA256": "4365cc23dadbeadd0ce23fae2a9a7ee730cd50bce22e404b89fe037e8a75b98c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/move_start_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "203bec05d37c14809630b886353cb2d6a76173659583ef56f17be4e4921e6747",
+    "outputSHA256": "26f9e2fa7c7f73e4b02f38b7974f608302510a14a6797cd03d0c396344341f25"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/move_start_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "c69267f314578f0e645846b3960244da410518227c03fa7d14084ee2c0459e45",
+    "outputSHA256": "1edcdbe9d7f3ccb4a1df98c36a02e11ec936843a0f682ef9eaaa229e7a41f409"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "a5d2a4002d6d743e8d688b253e7d1bbeebecba18c3f6bdde4c804671441c4766",
+    "outputSHA256": "bfa88a7d7007f6b465a10235b84fdc021b8665597d6a767fd89f440c3a057440"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "8fd94124b97547277696067279b2bba7a7865f81bd4151e69eae5f1508b5ace9",
+    "outputSHA256": "74c5beb3d445234b279c99253a27af3fbfb0873dffcd0dcd1790475c345865c7"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_02.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "5d3552c9bcf059dff043a364ae62695aded1f756d3f3dfc0fa2a2b1b8ccf78e6",
+    "outputSHA256": "d13ba0e1be2d5aa687d7edbbbc99bdbf5830736ad5b654da61d8432175286c7b"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_03.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "1855d5d2ef2e2283167e6eed44b1bf2da953ce3342b8564fcfd0711777ea1c02",
+    "outputSHA256": "27aaf10a34fd61461e1d66244ba1182b960f5a97a328aea817b5d29d095fbc31"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_04.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "e1b9a8a1f5339e28570b401aac40d287838eeff6e0704481339f400cf8ada6da",
+    "outputSHA256": "afccb4f4ffb24f7f0973169ec611dc0604cb8b0df35a0663667ddeec4b5d48d2"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_05.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "d23d7726a0e984873d41c104cff3a78a6b4faf993c45ab5f276d5ff9bcca8267",
+    "outputSHA256": "4d97d9ff8231e3ce192857347c2abb1ed042d86ad9118ec31137ad71530bfa33"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_06.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "600cd1fdb47a45107ae45f13f91b63c213aea87593324dcd4d2d2dc16abe0167",
+    "outputSHA256": "78fad469545e84f53726d92f3f4a0d6e54f1c00aad6b187b8b28b34dbf8bdad3"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/moving_07.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "8a65390567047e52988a0c2c017490d310faac61c4536803d080a9f0b17f5d0b",
+    "outputSHA256": "e11ecb12f6447899a5e78ce16784a389c9ed3967604891b1ad35c2cd2e7e7ef2"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/turn_l_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "96c5ec23e00f76060d106d38e9e553cccbdecda85e558f8fa8ba7a2b8a29c94a",
+    "outputSHA256": "4365cc23dadbeadd0ce23fae2a9a7ee730cd50bce22e404b89fe037e8a75b98c"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/turn_l_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "a7986c3a93b1d9f48d290a4ae05fed45bd71f7ee805c50e801f32da35bbceee1",
+    "outputSHA256": "5ca11f51db4af060fa4b40b88f8170c68b78c9e9a27a23f3481ada55ade09a61"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/turn_r_00.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "9b39752e4de2031dce30345eb4921cae810e108d49780594ec21ffae993f562c",
+    "outputSHA256": "5ca11f51db4af060fa4b40b88f8170c68b78c9e9a27a23f3481ada55ade09a61"
+  },
+  {
+    "file": "content/Sprites/creatures/cskele/turn_r_01.png",
+    "offset": [
+      -25,
+      0
+    ],
+    "sourceSHA256": "51baeffb903388f9b8f011ba2ea25e7451bf22dfc9b5b6e08dcdc1656cf11e92",
+    "outputSHA256": "60ebc0ad47916b108aaf63c120bcae105661c1b1f5bf5da1fb63ae06f24bc357"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "cba1e26ccf1c2aac4381ef259c49a1889e957864e38535d13b18ea79f8ae855a",
+    "outputSHA256": "79d619c1bd099ea8a7d996250e1d4616c6e5855625f84a74007ff2464f41fc93"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "cfb8a92bbf7d9e99170f88737061be36fd2d1513082c0f271d1c32fa41ca8d7f",
+    "outputSHA256": "c8e2a1ada1dffda50fe7e66003e9c48e65636e2c5efd6af0f3b72f8e955506bb"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "bc5b1dff078ef37e74e2b4c0a046b50681eb9a96d31e326c1943e7f954027182",
+    "outputSHA256": "a40d981943198df9bbe52f957c45bb8e1bef1be35517a16de73808188309a434"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "ac6bbf713cf85718bf71c5ff5a851a6c74ebfd41711b88f23c00671711a1b87f",
+    "outputSHA256": "c0279bbd9844ff6b2aa801a7d89113fecc5ae91435d94c6cef33b88024568cb4"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "498ae78dc0620f255aa765f842efe6ca03df41ded4682fb4159662dfa331a34d",
+    "outputSHA256": "fce7ce52a8c7f5ac8db6c780afa5b136f4b43ad1d2d036cff976caa07a1d0698"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "e4aa5915029ba9a3247b04e3182cb4d8b3fa75d215c781be9e94fe02a65ded5a",
+    "outputSHA256": "395a2bf62a78c80364d103dedc8e89b0cdb4f8aca18e1940b62a69dc909dbe8e"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_06.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "49590633d4b4cceb7cf2a2de060df5811f7a3628ce98e1a3862e7ebd37229290",
+    "outputSHA256": "c0231fa4c181ca1affa102d5416aba02e69b042d1c8f4c0701fd69ca8e3674eb"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_down_07.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "ed142112c657f5f98978a8b1e00ef72abd43df59551ca095b89d7674cf43d12d",
+    "outputSHA256": "9777d76e07e2c7b765dc855669dfef8b91111836991567eb0174bf6a961f7d6f"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "51d05f725b0939b2bfaee983d2a0c9e481873b8965afb1e8c70ab7b3bfb168cb",
+    "outputSHA256": "1ec6a52c09a03959c49547955b9d4076926366cb36de8712555cb0ba2176d8a8"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "0bbe10af39a4bebbb4c1a3365a5cf90889b230744c48634b216a063852b551b6",
+    "outputSHA256": "1a356fd13d2ecf1710903f60e50d6a57b326b7e6f8234cfa7b0b52eb413b0b95"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "bfefeb05e802f96cc3c549fb6338f38dc9418229401e8b780418f3e5fb93265b",
+    "outputSHA256": "03d36a4e7cc55fe560ec1fec75c157710f2c980f4bd53a1d498460b7199e1022"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "7aeaee9a17e4d9b8bac784a9c1067eb211a443e63c5f9831d161aba6820f080c",
+    "outputSHA256": "8981332ac6b2a4107c17737d53b3fa4a66cf62c38cbba668e9fbf1504156451d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "3c11e90cca2e078e8988ea76d883c8304213233cd90dc603dbc8525b5b52be23",
+    "outputSHA256": "935c2c8430324f6a2c7a932be459ae034e21483cb6dd9f814300ab64a8f029d5"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "ed1a6908a9097babf346298d2142c26cbaa6c1d71de4225099705bf8004c2396",
+    "outputSHA256": "57cc4ab1d05d8eab103c3a5b4575fb6e0583f4d8484762afb02afca5f65faf5a"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_06.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "66ff4c28f76a8fc11d8e4fb20f782826d4baf02786c0050df97d7f1a48316ec5",
+    "outputSHA256": "2a8d344a44c28d3188dfd50fb0553ad34900a8a58e31b80df81a5e5e8a600039"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_front_07.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c48dbd70653b24578279ee1393f98de2b2d444458fe236a4251162e8d79dc479",
+    "outputSHA256": "ae9a484401e42783692cd944ce22ece84d6b0a85eedeae8a2e48d6ab63b596bd"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "a831f26b0b1da66229c7278740d3221592cc5728d24593660b1cd2ce19453556",
+    "outputSHA256": "792bba88af3fcd00a7a389370b0a19a4cd6ada78c5397099d036596fb9d7cab5"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c307f9bce09eb869399c4a48ad72505086ea718128a4910cf50ff4397c5e9cf4",
+    "outputSHA256": "aa8ceec76bdd3e5cbda53e1f17d4ca12a659a0b9facae99e1237dee53f45c065"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "7471f65663b5d7a8a95b7074fac5a1e5eea6743a55d41c1bbd8a6d5d0862c5b8",
+    "outputSHA256": "b6a7c72d8f83c50f57605e2fda45a99044d50a0f25f502250737674b701f3526"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "024d612bfc5b1a924529dee46db9ae3c96d1373c7e1563280183d7e766edc17c",
+    "outputSHA256": "7869cfc3db87bb5293223d487e09ea095d0325cb04bee03c9aa954da3398403b"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "7ee9c1099f5a3c1db7e87068c0b51f30474ee91b4e00440ef3ea996607375759",
+    "outputSHA256": "2b39a2ef20c8a6ed9e87e95316b847d0f55e1fb700869d1e52730f07830ff9e3"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "90dbf37a46ebb2429c60cb442abd2ab48e29c12cf6072107d5c4dc594ccaf826",
+    "outputSHA256": "61ab5abc9fc7832690fc7be29ed1d6bd2f414913d18802d6dd360a4234811979"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_06.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c6d92e10b1a97b1d34e465a70d52b19e58c82ace8d3f97a39119514f4f00f71f",
+    "outputSHA256": "b971ff35c97a0bf0f5b5d32e98df12d8e73ff2b862f37b4002ba37d68d47f2ef"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/attack_up_07.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "54d93f0d53129798f31d0a88e771de5e9228c9d884d5f72f746d1b1c5183d4b3",
+    "outputSHA256": "792bba88af3fcd00a7a389370b0a19a4cd6ada78c5397099d036596fb9d7cab5"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/death_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "082f151c63e5877b3cca20971b21ad75b18e6803e32afbf85ad81103609af5d3",
+    "outputSHA256": "dfcc3108b0f9d99cc0b9f813a167c149448c76f54338744a2941815fb8442af2"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/death_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c05cfeb8b84b962a89e85ec7afe9c4127e86e330c0b34be49d495b3c982c3b7e",
+    "outputSHA256": "b5e2a7efba91cfe7ee3467d164241838ebf3bb0f2afa8547b981c4731c500a2f"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/death_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "eaaf89fc57d62d28fe2c58388e3e5c4bbff48ee8c52afa84b5589382b10f97b1",
+    "outputSHA256": "b6433f827d8334bcb0fad8400bdbf60ca6ded97a3cd0eddbbf4403048103bf60"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/death_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "7caee66f53319c979cb3d764b1a121d8aa07fb430c09a576c125162b88cf2e01",
+    "outputSHA256": "f922954bda15435de7aa62c6ea88b17e2dd8f7bf8974e521d45623c086d4a17d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/death_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "4f48f8c47bc21d72f9d91b4aede1a8f46a749a4c2fed09d1455dc47f092c552b",
+    "outputSHA256": "3e43cb1ccd39f985377bdab28b151a45703c9fe29b1915c97cec0cc89401097b"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/death_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "6f3460d7d23024ca86373d89bff291a61d7f2bdbeadb9613b291d86c271d5e0d",
+    "outputSHA256": "a9d7d930b5b0add25d20462a8e3a4295eb754f61071cfc5fd3a3d590dbd36c74"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c4031da2e26632c7a8541a484af4649abc2acf4668a6f78a51247f848078d365",
+    "outputSHA256": "374246e2bba9c906a80a1159af258f4f0521b83cccc3cef295da3f9835ca4e9d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "2d7afe97bec1a048fd4afb24da7933edda63eaca184ade13bb633c105d4f9b07",
+    "outputSHA256": "00f1e3a530a835cf2e2ca9daebb1af7542ab712f32bc0d0ad2f4175b52f569ab"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "5409f581103caa6a50383cad375cd48e6eb1fb7d31c122161a286e62af875ba8",
+    "outputSHA256": "d6f8ec9a10040218038318d9da7f039aed6da4d535f13cafdef4859a27d825ec"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "36049a30bb84a48ba1a622584381e7ddaf2ab4c02bf8461b7f1112f6e54c5912",
+    "outputSHA256": "6978ef2b4ab3f1f07fbe3e99fdd3acd27d637ff8afd8632240bd67975373be47"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "2e3e0e475b72e6b47a071c169d84c146b534edaaacd0df101d19ca61def4c63a",
+    "outputSHA256": "b9be57eeee0dd168775dc9ea78e9009f701d828ee0313d47573941431f6710f0"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "05cf2c7d1799f6c770b8f453e4513f018e10545facd7f5254753b8e91a0a00a9",
+    "outputSHA256": "c7e4c0ab6f50ca021766beb279ae7ef84ff56bbea086c20c7f3b5f3b5c4217ed"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_06.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "0f185bf074ae036f69a32d3ae699e13623c5656b70e1e55255123c791e8bbbee",
+    "outputSHA256": "81ed484a4fbd041770f4fdeb4318aeda8d9f893e0dd125fbb3e76b0916637199"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_07.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "a4e0014d9ca9e831b92ba408acd7536a868b0c36fb250ee84723e43b9af45c73",
+    "outputSHA256": "766eb8453b7d9c0bf28e5b84c97de444920d9a8db2e5e9d160887c60f4d2e560"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_08.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "2b23728e88b77c1860dcaddb7956ac60e13fc8c466d13cad5c1a565e981db292",
+    "outputSHA256": "ba8ec44b2ad5b2a1ee3be7a0cc60449a50d79e904457637e881a0169467d700d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_09.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "71f0f23ee7a6cdd82587de99cc8ea8e51ee8bc1a10cd8f53fe83f92eb1beb2cd",
+    "outputSHA256": "ac359068547c2922b646d911e091a367dee4ab906f2fdbbb27f8b1cbb2f3e79d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/defence_10.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "e9b121620d166575f4a2465cfe3a10e7b3570b8fc3437c56e66f6d7aca323e43",
+    "outputSHA256": "374246e2bba9c906a80a1159af258f4f0521b83cccc3cef295da3f9835ca4e9d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/hitted_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "f2ca6b77c9324ff6a7f9ca25d891b09411e9e415a1cd01b1e94c7ad38a00a75d",
+    "outputSHA256": "ae9a484401e42783692cd944ce22ece84d6b0a85eedeae8a2e48d6ab63b596bd"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/hitted_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "e2e9c0dd1494053ff0f13d0a55a1856c8c5023b79bffb91c7c65f901a767920f",
+    "outputSHA256": "246ba362c528c79ab8822dcbc76c87fd21d738855c6caa471ec9f6b99814e0be"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/hitted_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "17bfbacade98dfc199fb011e7411b0b0c7681c704ad3981e7ce5d3457a66df2b",
+    "outputSHA256": "958b5c7790441db5602f062f869bf0ab575e0820865be982f47d533e0a7228d1"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/hitted_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "e33c65c3c806ba95a894798e13f0e3bfb554358c4f491883ca56e3526f3c2437",
+    "outputSHA256": "19c076c3f157ad5fa758d5fb18d27cc100559a7eda737230679090d23deca2f3"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/hitted_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "d9eb1d1da6f79d5b23e01e570ff70a42060f038c6553a7f0a05df0ed4496a388",
+    "outputSHA256": "d7e2a0a82f2bfc4ada200b423916f37e78a7c3a068a54f340bc796d03e9091a4"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/hitted_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "e2f9177a9eee7eb55f161e7d8313e1c9ccd6aa61650e5d4e9c40ab9c7ae980d2",
+    "outputSHA256": "73dce45d6f849f4caceaa70cbcdea389587cd2cb0734fc83a82a74d49a00bdb2"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "e33c3908875b1c2a8166636013421e8a2be95d9ea72fc83a9a67c8c2592c4a4a",
+    "outputSHA256": "374246e2bba9c906a80a1159af258f4f0521b83cccc3cef295da3f9835ca4e9d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "ad1f40ba622bf021c9a98989bd971a296dbfce45971f8cf0ced9a2442be54532",
+    "outputSHA256": "7ffca95ea7dfda5af572d98f2fd070a711ee73385a12d00f52771dc7188f4046"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "8e635701fcef33cbcfe28a18dc3aa20e8e06a411981144d35317405755e6f809",
+    "outputSHA256": "41ddbf909b339433c32e56db57b83c34e49b0c6f951f5b206bef28d44b6a40dc"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "59bbf45b3679c4251c1c892256c9011d08a62a6ca577c09555a1ec568cd8aaf7",
+    "outputSHA256": "c94799325c31864ebd4da24f103b7f9d7856984229dc39b321231807f212c988"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "d3cc7e784c74453f71c5451d75979e9b1ebe933674a0fe23270ab412f4f7203f",
+    "outputSHA256": "792bba88af3fcd00a7a389370b0a19a4cd6ada78c5397099d036596fb9d7cab5"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "f5f0bfb32a5a156e0ce8d936558cf1c968d541a56c1fdbf41faa75d82d1d7413",
+    "outputSHA256": "4a82698e5b3c4892f48d73216585ca4beb7906f2afbd5c8327292f6ec7b8e57f"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_06.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "b8ad44ca747958b6ed947c419e2cbe31ee6af56fe38740ef3fc739c5cff0cf2a",
+    "outputSHA256": "ba1ee6d39a83993aaa201c0a3c8b82b06ee0de629f6387175a070b2c013762b6"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/holding_07.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "afd66d176802982783816790631b1109b433d776187f3fbe30b7f37497a21510",
+    "outputSHA256": "b1111b7362698ae63c48635af017ecdebc2e3757f8e57c0b0248ff0043629fa9"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c0ee21f066b2d55bda1dd8ba0735007a15a5910b3ee233b8ac5ddc9b0c6557d6",
+    "outputSHA256": "1ec6a52c09a03959c49547955b9d4076926366cb36de8712555cb0ba2176d8a8"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "ab53f208e1c2d0cf512a8c2634a5dacbb46aeb1aeec316dce73503c2cd2d3c36",
+    "outputSHA256": "39c72c6fd76cd639c13b3ef1cddeaea4e551a7f7673e7ab3c9cdfd3af094db96"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "fe778afdda2fab4c04ae1004c52484aee3a382d558d81a689eb16ed9ba82f685",
+    "outputSHA256": "3b0412974a005c2289e5c8fd1ef6a508f459135e3db319151aaf64c0b262b8b5"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "992cf7089ea8cb14dd27b606f8f83ebb60224da48dcde4e6146cacee6a499d9e",
+    "outputSHA256": "03b2678a57cac97b32f391904515195b5a843fe5f41d58fef2df5728f1c437ab"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "10ca904db821c82d097274e13ff6f47ade4e2a1b5906f386227b6088e84ae9ff",
+    "outputSHA256": "d55b1138eec1b256e10646a3504dfcabc6f2ba407ea8b9d1578d45f793af3b39"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "0542d225fd187a3920cc8eb67153eb30b0d7c492dfd7c7536f31ee49dfe02d48",
+    "outputSHA256": "8d57653e4a6678bf94e0be3be26fa20753c471ee12d6ad5472c5efb88fc8bfaf"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_06.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "99b5a80e45590a8cee4a5602b0914acc53c8574c2291597a869c3f2b997e95f5",
+    "outputSHA256": "49dd1397883a64ccc702db24b65a030751fb1bd3651d5e5e4e2b90203a00f019"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_07.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c3903d229538d69d805cb07c7c2aad18f02b07e8ccbd2d168ae17ae84c71a52a",
+    "outputSHA256": "061bc734201409dee2a6dbf70dc31e8ed6060afe5f618dc27965369b209be11e"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_08.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "edc42569d99a4b6ccb73bfb82884bb16e8dd0e48e5533044c0ffb52b58fa9a7b",
+    "outputSHA256": "446ea1d7e899b6322ce4239ef76285058d3e2c9f6deab5e0c3b90875956a6386"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_09.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "d0413a79841bfb92c292695e041fa64ddfea02a743d835de61143afedaf7444e",
+    "outputSHA256": "6a60032b72f057e7c7992bebf378e375ea51c3f2305950d0aaebe00597fc72a1"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/mouseon_10.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "a036849ee8ade79350d709770200aff2bf1dd9533b8351ebe6fec92a6e693b90",
+    "outputSHA256": "2d71642060fb187c748c852e8991d252a0d0fd51daa123f4dfa9e12bc6c442cd"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/move_end_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "94bbb291509ae3d7c63da471c61059e5e4feab0f6a0cb96423d41d4e28709a6e",
+    "outputSHA256": "848dbbb6163afcc4cf8e6a62f47126effd211578ab4af115ea0a23a6272183be"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/move_end_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "9e454c7f486b84d92484da38362868dc578adf4b43ef8faa5c72e3345c065956",
+    "outputSHA256": "cf929600fe16cbaa61abe06e0975f8b42ae7f7db7c2a71d3a8a9260fe91fbcd0"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/move_start_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "67a68a2ade3d0a898228e49565979a9b70fba777793d163e112caf7229d0953b",
+    "outputSHA256": "d263d8badd18fec0e495525891e74fa5d348a8114e532e85755be812dd50d5ca"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/move_start_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "1b4e2a980601ef6c3fab3d321ee1f07e1d2dad8496e50cc96904d0c415eef7be",
+    "outputSHA256": "7d9129594a9f05181c2c9266b17d1bb56a5baf89122dccfd59b5b5fd73e01f6b"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "a3b3719dbee4248b4a1d135f28f4086002af23d389c55815fd27c094ef79fe79",
+    "outputSHA256": "7d9129594a9f05181c2c9266b17d1bb56a5baf89122dccfd59b5b5fd73e01f6b"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "157fe462e240c4c084da270881a0c2242fdbe69b3fa0495cd6b153b43f037e38",
+    "outputSHA256": "202640a8091136c0793a149ea79f9553abc54a1e6cd797c22193ccbd6aa4f96d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_02.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c5984376b8e6548d0507b2b2fc10f05979e3e2efe80c6290d6e3c74a0df8eb1d",
+    "outputSHA256": "9ee4e9f50aaf9c4e633d3c450fa3a851e41b3fd417da7e1c2b1bbc4256ee623a"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_03.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "cd4cc352a73548a6b4376f2a9d9d3c4dcda69e6775679e5e73dc72b8ecd1204b",
+    "outputSHA256": "c15cd8d4c71f2af3e6bb0779784494711d6dad10f5036eae2c587fa230155153"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_04.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "ae9a85c0b35dd46eda274a6d85e0f17ac15a73e721ab03544f80e0479b969bfa",
+    "outputSHA256": "607499e1cde01bb7643000d26a7329befe636a9bf79bb4c0fdc05922ea3ac815"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_05.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "7baf0b1aec1f252e8f9bfdd6f13ab2f696e86df99dcd8d7e09e1402dd07ed937",
+    "outputSHA256": "d36e08b9379e81171d207c09c7829550f80f255c20a1cc4ad93c381e9872d807"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_06.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "b8aa500c10b739a4d23524b36f06cea378769cf407f44b66481573a34f215632",
+    "outputSHA256": "ea1d1b09a74df7533ad0ab0800ce81aeafe0a10279c97aabbea0ac87dcfd1d72"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/moving_07.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c875bd756faf42fe695b76cf438456c76ef3192a7e378f433efa0b181664a988",
+    "outputSHA256": "4c38abafbd2a51005e066cd206738bb765230d397efef5f4354fd2175e698c7b"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/turn_l_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "700e2f7369436db550ebf29a563e0b24795e1c3b2962e49c20aabf7549b7d824",
+    "outputSHA256": "c9df7704e4c176aed7d3ccdcc8b70418e3b069d049926fb40f3c396d9d29f58d"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/turn_l_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "930318f5629e3f064661df9e7021a2eb0ae93069933c3722db3a6ff9bb6fdfab",
+    "outputSHA256": "9c05f4b9d7bbe52121b317d874109fa6c4b72be6d37d68cf5a6ebe1f59f8301e"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/turn_r_00.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "f53b5d2f7ea96346d2f154391b64a84fed1413bd1b679b00cc141afec61866a0",
+    "outputSHA256": "9c05f4b9d7bbe52121b317d874109fa6c4b72be6d37d68cf5a6ebe1f59f8301e"
+  },
+  {
+    "file": "content/Sprites2x/creatures/cskele/turn_r_01.png",
+    "offset": [
+      -50,
+      0
+    ],
+    "sourceSHA256": "c8784c540b478983f99becad7a0e34c7768be9775a65cfc6777b02c971e9d166",
+    "outputSHA256": "9df046e95f3f0a9acd8d3cbae68b2aa1c4bc23f318e6ae2037a17c776f178d46"
+  }
+]
