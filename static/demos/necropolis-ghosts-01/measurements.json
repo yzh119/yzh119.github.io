@@ -1,0 +1,180 @@
+[
+  {
+    "creature": "CWIGHT",
+    "clips": {
+      "MOVING": {
+        "frames": 8,
+        "seconds": 1,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 10,
+        "seconds": 1,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 6,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 10,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.2,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 2,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 2,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SHOOT_UP": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SHOOT_FRONT": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SHOOT_DOWN": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 1,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 1,
+        "seconds": 0.3,
+        "loop": false
+      }
+    },
+    "checks": {
+      "minimumDeathZ": 0.002986279781907797,
+      "deathSamples": 73
+    }
+  },
+  {
+    "creature": "CWRAIT",
+    "clips": {
+      "MOVING": {
+        "frames": 8,
+        "seconds": 1,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 10,
+        "seconds": 1,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 6,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 10,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.2,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 2,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 2,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SHOOT_UP": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SHOOT_FRONT": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SHOOT_DOWN": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 1,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 1,
+        "seconds": 0.3,
+        "loop": false
+      }
+    },
+    "checks": {
+      "minimumDeathZ": 0.002986279781907797,
+      "deathSamples": 73
+    }
+  }
+]

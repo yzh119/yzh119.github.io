@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 ---
 
+**Delivery update:** [Wight and Wraith animations are installed in 0.9.0, with the Wight accepted by the user](/posts/necropolis-ghosts/). The account below preserves the earlier rejected and static-bootstrap stages.
+
+
 The next Necropolis creatures exposed a limit in the approach used for the first two upgrades. I tried to extend the existing skeleton anatomy with script-built robes and armor, then reuse the animation and export tools. The resulting wight and lich did not look convincing.
 
 The response to the wight was that it looked comical. The lich received the same criticism, followed by a suggestion to bootstrap the designs with another tool. This post keeps the rejected models alongside the next attempt.
