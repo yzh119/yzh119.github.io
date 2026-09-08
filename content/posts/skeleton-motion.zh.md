@@ -15,7 +15,7 @@ tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 这轮仍然复用原模型的头骨、胸廓、骨盆与贴图，没有新增 Meshy 调用。
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-attack_front.gif" src="/images/vcmi/skeleton-motion-attack_front.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-attack_front.gif?v=review-04" src="/images/vcmi/skeleton-motion-attack_front.mp4?v=review-04" style="width:360px;max-width:100%"></video>
   <figcaption>正面攻击的 30 fps 预览，按游戏 2 倍尺寸显示。可以暂停、拖动检查蓄力、落脚、挥剑和收势。目前只有身体层。</figcaption>
 </figure>
 
@@ -29,7 +29,7 @@ tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ## 行走的脚底
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-moving.gif" src="/images/vcmi/skeleton-motion-moving.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-moving.gif?v=review-04" src="/images/vcmi/skeleton-motion-moving.mp4?v=review-04" style="width:360px;max-width:100%"></video>
   <figcaption>行走循环，原地显示。支撑脚检查会另外加回角色应有的前进距离；视频里没有模拟战场位移。</figcaption>
 </figure>
 
@@ -57,7 +57,7 @@ Blender 的 Python 插帧实际生成了 Bezier 曲线，没有采用界面里�
 正面攻击 8、起步 2、收步 2。另有 1 倍和 2 倍两套身体层。
 
 <figure>
-  <img src="/images/vcmi/skeleton-motion-native-frames.png" alt="原版与新动画的待机、行走、攻击八帧对照">
+  <img src="/images/vcmi/skeleton-motion-native-frames.png?v=review-04" alt="原版与新动画的待机、行走、攻击八帧对照">
   <figcaption>每组上排原版，下排新动画，使用实际 1 倍像素尺寸。整排共用比例和裁切位置，没有逐帧放大缩小；攻击按动作阶段对照，不代表已匹配原版播放节奏。可打开图片查看原尺寸。</figcaption>
 </figure>
 

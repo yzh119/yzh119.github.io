@@ -18,7 +18,7 @@ The existing textured skull, chest and pelvis are still reused. This pass made n
 new Meshy calls.
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-attack_front.gif" src="/images/vcmi/skeleton-motion-attack_front.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-attack_front.gif?v=review-04" src="/images/vcmi/skeleton-motion-attack_front.mp4?v=review-04" style="width:360px;max-width:100%"></video>
   <figcaption>Frontal attack at 30 fps and twice the game scale. Pause or scrub to inspect the wind-up, step, strike and recovery. This is the body pass.</figcaption>
 </figure>
 
@@ -34,7 +34,7 @@ so that its noise stays attached to the bone as the character moves.
 ## Foot contact and playback
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-moving.gif" src="/images/vcmi/skeleton-motion-moving.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" poster="/images/vcmi/skeleton-motion-moving.gif?v=review-04" src="/images/vcmi/skeleton-motion-moving.mp4?v=review-04" style="width:360px;max-width:100%"></video>
   <figcaption>The walk loops in place. The contact check adds the intended forward displacement separately; this video does not simulate movement across a battlefield.</figcaption>
 </figure>
 
@@ -66,7 +66,7 @@ down. The `attackAnimationTime` setting does not control melee attacks. Exports
 retain **8/8/8/2/2 frames** for the five groups, at both 1× and 2× resolution.
 
 <figure>
-  <img src="/images/vcmi/skeleton-motion-native-frames.png" alt="Original and new eight-frame holding, movement and attack sequences">
+  <img src="/images/vcmi/skeleton-motion-native-frames.png?v=review-04" alt="Original and new eight-frame holding, movement and attack sequences">
   <figcaption>Original above study for each group, at native pixel scale. Each row shares one scale and crop; frames are never fitted individually. Attack columns compare phases, not verified original playback timing. Open the image to inspect its full resolution.</figcaption>
 </figure>
 
