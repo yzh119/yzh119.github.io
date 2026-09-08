@@ -7,6 +7,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
+**Next stage:** [Skeleton Warrior, Zombie, and the remaining Necropolis roster](/posts/necropolis-upgrades/) now have a separate progress post with all upgrade animation previews.
+
+
 **Small-panel update:** the accepted pass reduces fine rubble and soil mottling
 so masonry, rock planes and ground cracks remain distinct at 200×260. The
 [current showcase and shadow comparison](/demos/necropolis-creatures-game-02/)

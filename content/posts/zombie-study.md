@@ -7,6 +7,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
 
+**Next stage:** [Skeleton Warrior, Zombie, and the remaining Necropolis roster](/posts/necropolis-upgrades/) now have a separate progress post with all upgrade animation previews.
+
+
 **Showcase and shadow update (0.7.0):** these showcase figures now use the
 accepted background. Walking dead moves from x=75 to x=50 inside its panel: all
 160 body frames and companion shadows/outlines shift together. Skeleton keeps its
