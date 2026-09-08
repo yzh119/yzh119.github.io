@@ -1,0 +1,56 @@
+{
+  "vampire": [
+    {
+      "beforeWeld": {
+        "vertices": 49329,
+        "faces": 72375,
+        "boundary": 24293,
+        "wire": 0,
+        "zeroFaces": 0
+      },
+      "afterWeld": {
+        "vertices": 36318,
+        "faces": 72375,
+        "boundary": 340,
+        "nonmanifold": 344,
+        "zeroFaces": 0
+      }
+    }
+  ],
+  "vampire-lord": [
+    {
+      "beforeWeld": {
+        "vertices": 82451,
+        "faces": 92677,
+        "boundary": 60898,
+        "wire": 0,
+        "zeroFaces": 0
+      },
+      "afterWeld": {
+        "vertices": 52616,
+        "faces": 92677,
+        "boundary": 13521,
+        "nonmanifold": 13806,
+        "zeroFaces": 0
+      }
+    }
+  ],
+  "vampire-bat": [
+    {
+      "beforeWeld": {
+        "vertices": 43522,
+        "faces": 58300,
+        "boundary": 25818,
+        "wire": 0,
+        "zeroFaces": 0
+      },
+      "afterWeld": {
+        "vertices": 29064,
+        "faces": 58300,
+        "boundary": 196,
+        "nonmanifold": 213,
+        "zeroFaces": 0
+      }
+    }
+  ]
+}

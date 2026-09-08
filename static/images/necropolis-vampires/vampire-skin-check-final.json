@@ -1,0 +1,250 @@
+{
+  "samples": [
+    {
+      "scene": "attack_down.blend",
+      "sourceSHA256": "db4e287adcf31131edb1499c4d48e46782d937f0f9ef49847a0a5917c0d9a7e2",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_down.blend",
+      "sourceSHA256": "db4e287adcf31131edb1499c4d48e46782d937f0f9ef49847a0a5917c0d9a7e2",
+      "frame": 16.0,
+      "maximumEdgeRatio": 3.197188698232366,
+      "edgeRatioP99": 1.3136815887418236,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_down.blend",
+      "sourceSHA256": "db4e287adcf31131edb1499c4d48e46782d937f0f9ef49847a0a5917c0d9a7e2",
+      "frame": 31,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_front.blend",
+      "sourceSHA256": "fa0b777c7118ba063d2e1b2a1b2814c2d7566df464545229d4ff2fa78b96c4cd",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_front.blend",
+      "sourceSHA256": "fa0b777c7118ba063d2e1b2a1b2814c2d7566df464545229d4ff2fa78b96c4cd",
+      "frame": 16.0,
+      "maximumEdgeRatio": 3.8626552522608795,
+      "edgeRatioP99": 1.589375018874518,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_front.blend",
+      "sourceSHA256": "fa0b777c7118ba063d2e1b2a1b2814c2d7566df464545229d4ff2fa78b96c4cd",
+      "frame": 31,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_up.blend",
+      "sourceSHA256": "a1d08bf28bcae47e5d238767f6242276b2c48708868d99075c7cc4a64fb21ce6",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_up.blend",
+      "sourceSHA256": "a1d08bf28bcae47e5d238767f6242276b2c48708868d99075c7cc4a64fb21ce6",
+      "frame": 16.0,
+      "maximumEdgeRatio": 4.430092104973415,
+      "edgeRatioP99": 1.8269410516338973,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "attack_up.blend",
+      "sourceSHA256": "a1d08bf28bcae47e5d238767f6242276b2c48708868d99075c7cc4a64fb21ce6",
+      "frame": 31,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "death.blend",
+      "sourceSHA256": "637cce76b695410f2711188bc9fa1928416c5f8ce9dfb0ab5dd2a54a858ba36c",
+      "frame": 1,
+      "maximumEdgeRatio": 2.910777020015694,
+      "edgeRatioP99": 1.1584360878676772,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "death.blend",
+      "sourceSHA256": "637cce76b695410f2711188bc9fa1928416c5f8ce9dfb0ab5dd2a54a858ba36c",
+      "frame": 19.0,
+      "maximumEdgeRatio": 4.341717815794398,
+      "edgeRatioP99": 1.7520092874521724,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "death.blend",
+      "sourceSHA256": "637cce76b695410f2711188bc9fa1928416c5f8ce9dfb0ab5dd2a54a858ba36c",
+      "frame": 37,
+      "maximumEdgeRatio": 2.2330713180173825,
+      "edgeRatioP99": 1.5333502821117884,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "defence.blend",
+      "sourceSHA256": "588f0bd2a7f57420564bbfab03ce425eea7fe4889b5646d903ce4e2ee0a63b15",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "defence.blend",
+      "sourceSHA256": "588f0bd2a7f57420564bbfab03ce425eea7fe4889b5646d903ce4e2ee0a63b15",
+      "frame": 16.0,
+      "maximumEdgeRatio": 3.3185793155167778,
+      "edgeRatioP99": 1.2470001223808562,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "defence.blend",
+      "sourceSHA256": "588f0bd2a7f57420564bbfab03ce425eea7fe4889b5646d903ce4e2ee0a63b15",
+      "frame": 31,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "hitted.blend",
+      "sourceSHA256": "888dbd5b22b0f1805f6365bb0c135912ca974b969ba238001af2ec81c1db8260",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "hitted.blend",
+      "sourceSHA256": "888dbd5b22b0f1805f6365bb0c135912ca974b969ba238001af2ec81c1db8260",
+      "frame": 16.0,
+      "maximumEdgeRatio": 3.3185793155167778,
+      "edgeRatioP99": 1.2470001223808562,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "hitted.blend",
+      "sourceSHA256": "888dbd5b22b0f1805f6365bb0c135912ca974b969ba238001af2ec81c1db8260",
+      "frame": 31,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "holding.blend",
+      "sourceSHA256": "82245aeb5ca2824ec1900c419b63c9a72c57075a246cc2d69419eaed2a1e71a3",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "holding.blend",
+      "sourceSHA256": "82245aeb5ca2824ec1900c419b63c9a72c57075a246cc2d69419eaed2a1e71a3",
+      "frame": 30.5,
+      "maximumEdgeRatio": 2.91275344082981,
+      "edgeRatioP99": 1.1588363299916653,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "holding.blend",
+      "sourceSHA256": "82245aeb5ca2824ec1900c419b63c9a72c57075a246cc2d69419eaed2a1e71a3",
+      "frame": 60,
+      "maximumEdgeRatio": 2.9068253265468758,
+      "edgeRatioP99": 1.1580143591498187,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "mouseon.blend",
+      "sourceSHA256": "407794637507735e5623b85f84c04c04eb312d0ac20a4ee40648afa735ed80a1",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "mouseon.blend",
+      "sourceSHA256": "407794637507735e5623b85f84c04c04eb312d0ac20a4ee40648afa735ed80a1",
+      "frame": 16.0,
+      "maximumEdgeRatio": 3.3548829029116045,
+      "edgeRatioP99": 1.231133778170111,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "mouseon.blend",
+      "sourceSHA256": "407794637507735e5623b85f84c04c04eb312d0ac20a4ee40648afa735ed80a1",
+      "frame": 31,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "turn_l.blend",
+      "sourceSHA256": "f3f087e4bd561ea4c9d4b9f303b8876358d7b83a2041e10fe18a4b3ed50018c5",
+      "frame": 1,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "turn_l.blend",
+      "sourceSHA256": "f3f087e4bd561ea4c9d4b9f303b8876358d7b83a2041e10fe18a4b3ed50018c5",
+      "frame": 5.5,
+      "maximumEdgeRatio": 2.9107798566256364,
+      "edgeRatioP99": 1.1584419093905056,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "turn_l.blend",
+      "sourceSHA256": "f3f087e4bd561ea4c9d4b9f303b8876358d7b83a2041e10fe18a4b3ed50018c5",
+      "frame": 10,
+      "maximumEdgeRatio": 2.910772530049077,
+      "edgeRatioP99": 1.1584412853947454,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "turn_r.blend",
+      "sourceSHA256": "92eaed57502f7d22b03026d2e33835b880b0a3c51e91eb668fcca3876eb39335",
+      "frame": 1,
+      "maximumEdgeRatio": 2.9107753666728176,
+      "edgeRatioP99": 1.1584294770244679,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "turn_r.blend",
+      "sourceSHA256": "92eaed57502f7d22b03026d2e33835b880b0a3c51e91eb668fcca3876eb39335",
+      "frame": 5.5,
+      "maximumEdgeRatio": 2.9107780547568924,
+      "edgeRatioP99": 1.1584370471434944,
+      "largeStretchedEdges": 0
+    },
+    {
+      "scene": "turn_r.blend",
+      "sourceSHA256": "92eaed57502f7d22b03026d2e33835b880b0a3c51e91eb668fcca3876eb39335",
+      "frame": 10,
+      "maximumEdgeRatio": 2.91077343098556,
+      "edgeRatioP99": 1.1584367677789997,
+      "largeStretchedEdges": 0
+    }
+  ],
+  "largeStretchedEdges": 0,
+  "thresholds": {
+    "minimumEdgeRatio": 8,
+    "minimumAbsoluteGrowth": 0.08
+  },
+  "scope": "Three poses per scene; detects large tears, not all aesthetic or cloth defects"
+}

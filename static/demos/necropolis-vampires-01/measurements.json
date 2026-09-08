@@ -1,0 +1,167 @@
+[
+  {
+    "creature": "CVAMP",
+    "clips": {
+      "MOVING": {
+        "frames": 6,
+        "seconds": null,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 9,
+        "seconds": 1,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 9,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.2,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 3,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 3,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 5,
+        "seconds": null,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 5,
+        "seconds": null,
+        "loop": false
+      }
+    },
+    "checks": {
+      "savedSamples": 598,
+      "maximumSavedIKError": 9.365305363504106e-05,
+      "minimumDeathZ": 0.002742379903793335
+    }
+  },
+  {
+    "creature": "CNOSFE",
+    "clips": {
+      "MOVING": {
+        "frames": 6,
+        "seconds": null,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 9,
+        "seconds": 1,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 9,
+        "seconds": 1,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.2,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 3,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 3,
+        "seconds": 0.3,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SPECIAL_UP": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SPECIAL_FRONT": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "SPECIAL_DOWN": {
+        "frames": 7,
+        "seconds": 1,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 5,
+        "seconds": null,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 5,
+        "seconds": null,
+        "loop": false
+      }
+    },
+    "checks": {
+      "savedSamples": 781,
+      "maximumSavedIKError": 0.00010553606319064995,
+      "minimumDeathZ": 0.002719104290008545
+    }
+  }
+]

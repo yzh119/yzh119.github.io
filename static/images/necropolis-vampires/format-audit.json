@@ -1,0 +1,50 @@
+{
+  "vampire-lord.obj": [
+    {
+      "vertices": 52616,
+      "faces": 47512,
+      "boundary": 13324,
+      "nonmanifold": 13497,
+      "polys": {
+        "3": 2154,
+        "4": 45358
+      }
+    }
+  ],
+  "vampire-lord.fbx": [
+    {
+      "vertices": 52616,
+      "faces": 47512,
+      "boundary": 13324,
+      "nonmanifold": 13497,
+      "polys": {
+        "3": 2154,
+        "4": 45358
+      }
+    }
+  ],
+  "vampire-bat.obj": [
+    {
+      "vertices": 29064,
+      "faces": 29243,
+      "boundary": 188,
+      "nonmanifold": 192,
+      "polys": {
+        "3": 180,
+        "4": 29063
+      }
+    }
+  ],
+  "vampire-bat.fbx": [
+    {
+      "vertices": 29064,
+      "faces": 29243,
+      "boundary": 188,
+      "nonmanifold": 192,
+      "polys": {
+        "3": 180,
+        "4": 29063
+      }
+    }
+  ]
+}

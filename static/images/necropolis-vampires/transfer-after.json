@@ -1,0 +1,13 @@
+{
+  "modelSHA256": "1a238b433215d9bde2e3d6c68e60eba87e9341c871d3cf73f97c8165fda3d9a8",
+  "donorSHA256": "df8b7f7b154f5e43cf19ec0983b6438d9c1d24db5a93458c011249607b2523c1",
+  "verticesBeforeWeld": 1200232,
+  "verticesAfterWeld": 975159,
+  "facesBefore": 1950534,
+  "facesAfter": 159999,
+  "vertices": 79892,
+  "scale": 0.8936389287623686,
+  "nearestDistanceP95": 0.06569446623325348,
+  "nearestDistanceMax": 0.09470716118812561,
+  "stage": "transferred weights; requires pose inspection"
+}

@@ -1,0 +1,17 @@
+{
+  "sourceSHA256": "8576783711b610d69d02be318b1940e444716279f2a9a355bbf721f39ac06370",
+  "frame": 1,
+  "size": [
+    1400,
+    1600
+  ],
+  "alphaBounds": [
+    276,
+    85,
+    1123,
+    1516
+  ],
+  "blender": "5.2.1 LTS",
+  "toolSHA256": "c657009b36a11c6b1397aa89ce7bf167ad5c238d794878fb9d7860b308b54724",
+  "renderSHA256": "1c59867a28c5acb6a27c504f8c8449e0adda9a8f07787672ad56a02a62967330"
+}
