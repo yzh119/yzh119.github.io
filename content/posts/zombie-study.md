@@ -186,8 +186,12 @@ cover rig consistency, not visual approval. The source still looks gaunt; its
 clothing and skin differ from the original, and the new grip needs a closer
 material match.
 
-Shadow and owner-overlay passes, mod assembly and battle playback/contact
-checks remain. The full gallery currently contains body renders.
+~~Shadow and owner-overlay passes, mod assembly and battle playback/contact
+checks remain. The full gallery currently contains body renders.~~
+
+> Update, 2026-09-09: Bodies, shadows and hover outlines are installed. The body-only gallery remains a historical authoring preview; installation does not complete battle timing/contact review.
+
+
 
 [PR #10](https://github.com/yzh119/vcmi/pull/10) contains the rig, cleaver grip,
 thirteen clips, original-count exports and saved-animation checks.

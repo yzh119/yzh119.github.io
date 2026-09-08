@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
 ---
 
+> **Update, 2026-09-09：** Images, poses and measurements below are retained as the historical study, not the current installed version. See the [later animation](/posts/skeleton-motion/) and [current eight-unit delivery](/posts/necropolis-liches/).
+
+
 The pipeline closes:
 
 ```

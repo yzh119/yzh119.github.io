@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
 ---
 
+> **Update, 2026-09-09：** Images, poses and measurements below are retained as the historical study, not the current installed version. See the [later animation](/posts/skeleton-motion/) and [current eight-unit delivery](/posts/necropolis-liches/).
+
+
 The first creature made it through the whole pipeline, and the validator is
 clean:
 
@@ -24,9 +27,13 @@ The engine wants three images per frame, not one. Heroes III encodes the shadow
 and the owner-flag silhouette in reserved palette indices; a repaint has no
 palette, so both have to be supplied separately.
 
-**Shadow** uses a Cycles shadow catcher: a ground plane, with the creature hidden
+~~**Shadow** uses a Cycles shadow catcher: a ground plane, with the creature hidden
 from camera. On a transparent film that writes the shadow straight into alpha,
-which is exactly the layer the engine expects.
+which is exactly the layer the engine expects.~~
+
+> Update, 2026-09-09: This describes the original implementation. Installed assets now use fixed-ground projected shadows and prebaked outlines; see [the shadow update](/posts/skeleton-motion/).
+
+
 
 **Overlay** swaps every material for flat white emission and disables the sun, so
 the result is a silhouette with no shading in it.
@@ -71,8 +78,12 @@ the body. That is a pose problem on a rigged weapon, so it is fixable.
 
 ## Next
 
-Sword angle and lighting, then the wood elf and the mage. Those introduce new
+~~Sword angle and lighting, then the wood elf and the mage. Those introduce new
 problems: the wood elf is a shooter and needs the three `SHOOT_*` groups plus a
-projectile, and the mage needs casting animations.
+projectile, and the mage needs casting animations.~~
+
+> Update, 2026-09-09: Work changed to fixing the skeleton, then completing Necropolis. The [new skeleton motion](/posts/skeleton-motion/) supersedes these early renders. Wood Elf and Mage have not been produced in this stage.
+
+
 
 Code in [PR #10](https://github.com/yzh119/vcmi/pull/10).

@@ -14,6 +14,18 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 
 [幽灵和阴魂的全部 32 组动作](/demos/necropolis-ghosts-01/)可以播放。视频是固定画布的离线渲染，待机按 4 fps、其余按 8 fps 审阅，并非游戏截图或游戏时序测量。
 
+## Blender 高清静帧
+
+以下两张是从已交付的三维场景直接渲染的 **1400×1600 静态图片**，不是概念图，也不是把游戏小图放大。仅重新取景，模型、材质和已验收的幽灵动作未改。
+
+[![幽灵：Blender 高清静帧](/images/necropolis-ghosts/wight-blender-hd.jpg)](/images/necropolis-ghosts/wight-blender-hd.png)
+
+幽灵：[透明 PNG 原图](/images/necropolis-ghosts/wight-blender-hd.png) · [渲染记录](/images/necropolis-ghosts/wight-blender-hd.json)
+
+[![阴魂：Blender 高清静帧](/images/necropolis-ghosts/wraith-blender-hd.jpg)](/images/necropolis-ghosts/wraith-blender-hd.png)
+
+阴魂：[透明 PNG 原图](/images/necropolis-ghosts/wraith-blender-hd.png) · [渲染记录](/images/necropolis-ghosts/wraith-blender-hd.json)
+
 ## 漂浮与挥爪
 
 这次保留了 Meshy 生成的衣袍、骷髅脸和双手，用本地 Blender 工具添加躯干、颈部、头部、双臂以及三段下摆控制。下摆随漂浮动作弯曲，角色不再套用双腿行走。

@@ -38,8 +38,12 @@ backup and takes effect after restart; engine source remains unchanged.
 **Game integration update:** the reviewed skeleton and walking-dead animations
 are installed locally at 1x/2x: 324 body PNGs, with simplified sheared shadows and
 hover outlines precomputed using VCMI algorithms. Original-DEF validation reports zero errors or
-warnings, and native mod loading passed. Only unupgraded CSKELE/CZOMBI are replaced;
-upgrades, portraits and map art retain their originals. Existing videos remain
+warnings, and native mod loading passed. ~~Only unupgraded CSKELE/CZOMBI are replaced;
+upgrades, portraits and map art retain their originals.~~
+
+> Update, 2026-09-09: The two upgrades were subsequently [installed](/posts/necropolis-upgrades/). Portraits and adventure-map appearances remain original.
+
+ Existing videos remain
 body-only, and full battle contact/effect review is still pending.
 
 The user then reported the skeleton was too far right in its showcase window.
@@ -212,11 +216,15 @@ variation below 0.000001. Loop closure and the authored holding/walk transition
 endpoints also passed. These checks do not detect every collision or assess the
 expressiveness of the animation.
 
-Shadow and owner-overlay passes, complete mod assembly and actual battle review
+~~Shadow and owner-overlay passes, complete mod assembly and actual battle review
 remain. The current exports contain the body pass and have not been installed
 as a complete replacement mod. The [zombie study](/posts/zombie-study/) now also
 has thirteen body-animation clips. Work on the second character will inform
-which Blender interfaces deserve a separate repository.
+which Blender interfaces deserve a separate repository.~~
+
+> Update, 2026-09-09: The complete assets are installed and retained in0.10.0, including effects, registration and the background updates above. Full battle contact/timing review remains separate.
+
+
 
 [PR #10](https://github.com/yzh119/vcmi/pull/10) contains the limb refinements,
 continuous motion generator, preview builder, saved-animation checks and

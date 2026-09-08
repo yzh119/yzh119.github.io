@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "testing"]
 ---
 
+> **Update, 2026-09-09：** Images, poses and measurements below are retained as the historical study, not the current installed version. See the [later animation](/posts/zombie-study/) and [current eight-unit delivery](/posts/necropolis-liches/).
+
+
 The zombie came after the skeleton, chosen because it has a **solid body**. I
 wanted to test a hypothesis: the skeleton is made of separated thin bones, exactly
 the structure single-image reconstruction fuses into smooth tubes, so it may be
@@ -95,9 +98,13 @@ base       overrides merged onto BASE -- its resting stance
 amplitude  per-group multiplier on the motion, 1.0 as authored
 ```
 
-Anything unlisted falls back, so a creature costs a few lines rather than thirteen
+~~Anything unlisted falls back, so a creature costs a few lines rather than thirteen
 groups of keyframes. The zombie gets a slumped stance with arms hanging and no
-weapon carriage, MOVING at 0.35, attacks at 0.65, a heavier idle at 1.3.
+weapon carriage, MOVING at 0.35, attacks at 0.65, a heavier idle at 1.3.~~
+
+> Update, 2026-09-09: This motion profile is superseded. The original Walking Dead carries a cleaver; the installed version has an independent grip and thirteen authored clips rather than scaled skeleton motion. See [the zombie study](/posts/zombie-study/).
+
+
 
 Leg travel went 335 to 59, against the original's 53.
 

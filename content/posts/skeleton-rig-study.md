@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
 
+> **Update, 2026-09-09：** Images, poses and measurements below are retained as the historical study, not the current installed version. See the [later animation](/posts/skeleton-motion/) and [current eight-unit delivery](/posts/necropolis-liches/).
+
+
 The skeleton passed the animation format validator, but its posture and hands still
 looked wrong next to the original. Before extending the pipeline to elves and
 mages, I wanted one creature whose geometry and posing controls I could inspect.
@@ -91,8 +94,12 @@ targets is **0.000039 model units**, and blade length varies by less than
 and verify skin weights and embedded textures. Visual quality still needs to be
 judged from the renders.
 
-Next are proportion and key-pose refinement, then transitions and full cycles.
-Shadow, overlay and mod assembly will follow animation review.
+~~Next are proportion and key-pose refinement, then transitions and full cycles.
+Shadow, overlay and mod assembly will follow animation review.~~
+
+> Update, 2026-09-09: The thirteen-clip animation set, effects and installation are now complete. See [full skeleton motion](/posts/skeleton-motion/).
+
+
 
 [PR #10](https://github.com/yzh119/vcmi/pull/10) includes the study generator, pose
 profile, comparison tool and Blender integration checks.

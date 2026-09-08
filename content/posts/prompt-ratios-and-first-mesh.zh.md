@@ -55,7 +55,11 @@ The whole silhouette fits in a box about 1.3 times as tall as it is wide.
 上传前先按 alpha 把图裁到主体。概念稿是 1024×1440 的画布，主体只占其中 19%，
 剩下全是透明区域——重建的是你给的东西，裁一下不花钱。
 
-分工是明确的：概念稿一直用 BFL 的 FLUX.2 [pro]，Meshy 只做这一步。
+~~分工是明确的：概念稿一直用 BFL 的 FLUX.2 [pro]，Meshy 只做这一步。~~
+
+> 2026-09-09 更新：当前使用 imagegen 母图、Meshy 带贴图基础模型及适用的人形自动绑定；Astra 编写本地修整、绑定、动画和合包工具。无腿幽灵已用本地骨架完成，不要求改用 Tripo。阴影和描边现由离线工具预生成。见[流程调整](/zh/posts/necropolis-bootstrap/)与[尸巫交付](/zh/posts/necropolis-liches/)。
+
+
 
 ## 下一步
 

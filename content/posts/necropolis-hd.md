@@ -115,9 +115,13 @@ Built-in `image_gen` refined the empty landscape and castle interior, allowing
 slightly cleaner painted stonework, roof tiles and rock strata. A solid magenta
 castle backdrop was removed locally, then the new interior was blended into the
 original silhouette. Original pixels remain near uncertain edges. The background
-is **1600×748**. Other buildings and map variants currently use conservative 2x
+is **1600×748**. ~~Other buildings and map variants currently use conservative 2x
 resampling and mild sharpening. They do not have newly generated detail, and
-matching their materials to the castle remains further work.
+matching their materials to the castle remains further work.~~
+
+> Update, 2026-09-09: All41remaining town layers subsequently received generated detail; see the section below and [third layer inspector](/demos/necropolis-layered-03/). Adventure-map variants still use conservative resampling.
+
+
 
 All **103 frames** were reopened after export and checked for exact integer canvas
 size and original nearest-scaled alpha. Map shadows and owner overlays are stored

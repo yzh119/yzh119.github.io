@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy"]
 ---
 
+> **2026-09-09 更新：** 本文的图片、姿势和测量保留为当时试稿，不能视为当前游戏版本。后续替换见[完整动画](/zh/posts/skeleton-motion/)，当前八兵种安装状态见[尸巫交付](/zh/posts/necropolis-liches/)。
+
+
 [上一篇](/zh/posts/weapon-not-on-the-hand/)说剑已经绑到手上了。其实绑错了东西：
 那套判据在一个模型上找到的是剑，换个模型找到的是手臂骨。剑照样出现在每一帧里，
 只是竖着挂在腿边像根拐杖，所以没有任何检查报警。

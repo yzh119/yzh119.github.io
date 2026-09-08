@@ -63,8 +63,12 @@ The image is cropped to its subject by alpha before upload. A concept sits on a
 1024×1440 canvas with the subject occupying 19% of it — reconstruction works on
 what you hand over, and framing it costs nothing.
 
-The split is deliberate: concepts stay with FLUX.2 [pro] from Black Forest Labs,
-Meshy does this stage only.
+~~The split is deliberate: concepts stay with FLUX.2 [pro] from Black Forest Labs,
+Meshy does this stage only.~~
+
+> Update, 2026-09-09: The current workflow uses imagegen concepts, Meshy textured meshes and suitable humanoid auto-rigs, with Astra-authored local repair, rigging, motion and packaging. The footless Wight uses a local rig; Tripo is not required. Shadows/outlines are now prebaked offline. See [the workflow change](/posts/necropolis-bootstrap/) and [Lich delivery](/posts/necropolis-liches/).
+
+
 
 ## Next
 

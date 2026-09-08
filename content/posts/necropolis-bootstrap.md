@@ -21,7 +21,11 @@ The response to the wight was that it looked comical. The lich received the same
 
 On the left, the hood is a smooth shell, the shoulder covering looks rigid, and the robe is mostly a surface stretched between circular sections. Added folds, noise, and torn edges did not repair its overall shape.
 
-The right column is an actual Blender render of the subsequent generated mesh, composited into the same showcase background. Both columns are offline composites, not game captures. The new mesh is not installed or artistically accepted yet.
+The right column is an actual Blender render of the subsequent generated mesh, composited into the same showcase background. Both columns are offline composites, not game captures. ~~The new mesh is not installed or artistically accepted yet.~~
+
+> Update, 2026-09-09: The subsequent new meshes are installed. Wight has user acceptance; Lich still awaits its own in-game appearance review. The rejected procedural prototypes remain rejected.
+
+
 
 ![Rejected lich prototype and subsequent Meshy static model](/images/necropolis-bootstrap/lich-comparison.png)
 
@@ -66,7 +70,11 @@ The first turnaround made the wight's face look almost black inside the hood. Cl
 
 ![Eight actual mesh views of the lich](/images/necropolis-bootstrap/lich-turnaround.jpg)
 
-The lich now has modeled headgear and chainmail detail. Its staff attachment, grip, and joint deformation have not yet been validated in motion. Both assets are static bootstraps, not finished animation sets.
+~~The lich now has modeled headgear and chainmail detail. Its staff attachment, grip, and joint deformation have not yet been validated in motion. Both assets are static bootstraps, not finished animation sets.~~
+
+> Update, 2026-09-09: New rigging and complete animation sets are delivered separately for [Wight](/posts/necropolis-ghosts/) and [Lich](/posts/necropolis-liches/). Their checks do not reuse the rejected prototypes’334samples.
+
+
 
 ## Work remaining
 
@@ -74,4 +82,8 @@ Astra continues to write the tools following the project's move from opus. This 
 
 The new meshes need new deformation and motion checks; the old prototypes' 334 samples do not validate them. The footless wight needs controls for its floating garment. The lich's staff needs a rigid grip relationship independent of body skinning. Work on the rest of the Necropolis roster remains ongoing.
 
-The installed game package remains **0.8.0**, containing Skeleton, Walking Dead, Skeleton Warrior, and Zombie. Neither prototype in this post replaces installed resources. [PR #10](https://github.com/yzh119/vcmi/pull/10) contains the rejected prototype and the generation and static-review tools, with their status explicitly documented.
+~~The installed game package remains **0.8.0**, containing Skeleton, Walking Dead, Skeleton Warrior, and Zombie.~~
+
+> Update, 2026-09-09: As of this annotation, local0.10.0 contains eight creatures. The failed procedural prototypes were never installed.
+
+ Neither prototype in this post replaces installed resources. [PR #10](https://github.com/yzh119/vcmi/pull/10) contains the rejected prototype and the generation and static-review tools, with their status explicitly documented.

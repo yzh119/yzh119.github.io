@@ -46,13 +46,17 @@ Following the project's move from opus to astra, Astra wrote the Blender equipme
 | Creatures | Status |
 | --- | --- |
 | Skeleton, Walking Dead | Installed; updated backgrounds, placement, and shadows published |
-| Skeleton Warrior, Zombie | Full render sets and candidate validation complete; all previews published here |
-| Wight, Wraith | Native references reviewed; Blender construction script still being debugged |
+| Skeleton Warrior, Zombie | ~~Full render sets and candidate validation complete; all previews published here~~ |
+| Wight, Wraith | ~~Native references reviewed; Blender construction script still being debugged~~ |
 | Vampire, Vampire Lord | Native motion references extracted; new models and animation remain unfinished |
-| Lich, Power Lich | Equipment references reviewed; construction script remains unfinished |
+| Lich, Power Lich | ~~Equipment references reviewed; construction script remains unfinished~~ |
 | Black Knight, Dread Knight | Native references extracted; new models and animation remain unfinished |
 | Bone Dragon, Ghost Dragon | Native references extracted; new models and animation remain unfinished |
 
-The reference audit corrected several earlier design notes: wraiths have no scythe, liches wear metal headgear and chainmail and carry staves, and knights ride dark horses. Vampires need bat-form movement; dragons need takeoff, flight, and landing. These families do not yet have completed replacement animations to publish.
+The reference audit corrected several earlier design notes: wraiths have no scythe, liches wear metal headgear and chainmail and carry staves, and knights ride dark horses. Vampires need bat-form movement; dragons need takeoff, flight, and landing. ~~These families do not yet have completed replacement animations to publish.~~
+
+> Update, 2026-09-09: The two upgrades are installed. [Wight/Wraith](/posts/necropolis-ghosts/) and [Lich/Power Lich](/posts/necropolis-liches/) have since shipped. Vampires, knights and dragons remain ongoing.
+
+
 
 Earlier results remain available in the [skeleton post](/posts/skeleton-motion/), [walking dead post](/posts/zombie-study/), [Necropolis town post](/posts/necropolis-hd/), and [showcase and shadow comparison](/demos/necropolis-creatures-game-02/).

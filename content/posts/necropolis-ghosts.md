@@ -14,6 +14,18 @@ The textured wight now has floating, attacking, turning, and death animations, a
 
 [All 32 wight and wraith clips are available in the gallery](/demos/necropolis-ghosts-01/). These are fixed-canvas offline renders. Holding plays at 4 fps and other clips at 8 fps for review, independently of runtime timing; they are not game captures.
 
+## High-resolution Blender stills
+
+These **1400×1600 static renders** come directly from the delivered 3D scenes. They are neither concept images nor enlarged game frames. Camera framing changes for the portraits; the model, materials and accepted Wight animation are preserved.
+
+[![Wight: high-resolution Blender still](/images/necropolis-ghosts/wight-blender-hd.jpg)](/images/necropolis-ghosts/wight-blender-hd.png)
+
+Wight: [transparent original PNG](/images/necropolis-ghosts/wight-blender-hd.png) · [render record](/images/necropolis-ghosts/wight-blender-hd.json)
+
+[![Wraith: high-resolution Blender still](/images/necropolis-ghosts/wraith-blender-hd.jpg)](/images/necropolis-ghosts/wraith-blender-hd.png)
+
+Wraith: [transparent original PNG](/images/necropolis-ghosts/wraith-blender-hd.png) · [render record](/images/necropolis-ghosts/wraith-blender-hd.json)
+
 ## Floating and attacking
 
 The local Blender rig retains the generated robe, skull, and hands. It adds controls for the torso, neck, head, both arms, and three sections of trailing cloth. Movement bends that cloth as the character floats rather than applying a bipedal walk.

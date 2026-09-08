@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
 ---
 
+> **2026-09-09 更新：** 本文的图片、姿势和测量保留为当时试稿，不能视为当前游戏版本。后续替换见[完整动画](/zh/posts/skeleton-motion/)，当前八兵种安装状态见[尸巫交付](/zh/posts/necropolis-liches/)。
+
+
 管线打通了：
 
 ```

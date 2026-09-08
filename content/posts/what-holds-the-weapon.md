@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy"]
 ---
 
+> **Update, 2026-09-09：** Images, poses and measurements below are retained as the historical study, not the current installed version. See the [later animation](/posts/skeleton-motion/) and [current eight-unit delivery](/posts/necropolis-liches/).
+
+
 The [last post](/posts/weapon-not-on-the-hand/) said the sword was bound to the
 hand. It was bound to the wrong geometry: the test that found it on one mesh
 picked an arm bone on the next one. The sword still appeared in every render,

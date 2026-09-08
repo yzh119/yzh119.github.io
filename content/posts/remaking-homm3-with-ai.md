@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "rl"]
 ---
 
+> **Update, 2026-09-09：** The table preserves the original tool choices. Struck-through entries were superseded; Meshy remains in use for base geometry and some humanoid rigs.
+
+
 Heroes III came out in 1999. Twenty-seven years later people still play it, and
 a group of people are still rewriting its engine from scratch.
 
@@ -26,15 +29,19 @@ What is used where, and why:
 
 | Stage | Tool | Notes |
 |---|---|---|
-| **Concept** | FLUX.2 [pro] (Black Forest Labs) | Two views per creature: a front view that fixes style and proportion, and an A-pose for reconstruction |
-| **Mesh** | Meshy image-to-3D | Quad topology, remeshed to 20k |
-| **Rig** | Meshy rigging | 24-bone humanoid. **Non-humanoids need Tripo** — Meshy's rigging API is documented as humanoid-only, and most of the roster is dragons, hydras and serpents |
-| **Animation** | Blender, keyframed by hand | Thirteen groups. The originals are short and stylised; no motion library matches them |
-| **Render** | Blender, orthographic | Three passes: body, ground shadow, white outline |
+| **Concept** | ~~FLUX.2 [pro] (Black Forest Labs)~~ | Two views per creature: a front view that fixes style and proportion, and an A-pose for reconstruction |
+| **Mesh** | Meshy image-to-3D | ~~Quad topology, remeshed to 20k~~ |
+| **Rig** | Meshy rigging | ~~24-bone humanoid. **Non-humanoids need Tripo** — Meshy's rigging API is documented as humanoid-only, and most of the roster is dragons, hydras and serpents~~ |
+| **Animation** | Blender, keyframed by hand | ~~Thirteen groups. The originals are short and stylised; no motion library matches them~~ |
+| **Render** | Blender, orthographic | ~~Three passes: body, ground shadow, white outline~~ |
 | **Validation** | Our own tooling | Canvas consistency, anchor, ground-line drift, layer completeness |
 
-The split is deliberate: **concepts stay with FLUX, Meshy does mesh and rig only,
-Blender does animation and render.** Every stage writes a json alongside its output
+~~The split is deliberate: **concepts stay with FLUX, Meshy does mesh and rig only,
+Blender does animation and render.**~~
+
+> Update, 2026-09-09: The current workflow uses imagegen concepts, Meshy textured meshes and suitable humanoid auto-rigs, with Astra-authored local repair, rigging, motion and packaging. The footless Wight uses a local rig; Tripo is not required. Shadows/outlines are now prebaked offline. See [the workflow change](/posts/necropolis-bootstrap/) and [Lich delivery](/posts/necropolis-liches/).
+
+ Every stage writes a json alongside its output
 recording the task id, parameters and cost, so a result traces back to the request
 that produced it.
 
@@ -108,6 +115,10 @@ anything useful goes back upstream.
 - [two metrics I got wrong](/posts/metrics-i-got-wrong/) — how the original art
   caught both
 
-Next: mesh, rig, animation, rendering back to sprites.
+~~Next: mesh, rig, animation, rendering back to sprites.~~
+
+> Update, 2026-09-09: Eight Necropolis units are installed in local0.10.0. Vampire and Vampire Lord are in progress. See [the latest delivery](/posts/necropolis-liches/).
+
+
 
 First target: **one skeleton**, end to end.
