@@ -6,6 +6,9 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
 
+**Design follow-up:** [Rejected wight and lich prototypes and the subsequent imagegen/Meshy bootstrap](/posts/necropolis-bootstrap/) are documented in a separate post with the failed renders preserved.
+
+
 The skeleton and walking dead now have reusable motion, placement, and showcase assets. Their upgrades are the next pair: Skeleton Warrior (`CWSKEL`) and Zombie (`CZOMLO`). Both have a complete thirteen-clip render set, published here for review.
 
 [All 26 clips are playable in the gallery](/demos/necropolis-upgrades-01/). These are offline composites using the approved showcase background and the game's panel crop, not screenshots. Holding plays at 4 fps and the other clips at 8 fps for pose review; runtime timing has not been tested here.

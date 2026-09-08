@@ -1,0 +1,100 @@
+[
+  {
+    "unit": "wight",
+    "model": {
+      "ai_model": "meshy-7",
+      "should_remesh": true,
+      "topology": "quad",
+      "target_polycount": 40000,
+      "should_texture": true,
+      "texture_resolution": "4k",
+      "image_enhancement": false
+    },
+    "credits": 30,
+    "sourceSHA256": "85dc092c01aaf4845bc8beabb72be7990e281e88e568a129318bb8d522346eca",
+    "geometry": [
+      {
+        "vertices": 71107,
+        "faces": 82522
+      }
+    ],
+    "textureDimensions": [
+      [
+        4096,
+        4096
+      ]
+    ],
+    "showcase": {
+      "bbox": [
+        374,
+        356,
+        427,
+        530
+      ],
+      "canvas": [
+        900,
+        800
+      ],
+      "originalHeight": 87,
+      "ground": 265,
+      "azimuth": -45,
+      "elevation": 15,
+      "previewOnly": true
+    },
+    "rejectedProbeChecks": {
+      "savedSamples": 334,
+      "maximumArmError": 4.667755623556851e-05,
+      "minimumDeathZ": 0.0029759034514427185
+    },
+    "status": "static bootstrap; not rigged or installed"
+  },
+  {
+    "unit": "lich",
+    "model": {
+      "ai_model": "meshy-7",
+      "should_remesh": true,
+      "topology": "quad",
+      "target_polycount": 40000,
+      "should_texture": true,
+      "texture_resolution": "4k",
+      "image_enhancement": false
+    },
+    "credits": 30,
+    "sourceSHA256": "5c78782e853bc25dcfd2d18016de6df3e69408d2ff04bbf20c6d08af1e116cd8",
+    "geometry": [
+      {
+        "vertices": 64784,
+        "faces": 79306
+      }
+    ],
+    "textureDimensions": [
+      [
+        4096,
+        4096
+      ]
+    ],
+    "showcase": {
+      "bbox": [
+        366,
+        351,
+        434,
+        534
+      ],
+      "canvas": [
+        900,
+        800
+      ],
+      "originalHeight": 91,
+      "ground": 267,
+      "azimuth": -45,
+      "elevation": 15,
+      "previewOnly": true
+    },
+    "rejectedProbeChecks": {
+      "savedSamples": 334,
+      "maximumArmError": 4.870002690013033e-05,
+      "minimumDeathZ": 0.0027532577514648438
+    },
+    "status": "static bootstrap; not rigged or installed"
+  }
+]
