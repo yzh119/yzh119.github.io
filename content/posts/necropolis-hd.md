@@ -1,6 +1,7 @@
 ---
 title: "[AI] opus -> astra: Necropolis HD study"
 date: 2026-09-08T14:34:06+08:00
+lastmod: 2026-09-08T15:36:56+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
@@ -10,6 +11,8 @@ After the creature animations, the next art study covers the Necropolis town
 panorama and adventure-map exterior. Enlarging the original assets leaves stone,
 roof and graveyard details soft. Astra wrote the extraction tool; the built-in
 `image_gen` tool edited the original references for a higher-resolution comparison.
+
+**Latest:** the remaining 41 town layers now have generated static interior detail, and the local mod is updated to 0.3.0. The [third comparison](/demos/necropolis-layered-03/) switches versions while keeping the same buildings and effects selected.
 
 The [original/HD comparison page](/demos/necropolis-hd-01/) lets you switch views
 and open the full images. These are visual studies, not installed game assets.
@@ -93,3 +96,46 @@ are supplied; native 1x resources remain available.
 registered castle processing, mod assembly and interactive inspector. Astra
 wrote the tooling; the [prompt record](/demos/necropolis-layered-02/prompts.md)
 distinguishes generated art from local image processing.
+
+
+## Detail across the remaining buildings
+
+The second pass enlarged most buildings without generating new detail. This pass
+edits each of the remaining **41 layers** individually: five mage-guild stages,
+four hall stages, fortifications, all seven dwelling types and their upgrades,
+service buildings, bone pit and cemetery additions. Together with the existing
+castle, all **42 town layers** now have generated detail in their static regions.
+
+![Town assembled with all refined building interiors](/demos/necropolis-layered-03/town-layered.png)
+
+Built-in `image_gen` handled the artwork; Astra wrote reference preparation,
+registration and checking tools. Each original was padded onto a square magenta
+canvas. Generated subject bounds were fitted back to the original, and the new
+texture was blended inside the original alpha. Masonry, slate, doors and windows
+are clearer, with some changes to internal ornament and materials. Source pixels
+remain near uncertain edges. Preserving alpha does not imply exact agreement of
+internal architectural geometry.
+
+The [building comparison sheet](/demos/necropolis-layered-03/building-comparison.png)
+shows six examples. The [interactive inspector](/demos/necropolis-layered-03/)
+can switch the previous/current base images without changing selected buildings
+or animated overlays.
+
+Town animations draw frame zero as a base beneath later partial frames. We protect
+the union of those overlay regions, with a small additional margin, from texture
+changes in the base. Water, smoke, flame and glow therefore retain the previous
+base pixels as well as their animation. All **58 overlay frames are byte-identical**
+to version 0.2, and every frame retains its dimensions and alpha. An independent
+pixel audit used NumPy installed in the project's virtual environment and
+confirmed visible texture changes in every newly refined layer.
+
+The local mod is now **0.3.0**, with the installed 0.2 copy backed up. Browser
+checks verified empty/basic/upgraded counts of 0/21/23, exact pixel agreement
+between the empty canvas and the separate background, and a changing image when
+switching building versions. These checks do not add native construction, upgrade
+or click-test coverage. Adventure-map variants remain the second-pass assets.
+
+[PR #10](https://github.com/yzh119/vcmi/pull/10) adds per-building reference
+preparation and static-interior registration. The [41 prompts](/demos/necropolis-layered-03/prompts.md)
+and [pixel-audit results](/demos/necropolis-layered-03/validation.json) accompany
+the gallery.

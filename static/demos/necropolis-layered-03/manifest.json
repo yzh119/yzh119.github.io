@@ -1,0 +1,1668 @@
+{
+  "scale": 2,
+  "configSHA256": "530d8665e3b2771f024e7e9d853c0cfd50a07087aa04ba930a3ae6e602b531cd",
+  "backgroundGenerated": true,
+  "castleGenerated": true,
+  "structures": [
+    {
+      "name": "extraAnimation",
+      "animation": "TBNCEXT2.def",
+      "x": 25,
+      "y": 279,
+      "z": 9,
+      "resource": "TBNCEXT2",
+      "size": [
+        732,
+        95
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "e330a32b786b99bab6e3ac7743eecf0e9517772f2554475d69b84023c23edd93",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "mageGuild1",
+      "animation": "TBNCMAGE.def",
+      "x": 341,
+      "y": 116,
+      "z": -1,
+      "campaignBonus": "BoNmage1.pcx",
+      "border": "TONMAG1.bmp",
+      "area": "TZNMAG1.bmp",
+      "resource": "TBNCMAGE",
+      "size": [
+        144,
+        93
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "11fe7e56ddd167a1e628fb80635b6e23192d33572e30d53f5b2c1cc3c8d0c1b7",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "mageGuild2",
+      "animation": "TBNCMAG2.def",
+      "x": 341,
+      "y": 97,
+      "z": -1,
+      "campaignBonus": "BoNmage2.pcx",
+      "border": "TONMAG2.bmp",
+      "area": "TZNMAG2.bmp",
+      "resource": "TBNCMAG2",
+      "size": [
+        144,
+        112
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "ceeb5ff676c2456ff49bbd3f497e5acb7e569448e427bd7ccef77f1d8ee6646a",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "mageGuild3",
+      "animation": "TBNCMAG3.def",
+      "x": 341,
+      "y": 78,
+      "z": -1,
+      "campaignBonus": "BoNmage3.pcx",
+      "border": "TONMAG3.bmp",
+      "area": "TZNMAG3.bmp",
+      "resource": "TBNCMAG3",
+      "size": [
+        144,
+        131
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "c5834a02e4dade2a094d6de32c73ac53b0d991bf0da8a83c0b02246783e039b0",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "mageGuild4",
+      "animation": "TBNCMAG4.def",
+      "x": 340,
+      "y": 62,
+      "z": -1,
+      "campaignBonus": "BoNmage4.pcx",
+      "border": "TONMAG4.bmp",
+      "area": "TZNMAG4.bmp",
+      "resource": "TBNCMAG4",
+      "size": [
+        145,
+        147
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "255a2c27895c508b34d5cd46b96385a8d1b0f3eee0448854b422ff0988acbaee",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "mageGuild5",
+      "animation": "TBNCMAG5.def",
+      "x": 343,
+      "y": 35,
+      "z": -1,
+      "campaignBonus": "BoNmage5.pcx",
+      "border": "TONMAG5.bmp",
+      "area": "TZNMAG5.bmp",
+      "resource": "TBNCMAG5",
+      "size": [
+        142,
+        174
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "591675e660d51f74dc5ea9bfb9141f6c9454ab73eb2cd5ad7ef9098c2e3f3be9",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "tavern",
+      "animation": "TBNCTVRN.def",
+      "x": 508,
+      "y": 189,
+      "campaignBonus": "BoNtav.pcx",
+      "border": "TONTAV.bmp",
+      "area": "TZNTAV.bmp",
+      "resource": "TBNCTVRN",
+      "size": [
+        199,
+        68
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "491a86c51060e55e33d9dadde2e8cdc7d4b2a95e383748034bd561753c4d51d3",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "shipyard",
+      "animation": "TBNCDOCK.def",
+      "x": 617,
+      "y": 265,
+      "z": -2,
+      "campaignBonus": "BoNship.pcx",
+      "border": "TONSHPBA.bmp",
+      "area": "TZNSHPBA.bmp",
+      "resource": "TBNCDOCK",
+      "size": [
+        183,
+        109
+      ],
+      "groups": {
+        "0": 10
+      },
+      "sourceSHA256": "3cb1e9524900a87c934adf5f214b5ab77d5d3afb1f81e1e5e4b1fbbef8b971c9",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "fort",
+      "animation": "TBNCCSTL.def",
+      "x": 138,
+      "y": 66,
+      "campaignBonus": "BoNcast1.pcx",
+      "border": "TONCAS1.bmp",
+      "area": "TZNCAS1.bmp",
+      "resource": "TBNCCSTL",
+      "size": [
+        200,
+        196
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2f27e3c1cf49aeaa1e6af79a647002dfc386709c82d2fee45624190e64110d13",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "citadel",
+      "animation": "TBNCCAS2.def",
+      "x": 139,
+      "y": 66,
+      "campaignBonus": "BoNcast2.pcx",
+      "border": "TONCAS2.bmp",
+      "area": "TZNCAS2.bmp",
+      "resource": "TBNCCAS2",
+      "size": [
+        237,
+        196
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "5e9900a5126bb8e24c8d38dcf0972872d7809dfc455094d673a503e167971079",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "castle",
+      "animation": "TBNCCAS3.def",
+      "x": 34,
+      "y": 18,
+      "campaignBonus": "BoNcast3.pcx",
+      "border": "TONCAS3.bmp",
+      "area": "TZNCAS3.bmp",
+      "resource": "TBNCCAS3",
+      "size": [
+        342,
+        251
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "359f2d89d4f742da8e71602c144288983fecc727652f2ad87a907da1580a9ab4"
+    },
+    {
+      "name": "villageHall",
+      "animation": "TBNCHALL.def",
+      "x": 468,
+      "y": 76,
+      "z": -2,
+      "campaignBonus": "BoNhall1.pcx",
+      "border": "TONHAL1.bmp",
+      "area": "TZNHAL1.bmp",
+      "resource": "TBNCHALL",
+      "size": [
+        174,
+        158
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "a26c8bda71056f4b4b071527aefc80133f4ba38dc884932a8b75f70439140d5b",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "townHall",
+      "animation": "TBNCHAL2.def",
+      "x": 482,
+      "y": 56,
+      "z": -2,
+      "campaignBonus": "BoNhall2.pcx",
+      "border": "TONHAL2.bmp",
+      "area": "TZNHAL2.bmp",
+      "resource": "TBNCHAL2",
+      "size": [
+        155,
+        176
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2d93773c83d20309ab812d2b9b5c2823fc03af113c7a2cacd66303ab26276766",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "cityHall",
+      "animation": "TBNCHAL3.def",
+      "x": 478,
+      "y": 26,
+      "z": -2,
+      "campaignBonus": "BoNhall3.pcx",
+      "border": "TONHAL3.bmp",
+      "area": "TZNHAL3.bmp",
+      "resource": "TBNCHAL3",
+      "size": [
+        158,
+        207
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "7b64c3859304e52d1128f3f3b78531c8ddace6f5e2fe658993567e2e35829811",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "capitol",
+      "animation": "TBNCHAL4.def",
+      "x": 481,
+      "y": 26,
+      "z": -2,
+      "campaignBonus": "BoNhall4.pcx",
+      "border": "TONHAL4.bmp",
+      "area": "TZNHAL4.bmp",
+      "resource": "TBNCHAL4",
+      "size": [
+        154,
+        205
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "050333940d00fd0924bed025096fbd9f70cbeea438f3d8066039a4fa4af2e420",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "marketplace",
+      "animation": "TBNCMARK.def",
+      "x": 347,
+      "y": 215,
+      "z": 2,
+      "campaignBonus": "BoNmark1.pcx",
+      "border": "TONMRK1.bmp",
+      "area": "TZNMRK1.bmp",
+      "resource": "TBNCMARK",
+      "size": [
+        99,
+        48
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "f431424d94deef477ac6626ea72cdb4e45cf4bfe2224b534d1d3d0a6f5f985ae",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "resourceSilo",
+      "animation": "TBNCSILO.def",
+      "x": 276,
+      "y": 185,
+      "z": 1,
+      "campaignBonus": "BoNmark2.pcx",
+      "border": "TONMRK2.bmp",
+      "area": "TZNMRK2.bmp",
+      "resource": "TBNCSILO",
+      "size": [
+        93,
+        77
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "89557098b93540a6fd4d6afbf93aeae13ca299e2aa3e7ab594eaa2ee95bcfbdd",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "blacksmith",
+      "animation": "TBNCBLAK.def",
+      "x": 382,
+      "y": 252,
+      "z": 7,
+      "campaignBonus": "BoNsmith.pcx",
+      "border": "TONSMITA.bmp",
+      "area": "TZNSMITA.bmp",
+      "resource": "TBNCBLAK",
+      "size": [
+        114,
+        55
+      ],
+      "groups": {
+        "0": 10
+      },
+      "sourceSHA256": "3cda7798864f98a8adbf32ff030b2685c3beb733fdf6d6d111153e914cc15b7b",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "special1",
+      "animation": "TBNCSPEC.def",
+      "x": 18,
+      "y": 0,
+      "z": -1,
+      "campaignBonus": "BoNshrod.pcx",
+      "border": "TONSHRDA.bmp",
+      "area": "TZNSHRDA.bmp",
+      "resource": "TBNCSPEC",
+      "size": [
+        216,
+        231
+      ],
+      "groups": {
+        "0": 20
+      },
+      "sourceSHA256": "61b0e3b7174b09dd9c392b70e9586e914a4bad11e91d3374257ade80ffc822d7",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "horde1",
+      "animation": "TBNCHRD1.def",
+      "x": 80,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNskelH.pcx",
+      "border": "TONSKE1H.bmp",
+      "area": "TZNSKE1H.bmp",
+      "hidden": true,
+      "resource": "TBNCHRD1",
+      "size": [
+        196,
+        130
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "9eec9cbdf707ff456ec7ce412c99b61bf869d4efa00f2e6ab8db04a5b3520aa8",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "horde1Upgr",
+      "animation": "TBNCHRD2.def",
+      "x": 64,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNnecro.pcx",
+      "border": "TONSKE2H.bmp",
+      "area": "TZNSKE2H.bmp",
+      "hidden": true,
+      "builds": "horde1",
+      "resource": "TBNCHRD2",
+      "size": [
+        212,
+        130
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "9618ce0391d516f4cdcbe682641a8825f0081bd7386b563a910878fb7ee96bc0",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "ship",
+      "animation": "TBNCBOAT.def",
+      "x": 617,
+      "y": 265,
+      "z": -2,
+      "border": "TONSHPNA.bmp",
+      "area": "TZNSHPNA.bmp",
+      "hidden": true,
+      "resource": "TBNCBOAT",
+      "size": [
+        183,
+        109
+      ],
+      "groups": {
+        "0": 10
+      },
+      "sourceSHA256": "917fcf43a8f979b811f1dbb5868cfb087c1925e046f5d0492bd9df09fbf02275",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "special2",
+      "animation": "TBNCEXT0.def",
+      "x": 307,
+      "y": 61,
+      "z": -2,
+      "campaignBonus": "BoNnecro.pcx",
+      "border": "TONNECRA.bmp",
+      "area": "TZNNECRA.bmp",
+      "resource": "TBNCEXT0",
+      "size": [
+        79,
+        150
+      ],
+      "groups": {
+        "0": 9
+      },
+      "sourceSHA256": "342b7a8d6634b028c7e57a61f2799d18f58d2d3dcbf59b1aa0cf74225efabd4c",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "special3",
+      "animation": "TBNCEXT1.def",
+      "x": 247,
+      "y": 275,
+      "z": 4,
+      "campaignBonus": "BoNskelT.pcx",
+      "border": "TONSKELT.bmp",
+      "area": "TZNSKELT.bmp",
+      "resource": "TBNCEXT1",
+      "size": [
+        87,
+        37
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2f0c4f5a53687546a854e09c629f1f1e1d590a299eaa624bd295ee1d29396285",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "grail",
+      "animation": "TBNCHOLY.def",
+      "x": 410,
+      "y": 88,
+      "campaignBonus": "BoNholyG.pcx",
+      "border": "TONHOLYA.bmp",
+      "area": "TZNHOLYA.bmp",
+      "resource": "TBNCHOLY",
+      "size": [
+        128,
+        178
+      ],
+      "groups": {
+        "0": 5
+      },
+      "sourceSHA256": "b4246b4fac98a5e60ff031edb20f103283728eae57a932b785bb4c9a50e8261a",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "extraTownHall",
+      "animation": "TBNCEXT3.def",
+      "x": 0,
+      "y": 241,
+      "z": 6,
+      "resource": "TBNCEXT3",
+      "size": [
+        177,
+        106
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "78de862893d1941753f3dac20aaaf9d376024692b0a662d9194aac68c39b7fac",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "extraCityHall",
+      "animation": "TBNCEXT4.def",
+      "x": 321,
+      "y": 255,
+      "z": 6,
+      "resource": "TBNCEXT4",
+      "size": [
+        87,
+        62
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2abd1c6e8464ce1ae4e6ffb66af278e5aac6f0d11059e246145afc2fd07e35a5",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "extraCapitol",
+      "animation": "TBNCEXT5.def",
+      "x": 475,
+      "y": 257,
+      "z": 6,
+      "resource": "TBNCEXT5",
+      "size": [
+        181,
+        51
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "6ae06c83a8869782969e86edc76dc70ff1b4656d2f789564ed738fc7ce719388",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingLvl1",
+      "animation": "TBNCDW_0.def",
+      "x": 80,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNskel1.pcx",
+      "border": "TONSKEL1.bmp",
+      "area": "TZNSKEL1.bmp",
+      "resource": "TBNCDW_0",
+      "size": [
+        183,
+        108
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "3e0fb2a3ca37511e5cdda165c1409cc5894155dc846861b38f9c0278c4f48b70",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingLvl2",
+      "animation": "TBNCDW_1.def",
+      "x": 502,
+      "y": 223,
+      "z": 1,
+      "campaignBonus": "BoNzomb1.pcx",
+      "border": "TONZOMB1.bmp",
+      "area": "TZNZOMB1.bmp",
+      "resource": "TBNCDW_1",
+      "size": [
+        132,
+        74
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "11a7556c371b3073af2967e2154ce8e32c8ef900f787e255fddc53f3feb8da90",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingLvl3",
+      "animation": "TBNCDW_2.def",
+      "x": 0,
+      "y": 187,
+      "z": 8,
+      "campaignBonus": "BoNwigh1.pcx",
+      "border": "TONWIGH1.bmp",
+      "area": "TZNWIGH1.bmp",
+      "resource": "TBNCDW_2",
+      "size": [
+        144,
+        187
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "170de2944c0b9e94cdbc319202b61a5855180df0f1be4fd9a47b77f45fc7d3de",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingLvl4",
+      "animation": "TBNCDW_3.def",
+      "x": 607,
+      "y": 212,
+      "z": 2,
+      "campaignBonus": "BoNvamp1.pcx",
+      "border": "TONVAM1.bmp",
+      "area": "TZNVAM1.bmp",
+      "resource": "TBNCDW_3",
+      "size": [
+        188,
+        64
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "78dab3a473e5804afba556e9fdbbf09fa6f63ce3e58ed5cb97c4fb99c4a5289e",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingLvl5",
+      "animation": "TBNCDW_4.def",
+      "x": 206,
+      "y": 207,
+      "z": 3,
+      "campaignBonus": "BoNlich1.pcx",
+      "border": "TONLICH1.bmp",
+      "area": "TZNLICH1.bmp",
+      "resource": "TBNCDW_4",
+      "size": [
+        129,
+        85
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "58e1b3b0cc23101e17f5a526bd0a2154f77ed8a961d00a74404327e54ce8b976",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingLvl6",
+      "animation": "TBNCDW_5.def",
+      "x": 0,
+      "y": 31,
+      "z": -2,
+      "campaignBonus": "BoNbkni1.pcx",
+      "border": "TONBKN1.bmp",
+      "area": "TZNBKN1.bmp",
+      "resource": "TBNCDW_5",
+      "size": [
+        125,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "f2811ad68db222b07a7ffe12fd7ccc17cc4f5918f5406dc8c02edb100e892df3",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingLvl7",
+      "animation": "TBNCDW_6.def",
+      "x": 663,
+      "y": 25,
+      "campaignBonus": "BoNbone1.pcx",
+      "border": "TONBON1.bmp",
+      "area": "TZNBON1.bmp",
+      "resource": "TBNCDW_6",
+      "size": [
+        137,
+        164
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "d0043a20c3520ac05c575d2e1ad24ad8e996e0edeaed0ce70e378c52d80179fb",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingUpLvl1",
+      "animation": "TBNCUP_0.def",
+      "x": 64,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNskel2.pcx",
+      "border": "TONSKEL2.bmp",
+      "area": "TZNSKEL2.bmp",
+      "resource": "TBNCUP_0",
+      "size": [
+        193,
+        117
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "eb308b0d7452c58d2a9ad7008f86b9b58e0e836bb736601b89092a67602bfcd1",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingUpLvl2",
+      "animation": "TBNCUP_1.def",
+      "x": 498,
+      "y": 224,
+      "z": 1,
+      "campaignBonus": "BoNzomb2.pcx",
+      "border": "TONZOMB2.bmp",
+      "area": "TZNZOMB2.bmp",
+      "resource": "TBNCUP_1",
+      "size": [
+        134,
+        77
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "19f5aa8163dc3c66d810738e68b0621f5084d024caad9f930c2e5e1bf2411a23",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingUpLvl3",
+      "animation": "TBNCUP_2.def",
+      "x": 0,
+      "y": 179,
+      "z": 8,
+      "campaignBonus": "BoNwigh2.pcx",
+      "border": "TONWIGH2.bmp",
+      "area": "TZNWIGH2.bmp",
+      "resource": "TBNCUP_2",
+      "size": [
+        147,
+        195
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "382d46387fa97284ee28789ee67821551b2c1de4517f846a6583984a2c4afef0",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingUpLvl4",
+      "animation": "TBNCUP_3.def",
+      "x": 615,
+      "y": 193,
+      "z": 2,
+      "campaignBonus": "BoNvamp2.pcx",
+      "border": "TONVAM2.bmp",
+      "area": "TZNVAM2.bmp",
+      "resource": "TBNCUP_3",
+      "size": [
+        183,
+        83
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "0d9aacbcae2fff7ae6422286ff80bd9b53679af0dc97915828127e38f3540ec1",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingUpLvl5",
+      "animation": "TBNCUP_4.def",
+      "x": 222,
+      "y": 171,
+      "z": 3,
+      "campaignBonus": "BoNlich2.pcx",
+      "border": "TONLICH2.bmp",
+      "area": "TZNLICH2.bmp",
+      "resource": "TBNCUP_4",
+      "size": [
+        114,
+        120
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2714b44f1c1bec4a4e7aa1174167c489db15ec7f85e258272585dfa7ee2a77c8",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingUpLvl6",
+      "animation": "TBNCUP_5.def",
+      "x": 0,
+      "y": 30,
+      "z": -2,
+      "campaignBonus": "BoNbkni2.pcx",
+      "border": "TONBKN2.bmp",
+      "area": "TZNBKN2.bmp",
+      "resource": "TBNCUP_5",
+      "size": [
+        125,
+        193
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "29d276d41b33f6f2848df2f70c95a39d92ccb0688db2aedc0f2f9de39ae1400d",
+      "detailMethod": "generated interior; original alpha and animated support"
+    },
+    {
+      "name": "dwellingUpLvl7",
+      "animation": "TBNCUP_6.def",
+      "x": 662,
+      "y": 23,
+      "campaignBonus": "BoNbone2.pcx",
+      "border": "TONBON2.bmp",
+      "area": "TZNBON2.bmp",
+      "resource": "TBNCUP_6",
+      "size": [
+        138,
+        168
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "dd675f0dad914bf0a0d604d6a69bfb9d30015a8e3cd0f63d37abae2564aa2c3c",
+      "detailMethod": "generated interior; original alpha and animated support"
+    }
+  ],
+  "map": [
+    {
+      "name": "village",
+      "animation": "AVCNECR0.DEF",
+      "resource": "AVCNECR0",
+      "size": [
+        192,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "174d69c0b2ccfa12060941b572fe2bf326fac9fa97779f880e7d1ce3142fdcac"
+    },
+    {
+      "name": "fort",
+      "animation": "AVCNECX0.DEF",
+      "resource": "AVCNECX0",
+      "size": [
+        192,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "4e10a6b802e3994fc382ab790ef39414371c2cb0adfb60528b8b552438b263db"
+    },
+    {
+      "name": "capitol",
+      "animation": "AVCNECZ0.DEF",
+      "resource": "AVCNECZ0",
+      "size": [
+        192,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "315b44a946994a6bc062a9d39963ef71e36e4c5a2fc022a32a695272d8de58f8"
+    }
+  ],
+  "frames": 103,
+  "stateLogic": "Original engine config unchanged; gallery is an independent layer inspector.",
+  "method": "Generated static interiors for all 42 town layers; original alpha and 58 overlay frames preserved. Map variants unchanged.",
+  "generatedInputs": {
+    "background": {
+      "path": "/Users/zhye/vcmi-art/necropolis-hd/layer-input-02/background.png",
+      "sha256": "12ce5cfb8b531d432b6df7144361212d51d6ccc7dc6c9cab0e94d1344808b637"
+    },
+    "castle": {
+      "path": "/Users/zhye/vcmi-art/necropolis-hd/layer-input-02/castle-magenta.png",
+      "sha256": "710b0200dddd0fb0165c2215515f561260768cfa4fe6320accf1a738e0dbab89"
+    }
+  },
+  "buildingRefinement": [
+    {
+      "name": "extraAnimation",
+      "generatedBox": [
+        40,
+        40,
+        1215,
+        191
+      ],
+      "targetBox": [
+        0,
+        0,
+        1464,
+        190
+      ],
+      "interiorCoverage": 0.9686088779219401,
+      "inputSHA256": "3172394f396cc47eadd0b4d602732d361bf23c4e36b7c3c5dffd25d6f820d9cb",
+      "outputSHA256": "61e071cece6a97b7fa4fe68b42bb3f95a97f5ed97da709d77cfb40e91171f260",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "mageGuild1",
+      "generatedBox": [
+        161,
+        155,
+        1097,
+        764
+      ],
+      "targetBox": [
+        0,
+        0,
+        288,
+        186
+      ],
+      "interiorCoverage": 0.9552628545077242,
+      "inputSHA256": "4a256760a3ad1bf5e9379b55e67b68a533a76a075f5f246e36015941ff6df6d7",
+      "outputSHA256": "fa14a47b7ad126ab1465d64537fb0ab3017e74f7bf4e7fb5e78b2d08a77ddf4c",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "mageGuild2",
+      "generatedBox": [
+        158,
+        153,
+        1097,
+        887
+      ],
+      "targetBox": [
+        0,
+        0,
+        288,
+        224
+      ],
+      "interiorCoverage": 0.9548467245943655,
+      "inputSHA256": "e08f188456dc4a2fc3a8f7123070620d2225513b22516e916a10686e17dced23",
+      "outputSHA256": "816b8c5d74a2b587f7bcbe6d6247a79fbd3b538f28967ba5000225c69ca76472",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "mageGuild3",
+      "generatedBox": [
+        158,
+        157,
+        1097,
+        1013
+      ],
+      "targetBox": [
+        0,
+        0,
+        288,
+        262
+      ],
+      "interiorCoverage": 0.960267371337866,
+      "inputSHA256": "bbbd9c369004bac50ef2dfbb5b0c94900c57fa0e6c871d6f609ea60034254910",
+      "outputSHA256": "daa97886781dab17a43c33909d6f7f28c6b58fa7452f48b661ecac08fff2965a",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "mageGuild4",
+      "generatedBox": [
+        154,
+        153,
+        1085,
+        1100
+      ],
+      "targetBox": [
+        0,
+        0,
+        290,
+        294
+      ],
+      "interiorCoverage": 0.9542806440818435,
+      "inputSHA256": "ea23c03a8c322fd4d05939af8d5d69255b48b53615a63a4dfc1351b70b464608",
+      "outputSHA256": "e777e4dae99f6a68d2aca09dd19f37b1f1020d0f08ace894d2a4758c8e8b8d14",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "mageGuild5",
+      "generatedBox": [
+        137,
+        130,
+        936,
+        1117
+      ],
+      "targetBox": [
+        0,
+        0,
+        284,
+        348
+      ],
+      "interiorCoverage": 0.9505395145863224,
+      "inputSHA256": "71c2861268dd1b34564f6b9864d44150a7a84e2f5c4d2d50e836078c30409047",
+      "outputSHA256": "0a245f2ceb1c632dd5b3bb9999914d98c827808db9c59a4cfe8d1ce8534c405b",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "tavern",
+      "generatedBox": [
+        120,
+        112,
+        1136,
+        468
+      ],
+      "targetBox": [
+        0,
+        0,
+        398,
+        136
+      ],
+      "interiorCoverage": 0.9248006243686542,
+      "inputSHA256": "845d83a27b4a90764e7e07677ae83b5496e95626c6a700da21b71db9c88e63d1",
+      "outputSHA256": "d43eb0f0a9d49c7badd09002529d7db8ca19dd7de27323561b050dac7fdc2244",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "shipyard",
+      "generatedBox": [
+        131,
+        131,
+        1124,
+        723
+      ],
+      "targetBox": [
+        0,
+        0,
+        366,
+        218
+      ],
+      "interiorCoverage": 0.47329550687707234,
+      "inputSHA256": "30d1a45ca35fffc56cbf3c5a5d31cd963c318bc1268c04a88eacbb18bfe91292",
+      "outputSHA256": "a42194bbaeb4d6b9b4d5ff809a1445b1fab75f76a5cb9eb3f518143553d39036",
+      "preservedOverlayFrames": 9
+    },
+    {
+      "name": "fort",
+      "generatedBox": [
+        125,
+        118,
+        1133,
+        1112
+      ],
+      "targetBox": [
+        2,
+        0,
+        400,
+        392
+      ],
+      "interiorCoverage": 0.9751747868051073,
+      "inputSHA256": "a86aeaf074629d4e805bbb60a641b51a5f0f1b07d5c9890005cef61474dbd2ff",
+      "outputSHA256": "da8f5356b545321f29ef98976e9015ac6c52f9bdbd466d3283fa0223fddfd183",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "citadel",
+      "generatedBox": [
+        104,
+        107,
+        1150,
+        963
+      ],
+      "targetBox": [
+        0,
+        0,
+        474,
+        392
+      ],
+      "interiorCoverage": 0.968195755504863,
+      "inputSHA256": "a46ba7f65b893d19b423ca584395e95482c93881a646d6c923652426b6e0042f",
+      "outputSHA256": "39f91992bb095be026d95e059ab6f7a81bf37067d27acc78a40cee712410c58b",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "villageHall",
+      "generatedBox": [
+        136,
+        136,
+        1121,
+        1029
+      ],
+      "targetBox": [
+        0,
+        0,
+        348,
+        316
+      ],
+      "interiorCoverage": 0.9436916791536993,
+      "inputSHA256": "16b998b26b9a61b4efb7620170a3f686c8618be92d8c12ad5e61632dc872c0f6",
+      "outputSHA256": "c9cbe6d3254a9a0116c6ad280ae3d16f4716543380ab3b296536210c9461deb0",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "townHall",
+      "generatedBox": [
+        136,
+        120,
+        1002,
+        1119
+      ],
+      "targetBox": [
+        0,
+        0,
+        310,
+        352
+      ],
+      "interiorCoverage": 0.9491719299994541,
+      "inputSHA256": "bfbd8f4bf89034d576dea72cd8bc2e4e8a9c2e2a4731b2881d23b20294938bcf",
+      "outputSHA256": "15d2a37adfc50587e8824ae1eedb3370bccabdc1a9cc5acd18eb2382cef04b05",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "cityHall",
+      "generatedBox": [
+        120,
+        98,
+        896,
+        1136
+      ],
+      "targetBox": [
+        0,
+        0,
+        316,
+        414
+      ],
+      "interiorCoverage": 0.9385969863200583,
+      "inputSHA256": "14ba4b230daaaa582eedeb1559f63913cee285abf9d0122c44e5db4c9a971471",
+      "outputSHA256": "9f3e1c5f02a341bcda717d994b34e2df896ad75a7c8c9012ab0c7add053224d8",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "capitol",
+      "generatedBox": [
+        116,
+        113,
+        882,
+        1135
+      ],
+      "targetBox": [
+        0,
+        0,
+        308,
+        410
+      ],
+      "interiorCoverage": 0.9569863515644411,
+      "inputSHA256": "640a620df6beda1531baec853da09add5cf14ad6cee44c3dac333c1250200020",
+      "outputSHA256": "df1f17aebb2fc4db6d604d0ca98b1b01e307440ad74760c25397c384b488e4d1",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "marketplace",
+      "generatedBox": [
+        228,
+        200,
+        1048,
+        613
+      ],
+      "targetBox": [
+        6,
+        0,
+        198,
+        96
+      ],
+      "interiorCoverage": 0.8733154286213372,
+      "inputSHA256": "ad8d2fc960b4c72e35f57b2dca1b89668db0803f0bd3539561d2bd31931b9c6e",
+      "outputSHA256": "219b28f39e9d3875075da3c4c12df01e35e5d6760861111bcca444cce2fe08a4",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "resourceSilo",
+      "generatedBox": [
+        213,
+        211,
+        1042,
+        899
+      ],
+      "targetBox": [
+        0,
+        0,
+        186,
+        154
+      ],
+      "interiorCoverage": 0.9183909901337773,
+      "inputSHA256": "b2de7d1db781d6d45933446adc841e44f63af6adcce11493f82d417bd1136f70",
+      "outputSHA256": "dd39b910b1688f69af93bfbb508b1aa7fe6a6e77067a9ad797166fa407caf051",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "blacksmith",
+      "generatedBox": [
+        186,
+        187,
+        1068,
+        612
+      ],
+      "targetBox": [
+        0,
+        0,
+        228,
+        110
+      ],
+      "interiorCoverage": 0.6175911756108465,
+      "inputSHA256": "6114b09c2c053f9611faaac71f69f92fcc3eefbbfd4308c833a02892e246aac6",
+      "outputSHA256": "127b60a2c11427de96da0a940557bb279a78ad927dc47eae15bcda6fdfd274fb",
+      "preservedOverlayFrames": 9
+    },
+    {
+      "name": "special1",
+      "generatedBox": [
+        108,
+        106,
+        1079,
+        1147
+      ],
+      "targetBox": [
+        0,
+        0,
+        432,
+        462
+      ],
+      "interiorCoverage": 0.40634291447879256,
+      "inputSHA256": "0e63c9f2a03eb13d6c321a2a28c9842c9582dd5c5965afe9ba91cc5fb2def60d",
+      "outputSHA256": "51d903fa03648a23281d93f10f48e3d7892adb5240941234f4da9d4affa00505",
+      "preservedOverlayFrames": 19
+    },
+    {
+      "name": "horde1",
+      "generatedBox": [
+        122,
+        124,
+        1130,
+        792
+      ],
+      "targetBox": [
+        0,
+        0,
+        392,
+        260
+      ],
+      "interiorCoverage": 0.968756855730635,
+      "inputSHA256": "80d5cb5406a8e162965fcd8f60f811de01b7f52821d696e58888a67091667653",
+      "outputSHA256": "9bcd53c2f0658046b52ba83c95beba84507ab9d90bdfb388e784d4561b079abe",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "horde1Upgr",
+      "generatedBox": [
+        116,
+        117,
+        1138,
+        744
+      ],
+      "targetBox": [
+        0,
+        0,
+        424,
+        260
+      ],
+      "interiorCoverage": 0.9651351742846231,
+      "inputSHA256": "109a53886ccb7a7002821bfdf3f6b6429afb28ca5bc48f6d4c29d4ac87d7c12d",
+      "outputSHA256": "378eae03b48c7b90096959f1d543535debdd48fa471ce8704afeecb3a386b039",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "ship",
+      "generatedBox": [
+        131,
+        125,
+        1126,
+        724
+      ],
+      "targetBox": [
+        0,
+        0,
+        366,
+        218
+      ],
+      "interiorCoverage": 0.43674493681576,
+      "inputSHA256": "511883fbd5924cd549bfb9dd6fcdd049cb264991257b245bfe040f4f0804606f",
+      "outputSHA256": "6a031b5d8dcb903d1a2cc217ab75253cb18816257e28eb2edc083d50c193c759",
+      "preservedOverlayFrames": 9
+    },
+    {
+      "name": "special2",
+      "generatedBox": [
+        151,
+        138,
+        655,
+        1103
+      ],
+      "targetBox": [
+        0,
+        0,
+        158,
+        300
+      ],
+      "interiorCoverage": 0.6764617099809045,
+      "inputSHA256": "b3fa15c64e44a5ffe90ff00632570e1a8900b4ed31c74713722f0ad2ec9b1a6d",
+      "outputSHA256": "98e261eb4e4b65787d1c3f5f6714dda9d155418a8c7a366f17ba40a096cb7c67",
+      "preservedOverlayFrames": 8
+    },
+    {
+      "name": "special3",
+      "generatedBox": [
+        224,
+        242,
+        1030,
+        567
+      ],
+      "targetBox": [
+        0,
+        4,
+        174,
+        74
+      ],
+      "interiorCoverage": 0.9004507489691156,
+      "inputSHA256": "48794b0f3b453163de3b6e6ebdcfaa8606891567189af672b1b6a3c917342e75",
+      "outputSHA256": "f29435dacec7d039b53173fc32b527008c731478bb36060f7d83512f2996e537",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "grail",
+      "generatedBox": [
+        132,
+        145,
+        848,
+        1121
+      ],
+      "targetBox": [
+        0,
+        0,
+        256,
+        356
+      ],
+      "interiorCoverage": 0.7283596830408554,
+      "inputSHA256": "8cc7bd302fbf8e52f89f9a1449776fbd205bea3338680dda29252291ab94af0b",
+      "outputSHA256": "741fe008359b85a61b92db5e8187b3c20c1fc84aeb386b1997bb59667532bc76",
+      "preservedOverlayFrames": 4
+    },
+    {
+      "name": "extraTownHall",
+      "generatedBox": [
+        133,
+        132,
+        1121,
+        727
+      ],
+      "targetBox": [
+        0,
+        0,
+        354,
+        212
+      ],
+      "interiorCoverage": 0.9224139457397407,
+      "inputSHA256": "2ef26cbb0abda37f72612062c571c34d58d2a98efb4db9185248730a5bec6381",
+      "outputSHA256": "8de72f6af24153354203942771213156fcdbec57b0a15ef10c704f8393089384",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "extraCityHall",
+      "generatedBox": [
+        222,
+        210,
+        1032,
+        799
+      ],
+      "targetBox": [
+        0,
+        0,
+        174,
+        124
+      ],
+      "interiorCoverage": 0.8861315563929943,
+      "inputSHA256": "2d1e8629b40472b62a00f1f1866b62c2b02814c1845cfac2e1b548af1fb26ebc",
+      "outputSHA256": "1d9e55cdbdffcd37ff42fbc88dc7ab49d7770a562d9f29f2921ab569b32f79fb",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "extraCapitol",
+      "generatedBox": [
+        131,
+        126,
+        1122,
+        410
+      ],
+      "targetBox": [
+        0,
+        0,
+        362,
+        102
+      ],
+      "interiorCoverage": 0.8642861868492652,
+      "inputSHA256": "8fba6b9799a08cb8db733fb0eb64e14523f3e0001bfc1b69478eda08eadf6b5b",
+      "outputSHA256": "e7f4377c3acec10c0a55158bb239297882ff52c3c135eaecfbd1d50fe54f20c1",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingLvl1",
+      "generatedBox": [
+        129,
+        130,
+        1125,
+        719
+      ],
+      "targetBox": [
+        0,
+        0,
+        366,
+        216
+      ],
+      "interiorCoverage": 0.9595981668155331,
+      "inputSHA256": "1d770430198d4f49a6422c2eced9a2f01e13e3a38aec359a7984c0f6ceb99617",
+      "outputSHA256": "d815048a8d1b327336e93ab8bc5db8e7f897d7dd9315b7c7091f49bdaf9d7847",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingLvl2",
+      "generatedBox": [
+        168,
+        166,
+        1087,
+        684
+      ],
+      "targetBox": [
+        0,
+        0,
+        264,
+        148
+      ],
+      "interiorCoverage": 0.9183344579920576,
+      "inputSHA256": "dcbd9a5ff49737ccb5a742fd33cf029d26f9094d5b3a21b03a1b1d7c1ab8d10f",
+      "outputSHA256": "cafe0fea85f6dcaf34e1fcb1e1acffdbe1fa89a3a36c74baae236d23c06f758e",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingLvl3",
+      "generatedBox": [
+        130,
+        129,
+        896,
+        1126
+      ],
+      "targetBox": [
+        0,
+        0,
+        288,
+        374
+      ],
+      "interiorCoverage": 0.9581455504707754,
+      "inputSHA256": "28094df3ef0d14d1659ba67ad65fcd36233cb57c050b70bc4d8115b39d75ea68",
+      "outputSHA256": "06adb167544893a7690820aa23e7a7c0d0a382daf2e42b801cf3b5945aaaaa82",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingLvl4",
+      "generatedBox": [
+        128,
+        128,
+        1128,
+        468
+      ],
+      "targetBox": [
+        0,
+        0,
+        376,
+        128
+      ],
+      "interiorCoverage": 0.9616116364802052,
+      "inputSHA256": "0f14a666e24cb2c6face30544574aaf82363598e102deaf0aef843c933548d0c",
+      "outputSHA256": "4863db6cc41c9ea3b597877ce29a80387e62617335400fbc334e55542a7b7acd",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingLvl5",
+      "generatedBox": [
+        170,
+        170,
+        1084,
+        771
+      ],
+      "targetBox": [
+        0,
+        0,
+        258,
+        170
+      ],
+      "interiorCoverage": 0.9374345062225804,
+      "inputSHA256": "7be6955f050fb27f19b3c6f10880dc1b1a2dddbd7262591a40f97e38a3216faa",
+      "outputSHA256": "b8d445cbb2dbd84cc8a6ab1e4722ccd32b88b1ebd360a421e0de04fae9d2d968",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingLvl6",
+      "generatedBox": [
+        126,
+        116,
+        777,
+        1129
+      ],
+      "targetBox": [
+        0,
+        0,
+        250,
+        384
+      ],
+      "interiorCoverage": 0.9528753095956514,
+      "inputSHA256": "b0c668af630d4b672d229884a11a2f51b9976877165d41862c2ee831320edd19",
+      "outputSHA256": "9f110e5a7fb2b6992f709d4adcf11f9f2cf918e02d115bcd9d0d373a1c5f956f",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingLvl7",
+      "generatedBox": [
+        144,
+        143,
+        953,
+        1112
+      ],
+      "targetBox": [
+        0,
+        0,
+        274,
+        328
+      ],
+      "interiorCoverage": 0.9471623408220788,
+      "inputSHA256": "1e7fbee28eafb19b121845c8b8b61842248a99b80a2f5fbe632c7e5bc0578e98",
+      "outputSHA256": "8eae420afaaf41c598bcb11bf6d788b5d3949d66c0d50a797b9e29cfdf980b62",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingUpLvl1",
+      "generatedBox": [
+        125,
+        124,
+        1129,
+        734
+      ],
+      "targetBox": [
+        0,
+        0,
+        386,
+        234
+      ],
+      "interiorCoverage": 0.9615713870733479,
+      "inputSHA256": "90430f9ebee980e248231f106c9a89e3a9203238a0f91fb365c5aed1ae5a626e",
+      "outputSHA256": "88a9b0ce5b869e6402e3492ebebc513dc6610a850047a740b382453ab54740ad",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingUpLvl2",
+      "generatedBox": [
+        166,
+        165,
+        1089,
+        697
+      ],
+      "targetBox": [
+        0,
+        0,
+        268,
+        154
+      ],
+      "interiorCoverage": 0.922257940983238,
+      "inputSHA256": "d89f6b0e8282956423c2ff413bfc57a508ec3d7a7dc21bfdd98c8bddf34e57ec",
+      "outputSHA256": "12de589d4a6f47ce2bf1829dea0fcd14a0bb977ed2f8127c4925762dc6bd1265",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingUpLvl3",
+      "generatedBox": [
+        124,
+        124,
+        882,
+        1130
+      ],
+      "targetBox": [
+        0,
+        0,
+        294,
+        390
+      ],
+      "interiorCoverage": 0.9520070903294874,
+      "inputSHA256": "e83a49c7a1fab8ec8fb27403e60038d9da03f2cb85a3828f660967bb65ad239f",
+      "outputSHA256": "c0fcaa5f46a4d961660ad72c19f5891633558cdeaccb5e36a774ca4d6cd5382e",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingUpLvl4",
+      "generatedBox": [
+        129,
+        130,
+        1125,
+        581
+      ],
+      "targetBox": [
+        0,
+        0,
+        366,
+        166
+      ],
+      "interiorCoverage": 0.9434191645584151,
+      "inputSHA256": "9c2ea4c1f2ad796fee8bfc3dffc89d1c660d50da7ba084c8025a212933a03485",
+      "outputSHA256": "70a8b95b174bba75c50b5794429f4580677dbb8dd055eda6f01db58bb8b844db",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingUpLvl5",
+      "generatedBox": [
+        173,
+        179,
+        1031,
+        1075
+      ],
+      "targetBox": [
+        0,
+        0,
+        228,
+        240
+      ],
+      "interiorCoverage": 0.9248810793199455,
+      "inputSHA256": "82a274b679be7b02644d83db93e9c782bc9a5e4d878e599c05b22e2520695890",
+      "outputSHA256": "38346374b9e1f596b1f6976bb29663efd71aecb08aecc5bdb20926dceb2d468f",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingUpLvl6",
+      "generatedBox": [
+        125,
+        116,
+        775,
+        1129
+      ],
+      "targetBox": [
+        0,
+        0,
+        250,
+        386
+      ],
+      "interiorCoverage": 0.9649298923325695,
+      "inputSHA256": "d5c947658a71c640a254d3516e630fa72181677a89ee5b0c08412b438571bdee",
+      "outputSHA256": "1ba436de86fd7bfbfd2eebd3bb7dbfd496fcbbeaadd75180b52af3777e712400",
+      "preservedOverlayFrames": 0
+    },
+    {
+      "name": "dwellingUpLvl7",
+      "generatedBox": [
+        142,
+        142,
+        939,
+        1115
+      ],
+      "targetBox": [
+        0,
+        0,
+        276,
+        336
+      ],
+      "interiorCoverage": 0.9514919841936078,
+      "inputSHA256": "1ec78abbb83a155fc20cad952ba4dda8434cc1d9159eeee379701c102600580c",
+      "outputSHA256": "cea0d6b5b3d009dd393109be7b9b7675179b0987c6a1016dbd175e4ecf943ceb",
+      "preservedOverlayFrames": 0
+    }
+  ],
+  "refinementToolSHA256": "e7a2b6892b34fccb12d1896e479d4d18cfc4f52bdb10e3beea45dc7f4b6e7c3a",
+  "baselineManifestSHA256": "3320d626076347fb4745c529771b28070e2afd22a79e9a8fad10d62885f536fc"
+}

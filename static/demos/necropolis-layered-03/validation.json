@@ -1,0 +1,11 @@
+{
+  "newlyRefined": 41,
+  "preservedOverlays": 58,
+  "minimumVisiblePixelsChanged": [
+    "special1",
+    0.4222470013862938
+  ],
+  "allAlphaIdentical": true,
+  "mapLayersIdentical": true,
+  "numpy": "2.0.2"
+}
