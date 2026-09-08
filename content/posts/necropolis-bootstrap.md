@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Wight and lich design studies"
+title: "[AI] Wight and lich design studies"
 date: 2026-09-09T01:16:08+08:00
 series: ["Heroes III"]
 ai: true

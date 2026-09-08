@@ -1,5 +1,5 @@
 ---
-title: "[AI]opus -> astra：幽灵和尸巫的造型试做"
+title: "[AI]幽灵和尸巫的造型试做"
 date: 2026-09-09T01:16:08+08:00
 series: ["英雄无敌3"]
 ai: true

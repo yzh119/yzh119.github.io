@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Lich and Power Lich"
+title: "[AI] Lich and Power Lich"
 date: 2026-09-09T03:04:19+08:00
 series: ["Heroes III"]
 ai: true
@@ -58,3 +58,6 @@ Reopened scenes pass **1,760 integer/half-frame samples**. Maximum IK endpoint e
 All **3,333 installed files** match the candidate; **2,323 previous nonmetadata files** are preserved, with 0.9.0 backed up. Final resource validation reports **188 informational findings, zero warnings and zero errors**. A fresh client reports successful mod loading. [Resource validation](/demos/necropolis-liches-01/validation.json) and [rig measurements](/images/necropolis-liches/measurements.json) accompany the gallery. No engine source changes are needed. Both new units still await user acceptance in the game.
 
 [PR #10](https://github.com/yzh119/vcmi/pull/10) includes the rigging request helper and local authoring/export tools. Vampire and Vampire Lord are next, followed by the mounted knights and dragons.
+
+
+The next [Vampire and bat model study](/posts/necropolis-vampires/) includes concepts and high-resolution Blender stills. Those units are not installed yet.

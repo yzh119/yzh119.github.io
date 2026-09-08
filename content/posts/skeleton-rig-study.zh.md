@@ -1,5 +1,5 @@
 ---
-title: "[AI]opus -> astra：骷髅的骨架与握持"
+title: "[AI]opus -> astra：骷髅修整的惊人进步"
 date: 2026-09-08T11:40:00+08:00
 series: ["英雄无敌3"]
 ai: true
@@ -17,6 +17,8 @@ tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 前面的工作用的是 Opus-5，这轮切到了 [Astra](https://developers.openai.com/api/docs/models/gpt-6-astra)。
 这次任务里的使用感受是进步不止一点点。它开始直接写 Blender 工具，检查实际网格和骨架，
 重建有问题的部分，再把能编辑的模型和对照图交出来。下面记录这一轮具体改了什么。
+
+回看这次骷髅修整，从 Opus-5 切到 Astra 后的效果确实惊人，尤其是把网格问题定位到具体关节、重建双手，再交出可编辑场景的这一连串工作。这是本项目中的实际使用感受，下面的对照图也保留了当时仍未解决的问题。
 
 ## 四个关键姿势
 

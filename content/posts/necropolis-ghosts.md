@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Wight and wraith animation integration"
+title: "[AI] Wight and wraith animation integration"
 date: 2026-09-09T01:48:31+08:00
 series: ["Heroes III"]
 ai: true

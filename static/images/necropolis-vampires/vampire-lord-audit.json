@@ -1,0 +1,37 @@
+{
+  "stage": "imported static bootstrap; motion not validated",
+  "sourceSHA256": "f6e132ce700286a892c214fc08db3321d688a4ffbd94f2c4f5ef582907be208b",
+  "bounds": [
+    [
+      -0.5131369829177856,
+      -0.22750303149223328,
+      -0.951409101486206
+    ],
+    [
+      0.5157189965248108,
+      0.21591413021087646,
+      0.9501110911369324
+    ]
+  ],
+  "camera": {
+    "azimuth": 20,
+    "elevation": 8
+  },
+  "meshes": [
+    {
+      "name": "Mesh_0",
+      "vertices": 82451,
+      "faces": 92677
+    }
+  ],
+  "textures": [
+    {
+      "name": "Image_0",
+      "size": [
+        4096,
+        4096
+      ]
+    }
+  ],
+  "blender": "5.2.1 LTS"
+}

@@ -1,5 +1,5 @@
 ---
-title: "[AI]opus -> astra：墓园升级兵种"
+title: "[AI]墓园升级兵种"
 date: 2026-09-08T23:07:02+08:00
 series: ["英雄无敌3"]
 ai: true

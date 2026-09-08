@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Zombie animation set"
+title: "[AI] Zombie animation set"
 date: 2026-09-08T13:30:00+08:00
 lastmod: 2026-09-08T17:05:23+08:00
 series: ["Heroes III"]

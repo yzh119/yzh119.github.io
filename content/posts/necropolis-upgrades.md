@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Necropolis creature upgrades"
+title: "[AI] Necropolis creature upgrades"
 date: 2026-09-08T23:07:02+08:00
 series: ["Heroes III"]
 ai: true

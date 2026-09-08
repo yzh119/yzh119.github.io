@@ -1,5 +1,5 @@
 ---
-title: "[AI]opus -> astra：尸巫和尸巫王"
+title: "[AI]尸巫和尸巫王"
 date: 2026-09-09T03:04:19+08:00
 series: ["英雄无敌3"]
 ai: true
@@ -58,3 +58,6 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 安装目录的 **3,333 个文件**与候选包逐一核对一致，旧包的 **2,323 个非元数据文件**保持不变，0.9.0 已备份。最终资源检查为 **188 条信息、零警告、零错误**，新启动的客户端报告 mod 加载成功。[原版帧数与资源验证记录](/demos/necropolis-liches-01/validation.json)及[绑定测量](/images/necropolis-liches/measurements.json)公开保留。美术接入仍只改 mod，没有改 VCMI 源码。尸巫和尸巫王尚待用户在游戏中验收。
 
 [PR #10](https://github.com/yzh119/vcmi/pull/10)包含自动绑定请求工具、本地修复和动画导出工具。接下来继续吸血鬼和吸血鬼王，再补骑士与龙。
+
+
+下一组的[吸血鬼与蝙蝠模型检查](/zh/posts/necropolis-vampires/)已发布，包含概念图和 Blender 高清静帧，尚未接入游戏。

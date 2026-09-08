@@ -1,5 +1,5 @@
 ---
-title: "[AI]opus -> astra：幽灵和阴魂的动画接入"
+title: "[AI]幽灵和阴魂的动画接入"
 date: 2026-09-09T01:48:31+08:00
 series: ["英雄无敌3"]
 ai: true

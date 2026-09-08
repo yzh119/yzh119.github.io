@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Skeleton animation set"
+title: "[AI] Skeleton animation set"
 date: 2026-09-08T12:13:00+08:00
 lastmod: 2026-09-08T17:05:23+08:00
 series: ["Heroes III"]

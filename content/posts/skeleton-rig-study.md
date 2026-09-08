@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Skeleton rig and grip study"
+title: "[AI] opus -> astra: Striking progress in skeleton rigging"
 date: 2026-09-08T11:40:00+08:00
 series: ["Heroes III"]
 ai: true
@@ -20,6 +20,8 @@ The earlier work used Opus-5. For this round I switched to
 in this task has felt substantial. It wrote Blender tooling to inspect the source,
 replace troublesome geometry and produce editable pose studies. The figures below
 show the resulting changes, including the parts that still need work.
+
+The improvement after switching from Opus-5 to Astra was striking in this project: it traced mesh failures to specific joints, rebuilt both hands, and delivered an editable scene. This describes our experience with the skeleton work; the comparisons also retain the shortcomings of that revision.
 
 ## Four poses
 

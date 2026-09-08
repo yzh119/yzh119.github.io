@@ -1,5 +1,5 @@
 ---
-title: "[AI] opus -> astra: Necropolis HD study"
+title: "[AI] Necropolis HD study"
 date: 2026-09-08T14:34:06+08:00
 lastmod: 2026-09-08T17:07:21+08:00
 series: ["Heroes III"]
