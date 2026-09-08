@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "testing", "ai"]
 ---
 
+> **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
+
 The [previous post](/posts/h3-engine-constraints/) worked out what Heroes III's
 engine requires and how to read its archives. This is what happened next: I wrote
 two checks, felt good about both, and both handed me confident, wrong numbers.

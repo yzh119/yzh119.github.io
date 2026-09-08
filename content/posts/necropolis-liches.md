@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 ---
 
+> **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
+
 Lich and Power Lich now have complete animation resources installed in the local **0.10.0** creature mod. That brings the installed roster to eight units. The accepted Wight assets remain unchanged. This stage extends the textured-model workflow to a staff-wielding ranged creature and its separately modelled upgrade.
 
 ![Lich showcase with the installed background](/demos/necropolis-liches-01/clich-showcase.png)

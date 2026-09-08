@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "rl"]
 ---
 
+> **2026-09-09 工具迁移：** 后续代码在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护，原 `tools/creature-art/` 与 `tools/town-art/` 对应新仓库的 `creature-art/` 与 `town-art/`。本文的旧路径和 PR 链接保留作历史记录。[迁移与复现说明](/zh/posts/h3-art-tools/)。
+
 > **2026-09-09 更新：** 下表保留最初选型，删除线标出后来改变的安排。Meshy 仍用于基础建模和部分人形绑定。
 
 

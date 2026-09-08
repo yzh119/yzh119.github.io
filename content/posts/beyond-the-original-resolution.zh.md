@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "graphics", "blender"]
 ---
 
+> **2026-09-09 工具迁移：** 后续代码在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护，原 `tools/creature-art/` 与 `tools/town-art/` 对应新仓库的 `creature-art/` 与 `town-art/`。本文的旧路径和 PR 链接保留作历史记录。[迁移与复现说明](/zh/posts/h3-art-tools/)。
+
 一个我一直在按原版规格干活、却没意识到可以跳出去的地方：**我们不必只渲 79 像素高。**
 
 英雄无敌 3 的兵种被 1999 年那一次预渲染锁死了——游戏里有的就是那个分辨率的产物，

@@ -7,6 +7,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
+> **2026-09-09 工具迁移：** 后续代码在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护，原 `tools/creature-art/` 与 `tools/town-art/` 对应新仓库的 `creature-art/` 与 `town-art/`。本文的旧路径和 PR 链接保留作历史记录。[迁移与复现说明](/zh/posts/h3-art-tools/)。
+
 **后续进展：**[骷髅勇士、升级僵尸的全部动画与其余墓园兵种进度](/zh/posts/necropolis-upgrades/)已单独发布。
 
 

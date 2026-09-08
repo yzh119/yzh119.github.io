@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
 ---
 
+> **2026-09-09 工具迁移：** 后续代码在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护，原 `tools/creature-art/` 与 `tools/town-art/` 对应新仓库的 `creature-art/` 与 `town-art/`。本文的旧路径和 PR 链接保留作历史记录。[迁移与复现说明](/zh/posts/h3-art-tools/)。
+
 > **2026-09-09 更新：** 本文的图片、姿势和测量保留为当时试稿，不能视为当前游戏版本。后续替换见[完整动画](/zh/posts/skeleton-motion/)，当前八兵种安装状态见[尸巫交付](/zh/posts/necropolis-liches/)。
 
 

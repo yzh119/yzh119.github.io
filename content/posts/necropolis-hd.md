@@ -7,6 +7,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
+> **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
+
 **Next stage:** [Skeleton Warrior, Zombie, and the remaining Necropolis roster](/posts/necropolis-upgrades/) now have a separate progress post with all upgrade animation previews.
 
 

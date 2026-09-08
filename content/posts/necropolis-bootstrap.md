@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 ---
 
+> **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
+
 Lich and Power Lich are now installed in [the next delivery](/posts/necropolis-liches/), with complete animations and further failed-probe records.
 
 **Delivery update:** [Wight and Wraith animations are installed in 0.9.0, with the Wight accepted by the user](/posts/necropolis-ghosts/). The account below preserves the earlier rejected and static-bootstrap stages.

@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
 
+> **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
+
 **Design follow-up:** [Rejected wight and lich prototypes and the subsequent imagegen/Meshy bootstrap](/posts/necropolis-bootstrap/) are documented in a separate post with the failed renders preserved.
 
 

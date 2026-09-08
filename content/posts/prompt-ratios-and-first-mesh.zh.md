@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics"]
 ---
 
+> **2026-09-09 工具迁移：** 后续代码在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护，原 `tools/creature-art/` 与 `tools/town-art/` 对应新仓库的 `creature-art/` 与 `town-art/`。本文的旧路径和 PR 链接保留作历史记录。[迁移与复现说明](/zh/posts/h3-art-tools/)。
+
 上一篇里，墓园城十四个兵种的概念稿只有八个通过比例检查，六个偏宽，一个偏窄的都没有。
 这篇讲怎么修好的，以及第一个 3D 模型。
 

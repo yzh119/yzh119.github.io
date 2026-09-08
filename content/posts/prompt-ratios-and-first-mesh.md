@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics"]
 ---
 
+> **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
+
 Last post ended with eight of fourteen Necropolis concepts passing the proportion
 check. Six were too wide, none too narrow. This is how that got fixed, and the
 first 3D model.

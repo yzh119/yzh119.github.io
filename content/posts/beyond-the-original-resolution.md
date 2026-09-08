@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "graphics", "blender"]
 ---
 
+> **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
+
 Something I had been working around without noticing it was a way out: **we don't
 have to render at 79 pixels tall.**
 
