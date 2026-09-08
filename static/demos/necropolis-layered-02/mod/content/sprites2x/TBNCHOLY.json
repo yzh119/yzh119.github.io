@@ -1,0 +1,15 @@
+{
+  "basepath": "necropolis/TBNCHOLY/",
+  "sequences": [
+    {
+      "group": 0,
+      "frames": [
+        "0_0.png",
+        "0_1.png",
+        "0_2.png",
+        "0_3.png",
+        "0_4.png"
+      ]
+    }
+  ]
+}

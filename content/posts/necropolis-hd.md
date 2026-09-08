@@ -52,3 +52,44 @@ along with the town layers. Click areas and map footprints have not been changed
 The [complete prompts](/demos/necropolis-hd-01/prompts.md) retain the composition,
 size and transparency requirements. [PR #10](https://github.com/yzh119/vcmi/pull/10)
 adds the reference extractor, layer inventory and integration notes.
+
+
+## Layered integration and a clearer second pass
+
+The [layer inspector](/demos/necropolis-layered-02/) now renders independent
+buildings over an empty background. It offers basic/upgraded presets, individual
+visibility controls and effect playback. It deliberately allows incompatible
+upgrades to overlap and is not a simulation of construction rules. Equal-z
+ordering is illustrative.
+
+![Second pass assembled from separate layers](/demos/necropolis-layered-02/town-layered.png)
+
+The exporter covers all **42 town definitions and 100 town frames**, plus the
+**3 adventure-map frames**. Animated shipyard, boat, blacksmith, darkness,
+necromancy and grail resources retain their original frame counts. The graphical
+mod replaces resource names in `data2x` and `sprites2x`; the engine continues to
+choose built upgrade stages and use its original area masks and depth ordering.
+
+Built-in `image_gen` refined the empty landscape and castle interior, allowing
+slightly cleaner painted stonework, roof tiles and rock strata. A solid magenta
+castle backdrop was removed locally, then the new interior was blended into the
+original silhouette. Original pixels remain near uncertain edges. The background
+is **1600×748**. Other buildings and map variants currently use conservative 2x
+resampling and mild sharpening. They do not have newly generated detail, and
+matching their materials to the castle remains further work.
+
+All **103 frames** were reopened after export and checked for exact integer canvas
+size and original nearest-scaled alpha. Map shadows and owner overlays are stored
+separately. The earlier checkerboard castle draft is excluded.
+
+The local `necropolis-layered-hd` mod is installed and enabled, with HD textures
+turned on. VCMI reported `Loading mod: OK (necropolis-layered-hd)` and finished
+loading game content. This verifies startup resource discovery, not town-screen
+construction, upgrade or click behavior. Window capture was unavailable in this
+environment, and the client also printed text-encoding warnings. Only 2x assets
+are supplied; native 1x resources remain available.
+
+[PR #10](https://github.com/yzh119/vcmi/pull/10) contains the full exporter,
+registered castle processing, mod assembly and interactive inspector. Astra
+wrote the tooling; the [prompt record](/demos/necropolis-layered-02/prompts.md)
+distinguishes generated art from local image processing.

@@ -1,0 +1,844 @@
+{
+  "scale": 2,
+  "configSHA256": "530d8665e3b2771f024e7e9d853c0cfd50a07087aa04ba930a3ae6e602b531cd",
+  "backgroundGenerated": true,
+  "castleGenerated": true,
+  "structures": [
+    {
+      "name": "extraAnimation",
+      "animation": "TBNCEXT2.def",
+      "x": 25,
+      "y": 279,
+      "z": 9,
+      "resource": "TBNCEXT2",
+      "size": [
+        732,
+        95
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "e330a32b786b99bab6e3ac7743eecf0e9517772f2554475d69b84023c23edd93"
+    },
+    {
+      "name": "mageGuild1",
+      "animation": "TBNCMAGE.def",
+      "x": 341,
+      "y": 116,
+      "z": -1,
+      "campaignBonus": "BoNmage1.pcx",
+      "border": "TONMAG1.bmp",
+      "area": "TZNMAG1.bmp",
+      "resource": "TBNCMAGE",
+      "size": [
+        144,
+        93
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "11fe7e56ddd167a1e628fb80635b6e23192d33572e30d53f5b2c1cc3c8d0c1b7"
+    },
+    {
+      "name": "mageGuild2",
+      "animation": "TBNCMAG2.def",
+      "x": 341,
+      "y": 97,
+      "z": -1,
+      "campaignBonus": "BoNmage2.pcx",
+      "border": "TONMAG2.bmp",
+      "area": "TZNMAG2.bmp",
+      "resource": "TBNCMAG2",
+      "size": [
+        144,
+        112
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "ceeb5ff676c2456ff49bbd3f497e5acb7e569448e427bd7ccef77f1d8ee6646a"
+    },
+    {
+      "name": "mageGuild3",
+      "animation": "TBNCMAG3.def",
+      "x": 341,
+      "y": 78,
+      "z": -1,
+      "campaignBonus": "BoNmage3.pcx",
+      "border": "TONMAG3.bmp",
+      "area": "TZNMAG3.bmp",
+      "resource": "TBNCMAG3",
+      "size": [
+        144,
+        131
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "c5834a02e4dade2a094d6de32c73ac53b0d991bf0da8a83c0b02246783e039b0"
+    },
+    {
+      "name": "mageGuild4",
+      "animation": "TBNCMAG4.def",
+      "x": 340,
+      "y": 62,
+      "z": -1,
+      "campaignBonus": "BoNmage4.pcx",
+      "border": "TONMAG4.bmp",
+      "area": "TZNMAG4.bmp",
+      "resource": "TBNCMAG4",
+      "size": [
+        145,
+        147
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "255a2c27895c508b34d5cd46b96385a8d1b0f3eee0448854b422ff0988acbaee"
+    },
+    {
+      "name": "mageGuild5",
+      "animation": "TBNCMAG5.def",
+      "x": 343,
+      "y": 35,
+      "z": -1,
+      "campaignBonus": "BoNmage5.pcx",
+      "border": "TONMAG5.bmp",
+      "area": "TZNMAG5.bmp",
+      "resource": "TBNCMAG5",
+      "size": [
+        142,
+        174
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "591675e660d51f74dc5ea9bfb9141f6c9454ab73eb2cd5ad7ef9098c2e3f3be9"
+    },
+    {
+      "name": "tavern",
+      "animation": "TBNCTVRN.def",
+      "x": 508,
+      "y": 189,
+      "campaignBonus": "BoNtav.pcx",
+      "border": "TONTAV.bmp",
+      "area": "TZNTAV.bmp",
+      "resource": "TBNCTVRN",
+      "size": [
+        199,
+        68
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "491a86c51060e55e33d9dadde2e8cdc7d4b2a95e383748034bd561753c4d51d3"
+    },
+    {
+      "name": "shipyard",
+      "animation": "TBNCDOCK.def",
+      "x": 617,
+      "y": 265,
+      "z": -2,
+      "campaignBonus": "BoNship.pcx",
+      "border": "TONSHPBA.bmp",
+      "area": "TZNSHPBA.bmp",
+      "resource": "TBNCDOCK",
+      "size": [
+        183,
+        109
+      ],
+      "groups": {
+        "0": 10
+      },
+      "sourceSHA256": "3cb1e9524900a87c934adf5f214b5ab77d5d3afb1f81e1e5e4b1fbbef8b971c9"
+    },
+    {
+      "name": "fort",
+      "animation": "TBNCCSTL.def",
+      "x": 138,
+      "y": 66,
+      "campaignBonus": "BoNcast1.pcx",
+      "border": "TONCAS1.bmp",
+      "area": "TZNCAS1.bmp",
+      "resource": "TBNCCSTL",
+      "size": [
+        200,
+        196
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2f27e3c1cf49aeaa1e6af79a647002dfc386709c82d2fee45624190e64110d13"
+    },
+    {
+      "name": "citadel",
+      "animation": "TBNCCAS2.def",
+      "x": 139,
+      "y": 66,
+      "campaignBonus": "BoNcast2.pcx",
+      "border": "TONCAS2.bmp",
+      "area": "TZNCAS2.bmp",
+      "resource": "TBNCCAS2",
+      "size": [
+        237,
+        196
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "5e9900a5126bb8e24c8d38dcf0972872d7809dfc455094d673a503e167971079"
+    },
+    {
+      "name": "castle",
+      "animation": "TBNCCAS3.def",
+      "x": 34,
+      "y": 18,
+      "campaignBonus": "BoNcast3.pcx",
+      "border": "TONCAS3.bmp",
+      "area": "TZNCAS3.bmp",
+      "resource": "TBNCCAS3",
+      "size": [
+        342,
+        251
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "359f2d89d4f742da8e71602c144288983fecc727652f2ad87a907da1580a9ab4"
+    },
+    {
+      "name": "villageHall",
+      "animation": "TBNCHALL.def",
+      "x": 468,
+      "y": 76,
+      "z": -2,
+      "campaignBonus": "BoNhall1.pcx",
+      "border": "TONHAL1.bmp",
+      "area": "TZNHAL1.bmp",
+      "resource": "TBNCHALL",
+      "size": [
+        174,
+        158
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "a26c8bda71056f4b4b071527aefc80133f4ba38dc884932a8b75f70439140d5b"
+    },
+    {
+      "name": "townHall",
+      "animation": "TBNCHAL2.def",
+      "x": 482,
+      "y": 56,
+      "z": -2,
+      "campaignBonus": "BoNhall2.pcx",
+      "border": "TONHAL2.bmp",
+      "area": "TZNHAL2.bmp",
+      "resource": "TBNCHAL2",
+      "size": [
+        155,
+        176
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2d93773c83d20309ab812d2b9b5c2823fc03af113c7a2cacd66303ab26276766"
+    },
+    {
+      "name": "cityHall",
+      "animation": "TBNCHAL3.def",
+      "x": 478,
+      "y": 26,
+      "z": -2,
+      "campaignBonus": "BoNhall3.pcx",
+      "border": "TONHAL3.bmp",
+      "area": "TZNHAL3.bmp",
+      "resource": "TBNCHAL3",
+      "size": [
+        158,
+        207
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "7b64c3859304e52d1128f3f3b78531c8ddace6f5e2fe658993567e2e35829811"
+    },
+    {
+      "name": "capitol",
+      "animation": "TBNCHAL4.def",
+      "x": 481,
+      "y": 26,
+      "z": -2,
+      "campaignBonus": "BoNhall4.pcx",
+      "border": "TONHAL4.bmp",
+      "area": "TZNHAL4.bmp",
+      "resource": "TBNCHAL4",
+      "size": [
+        154,
+        205
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "050333940d00fd0924bed025096fbd9f70cbeea438f3d8066039a4fa4af2e420"
+    },
+    {
+      "name": "marketplace",
+      "animation": "TBNCMARK.def",
+      "x": 347,
+      "y": 215,
+      "z": 2,
+      "campaignBonus": "BoNmark1.pcx",
+      "border": "TONMRK1.bmp",
+      "area": "TZNMRK1.bmp",
+      "resource": "TBNCMARK",
+      "size": [
+        99,
+        48
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "f431424d94deef477ac6626ea72cdb4e45cf4bfe2224b534d1d3d0a6f5f985ae"
+    },
+    {
+      "name": "resourceSilo",
+      "animation": "TBNCSILO.def",
+      "x": 276,
+      "y": 185,
+      "z": 1,
+      "campaignBonus": "BoNmark2.pcx",
+      "border": "TONMRK2.bmp",
+      "area": "TZNMRK2.bmp",
+      "resource": "TBNCSILO",
+      "size": [
+        93,
+        77
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "89557098b93540a6fd4d6afbf93aeae13ca299e2aa3e7ab594eaa2ee95bcfbdd"
+    },
+    {
+      "name": "blacksmith",
+      "animation": "TBNCBLAK.def",
+      "x": 382,
+      "y": 252,
+      "z": 7,
+      "campaignBonus": "BoNsmith.pcx",
+      "border": "TONSMITA.bmp",
+      "area": "TZNSMITA.bmp",
+      "resource": "TBNCBLAK",
+      "size": [
+        114,
+        55
+      ],
+      "groups": {
+        "0": 10
+      },
+      "sourceSHA256": "3cda7798864f98a8adbf32ff030b2685c3beb733fdf6d6d111153e914cc15b7b"
+    },
+    {
+      "name": "special1",
+      "animation": "TBNCSPEC.def",
+      "x": 18,
+      "y": 0,
+      "z": -1,
+      "campaignBonus": "BoNshrod.pcx",
+      "border": "TONSHRDA.bmp",
+      "area": "TZNSHRDA.bmp",
+      "resource": "TBNCSPEC",
+      "size": [
+        216,
+        231
+      ],
+      "groups": {
+        "0": 20
+      },
+      "sourceSHA256": "61b0e3b7174b09dd9c392b70e9586e914a4bad11e91d3374257ade80ffc822d7"
+    },
+    {
+      "name": "horde1",
+      "animation": "TBNCHRD1.def",
+      "x": 80,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNskelH.pcx",
+      "border": "TONSKE1H.bmp",
+      "area": "TZNSKE1H.bmp",
+      "hidden": true,
+      "resource": "TBNCHRD1",
+      "size": [
+        196,
+        130
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "9eec9cbdf707ff456ec7ce412c99b61bf869d4efa00f2e6ab8db04a5b3520aa8"
+    },
+    {
+      "name": "horde1Upgr",
+      "animation": "TBNCHRD2.def",
+      "x": 64,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNnecro.pcx",
+      "border": "TONSKE2H.bmp",
+      "area": "TZNSKE2H.bmp",
+      "hidden": true,
+      "builds": "horde1",
+      "resource": "TBNCHRD2",
+      "size": [
+        212,
+        130
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "9618ce0391d516f4cdcbe682641a8825f0081bd7386b563a910878fb7ee96bc0"
+    },
+    {
+      "name": "ship",
+      "animation": "TBNCBOAT.def",
+      "x": 617,
+      "y": 265,
+      "z": -2,
+      "border": "TONSHPNA.bmp",
+      "area": "TZNSHPNA.bmp",
+      "hidden": true,
+      "resource": "TBNCBOAT",
+      "size": [
+        183,
+        109
+      ],
+      "groups": {
+        "0": 10
+      },
+      "sourceSHA256": "917fcf43a8f979b811f1dbb5868cfb087c1925e046f5d0492bd9df09fbf02275"
+    },
+    {
+      "name": "special2",
+      "animation": "TBNCEXT0.def",
+      "x": 307,
+      "y": 61,
+      "z": -2,
+      "campaignBonus": "BoNnecro.pcx",
+      "border": "TONNECRA.bmp",
+      "area": "TZNNECRA.bmp",
+      "resource": "TBNCEXT0",
+      "size": [
+        79,
+        150
+      ],
+      "groups": {
+        "0": 9
+      },
+      "sourceSHA256": "342b7a8d6634b028c7e57a61f2799d18f58d2d3dcbf59b1aa0cf74225efabd4c"
+    },
+    {
+      "name": "special3",
+      "animation": "TBNCEXT1.def",
+      "x": 247,
+      "y": 275,
+      "z": 4,
+      "campaignBonus": "BoNskelT.pcx",
+      "border": "TONSKELT.bmp",
+      "area": "TZNSKELT.bmp",
+      "resource": "TBNCEXT1",
+      "size": [
+        87,
+        37
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2f0c4f5a53687546a854e09c629f1f1e1d590a299eaa624bd295ee1d29396285"
+    },
+    {
+      "name": "grail",
+      "animation": "TBNCHOLY.def",
+      "x": 410,
+      "y": 88,
+      "campaignBonus": "BoNholyG.pcx",
+      "border": "TONHOLYA.bmp",
+      "area": "TZNHOLYA.bmp",
+      "resource": "TBNCHOLY",
+      "size": [
+        128,
+        178
+      ],
+      "groups": {
+        "0": 5
+      },
+      "sourceSHA256": "b4246b4fac98a5e60ff031edb20f103283728eae57a932b785bb4c9a50e8261a"
+    },
+    {
+      "name": "extraTownHall",
+      "animation": "TBNCEXT3.def",
+      "x": 0,
+      "y": 241,
+      "z": 6,
+      "resource": "TBNCEXT3",
+      "size": [
+        177,
+        106
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "78de862893d1941753f3dac20aaaf9d376024692b0a662d9194aac68c39b7fac"
+    },
+    {
+      "name": "extraCityHall",
+      "animation": "TBNCEXT4.def",
+      "x": 321,
+      "y": 255,
+      "z": 6,
+      "resource": "TBNCEXT4",
+      "size": [
+        87,
+        62
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2abd1c6e8464ce1ae4e6ffb66af278e5aac6f0d11059e246145afc2fd07e35a5"
+    },
+    {
+      "name": "extraCapitol",
+      "animation": "TBNCEXT5.def",
+      "x": 475,
+      "y": 257,
+      "z": 6,
+      "resource": "TBNCEXT5",
+      "size": [
+        181,
+        51
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "6ae06c83a8869782969e86edc76dc70ff1b4656d2f789564ed738fc7ce719388"
+    },
+    {
+      "name": "dwellingLvl1",
+      "animation": "TBNCDW_0.def",
+      "x": 80,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNskel1.pcx",
+      "border": "TONSKEL1.bmp",
+      "area": "TZNSKEL1.bmp",
+      "resource": "TBNCDW_0",
+      "size": [
+        183,
+        108
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "3e0fb2a3ca37511e5cdda165c1409cc5894155dc846861b38f9c0278c4f48b70"
+    },
+    {
+      "name": "dwellingLvl2",
+      "animation": "TBNCDW_1.def",
+      "x": 502,
+      "y": 223,
+      "z": 1,
+      "campaignBonus": "BoNzomb1.pcx",
+      "border": "TONZOMB1.bmp",
+      "area": "TZNZOMB1.bmp",
+      "resource": "TBNCDW_1",
+      "size": [
+        132,
+        74
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "11a7556c371b3073af2967e2154ce8e32c8ef900f787e255fddc53f3feb8da90"
+    },
+    {
+      "name": "dwellingLvl3",
+      "animation": "TBNCDW_2.def",
+      "x": 0,
+      "y": 187,
+      "z": 8,
+      "campaignBonus": "BoNwigh1.pcx",
+      "border": "TONWIGH1.bmp",
+      "area": "TZNWIGH1.bmp",
+      "resource": "TBNCDW_2",
+      "size": [
+        144,
+        187
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "170de2944c0b9e94cdbc319202b61a5855180df0f1be4fd9a47b77f45fc7d3de"
+    },
+    {
+      "name": "dwellingLvl4",
+      "animation": "TBNCDW_3.def",
+      "x": 607,
+      "y": 212,
+      "z": 2,
+      "campaignBonus": "BoNvamp1.pcx",
+      "border": "TONVAM1.bmp",
+      "area": "TZNVAM1.bmp",
+      "resource": "TBNCDW_3",
+      "size": [
+        188,
+        64
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "78dab3a473e5804afba556e9fdbbf09fa6f63ce3e58ed5cb97c4fb99c4a5289e"
+    },
+    {
+      "name": "dwellingLvl5",
+      "animation": "TBNCDW_4.def",
+      "x": 206,
+      "y": 207,
+      "z": 3,
+      "campaignBonus": "BoNlich1.pcx",
+      "border": "TONLICH1.bmp",
+      "area": "TZNLICH1.bmp",
+      "resource": "TBNCDW_4",
+      "size": [
+        129,
+        85
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "58e1b3b0cc23101e17f5a526bd0a2154f77ed8a961d00a74404327e54ce8b976"
+    },
+    {
+      "name": "dwellingLvl6",
+      "animation": "TBNCDW_5.def",
+      "x": 0,
+      "y": 31,
+      "z": -2,
+      "campaignBonus": "BoNbkni1.pcx",
+      "border": "TONBKN1.bmp",
+      "area": "TZNBKN1.bmp",
+      "resource": "TBNCDW_5",
+      "size": [
+        125,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "f2811ad68db222b07a7ffe12fd7ccc17cc4f5918f5406dc8c02edb100e892df3"
+    },
+    {
+      "name": "dwellingLvl7",
+      "animation": "TBNCDW_6.def",
+      "x": 663,
+      "y": 25,
+      "campaignBonus": "BoNbone1.pcx",
+      "border": "TONBON1.bmp",
+      "area": "TZNBON1.bmp",
+      "resource": "TBNCDW_6",
+      "size": [
+        137,
+        164
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "d0043a20c3520ac05c575d2e1ad24ad8e996e0edeaed0ce70e378c52d80179fb"
+    },
+    {
+      "name": "dwellingUpLvl1",
+      "animation": "TBNCUP_0.def",
+      "x": 64,
+      "y": 222,
+      "z": 5,
+      "campaignBonus": "BoNskel2.pcx",
+      "border": "TONSKEL2.bmp",
+      "area": "TZNSKEL2.bmp",
+      "resource": "TBNCUP_0",
+      "size": [
+        193,
+        117
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "eb308b0d7452c58d2a9ad7008f86b9b58e0e836bb736601b89092a67602bfcd1"
+    },
+    {
+      "name": "dwellingUpLvl2",
+      "animation": "TBNCUP_1.def",
+      "x": 498,
+      "y": 224,
+      "z": 1,
+      "campaignBonus": "BoNzomb2.pcx",
+      "border": "TONZOMB2.bmp",
+      "area": "TZNZOMB2.bmp",
+      "resource": "TBNCUP_1",
+      "size": [
+        134,
+        77
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "19f5aa8163dc3c66d810738e68b0621f5084d024caad9f930c2e5e1bf2411a23"
+    },
+    {
+      "name": "dwellingUpLvl3",
+      "animation": "TBNCUP_2.def",
+      "x": 0,
+      "y": 179,
+      "z": 8,
+      "campaignBonus": "BoNwigh2.pcx",
+      "border": "TONWIGH2.bmp",
+      "area": "TZNWIGH2.bmp",
+      "resource": "TBNCUP_2",
+      "size": [
+        147,
+        195
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "382d46387fa97284ee28789ee67821551b2c1de4517f846a6583984a2c4afef0"
+    },
+    {
+      "name": "dwellingUpLvl4",
+      "animation": "TBNCUP_3.def",
+      "x": 615,
+      "y": 193,
+      "z": 2,
+      "campaignBonus": "BoNvamp2.pcx",
+      "border": "TONVAM2.bmp",
+      "area": "TZNVAM2.bmp",
+      "resource": "TBNCUP_3",
+      "size": [
+        183,
+        83
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "0d9aacbcae2fff7ae6422286ff80bd9b53679af0dc97915828127e38f3540ec1"
+    },
+    {
+      "name": "dwellingUpLvl5",
+      "animation": "TBNCUP_4.def",
+      "x": 222,
+      "y": 171,
+      "z": 3,
+      "campaignBonus": "BoNlich2.pcx",
+      "border": "TONLICH2.bmp",
+      "area": "TZNLICH2.bmp",
+      "resource": "TBNCUP_4",
+      "size": [
+        114,
+        120
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "2714b44f1c1bec4a4e7aa1174167c489db15ec7f85e258272585dfa7ee2a77c8"
+    },
+    {
+      "name": "dwellingUpLvl6",
+      "animation": "TBNCUP_5.def",
+      "x": 0,
+      "y": 30,
+      "z": -2,
+      "campaignBonus": "BoNbkni2.pcx",
+      "border": "TONBKN2.bmp",
+      "area": "TZNBKN2.bmp",
+      "resource": "TBNCUP_5",
+      "size": [
+        125,
+        193
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "29d276d41b33f6f2848df2f70c95a39d92ccb0688db2aedc0f2f9de39ae1400d"
+    },
+    {
+      "name": "dwellingUpLvl7",
+      "animation": "TBNCUP_6.def",
+      "x": 662,
+      "y": 23,
+      "campaignBonus": "BoNbone2.pcx",
+      "border": "TONBON2.bmp",
+      "area": "TZNBON2.bmp",
+      "resource": "TBNCUP_6",
+      "size": [
+        138,
+        168
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "dd675f0dad914bf0a0d604d6a69bfb9d30015a8e3cd0f63d37abae2564aa2c3c"
+    }
+  ],
+  "map": [
+    {
+      "name": "village",
+      "animation": "AVCNECR0.DEF",
+      "resource": "AVCNECR0",
+      "size": [
+        192,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "174d69c0b2ccfa12060941b572fe2bf326fac9fa97779f880e7d1ce3142fdcac"
+    },
+    {
+      "name": "fort",
+      "animation": "AVCNECX0.DEF",
+      "resource": "AVCNECX0",
+      "size": [
+        192,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "4e10a6b802e3994fc382ab790ef39414371c2cb0adfb60528b8b552438b263db"
+    },
+    {
+      "name": "capitol",
+      "animation": "AVCNECZ0.DEF",
+      "resource": "AVCNECZ0",
+      "size": [
+        192,
+        192
+      ],
+      "groups": {
+        "0": 1
+      },
+      "sourceSHA256": "315b44a946994a6bc062a9d39963ef71e36e4c5a2fc022a32a695272d8de58f8"
+    }
+  ],
+  "frames": 103,
+  "stateLogic": "Original engine config unchanged; gallery is an independent layer inspector.",
+  "method": "2x bicubic + mild unsharp; generated castle interiors registered to original alpha.",
+  "generatedInputs": {
+    "background": {
+      "path": "/Users/zhye/vcmi-art/necropolis-hd/layer-input-02/background.png",
+      "sha256": "12ce5cfb8b531d432b6df7144361212d51d6ccc7dc6c9cab0e94d1344808b637"
+    },
+    "castle": {
+      "path": "/Users/zhye/vcmi-art/necropolis-hd/layer-input-02/castle-magenta.png",
+      "sha256": "710b0200dddd0fb0165c2215515f561260768cfa4fe6320accf1a738e0dbab89"
+    }
+  }
+}
