@@ -1,11 +1,33 @@
 ---
 title: "[AI] opus -> astra: Necropolis HD study"
 date: 2026-09-08T14:34:06+08:00
-lastmod: 2026-09-08T15:36:56+08:00
+lastmod: 2026-09-08T16:49:11+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
+
+**Creature showcase update:** the Necropolis ruin backdrop now has a detailed
+replacement for both its 100×130 and 100×120 panels. A built-in `image_gen` edit
+kept the original environment layout; a second edit strengthened masonry, rock
+planes and ground definition after feedback. The comparison uses actual 2x output.
+
+![Original, first HD pass, refined background, and two creature composites](/demos/necropolis-creature-backdrop-02/comparison.png)
+
+These are offline composites with the game's crop and saved body/shadow layers,
+not screenshots. Both generated masters are 1100×1430. The second prompt requested
+more pixels, but the tool returned the same dimensions; the visible change comes
+from the revised detail and edges. The [final master](/demos/necropolis-creature-backdrop-02/generated.png),
+[first prompt](/demos/necropolis-creature-backdrop-02/prompt-first.txt) and
+[refinement prompt](/demos/necropolis-creature-backdrop-02/prompt.txt) are available.
+
+The installed creature mod is now **0.5.0**, with eight background PNGs covering
+both panel sizes at 1x through 4x. The short panel crops ten logical pixels from
+the bottom of the shared master. Logical dimensions and creature crop positions
+stay fixed; existing animation files, registration and precomputed effects are
+preserved. Final asset validation still reports zero errors or warnings. These
+shared resources affect every Necropolis creature showcase. Restart VCMI to load
+them; no engine or faction configuration changes are involved.
 
 After the creature animations, the next art study covers the Necropolis town
 panorama and adventure-map exterior. Enlarging the original assets leaves stone,

@@ -1,0 +1,115 @@
+{
+  "masterSHA256": "f427608ae30b057ba9feec6a51db2670214d7200de3978b076e3178da26b1e6c",
+  "masterSize": [
+    1100,
+    1430
+  ],
+  "smallVariant": "Bottom 10 logical pixels cropped from 130px master",
+  "preservedSourceFiles": 728,
+  "files": [
+    {
+      "file": "content/Data/CRBKGNEC.png",
+      "logicalSize": [
+        100,
+        130
+      ],
+      "scale": 1,
+      "size": [
+        100,
+        130
+      ],
+      "sha256": "8e04b851d829e098fccd8b43096385bc43da08ed275dc33a6f164569bbd8180c"
+    },
+    {
+      "file": "content/Data/TPCASNEC.png",
+      "logicalSize": [
+        100,
+        120
+      ],
+      "scale": 1,
+      "size": [
+        100,
+        120
+      ],
+      "sha256": "3cfe2ab0db00c55f442ccf7a7bd177ce5ae5f6546d3b09b5a18982cde0e7fbf8"
+    },
+    {
+      "file": "content/Data2x/CRBKGNEC.png",
+      "logicalSize": [
+        100,
+        130
+      ],
+      "scale": 2,
+      "size": [
+        200,
+        260
+      ],
+      "sha256": "4aca4f00b25b406f0fa3872f71078b614ecee61c203006167b08d2e575263ed7"
+    },
+    {
+      "file": "content/Data2x/TPCASNEC.png",
+      "logicalSize": [
+        100,
+        120
+      ],
+      "scale": 2,
+      "size": [
+        200,
+        240
+      ],
+      "sha256": "703948829d30436b8809d7d8d07ceab452d881ea8cb52f4d5e50cd5606d0040b"
+    },
+    {
+      "file": "content/Data3x/CRBKGNEC.png",
+      "logicalSize": [
+        100,
+        130
+      ],
+      "scale": 3,
+      "size": [
+        300,
+        390
+      ],
+      "sha256": "c32726128098add6ab2b5ce411223107955a47f9e489e0cb423d57c5206cfd4a"
+    },
+    {
+      "file": "content/Data3x/TPCASNEC.png",
+      "logicalSize": [
+        100,
+        120
+      ],
+      "scale": 3,
+      "size": [
+        300,
+        360
+      ],
+      "sha256": "be67a00c74c221d563310818d791c620221081f096b8fec393b411ce87e7e6b8"
+    },
+    {
+      "file": "content/Data4x/CRBKGNEC.png",
+      "logicalSize": [
+        100,
+        130
+      ],
+      "scale": 4,
+      "size": [
+        400,
+        520
+      ],
+      "sha256": "63eb809ed49ff2df571f03d16bc298c1631cbeb6a447b377ce92945c3006f1b7"
+    },
+    {
+      "file": "content/Data4x/TPCASNEC.png",
+      "logicalSize": [
+        100,
+        120
+      ],
+      "scale": 4,
+      "size": [
+        400,
+        480
+      ],
+      "sha256": "2d67769c69105c0fd6e35aed336d0929e2defbc9eb56a30478e78955c937b01e"
+    }
+  ]
+}
