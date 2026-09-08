@@ -13,7 +13,7 @@ The town uses **necropolis-layered-hd 0.3.0**; creature animations use **necropo
 
 The background is 1600×748, with 42 independent building and auxiliary layers. Built states, upgrades, click masks and draw order remain under the existing game configuration. Dimensions and alpha checks passed for 100 town frames and three adventure-map variants. Town HD assets are supplied at 2×; 1× retains the originals.
 
-The [third layer inspector](/demos/necropolis-layered-03/) shows base and upgraded combinations and individual details. Adventure-map variants still use conservative resampling. The early painted-checkerboard draft was never installed, and the single painted town panorama remains a concept study rather than a usable layered background.
+The [third layer inspector](/demos/necropolis-layered-03/) shows base and upgraded combinations and individual details. ~~Adventure-map variants still use conservative resampling.~~ As of September 9, [h3-environment-hd 0.1.0](/posts/h3-environment-hd/) supplies redrawn 2×/3×/4× bodies and smooth ownership flags. The early painted-checkerboard draft was never installed, and the single painted town panorama remains a concept study rather than a usable layered background.
 
 ## Creature-panel background
 
@@ -58,7 +58,7 @@ The local mod is now **0.3.0**, with the installed 0.2 copy backed up. Browser
 checks verified empty/basic/upgraded counts of 0/21/23, exact pixel agreement
 between the empty canvas and the separate background, and a changing image when
 switching building versions. These checks do not add native construction, upgrade
-or click-test coverage. Adventure-map variants remain the second-pass assets.
+or click-test coverage. ~~Adventure-map variants remain the second-pass assets.~~ This described the town 0.3.0 delivery; the subsequent [environment mod](/posts/h3-environment-hd/) replaces them.
 
 [PR #10](https://github.com/yzh119/vcmi/pull/10) adds per-building reference
 preparation and static-interior registration. The [41 prompts](/demos/necropolis-layered-03/prompts.md)
@@ -185,7 +185,7 @@ is **1600×748**. ~~Other buildings and map variants currently use conservative 
 resampling and mild sharpening. They do not have newly generated detail, and
 matching their materials to the castle remains further work.~~
 
-> Update, 2026-09-09: All41remaining town layers subsequently received generated detail; see the section below and [third layer inspector](/demos/necropolis-layered-03/). Adventure-map variants still use conservative resampling.
+> Update, 2026-09-09: All41remaining town layers subsequently received generated detail; see the section below and [third layer inspector](/demos/necropolis-layered-03/). ~~Adventure-map variants still use conservative resampling.~~ As of September 9, [h3-environment-hd 0.1.0](/posts/h3-environment-hd/) supplies redrawn 2×/3×/4× bodies and smooth ownership flags.
 
 
 
@@ -241,7 +241,7 @@ The local mod is now **0.3.0**, with the installed 0.2 copy backed up. Browser
 checks verified empty/basic/upgraded counts of 0/21/23, exact pixel agreement
 between the empty canvas and the separate background, and a changing image when
 switching building versions. These checks do not add native construction, upgrade
-or click-test coverage. Adventure-map variants remain the second-pass assets.
+or click-test coverage. ~~Adventure-map variants remain the second-pass assets.~~ This described the town 0.3.0 delivery; the subsequent [environment mod](/posts/h3-environment-hd/) replaces them.
 
 [PR #10](https://github.com/yzh119/vcmi/pull/10) adds per-building reference
 preparation and static-interior registration. The [41 prompts](/demos/necropolis-layered-03/prompts.md)
