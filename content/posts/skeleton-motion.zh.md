@@ -1,7 +1,7 @@
 ---
 title: "[AI]opus -> astra：骷髅的十三组动画"
 date: 2026-09-08T12:13:00+08:00
-lastmod: 2026-09-08T12:46:14+08:00
+lastmod: 2026-09-08T13:11:23+08:00
 series: ["英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
@@ -11,13 +11,13 @@ tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 这轮继续用 Astra 写本地 Blender 工具，把[四个独立姿势](/zh/posts/skeleton-rig-study/)
 扩成了十三组连续动画。受击、防御、死亡、转身和另外两个攻击方向也已补齐。
 
-[逐组播放与原版对照](/demos/skeleton-motion-full-01/)可以查看全部十三组；每组都能暂停、拖动。
+[逐组播放与原版对照](/demos/skeleton-motion-full-02/)可以查看全部十三组；每组都能暂停、拖动。
 
 从 Opus-5 切到 Astra 之后，工作已经从修补生成结果推进到了直接编辑网格、骨架和动画。
 这轮仍然复用原模型的头骨、胸廓、骨盆与贴图，没有新增 Meshy 调用。
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" poster="/demos/skeleton-motion-full-01/attack_front.gif" src="/demos/skeleton-motion-full-01/attack_front.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" poster="/demos/skeleton-motion-full-02/attack_front.gif" src="/demos/skeleton-motion-full-02/attack_front.mp4" style="width:360px;max-width:100%"></video>
   <figcaption>正面攻击的 30 fps 预览，按游戏 2 倍尺寸显示。可以暂停、拖动检查蓄力、落脚、挥剑和收势。目前只有身体层。</figcaption>
 </figure>
 
@@ -31,13 +31,23 @@ tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ## 行走的脚底
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" poster="/demos/skeleton-motion-full-01/moving.gif" src="/demos/skeleton-motion-full-01/moving.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" poster="/demos/skeleton-motion-full-02/moving.gif" src="/demos/skeleton-motion-full-02/moving.mp4" style="width:360px;max-width:100%"></video>
   <figcaption>行走循环，原地显示。支撑脚检查会另外加回角色应有的前进距离；视频里没有模拟战场位移。</figcaption>
 </figure>
 
 第一版行走的剑太平，双手也缩在胸前。按这次反馈，改成全程朝上持握，剑刃仰角保持在
 57–73 度；持剑手抬高，空手放低，躯干前倾减小。起步、收步也跟着更新。这里记录的是
 修正后的设计范围，没有声称逐帧复刻原版。本页的视频和对照图已换成这一版。
+
+持剑手臂随后也补了前后摆动。上一版只让手腕上下动，朝前的位置基本固定，抬高剑尖
+没有解决摆臂。现在手腕前伸、后摆时，肘部控制点一起移动，上臂也会绕肩部转动。
+相对肩膀测量，手腕前后行程从 0.014908 增加到 0.360025 个模型单位；起步和收步
+沿用新的行走端点。剑仍保持朝上。
+
+<figure>
+  <img src="/demos/skeleton-motion-full-02/walk-comparison.gif" alt="原版、上一版和新增摆臂后的行走对照">
+  <figcaption>左边原版，中间上一版，右边新版。使用各自的八帧输出和固定裁切，在相同预览速度下比较手臂轨迹。</figcaption>
+</figure>
 
 引擎的走路速度和动画播放速度一起决定步幅。当前代码里，走路每秒播放
 `10 × speedFactor / walkAnimationTime` 帧，角色每秒移动
@@ -57,8 +67,8 @@ Blender 的 Python 插帧实际生成了 Bezier 曲线，没有采用界面里�
 受击会先后仰，再向前缓冲并回到待机；防御会举剑、受力后退，再收回架势。
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-01/hitted.mp4" style="width:360px;max-width:100%"></video>
-  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-01/defence.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-02/hitted.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-02/defence.mp4" style="width:360px;max-width:100%"></video>
   <figcaption>受击与防御，分别保留原版的 6 帧和 11 帧输出；这里显示 30 fps 检查动画。</figcaption>
 </figure>
 
@@ -67,7 +77,7 @@ Blender 的 Python 插帧实际生成了 Bezier 曲线，没有采用界面里�
 需要时把模型整体抬起少量，避免胸廓或剑穿进地面。
 
 <figure>
-  <video controls muted playsinline preload="metadata" src="/demos/skeleton-motion-full-01/death.mp4" style="width:360px;max-width:100%"></video>
+  <video controls muted playsinline preload="metadata" src="/demos/skeleton-motion-full-02/death.mp4" style="width:360px;max-width:100%"></video>
   <figcaption>死亡动画停在伏地姿态；可以重新播放检查过程。</figcaption>
 </figure>
 
@@ -77,7 +87,7 @@ Blender 的 Python 插帧实际生成了 Bezier 曲线，没有采用界面里�
 切换显示方向，再播放 `TURN_R`；两个动作各两帧，共用中间的正面姿势。
 
 <figure>
-  <img src="/demos/skeleton-motion-full-01/turn-order.gif" alt="左右转身按引擎顺序播放，中途切换显示方向">
+  <img src="/demos/skeleton-motion-full-02/turn-order.gif" alt="左右转身按引擎顺序播放，中途切换显示方向">
   <figcaption>按原版帧数拼接的转身预览，前后加了待机停顿。这里只模拟显示方向切换，还没有实机验收。</figcaption>
 </figure>
 
@@ -86,8 +96,8 @@ Blender 的 Python 插帧实际生成了 Bezier 曲线，没有采用界面里�
 把手腕目标收近后，十三组动作的最大 IK 误差降到了 0.000091 以内。
 
 <figure>
-  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-01/attack_up.mp4" style="width:360px;max-width:100%"></video>
-  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-01/attack_down.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-02/attack_up.mp4" style="width:360px;max-width:100%"></video>
+  <video controls loop muted playsinline preload="metadata" src="/demos/skeleton-motion-full-02/attack_down.mp4" style="width:360px;max-width:100%"></video>
   <figcaption>向上与向下攻击，保留此前的蓄力、抬脚和收势结构。</figcaption>
 </figure>
 
@@ -99,7 +109,7 @@ Blender 的 Python 插帧实际生成了 Bezier 曲线，没有采用界面里�
 总计 **13 组、82 帧**，另有 1 倍和 2 倍两套身体层。
 
 <figure>
-  <img src="/demos/skeleton-motion-full-01/native-frames.png" alt="原版与新动画的待机、行走、攻击八帧对照">
+  <img src="/demos/skeleton-motion-full-02/native-frames.png" alt="原版与新动画的待机、行走、攻击八帧对照">
   <figcaption>每组上排原版，下排新动画，使用实际 1 倍像素尺寸。整排共用比例和裁切位置，没有逐帧放大缩小；攻击按动作阶段对照，不代表已匹配原版播放节奏。可打开图片查看原尺寸。</figcaption>
 </figure>
 
