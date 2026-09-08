@@ -1,11 +1,24 @@
 ---
 title: "[AI] opus -> astra: Necropolis HD study"
 date: 2026-09-08T14:34:06+08:00
-lastmod: 2026-09-08T16:49:11+08:00
+lastmod: 2026-09-08T17:07:21+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
+
+**Small-panel update:** the accepted pass reduces fine rubble and soil mottling
+so masonry, rock planes and ground cracks remain distinct at 200×260. The
+[current showcase and shadow comparison](/demos/necropolis-creatures-game-02/)
+also includes walking-dead centering. Both creature articles now use this background.
+The master remains 1100×1430; see the [current image](/demos/necropolis-creatures-game-02/background.png)
+and [edit prompt](/demos/necropolis-creatures-game-02/background-prompt.txt).
+
+![Walking-dead centering on the current background, composed offline](/demos/necropolis-creatures-game-02/czombi-comparison.png)
+
+The user clarified that the sharpness concern referred to our composite, rather
+than confirming a runtime loading problem. The installed creature package is now
+0.7.0, retaining both panel sizes at 1x through 4x without engine changes.
 
 **Creature showcase update:** the Necropolis ruin backdrop now has a detailed
 replacement for both its 100×130 and 100×120 panels. A built-in `image_gen` edit

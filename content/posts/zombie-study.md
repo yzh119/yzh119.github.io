@@ -1,11 +1,36 @@
 ---
 title: "[AI] opus -> astra: Zombie animation set"
 date: 2026-09-08T13:30:00+08:00
-lastmod: 2026-09-08T16:12:19+08:00
+lastmod: 2026-09-08T17:05:23+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
+
+**Showcase and shadow update (0.7.0):** these showcase figures now use the
+accepted background. Walking dead moves from x=75 to x=50 inside its panel: all
+160 body frames and companion shadows/outlines shift together. Skeleton keeps its
+existing registration. The offset also applies within the battle canvas; visible
+pixels, canvas dimensions and frame counts are preserved.
+
+![Creature showcase comparison with the current background](/demos/necropolis-creatures-game-02/czombi-comparison.png)
+
+These are offline composites using the game's crop, not screenshots. The user
+clarified that the background sharpness concern referred to the composite. No
+runtime low-resolution loading defect was established.
+
+Previous shadows used each frame's lowest pixel as a projection anchor, then
+thresholded alpha at 128. That anchor spans 4.5 logical pixels during skeleton
+movement, 6.5 during its front attack and 2.5 during walking-dead movement. The
+replacement uses fixed ground, continuous alpha and modest spatial blur, deriving
+1x from the same 2x projection. There is no temporal averaging or animation delay.
+Maximum adjacent-frame alpha change during movement falls from 1.083 to 0.643 for
+skeleton and 0.489 to 0.357 for walking dead. This metric includes legitimate pose
+changes and responds to blur; it is not a perceptual flicker score. Attack changes
+do not all decrease. The [six playable comparisons](/demos/necropolis-creatures-game-02/)
+show that scope. All 324 shadows are prebaked, body/outline content is preserved,
+and final validation has zero errors or warnings. The installed package has a
+backup and takes effect after restart; engine source remains unchanged.
 
 **Game integration update:** the complete export is installed alongside the
 skeleton in the local `necropolis-creature-animations` mod. CZOMBI belongs to the

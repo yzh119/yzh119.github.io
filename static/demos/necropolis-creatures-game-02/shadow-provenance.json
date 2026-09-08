@@ -1,0 +1,1539 @@
+{
+  "method": "Fixed ground, continuous alpha, bilinear projection, spatial blur; no temporal averaging",
+  "softnessLogicalPixels": 0.8,
+  "preservedFiles": 413,
+  "metrics": [
+    {
+      "creature": "CSKELE",
+      "group": 0,
+      "previousAnchorRange": 4.5,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.0825157321810173,
+      "newMaxAlphaChurn": 0.6429156137665945
+    },
+    {
+      "creature": "CSKELE",
+      "group": 1,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 0.6269574877970949,
+      "newMaxAlphaChurn": 0.5703416818312421
+    },
+    {
+      "creature": "CSKELE",
+      "group": 2,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 0.05314122167813739,
+      "newMaxAlphaChurn": 0.029741198529593168
+    },
+    {
+      "creature": "CSKELE",
+      "group": 3,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.408361662060701,
+      "newMaxAlphaChurn": 1.333691066538376
+    },
+    {
+      "creature": "CSKELE",
+      "group": 4,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 0.6839076907227115,
+      "newMaxAlphaChurn": 0.6037928390866522
+    },
+    {
+      "creature": "CSKELE",
+      "group": 5,
+      "previousAnchorRange": 3.5,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.6384008119995488,
+      "newMaxAlphaChurn": 1.4807316863710533
+    },
+    {
+      "creature": "CSKELE",
+      "group": 7,
+      "previousAnchorRange": 1.0,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.4668615030937415,
+      "newMaxAlphaChurn": 1.3184997409518169
+    },
+    {
+      "creature": "CSKELE",
+      "group": 8,
+      "previousAnchorRange": 1.0,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.1666358694066505,
+      "newMaxAlphaChurn": 1.0611563109639564
+    },
+    {
+      "creature": "CSKELE",
+      "group": 11,
+      "previousAnchorRange": 6.5,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.3772875422874495,
+      "newMaxAlphaChurn": 1.2500739243999803
+    },
+    {
+      "creature": "CSKELE",
+      "group": 12,
+      "previousAnchorRange": 6.5,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.5373819010262302,
+      "newMaxAlphaChurn": 1.6227630151843817
+    },
+    {
+      "creature": "CSKELE",
+      "group": 13,
+      "previousAnchorRange": 6.5,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.615958117760469,
+      "newMaxAlphaChurn": 1.5954033296661467
+    },
+    {
+      "creature": "CSKELE",
+      "group": 20,
+      "previousAnchorRange": 1.5,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 1.0255692239966738,
+      "newMaxAlphaChurn": 0.7593442380282733
+    },
+    {
+      "creature": "CSKELE",
+      "group": 21,
+      "previousAnchorRange": 1.5,
+      "newAnchorRange": 0,
+      "fixedGround": 267.0,
+      "previousMaxAlphaChurn": 0.9707959070284283,
+      "newMaxAlphaChurn": 0.710680351432167
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 0,
+      "previousAnchorRange": 2.5,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.4889663540242282,
+      "newMaxAlphaChurn": 0.35735888022871665
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 1,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.11623024130729598,
+      "newMaxAlphaChurn": 0.11048246798044332
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 2,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.00870224515661778,
+      "newMaxAlphaChurn": 0.007852338377409366
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 3,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.48352027544574133,
+      "newMaxAlphaChurn": 0.46862693620372803
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 4,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.34284694704443575,
+      "newMaxAlphaChurn": 0.3262781727706116
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 5,
+      "previousAnchorRange": 6.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 1.6471593190547982,
+      "newMaxAlphaChurn": 1.242799838235455
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 7,
+      "previousAnchorRange": 1.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.5683052688756111,
+      "newMaxAlphaChurn": 0.5188493782153158
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 8,
+      "previousAnchorRange": 1.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.48430337591534167,
+      "newMaxAlphaChurn": 0.4435030067345703
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 11,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.3409907055344317,
+      "newMaxAlphaChurn": 0.3345698726301755
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 12,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.3984854309218113,
+      "newMaxAlphaChurn": 0.394908824831995
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 13,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0.8495795523637991,
+      "newMaxAlphaChurn": 0.7969725009176556
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 20,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0,
+      "newMaxAlphaChurn": 0
+    },
+    {
+      "creature": "CZOMBI",
+      "group": 21,
+      "previousAnchorRange": 0.0,
+      "newAnchorRange": 0,
+      "fixedGround": 266.0,
+      "previousMaxAlphaChurn": 0,
+      "newMaxAlphaChurn": 0
+    }
+  ],
+  "files": [
+    {
+      "file": "content/Sprites/creatures/cskele/moving_00-shadow.png",
+      "sha256": "f588eb864a5997225de120ec414a7c29d5f841f6c2b9ea964c21ead3f5de5c3d"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_00-shadow.png",
+      "sha256": "563132bf979df42b6a2914887db9ccbfd3e46fa4b8f2449fdb173ef52a6cc365"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/moving_01-shadow.png",
+      "sha256": "1c6fb64f64f3872ee99be16d56035ea9d6ba1153dba3d4f3cb18a9dfd34b3713"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_01-shadow.png",
+      "sha256": "3102f8056d7fe30ddab99875f132069367a5f46695e21a277dc92644bebd86d3"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/moving_02-shadow.png",
+      "sha256": "a18e540a7f075764f1e5728e580b3ec6e3750d12fb8ff2e4a85b0ddf358a1c4d"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_02-shadow.png",
+      "sha256": "bb2fa6d92654539e32cd6128bcb3aec73acdf6e80cdd8df039b60a7e04ffc3fd"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/moving_03-shadow.png",
+      "sha256": "18a5b8c8106b2d891586348c7120d8a0631be8495dc4449c9c821a992fbbbe67"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_03-shadow.png",
+      "sha256": "07b68a9012a1b0cbc64449fd248a7eaeb39dbf596f4ff5c516d27d029c0fb003"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/moving_04-shadow.png",
+      "sha256": "a78ce06f548f4601819526c2a1e20bbf5aa58da6e607d0dc54e8f05643347409"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_04-shadow.png",
+      "sha256": "6887ce7e01b1bdd02d81acfc5790fbebb601b5dc18759501a883f28d7df5ac06"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/moving_05-shadow.png",
+      "sha256": "4f00519e9f719644bf55526f814007df4bbd94cdaa830ffdda55f4bd54c9cd40"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_05-shadow.png",
+      "sha256": "8ab6eefe8c62c44790ae0655fecd0989abc3727a890c5315b18ba3caa0d8a12e"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/moving_06-shadow.png",
+      "sha256": "0937c8549d3589bfb4367cff9ada37a72a054994ed801c628bf7b25dd00ed82e"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_06-shadow.png",
+      "sha256": "b341315e091b9b57ab5e52d4dc97fdb386bc92bbdae51ee299707e4b051a6bdc"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/moving_07-shadow.png",
+      "sha256": "3fdce3f47b343d24f96e548158ea1d2fce32735fcf443c7a57e1a43a6d26f337"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/moving_07-shadow.png",
+      "sha256": "b0536cacf73144deffefc633fb8c3f449dff80dabde280a97d4662af475e3e78"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_01-shadow.png",
+      "sha256": "49900a633951e7724903d23f0d4778c2cb5de91a26542ee4f99170fb4108ac4b"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_01-shadow.png",
+      "sha256": "6fac2e097e0eb23b2631d5e640c2a3671820f038707ffe2be1859d9a31639da8"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_02-shadow.png",
+      "sha256": "357a9293c8443021e27ae71abedc7f9ae969f0bdc3b346328ae2c616e4f450ce"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_02-shadow.png",
+      "sha256": "3fc49fed4b7f5ff4ad92e0d4dbf64d094d368286a45f137b26fd7ef73929ad74"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_03-shadow.png",
+      "sha256": "8cd5f048f8019c1586d510cd16f8d4a680240fd2a9df88a06e1439d613150803"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_03-shadow.png",
+      "sha256": "423f853b3cd7186cfcdd0b67c8bfcdda9c84afcadd11864ffc799a96813c634c"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_04-shadow.png",
+      "sha256": "cbfe2334a1ba2cfa5015064c409fc8186790ced207fac5758e30d380e726a5cd"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_04-shadow.png",
+      "sha256": "1c20cd68aea312f0480d0b69449eb413bb82faa1c69a35c7bf88839367a372bf"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_05-shadow.png",
+      "sha256": "cbfe2334a1ba2cfa5015064c409fc8186790ced207fac5758e30d380e726a5cd"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_05-shadow.png",
+      "sha256": "1c20cd68aea312f0480d0b69449eb413bb82faa1c69a35c7bf88839367a372bf"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_06-shadow.png",
+      "sha256": "cbfe2334a1ba2cfa5015064c409fc8186790ced207fac5758e30d380e726a5cd"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_06-shadow.png",
+      "sha256": "1c20cd68aea312f0480d0b69449eb413bb82faa1c69a35c7bf88839367a372bf"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_07-shadow.png",
+      "sha256": "51ceef9fd11eba0b45df6386cb8fb2a120bae3f65bdf1caaad978b4c0d5b079a"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_07-shadow.png",
+      "sha256": "628fd32780c8f981950eb1e73e614a314209b74c67b0ee397588fdaade7728e3"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_08-shadow.png",
+      "sha256": "9f0c532e1e8df69b8f10f824dd103cf74360e0d53757f90eef1c37ce6880111c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_08-shadow.png",
+      "sha256": "c53c78d5ecf487a12cb1ecbdc7956932bf68343b4086640430dc330dd2adc0dd"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_09-shadow.png",
+      "sha256": "12a0ff7e60d899138bf50b81e4151f0e775dfe26ecc058981993d05b3d623c11"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_09-shadow.png",
+      "sha256": "ed72200ca14d76e1bf6817a991d2450b34d688157e4a78e9c48426f51c370598"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/mouseon_10-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/mouseon_10-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_01-shadow.png",
+      "sha256": "c22176e788476e92b95c71103434c59784f6a2393c0239bbdfac95e30bb1706f"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_01-shadow.png",
+      "sha256": "49cce6d0408e8788db56819985c9f00b818b7b47bfb0a5a8e62a7a1f4f152a1b"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_02-shadow.png",
+      "sha256": "7170612037a50d8a36cc2f9703f9178a30defec6fb81834d79191cfbabe7cb66"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_02-shadow.png",
+      "sha256": "ad1ec205920a7ed48fb0eca27461c745b56e8ec26dd65579609cfcfc69b593c7"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_03-shadow.png",
+      "sha256": "c22176e788476e92b95c71103434c59784f6a2393c0239bbdfac95e30bb1706f"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_03-shadow.png",
+      "sha256": "49cce6d0408e8788db56819985c9f00b818b7b47bfb0a5a8e62a7a1f4f152a1b"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_04-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_04-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_05-shadow.png",
+      "sha256": "7eaf31fd06bebd0bcdb9a4460b06882519ea16a08e6c27ac6dc18ee71070d3c6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_05-shadow.png",
+      "sha256": "2cf0f2428c18ef10c22eb926b3f8944ad2844c4d2738f566bfad347d18eac3fc"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_06-shadow.png",
+      "sha256": "0454655baab7fb8d16b28fb00e44e355c76c4f5ae3dad39ad381baa1ee6fa477"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_06-shadow.png",
+      "sha256": "2d28a139c34b3476485ee8d00bb3b9f46eb02ad2730d1e1270c443587e630b18"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/holding_07-shadow.png",
+      "sha256": "7eaf31fd06bebd0bcdb9a4460b06882519ea16a08e6c27ac6dc18ee71070d3c6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/holding_07-shadow.png",
+      "sha256": "2cf0f2428c18ef10c22eb926b3f8944ad2844c4d2738f566bfad347d18eac3fc"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/hitted_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/hitted_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/hitted_01-shadow.png",
+      "sha256": "1b4ebb4ea9703308e5bc0e0bf079d25f3239683a6f9524f72f9e03fa2001ef75"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/hitted_01-shadow.png",
+      "sha256": "0faa2528708347027cfcab9194020f05496a06383d536a33279308cadf7fd6ba"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/hitted_02-shadow.png",
+      "sha256": "4b580e7346ba45f2d83769ca0b5ee5d77cf00cb08d3d2fd6165129ff5ad8b3a2"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/hitted_02-shadow.png",
+      "sha256": "10743ca1e3a44746473ac278d23d2d56c164282d228433e5fe20d2903afe17bf"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/hitted_03-shadow.png",
+      "sha256": "28969a380efb6968f2d0515dfeb60328eae4aab4517d874a1ce701ff40f4658c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/hitted_03-shadow.png",
+      "sha256": "f82ac8d8b5e64aaa877f5259dd0cc6fd92af3b8447015fa31daf345e91b5e4a6"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/hitted_04-shadow.png",
+      "sha256": "3b34bc65e574396889a78fd5e3dee904ad165fed8d1876eb419282cc96c3aab1"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/hitted_04-shadow.png",
+      "sha256": "e2a58b08131cc990524084c83b81ae3663c2114aafc252ba47cd22401f27d92c"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/hitted_05-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/hitted_05-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_01-shadow.png",
+      "sha256": "b2e927ae1fbea9d7c77026e7418202f0dc959bc044db7956caccab4fa0d9609b"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_01-shadow.png",
+      "sha256": "42c137da0fa5160567657b0910f8b7b1030ff76d819f1999c07440ce50cad751"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_02-shadow.png",
+      "sha256": "b9c9357f447f3c5e790d3326b45ded46abcad2abceb400c5e4d546f7a6445e33"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_02-shadow.png",
+      "sha256": "f2601255ef323874377aaf14c6d8c1b36ee7d5582e13be3a262d4f6d81b31a4c"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_03-shadow.png",
+      "sha256": "4c9a11aa49305ac9bbaee4171ec3b5326e55a0aa94682e7e4848bb39ccee21f3"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_03-shadow.png",
+      "sha256": "0f98c0f5cfc253d18ddeda038cc7e929be89596f95407437eb8a24e54bea8c56"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_04-shadow.png",
+      "sha256": "91113fa4bf15f9afbf5d79e0f3538383089253a372956258484e59141faf4d9c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_04-shadow.png",
+      "sha256": "1642f12e78ea7749aa0ac8536042b12ca69ebe9d58eec19ee1ad8b585b676c20"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_05-shadow.png",
+      "sha256": "ca7857114f42899f3f632b8ee00c0b0142ee4c31b92b90710b0bc400d5493ddd"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_05-shadow.png",
+      "sha256": "63db5fdaa10e0029f932774321d200ac208fcc84c3622bfa9d31708fd30db309"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_06-shadow.png",
+      "sha256": "d5839b359f4bf124a5799f151bb074b41ff9be726b103e7fa526ea0e4f44bd39"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_06-shadow.png",
+      "sha256": "acf1c477139170acd18b81cb5c2f0e0cf8ec184ff9c4c965c0495baab0816152"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_07-shadow.png",
+      "sha256": "0ee1117d07fcc16bdf9c1f0c0fd0d1281e279acfbfe68a19b5e7abbff779c4b6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_07-shadow.png",
+      "sha256": "d95d3571ba8ff9f5dfcbf0644b1ee367ab1e072dcd1819e37397b53fdf24517e"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_08-shadow.png",
+      "sha256": "22039ecf575a0e38d0587d9a73d620fb89ab8480665006735c1fd4f27ded22f6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_08-shadow.png",
+      "sha256": "e3e0443881c18e3857f69726caec5446af003a7c3aefa8495bcc2ac0c2bad091"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_09-shadow.png",
+      "sha256": "f0e3ba2b0e73d02774121a2cd23faa5f85cffc37d87299d3ea0c6cb512a52dbb"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_09-shadow.png",
+      "sha256": "68d5c2caf6323259d99f6ac82b074c7074f399819ed5a77dc16e77652340cde9"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/defence_10-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/defence_10-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/death_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/death_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/death_01-shadow.png",
+      "sha256": "f82e1ff46524fa1278d727c3bc07add17ad5807428088bbce65d8864f1c953de"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/death_01-shadow.png",
+      "sha256": "c6275ccec419189bfcd872331dc5b090f792b1de6c8a6a319b54b8365aae96e8"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/death_02-shadow.png",
+      "sha256": "4bcdf83cff04550c4146a0159d356b36be68918b9233265410df7d7d3ed5dce1"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/death_02-shadow.png",
+      "sha256": "d506a4001b19c338780b8b5328f4beeecd57d18ae9b44c2280612391e7b84a3c"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/death_03-shadow.png",
+      "sha256": "8c6baae634690a86092b69fc184641a18ca940b04b1ced069dbbaf3f304a1307"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/death_03-shadow.png",
+      "sha256": "5fd75a6e91a72bbdef997f8d5a8d34b2f8b0d87094ef0ffbadca27ac7b1f522a"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/death_04-shadow.png",
+      "sha256": "2e0193efe221848493938413f281fa5dee5825da9374f295ef76946f52685926"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/death_04-shadow.png",
+      "sha256": "f05df744affa10b37095c2d827e091a38bc3c636ed5ec4d8cb2a19ba2902731f"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/death_05-shadow.png",
+      "sha256": "8f84f33f510a705a58a97dfb32bcf1caafa26e116782c0d0c188223d52ef37cb"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/death_05-shadow.png",
+      "sha256": "52daec5a1c092118733af353db88ff8b6fdb1ee65179ba4ce6650bf5e0cce153"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/turn_l_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/turn_l_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/turn_l_01-shadow.png",
+      "sha256": "700964902a774919fb9ce4c2384aed7a810ac2c84366d683b38f5a0d8fad24eb"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/turn_l_01-shadow.png",
+      "sha256": "eac8f7fbb0d8193109a039a04c4189ca4e48eb54562e0d83f1df88c739d7a415"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/turn_r_00-shadow.png",
+      "sha256": "700964902a774919fb9ce4c2384aed7a810ac2c84366d683b38f5a0d8fad24eb"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/turn_r_00-shadow.png",
+      "sha256": "eac8f7fbb0d8193109a039a04c4189ca4e48eb54562e0d83f1df88c739d7a415"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/turn_r_01-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/turn_r_01-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_01-shadow.png",
+      "sha256": "4d12f42cbd22cf8988bb206b293744809008b89ce3ce4a2d0a0f0a4d59712d2c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_01-shadow.png",
+      "sha256": "9cf27db6a7ece245516a66be919eb09a0c88996b6d001e654b1e62bf2de55aca"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_02-shadow.png",
+      "sha256": "17f086e41a8ac8a580c7dfcd1b1465fd4a80dbad5f34ba0869493e21de58b2fe"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_02-shadow.png",
+      "sha256": "691e714bea3bf3b5f65d8337d5c58a3c96980a62663abcab4f226e1d6ad39198"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_03-shadow.png",
+      "sha256": "ecd1c804dbe2f3db7300deeffe799655f724a813853dcdf513f1feb3927539c2"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_03-shadow.png",
+      "sha256": "c03fc84311d5528b57af6e28a4c4c214d03657b225a0b91c3bca450874b28bf8"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_04-shadow.png",
+      "sha256": "8b0771174ed564c66de441405c501977a2676b3fc2e68b309f2597e31875c359"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_04-shadow.png",
+      "sha256": "1bd5c8a977875f927b15f8178bcbb62c3b063d848e0f7e691e6b17b2e5d9e5ab"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_05-shadow.png",
+      "sha256": "e85203eacfee3b33bdeb6a465b099313124dff2e5ae7a96208e15aab878a3217"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_05-shadow.png",
+      "sha256": "bdf543b5eef37a05394bdf38d6bbe3882d018bfe719404ad36ccc2fcb2a85b24"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_06-shadow.png",
+      "sha256": "cb59af0b976a04f0d14c4e81995d17da6b916ff842472e1bf7411c3ed76bd291"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_06-shadow.png",
+      "sha256": "192e2c38c631cfe06c7a027c672b6c655c429427944e87e66d1d974b7d2fad01"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_up_07-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_up_07-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_01-shadow.png",
+      "sha256": "4d12f42cbd22cf8988bb206b293744809008b89ce3ce4a2d0a0f0a4d59712d2c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_01-shadow.png",
+      "sha256": "9cf27db6a7ece245516a66be919eb09a0c88996b6d001e654b1e62bf2de55aca"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_02-shadow.png",
+      "sha256": "8993741d65ee3c0e52519d2292ad0cbc3d1a92810e430380995f968469f1e3b5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_02-shadow.png",
+      "sha256": "f7736292b525a97c40a3b6af24820e24facfea995d6dbee8820ea99d40e75907"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_03-shadow.png",
+      "sha256": "33da28691f24db48fb89c19f26b957730895d9ba273c5053769c31ab800a35a8"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_03-shadow.png",
+      "sha256": "95b5c9db45395152133a43cbe78cab35551d5015130445f5326ff196d5fac42f"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_04-shadow.png",
+      "sha256": "41ab2926f61b5bb38341ba8945e2342e1334225c2edbb372a677002be10061f5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_04-shadow.png",
+      "sha256": "f46aba51a7e9c7d07858aa3a7f22df4ba7882fc1eee24e2a3f2d8b28aea33d4a"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_05-shadow.png",
+      "sha256": "ab2d88f21b49b3dbfbd35eb5773aafe310a7d4d8ed4bf8fb70efdcbc6d76df6b"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_05-shadow.png",
+      "sha256": "5ad9431ac870b7400f1e1e6a7902255b555f55e141506fabe164ff0102d73db3"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_06-shadow.png",
+      "sha256": "cb59af0b976a04f0d14c4e81995d17da6b916ff842472e1bf7411c3ed76bd291"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_06-shadow.png",
+      "sha256": "192e2c38c631cfe06c7a027c672b6c655c429427944e87e66d1d974b7d2fad01"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_front_07-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_front_07-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_01-shadow.png",
+      "sha256": "4d12f42cbd22cf8988bb206b293744809008b89ce3ce4a2d0a0f0a4d59712d2c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_01-shadow.png",
+      "sha256": "9cf27db6a7ece245516a66be919eb09a0c88996b6d001e654b1e62bf2de55aca"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_02-shadow.png",
+      "sha256": "75043dec69a9c49a0fc25378b6109c68c754d965e7e23fdfc0babb6bad47488a"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_02-shadow.png",
+      "sha256": "db68a657e75d35b4b8fbe72dc3e1508ee67b83400955fdc8640ee618bd8a6e8e"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_03-shadow.png",
+      "sha256": "c5427977dc0befaf3bc7f433f900520ffa5ddebd4806054f1849f653128648b6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_03-shadow.png",
+      "sha256": "dc9007ce7b77f2eddbad09659ed3f5681c51289567e6f54150c1c3d1c87f91d1"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_04-shadow.png",
+      "sha256": "e9019a33e7e7a5c633d2bd9c9853e0e702798f11e8211886453326e41ef897a6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_04-shadow.png",
+      "sha256": "ce99e0b9b3ec4d11e1458cd81ed3e42e8235f8df4977b2c0a2ad0fdc7fe0566a"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_05-shadow.png",
+      "sha256": "6977b3f0a091042a35a5010a171f45b1951864fc9d24094d35bb106b8fcd566a"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_05-shadow.png",
+      "sha256": "3eb1e13dfaa5a218ce41ff1840f5020d5c8e438ec94230d16ba75e1c12a13561"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_06-shadow.png",
+      "sha256": "cb59af0b976a04f0d14c4e81995d17da6b916ff842472e1bf7411c3ed76bd291"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_06-shadow.png",
+      "sha256": "192e2c38c631cfe06c7a027c672b6c655c429427944e87e66d1d974b7d2fad01"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/attack_down_07-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/attack_down_07-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/move_start_00-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/move_start_00-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/move_start_01-shadow.png",
+      "sha256": "f588eb864a5997225de120ec414a7c29d5f841f6c2b9ea964c21ead3f5de5c3d"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/move_start_01-shadow.png",
+      "sha256": "563132bf979df42b6a2914887db9ccbfd3e46fa4b8f2449fdb173ef52a6cc365"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/move_end_00-shadow.png",
+      "sha256": "f588eb864a5997225de120ec414a7c29d5f841f6c2b9ea964c21ead3f5de5c3d"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/move_end_00-shadow.png",
+      "sha256": "563132bf979df42b6a2914887db9ccbfd3e46fa4b8f2449fdb173ef52a6cc365"
+    },
+    {
+      "file": "content/Sprites/creatures/cskele/move_end_01-shadow.png",
+      "sha256": "9835680ee5b5f9408b93c957390daf2d2c4fe09eff5d55908904bb3bbdf1f0bf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/cskele/move_end_01-shadow.png",
+      "sha256": "c2fa585ad0f07124461535e34a9c4797553e4a0b3cc73b795d7d35dccf388720"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_00-shadow.png",
+      "sha256": "93f04f5ea1ae7e88d6607e65aa47b9240e648f41d462cbb11bccab2fcdfd3d53"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_00-shadow.png",
+      "sha256": "a01949faa223267579da7886078e2b7890a1960279fe3d0a31b3abb82130b809"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_01-shadow.png",
+      "sha256": "3e3c8681e9024dfed45eb671ce9d376721ca4727773680260ae6586b32392e09"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_01-shadow.png",
+      "sha256": "699ade8a70fc04ffd8d743f3b562730258408e1ebeb5603be48aac4477719ebc"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_02-shadow.png",
+      "sha256": "9798b51c6ce0e754545ac879b3c0d353ca92fa4de354853319f4339133437a8c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_02-shadow.png",
+      "sha256": "c8383880ecdd6e5050823bea72154270fbcb980f7a1badaf95c5485cdfe74421"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_03-shadow.png",
+      "sha256": "20b1625fb3f9c708fe9be6b4bce4eb9c3e8a282cd9bf09f4fc5439cd593e3ce9"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_03-shadow.png",
+      "sha256": "136f590ec3efd4c51bf6f2af55e7be7043e9caa60d8a48ea6f70fb784ddb5776"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_04-shadow.png",
+      "sha256": "e43a37f02cf10487f706958e0d10c7c5fd5f89404e8024f11642ae7651837281"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_04-shadow.png",
+      "sha256": "334d8972f32444871d199c6c4e7911f386e78c5ad05d56611f3940efcbb2e8b2"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_05-shadow.png",
+      "sha256": "e2172922d5ec96ff829636922ec9f4c1c186c7308eb416d15d3ff380bbab614a"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_05-shadow.png",
+      "sha256": "a1aabab34ff94ac56e3fbc9dbe21798e6397992178a44fe57c2a6ddf42272256"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_06-shadow.png",
+      "sha256": "eb113c33f542b6ca30dbb046c8554f6b88c4ff87674a9369ce0be1ae0f3a52e6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_06-shadow.png",
+      "sha256": "8eda648deb3583e34df341df0109635ef871630704176528c291b012a9700f5b"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_07-shadow.png",
+      "sha256": "6f69b753c17c0027fe14490d312fc6b9891150d0a023546526fd8ea4c9481371"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_07-shadow.png",
+      "sha256": "3a543dec51359348872d59ba711203e5c2000b04a66e71d1b955e28fd65a3ae4"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_08-shadow.png",
+      "sha256": "e187102c8c4a4cabf7ae1d3020483b69f2dc2743d19fee9c35d955d09a4c75b1"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_08-shadow.png",
+      "sha256": "1b80c45361c4475e453e598d47a0af02b7fb4337d4ef0e8bcf11cea301cab419"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/moving_09-shadow.png",
+      "sha256": "51ef5c974aff6921fb226ca75e647e106f76ad8b0b02292c7a1cdc0d2fab254e"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/moving_09-shadow.png",
+      "sha256": "c85ff0af19328166297e76cf0395caa0defb6b4dab52e03116bf2c8a5fc419b2"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_01-shadow.png",
+      "sha256": "5fa06d4b8e5b81c6c4b9ae75a5d50c147930366491e975f4f120f807a5cae34d"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_01-shadow.png",
+      "sha256": "db0f6e8c88782e061d568a1c2b10d368513c49a89b9ec0ebeb9be5156e7df183"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_02-shadow.png",
+      "sha256": "bd981903cbd1182cb8066b69352d6f4bc5daa06c78f13256bf2b81e4b7c83d41"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_02-shadow.png",
+      "sha256": "8c84922a7ee3d4997b9e56991da5363346a246b3f0889ef917ad4a8d8cc94db5"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_03-shadow.png",
+      "sha256": "8843c919f96fc0925a2c84b4d176535dba9ccb42467fe2b5d1404ff3863508fc"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_03-shadow.png",
+      "sha256": "8adc512e5523c1a6144fff01204eeb11ce8e216837de37ec52b9c3ec13252658"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_04-shadow.png",
+      "sha256": "c54e882ac9a967cfee48ef6171038e20bcacd09c02024c90b86bc15a83185d95"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_04-shadow.png",
+      "sha256": "f3b8a738a5651fa265c2196398be8c5be7fb10a938fac33fd0a5c701e19e127e"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_05-shadow.png",
+      "sha256": "39fac3b65aa511a75294407612fc6960c9c01ff3f7721c400043d3755ac62c5e"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_05-shadow.png",
+      "sha256": "45ecfacddf6f6130e74eb05ff4874025ed2112c64387ef1754216ab59aad87ac"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_06-shadow.png",
+      "sha256": "6301ebe471318d93b5e1f9166d48c70071a1966fccdae98c53c36f41df30d0e7"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_06-shadow.png",
+      "sha256": "8dbc408aeb54d1fe5fa75836462ee23d17075bc85c73d38fa99ff22a8521a62e"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_07-shadow.png",
+      "sha256": "16df45c1065b9aba106f2fd23d1098f6c6f16d66a9d5d94b6a664609104c2ee4"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_07-shadow.png",
+      "sha256": "3097efbe2f7aa16a35212d4627a1619dfd2f88383025f7bf4adb00862a67fad8"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/mouseon_08-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/mouseon_08-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_01-shadow.png",
+      "sha256": "421fc613fa080f3dd1466c96c508edc099cca48959fda1a99d8262dcbdbd6753"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_01-shadow.png",
+      "sha256": "0d9df939645bcb66f00f6582e072f903865ae8035d5c629dd08535dc2af60151"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_02-shadow.png",
+      "sha256": "43f9023d6885a8237fc1d0eb5bf0f3d37456c84b5180337f9ef936102159f05d"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_02-shadow.png",
+      "sha256": "aad3df27f81c67695679b9afb6a4d0d51dbf7f5f279b532c175c7ae35c474ed6"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_03-shadow.png",
+      "sha256": "421fc613fa080f3dd1466c96c508edc099cca48959fda1a99d8262dcbdbd6753"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_03-shadow.png",
+      "sha256": "0d9df939645bcb66f00f6582e072f903865ae8035d5c629dd08535dc2af60151"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_04-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_04-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_05-shadow.png",
+      "sha256": "c6a030c47834db6abc2b51e5862b341d82c916899a0b58905a9742adb8315de2"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_05-shadow.png",
+      "sha256": "46c12b1fcbc56c56b8a4dd642d0926e69e0e0f4dea213b75edd6a2a604e257d9"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_06-shadow.png",
+      "sha256": "819e348136ba8efea2bec3dec20a8f929a817bd0163be7071197af0deade5f45"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_06-shadow.png",
+      "sha256": "ce452704d9abc0ca5e5e87a7e38e75b6189716ca98edcd78ff06e71e272c9a55"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/holding_07-shadow.png",
+      "sha256": "c6a030c47834db6abc2b51e5862b341d82c916899a0b58905a9742adb8315de2"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/holding_07-shadow.png",
+      "sha256": "46c12b1fcbc56c56b8a4dd642d0926e69e0e0f4dea213b75edd6a2a604e257d9"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/hitted_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/hitted_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/hitted_01-shadow.png",
+      "sha256": "4e7bae582f5ceacbfbb59226415e97d912b4e6d37e254c07c12b9ffb05cd73e1"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/hitted_01-shadow.png",
+      "sha256": "f9ffdfe959b9a190044797dafdc543796f05822765c1145b9e65e30c6ae36024"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/hitted_02-shadow.png",
+      "sha256": "16c19f51d54299ddafb09789d95dc688735345d675cdb3a140daa5f2dc346d52"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/hitted_02-shadow.png",
+      "sha256": "6841bf96fd65d2c0b251d55119ceaa94b7a37651b5c0a91d03df1f5ecea7347d"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/hitted_03-shadow.png",
+      "sha256": "533be951eaa3618ef6de5309f65a1830f8992bbcf737a866cca0cec8737bc1ab"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/hitted_03-shadow.png",
+      "sha256": "253b1e2d3bac14d9f5d90dc49e712939c42b03338acb55238e8cf4e1140c214a"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/hitted_04-shadow.png",
+      "sha256": "31df1ea3180263ec0d9fc64fc38dc241817e539c45a1735383a8ade5c0293c49"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/hitted_04-shadow.png",
+      "sha256": "62edf2b20600bfc3ef55e6cc569039e550db0501824032ea80286b086ebf3dc0"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/hitted_05-shadow.png",
+      "sha256": "8bf671e18cd335ed614aed1f106da3647c7fd50b37b919007550a493fc635b59"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/hitted_05-shadow.png",
+      "sha256": "6b36ebc09a2d69d4d6ab6bbc7d4913a28c8e28f8d93cc78311ca62f4d41f104e"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/hitted_06-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/hitted_06-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_01-shadow.png",
+      "sha256": "a9f76e3d503c92fb938e1a57d026214ffa9bdf8db55cf1ac11d4367b0e6fc27a"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_01-shadow.png",
+      "sha256": "7fc51b151f83144b38179137905893fd8dc3f62713b328a665f9da2821f845f3"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_02-shadow.png",
+      "sha256": "5672db7baed6c98fb50e784838bc85fd5e06257c45d6821bd47b56db08f7b116"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_02-shadow.png",
+      "sha256": "6de7ca884423ea0a7dc3a1b5e79e9005d08df5855c22109cde98f9dbc8c299c3"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_03-shadow.png",
+      "sha256": "398902775d93b6baaf12e6de25afbece3b528df4a74cfac571a0e8b2796132cf"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_03-shadow.png",
+      "sha256": "4c8913db582b4cecd240f3c9733c06688bb787f9d66940689363fb45a2348667"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_04-shadow.png",
+      "sha256": "beb06ddb2d373d001bc6b0ce07062e58ab72f78580a7ed44ef72b33eb35ca5bc"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_04-shadow.png",
+      "sha256": "0e6bc08659961ab4c52bf7d9a2a83419ce0dd31ef7c4f6381113f1bbdd2ea1c6"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_05-shadow.png",
+      "sha256": "6c179dfa7f97e834c32e23e9822218d4edd16ea169bff9722148990aea3bdce8"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_05-shadow.png",
+      "sha256": "b39700552d91210dc1d9af830e8c432cf2cca837c74bfef371c8789868a03e2a"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_06-shadow.png",
+      "sha256": "d56f7af334c12bab5243c6f2d30c81dcb192898aa81956e55714baa922f04184"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_06-shadow.png",
+      "sha256": "44feeaa0f2a95e24a0e91c85b830d185cb45bd58e2f3a8bcc57b7dcaf933d8d3"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/defence_07-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/defence_07-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_01-shadow.png",
+      "sha256": "ff639f7d95f42c14e7800b2924e252d950e85de64b247a9adf06abf76485a0c2"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_01-shadow.png",
+      "sha256": "cfd4c49e6e5b12774e24f712ca5d146a66d48bc8934031af5e1454cc5a18755c"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_02-shadow.png",
+      "sha256": "46817c5c3da515aed9a5c7eacf73e027c1d2f82518d6790c1604521f01879117"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_02-shadow.png",
+      "sha256": "452e64155b00d82fd9ce592bc44523eb9f4981526c47154ca476650d52f5c5ff"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_03-shadow.png",
+      "sha256": "2441e9af36cd5c4bc70d6c388c3328e3a93fc5b7007fd5efba9bd178a28a5b3f"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_03-shadow.png",
+      "sha256": "7a5be151b0c21c6902c4577b9b97e9c8bc20cb7ee928514e31fb15cc2901b72c"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_04-shadow.png",
+      "sha256": "4ed0df46e79c2d56ecc18d6a349f2493a8250f8d896a5dc681b9f09287a41a16"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_04-shadow.png",
+      "sha256": "57beb9d47338c69f87e50d9de6e736a9048d4976ca60cd08d96d2573f8a2857e"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_05-shadow.png",
+      "sha256": "218afca16495c47da035ef4e2f6c8a5b09e91eb839183b7eb715a62b86e5303c"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_05-shadow.png",
+      "sha256": "8cab62ffd62d1969292e2749e32dacae7a64b1ad9ebac018ca766b85e77bcf63"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_06-shadow.png",
+      "sha256": "d25090ff35fdaa738be3386026a121a2aba9bdea8001d9ba2ac6960c52cbdc40"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_06-shadow.png",
+      "sha256": "9b33a3a85a9c5775222925a684b04a90a90761de5363765c7405e034abdf2231"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_07-shadow.png",
+      "sha256": "d3e3c15ebba35fcc4e0dfe63e712f6738dabd6b020af947db305425e4e1f5be6"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_07-shadow.png",
+      "sha256": "d33cc12dadf495920e8faf15a0bde98ae961f671aad3daa4ccdcbbff44c64c98"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/death_08-shadow.png",
+      "sha256": "1a0cd94865e641607ff398d8d785bf22765fc2ed3ff3c503f68549695d92e474"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/death_08-shadow.png",
+      "sha256": "86ac7a1d130af3cecc6b50c18325e6c772c2de8802e6c91f09bd9823e5d49b69"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/turn_l_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/turn_l_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/turn_l_01-shadow.png",
+      "sha256": "838964c3c1c727284e956dfb68d91d0cd991600e8ffd39b5fe917d03043e8e22"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/turn_l_01-shadow.png",
+      "sha256": "abc4815add457d5ca66d03caef7c4619c4ff8007c93be0fefee7192b4a114706"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/turn_l_02-shadow.png",
+      "sha256": "19272b0414b686d17f67444f1aa3fe4d1d2bb374d48d6260748e4b55ae87f5da"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/turn_l_02-shadow.png",
+      "sha256": "641243d2b0041b33af772189065b4733c8d2a18530c4bb0d426d2c69609a02d3"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/turn_r_00-shadow.png",
+      "sha256": "19272b0414b686d17f67444f1aa3fe4d1d2bb374d48d6260748e4b55ae87f5da"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/turn_r_00-shadow.png",
+      "sha256": "641243d2b0041b33af772189065b4733c8d2a18530c4bb0d426d2c69609a02d3"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/turn_r_01-shadow.png",
+      "sha256": "838964c3c1c727284e956dfb68d91d0cd991600e8ffd39b5fe917d03043e8e22"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/turn_r_01-shadow.png",
+      "sha256": "abc4815add457d5ca66d03caef7c4619c4ff8007c93be0fefee7192b4a114706"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/turn_r_02-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/turn_r_02-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_up_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_up_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_up_01-shadow.png",
+      "sha256": "ff7274b690e7f86145c2f016980d4782175b3c6a96c1f60618b098bb7b697c84"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_up_01-shadow.png",
+      "sha256": "52eef5ba8fe113489d216628f85f1aaa889de8c8406e446646e603cbaa7930c6"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_up_02-shadow.png",
+      "sha256": "1ef3afa9f4d3752f38527f9a9f8c326aae213479bc18491d1b7090f9d6266f3a"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_up_02-shadow.png",
+      "sha256": "d78957a06501ae683e6c4a6979e312a5fde83912c9c237c039282dd5dfb2a035"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_up_03-shadow.png",
+      "sha256": "0d222424e5a6b9359730e1d228afb16a20c7567bffd52264b09d9808f62062c8"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_up_03-shadow.png",
+      "sha256": "b5f368959ef3f6c4202893e0a3691b255f77a3a8599e943754388eb4586ce9ef"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_up_04-shadow.png",
+      "sha256": "d10c2afd7c686fcd7d11857daa86a0bad90aab9d33476e39ff07c54795ad76e0"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_up_04-shadow.png",
+      "sha256": "2cc5cf8e61b4f407102eabc133526fdf9fbd312f90c0e8798df6f93d06d786e4"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_up_05-shadow.png",
+      "sha256": "a48b893ff98af15f0ea5850f9b15b9dea175940157f33ad087889f4fca236a14"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_up_05-shadow.png",
+      "sha256": "21386fc1c0f32f7c1dbb62762711b7393e2a44d7e5b5b8c2ce87e5da8664a4d1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_up_06-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_up_06-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_front_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_front_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_front_01-shadow.png",
+      "sha256": "ff7274b690e7f86145c2f016980d4782175b3c6a96c1f60618b098bb7b697c84"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_front_01-shadow.png",
+      "sha256": "52eef5ba8fe113489d216628f85f1aaa889de8c8406e446646e603cbaa7930c6"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_front_02-shadow.png",
+      "sha256": "8e11ce088ccac1fb9b4489c54379170774f18d58d44338ce387d64ae1c3571f5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_front_02-shadow.png",
+      "sha256": "7befe439f0774a8e27a303c7e21a9c26d4a444f61ec151bb6d8b3e108232a0c1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_front_03-shadow.png",
+      "sha256": "6fcbfa4ae26ddb246fdecad06d17bdad79c05b395048e1738a95a9ab7359e1c8"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_front_03-shadow.png",
+      "sha256": "345ef6aacf06f547e0575d800ab37dad0701d84d2e532b35239c4e2e2dab7817"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_front_04-shadow.png",
+      "sha256": "e4f7ecd0269397331988736857ac99bae7cf410b160cc767978afc5b560b512f"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_front_04-shadow.png",
+      "sha256": "4fd3e86365ab7e6e9961ce7064d65ee3614e24b50e9a6dcdcd552c83f3c8d2d4"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_front_05-shadow.png",
+      "sha256": "c1ab0c9d5368fdd7e1e0088b4a8561e692bf12e6aa9c5d6370403e55758a0d13"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_front_05-shadow.png",
+      "sha256": "57a6f8db2ea740febe559e2ed705507836b7edf9d2dcd8c164ea643d0d1baef3"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_front_06-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_front_06-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_down_00-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_down_00-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_down_01-shadow.png",
+      "sha256": "ff7274b690e7f86145c2f016980d4782175b3c6a96c1f60618b098bb7b697c84"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_down_01-shadow.png",
+      "sha256": "52eef5ba8fe113489d216628f85f1aaa889de8c8406e446646e603cbaa7930c6"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_down_02-shadow.png",
+      "sha256": "ee6d37607d884d31f1bb2fc453671e7a9a5cba4fad578227c32622ada49f8150"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_down_02-shadow.png",
+      "sha256": "1fca3f456dc2737b952d4a66413b059e22a080c0b3f205635c75b5163943a5fb"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_down_03-shadow.png",
+      "sha256": "e4ab5fe7d5212ac2e437939aa3a62db4f6331144b5a6528b15ee96c5253e7a2e"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_down_03-shadow.png",
+      "sha256": "a88adff16523da6ed715bf9389d3d42be1ffdca516a997260196b50c4fca4f6e"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_down_04-shadow.png",
+      "sha256": "d31a29683287745052702a0754bc54927d73e64ea6e48928c32b6514bc4c41db"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_down_04-shadow.png",
+      "sha256": "3383a594dba8fdb8d55fc18798b12cca4c36f7b9d684ee743c25bf12019e0eff"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_down_05-shadow.png",
+      "sha256": "30354bc829c0012b47d5ce0451125484bc1e6c8cfc579787b9ff13e08aa86c55"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_down_05-shadow.png",
+      "sha256": "6b41e5ee88ebb9a6f24c12386e8820130033d24d058c29a6a1a011c9805ec29a"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/attack_down_06-shadow.png",
+      "sha256": "57f54d5e4531dbde43ae7ec5c2c200db9d182c73c0822221ffda42cd950a73d5"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/attack_down_06-shadow.png",
+      "sha256": "6b6ca565557921d176dd9b1415c84602f05f36909c54a2980a5340ec4f6b61a1"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/move_start_00-shadow.png",
+      "sha256": "57f9de945cbfce0cfd3a6be3b7a6edb1f3124fb2a43e61123be97edc4bc04e15"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/move_start_00-shadow.png",
+      "sha256": "21ecac3cfcc8887c47c322460e73bd59c385884d4698370ffa126d61085590e5"
+    },
+    {
+      "file": "content/Sprites/creatures/czombi/move_end_00-shadow.png",
+      "sha256": "57f9de945cbfce0cfd3a6be3b7a6edb1f3124fb2a43e61123be97edc4bc04e15"
+    },
+    {
+      "file": "content/Sprites2x/creatures/czombi/move_end_00-shadow.png",
+      "sha256": "21ecac3cfcc8887c47c322460e73bd59c385884d4698370ffa126d61085590e5"
+    }
+  ]
+}
