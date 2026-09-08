@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 ---
 
+[尸巫和尸巫王的后续交付](/zh/posts/necropolis-liches/)已接入游戏，包含完整动作与本轮失败试稿。
+
 幽灵换用带贴图的基础模型后，漂浮、挥爪、转身和死亡动作已经做完，与阴魂一起接入本地游戏。当前安装包是 **0.9.0**。这一版收到的验收反馈是：“幽灵完美交付。”幽灵的模型和动作据此定稿，接下来继续尸巫。
 
 ![幽灵使用当前游戏背景的展示合成](/demos/necropolis-ghosts-01/cwight-showcase.png)

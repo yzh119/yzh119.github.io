@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 ---
 
+Lich and Power Lich are now installed in [the next delivery](/posts/necropolis-liches/), with complete animations and further failed-probe records.
+
 The textured wight now has floating, attacking, turning, and death animations, and is installed alongside the wraith in the local **0.9.0** package. The user accepted the wight delivery. Its current model and motion are now treated as the finished version while work moves on to the lich.
 
 ![Wight showcase composite using the installed background](/demos/necropolis-ghosts-01/cwight-showcase.png)

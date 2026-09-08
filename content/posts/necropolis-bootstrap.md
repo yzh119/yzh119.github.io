@@ -6,6 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 ---
 
+Lich and Power Lich are now installed in [the next delivery](/posts/necropolis-liches/), with complete animations and further failed-probe records.
+
 **Delivery update:** [Wight and Wraith animations are installed in 0.9.0, with the Wight accepted by the user](/posts/necropolis-ghosts/). The account below preserves the earlier rejected and static-bootstrap stages.
 
 
