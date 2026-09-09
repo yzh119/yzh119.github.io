@@ -1,0 +1,39 @@
+{
+  "scope": "Observed runtime reads, not a claim that every building slot was opened manually",
+  "resources": [
+    "sprites4x/necropolis-ui/black-knight-small.png",
+    "sprites4x/necropolis-ui/bone-dragon-large.png",
+    "sprites4x/necropolis-ui/bone-dragon-small.png",
+    "sprites4x/necropolis-ui/building-30.png",
+    "sprites4x/necropolis-ui/building-31.png",
+    "sprites4x/necropolis-ui/building-32.png",
+    "sprites4x/necropolis-ui/building-33.png",
+    "sprites4x/necropolis-ui/building-34.png",
+    "sprites4x/necropolis-ui/building-35.png",
+    "sprites4x/necropolis-ui/building-36.png",
+    "sprites4x/necropolis-ui/dread-knight-large.png",
+    "sprites4x/necropolis-ui/dread-knight-small.png",
+    "sprites4x/necropolis-ui/ghost-dragon-large.png",
+    "sprites4x/necropolis-ui/ghost-dragon-small.png",
+    "sprites4x/necropolis-ui/lich-small.png",
+    "sprites4x/necropolis-ui/power-lich-large.png",
+    "sprites4x/necropolis-ui/power-lich-small.png",
+    "sprites4x/necropolis-ui/skeleton-small.png",
+    "sprites4x/necropolis-ui/skeleton-warrior-large.png",
+    "sprites4x/necropolis-ui/skeleton-warrior-small.png",
+    "sprites4x/necropolis-ui/vampire-lord-large.png",
+    "sprites4x/necropolis-ui/vampire-lord-small.png",
+    "sprites4x/necropolis-ui/vampire-small.png",
+    "sprites4x/necropolis-ui/walking-dead-large.png",
+    "sprites4x/necropolis-ui/walking-dead-small.png",
+    "sprites4x/necropolis-ui/wight-small.png",
+    "sprites4x/necropolis-ui/wraith-large.png",
+    "sprites4x/necropolis-ui/wraith-small.png",
+    "sprites4x/necropolis-ui/zombie-small.png"
+  ],
+  "fortScreenObserved": true,
+  "settings": {
+    "upscalingFilter": "xbrz4",
+    "useHdTextures": true
+  }
+}
