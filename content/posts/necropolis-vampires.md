@@ -11,7 +11,7 @@ lastmod: 2026-09-09T05:48:54+08:00
 
 ## Installed animation and models
 
-The vampire delivery was **0.11.1**, which brought the package to ten creatures. Current [0.12.0](/posts/necropolis-final-four/) completes all fourteen and preserves this delivery’s files byte for byte. Each has a newly weighted humanoid rig, a separate bat for travel, and five-frame smoke transitions into and out of flight. This remains a mod-only change.
+The vampire delivery was **0.11.1**, which brought the package to ten creatures. Current [0.12.1](/posts/necropolis-final-four/) completes all fourteen and preserves this delivery’s files byte for byte. Each has a newly weighted humanoid rig, a separate bat for travel, and five-frame smoke transitions into and out of flight. This remains a mod-only change.
 
 These **1400×1600 Blender stills** come from the final editable holding scenes, using the same models and skin bindings as the animation export. Click either image for the transparent original.
 
@@ -45,7 +45,7 @@ Skinning remained wrong after welding. Some donor boot vertices followed the hea
 
 Both final humanoids discard imported weights, repair the bone tails and use Blender bone-heat weighting. A new surface check supplements the IK checks: reopen every saved scene, sample its first, middle and last poses, and reject edges that grow beyond eight times their rest length with over 0.08 model units of absolute growth. The earlier base Vampire produced 161 large-edge violations across sampled poses. The final pair has zero across 69 pose samples. [Vampire report](/images/necropolis-vampires/vampire-skin-check-final.json) · [Lord report](/images/necropolis-vampires/vampire-lord-skin-check-final.json). This catches severe tears; it does not establish artistic acceptance.
 
-An intermediate 0.11.0 package was briefly installed before the high-resolution holding render exposed these defects. These corrections shipped in 0.11.1 and are retained in current 0.12.0; rejected attempts and backups remain local.
+An intermediate 0.11.0 package was briefly installed before the high-resolution holding render exposed these defects. These corrections shipped in 0.11.1 and are retained in current 0.12.1; rejected attempts and backups remain local.
 
 ### Flight and delivery checks
 
@@ -60,6 +60,13 @@ The additional model cost 30 credits, bringing successful vampire-stage tasks to
 ## History
 
 {{< history title="Earlier article and revision notes (expand)" note="The text, images and strikethrough annotations below are preserved from before this editorial pass. “Current”, unfinished work and next steps refer to the time each passage or annotation was written. Old versions, paths and trial renders are historical records." >}}
+
+Status wording from 0.12.0; the current patch version is stated above:
+
+~~The vampire delivery was **0.11.1**, which brought the package to ten creatures. Current [0.12.0](/posts/necropolis-final-four/) completes all fourteen and preserves this delivery’s files byte for byte. Each has a newly weighted humanoid rig, a separate bat for travel, and five-frame smoke transitions into and out of flight. This remains a mod-only change.~~
+
+~~An intermediate 0.11.0 package was briefly installed before the high-resolution holding render exposed these defects. These corrections shipped in 0.11.1 and are retained in current 0.12.0; rejected attempts and backups remain local.~~
+
 
 ~~Both vampires are now installed in local mod **0.11.1**, bringing the Necropolis package to ten creatures. Each has a newly weighted humanoid rig, a separate bat for travel, and five-frame smoke transitions into and out of flight. This remains a mod-only change.~~
 

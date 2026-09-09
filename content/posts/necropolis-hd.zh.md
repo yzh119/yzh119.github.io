@@ -7,7 +7,7 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
-墓园城使用独立的 **necropolis-layered-hd 0.3.0**；兵种动画包是 **necropolis-creature-animations 0.12.0**。这两个版本号属于不同 mod。以下按 2026-09-09 的安装状态整理。
+墓园城使用独立的 **necropolis-layered-hd 0.3.0**；兵种动画包是 **necropolis-creature-animations 0.12.1**。这两个版本号属于不同 mod。以下按 2026-09-09 的安装状态整理。
 
 ## 城内分层素材
 
@@ -63,6 +63,11 @@ NumPy 安装在项目 `.venv` 中，用于另做像素检查；41 个新增图�
 ## 历史记录
 
 {{< history title="历史原文与修订记录（展开阅读）" note="以下完整保留本次整理前的原文、图片和删除线。这里的“当前”“尚未完成”和“下一步”均指各段写作或标注时的状态；旧版本号、旧工具路径与试稿不能作为现行操作说明。" >}}
+
+0.12.0 时的状态说明，现用补丁版本见正文：
+
+~~墓园城使用独立的 **necropolis-layered-hd 0.3.0**；兵种动画包是 **necropolis-creature-animations 0.12.0**。这两个版本号属于不同 mod。以下按 2026-09-09 的安装状态整理。~~
+
 
 ~~墓园城使用独立的 **necropolis-layered-hd 0.3.0**；兵种动画包是 **necropolis-creature-animations 0.11.1**。这两个版本号属于不同 mod。以下按 2026-09-09 的安装状态整理。~~
 

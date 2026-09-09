@@ -4,8 +4,68 @@ date: 2026-09-09T07:23:02+08:00
 series: ["Heroes III"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra", "meshy"]
-lastmod: 2026-09-09T08:10:48+08:00
+lastmod: 2026-09-09T08:45:19+08:00
 ---
+
+In-game feedback on the mounted knights was blunt: the attack looked very strange. Frame-by-frame comparison showed why. **In 0.12.0, the horse barely participated and the sword movement had been reduced to a small gesture beside the rider.** Limiting joint rotation removed large stretch warnings while also removing the defining attack poses.
+
+The local animation mod is now **0.12.1**. Both knights have a rebuilt weapon arm and saber, with nine reauthored attack groups. All **29 groups and 205 independent 2× body frames** for the pair were rerendered so holding, walking and attacking share the same arm. Other creatures retain their models and motion; Bone Dragon also receives a canvas-position correction. All fourteen Necropolis creatures remain covered, with no VCMI engine-source changes.
+
+![Current four-creature panel composites](/demos/necropolis-final-four-02/showcase-four.png)
+
+The [current 55-clip gallery](/demos/necropolis-final-four-02/) uses fixed-canvas offline composites. Holding runs at 4 fps and the other review clips at 8 fps; these are inspection rates, independent of native game timing.
+
+## Horse support and the sword cut
+
+![Black Knight attack, 0.12.0 and the revised sequence](/images/necropolis-final-four/knight-attack-correction.png)
+
+The reference horse rears while its rider raises the blade, then drops as the rider leans into the cut. Recovery follows the strike. The revised poses reproduce that sequence, folding the forelegs during the rear and holding the hind hooves in place along the forward axis. Upward, forward and downward attacks vary blade direction; Dread Knight retains three additional special groups.
+
+A binding error made the larger motion unsafe. The original spatial selector missed the curved saber tip, leaving some of its vertices influenced by the horse's neck. Weapon weights also reached the rider's boot. Enlarging the gesture pulled those surfaces along with the sword.
+
+![Rejected larger-motion probe, showing weapon and boot distortion](/images/necropolis-final-four/knight-attack-binding-failure.png)
+
+The repair removes fused weapon-side arm and blade surfaces and builds articulated armor, a gauntlet, guard and curved saber in Blender. The weapon follows a rigid hand socket; weights no longer diffuse through its contact with the horse. The horse and remaining rider still use the existing Meshy model. No additional generation service was used. Rebuilding the arm also changes its local armor design slightly.
+
+The first reconstruction removed too broad a surface region, cutting into the waist cloth and replacing the shoulder with a crude shape. A high-resolution still exposed those defects. Narrower selectors follow the arm segments and blade curve, retain the original textured shoulder plate and use revised armor shading.
+
+![Rejected first arm reconstruction with damaged waist cloth and crude shoulder geometry](/images/necropolis-final-four/knight-arm-rebuild-rejected.png)
+
+Black Knight needed a separate cleanup. Its original saber curves farther downward than Dread Knight’s, and the shared selector left a second blade fragment. The high-resolution review caught it; a model-specific curve removed the remnant before another full motion check.
+
+![Rejected Black Knight version with an old blade remnant](/images/necropolis-final-four/black-knight-old-blade-remnant.png)
+
+## Creature-panel alignment
+
+Further feedback identified left-aligned Bone Dragon and Dread Knight panels. VCMI crops double-wide creatures from logical x=170, versus x=150 for single-wide creatures. The previous offline gallery used the single-wide crop and concealed the in-game offset. Within the real 100-pixel window, these two idle silhouettes were centered near x=30.
+
+Their body, shadow and outline images now move **20 logical pixels right**, bringing the center near x=50. Every resolution uses an integer translation and retains its visible pixels. **This is not a panel-only offset**: the existing configuration shares combat sprites, so their battle images move too, with both orientations checked. The current gallery uses the real double-wide crop.
+
+![Bone Dragon and Dread Knight, before and after in the actual panel crop; offline composites](/images/necropolis-final-four/panel-centering-correction.png)
+
+## High-resolution Blender stills
+
+![Black Knight with the revised arm, Blender still](/images/necropolis-final-four/black-knight-rigged-02.png)
+
+![Dread Knight with the revised arm, Blender still](/images/necropolis-final-four/dread-knight-rigged-02.png)
+
+![Bone Dragon, Blender still](/images/necropolis-final-four/bone-dragon-rigged.png)
+
+![Ghost Dragon, Blender still](/images/necropolis-final-four/ghost-dragon-rigged.png)
+
+These are actual **1400×1600 Blender renders**. The knight images use the revised scenes; dragon images retain the 0.12.0 scenes. Earlier portraits and concepts remain in the historical sections.
+
+## Checks and remaining differences
+
+Reopened knight scenes were checked at **381 native-frame and midpoint poses**, with zero large-tear threshold hits. Revised PNGs were rendered directly with their ground-support parent, followed by fixed-ground shadows, outlines and a 3× display cache. Package validation reports **0 errors and 0 warnings**. Those checks do not establish that an attack looks right in combat, as the feedback on the previous release demonstrated.
+
+The final four creatures still total **55 groups and 365 independent 2× body frames**. The 1× set is downsampled; 3× images are a precomputed scaling cache, not newly rendered 3× detail. Native duplicate-turn groups 9 and 10 are unused by current VCMI; other groups retain their original counts.
+
+Dragon death still folds the body onto the ground instead of scattering individual bones, and Ghost Dragon's membranes remain visually solid. Bone Dragon only receives the canvas translation described above; Ghost Dragon assets are unchanged. The 0.12.0 client log established combat integration for all four creatures; this update checks replacement resources and saved scenes, without claiming complete manual in-game review of every action.
+
+[Deformation checks](/demos/necropolis-final-four-02/motion-checks.json) · [Attack pose measurements](/demos/necropolis-final-four-02/attack-audit.json) · [Package validation](/demos/necropolis-final-four-02/validation.json). Reproduction tools are in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/docs/necropolis-final-four.md). Models and complete mods remain local.
+
+{{< history title="Initial 0.12.0 animation delivery and rejected attacks (expand)" note="Earlier text and images are retained below. Limited knight motion did not establish visual quality, and the old gallery used the wrong crop for double-wide panels. The maintained 0.12.1 account above supersedes those results." >}}
 
 Black Knight, Dread Knight, Bone Dragon and Ghost Dragon are installed locally in **necropolis-creature-animations 0.12.0**, completing replacement artwork for all fourteen Necropolis creatures. The package contains 6,570 files. All 4,161 previous files for the earlier ten creatures and shared backdrop remain byte-identical; mod version metadata was updated separately.
 
@@ -26,7 +86,7 @@ The [55-clip inspection page](/demos/necropolis-final-four-01/) includes every a
 
 The total is **55 groups and 365 independent 2× body frames**. Native groups 9 and 10 are duplicate turns explicitly unused by current VCMI; all other groups retain their native counts. The 1× set is downsampled, and the 3× set is a precomputed display cache for the current rendering setting. **It does not add native 3× render detail.**
 
-Mounted rigs separate the horse's body, neck, head, four legs and tail from rider controls. Leg chains use diagonal gait phases. Sword attacks have a lift, strike and recovery; Dread Knight adds three special groups, with smaller excursions to stay within its armor skin's reviewed range.
+~~Mounted rigs separate the horse's body, neck, head, four legs and tail from rider controls. Leg chains use diagonal gait phases. Sword attacks have a lift, strike and recovery; Dread Knight adds three special groups, with smaller excursions to stay within its armor skin's reviewed range.~~
 
 Both dragons share a rig and flight motion, with separate wing, neck, jaw, forelimb, hind-leg and tail controls. Movement includes takeoff and landing; attacks vary their head angle. Death currently folds the body onto the ground: **it does not disintegrate into the original loose bone pile**. Ghost Dragon uses pale, slightly emissive material, but its membranes still look solid. Those remain art limitations of this delivery.
 
@@ -57,6 +117,8 @@ Package validation reports **0 errors and 0 warnings**. Shadows project onto a f
 [Deformation checks](/demos/necropolis-final-four-01/motion-checks.json) · [Transition endpoints](/demos/necropolis-final-four-01/transitions.json) · [Package validation](/demos/necropolis-final-four-01/validation.json) · [Native resource-read summary](/demos/necropolis-final-four-01/native-loads.json). These checks leave room for further in-game appearance feedback.
 
 Reproduction tools remain in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/docs/necropolis-final-four.md). Models and complete mods stay local. No VCMI engine source was changed.
+
+{{< /history >}}
 
 {{< history title="Bootstrap stage and rejected concepts (expand)" note="Original pre-integration text and images. Unfinished status and plans refer to that stage; the maintained account above describes the September 9 delivery of 0.12.0." >}}
 

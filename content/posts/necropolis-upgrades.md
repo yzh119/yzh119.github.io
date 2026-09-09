@@ -42,13 +42,18 @@ The 0.8.0 candidate adds these upgrades while preserving the existing skeleton, 
 
 Following the project's move from opus to astra, Astra wrote the Blender equipment, floor-contact correction, packaging, and validation tooling for this stage. It reuses the earlier Meshy body meshes and textures without new Meshy requests. Equipment construction, motion corrections, and rendering run locally. [PR #10](https://github.com/yzh119/vcmi/pull/10) contains the tools; the engine source is unchanged.
 
-Subsequent deliveries cover both [ghosts](/posts/necropolis-ghosts/), [liches](/posts/necropolis-liches/) and [vampires](/posts/necropolis-vampires/). ~~Black Knight, Dread Knight, Bone Dragon and Ghost Dragon remain.~~ These four were [integrated in 0.12.0 on September 9](/posts/necropolis-final-four/). The original progress table is preserved in history.
+Subsequent deliveries cover both [ghosts](/posts/necropolis-ghosts/), [liches](/posts/necropolis-liches/) and [vampires](/posts/necropolis-vampires/). ~~Black Knight, Dread Knight, Bone Dragon and Ghost Dragon remain.~~ These four were [integrated in 0.12.1 on September 9](/posts/necropolis-final-four/). The original progress table is preserved in history.
 
 Tools live in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline); models and complete mods stay local. [Migration and reproduction](/posts/h3-art-tools/).
 
 ## History
 
 {{< history title="Earlier article and revision notes (expand)" note="The text, images and strikethrough annotations below are preserved from before this editorial pass. “Current”, unfinished work and next steps refer to the time each passage or annotation was written. Old versions, paths and trial renders are historical records." >}}
+
+Status wording from 0.12.0; the current patch version is stated above:
+
+~~Subsequent deliveries cover both [ghosts](/posts/necropolis-ghosts/), [liches](/posts/necropolis-liches/) and [vampires](/posts/necropolis-vampires/). ~~Black Knight, Dread Knight, Bone Dragon and Ghost Dragon remain.~~ These four were [integrated in 0.12.0 on September 9](/posts/necropolis-final-four/). The original progress table is preserved in history.~~
+
 
 > **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
 
