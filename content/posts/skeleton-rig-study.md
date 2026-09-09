@@ -13,7 +13,7 @@ The switch from Opus-5 to Astra brought striking improvements in this project: t
 
 The later model and motion are shown in [the complete animation](/posts/skeleton-motion/).
 
-**As of September 9, 2026:** creature mod **0.12.1** covers all fourteen Necropolis creatures. Measurements here retain their delivery-version scope; see [mounted knights and skeletal dragons](/posts/necropolis-final-four/) for the latest integration.
+**As of September 9, 2026:** creature mod ~~0.12.1~~ **0.12.2** covers all fourteen Necropolis creatures. Measurements here retain their delivery-version scope; see [mounted knights and skeletal dragons](/posts/necropolis-final-four/) for the latest integration.
 
 Tools live in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline); models and complete mods stay local. [Migration and reproduction](/posts/h3-art-tools/).
 

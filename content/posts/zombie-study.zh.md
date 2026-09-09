@@ -7,7 +7,7 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
 
-**截至 2026-09-09：**兵种 mod 为 **0.12.1**，已安装十四种墓园兵种。本文数字保留各次交付版本的含义；最新进展见[黑暗骑士与骨龙动画](/zh/posts/necropolis-final-four/)。
+**截至 2026-09-09：**兵种 mod 为 ~~0.12.1~~ **0.12.2**，已安装十四种墓园兵种。本文数字保留各次交付版本的含义；最新进展见[黑暗骑士与骨龙动画](/zh/posts/necropolis-final-four/)。
 
 行尸（CZOMBI）的十三组动画已安装，每个倍率 80 帧；升级僵尸 CZOMLO 的交付另见[升级兵种](/zh/posts/necropolis-upgrades/)。
 

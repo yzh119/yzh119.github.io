@@ -1,0 +1,61 @@
+{
+  "scope": "Actual double-wide crop; shared battle sprites also translate. Offline inspection.",
+  "measurements": [
+    {
+      "creature": "CBKNIG",
+      "offsetLogicalX": 0,
+      "panelCenterLogicalX": 30.0,
+      "forwardBodyCenterLogicalX": 200.0,
+      "reverseBodyCenterLogicalX": 250.0
+    },
+    {
+      "creature": "CBKNIG",
+      "offsetLogicalX": 20,
+      "panelCenterLogicalX": 50.0,
+      "forwardBodyCenterLogicalX": 220.0,
+      "reverseBodyCenterLogicalX": 230.0
+    },
+    {
+      "creature": "CBLORD",
+      "offsetLogicalX": 0,
+      "panelCenterLogicalX": 30.25,
+      "forwardBodyCenterLogicalX": 200.25,
+      "reverseBodyCenterLogicalX": 249.75
+    },
+    {
+      "creature": "CBLORD",
+      "offsetLogicalX": 20,
+      "panelCenterLogicalX": 50.25,
+      "forwardBodyCenterLogicalX": 220.25,
+      "reverseBodyCenterLogicalX": 229.75
+    },
+    {
+      "creature": "CNDRGN",
+      "offsetLogicalX": 0,
+      "panelCenterLogicalX": 30.25,
+      "forwardBodyCenterLogicalX": 200.25,
+      "reverseBodyCenterLogicalX": 249.75
+    },
+    {
+      "creature": "CNDRGN",
+      "offsetLogicalX": 20,
+      "panelCenterLogicalX": 50.25,
+      "forwardBodyCenterLogicalX": 220.25,
+      "reverseBodyCenterLogicalX": 229.75
+    },
+    {
+      "creature": "CHDRGN",
+      "offsetLogicalX": 0,
+      "panelCenterLogicalX": 30.25,
+      "forwardBodyCenterLogicalX": 200.25,
+      "reverseBodyCenterLogicalX": 249.75
+    },
+    {
+      "creature": "CHDRGN",
+      "offsetLogicalX": 20,
+      "panelCenterLogicalX": 50.25,
+      "forwardBodyCenterLogicalX": 220.25,
+      "reverseBodyCenterLogicalX": 229.75
+    }
+  ]
+}

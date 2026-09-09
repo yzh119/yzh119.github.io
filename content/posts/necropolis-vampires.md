@@ -11,7 +11,7 @@ lastmod: 2026-09-09T05:48:54+08:00
 
 ## Installed animation and models
 
-The vampire delivery was **0.11.1**, which brought the package to ten creatures. Current [0.12.1](/posts/necropolis-final-four/) completes all fourteen and preserves this delivery’s files byte for byte. Each has a newly weighted humanoid rig, a separate bat for travel, and five-frame smoke transitions into and out of flight. This remains a mod-only change.
+The vampire delivery was **0.11.1**, which brought the package to ten creatures. Current ~~0.12.1~~ [0.12.2](/posts/necropolis-final-four/) completes all fourteen and preserves this delivery’s files byte for byte. Each has a newly weighted humanoid rig, a separate bat for travel, and five-frame smoke transitions into and out of flight. This remains a mod-only change.
 
 These **1400×1600 Blender stills** come from the final editable holding scenes, using the same models and skin bindings as the animation export. Click either image for the transparent original.
 

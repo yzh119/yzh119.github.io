@@ -4,16 +4,16 @@ date: 2026-09-09T07:23:02+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra", "meshy"]
-lastmod: 2026-09-09T08:45:19+08:00
+lastmod: 2026-09-09T04:33:06+00:00
 ---
 
 In-game feedback on the mounted knights was blunt: the attack looked very strange. Frame-by-frame comparison showed why. **In 0.12.0, the horse barely participated and the sword movement had been reduced to a small gesture beside the rider.** Limiting joint rotation removed large stretch warnings while also removing the defining attack poses.
 
-The local animation mod is now **0.12.1**. Both knights have a rebuilt weapon arm and saber, with nine reauthored attack groups. All **29 groups and 205 independent 2× body frames** for the pair were rerendered so holding, walking and attacking share the same arm. Other creatures retain their models and motion; Bone Dragon also receives a canvas-position correction. All fourteen Necropolis creatures remain covered, with no VCMI engine-source changes.
+The local animation mod is now **0.12.2**. Both knights have a rebuilt weapon arm and saber, with nine reauthored attack groups. All **29 groups and 205 independent 2× body frames** for the pair were rerendered so holding, walking and attacking share the same arm. Other creatures retain their models and motion; all four final-tier creatures now have corrected panel registration. All fourteen Necropolis creatures remain covered, with no VCMI engine-source changes.
 
-![Current four-creature panel composites](/demos/necropolis-final-four-02/showcase-four.png)
+![Current four-creature panel composites](/demos/necropolis-final-four-03/showcase-four.png)
 
-The [current 55-clip gallery](/demos/necropolis-final-four-02/) uses fixed-canvas offline composites. Holding runs at 4 fps and the other review clips at 8 fps; these are inspection rates, independent of native game timing.
+The [current 55-clip gallery](/demos/necropolis-final-four-03/) uses fixed-canvas offline composites. Holding runs at 4 fps and the other review clips at 8 fps; these are inspection rates, independent of native game timing.
 
 ## Horse support and the sword cut
 
@@ -37,11 +37,11 @@ Black Knight needed a separate cleanup. Its original saber curves farther downwa
 
 ## Creature-panel alignment
 
-Further feedback identified left-aligned Bone Dragon and Dread Knight panels. VCMI crops double-wide creatures from logical x=170, versus x=150 for single-wide creatures. The previous offline gallery used the single-wide crop and concealed the in-game offset. Within the real 100-pixel window, these two idle silhouettes were centered near x=30.
+All four double-wide creatures—Black Knight, Dread Knight, Bone Dragon and Ghost Dragon—now have corrected panel registration. The 0.12.1 fix covered only Dread Knight and Bone Dragon; user feedback caught the two missing variants, completed in **0.12.2**. VCMI crops double-wide creatures from logical x=170, versus x=150 for single-wide creatures. The older offline gallery used the single-wide crop and concealed the in-game offset.
 
-Their body, shadow and outline images now move **20 logical pixels right**, bringing the center near x=50. Every resolution uses an integer translation and retains its visible pixels. **This is not a panel-only offset**: the existing configuration shares combat sprites, so their battle images move too, with both orientations checked. The current gallery uses the real double-wide crop.
+Their body, shadow and outline images move **20 logical pixels right** relative to 0.12.0, bringing the idle silhouette centers to approximately **50/100** in the actual panel. Dread Knight and Bone Dragon keep their 0.12.1 correction; they were not shifted again. Every resolution retains its visible pixels. The shared combat sprites also translate, with both orientations checked. The gallery uses the actual double-wide crop.
 
-![Bone Dragon and Dread Knight, before and after in the actual panel crop; offline composites](/images/necropolis-final-four/panel-centering-correction.png)
+![All four creatures before and after registration, actual panel crop; offline composites](/images/necropolis-final-four/all-four-panel-centering.png)
 
 ## High-resolution Blender stills
 
@@ -61,11 +61,31 @@ Reopened knight scenes were checked at **381 native-frame and midpoint poses**, 
 
 The final four creatures still total **55 groups and 365 independent 2× body frames**. The 1× set is downsampled; 3× images are a precomputed scaling cache, not newly rendered 3× detail. Native duplicate-turn groups 9 and 10 are unused by current VCMI; other groups retain their original counts.
 
-Dragon death still folds the body onto the ground instead of scattering individual bones, and Ghost Dragon's membranes remain visually solid. Bone Dragon only receives the canvas translation described above; Ghost Dragon assets are unchanged. The 0.12.0 client log established combat integration for all four creatures; this update checks replacement resources and saved scenes, without claiming complete manual in-game review of every action.
+Dragon death still folds the body onto the ground instead of scattering individual bones, and Ghost Dragon's membranes remain visually solid. Both dragons retain their models and motion, with canvas translations for panel registration. The 0.12.0 client log established combat integration for all four creatures; this update checks replacement resources and saved scenes, without claiming complete manual in-game review of every action.
 
-[Deformation checks](/demos/necropolis-final-four-02/motion-checks.json) · [Attack pose measurements](/demos/necropolis-final-four-02/attack-audit.json) · [Package validation](/demos/necropolis-final-four-02/validation.json). Reproduction tools are in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/docs/necropolis-final-four.md). Models and complete mods remain local.
+[Deformation checks](/demos/necropolis-final-four-03/motion-checks.json) · [Attack pose measurements](/demos/necropolis-final-four-03/attack-audit.json) · [Package validation](/demos/necropolis-final-four-03/validation.json). Reproduction tools are in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/docs/necropolis-final-four.md). Models and complete mods remain local.
 
-{{< history title="Initial 0.12.0 animation delivery and rejected attacks (expand)" note="Earlier text and images are retained below. Limited knight motion did not establish visual quality, and the old gallery used the wrong crop for double-wide panels. The maintained 0.12.1 account above supersedes those results." >}}
+{{< history title="0.12.1 partial panel correction (historical)" note="This version corrected only Dread Knight and Bone Dragon. The current account covers all four variants." >}}
+
+## Creature-panel alignment
+
+~~Further feedback identified left-aligned Bone Dragon and Dread Knight panels. VCMI crops double-wide creatures from logical x=170, versus x=150 for single-wide creatures. The previous offline gallery used the single-wide crop and concealed the in-game offset. Within the real 100-pixel window, these two idle silhouettes were centered near x=30.~~
+
+~~Their body, shadow and outline images now move **20 logical pixels right**, bringing the center near x=50. Every resolution uses an integer translation and retains its visible pixels. **This is not a panel-only offset**: the existing configuration shares combat sprites, so their battle images move too, with both orientations checked. The current gallery uses the real double-wide crop.~~
+
+![Bone Dragon and Dread Knight, before and after in the actual panel crop; offline composites](/images/necropolis-final-four/panel-centering-correction.png)
+
+
+
+~~Other creatures retain their models and motion; Bone Dragon also receives a canvas-position correction.~~
+
+~~Bone Dragon only receives the canvas translation described above; Ghost Dragon assets are unchanged.~~
+
+[0.12.1 gallery](/demos/necropolis-final-four-02/)
+
+{{< /history >}}
+
+{{< history title="Initial 0.12.0 animation delivery and rejected attacks (expand)" note="Earlier text and images are retained below. Limited knight motion did not establish visual quality, and the old gallery used the wrong crop for double-wide panels. The maintained 0.12.2 account above supersedes those results." >}}
 
 Black Knight, Dread Knight, Bone Dragon and Ghost Dragon are installed locally in **necropolis-creature-animations 0.12.0**, completing replacement artwork for all fourteen Necropolis creatures. The package contains 6,570 files. All 4,161 previous files for the earlier ten creatures and shared backdrop remain byte-identical; mod version metadata was updated separately.
 

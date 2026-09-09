@@ -1,0 +1,525 @@
+{
+  "blackKnight": {
+    "sourceManifestSHA256": "b179d99009141d4096ed434f529a7d3ceff98f31a414e8a6437122fe73041f78",
+    "samples": [
+      {
+        "group": "MOVING",
+        "sceneSHA256": "bcb0582ee8a876b107a670e8851d721150ea948548df70df02689e3f90ab70ea",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 12.338224674655908,
+        "maximumEdgeGrowth": 0.037527643482444535,
+        "minimumZ": 0.007889517582952976
+      },
+      {
+        "group": "MOUSEON",
+        "sceneSHA256": "c17b4a3fd9771dcb2b624ccecd8d30205d1bac89941644a522f469c50d35f773",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 5.639909175902007,
+        "maximumEdgeGrowth": 0.019923222241119202,
+        "minimumZ": 0.007999478839337826
+      },
+      {
+        "group": "HOLDING",
+        "sceneSHA256": "9b93d01862903bdc1b168f0791c2d7ac02a5cc64f0f3b075fc4c9a8216ea3836",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 5.64114754447251,
+        "maximumEdgeGrowth": 0.019928539649566483,
+        "minimumZ": 0.007999895606189966
+      },
+      {
+        "group": "HITTED",
+        "sceneSHA256": "46a938b6888de08df260359dff205ed29badc061c02a7f8e5ab83df37e13f2a8",
+        "samples": 11,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 5.632056289910557,
+        "maximumEdgeGrowth": 0.01988950287573714,
+        "minimumZ": 0.007987253367900848
+      },
+      {
+        "group": "DEFENCE",
+        "sceneSHA256": "acd3e735c63e9e151ca80bc07497d4965d19cba95e25fb6ced235dd725545339",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 5.639909760970907,
+        "maximumEdgeGrowth": 0.01992322475333599,
+        "minimumZ": 0.007987253367900848
+      },
+      {
+        "group": "DEATH",
+        "sceneSHA256": "32a952a68e08faffb8d7ba2a96641dd72bd915f3b183570fdeaccee319c33c8f",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 10.765429254082417,
+        "maximumEdgeGrowth": 0.02803168326004001,
+        "minimumZ": 0.007689729332923889
+      },
+      {
+        "group": "TURN_L",
+        "sceneSHA256": "b0fe2edcdfef383d11054d69f16aac0692dd1da04c28f24c86d44da15cfa116e",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 5.632824603442815,
+        "maximumEdgeGrowth": 0.01989280192334211,
+        "minimumZ": 0.007999999914318323
+      },
+      {
+        "group": "TURN_R",
+        "sceneSHA256": "e579caf22717e599a3e575695289981f2f54507b0b03a217f07220ebe99e4e41",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 5.632824231971063,
+        "maximumEdgeGrowth": 0.019892800328286258,
+        "minimumZ": 0.007999999914318323
+      },
+      {
+        "group": "ATTACK_UP",
+        "sceneSHA256": "b5b3204c0d1c7ca5d69bc30ec87a375229bcffad2124fe5d93ce99b5e6590550",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 31.04593771941628,
+        "maximumEdgeGrowth": 0.042248639411532764,
+        "minimumZ": 0.006685346364974976
+      },
+      {
+        "group": "ATTACK_FRONT",
+        "sceneSHA256": "ac8a32ee01b19f5d44b80b801bbcbebe963e1cd2d9cf003195b1456230550629",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 31.04593771941628,
+        "maximumEdgeGrowth": 0.042248639411532764,
+        "minimumZ": 0.006685346364974976
+      },
+      {
+        "group": "ATTACK_DOWN",
+        "sceneSHA256": "581f91b36e4e065fc39e90ecb6e7a674283aa4252f79c4edd219bca71fc809de",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 31.04593771941628,
+        "maximumEdgeGrowth": 0.042248639411532764,
+        "minimumZ": 0.006685346364974976
+      },
+      {
+        "group": "MOVE_START",
+        "sceneSHA256": "a6f20899c80573e49082b7a0e708a63a424bd112560be31039ac67fb4caead44",
+        "samples": 3,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 6.414623447992074,
+        "maximumEdgeGrowth": 0.019186561136889626,
+        "minimumZ": 0.00800000037997961
+      },
+      {
+        "group": "MOVE_END",
+        "sceneSHA256": "979a28e33f50aeadc056394a2213b056cf5db1dc1cb21c135f29089c2d84d694",
+        "samples": 3,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 6.414623447992074,
+        "maximumEdgeGrowth": 0.019186561136889626,
+        "minimumZ": 0.00800000037997961
+      }
+    ],
+    "largeStretchedEdges": 0,
+    "scope": "native frames and midpoints; large-tear detection is not aesthetic acceptance"
+  },
+  "dreadKnight": {
+    "sourceManifestSHA256": "a1c523496474005ae91608e8476495ea307281151b6988af04300a39012ac3ef",
+    "samples": [
+      {
+        "group": "MOVING",
+        "sceneSHA256": "a2dd114f82212a04b2e59610ff33ae04c33770d785c8ec37ae26c52adeeaa289",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 16.67164390776626,
+        "maximumEdgeGrowth": 0.055698366634725285,
+        "minimumZ": 0.007921324111521244
+      },
+      {
+        "group": "MOUSEON",
+        "sceneSHA256": "4e77e6dcf475a8d795d24560f7f741c052090526dd140bc94ef754b868aa27e9",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 7.15782823983463,
+        "maximumEdgeGrowth": 0.021274245226126386,
+        "minimumZ": 0.007999444380402565
+      },
+      {
+        "group": "HOLDING",
+        "sceneSHA256": "32cdde35349f3392acabd90025593f8b427c18e05a8bb7528976a5d01f22587e",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 7.160111330042359,
+        "maximumEdgeGrowth": 0.021282222211504352,
+        "minimumZ": 0.00799989141523838
+      },
+      {
+        "group": "HITTED",
+        "sceneSHA256": "46fe25f5911a6aedea3f9780eab461bcb5d15dee337883580292c080622c1be5",
+        "samples": 11,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 7.143369745401678,
+        "maximumEdgeGrowth": 0.02122399148833712,
+        "minimumZ": 0.007994204759597778
+      },
+      {
+        "group": "DEFENCE",
+        "sceneSHA256": "7df6ba5c6ac135ceea4a7fa1f6b3bd26942b5bbdc1bd543bcdcc5459053335bb",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 7.157823982972576,
+        "maximumEdgeGrowth": 0.021274266380323627,
+        "minimumZ": 0.007992830127477646
+      },
+      {
+        "group": "DEATH",
+        "sceneSHA256": "8b94db4f11a305aa58659caafbb48c715c03afe16c4ea0af85b93a6875b561f6",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 10.443567072193973,
+        "maximumEdgeGrowth": 0.02688900010810447,
+        "minimumZ": 0.007687956094741821
+      },
+      {
+        "group": "TURN_L",
+        "sceneSHA256": "8fe9acac22bacbae9ff20a6cc7531f65e568a9e9bef0ec679ff681f39b5a7c5c",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 7.144783174531061,
+        "maximumEdgeGrowth": 0.02122887635859791,
+        "minimumZ": 0.007999999448657036
+      },
+      {
+        "group": "TURN_R",
+        "sceneSHA256": "52ae2e71c3b474d967dd329694c1c0de58b2446ccb3561d54b85011a56cc0bbd",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 7.144782747610137,
+        "maximumEdgeGrowth": 0.021228887816933842,
+        "minimumZ": 0.007999999448657036
+      },
+      {
+        "group": "ATTACK_UP",
+        "sceneSHA256": "2a8b21be64e144f6d06df5bb1778ae9e2218c9e46f2c8dfea5ca27e56dede7c2",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 14.499151860551281,
+        "maximumEdgeGrowth": 0.03355649141868208,
+        "minimumZ": 0.0066678524017333984
+      },
+      {
+        "group": "ATTACK_FRONT",
+        "sceneSHA256": "9475b1deb08ff7227c6d468f53e81b9e79dcff100dc4d085ad9c145439d300b3",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 14.499151860551281,
+        "maximumEdgeGrowth": 0.03355649141868208,
+        "minimumZ": 0.0066678524017333984
+      },
+      {
+        "group": "ATTACK_DOWN",
+        "sceneSHA256": "831eb6f99319ff89eadb17db440f09cbb632d491211138ea92727b2c6e635e1f",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 14.499151860551281,
+        "maximumEdgeGrowth": 0.03355649141868208,
+        "minimumZ": 0.0066678524017333984
+      },
+      {
+        "group": "SPECIAL_UP",
+        "sceneSHA256": "5ff1f7ac3fa97e355efb69a2649e2746c7c05d00f80c8c83af70a843602a65b6",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 15.276634835591079,
+        "maximumEdgeGrowth": 0.03350055312420643,
+        "minimumZ": 0.006807886064052582
+      },
+      {
+        "group": "SPECIAL_FRONT",
+        "sceneSHA256": "4d4ea85464cbc796dbd67f26e36b9184d3ea94d358ec1724f7073dee767c2ec6",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 15.276634835591079,
+        "maximumEdgeGrowth": 0.03350055312420643,
+        "minimumZ": 0.006807886064052582
+      },
+      {
+        "group": "SPECIAL_DOWN",
+        "sceneSHA256": "fadf6bf3a37c9a75457107abb4e5a6b7cffeadc8e96d32f5a0df33223c793900",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 15.276634835591079,
+        "maximumEdgeGrowth": 0.03350055312420643,
+        "minimumZ": 0.006807886064052582
+      },
+      {
+        "group": "MOVE_START",
+        "sceneSHA256": "245b840e0a5ae8f27126853b2a95129a3e603ad0327533931cd6428d26b30440",
+        "samples": 3,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 6.843698652719973,
+        "maximumEdgeGrowth": 0.020180930476985978,
+        "minimumZ": 0.007999999448657036
+      },
+      {
+        "group": "MOVE_END",
+        "sceneSHA256": "88ef05620ea386c5b65a59da9c8d5467fc3688a2bf9e89def21071ac84a79408",
+        "samples": 3,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 6.843698652719973,
+        "maximumEdgeGrowth": 0.020180930476985978,
+        "minimumZ": 0.007999999448657036
+      }
+    ],
+    "largeStretchedEdges": 0,
+    "scope": "native frames and midpoints; large-tear detection is not aesthetic acceptance"
+  },
+  "boneDragon": {
+    "sourceManifestSHA256": "ee4d883ea194dc723df20f4c8639808b2121d6247377d053ee26d110342b8e4e",
+    "samples": [
+      {
+        "group": "MOVING",
+        "sceneSHA256": "5a74184c9f476c8bde5560933188121fb6c86c47e43dbcccf3c89890367de970",
+        "samples": 11,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 17.99069055107863,
+        "maximumEdgeGrowth": 0.07210297402084845,
+        "minimumZ": 0.39237913489341736
+      },
+      {
+        "group": "MOUSEON",
+        "sceneSHA256": "14e0821c25700d2b46b23e46d432e2155948cee0f5a2f16e49dc5fbc7db2e0b7",
+        "samples": 9,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.8616529783827587,
+        "maximumEdgeGrowth": 0.004013334746843478,
+        "minimumZ": 0.00791174080222845
+      },
+      {
+        "group": "HOLDING",
+        "sceneSHA256": "20c7113f3165d9fa58dcf9bd4f36a318e0962a9debf2d8bbcc948398277bc326",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.189495856060421,
+        "maximumEdgeGrowth": 0.0031996145488270827,
+        "minimumZ": 0.007982507348060608
+      },
+      {
+        "group": "HITTED",
+        "sceneSHA256": "b1c92ed6f3cd86d3dc295a26392f5d60dfe202f3a60453b10f66e4e92342aad2",
+        "samples": 11,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.863957439384581,
+        "maximumEdgeGrowth": 0.004110270722081668,
+        "minimumZ": 0.007818587124347687
+      },
+      {
+        "group": "DEFENCE",
+        "sceneSHA256": "0746876b431007d83d00ff0f437cc92a40de9c537b27b899c9d4adb0da4baa37",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.863957439384581,
+        "maximumEdgeGrowth": 0.004110270722081668,
+        "minimumZ": 0.007362648844718933
+      },
+      {
+        "group": "DEATH",
+        "sceneSHA256": "5ec7f02b25bdff646f7856e9870c835ea2a2e859c917d1cc21d116953ef38a4c",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 14.31825796320727,
+        "maximumEdgeGrowth": 0.07375332265848794,
+        "minimumZ": 0.007849644869565964
+      },
+      {
+        "group": "TURN_L",
+        "sceneSHA256": "8f9e40f32ab695d1ba39466161e8923d5a337edda2703796dd79207c5d6b3e5a",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.1294426511547906,
+        "maximumEdgeGrowth": 0.003036029586801629,
+        "minimumZ": 0.007999999448657036
+      },
+      {
+        "group": "TURN_R",
+        "sceneSHA256": "620240933798fd0cb400846abdbb0415968ada7d31922e74880ca29a0661b370",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.129443021736897,
+        "maximumEdgeGrowth": 0.0030360263488843214,
+        "minimumZ": 0.007999999448657036
+      },
+      {
+        "group": "ATTACK_UP",
+        "sceneSHA256": "f8b58a7a93de9244df3842b2d5ca7f9fd3e54e94c34da8feb17ad84e3408f8cb",
+        "samples": 13,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 9.388115605543312,
+        "maximumEdgeGrowth": 0.01775491966637878,
+        "minimumZ": 0.00791353452950716
+      },
+      {
+        "group": "ATTACK_FRONT",
+        "sceneSHA256": "30b98aeb0a6f0070dc46f5c320f3907307a5b27debfdab78aa04c4aafa1f66e5",
+        "samples": 13,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 8.844063012253725,
+        "maximumEdgeGrowth": 0.024345443881367234,
+        "minimumZ": 0.00791353452950716
+      },
+      {
+        "group": "ATTACK_DOWN",
+        "sceneSHA256": "ed1213ff08d2f73ff7872945e8a40b30b3cc45a0283bac9fca09387605cd8053",
+        "samples": 13,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 8.56537564991388,
+        "maximumEdgeGrowth": 0.030997645743743422,
+        "minimumZ": 0.00791353452950716
+      },
+      {
+        "group": "MOVE_START",
+        "sceneSHA256": "d7bf39a4081a29043f8caf2cf0f267a45201e198d9fa0c626c69b57f8e4cabaf",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 17.99069055107863,
+        "maximumEdgeGrowth": 0.07210297402084845,
+        "minimumZ": 0.007999999812454917
+      },
+      {
+        "group": "MOVE_END",
+        "sceneSHA256": "616b28e56f08deac2c8f34752d1015a106da45d1d572c1fb10fdc46a06f58814",
+        "samples": 7,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 17.99069055107863,
+        "maximumEdgeGrowth": 0.07210297402084845,
+        "minimumZ": 0.0048388277646154165
+      }
+    ],
+    "largeStretchedEdges": 0,
+    "scope": "native frames and midpoints; large-tear detection is not aesthetic acceptance"
+  },
+  "ghostDragon": {
+    "sourceManifestSHA256": "5dc56fc6f6d99e807e8202cdf028a399451c85e88e6eada98ca0f6665b4c8f53",
+    "samples": [
+      {
+        "group": "MOVING",
+        "sceneSHA256": "e7c136b671ee20510a167b4f13eda1981e391b722e8a27a9ddfba609c1d6c1bf",
+        "samples": 11,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 17.99069055107863,
+        "maximumEdgeGrowth": 0.07210297402084845,
+        "minimumZ": 0.39237913489341736
+      },
+      {
+        "group": "MOUSEON",
+        "sceneSHA256": "4c657f3e2299bef78d5bb61dd10b208114b027a90b5f83f7cd6d9c0c80e38b2f",
+        "samples": 17,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.8616529783827587,
+        "maximumEdgeGrowth": 0.004013334746843478,
+        "minimumZ": 0.007806665729731321
+      },
+      {
+        "group": "HOLDING",
+        "sceneSHA256": "b12c2bd3aa46fada118d32c32784fa85321a3f04331523c2a27d5613378b6d13",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.189495856060421,
+        "maximumEdgeGrowth": 0.0031996145488270827,
+        "minimumZ": 0.007982507348060608
+      },
+      {
+        "group": "HITTED",
+        "sceneSHA256": "f7f8a973671348ec78bf49fb6cc43e8619425cc7922587399d22951c5bcb591f",
+        "samples": 11,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.863957439384581,
+        "maximumEdgeGrowth": 0.004110270722081668,
+        "minimumZ": 0.007818587124347687
+      },
+      {
+        "group": "DEFENCE",
+        "sceneSHA256": "1b5cc2357bf1aaf9d7cecb14e58b359e2479a3dfd745807c8376d803f49ea74e",
+        "samples": 21,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.863957439384581,
+        "maximumEdgeGrowth": 0.004110270722081668,
+        "minimumZ": 0.007362648844718933
+      },
+      {
+        "group": "DEATH",
+        "sceneSHA256": "3899154e858a8183bd333d54a90a689cd3bf210402c8976e5c30610ca331f0ae",
+        "samples": 15,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 14.31825796320727,
+        "maximumEdgeGrowth": 0.07375332265848794,
+        "minimumZ": 0.007849644869565964
+      },
+      {
+        "group": "TURN_L",
+        "sceneSHA256": "e15ff8580b71deb6c4a0aee2446b7d0e4d187a4dd007bb6bc3448a6260aac47c",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.1294426511547906,
+        "maximumEdgeGrowth": 0.003036029586801629,
+        "minimumZ": 0.007999999448657036
+      },
+      {
+        "group": "TURN_R",
+        "sceneSHA256": "a205516d138c97320177fa656cc5811d018550262dc8c1afef6c5bc6db07afc4",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 2.129443021736897,
+        "maximumEdgeGrowth": 0.0030360263488843214,
+        "minimumZ": 0.007999999448657036
+      },
+      {
+        "group": "ATTACK_UP",
+        "sceneSHA256": "42a3139c278b1541cabb4d97fc30962c67952ced0b23dd7a77b0e2345fb64221",
+        "samples": 13,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 9.388115605543312,
+        "maximumEdgeGrowth": 0.01775491966637878,
+        "minimumZ": 0.00791353452950716
+      },
+      {
+        "group": "ATTACK_FRONT",
+        "sceneSHA256": "b765eafe12fc6c27a2132d9ba7decb67b886a2a59a94161b1f4d96149cc4ad79",
+        "samples": 13,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 8.844063012253725,
+        "maximumEdgeGrowth": 0.024345443881367234,
+        "minimumZ": 0.00791353452950716
+      },
+      {
+        "group": "ATTACK_DOWN",
+        "sceneSHA256": "e991d5e95ae05c887fd9f5e3a1644f6aa786680d9e74cae7c7a8700e2d738e99",
+        "samples": 13,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 8.56537564991388,
+        "maximumEdgeGrowth": 0.030997645743743422,
+        "minimumZ": 0.00791353452950716
+      },
+      {
+        "group": "MOVE_START",
+        "sceneSHA256": "ec55efee8064ced9d649e7cdbcc5513e2b694f4270e32725656391d454682a3b",
+        "samples": 5,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 17.99069055107863,
+        "maximumEdgeGrowth": 0.07210297402084845,
+        "minimumZ": 0.007999999812454917
+      },
+      {
+        "group": "MOVE_END",
+        "sceneSHA256": "e4c39084452ad293b0f4099c63f77c677155d52d4aa94e7e90bba1b5cf618c79",
+        "samples": 7,
+        "largeStretchedEdges": 0,
+        "maximumEdgeRatio": 17.99069055107863,
+        "maximumEdgeGrowth": 0.07210297402084845,
+        "minimumZ": 0.0048388277646154165
+      }
+    ],
+    "largeStretchedEdges": 0,
+    "scope": "native frames and midpoints; large-tear detection is not aesthetic acceptance"
+  }
+}

@@ -13,7 +13,7 @@ lastmod: 2026-09-09T05:48:54+08:00
 
 [幽灵和阴魂](/zh/posts/necropolis-ghosts/)与[尸巫和尸巫王](/zh/posts/necropolis-liches/)已另文交付。幽灵获得了明确外观验收。
 
-**截至 2026-09-09：**兵种 mod 为 **0.12.1**，已安装十四种墓园兵种。本文数字保留各次交付版本的含义；最新进展见[黑暗骑士与骨龙动画](/zh/posts/necropolis-final-four/)。
+**截至 2026-09-09：**兵种 mod 为 ~~0.12.1~~ **0.12.2**，已安装十四种墓园兵种。本文数字保留各次交付版本的含义；最新进展见[黑暗骑士与骨龙动画](/zh/posts/necropolis-final-four/)。
 
 工具在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护；模型和完整 mod 留在本地。[工具迁移与复现](/zh/posts/h3-art-tools/)。
 

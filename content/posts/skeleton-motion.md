@@ -7,7 +7,7 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
 
-**As of September 9, 2026:** creature mod **0.12.1** covers all fourteen Necropolis creatures. Measurements here retain their delivery-version scope; see [mounted knights and skeletal dragons](/posts/necropolis-final-four/) for the latest integration.
+**As of September 9, 2026:** creature mod ~~0.12.1~~ **0.12.2** covers all fourteen Necropolis creatures. Measurements here retain their delivery-version scope; see [mounted knights and skeletal dragons](/posts/necropolis-final-four/) for the latest integration.
 
 The Skeleton is installed with thirteen groups and 82 frames per scale.
 
