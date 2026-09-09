@@ -1,0 +1,322 @@
+[
+  {
+    "creature": "CBKNIG",
+    "clips": {
+      "MOVING": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 6,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.1,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 2,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 2,
+        "seconds": 0.35,
+        "loop": false
+      }
+    },
+    "checks": {
+      "maximumReachClamp": 0.006280141416500573,
+      "mountedTransitionPoseRepair": true,
+      "groundSupport": "reopened scene root corrected at every integer tick; PNG translated by projected root difference",
+      "supportSHA256": "49f6b94337e5481bd9bc02fdaac33509bc7d464fa999730f74a673e922c67e46"
+    }
+  },
+  {
+    "creature": "CBLORD",
+    "clips": {
+      "MOVING": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 6,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.1,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 8,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "SPECIAL_UP": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "SPECIAL_FRONT": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "SPECIAL_DOWN": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 2,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 2,
+        "seconds": 0.35,
+        "loop": false
+      }
+    },
+    "checks": {
+      "maximumReachClamp": 0.004325968347680953,
+      "mountedTransitionPoseRepair": true,
+      "armorAttackRangeRepair": true,
+      "groundSupport": "reopened scene root corrected at every integer tick; PNG translated by projected root difference",
+      "supportSHA256": "59d99424d6dc6f0cd9160a5e25c420ec7d0a7a7469f02582f9fac8e2dffe3f32"
+    }
+  },
+  {
+    "creature": "CNDRGN",
+    "clips": {
+      "MOVING": {
+        "frames": 6,
+        "seconds": 0.85,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 5,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 6,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.1,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 7,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 7,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 7,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 4,
+        "seconds": 0.35,
+        "loop": false
+      }
+    },
+    "checks": {
+      "maximumReachClamp": 0,
+      "reviewedFlightAmplitude": true,
+      "groundSupport": "reopened scene root corrected at every integer tick; PNG translated by projected root difference",
+      "supportSHA256": "04e291b276ea68b26b52003259a7c71143135f9ad5472aaf1d889ce95f7d2ba3"
+    }
+  },
+  {
+    "creature": "CHDRGN",
+    "clips": {
+      "MOVING": {
+        "frames": 6,
+        "seconds": 0.85,
+        "loop": true
+      },
+      "MOUSEON": {
+        "frames": 9,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "HOLDING": {
+        "frames": 8,
+        "seconds": 2,
+        "loop": true
+      },
+      "HITTED": {
+        "frames": 6,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEFENCE": {
+        "frames": 11,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "DEATH": {
+        "frames": 8,
+        "seconds": 1.1,
+        "loop": false
+      },
+      "TURN_L": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "TURN_R": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "ATTACK_UP": {
+        "frames": 7,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_FRONT": {
+        "frames": 7,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "ATTACK_DOWN": {
+        "frames": 7,
+        "seconds": 0.85,
+        "loop": false
+      },
+      "MOVE_START": {
+        "frames": 3,
+        "seconds": 0.35,
+        "loop": false
+      },
+      "MOVE_END": {
+        "frames": 4,
+        "seconds": 0.35,
+        "loop": false
+      }
+    },
+    "checks": {
+      "maximumReachClamp": 0,
+      "reviewedFlightAmplitude": true,
+      "groundSupport": "reopened scene root corrected at every integer tick; PNG translated by projected root difference",
+      "supportSHA256": "b3547c4dfb51e71dcfe30a19312a54dbe9020255b3e337f1c4f9daa0c8967f56"
+    }
+  }
+]

@@ -42,7 +42,7 @@ The 0.8.0 candidate adds these upgrades while preserving the existing skeleton, 
 
 Following the project's move from opus to astra, Astra wrote the Blender equipment, floor-contact correction, packaging, and validation tooling for this stage. It reuses the earlier Meshy body meshes and textures without new Meshy requests. Equipment construction, motion corrections, and rendering run locally. [PR #10](https://github.com/yzh119/vcmi/pull/10) contains the tools; the engine source is unchanged.
 
-Subsequent deliveries cover both [ghosts](/posts/necropolis-ghosts/), [liches](/posts/necropolis-liches/) and [vampires](/posts/necropolis-vampires/). Black Knight, Dread Knight, Bone Dragon and Ghost Dragon remain. The original progress table is preserved in history.
+Subsequent deliveries cover both [ghosts](/posts/necropolis-ghosts/), [liches](/posts/necropolis-liches/) and [vampires](/posts/necropolis-vampires/). ~~Black Knight, Dread Knight, Bone Dragon and Ghost Dragon remain.~~ These four were [integrated in 0.12.0 on September 9](/posts/necropolis-final-four/). The original progress table is preserved in history.
 
 Tools live in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline); models and complete mods stay local. [Migration and reproduction](/posts/h3-art-tools/).
 

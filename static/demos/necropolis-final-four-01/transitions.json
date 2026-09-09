@@ -1,0 +1,98 @@
+[
+  {
+    "unit": "black-knight",
+    "a": "sprites2x/move_start_00.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "black-knight",
+    "a": "sprites2x/move_start_01.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "black-knight",
+    "a": "sprites2x/move_end_00.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "black-knight",
+    "a": "sprites2x/move_end_01.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "dread-knight",
+    "a": "sprites2x/move_start_00.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "dread-knight",
+    "a": "sprites2x/move_start_01.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "dread-knight",
+    "a": "sprites2x/move_end_00.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "dread-knight",
+    "a": "sprites2x/move_end_01.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "bone-dragon",
+    "a": "sprites2x/move_start_00.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "bone-dragon",
+    "a": "sprites2x/move_start_02.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "bone-dragon",
+    "a": "sprites2x/move_end_00.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "bone-dragon",
+    "a": "sprites2x/move_end_03.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "ghost-dragon",
+    "a": "sprites2x/move_start_00.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "ghost-dragon",
+    "a": "sprites2x/move_start_02.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "ghost-dragon",
+    "a": "sprites2x/move_end_00.png",
+    "b": "sprites2x/moving_00.png",
+    "alphaIoU": 1.0
+  },
+  {
+    "unit": "ghost-dragon",
+    "a": "sprites2x/move_end_03.png",
+    "b": "sprites2x/holding_00.png",
+    "alphaIoU": 1.0
+  }
+]

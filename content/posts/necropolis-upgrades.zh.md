@@ -44,7 +44,7 @@ lastmod: 2026-09-09T05:48:54+08:00
 
 从 opus 迁移到 astra 后，这一阶段由 Astra 编写 Blender 装备、落地修正、打包和检查工具。继续复用之前 Meshy 生成的基础身体和贴图，这次没有新增 Meshy 调用。装备、动作修正和渲染都在本地完成。相关工具在 [PR #10](https://github.com/yzh119/vcmi/pull/10)，引擎源码未改。
 
-后续已完成[幽灵](/zh/posts/necropolis-ghosts/)、[尸巫](/zh/posts/necropolis-liches/)和[吸血鬼](/zh/posts/necropolis-vampires/)两种形态；剩余黑暗骑士、恐怖骑士、骨龙和幽灵龙。原表格保留在历史记录中。
+后续已完成[幽灵](/zh/posts/necropolis-ghosts/)、[尸巫](/zh/posts/necropolis-liches/)和[吸血鬼](/zh/posts/necropolis-vampires/)两种形态；~~剩余黑暗骑士、恐怖骑士、骨龙和幽灵龙。~~ 2026-09-09：这四个兵种已随 [0.12.0 接入](/zh/posts/necropolis-final-four/)。原表格保留在历史记录中。
 
 工具在 [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline) 维护；模型和完整 mod 留在本地。[工具迁移与复现](/zh/posts/h3-art-tools/)。
 

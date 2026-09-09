@@ -1,0 +1,1919 @@
+{
+  "findings": [
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 2.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 5.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 5.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 2.0px, centre 17.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 1.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 1.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 2.5px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 4.5px, centre 1.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 5.0px, centre 2.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 3.0px, centre 17.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.5px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 0.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 0.5px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 0.5px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 0 (MOVING) moves inside the canvas -- ground line 2.3px, centre 5.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 3 (HITTED) moves inside the canvas -- ground line 4.7px, centre 2.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 4 (DEFENCE) moves inside the canvas -- ground line 5.0px, centre 2.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 5 (DEATH) moves inside the canvas -- ground line 2.3px, centre 17.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 8 (TURN_R) moves inside the canvas -- ground line 0.3px, centre 1.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 0.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 20 (MOVE_START) moves inside the canvas -- ground line 0.7px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBKNIG",
+      "message": "3x: group 21 (MOVE_END) moves inside the canvas -- ground line 0.7px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 3.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 4.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 3.0px, centre 17.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 0.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 17 (SPECIAL_UP) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 18 (SPECIAL_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 19 (SPECIAL_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 0.0px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 2.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 4.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 4.5px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 3.0px, centre 17.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.5px, centre 1.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 17 (SPECIAL_UP) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 18 (SPECIAL_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 19 (SPECIAL_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 0.5px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 0.5px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 0 (MOVING) moves inside the canvas -- ground line 1.7px, centre 4.7px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 3 (HITTED) moves inside the canvas -- ground line 3.3px, centre 2.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 4 (DEFENCE) moves inside the canvas -- ground line 4.0px, centre 2.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 5 (DEATH) moves inside the canvas -- ground line 3.0px, centre 18.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 8 (TURN_R) moves inside the canvas -- ground line 0.7px, centre 1.7px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 0.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 17 (SPECIAL_UP) moves inside the canvas -- ground line 0.0px, centre 0.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 18 (SPECIAL_FRONT) moves inside the canvas -- ground line 0.0px, centre 0.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 19 (SPECIAL_DOWN) moves inside the canvas -- ground line 0.0px, centre 0.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 20 (MOVE_START) moves inside the canvas -- ground line 0.3px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CBLORD",
+      "message": "3x: group 21 (MOVE_END) moves inside the canvas -- ground line 0.3px, centre 0.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 5.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 6.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 6.0px, centre 29.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 0.0px, centre 5.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 2.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 2.0px, centre 5.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 30.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 5.0px, centre 2.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 5.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 4.0px, centre 29.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 0.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 2.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 1.0px, centre 5.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 1.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 1.0px, centre 6.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 0 (MOVING) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 1 (MOUSEON) idle loop is planted (ground line 1.0px) but its outline shifts 2.3px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 2 (HOLDING) idle loop is planted (ground line 1.0px) but its outline shifts 2.3px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 3 (HITTED) moves inside the canvas -- ground line 5.0px, centre 2.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 4 (DEFENCE) moves inside the canvas -- ground line 5.7px, centre 2.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 5 (DEATH) moves inside the canvas -- ground line 4.7px, centre 29.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 7 (TURN_L) moves inside the canvas -- ground line 0.0px, centre 4.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 1.3px, centre 5.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 1.3px, centre 5.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 1.3px, centre 6.7px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 20 (MOVE_START) moves inside the canvas -- ground line 30.0px, centre 2.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CHDRGN",
+      "message": "3x: group 21 (MOVE_END) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 5.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 13.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 10.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 10.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 10.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 0.0px, centre 11.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 0.0px, centre 11.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 0.0px, centre 11.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 2.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 2.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 4.5px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 13.0px, centre 5.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.5px, centre 2.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 10.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 10.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 10.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 0.0px, centre 11.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 0.0px, centre 11.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 0.0px, centre 11.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 1.5px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CLICH",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 1.5px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 5.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 6.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 6.0px, centre 29.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 0.0px, centre 5.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 2.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 2.0px, centre 5.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 30.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 5.0px, centre 2.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 5.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 4.0px, centre 29.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 0.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 2.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 1.0px, centre 5.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 1.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 1.0px, centre 6.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 0 (MOVING) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 1 (MOUSEON) idle loop is planted (ground line 1.0px) but its outline shifts 2.3px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 2 (HOLDING) idle loop is planted (ground line 1.0px) but its outline shifts 2.3px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 3 (HITTED) moves inside the canvas -- ground line 5.0px, centre 2.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 4 (DEFENCE) moves inside the canvas -- ground line 5.7px, centre 2.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 5 (DEATH) moves inside the canvas -- ground line 4.7px, centre 29.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 7 (TURN_L) moves inside the canvas -- ground line 0.0px, centre 4.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 1.3px, centre 5.3px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 1.3px, centre 5.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 1.3px, centre 6.7px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 20 (MOVE_START) moves inside the canvas -- ground line 30.0px, centre 2.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNDRGN",
+      "message": "3x: group 21 (MOVE_END) moves inside the canvas -- ground line 30.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 18.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 5.0px, centre 7.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 21.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 17 (SPECIAL_UP) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 18 (SPECIAL_FRONT) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 19 (SPECIAL_DOWN) moves inside the canvas -- ground line 2.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 71.0px, centre 10.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 71.0px, centre 10.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 18.0px, centre 1.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 4.5px, centre 7.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 0.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 1.5px, centre 22.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 2.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 2.0px, centre 4.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 2.0px, centre 4.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 17 (SPECIAL_UP) moves inside the canvas -- ground line 2.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 18 (SPECIAL_FRONT) moves inside the canvas -- ground line 2.0px, centre 4.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 19 (SPECIAL_DOWN) moves inside the canvas -- ground line 2.0px, centre 4.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 69.0px, centre 10.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CNOSFE",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 69.0px, centre 10.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 5.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 15.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 14.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 14.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 14.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 0.0px, centre 14.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 0.0px, centre 14.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 0.0px, centre 14.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 2.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 2.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 5.5px, centre 4.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 2.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 3.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 15.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.5px, centre 4.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 13.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 13.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 13.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 0.0px, centre 14.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 0.0px, centre 14.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 0.0px, centre 14.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 2.0px, centre 0.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CPLICH",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 2.0px, centre 0.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 4.0px, centre 13.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 1 (MOUSEON) idle loop is planted (ground line 0.0px) but its outline shifts 9.0px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 17.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 12.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 3.0px, centre 13.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 2.0px, centre 7.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 2.0px, centre 7.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 7.0px, centre 30.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 7.0px, centre 31.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 7.0px, centre 27.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 1.0px, centre 7.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 1.0px, centre 7.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 4.5px, centre 13.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 1 (MOUSEON) idle loop is planted (ground line 0.0px) but its outline shifts 8.8px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 18.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 12.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 3.5px, centre 13.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 7.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 7.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 6.5px, centre 30.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 6.5px, centre 31.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 6.5px, centre 27.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 1.5px, centre 5.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CSKELE",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 1.5px, centre 5.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 17.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 4.0px, centre 7.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 2.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 2.0px, centre 14.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 66.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 66.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 17.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 1.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 1.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 4.0px, centre 6.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 2.0px, centre 1.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 2.0px, centre 14.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 2.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 2.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 65.5px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CVAMP",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 65.5px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 10.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 2.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 1.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 10.0px, centre 9.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 2.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 37.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 31.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 25.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 37.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 31.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "1x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 25.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 10.5px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 1.5px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 1.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 10.5px, centre 9.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 2.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 36.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 30.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 24.0px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 36.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 30.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWIGHT",
+      "message": "2x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 24.0px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 10.0px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 2.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 1.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 10.0px, centre 9.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 2.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 1.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 37.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 31.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 25.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 37.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 31.0px, centre 3.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "1x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 25.0px, centre 4.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 10.5px, centre 2.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 1.5px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 1.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 10.5px, centre 9.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 2.0px, centre 0.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 0.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 36.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 30.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 24.0px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 14 (SHOOT_UP) moves inside the canvas -- ground line 36.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 15 (SHOOT_FRONT) moves inside the canvas -- ground line 30.5px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWRAIT",
+      "message": "2x: group 16 (SHOOT_DOWN) moves inside the canvas -- ground line 24.0px, centre 3.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 4.0px, centre 12.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 1 (MOUSEON) idle loop is planted (ground line 0.0px) but its outline shifts 8.5px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 18.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 10.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 3.0px, centre 10.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 7.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 7.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 7.0px, centre 27.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 7.0px, centre 29.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 7.0px, centre 24.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 20 (MOVE_START) moves inside the canvas -- ground line 1.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "1x: group 21 (MOVE_END) moves inside the canvas -- ground line 1.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 4.5px, centre 13.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 1 (MOUSEON) idle loop is planted (ground line 0.0px) but its outline shifts 8.5px -- normal for a raised weapon, wrong if the body sways"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 18.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 10.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 3.0px, centre 9.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 7.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 7.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 6.5px, centre 28.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 6.5px, centre 30.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 6.5px, centre 25.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 20 (MOVE_START) moves inside the canvas -- ground line 1.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CWSKEL",
+      "message": "2x: group 21 (MOVE_END) moves inside the canvas -- ground line 1.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 3.0px, centre 5.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 5.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 1.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 5.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 8.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 8.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 11.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 12.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 12.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 2.5px, centre 4.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 6.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 1.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 6.0px, centre 6.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 8.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 8.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 12.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 12.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMBI",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 12.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 0 (MOVING) moves inside the canvas -- ground line 3.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 7.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 2.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 5 (DEATH) moves inside the canvas -- ground line 6.0px, centre 8.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 9.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 9.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 13.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 14.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "1x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 13.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 0 (MOVING) moves inside the canvas -- ground line 3.0px, centre 4.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 3 (HITTED) moves inside the canvas -- ground line 0.0px, centre 7.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 4 (DEFENCE) moves inside the canvas -- ground line 0.0px, centre 2.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 5 (DEATH) moves inside the canvas -- ground line 6.0px, centre 8.2px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 7 (TURN_L) moves inside the canvas -- ground line 1.0px, centre 8.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 8 (TURN_R) moves inside the canvas -- ground line 1.0px, centre 8.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 11 (ATTACK_UP) moves inside the canvas -- ground line 0.0px, centre 14.0px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 12 (ATTACK_FRONT) moves inside the canvas -- ground line 0.0px, centre 14.5px (1x-equivalent); compare against the original before assuming this is wrong"
+    },
+    {
+      "severity": "info",
+      "creature": "CZOMLO",
+      "message": "2x: group 13 (ATTACK_DOWN) moves inside the canvas -- ground line 0.0px, centre 13.8px (1x-equivalent); compare against the original before assuming this is wrong"
+    }
+  ]
+}

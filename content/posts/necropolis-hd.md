@@ -7,7 +7,7 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
-The town uses **necropolis-layered-hd 0.3.0**; creature animations use **necropolis-creature-animations 0.11.1**. These version numbers belong to separate mods. This account reflects the installation checked on September 9, 2026.
+The town uses **necropolis-layered-hd 0.3.0**; creature animations use **necropolis-creature-animations 0.12.0**. These version numbers belong to separate mods. This account reflects the installation checked on September 9, 2026.
 
 ## Layered town assets
 
@@ -70,6 +70,9 @@ Tools live in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline); mode
 ## History
 
 {{< history title="Earlier article and revision notes (expand)" note="The text, images and strikethrough annotations below are preserved from before this editorial pass. “Current”, unfinished work and next steps refer to the time each passage or annotation was written. Old versions, paths and trial renders are historical records." >}}
+
+~~The town uses **necropolis-layered-hd 0.3.0**; creature animations use **necropolis-creature-animations 0.11.1**. These version numbers belong to separate mods. This account reflects the installation checked on September 9, 2026.~~
+
 
 > **2026-09-09 tool migration:** Development continues in [h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline). The old `tools/creature-art/` and `tools/town-art/` paths correspond to `creature-art/` and `town-art/` in the new repository. Historical paths and PR links remain in this article. [Migration and reproduction details](/posts/h3-art-tools/).
 
