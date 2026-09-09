@@ -101,3 +101,11 @@ The first fort draft painted a checkerboard into RGB. A flat magenta revision al
 This intermediate composite retained the old flag mask. The upper flag floated beside the tower, and the ground pennants remained blocky. After the user's feedback, the upper mask was registered again and ground flags were redrawn. The red/blue sheet above shows the installed result.
 
 Reproduction tools and prompts are in [environment-art in h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline/tree/main/environment-art). Complete mods, original game data and generated production assets stay local; the blog carries demonstrations.
+
+## September 9, 2026 update: adventure map 0.2.0
+
+This update extends the package to the adventure map itself: eight static terrains, three roads and the ice river, plus **AVL** scenery/terrain obstacles, **AVX** buildings and mines, and **AVW** neutral creatures. The existing Necropolis town art is deliberately excluded from this bulk pass and remains the separately authored treatment above.
+
+This bulk pass is a high-quality scaling baseline, not an AI repaint of every frame. Each DEF retains its native canvas, animation groups, frame count, and body/shadow/overlay layers. It changes no object template, so anchors, footprint, blocking, click handling and visit logic remain in the original configuration. There are 953 object animation sets; with terrain and the existing resources, the mod contains 2,904 2×/3×/4× animation descriptions and 55,899 layer files, about 1 GB. Cache pressure on first entry to a large map remains something to watch.
+
+Package checks verified every animation description and layer file, including dimensions. A native test map started successfully and the client log confirmed actual reads of this mod's 4× `DIRTTL` terrain tiles. That map did not contain each building or neutral-creature class, so this is not presented as in-game visual acceptance for every object. Frequent landmarks such as mines and portals can receive separate generated-art refinements later under the same registration constraints.
