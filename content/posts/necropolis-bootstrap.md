@@ -1,7 +1,7 @@
 ---
 title: "[AI] Wight and lich design studies"
 date: 2026-09-09T01:16:08+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 lastmod: 2026-09-09T05:48:54+08:00

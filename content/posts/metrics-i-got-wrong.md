@@ -1,7 +1,7 @@
 ---
 title: "[AI] Art format validation"
 date: 2026-09-06T18:00:00+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "testing", "ai"]
 lastmod: 2026-09-09T05:48:54+08:00

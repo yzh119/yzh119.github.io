@@ -1,7 +1,7 @@
 ---
 title: "[AI]反关节，以及指标给错误答案打高分"
 date: 2026-09-07T00:40:00+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "testing"]
 lastmod: 2026-09-09T05:48:54+08:00

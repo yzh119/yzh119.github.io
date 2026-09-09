@@ -1,7 +1,7 @@
 ---
 title: "[AI]战场与地图墓园高清化"
 date: 2026-09-09T07:00:53+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---

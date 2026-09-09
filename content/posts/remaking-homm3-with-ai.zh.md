@@ -1,7 +1,7 @@
 ---
 title: "[AI][开坑]用ai改进英雄无敌3"
 date: 2026-09-05T20:00:00+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "rl"]
 lastmod: 2026-09-09T05:48:54+08:00

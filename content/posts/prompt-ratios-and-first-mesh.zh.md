@@ -1,7 +1,7 @@
 ---
 title: "[AI]用数字而不是形容词控制比例"
 date: 2026-09-06T19:00:00+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics"]
 lastmod: 2026-09-09T05:48:54+08:00

@@ -1,7 +1,7 @@
 ---
 title: "[AI] Heroes III sprite formats and engine constraints"
 date: 2026-09-06T12:00:00+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "graphics", "reverse-engineering"]
 lastmod: 2026-09-09T05:48:54+08:00

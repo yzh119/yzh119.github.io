@@ -1,7 +1,7 @@
 ---
 title: "[AI] HD battlefields and Necropolis map towns"
 date: 2026-09-09T07:00:53+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---

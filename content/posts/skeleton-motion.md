@@ -2,7 +2,7 @@
 title: "[AI] Skeleton animation set"
 date: 2026-09-08T12:13:00+08:00
 lastmod: 2026-09-09T05:48:54+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---

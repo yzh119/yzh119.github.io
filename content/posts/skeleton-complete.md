@@ -1,7 +1,7 @@
 ---
 title: "[AI] The skeleton is done"
 date: 2026-09-06T23:00:00+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
 lastmod: 2026-09-09T05:48:54+08:00

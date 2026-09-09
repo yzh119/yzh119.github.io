@@ -1,7 +1,7 @@
 ---
 title: "[AI] Necropolis creature upgrades"
 date: 2026-09-08T23:07:02+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 lastmod: 2026-09-09T05:48:54+08:00

@@ -1,7 +1,7 @@
 ---
 title: "[AI]幽灵和尸巫的造型试做"
 date: 2026-09-09T01:16:08+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 lastmod: 2026-09-09T05:48:54+08:00

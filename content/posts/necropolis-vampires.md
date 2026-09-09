@@ -1,7 +1,7 @@
 ---
 title: "[AI] Vampire and bat forms"
 date: 2026-09-09T04:26:09+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy"]
 lastmod: 2026-09-09T05:48:54+08:00

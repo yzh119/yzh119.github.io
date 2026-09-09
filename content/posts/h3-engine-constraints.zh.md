@@ -1,7 +1,7 @@
 ---
 title: "[AI]英雄无敌3的素材格式和引擎限制"
 date: 2026-09-06T12:00:00+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "graphics", "reverse-engineering"]
 lastmod: 2026-09-09T05:48:54+08:00

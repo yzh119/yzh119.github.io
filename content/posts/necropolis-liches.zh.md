@@ -1,7 +1,7 @@
 ---
 title: "[AI]尸巫和尸巫王"
 date: 2026-09-09T03:04:19+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 lastmod: 2026-09-09T05:48:54+08:00

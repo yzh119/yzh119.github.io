@@ -1,7 +1,7 @@
 ---
 title: "[AI]幽灵和阴魂的动画接入"
 date: 2026-09-09T01:48:31+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
 lastmod: 2026-09-09T05:48:54+08:00

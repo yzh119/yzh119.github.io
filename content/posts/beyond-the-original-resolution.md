@@ -1,7 +1,7 @@
 ---
 title: "[AI] Not bound to the original's resolution"
 date: 2026-09-07T02:30:00+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "graphics", "blender"]
 lastmod: 2026-09-09T05:48:54+08:00

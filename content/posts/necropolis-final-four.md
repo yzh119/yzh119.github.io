@@ -1,7 +1,7 @@
 ---
 title: "[AI] Mounted knights and skeletal dragon animations"
 date: 2026-09-09T07:23:02+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra", "meshy"]
 lastmod: 2026-09-09T08:45:19+08:00

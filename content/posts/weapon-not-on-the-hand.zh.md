@@ -1,7 +1,7 @@
 ---
 title: "[AI]剑焊在了胯上"
 date: 2026-09-06T23:50:00+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender"]
 lastmod: 2026-09-09T05:48:54+08:00

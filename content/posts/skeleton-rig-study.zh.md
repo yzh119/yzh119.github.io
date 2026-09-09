@@ -1,7 +1,7 @@
 ---
 title: "[AI]opus -> astra：骷髅修整的惊人进步"
 date: 2026-09-08T11:40:00+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 lastmod: 2026-09-09T05:48:54+08:00

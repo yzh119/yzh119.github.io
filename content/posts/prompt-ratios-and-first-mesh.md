@@ -1,7 +1,7 @@
 ---
 title: "[AI] Ratios instead of adjectives"
 date: 2026-09-06T19:00:00+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics"]
 lastmod: 2026-09-09T05:48:54+08:00

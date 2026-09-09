@@ -1,7 +1,7 @@
 ---
 title: "[AI] Improving Heroes III with AI"
 date: 2026-09-05T20:00:00+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "rl"]
 lastmod: 2026-09-09T05:48:54+08:00

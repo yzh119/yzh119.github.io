@@ -1,7 +1,7 @@
 ---
 title: "[AI]吸血鬼与蝙蝠形态"
 date: 2026-09-09T04:26:09+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy"]
 lastmod: 2026-09-09T05:48:54+08:00

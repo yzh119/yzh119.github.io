@@ -2,7 +2,7 @@
 title: "[AI]骷髅的十三组动画"
 date: 2026-09-08T12:13:00+08:00
 lastmod: 2026-09-09T05:48:54+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---

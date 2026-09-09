@@ -1,7 +1,7 @@
 ---
 title: "[AI]黑暗骑士与骨龙动画"
 date: 2026-09-09T07:23:02+08:00
-series: ["英雄无敌3"]
+series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra", "meshy"]
 lastmod: 2026-09-09T08:45:19+08:00

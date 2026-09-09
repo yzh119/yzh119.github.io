@@ -1,7 +1,7 @@
 ---
 title: "[AI] A separate repository for the art tools"
 date: 2026-09-09T04:12:16+08:00
-series: ["Heroes III"]
+series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy"]
 lastmod: 2026-09-09T05:48:54+08:00
