@@ -6,8 +6,8 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
-All six desert-mesa mountain resources, `AVLMTDS1`–`AVLMTDS6`, now have HD body art. Each preserves its own source plateau top, canyon, cliff, separate outcrop and gap while adding weathered sandstone, stratification and desert-scrub detail.
+The first desert-mesa mountain resources, `AVLMTDS1` and `AVLMTDS5`, now have HD body art. They preserve the source plateau top, canyon, cliff, separate outcrop and gap while adding weathered sandstone, stratification and desert-scrub detail; the other four are being regenerated individually.
 
 ![Desert mesa HD comparison](/images/h3-environment-hd/desert-mesa-mountain-variants-hd-compare.png)
 
-Every body is clipped to the original transparent silhouette, preserving pathing, occlusion and footprint. There are now **210** customized body resources, and the complete adventure-asset check remains at 0 errors.
+Every body is clipped to the original transparent silhouette, preserving pathing, occlusion and footprint. There are now **206** customized body resources, and the complete adventure-asset check remains at 0 errors.
