@@ -6,7 +6,7 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
-All six volcanic-mountain resources, `AVLMTVO1`–`AVLMTVO6`, now have HD body art. The original distinction between eruptive and low cratered formations remains: the latter keeps charred basalt, ash and dark red mineral staining rather than becoming lava rivers or oversized volcanoes.
+All six volcanic-mountain resources, `AVLMTVO1`–`AVLMTVO6`, now have HD body art. All six use the source’s low cratered rock formations, keeping charred basalt, ash and dark red mineral staining rather than becoming lava rivers or oversized volcanoes.
 
 ![Volcanic mountain HD comparison](/images/h3-environment-hd/volcanic-mountain-variants-hd-compare.png)
 

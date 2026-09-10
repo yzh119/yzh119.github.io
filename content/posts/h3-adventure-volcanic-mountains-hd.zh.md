@@ -6,7 +6,7 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
-火山地图的六种大型山体 `AVLMTVO1`–`AVLMTVO6` 现已完整高清化。喷发型与低矮坑口型仍沿用原作的分型：后者保留焦黑玄武岩、火山灰与暗红矿物痕迹，没有改成不属于原作的熔岩河或巨型火山。
+火山地图的六种大型山体 `AVLMTVO1`–`AVLMTVO6` 现已完整高清化。六种资源均以原作的低矮坑口岩群为准，保留焦黑玄武岩、火山灰与暗红矿物痕迹，没有改成不属于原作的熔岩河或巨型火山。
 
 ![火山山体高清对照](/images/h3-environment-hd/volcanic-mountain-variants-hd-compare.png)
 
