@@ -189,3 +189,5 @@ This batch adds a desert pyramid, a sailing ship and the three colored obelisks.
 The giant redwood is a frequent multi-tile scenery landmark, so it now has an individual high-detail body replacement. Roots and canopy are registered only within the native visible area, leaving the original shadows, occlusion and map footprint unchanged.
 
 ![Giant redwood: HD baseline and actual replacement](/images/h3-environment-hd/redwood-compare.png)
+
+The client was then started on the actual `Good to Go` map. Logs confirm that the active `h3-environment-hd` package parsed successfully and actually read the local 4× giant redwood `AVXREDW` and newly redrawn rough-rock resources. The test map later reached an existing AI animation-state error, so this is evidence of asset loading rather than a claim of full-playthrough stability.
