@@ -147,3 +147,11 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 许愿井、酒馆和墓园也已完成主体美术替换。它们均是静态地图对象，因此在保持原画布、阴影、遮挡和访问模板的同时，能安全接入新的绘制版本。下图左为高清基线，右为当前版本。
 
 ![常用交互地标：高清基线和实际替换](/images/h3-environment-hd/landmark-set-compare.png)
+
+### 2026-09-09：野外守卫的逐帧替换
+
+野外守卫不是静态地标：替换首帧会导致待机时闪跳。野外骷髅和僵尸因此接入了现有兵种制作中的八帧待机循环，分别映射到地图对象原有的 30 帧和 28 帧序列。每一帧按原画布与可见范围重新配准，地图的原阴影和叠加层仍保留。下图展示原高清基线与替换后的循环取样。
+
+![野外骷髅动画：高清基线与逐帧替换](/images/h3-environment-hd/animated-skeleton-compare.png)
+
+![野外僵尸动画：高清基线与逐帧替换](/images/h3-environment-hd/animated-zombie-compare.png)

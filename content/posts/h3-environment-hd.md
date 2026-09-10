@@ -147,3 +147,11 @@ The same registered-object workflow now adds broadleaf forest, rough-terrain pin
 The wishing well, tavern and graveyard now have replacement body art too. All three are static map objects, so their original canvas, shadows, occlusion and visit templates remain safely intact while the new rendering is installed. The left side below is the HD baseline and the right side is the current version.
 
 ![Common interactive landmarks: HD baseline and actual replacements](/images/h3-environment-hd/landmark-set-compare.png)
+
+### September 9, 2026: frame-by-frame replacements for map guards
+
+Map guards are animated, so replacing only the first frame would cause visible popping at idle. Map skeletons and zombies now use the eight-frame holding cycles produced for the creature work, mapped over their native 30- and 28-frame adventure-object sequences. Every frame is registered to its original canvas and visible area; the map's own shadows and overlays remain. The sheets below sample the original HD baseline and the installed cycles.
+
+![Map skeleton animation: HD baseline and frame-by-frame replacement](/images/h3-environment-hd/animated-skeleton-compare.png)
+
+![Map zombie animation: HD baseline and frame-by-frame replacement](/images/h3-environment-hd/animated-zombie-compare.png)
