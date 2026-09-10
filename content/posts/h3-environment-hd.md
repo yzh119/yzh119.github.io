@@ -127,3 +127,11 @@ Mountains are `AVL` objects with blocking and occlusion, rather than terrain til
 New mountains surrounded by old pixel vegetation would look disconnected. For objects actually loaded by the test map, this pass adds two distinct tree groups, a grassland hedgerow, a rough-terrain thorn bush and a rough-terrain rock cluster. Client logs confirm actual reads of all five 4× resources; the left side is the baseline and the right side the new painted body.
 
 ![Trees, shrubs and rocks: baseline and actual replacements](/images/h3-environment-hd/vegetation-compare.png)
+
+### September 9, 2026: material redraws for terrain, roads and ice river
+
+The bulk package supplied a high-resolution base, but ordinary map zoom still kept terrain close to the original palette. This pass redraws the body-layer materials for grass, rough, dirt, sand, snow, swamp, subterranean and rock terrain; dirt, gravel and cobblestone roads; and the ice river. Every tile retains its native frame, alpha silhouette and transition geometry, so tile joins, road shapes and shoreline masks remain unchanged.
+
+The left side below is the previous HD baseline and the right side is the installed material redraw. Ordinary water and lava use original palette animation, so they are deliberately outside this static repaint pass until their animation can be preserved.
+
+![Terrain, roads and ice river: HD baseline and material redraw](/images/h3-environment-hd/material-redraw-compare.png)
