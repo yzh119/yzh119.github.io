@@ -155,3 +155,7 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![野外骷髅动画：高清基线与逐帧替换](/images/h3-environment-hd/animated-skeleton-compare.png)
 
 ![野外僵尸动画：高清基线与逐帧替换](/images/h3-environment-hd/animated-zombie-compare.png)
+
+后续同样补齐了骷髅战士、行尸、行尸领主、巫妖、尸巫、吸血鬼、吸血鬼王、幽灵与鬼魂。名称和升级关系先按原野外资源核对，再使用相应兵种的八帧待机循环，而不是把同一角色错误复用于升级单位。下面是十类野外守卫的首帧对照；所有右侧对象均已写入完整循环。
+
+![墓园野外守卫：高清基线与逐帧替换](/images/h3-environment-hd/map-guards-necropolis-compare.png)

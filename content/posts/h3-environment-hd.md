@@ -155,3 +155,7 @@ Map guards are animated, so replacing only the first frame would cause visible p
 ![Map skeleton animation: HD baseline and frame-by-frame replacement](/images/h3-environment-hd/animated-skeleton-compare.png)
 
 ![Map zombie animation: HD baseline and frame-by-frame replacement](/images/h3-environment-hd/animated-zombie-compare.png)
+
+The same approach now covers Skeleton Warriors, Walking Dead, Zombie Lords, Liches, Power Liches, Vampires, Vampire Lords, Wights and Wraiths. Resource names and upgrade relationships were checked before selecting each eight-frame creature cycle, so an upgrade does not accidentally reuse the base unit's artwork. The sheet below compares the first frame for ten map guards; every replacement on the right is installed as a full cycle.
+
+![Necropolis map guards: HD baseline and frame-by-frame replacements](/images/h3-environment-hd/map-guards-necropolis-compare.png)
