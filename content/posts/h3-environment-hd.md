@@ -191,3 +191,9 @@ The giant redwood is a frequent multi-tile scenery landmark, so it now has an in
 ![Giant redwood: HD baseline and actual replacement](/images/h3-environment-hd/redwood-compare.png)
 
 The client was then started on the actual `Good to Go` map. Logs confirm that the active `h3-environment-hd` package parsed successfully and actually read the local 4× giant redwood `AVXREDW` and newly redrawn rough-rock resources. The test map later reached an existing AI animation-state error, so this is evidence of asset loading rather than a claim of full-playthrough stability.
+
+### September 10, 2026: castle landmark
+
+`AVXTHRN` is a large static castle-style map landmark. This pass replaces its body art while retaining the original canvas, shadows, occlusion, footprint and visit template; it does not replace the town system or town-interface resources. The left side below is the HD baseline and the right side is the current version.
+
+![Castle landmark: HD baseline and actual replacement](/images/h3-environment-hd/castle-landmark-compare.png)

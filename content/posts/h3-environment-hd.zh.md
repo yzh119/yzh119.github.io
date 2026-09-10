@@ -191,3 +191,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![巨型红杉：高清基线和实际替换](/images/h3-environment-hd/redwood-compare.png)
 
 随后以实际的 `Good to Go` 地图启动客户端检查。日志确认当前启用的 `h3-environment-hd` 模组成功解析，并实际读取本地 4× 的巨型红杉 `AVXREDW` 与新增荒地岩簇资源。测试图在 AI 推进后出现既有的动画状态错误，因此这里只把它作为资源加载验证，而不是完整对局稳定性结论。
+
+### 2026-09-10：城堡型地标
+
+`AVXTHRN` 是大型静态城堡型地图地标。本轮替换了主体美术，同时保留原画布、阴影、遮挡、占格和访问模板；它不是对城镇系统或城镇界面资源的替换。下图左为高清基线，右为当前版本。
+
+![城堡型地标：高清基线和实际替换](/images/h3-environment-hd/castle-landmark-compare.png)
