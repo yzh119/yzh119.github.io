@@ -21,3 +21,9 @@ Customized body resources now total **130**.
 <s>A slim single-segment cactus can be safely extrapolated with the same prompt.</s> The test incorrectly added barrel sections, so it was not installed; every variant still needs its own original-art comparison.
 
 ![Rejected thin-cactus comparison](/images/h3-environment-hd/desert-thin-cactus-rejected-compare.png)
+
+The low clustered cactus uses the new native-silhouette constraint: even if a generated draft introduces extra segments, the final body may only occupy the original three-lobe transparency outline.
+
+![HD cluster-cactus comparison](/images/h3-environment-hd/desert-cluster-cactus-hd-compare.png)
+
+Customized body resources now total **131**.

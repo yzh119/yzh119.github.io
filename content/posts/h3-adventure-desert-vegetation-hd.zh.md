@@ -21,3 +21,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 <s>细长单节仙人掌可以由同一提示直接外推。</s> 测试结果错误增加了柱节，因此没有接入；每个变体仍需单独对照原图。
 
 ![细长仙人掌废稿对照](/images/h3-environment-hd/desert-thin-cactus-rejected-compare.png)
+
+低矮丛生仙人掌采用新增的“原生轮廓约束”处理：即使生成草稿出现多余节数，最终主体图也只能落在原版三节透明轮廓内。
+
+![丛生仙人掌高清对照](/images/h3-environment-hd/desert-cluster-cactus-hd-compare.png)
+
+定制主体资源现为 **131** 个。
