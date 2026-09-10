@@ -159,3 +159,9 @@ Map guards are animated, so replacing only the first frame would cause visible p
 The same approach now covers Skeleton Warriors, Walking Dead, Zombie Lords, Liches, Power Liches, Vampires, Vampire Lords, Wights and Wraiths. Resource names and upgrade relationships were checked before selecting each eight-frame creature cycle, so an upgrade does not accidentally reuse the base unit's artwork. The sheet below compares the first frame for ten map guards; every replacement on the right is installed as a full cycle.
 
 ![Necropolis map guards: HD baseline and frame-by-frame replacements](/images/h3-environment-hd/map-guards-necropolis-compare.png)
+
+### September 9, 2026: desert, swamp and subterranean mountains
+
+Mountain work now extends to desert mesas, moss-covered swamp crags and crystalline subterranean cliffs. Each new body is registered to the corresponding native mountain canvas and retains its occlusion, shadow and footprint. Multiple native variants remain in use per biome; this is not a single background pasted over the map. The left side below is the HD baseline and the right side is the actual replacement.
+
+![Desert, swamp and subterranean mountains: HD baseline and actual replacements](/images/h3-environment-hd/mountains-biomes-compare.png)
