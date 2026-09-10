@@ -17,3 +17,7 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![柱状仙人掌高清对照](/images/h3-environment-hd/desert-column-cactus-hd-compare.png)
 
 定制主体资源现为 **130** 个。
+
+<s>细长单节仙人掌可以由同一提示直接外推。</s> 测试结果错误增加了柱节，因此没有接入；每个变体仍需单独对照原图。
+
+![细长仙人掌废稿对照](/images/h3-environment-hd/desert-thin-cactus-rejected-compare.png)
