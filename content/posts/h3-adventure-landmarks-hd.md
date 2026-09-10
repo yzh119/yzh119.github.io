@@ -8,6 +8,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 This post records high-resolution replacements for interactive and large static landmarks. A landmark is not a flat background: unbuilt states, upgraded forms, occlusion and click bounds all need to survive, so new art only replaces the body layer inside the original resource.
 
+## Small knowledge buildings
+
+The Witch Hut and Learning Stone have also been redrawn. The hut retains its low straw roof, smoke and roots; the shrine retains its dome, columns and central bookstand. Both improve materials without changing their recognizable map scale.
+
+![Witch Hut and Learning Stone](/images/h3-environment-hd/knowledge-buildings-compare.png)
+
 ## Resource and service landmarks
 
 Mines, altars, wells, taverns, graveyards, oases, pyramids, boats and the three obelisk colours have replacements. Each keeps its original shadow, masks and metadata.
