@@ -32,6 +32,12 @@ The magic spring and Seer's Hut are now included as well. Their redrawn bodies a
 
 ![Magic spring and Seer's Hut](/images/h3-environment-hd/functional-landmarks-compare.png)
 
+## Reworked observatory and Dragon Utopia
+
+The earlier giant redwood was sharper but still read as an ordinary tree. It is now an unmistakable observatory: an exterior spiral stair, circular platform, lookout cabin, telescope and pennant all survive in the silhouette. Dragon Utopia is now a monumental dragon sanctuary with a dragon-head arch, wings, eggs and treasure.
+
+![Observatory and Dragon Utopia](/images/h3-environment-hd/observatory-utopia-compare.png)
+
 ## Waterside buildings
 
 The shipyard, marketplace and watering hole are registered separately, so they retain the original object behaviour rather than becoming a painted background.

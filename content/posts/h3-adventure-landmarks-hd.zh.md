@@ -32,6 +32,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![魔法泉与先知小屋](/images/h3-environment-hd/functional-landmarks-compare.png)
 
+## 瞭望塔与龙之国重做
+
+此前的巨型红木虽然更清晰，却仍像一棵普通树；这次将它重做为可一眼辨认的瞭望塔：外置螺旋梯、环形观景台、瞭望亭、望远镜和旗帜都进入主体轮廓。龙之国也改为带龙首拱门、巨翼、龙蛋和宝藏的巨大龙巢遗迹。
+
+![瞭望塔与龙之国](/images/h3-environment-hd/observatory-utopia-compare.png)
+
 ## 水边功能建筑
 
 船坞、市场与饮水点已单独接入；它们不是平铺背景，因此仍可维持原游戏的对象行为。
