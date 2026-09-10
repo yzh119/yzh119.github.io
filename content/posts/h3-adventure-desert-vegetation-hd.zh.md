@@ -11,3 +11,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![仙人掌高清对照](/images/h3-environment-hd/desert-cactus-hd-compare.png)
 
 主体图已同步为 2×、3×、4×；原始画布、阴影、遮挡和点击模板没有改动。全量资源校验仍为 0 错误。定制主体资源计数由 128 增至 **129**，其余资源继续保留完整 HD 基线等待逐类审查。
+
+随后补入双节柱状仙人掌，保留原版的刺冠和上下两段柱体。
+
+![柱状仙人掌高清对照](/images/h3-environment-hd/desert-column-cactus-hd-compare.png)
+
+定制主体资源现为 **130** 个。

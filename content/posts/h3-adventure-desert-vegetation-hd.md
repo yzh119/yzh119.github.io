@@ -11,3 +11,9 @@ Desert vegetation starts with a single cactus. It is small but a frequent silhou
 ![HD cactus comparison](/images/h3-environment-hd/desert-cactus-hd-compare.png)
 
 The body is installed at 2×, 3× and 4×. The native canvas, shadow, occlusion and hit template remain untouched, and the full resource check still reports zero errors. The customized-body count rises from 128 to **129**; remaining resources retain their complete HD baseline while they await category-by-category review.
+
+A two-segment column cactus followed, retaining its original spine crown and upper/lower barrel structure.
+
+![HD column-cactus comparison](/images/h3-environment-hd/desert-column-cactus-hd-compare.png)
+
+Customized body resources now total **130**.
