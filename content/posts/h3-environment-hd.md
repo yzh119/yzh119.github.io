@@ -177,3 +177,9 @@ Volcanic terrain now has lava-fissure mountains, desert terrain has multiple pal
 Small vegetation is now being redrawn by biome too. Rough-terrain thorn brush retains a dry, low-saturation silhouette, while swamp scenery uses reeds, wet roots and fungi. Each group is registered to multiple native layouts and retains the original object shadows and occlusion. The left side below is the HD baseline and the right side is the installed replacement.
 
 ![Thorn brush and swamp plants: HD baseline and actual replacements](/images/h3-environment-hd/brush-reeds-compare.png)
+
+### September 10, 2026: pyramid, ship and obelisks
+
+This batch adds a desert pyramid, a sailing ship and the three colored obelisks. Green, red and blue remain distinct rendered variants rather than being flattened into one gray model; every new body continues to use the original object canvas, shadows and visit template. The left side below is the HD baseline and the right side is the installed version.
+
+![Pyramid, ship and obelisks: HD baseline and actual replacements](/images/h3-environment-hd/pyramid-ship-obelisks-compare.png)
