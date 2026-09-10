@@ -18,4 +18,6 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 | 倍率 | 2×、3×、4× |
 | 缺帧、序列或画布错误 | 0 |
 
-校验器只检查资源完整性和几何一致性，允许后续生成式重绘替换主体图。因此这证明所有探险资源已有高清覆盖基线，不等于每个对象都已重绘。公开工具库已加入可重复运行的 [`verify_adventure_assets.py`](https://github.com/yzh119/h3-art-pipeline/blob/main/environment-art/verify_adventure_assets.py)。VCMI 源码没有修改。
+校验器只检查资源完整性和几何一致性，允许后续生成式重绘替换主体图。因此这证明所有探险资源已有高清覆盖基线，不等于每个对象都已重绘。
+
+随后启动 VCMI 测试客户端，日志确认 `h3-environment-hd` 已挂载 **74,739 个文件**，耗时 **182 ms**，并成功初始化渲染器；没有资源解析错误。该测试在启动阶段主动结束，不把它表述为完整地图通关验证。公开工具库已加入可重复运行的 [`verify_adventure_assets.py`](https://github.com/yzh119/h3-art-pipeline/blob/main/environment-art/verify_adventure_assets.py)。VCMI 源码没有修改。

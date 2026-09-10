@@ -18,4 +18,6 @@ The missing baseline was generated with original frames, shadows, foreground occ
 | Scales | 2×, 3×, 4× |
 | Missing frames, sequence or canvas errors | 0 |
 
-The verifier checks resource completeness and geometry only, so later generative repaint passes may replace visible bodies. This proves complete HD baseline coverage, not that every object has been artistically repainted. The public tool repository now includes the repeatable [`verify_adventure_assets.py`](https://github.com/yzh119/h3-art-pipeline/blob/main/environment-art/verify_adventure_assets.py). No VCMI source was modified.
+The verifier checks resource completeness and geometry only, so later generative repaint passes may replace visible bodies. This proves complete HD baseline coverage, not that every object has been artistically repainted.
+
+A VCMI test-client startup then mounted **74,739 files** from `h3-environment-hd` in **182 ms** and initialized the renderer without resource-parsing errors. The test was intentionally ended during startup, so it is not presented as a full map playthrough. The public tool repository now includes the repeatable [`verify_adventure_assets.py`](https://github.com/yzh119/h3-art-pipeline/blob/main/environment-art/verify_adventure_assets.py). No VCMI source was modified.
