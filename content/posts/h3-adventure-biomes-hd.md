@@ -24,6 +24,12 @@ Alongside grass, rough and snow, desert, swamp, subterranean and lava now have m
 
 ![Volcanic, desert and deadwood](/images/h3-environment-hd/volcanic-desert-deadwood-compare.png)
 
+## Woodland canopies
+
+The eight horizontal, vertical and square woodland-canopy footprints on the adventure map have their own replacements. Each retains its native object canvas and occlusion layers, preserving occupancy while the new bodies add layered foliage, visible trunks, ferns and stones.
+
+![Woodland canopies](/images/h3-environment-hd/woodland-canopies-compare.png)
+
 ## Forests, brush and wetlands
 
 Grass forests, pines, snowy trees, palms, dead trees, thorn brush and swamp reeds have been replaced group by group. These are not simple enlargements: generated art provides bark, foliage and rock detail, while the registration tool fits it back into the original object silhouette.

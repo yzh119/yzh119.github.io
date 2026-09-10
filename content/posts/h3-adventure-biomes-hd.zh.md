@@ -24,6 +24,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![熔岩、沙漠与枯木](/images/h3-environment-hd/volcanic-desert-deadwood-compare.png)
 
+## 林缘树冠
+
+探险地图上八种横向、竖向和方形林缘占格也已单独替换。每种仍沿用自己的对象画布和遮挡层，因此占位关系不变；新主体补出分层叶冠、可见树干、蕨类与石块。
+
+![林缘树冠](/images/h3-environment-hd/woodland-canopies-compare.png)
+
 ## 森林、灌木与湿地
 
 草地森林、针叶林、雪地树林、棕榈、枯木、荆棘与沼泽芦苇已逐组替换。它们不是简单把原版放大：生成图负责补出树皮、叶簇和岩层细节，注册工具再把结果放回原对象的透明轮廓中。
