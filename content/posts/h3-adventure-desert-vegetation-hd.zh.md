@@ -27,3 +27,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![丛生仙人掌高清对照](/images/h3-environment-hd/desert-cluster-cactus-hd-compare.png)
 
 定制主体资源现为 **131** 个。
+
+贴地灌丛变体也已接入，保持原版密集、低矮的小丛，而不是替换成大型仙人掌。
+
+![灌丛仙人掌高清对照](/images/h3-environment-hd/desert-bush-cactus-hd-compare.png)
+
+定制主体资源现为 **132** 个。

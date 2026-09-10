@@ -27,3 +27,9 @@ The low clustered cactus uses the new native-silhouette constraint: even if a ge
 ![HD cluster-cactus comparison](/images/h3-environment-hd/desert-cluster-cactus-hd-compare.png)
 
 Customized body resources now total **131**.
+
+The ground-hugging bush variant is also installed, retaining the original dense low cluster rather than becoming a large cactus.
+
+![HD bush-cactus comparison](/images/h3-environment-hd/desert-bush-cactus-hd-compare.png)
+
+Customized body resources now total **132**.
