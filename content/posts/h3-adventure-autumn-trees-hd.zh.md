@@ -11,3 +11,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![秋季双树高清对照](/images/h3-environment-hd/autumn-twin-trees-hd-compare.png)
 
 主体图使用原生透明轮廓约束，因此绘制不会越过原版外形；画布、遮挡、阴影和点击模板均未改变。资源已安装到 2×、3×、4×层，全量校验为 0 错误。定制主体资源现为 **133** 个。
+
+随后补入另一种双树和两种林团组合。所有主体图都以各自原版透明轮廓裁切，因此大林团仍保留原来的树冠边缘和地图遮挡范围。
+
+![秋季林团高清对照](/images/h3-environment-hd/autumn-grove-hd-compare.png)
+
+定制主体资源现为 **136** 个。
