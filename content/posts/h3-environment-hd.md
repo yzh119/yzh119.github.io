@@ -171,3 +171,9 @@ Mountain work now extends to desert mesas, moss-covered swamp crags and crystall
 Volcanic terrain now has lava-fissure mountains, desert terrain has multiple palm layouts, and deadwood clusters cover rough, dead and volcanic edges. These are independent map objects: the new body art is fitted only to the existing alpha area while shadows, occlusion, footprints and click templates remain unchanged. The left side below is the HD baseline and the right side is the installed version.
 
 ![Volcanic, palm and deadwood scenery: HD baseline and actual replacements](/images/h3-environment-hd/volcanic-desert-deadwood-compare.png)
+
+### September 10, 2026: thorn brush and swamp plants
+
+Small vegetation is now being redrawn by biome too. Rough-terrain thorn brush retains a dry, low-saturation silhouette, while swamp scenery uses reeds, wet roots and fungi. Each group is registered to multiple native layouts and retains the original object shadows and occlusion. The left side below is the HD baseline and the right side is the installed replacement.
+
+![Thorn brush and swamp plants: HD baseline and actual replacements](/images/h3-environment-hd/brush-reeds-compare.png)
