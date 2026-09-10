@@ -11,3 +11,9 @@ Snow pines begin with the smallest three-pine formation. The repaint retains the
 ![HD snow-pine comparison](/images/h3-environment-hd/snow-pines-hd-compare.png)
 
 The body is constrained by the native transparency silhouette. Canvas, shadow, occlusion and hit template stay unchanged, the asset is installed at 2×, 3× and 4×, the complete adventure-resource check reports zero errors, and customized bodies now total **149**.
+
+A second twin-pine combination followed, retaining its shorter left tree, taller right tree and snow layering.
+
+![HD snow twin-pine comparison](/images/h3-environment-hd/snow-pines-twin-hd-compare.png)
+
+Customized body resources now total **150**.

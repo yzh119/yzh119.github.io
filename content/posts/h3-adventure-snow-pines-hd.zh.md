@@ -11,3 +11,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![雪地松树高清对照](/images/h3-environment-hd/snow-pines-hd-compare.png)
 
 主体以原生透明轮廓约束，画布、阴影、遮挡和点击模板未改变，已同步至 2×、3×、4×层。完整探险资源校验为 0 错误，定制主体资源现为 **149** 个。
+
+随后补入另一种双松组合，保留左短右高的结构与覆雪层次。
+
+![雪地双松高清对照](/images/h3-environment-hd/snow-pines-twin-hd-compare.png)
+
+定制主体资源现为 **150** 个。
