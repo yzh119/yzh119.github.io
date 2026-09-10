@@ -17,3 +17,7 @@ The HD Hill Fort test did not pass review. Both drafts misread the original's lo
 <s>Sending the original sprite through an offline super-resolution model yields safe bulk HD art.</s> The test retained the broad outline but reconstructed the masonry, roof and edge treatment, so it still does not match the original. This method remains a source of natural-material reference only; it will not overwrite static buildings in bulk.
 
 ![Hill Fort offline super-resolution review](/images/h3-environment-hd/hill-fort-super-resolution-review.png)
+
+## Dragon Utopia: back to the original castle
+
+Dragon Utopia is another landmark that cannot be freely reimagined as a spectacle. It has been reinstalled with the original stone-castle composition: the four corner towers, central great roof, walls and rocky base retain their original relationship at 2×, 3× and 4×. Its hit canvas, occlusion outline and layer order are unchanged.
