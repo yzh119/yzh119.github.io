@@ -23,3 +23,11 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![雪地松林高清对照](/images/h3-environment-hd/snow-pine-groves-hd-compare.png)
 
 定制主体资源现为 **152** 个。
+
+## 整组完成
+
+余下四种雪地松林已补齐，`AVLSNTR0`–`AVLSNTR7` 八个原版雪地松树资源现全部使用定制主体图。每个松林仍由原始透明轮廓裁切，因此地图遮挡和占地完全沿用原作。
+
+![大型雪地松林高清对照](/images/h3-environment-hd/snow-large-pine-groves-hd-compare.png)
+
+定制主体资源现为 **156** 个；完整探险资源校验仍为 0 错误。

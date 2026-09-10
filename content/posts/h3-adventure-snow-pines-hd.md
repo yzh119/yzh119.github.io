@@ -23,3 +23,11 @@ Two small groves followed, retaining canopy height variation, gaps between trees
 ![HD snow-pine grove comparison](/images/h3-environment-hd/snow-pine-groves-hd-compare.png)
 
 Customized body resources now total **152**.
+
+## Complete set
+
+The remaining four snow-pine variants are now complete: all eight original `AVLSNTR0`–`AVLSNTR7` resources use custom body art. Each grove is still clipped through the original transparent silhouette, so map occlusion and footprint remain exactly as in the original.
+
+![Large snow pine grove HD comparison](/images/h3-environment-hd/snow-large-pine-groves-hd-compare.png)
+
+There are now **156** customized body resources, and the complete adventure-asset check remains at 0 errors.
