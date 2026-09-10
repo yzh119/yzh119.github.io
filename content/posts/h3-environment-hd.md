@@ -183,3 +183,9 @@ Small vegetation is now being redrawn by biome too. Rough-terrain thorn brush re
 This batch adds a desert pyramid, a sailing ship and the three colored obelisks. Green, red and blue remain distinct rendered variants rather than being flattened into one gray model; every new body continues to use the original object canvas, shadows and visit template. The left side below is the HD baseline and the right side is the installed version.
 
 ![Pyramid, ship and obelisks: HD baseline and actual replacements](/images/h3-environment-hd/pyramid-ship-obelisks-compare.png)
+
+### September 10, 2026: giant redwood
+
+The giant redwood is a frequent multi-tile scenery landmark, so it now has an individual high-detail body replacement. Roots and canopy are registered only within the native visible area, leaving the original shadows, occlusion and map footprint unchanged.
+
+![Giant redwood: HD baseline and actual replacement](/images/h3-environment-hd/redwood-compare.png)
