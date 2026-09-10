@@ -109,3 +109,9 @@ This update extends the package to the adventure map itself: eight static terrai
 This bulk pass is a high-quality scaling baseline, not an AI repaint of every frame. Each DEF retains its native canvas, animation groups, frame count, and body/shadow/overlay layers. It changes no object template, so anchors, footprint, blocking, click handling and visit logic remain in the original configuration. There are 953 object animation sets; with terrain and the existing resources, the mod contains 2,904 2×/3×/4× animation descriptions and 55,899 layer files, about 1 GB. Cache pressure on first entry to a large map remains something to watch.
 
 Package checks verified every animation description and layer file, including dimensions. A native test map started successfully and the client log confirmed actual reads of this mod's 4× `DIRTTL` terrain tiles. That map did not contain each building or neutral-creature class, so this is not presented as in-game visual acceptance for every object. Frequent landmarks such as mines and portals can receive separate generated-art refinements later under the same registration constraints.
+
+### Follow-up: actual art replacements
+
+The bulk HD baseline changes little at normal zoom, so it should not be presented as an art redraw. This follow-up redraws and installs the dusty mine, grassy mine and altar. The new bodies come from generative painting; the native canvas, shadows, overlays and object logic remain intact. The left column below is the bulk-HD baseline; the right column is the actual replacement.
+
+![Three adventure-map landmarks: baseline and actual redraw replacement](/images/h3-environment-hd/adventure-landmarks-compare.png)
