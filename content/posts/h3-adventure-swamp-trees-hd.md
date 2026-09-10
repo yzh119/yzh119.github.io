@@ -17,3 +17,11 @@ Two medium swamp groves followed, retaining the source art's wet blue-green shad
 ![HD swamp-grove comparison](/images/h3-environment-hd/swamp-groves-hd-compare.png)
 
 Customized body resources now total **144**.
+
+## Complete set
+
+The remaining four large swamp groves are now complete. All eight original swamp-tree resources, `AVLSWMP0`–`AVLSWMP7`, use customized body art. Every canopy is still clipped by the original transparency silhouette, so map occlusion and footprint remain the source game's.
+
+![HD large swamp-grove comparison](/images/h3-environment-hd/swamp-large-groves-hd-compare.png)
+
+Customized body resources now total **148**, and the complete adventure-resource check still reports zero errors.

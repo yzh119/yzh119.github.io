@@ -17,3 +17,11 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![沼泽林团高清对照](/images/h3-environment-hd/swamp-groves-hd-compare.png)
 
 定制主体资源现为 **144** 个。
+
+## 整组完成
+
+余下四种大型沼泽林团已补齐，`AVLSWMP0`–`AVLSWMP7` 八个原版沼泽树木资源现全部使用定制主体图。每个树冠仍由原始透明轮廓裁切，因此地图遮挡和占地完全沿用原作。
+
+![大型沼泽林团高清对照](/images/h3-environment-hd/swamp-large-groves-hd-compare.png)
+
+定制主体资源现为 **148** 个；完整探险资源校验仍为 0 错误。
