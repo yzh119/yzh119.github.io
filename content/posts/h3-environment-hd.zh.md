@@ -197,3 +197,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 `AVXTHRN` 是大型静态城堡型地图地标。本轮替换了主体美术，同时保留原画布、阴影、遮挡、占格和访问模板；它不是对城镇系统或城镇界面资源的替换。下图左为高清基线，右为当前版本。
 
 ![城堡型地标：高清基线和实际替换](/images/h3-environment-hd/castle-landmark-compare.png)
+
+### 2026-09-10：船坞、集市与水塘
+
+继续补入三种常见功能地标：船坞、集市和水塘。水塘是独立静态对象，不是全局海面或熔岩的调色板动画，因此可在不影响水体动画的前提下重绘。所有对象仍保留原画布、阴影、遮挡与访问模板。
+
+![船坞、集市与水塘：高清基线和实际替换](/images/h3-environment-hd/shipyard-market-waterhole-compare.png)

@@ -197,3 +197,9 @@ The client was then started on the actual `Good to Go` map. Logs confirm that th
 `AVXTHRN` is a large static castle-style map landmark. This pass replaces its body art while retaining the original canvas, shadows, occlusion, footprint and visit template; it does not replace the town system or town-interface resources. The left side below is the HD baseline and the right side is the current version.
 
 ![Castle landmark: HD baseline and actual replacement](/images/h3-environment-hd/castle-landmark-compare.png)
+
+### September 10, 2026: shipyard, marketplace and watering hole
+
+Three common functional landmarks now have replacements: shipyard, marketplace and watering hole. The watering hole is an independent static object rather than the global sea or lava palette animation, so it can be redrawn without affecting water animation. All objects retain their original canvas, shadows, occlusion and visit templates.
+
+![Shipyard, marketplace and watering hole: HD baseline and actual replacements](/images/h3-environment-hd/shipyard-market-waterhole-compare.png)
