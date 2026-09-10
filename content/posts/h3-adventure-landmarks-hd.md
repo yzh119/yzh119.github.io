@@ -18,6 +18,12 @@ Mines, altars, wells, taverns, graveyards, oases, pyramids, boats and the three 
 
 ![Pyramids, ships and obelisks](/images/h3-environment-hd/pyramid-ship-obelisks-compare.png)
 
+## Well variants by biome
+
+The rough-land and snow wells have distinct redraws while retaining the original small stone well, short wooden posts and roof proportions. Rough land keeps terracotta tiles and moss; snow uses a snow-capped roof and snow-dusted masonry.
+
+![Rough and snow wells](/images/h3-environment-hd/well-biomes-compare.png)
+
 ## Large landmarks
 
 The giant redwood and a large castle-style landmark have also been redrawn while retaining their native transparent silhouettes and layer order.

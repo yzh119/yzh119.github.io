@@ -18,6 +18,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![金字塔、船只与方尖碑](/images/h3-environment-hd/pyramid-ship-obelisks-compare.png)
 
+## 地貌水井变体
+
+粗糙地与雪地水井也分别重绘：保留原版的小型石井、短木柱和屋顶比例，粗糙地保留陶瓦与苔藓，雪地则使用积雪屋顶和覆雪石砌。
+
+![粗糙地与雪地水井](/images/h3-environment-hd/well-biomes-compare.png)
+
 ## 大型地标
 
 巨型红木和大型城堡式地标也已重绘，保留原来的透明轮廓与层级关系。
