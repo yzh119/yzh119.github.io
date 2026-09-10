@@ -34,9 +34,13 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ## 瞭望塔与龙之国重做
 
-此前的巨型红木虽然更清晰，却仍像一棵普通树；这次将它重做为可一眼辨认的瞭望塔：外置螺旋梯、环形观景台、瞭望亭、望远镜和旗帜都进入主体轮廓。龙之国也改为带龙首拱门、巨翼、龙蛋和宝藏的巨大龙巢遗迹。
+此前的巨型红木虽然更清晰，却仍像一棵普通树；这次将它重做为可一眼辨认的瞭望塔：外置螺旋梯、环形观景台、瞭望亭、望远镜和旗帜都进入主体轮廓。
 
-![瞭望塔与龙之国](/images/h3-environment-hd/observatory-utopia-compare.png)
+![瞭望塔](/images/h3-environment-hd/observatory-compare.png)
+
+~~龙之国的第一版把石制神殿扩张成了巨型龙巢，这个方向偏离了原作。~~ 修订版重新以原始轮廓为准：保留紧凑山墙、方形门洞、两侧石柱和暖灰砂岩配色，只增强砌石、风化和苔藓细节。
+
+![忠实原作的龙之国](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
 
 ## 水边功能建筑
 

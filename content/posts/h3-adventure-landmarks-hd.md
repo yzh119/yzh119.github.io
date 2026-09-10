@@ -34,9 +34,13 @@ The magic spring and Seer's Hut are now included as well. Their redrawn bodies a
 
 ## Reworked observatory and Dragon Utopia
 
-The earlier giant redwood was sharper but still read as an ordinary tree. It is now an unmistakable observatory: an exterior spiral stair, circular platform, lookout cabin, telescope and pennant all survive in the silhouette. Dragon Utopia is now a monumental dragon sanctuary with a dragon-head arch, wings, eggs and treasure.
+The earlier giant redwood was sharper but still read as an ordinary tree. It is now an unmistakable observatory: an exterior spiral stair, circular platform, lookout cabin, telescope and pennant all survive in the silhouette.
 
-![Observatory and Dragon Utopia](/images/h3-environment-hd/observatory-utopia-compare.png)
+![Observatory](/images/h3-environment-hd/observatory-compare.png)
+
+~~The first Dragon Utopia pass expanded the stone temple into a giant dragon roost, which drifted too far from the original.~~ The revision returns to the original compact gable, rectangular gate, side pillars and warm grey sandstone palette, adding only masonry, weathering and moss detail.
+
+![Faithful Dragon Utopia redraw](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
 
 ## Waterside buildings
 
