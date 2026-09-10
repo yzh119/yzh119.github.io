@@ -135,3 +135,9 @@ The bulk package supplied a high-resolution base, but ordinary map zoom still ke
 The left side below is the previous HD baseline and the right side is the installed material redraw. Ordinary water and lava use original palette animation, so they are deliberately outside this static repaint pass until their animation can be preserved.
 
 ![Terrain, roads and ice river: HD baseline and material redraw](/images/h3-environment-hd/material-redraw-compare.png)
+
+### September 9, 2026: forests and oasis across biomes
+
+The same registered-object workflow now adds broadleaf forest, rough-terrain pine forest, snow-covered fir forest and a desert oasis. The generated body layer changes, while shadows, occlusion, visit tiles and native object templates remain intact. The left side below is the HD baseline and the right side is the installed replacement.
+
+![Forests and oasis across biomes: HD baseline and actual replacements](/images/h3-environment-hd/biome-objects-compare.png)
