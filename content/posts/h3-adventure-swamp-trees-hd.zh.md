@@ -11,3 +11,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![沼泽小树高清对照](/images/h3-environment-hd/swamp-trees-hd-compare.png)
 
 两种主体图均由原生透明轮廓约束，画布、阴影、遮挡和点击模板未改变，已同步至 2×、3×、4×层。完整探险资源校验为 0 错误，定制主体资源现为 **142** 个。
+
+随后补入两种中型沼泽林团，保留原作的湿润蓝绿阴影、低矮不规则树冠和根系空隙；主体仍裁回每个资源的原生透明轮廓。
+
+![沼泽林团高清对照](/images/h3-environment-hd/swamp-groves-hd-compare.png)
+
+定制主体资源现为 **144** 个。
