@@ -165,3 +165,9 @@ The same approach now covers Skeleton Warriors, Walking Dead, Zombie Lords, Lich
 Mountain work now extends to desert mesas, moss-covered swamp crags and crystalline subterranean cliffs. Each new body is registered to the corresponding native mountain canvas and retains its occlusion, shadow and footprint. Multiple native variants remain in use per biome; this is not a single background pasted over the map. The left side below is the HD baseline and the right side is the actual replacement.
 
 ![Desert, swamp and subterranean mountains: HD baseline and actual replacements](/images/h3-environment-hd/mountains-biomes-compare.png)
+
+### September 10, 2026: volcanic, palm and deadwood scenery
+
+Volcanic terrain now has lava-fissure mountains, desert terrain has multiple palm layouts, and deadwood clusters cover rough, dead and volcanic edges. These are independent map objects: the new body art is fitted only to the existing alpha area while shadows, occlusion, footprints and click templates remain unchanged. The left side below is the HD baseline and the right side is the installed version.
+
+![Volcanic, palm and deadwood scenery: HD baseline and actual replacements](/images/h3-environment-hd/volcanic-desert-deadwood-compare.png)
