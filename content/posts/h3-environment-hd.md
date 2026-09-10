@@ -141,3 +141,9 @@ The left side below is the previous HD baseline and the right side is the instal
 The same registered-object workflow now adds broadleaf forest, rough-terrain pine forest, snow-covered fir forest and a desert oasis. The generated body layer changes, while shadows, occlusion, visit tiles and native object templates remain intact. The left side below is the HD baseline and the right side is the installed replacement.
 
 ![Forests and oasis across biomes: HD baseline and actual replacements](/images/h3-environment-hd/biome-objects-compare.png)
+
+### September 9, 2026: common interactive landmarks
+
+The wishing well, tavern and graveyard now have replacement body art too. All three are static map objects, so their original canvas, shadows, occlusion and visit templates remain safely intact while the new rendering is installed. The left side below is the HD baseline and the right side is the current version.
+
+![Common interactive landmarks: HD baseline and actual replacements](/images/h3-environment-hd/landmark-set-compare.png)
