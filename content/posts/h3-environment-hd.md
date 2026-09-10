@@ -115,3 +115,15 @@ Package checks verified every animation description and layer file, including di
 The bulk HD baseline changes little at normal zoom, so it should not be presented as an art redraw. This follow-up redraws and installs the dusty mine, grassy mine and altar. The new bodies come from generative painting; the native canvas, shadows, overlays and object logic remain intact. The left column below is the bulk-HD baseline; the right column is the actual replacement.
 
 ![Three adventure-map landmarks: baseline and actual redraw replacement](/images/h3-environment-hd/adventure-landmarks-compare.png)
+
+### September 9, 2026: grassland and rough-terrain mountain variants
+
+Mountains are `AVL` objects with blocking and occlusion, rather than terrain tiles. This pass paints distinct grassland and rough-terrain ridges, twin peaks, solitary crags, low shelves and rocky clefts: ten variants in total. Each new body is registered back into its native canvas while retaining the original shadows, occlusion and visit logic. The sheet below shows the bulk-HD baseline on the left and the generated mountain replacements on the right.
+
+![Ten grassland and rough-terrain mountain variants: baseline and actual replacements](/images/h3-environment-hd/mountain-variants-compare.png)
+
+### September 9, 2026: trees, shrubs and rocks
+
+New mountains surrounded by old pixel vegetation would look disconnected. For objects actually loaded by the test map, this pass adds two distinct tree groups, a grassland hedgerow, a rough-terrain thorn bush and a rough-terrain rock cluster. Client logs confirm actual reads of all five 4× resources; the left side is the baseline and the right side the new painted body.
+
+![Trees, shrubs and rocks: baseline and actual replacements](/images/h3-environment-hd/vegetation-compare.png)
