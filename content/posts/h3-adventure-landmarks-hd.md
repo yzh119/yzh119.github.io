@@ -26,6 +26,12 @@ The giant redwood and a large castle-style landmark have also been redrawn while
 
 ![Castle landmark](/images/h3-environment-hd/castle-landmark-compare.png)
 
+## Magic and knowledge landmarks
+
+The magic spring and Seer's Hut are now included as well. Their redrawn bodies are fitted back into the native silhouette, shadow and interaction resources, so visit rules remain intact.
+
+![Magic spring and Seer's Hut](/images/h3-environment-hd/functional-landmarks-compare.png)
+
 ## Waterside buildings
 
 The shipyard, marketplace and watering hole are registered separately, so they retain the original object behaviour rather than becoming a painted background.

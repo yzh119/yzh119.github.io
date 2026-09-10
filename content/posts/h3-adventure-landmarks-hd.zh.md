@@ -26,6 +26,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![大型城堡地标](/images/h3-environment-hd/castle-landmark-compare.png)
 
+## 魔法与知识地标
+
+魔法泉与先知小屋也已加入替换。主体重新绘制后仍套回原有轮廓、阴影和交互资源，因此不会影响访问规则。
+
+![魔法泉与先知小屋](/images/h3-environment-hd/functional-landmarks-compare.png)
+
 ## 水边功能建筑
 
 船坞、市场与饮水点已单独接入；它们不是平铺背景，因此仍可维持原游戏的对象行为。
