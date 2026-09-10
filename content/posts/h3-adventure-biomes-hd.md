@@ -1,5 +1,5 @@
 ---
-title: "[AI] Enhancing Heroes of Might and Magic III with generative AI: adventure-map biomes and vegetation"
+title: "[AI] Adventure map: biomes and vegetation"
 date: 2026-09-10T08:00:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true

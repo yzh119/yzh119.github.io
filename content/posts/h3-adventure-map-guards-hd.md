@@ -1,5 +1,5 @@
 ---
-title: "[AI] Enhancing Heroes of Might and Magic III with generative AI: adventure-map guards"
+title: "[AI] Adventure map: map guards"
 date: 2026-09-10T08:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true

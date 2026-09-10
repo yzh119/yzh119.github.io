@@ -1,5 +1,5 @@
 ---
-title: "[AI] Enhancing Heroes of Might and Magic III with generative AI: adventure-map landmarks"
+title: "[AI] Adventure map: landmarks"
 date: 2026-09-10T08:05:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
