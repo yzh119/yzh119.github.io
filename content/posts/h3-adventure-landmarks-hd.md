@@ -1,0 +1,35 @@
+---
+title: "[AI] Enhancing Heroes of Might and Magic III with generative AI: adventure-map landmarks"
+date: 2026-09-10T08:05:00+08:00
+series: ["Enhancing Heroes III with Generative AI"]
+ai: true
+tags: ["vcmi", "ai", "graphics", "astra"]
+---
+
+This post records high-resolution replacements for interactive and large static landmarks. A landmark is not a flat background: unbuilt states, upgraded forms, occlusion and click bounds all need to survive, so new art only replaces the body layer inside the original resource.
+
+## Resource and service landmarks
+
+Mines, altars, wells, taverns, graveyards, oases, pyramids, boats and the three obelisk colours have replacements. Each keeps its original shadow, masks and metadata.
+
+![Early landmarks](/images/h3-environment-hd/adventure-landmarks-compare.png)
+
+![Wells, taverns and graveyards](/images/h3-environment-hd/landmark-set-compare.png)
+
+![Pyramids, ships and obelisks](/images/h3-environment-hd/pyramid-ship-obelisks-compare.png)
+
+## Large landmarks
+
+The giant redwood and a large castle-style landmark have also been redrawn while retaining their native transparent silhouettes and layer order.
+
+![Giant redwood](/images/h3-environment-hd/redwood-compare.png)
+
+![Castle landmark](/images/h3-environment-hd/castle-landmark-compare.png)
+
+## Waterside buildings
+
+The shipyard, marketplace and watering hole are registered separately, so they retain the original object behaviour rather than becoming a painted background.
+
+![Shipyard, marketplace and watering hole](/images/h3-environment-hd/shipyard-market-waterhole-compare.png)
+
+When starting the Good to Go map locally, client logs actually read the new 4× redwood and rough-rock assets. That confirms mod parsing and asset selection, not a full-playthrough test. No VCMI source was changed.
