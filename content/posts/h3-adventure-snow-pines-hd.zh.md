@@ -17,3 +17,9 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![雪地双松高清对照](/images/h3-environment-hd/snow-pines-twin-hd-compare.png)
 
 定制主体资源现为 **150** 个。
+
+接着补入两种小林团，保留树冠高低、林间空隙和雪地基底；大面积白雪仍沿原版分布，未把松林变成一整块白色墙面。
+
+![雪地松林高清对照](/images/h3-environment-hd/snow-pine-groves-hd-compare.png)
+
+定制主体资源现为 **152** 个。

@@ -17,3 +17,9 @@ A second twin-pine combination followed, retaining its shorter left tree, taller
 ![HD snow twin-pine comparison](/images/h3-environment-hd/snow-pines-twin-hd-compare.png)
 
 Customized body resources now total **150**.
+
+Two small groves followed, retaining canopy height variation, gaps between trees and snowy bases. The original snow distribution remains intact, so the pines do not become a solid white wall.
+
+![HD snow-pine grove comparison](/images/h3-environment-hd/snow-pine-groves-hd-compare.png)
+
+Customized body resources now total **152**.
