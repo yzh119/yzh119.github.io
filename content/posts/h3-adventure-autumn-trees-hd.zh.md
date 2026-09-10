@@ -17,3 +17,11 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![秋季林团高清对照](/images/h3-environment-hd/autumn-grove-hd-compare.png)
 
 定制主体资源现为 **136** 个。
+
+## 整组完成
+
+余下四种大林团也已重绘，`AVLAUTR0`–`AVLAUTR7` 八个原版秋季树木资源现全部使用定制主体图。大面积树冠仍由各自原生透明轮廓裁切，因此轮廓、遮挡和地图占地完全沿用原作。
+
+![大型秋季林团高清对照](/images/h3-environment-hd/autumn-large-groves-hd-compare.png)
+
+定制主体资源现为 **140** 个；完整探险资源校验仍为 0 错误。

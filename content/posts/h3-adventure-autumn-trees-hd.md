@@ -17,3 +17,11 @@ A second twin-tree shape and two grove combinations followed. Every body is clip
 ![HD autumn-grove comparison](/images/h3-environment-hd/autumn-grove-hd-compare.png)
 
 Customized body resources now total **136**.
+
+## Complete set
+
+The remaining four large groves are also repainted. All eight original autumn-tree resources, `AVLAUTR0`–`AVLAUTR7`, now use customized body art. Large canopies are still clipped by their own native transparency silhouettes, so their outline, occlusion and map footprint remain the original ones.
+
+![HD large autumn-grove comparison](/images/h3-environment-hd/autumn-large-groves-hd-compare.png)
+
+Customized body resources now total **140**, and the full adventure-resource check still reports zero errors.
