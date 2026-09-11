@@ -20,4 +20,4 @@ The HD Hill Fort test did not pass review. Both drafts misread the original's lo
 
 ## Dragon Utopia: back to the original castle
 
-Dragon Utopia is another landmark that cannot be freely reimagined as a spectacle. It has been reinstalled with the original stone-castle composition: the four corner towers, central great roof, walls and rocky base retain their original relationship at 2×, 3× and 4×. Its hit canvas, occlusion outline and layer order are unchanged.
+<s>The generated Dragon Utopia revision was described as preserving the original stone-castle composition.</s> A later review found that it still turned the original into an unnecessary spectacle, so it has been withdrawn from the mod. The game now uses the native `AVSUTOP0` artwork unchanged; no generated replacement is installed. This retains the four corner towers, central roof, walls, rocky base, hit canvas, occlusion outline and layer order exactly as the original.

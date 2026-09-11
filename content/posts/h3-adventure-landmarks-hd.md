@@ -50,7 +50,7 @@ The earlier giant redwood was sharper but still read as an ordinary tree. It is 
 
 ![Observatory](/images/h3-environment-hd/observatory-compare.png)
 
-~~The first Dragon Utopia pass expanded the stone temple into a giant dragon roost, which drifted too far from the original.~~ The revision returns to the original compact gable, rectangular gate, side pillars and warm grey sandstone palette, adding only masonry, weathering and moss detail.
+<s>The first Dragon Utopia pass expanded the stone temple into a giant dragon roost; a later pass was planned to add only masonry, weathering and moss to the original outline.</s> Review still found the generated result too fantastical, so it has been fully withdrawn. The game now uses native `AVSUTOP0` artwork directly; this landmark has no generated replacement.
 
 ![Faithful Dragon Utopia redraw](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
 

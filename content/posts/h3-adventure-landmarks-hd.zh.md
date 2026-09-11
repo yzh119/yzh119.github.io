@@ -50,7 +50,7 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![瞭望塔](/images/h3-environment-hd/observatory-compare.png)
 
-~~龙之国的第一版把石制神殿扩张成了巨型龙巢，这个方向偏离了原作。~~ 修订版重新以原始轮廓为准：保留紧凑山墙、方形门洞、两侧石柱和暖灰砂岩配色，只增强砌石、风化和苔藓细节。
+<s>龙之国的第一版把石制神殿扩张成了巨型龙巢；随后曾计划在原轮廓上只增强砌石、风化和苔藓细节。</s> 再次审查后仍认为生成结果过于魔幻，已完全撤回。当前游戏直接使用原版 `AVSUTOP0`，不再用生成图替换这个地标。
 
 ![忠实原作的龙之国](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
 
