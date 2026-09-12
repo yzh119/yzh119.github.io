@@ -44,6 +44,12 @@ The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing c
 <s>The first Firebird Meshy bootstrap was ready to rig.</s> Eight-view inspection found that its tail and wing feathers had become disconnected fragments, so it could not deform reliably and was rejected before installation. A second, denser concept produced continuous body, wing and tail geometry. Blender supplies a restrained 28-frame wing-tension loop with matching rendered shadows, fitted to the source canvas; the high vertical side profile retains the original Firebird’s map readability without the native loop’s one oversized lateral frame.
 
 ![Native and Blender Firebird loop samples](/images/h3-environment-hd/firebird-guard-compare.png)
+## Black Dragon: 30-frame folded-wing loop
+
+Black Dragon is installed from a separate Meshy mesh and a Blender continuous automatic-weight flying-dragon rig. Its 30 body frames and 30 true 3D shadow frames keep the folded violet-black wing, ivory horns and low tail intact through the loop. The first side-view render was narrower than the source silhouette, so every Blender-rendered frame received the same horizontal projection calibration before canvas fitting. At 4×, the first body frame matches the native left and right bounds exactly and differs by one pixel vertically.
+
+![Native and Blender Black Dragon loop samples](/images/h3-environment-hd/black-dragon-guard-compare.png)
+
 ## Red Dragon: repaired 29-frame folded-wing loop
 
 <s>The first semantic wing-weight pass was suitable for the Red Dragon.</s> It split at the wing root, so it was replaced with a continuous automatic-weight flying-dragon armature. The installed version has 29 Blender body frames and 29 matching 3D shadow frames. The map camera retains the native’s prominent single folded wing, while the loop uses only controlled breathing, neck, tail and wing-tension motion. At 4× the first frame matches the native vertical envelope and lands about ten pixels inside each horizontal edge; this preserves click and occlusion space without clipping the wing.
