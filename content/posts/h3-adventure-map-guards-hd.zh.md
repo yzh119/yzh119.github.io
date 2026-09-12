@@ -34,3 +34,8 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 ![原版与 Blender 绿龙循环抽帧对照](/images/h3-environment-hd/green-dragon-guard-compare.png)
 
 本文继续作为野外守卫这一大类的记录：其他城镇生物只有在完整 Blender 动画完成后才会加入。资源启用于本地私有 mod；公开的只有可复用工具代码，VCMI 源码没有修改。
+## 金龙：独立模型，对齐升级形态轮廓
+
+金龙不是绿龙的调色版。原作朝左、单侧主翼的构图需要单独的原图引导 Meshy 模型，再由 Blender 骨骼调整为紧凑的半蹲守卫姿态。它在每个高清倍率都有独立的 30 帧主体与阴影循环；最终 4× 主体顶部与原版边界相差 4 像素，并保留原始画布和交互层。
+
+![原版与 Blender 金龙循环抽帧对照](/images/h3-environment-hd/gold-dragon-guard-compare.png)
