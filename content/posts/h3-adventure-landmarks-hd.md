@@ -1,5 +1,5 @@
 ---
-title: "[AI] Adventure map: landmarks"
+title: "Adventure map: landmarks"
 date: 2026-09-10T08:05:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
@@ -54,9 +54,11 @@ The earlier giant redwood was sharper but still read as an ordinary tree. It is 
 
 ![Observatory](/images/h3-environment-hd/observatory-compare.png)
 
-<s>The first Dragon Utopia pass expanded the stone temple into a giant dragon roost; a later pass was planned to add only masonry, weathering and moss to the original outline.</s> Review still found the generated result too fantastical, so it has been fully withdrawn. The game now uses native `AVSUTOP0` artwork directly; this landmark has no generated replacement.
+<s>The first Dragon Utopia pass expanded the stone temple into a giant dragon roost; a later pass was planned to add only masonry, weathering and moss to the original outline. Review still found the generated result too fantastical, so it was fully withdrawn and the game used native `AVSUTOP0` artwork directly.</s>
 
-![Faithful Dragon Utopia redraw](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
+The new review-approved redraw returns to the original's compact ochre-stone fortress: the same central keep, red tile roof hierarchy, four main round towers, curtain walls and pale rock base are retained. Detail is limited to masonry, roof tiles, weathering and restrained dragon reliefs. It is registered only into the native single-frame body layer at 2×, 3× and 4×; the source canvas, alpha footprint, interaction and layer order remain intact.
+
+![Native and final Dragon Utopia redraw](/images/h3-environment-hd/dragon-utopia-final-compare.png)
 
 ## Review record
 

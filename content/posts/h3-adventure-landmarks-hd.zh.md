@@ -1,5 +1,5 @@
 ---
-title: "[AI]探险地图：地标"
+title: "探险地图：地标"
 date: 2026-09-10T08:05:00+08:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
@@ -54,9 +54,11 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![瞭望塔](/images/h3-environment-hd/observatory-compare.png)
 
-<s>龙之国的第一版把石制神殿扩张成了巨型龙巢；随后曾计划在原轮廓上只增强砌石、风化和苔藓细节。</s> 再次审查后仍认为生成结果过于魔幻，已完全撤回。当前游戏直接使用原版 `AVSUTOP0`，不再用生成图替换这个地标。
+<s>龙之国的第一版把石制神殿扩张成了巨型龙巢；随后曾计划在原轮廓上只增强砌石、风化和苔藓细节。再次审查后仍认为生成结果过于魔幻，已完全撤回，游戏直接使用原版 `AVSUTOP0`。</s>
 
-![忠实原作的龙之国](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
+这次通过审查的重绘回到原作紧凑的黄褐色石砌堡垒：中央主堡、红瓦屋顶层级、四座主要圆塔、城墙和浅色岩基均被保留。新增细节仅限砌石、瓦片、风化与克制的龙纹浮雕。它只登记到原资源 2×、3×、4× 的单帧主体层；源画布、alpha 占位、交互和图层顺序均未改变。
+
+![原版与最终龙之国重绘](/images/h3-environment-hd/dragon-utopia-final-compare.png)
 
 ## 审查记录
 
