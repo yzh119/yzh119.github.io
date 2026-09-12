@@ -46,4 +46,6 @@ The current pass extends the same treatment to static environmental landmarks: r
 
 The complete **AVLR** ridge set is now included: rough-land rocks, subterranean stalagmites, snow forms, grass and desert variants, coastal stacks with wave foam, and the associated static trees. The source-directory audit found no remaining unenhanced AVLR sprite.
 
+The subsequent **AVLS** pass completes the static undergrowth and landmark families already covered: dry, grassland and frozen brush; swamp reeds, ferns, lilies and groundcover; snow shrubs and pine forests; and the underground stalagmite set. They use the same exact-mask registration, so a clearer canopy or mineral surface does not alter map placement or occlusion.
+
 The assets are enabled in a local private mod and require no VCMI source changes. This remains an ongoing replacement pass; unrepainted objects are not presented as complete.
