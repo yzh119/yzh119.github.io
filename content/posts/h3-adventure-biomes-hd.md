@@ -44,7 +44,7 @@ Grass forests, pines, snowy trees, palms, dead trees, thorn brush and swamp reed
 
 The current pass extends the same treatment to static environmental landmarks: rock clusters and ravines, rocky and snowy hills, snow trees and fallen logs, flowering shrubs, frozen lakes, shallow rocky water and cloud cover. Each body now reuses the original alpha mask exactly, so its footprint, occlusion and click geometry remain unchanged while the visible materials become clearer.
 
-The complete **AVLR** ridge set is now included: rough-land rocks, subterranean stalagmites, snow forms, grass and desert variants, coastal stacks with wave foam, and the associated static trees. The source-directory audit found no remaining unenhanced AVLR sprite.
+The complete **AVLR** ridge set is now included: rough-land rocks, subterranean stalagmites, snow forms, grass and desert variants, coastal stacks with wave foam, and the associated static trees. This expansion also completes the small static lava pools, wetland woodland, waterside trees and floating-leaf patches. Source-directory audits found no remaining unenhanced AVLR, AVLL, AVLW, AVLY or AVLK sprite.
 
 The **AVLS** static natural-scenery family is now complete. It includes dry, grassland and frozen brush; swamp reeds, ferns, lilies, ponds, fallen logs and groundcover; snow shrubs and pine forests; exposed roots, animal remains, fungal ground cover; and the underground stalagmite set. A source-directory audit found no remaining unenhanced AVLS sprite. Every body uses exact-mask registration, so clearer vegetation, wood and mineral surfaces do not alter map placement or occlusion.
 
