@@ -62,6 +62,10 @@ The magic spring, Seer's Hut and Library are now included as well. Library (`AVS
 
 ![Native and final Library redraw](/images/h3-environment-hd/library-final-compare.png)
 
+Temple (`AVSTMPL0`) now retains its original shallow stepped roof, two gold finials, front colonnade and central stair at a clearer material resolution. Its body is fitted to the native 2×, 3× and 4× bounds; shadows, overlays and interaction stay native.
+
+![Native and final Temple redraw](/images/h3-environment-hd/temple-final-compare.png)
+
 ## Reworked observatory and Dragon Utopia
 
 The earlier giant redwood was sharper but still read as an ordinary tree. It is now an unmistakable observatory: an exterior spiral stair, circular platform, lookout cabin, telescope and pennant all survive in the silhouette.

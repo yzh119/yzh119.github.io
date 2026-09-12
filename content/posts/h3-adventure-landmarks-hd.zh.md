@@ -62,6 +62,10 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![原版与最终图书馆重绘](/images/h3-environment-hd/library-final-compare.png)
 
+神庙（`AVSTMPL0`）现已在更清晰的材质层级中保留原有浅阶屋顶、两枚金饰、正面柱廊与中央台阶。主体适配回原始 2×、3×、4× 边界；阴影、覆盖层和交互继续使用原资源。
+
+![原版与最终神庙重绘](/images/h3-environment-hd/temple-final-compare.png)
+
 ## 瞭望塔与龙之国重做
 
 此前的巨型红木虽然更清晰，却仍像一棵普通树；这次将它重做为可一眼辨认的瞭望塔：外置螺旋梯、环形观景台、瞭望亭、望远镜和旗帜都进入主体轮廓。
