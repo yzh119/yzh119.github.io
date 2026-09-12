@@ -44,6 +44,12 @@ The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing c
 <s>The first Firebird Meshy bootstrap was ready to rig.</s> Eight-view inspection found that its tail and wing feathers had become disconnected fragments, so it could not deform reliably and was rejected before installation. A second, denser concept produced continuous body, wing and tail geometry. Blender supplies a restrained 28-frame wing-tension loop with matching rendered shadows, fitted to the source canvas; the high vertical side profile retains the original Firebird’s map readability without the native loop’s one oversized lateral frame.
 
 ![Native and Blender Firebird loop samples](/images/h3-environment-hd/firebird-guard-compare.png)
+## Minotaur: 29-frame armed humanoid loop
+
+Minotaur is installed from a separate Meshy mesh and a Blender conservative humanoid auto-rig. Its 29 rendered body frames keep the axe attached to the grip through a weighted center-of-mass, head and restrained arm-tension loop, with 29 matching true 3D shadows. A shared 1.04× vertical projection calibration restores the horn height; at 4× the first frame matches the native top, left and bottom bounds, with a one-pixel difference on the right.
+
+![Native and Blender Minotaur loop samples](/images/h3-environment-hd/minotaur-guard-compare.png)
+
 ## Roc: 30-frame folded-wing guard
 
 Roc is installed from a separate Meshy mesh with the Blender conservative flying-creature rig, 30 body frames and 30 matching true 3D shadows. The first camera crop cut the extended wing-tail silhouette, so the orthographic view was widened before rendering; a shared 1.4× vertical projection calibration then restored the native tall map envelope. At 4×, the first frame matches the native top, left and bottom bounds, with a one-pixel difference on the right.
