@@ -66,6 +66,12 @@ Temple (`AVSTMPL0`) now retains its original shallow stepped roof, two gold fini
 
 ![Native and final Temple redraw](/images/h3-environment-hd/temple-final-compare.png)
 
+## Garden of Revelation
+
+Garden of Revelation (`AVSGRDN0`) now retains its rounded hedge, small pale statue, front stone balustrade and flowerbed at a clearer 2×, 3× and 4× body resolution. The original canvas, body bounds, overlays and object behavior remain intact.
+
+![Native and final Garden of Revelation redraw](/images/h3-environment-hd/garden-final-compare.png)
+
 ## Reworked observatory and Dragon Utopia
 
 The earlier giant redwood was sharper but still read as an ordinary tree. It is now an unmistakable observatory: an exterior spiral stair, circular platform, lookout cabin, telescope and pennant all survive in the silhouette.

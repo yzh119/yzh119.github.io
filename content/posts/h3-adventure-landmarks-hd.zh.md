@@ -66,6 +66,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![原版与最终神庙重绘](/images/h3-environment-hd/temple-final-compare.png)
 
+## 启示花园
+
+启示花园（`AVSGRDN0`）现已在更清晰的 2×、3×、4× 主体中保留圆形灌木、小型浅色石像、前方石栏与花丛。原始画布、主体边界、覆盖层和对象行为保持不变。
+
+![原版与最终启示花园重绘](/images/h3-environment-hd/garden-final-compare.png)
+
 ## 瞭望塔与龙之国重做
 
 此前的巨型红木虽然更清晰，却仍像一棵普通树；这次将它重做为可一眼辨认的瞭望塔：外置螺旋梯、环形观景台、瞭望亭、望远镜和旗帜都进入主体轮廓。
