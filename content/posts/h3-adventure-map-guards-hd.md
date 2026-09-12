@@ -44,6 +44,10 @@ The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing c
 <s>The first Firebird Meshy bootstrap was ready to rig.</s> Eight-view inspection found that its tail and wing feathers had become disconnected fragments, so it could not deform reliably and was rejected before installation. A second, denser concept produced continuous body, wing and tail geometry. Blender supplies a restrained 28-frame wing-tension loop with matching rendered shadows, fitted to the source canvas; the high vertical side profile retains the original Firebird’s map readability without the native loop’s one oversized lateral frame.
 
 ![Native and Blender Firebird loop samples](/images/h3-environment-hd/firebird-guard-compare.png)
+## Red Dragon: rig pass rejected
+
+<s>The first Red Dragon wing rig was ready for its 29-frame map loop.</s> Blender review found broken weight seams at the wing root and torso during the folded-wing pose. The imported mesh itself remains continuous, but that semantic wing-weighting method is unsuitable for it. It has not been installed; the next pass will use a continuous automatic-weight flying-dragon rig.
+
 ## Chaos Dragon: dedicated ground-dragon rig
 
 Chaos Dragon is now installed as a separate Meshy mesh with a Blender ground-dragon armature. The first three-quarter map-camera pass compressed its width too much; a side-view pass and a broadened physical mesh restored the source silhouette. Its 29 body frames and 29 true 3D shadow frames use continuous automatic weights, with a restrained breathing, neck and tail loop. At 4×, the first frame’s body bounds exactly match the native `(79, 51)–(245, 256)` canvas envelope.
