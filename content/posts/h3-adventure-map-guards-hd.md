@@ -44,6 +44,10 @@ The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing c
 <s>The first Firebird Meshy bootstrap was ready to rig.</s> Eight-view inspection found that its tail and wing feathers had become disconnected fragments, so it could not deform reliably and was rejected before installation. A second, denser concept produced continuous body, wing and tail geometry. Blender supplies a restrained 28-frame wing-tension loop with matching rendered shadows, fitted to the source canvas; the high vertical side profile retains the original Firebird’s map readability without the native loop’s one oversized lateral frame.
 
 ![Native and Blender Firebird loop samples](/images/h3-environment-hd/firebird-guard-compare.png)
+## Basilisk: bootstrap rejected
+
+<s>The first Basilisk Meshy mesh was ready for a low quadruped rig.</s> Its topology audit found hundreds of disconnected components, and side inspection also showed a body width that the standard ground-dragon camera could not frame reliably. It has not been animated or installed. The retry will begin with a topology-focused concept and a dedicated low-quadruped camera/rig.
+
 ## Black Dragon: 30-frame folded-wing loop
 
 Black Dragon is installed from a separate Meshy mesh and a Blender continuous automatic-weight flying-dragon rig. Its 30 body frames and 30 true 3D shadow frames keep the folded violet-black wing, ivory horns and low tail intact through the loop. The first side-view render was narrower than the source silhouette, so every Blender-rendered frame received the same horizontal projection calibration before canvas fitting. At 4×, the first body frame matches the native left and right bounds exactly and differs by one pixel vertically.
