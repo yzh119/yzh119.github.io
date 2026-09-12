@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "[AI] Adventure map: magic schools"
 date: 2026-09-10T09:05:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]

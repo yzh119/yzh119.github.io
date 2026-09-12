@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Adventure map: HD land rocks"
 date: 2026-09-10T19:10:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]

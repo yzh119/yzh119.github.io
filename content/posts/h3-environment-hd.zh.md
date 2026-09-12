@@ -102,7 +102,7 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 工具和提示词放在 [h3-art-pipeline 的 environment-art](https://github.com/yzh119/h3-art-pipeline/tree/main/environment-art)。完整 mod、原始游戏资源和生成素材留在本地，博客只展示结果。
 
-> 后续探险地图更新已拆为三篇独立日志：[地貌与植被](/zh/posts/h3-adventure-biomes-hd/)、[地图地标](/zh/posts/h3-adventure-landmarks-hd/) 和 [野外守卫](/zh/posts/h3-adventure-map-guards-hd/)。下面保留原始连载记录，避免改写历史。
+> 探险地图公开展示现按大类整理为：[地貌与植被](/zh/posts/h3-adventure-biomes-hd/)、[地图地标](/zh/posts/h3-adventure-landmarks-hd/) 和 [海面与海岸](/zh/posts/h3-adventure-water-hd/)。此前的细分连载已收为仓库归档，内容未删除；守卫生物会在 Blender 3D 动画完成后进入新的“生物与活动物件”汇总。
 
 ## 2026-09-09 更新：探险地图 0.2.0
 

@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "[AI] Adventure map: autumn trees"
 date: 2026-09-10T10:52:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]

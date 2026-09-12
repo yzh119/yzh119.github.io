@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Adventure map: HD snow mountains"
 date: 2026-09-10T19:45:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]

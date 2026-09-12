@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Adventure map: underground lava branches complete"
 date: 2026-09-11T18:00:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]

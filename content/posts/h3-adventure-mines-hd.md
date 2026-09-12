@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "[AI] Adventure map: mine terrain variants"
 date: 2026-09-10T10:18:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]

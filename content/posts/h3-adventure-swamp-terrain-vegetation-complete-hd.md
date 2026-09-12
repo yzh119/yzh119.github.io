@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Adventure map: swamp terrain vegetation complete"
 date: 2026-09-12T00:00:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]

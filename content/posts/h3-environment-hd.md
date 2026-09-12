@@ -102,7 +102,7 @@ This intermediate composite retained the old flag mask. The upper flag floated b
 
 Reproduction tools and prompts are in [environment-art in h3-art-pipeline](https://github.com/yzh119/h3-art-pipeline/tree/main/environment-art). Complete mods, original game data and generated production assets stay local; the blog carries demonstrations.
 
-> Later adventure-map work is now split into focused posts: [biomes and vegetation](/posts/h3-adventure-biomes-hd/), [landmarks](/posts/h3-adventure-landmarks-hd/), and [map guards](/posts/h3-adventure-map-guards-hd/). The original serial record stays below so its history is not rewritten.
+> Public adventure-map coverage is now organized by major groups: [biomes and vegetation](/posts/h3-adventure-biomes-hd/), [landmarks](/posts/h3-adventure-landmarks-hd/), and [sea and shoreline](/posts/h3-adventure-water-hd/). Earlier focused installments remain archived in the repository rather than deleted; guards will join a new creatures-and-active-objects overview after their Blender 3D animation is complete.
 
 ## September 9, 2026 update: adventure map 0.2.0
 

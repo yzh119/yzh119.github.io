@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "Adventure map: HD twisted-root terrain"
 date: 2026-09-11T02:00:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]

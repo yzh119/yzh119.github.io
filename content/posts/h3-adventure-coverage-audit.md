@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "[AI] Adventure map: full HD coverage audit"
 date: 2026-09-10T09:30:00+08:00
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]
