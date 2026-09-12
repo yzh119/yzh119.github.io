@@ -52,7 +52,7 @@ Minotaur is installed from a separate Meshy mesh and a Blender conservative huma
 
 ## Ogre: Mesh bootstrap unavailable
 
-<s>The Ogre concept could proceed directly into the verified armed-humanoid Meshy-to-Blender path.</s> Meshy rejected the model submission with HTTP 402 before a mesh was created. No proxy sprite, static loop, or substitute animation was installed; this is an external generation/credit failure, rather than an art-quality rejection.
+<s>The Ogre concept could proceed directly into the verified armed-humanoid Meshy-to-Blender path.</s> Meshy rejected the model submission with HTTP 402 before a mesh was created. A later retry returned the same 402. No proxy sprite, static loop, or substitute animation was installed; this is an external generation/credit failure, rather than an art-quality rejection.
 
 ## Roc: 30-frame folded-wing guard
 
