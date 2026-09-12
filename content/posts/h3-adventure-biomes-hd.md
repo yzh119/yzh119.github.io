@@ -6,7 +6,7 @@ ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
 ---
 
-This post covers adventure-map ground, mountains and vegetation. The earlier long post remains as a development archive; map work is now published as focused updates.
+This post covers adventure-map ground, mountains and vegetation. The earlier long post remains as a development archive; ~~map work is now published as focused updates.~~ Updates are now consolidated by broad category, so this page is the public record for natural scenery rather than a stream of small asset posts.
 
 ## Replaceable ground materials
 
@@ -39,5 +39,9 @@ Grass forests, pines, snowy trees, palms, dead trees, thorn brush and swamp reed
 ![Brush and reeds](/images/h3-environment-hd/brush-reeds-compare.png)
 
 ![Natural objects across biomes](/images/h3-environment-hd/biome-objects-compare.png)
+
+## Natural-scenery expansion
+
+The current pass extends the same treatment to static environmental landmarks: rock clusters and ravines, rocky and snowy hills, snow trees and fallen logs, flowering shrubs, frozen lakes, shallow rocky water and cloud cover. Each body now reuses the original alpha mask exactly, so its footprint, occlusion and click geometry remain unchanged while the visible materials become clearer.
 
 The assets are enabled in a local private mod and require no VCMI source changes. This remains an ongoing replacement pass; unrepainted objects are not presented as complete.
