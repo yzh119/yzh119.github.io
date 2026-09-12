@@ -39,3 +39,8 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 金龙不是绿龙的调色版。原作朝左、单侧主翼的构图需要单独的原图引导 Meshy 模型，再由 Blender 骨骼调整为紧凑的半蹲守卫姿态。它在每个高清倍率都有独立的 30 帧主体与阴影循环；最终 4× 主体顶部与原版边界相差 4 像素，并保留原始画布和交互层。
 
 ![原版与 Blender 金龙循环抽帧对照](/images/h3-environment-hd/gold-dragon-guard-compare.png)
+## 火鸟：一次被拒绝的网格与修复后的飞行循环
+
+<s>第一版火鸟 Meshy bootstrap 已可绑定。</s> 八向审查发现其尾羽和翼羽变成脱离主体的碎片，无法可靠变形，因此在安装前已弃用。第二版更紧凑的概念生成了连续的身体、翅膀和尾部几何体。Blender 制作了 28 帧克制的翼部张力循环与对应阴影，并放入原始画布；高而紧凑的侧向轮廓保住了原版火鸟在地图上的可读性，也避免原版循环中单帧过大的横向展开。
+
+![原版与 Blender 火鸟循环抽帧对照](/images/h3-environment-hd/firebird-guard-compare.png)

@@ -39,3 +39,8 @@ The map guard article remains a category record: additional town creatures will 
 The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing composition required a separate source-guided Meshy model, then a Blender rig adjusted into the original compact semi-crouched guard stance. It has its own 30-frame body and shadow loop at each HD scale; the final 4× body boundary is within four pixels of the native top edge while retaining the source canvas and interaction layers.
 
 ![Native and Blender Gold Dragon loop samples](/images/h3-environment-hd/gold-dragon-guard-compare.png)
+## Firebird: a rejected mesh and the repaired flight loop
+
+<s>The first Firebird Meshy bootstrap was ready to rig.</s> Eight-view inspection found that its tail and wing feathers had become disconnected fragments, so it could not deform reliably and was rejected before installation. A second, denser concept produced continuous body, wing and tail geometry. Blender supplies a restrained 28-frame wing-tension loop with matching rendered shadows, fitted to the source canvas; the high vertical side profile retains the original Firebird’s map readability without the native loop’s one oversized lateral frame.
+
+![Native and Blender Firebird loop samples](/images/h3-environment-hd/firebird-guard-compare.png)
