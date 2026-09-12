@@ -44,3 +44,8 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 <s>第一版火鸟 Meshy bootstrap 已可绑定。</s> 八向审查发现其尾羽和翼羽变成脱离主体的碎片，无法可靠变形，因此在安装前已弃用。第二版更紧凑的概念生成了连续的身体、翅膀和尾部几何体。Blender 制作了 28 帧克制的翼部张力循环与对应阴影，并放入原始画布；高而紧凑的侧向轮廓保住了原版火鸟在地图上的可读性，也避免原版循环中单帧过大的横向展开。
 
 ![原版与 Blender 火鸟循环抽帧对照](/images/h3-environment-hd/firebird-guard-compare.png)
+## 仙女龙：紧凑的 33 帧循环
+
+仙女龙使用独立的原图引导 Meshy 网格与 Blender 骨骼。第一轮 Blender 合成相对原版卷尾轮廓过高过窄，因此在接入前重新以紧凑比例渲染。最终 33 张主体帧和 33 张对应阴影帧保留原始画布；在 4×下主体左右边界均与原版相差 4 像素以内。
+
+![原版与 Blender 仙女龙循环抽帧对照](/images/h3-environment-hd/fairy-dragon-guard-compare.png)
