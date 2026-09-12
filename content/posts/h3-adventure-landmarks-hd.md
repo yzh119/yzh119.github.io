@@ -62,9 +62,11 @@ The new review-approved redraw returns to the original's compact ochre-stone for
 
 ## Review record
 
-The HD Hill Fort test is also rejected: both drafts mistook the original low central roof for an extra tower and turned a compact outpost into a castle. An offline super-resolution trial retained the broad outline but rebuilt masonry, roof and edges, so it is reference material only and will not overwrite buildings. Static landmarks now pass only when their tower count, roof hierarchy, entrance placement, footprint and native interaction canvas agree with the original.
+<s>The initial HD Hill Fort test was rejected: both drafts mistook the original low central roof for an extra tower and turned a compact outpost into a castle. An offline super-resolution trial retained the broad outline but rebuilt masonry, roof and edges, so it is reference material only and will not overwrite buildings.</s>
 
-![Hill Fort fidelity review](/images/h3-environment-hd/hill-fort-fidelity-review.png)
+The 2026 retry confirms the same constraint. Its first redraw invented a curtain wall and a front tower; its second retained those inventions and also returned a checkerboard backdrop. Neither asset was registered. Hill Fort remains native until a redraw preserves its three towers, one low central roof, entrance placement, footprint and native interaction canvas.
+
+![Hill Fort 2026 retry review](/images/h3-environment-hd/hill-fort-2026-retry-review.png)
 
 ## Waterside buildings
 
