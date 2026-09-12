@@ -80,6 +80,12 @@ The new review-approved redraw returns to the original's compact ochre-stone for
 
 ## Review record
 
+### Axis Mundi retry
+
+<s>Axis Mundi could be redrawn as the original five-spoke wheel on its low stone plinth.</s> Both 2026 attempts rendered six spokes despite explicit five-spoke constraints. They were rejected before registration; `AVSAXIS0` remains native.
+
+![Axis Mundi retry review](/images/h3-environment-hd/axis-mundi-retry-review.png)
+
 <s>The initial HD Hill Fort test was rejected: both drafts mistook the original low central roof for an extra tower and turned a compact outpost into a castle. An offline super-resolution trial retained the broad outline but rebuilt masonry, roof and edges, so it is reference material only and will not overwrite buildings.</s>
 
 The 2026 retry confirms the same constraint. Its first redraw invented a curtain wall and a front tower; its second retained those inventions and also returned a checkerboard backdrop. Neither asset was registered. Hill Fort remains native until a redraw preserves its three towers, one low central roof, entrance placement, footprint and native interaction canvas.
