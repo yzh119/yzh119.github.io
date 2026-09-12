@@ -66,6 +66,12 @@ Chaos Dragon is now installed as a separate Meshy mesh with a Blender ground-dra
 
 ![Native and Blender Chaos Dragon loop samples](/images/h3-environment-hd/chaos-dragon-guard-compare.png)
 
+## Azure Dragon: repaired ground-dragon loop
+
+<s>The first Azure Dragon used a flying-dragon armature.</s> Its semantic forelimb weighting split during the loop and was rejected. The installed pass uses the dedicated continuous automatic-weight ground-dragon rig proven on Chaos Dragon. All 37 Blender body frames and 37 true 3D shadows preserve a compact breath, neck and tail loop without tearing. A shared vertical projection calibration aligns the first 4× frame’s top and bottom bounds with the native canvas; the right edge differs by one pixel.
+
+![Native and Blender Azure Dragon loop samples](/images/h3-environment-hd/azure-dragon-guard-compare.png)
+
 ## Azure Dragon: rejected during rig validation
 
 <s>The first Azure Dragon Meshy bootstrap was ready to install after a 37-frame Blender render.</s> Map-canvas comparison showed that the first fit was too narrow and dark. A broadened, brighter second fit corrected those proportions, but animation review exposed unstable forelimb weights that split the silhouette during the loop. It remains uninstalled. The next pass will use a dedicated low, wingless quadruped rig rather than the flying-dragon armature.
