@@ -24,6 +24,10 @@ Mines, altars, wells, taverns, graveyards, oases, pyramids, boats and the three 
 
 ![Pyramids, ships and obelisks](/images/h3-environment-hd/pyramid-ship-obelisks-compare.png)
 
+## Terrain signposts
+
+The five single-frame terrain signposts are now redrawn for grass, sand, lava, snow and water. Their boards keep the original non-readable marking pattern, while the native alpha masks preserve their posts and terrain bases. Multi-frame landmarks remain on native art until their Blender animation work is complete.
+
 ## Well variants by biome
 
 The rough-land and snow wells have distinct redraws while retaining the original small stone well, short wooden posts and roof proportions. Rough land keeps terracotta tiles and moss; snow uses a snow-capped roof and snow-dusted masonry.
