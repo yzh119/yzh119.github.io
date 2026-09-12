@@ -44,6 +44,12 @@ The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing c
 <s>The first Firebird Meshy bootstrap was ready to rig.</s> Eight-view inspection found that its tail and wing feathers had become disconnected fragments, so it could not deform reliably and was rejected before installation. A second, denser concept produced continuous body, wing and tail geometry. Blender supplies a restrained 28-frame wing-tension loop with matching rendered shadows, fitted to the source canvas; the high vertical side profile retains the original Firebird’s map readability without the native loop’s one oversized lateral frame.
 
 ![Native and Blender Firebird loop samples](/images/h3-environment-hd/firebird-guard-compare.png)
+## Roc: 30-frame folded-wing guard
+
+Roc is installed from a separate Meshy mesh with the Blender conservative flying-creature rig, 30 body frames and 30 matching true 3D shadows. The first camera crop cut the extended wing-tail silhouette, so the orthographic view was widened before rendering; a shared 1.4× vertical projection calibration then restored the native tall map envelope. At 4×, the first frame matches the native top, left and bottom bounds, with a one-pixel difference on the right.
+
+![Native and Blender Roc loop samples](/images/h3-environment-hd/roc-guard-compare.png)
+
 ## Griffin: 28-frame folded-feather loop
 
 Griffin is installed from a separate Meshy mesh and a Blender conservative automatic flying-creature rig. Its imported feather construction contains many components, but full pose review found no visible breakage in the 28-frame restrained body, head, tail and wing-tension loop, with 28 matching true 3D shadows. A shared vertical projection calibration restores the native high folded-wing envelope: the first 4× frame matches left, right and bottom bounds, and differs by three pixels at the top.
