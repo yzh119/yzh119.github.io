@@ -50,6 +50,10 @@ Minotaur is installed from a separate Meshy mesh and a Blender conservative huma
 
 ![Native and Blender Minotaur loop samples](/images/h3-environment-hd/minotaur-guard-compare.png)
 
+## Ogre: Mesh bootstrap unavailable
+
+<s>The Ogre concept could proceed directly into the verified armed-humanoid Meshy-to-Blender path.</s> Meshy rejected the model submission with HTTP 402 before a mesh was created. No proxy sprite, static loop, or substitute animation was installed; this is an external generation/credit failure, rather than an art-quality rejection.
+
 ## Roc: 30-frame folded-wing guard
 
 Roc is installed from a separate Meshy mesh with the Blender conservative flying-creature rig, 30 body frames and 30 matching true 3D shadows. The first camera crop cut the extended wing-tail silhouette, so the orthographic view was widened before rendering; a shared 1.4× vertical projection calibration then restored the native tall map envelope. At 4×, the first frame matches the native top, left and bottom bounds, with a one-pixel difference on the right.
