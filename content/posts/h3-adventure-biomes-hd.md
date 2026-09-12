@@ -44,4 +44,6 @@ Grass forests, pines, snowy trees, palms, dead trees, thorn brush and swamp reed
 
 The current pass extends the same treatment to static environmental landmarks: rock clusters and ravines, rocky and snowy hills, snow trees and fallen logs, flowering shrubs, frozen lakes, shallow rocky water and cloud cover. Each body now reuses the original alpha mask exactly, so its footprint, occlusion and click geometry remain unchanged while the visible materials become clearer.
 
+The complete **AVLR** ridge set is now included: rough-land rocks, subterranean stalagmites, snow forms, grass and desert variants, coastal stacks with wave foam, and the associated static trees. The source-directory audit found no remaining unenhanced AVLR sprite.
+
 The assets are enabled in a local private mod and require no VCMI source changes. This remains an ongoing replacement pass; unrepainted objects are not presented as complete.
