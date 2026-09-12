@@ -66,6 +66,12 @@ Temple (`AVSTMPL0`) now retains its original shallow stepped roof, two gold fini
 
 ![Native and final Temple redraw](/images/h3-environment-hd/temple-final-compare.png)
 
+## Idol of Fortune
+
+Idol of Fortune (`AVSIDOL0`) now preserves the native totem proportions, five crest pieces and three front beads in a clearer single-frame body at 2×, 3× and 4×. The original canvas, shadows, overlays and object behavior remain intact.
+
+![Native and final Idol of Fortune redraw](/images/h3-environment-hd/idol-final-compare.png)
+
 ## Garden of Revelation
 
 Garden of Revelation (`AVSGRDN0`) now retains its rounded hedge, small pale statue, front stone balustrade and flowerbed at a clearer 2×, 3× and 4× body resolution. The original canvas, body bounds, overlays and object behavior remain intact.
