@@ -44,6 +44,12 @@ The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing c
 <s>The first Firebird Meshy bootstrap was ready to rig.</s> Eight-view inspection found that its tail and wing feathers had become disconnected fragments, so it could not deform reliably and was rejected before installation. A second, denser concept produced continuous body, wing and tail geometry. Blender supplies a restrained 28-frame wing-tension loop with matching rendered shadows, fitted to the source canvas; the high vertical side profile retains the original Firebird’s map readability without the native loop’s one oversized lateral frame.
 
 ![Native and Blender Firebird loop samples](/images/h3-environment-hd/firebird-guard-compare.png)
+## Unicorn: 30-frame grounded animal loop
+
+Unicorn is installed from a separate Meshy mesh, Blender automatic quadruped weighting, and a restrained 30-frame breathing, neck and tail loop with 30 true 3D shadows. Although its import audit exposes separate construction components, full pose review showed no visible cracks across the motion; the model is accepted on rendered continuity rather than component count alone. A shared horizontal projection calibration restores the source’s broad four-leg footprint. At 4×, the first frame matches the native left, right and bottom bounds and differs by one pixel at the top.
+
+![Native and Blender Unicorn loop samples](/images/h3-environment-hd/unicorn-guard-compare.png)
+
 ## Stone Golem: procedural fallback rejected
 
 <s>The fragmented Meshy Stone Golem could be repaired by a simple procedural block rig.</s> The Blender-authored modules held together correctly under rigid controllers, but the resulting form read as a mechanical block robot rather than the original weathered stone guardian. It was rejected before installation. This validates the controlled fallback technically, but visual fidelity still decides acceptance.
