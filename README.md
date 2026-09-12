@@ -25,7 +25,8 @@ Push to `main` — GitHub Actions builds and deploys automatically.
 ## Local preview
 
 ```bash
-hugo server -D          # includes drafts, open http://localhost:1313
+hugo server             # published site only; archived resource notes remain hidden
+hugo server -D          # review archived drafts only
 ```
 
 ## Structure
