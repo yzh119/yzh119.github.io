@@ -42,6 +42,12 @@ The giant redwood and a large castle-style landmark have also been redrawn while
 
 ![Castle landmark](/images/h3-environment-hd/castle-landmark-compare.png)
 
+## Arena
+
+Arena (`AVSARNA0`) is now redrawn as a compact limestone amphitheater with the original three arcade tiers, oval interior, front entrance and steps. Its generated checkerboard backdrop was removed by retaining only the connected object alpha; a final vertical projection calibration makes the 2×, 3× and 4× body bounds match the native top, left, right and bottom. Native shadows, overlays, canvas and object behavior remain unchanged.
+
+![Native and final Arena redraw](/images/h3-environment-hd/arena-final-compare.png)
+
 ## Magic and knowledge landmarks
 
 The magic spring and Seer's Hut are now included as well. Their redrawn bodies are fitted back into the native silhouette, shadow and interaction resources, so visit rules remain intact.

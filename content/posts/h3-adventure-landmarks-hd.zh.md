@@ -42,6 +42,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![大型城堡地标](/images/h3-environment-hd/castle-landmark-compare.png)
 
+## 竞技场
+
+竞技场（`AVSARNA0`）现已重绘为保留原作三层拱廊、椭圆内部、正面入口与台阶的紧凑石灰岩建筑。生成图的棋盘背景通过只保留连通的主体 alpha 清除；最终纵向投影校正使 2×、3×、4× 主体的顶部、左右与底部边界都与原资源一致。原始阴影、覆盖层、画布和对象行为均未改变。
+
+![原版与最终竞技场重绘](/images/h3-environment-hd/arena-final-compare.png)
+
 ## 魔法与知识地标
 
 魔法泉与先知小屋也已加入替换。主体重新绘制后仍套回原有轮廓、阴影和交互资源，因此不会影响访问规则。
