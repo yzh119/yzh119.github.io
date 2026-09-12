@@ -104,6 +104,8 @@ The new review-approved redraw returns to the original's compact ochre-stone for
 
 <s>Mercenary Camp `AVSMERC0` could preserve its four tents, small campfire and spear rack in a crisp redraw.</s> The candidate changed the tent arrangement and added a background, shield and other unreferenced elements, so it was rejected before registration.
 
+<s>School of War `AVSSCHM0` could retain its compact three-tier ring tower.</s> Its candidate introduced a background and exaggerated the roof and tower proportions, so it was rejected before registration.
+
 <s>The initial HD Hill Fort test was rejected: both drafts mistook the original low central roof for an extra tower and turned a compact outpost into a castle. An offline super-resolution trial retained the broad outline but rebuilt masonry, roof and edges, so it is reference material only and will not overwrite buildings.</s>
 
 The 2026 retry confirms the same constraint. Its first redraw invented a curtain wall and a front tower; its second retained those inventions and also returned a checkerboard backdrop. Neither asset was registered. Hill Fort remains native until a redraw preserves its three towers, one low central roof, entrance placement, footprint and native interaction canvas.
