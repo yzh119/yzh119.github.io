@@ -48,6 +48,8 @@ The Gold Dragon is not a recoloured Green Dragon. Its left-facing, single-wing c
 
 <s>The first Basilisk Meshy mesh was ready for a low quadruped rig.</s> Its topology audit found hundreds of disconnected components, and side inspection also showed a body width that the standard ground-dragon camera could not frame reliably. It has not been animated or installed. The retry will begin with a topology-focused concept and a dedicated low-quadruped camera/rig.
 
+<s>The topology-focused Basilisk retry produced a usable single connected mesh.</s> The simpler second concept reduced but did not solve fragmentation: its audit still found 226 components, including 220 small components. It remains unanimated and uninstalled.
+
 ## Black Dragon: 30-frame folded-wing loop
 
 Black Dragon is installed from a separate Meshy mesh and a Blender continuous automatic-weight flying-dragon rig. Its 30 body frames and 30 true 3D shadow frames keep the folded violet-black wing, ivory horns and low tail intact through the loop. The first side-view render was narrower than the source silhouette, so every Blender-rendered frame received the same horizontal projection calibration before canvas fitting. At 4×, the first body frame matches the native left and right bounds exactly and differs by one pixel vertically.
