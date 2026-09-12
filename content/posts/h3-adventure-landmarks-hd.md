@@ -50,9 +50,11 @@ Arena (`AVSARNA0`) is now redrawn as a compact limestone amphitheater with the o
 
 ## Magic and knowledge landmarks
 
-The magic spring and Seer's Hut are now included as well. Their redrawn bodies are fitted back into the native silhouette, shadow and interaction resources, so visit rules remain intact.
+The magic spring, Seer's Hut and Library are now included as well. Library (`AVSLIBR0`) retains its two low roof wings, centered pediment and stair, open colonnade and small foundation stones; its 2×, 3× and 4× body bounds were vertically calibrated to the native placement. Their redrawn bodies leave native shadows and interaction resources intact, so visit rules remain unchanged.
 
 ![Magic spring and Seer's Hut](/images/h3-environment-hd/functional-landmarks-compare.png)
+
+![Native and final Library redraw](/images/h3-environment-hd/library-final-compare.png)
 
 ## Reworked observatory and Dragon Utopia
 

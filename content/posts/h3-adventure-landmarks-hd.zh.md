@@ -50,9 +50,11 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ## 魔法与知识地标
 
-魔法泉与先知小屋也已加入替换。主体重新绘制后仍套回原有轮廓、阴影和交互资源，因此不会影响访问规则。
+魔法泉、先知小屋和图书馆也已加入替换。图书馆（`AVSLIBR0`）保留两侧低矮屋顶、居中的山花与台阶、开放柱廊和小型地基石；其 2×、3×、4× 主体边界经纵向校正后与原始位置一致。重绘主体继续沿用原始阴影和交互资源，因此不会影响访问规则。
 
 ![魔法泉与先知小屋](/images/h3-environment-hd/functional-landmarks-compare.png)
+
+![原版与最终图书馆重绘](/images/h3-environment-hd/library-final-compare.png)
 
 ## 瞭望塔与龙之国重做
 
