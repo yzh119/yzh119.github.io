@@ -1,6 +1,7 @@
 ---
 title: "[AI]探险地图：保真约束与一次废稿"
 date: 2026-09-10T10:32:00+08:00
+draft: true
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]

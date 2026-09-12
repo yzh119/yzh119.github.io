@@ -58,6 +58,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![忠实原作的龙之国](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
 
+## 审查记录
+
+山堡的高清测试同样已弃用：两份草稿都把原版中央的低矮屋顶误读为额外塔楼，把紧凑前哨画成了城堡。离线超分样张虽保住大轮廓，却重构了石材、屋顶和边缘，因此只作材质参考，不会批量覆盖建筑。静态地标只有在塔楼数量、屋顶层级、入口位置、占地和原始交互画框都与原作一致时才会接入。
+
+![山堡保真度审查](/images/h3-environment-hd/hill-fort-fidelity-review.png)
+
 ## 水边功能建筑
 
 船坞、市场与饮水点已单独接入；它们不是平铺背景，因此仍可维持原游戏的对象行为。

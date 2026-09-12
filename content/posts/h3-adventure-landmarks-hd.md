@@ -58,6 +58,12 @@ The earlier giant redwood was sharper but still read as an ordinary tree. It is 
 
 ![Faithful Dragon Utopia redraw](/images/h3-environment-hd/dragon-utopia-faithful-compare.png)
 
+## Review record
+
+The HD Hill Fort test is also rejected: both drafts mistook the original low central roof for an extra tower and turned a compact outpost into a castle. An offline super-resolution trial retained the broad outline but rebuilt masonry, roof and edges, so it is reference material only and will not overwrite buildings. Static landmarks now pass only when their tower count, roof hierarchy, entrance placement, footprint and native interaction canvas agree with the original.
+
+![Hill Fort fidelity review](/images/h3-environment-hd/hill-fort-fidelity-review.png)
+
 ## Waterside buildings
 
 The shipyard, marketplace and watering hole are registered separately, so they retain the original object behaviour rather than becoming a painted background.

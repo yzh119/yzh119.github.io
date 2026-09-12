@@ -1,6 +1,7 @@
 ---
 title: "[AI] Adventure map: fidelity constraints and a rejected draft"
 date: 2026-09-10T10:32:00+08:00
+draft: true
 series: ["Enhancing Heroes of Might and Magic III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra"]
