@@ -66,6 +66,12 @@ Temple (`AVSTMPL0`) now retains its original shallow stepped roof, two gold fini
 
 ![Native and final Temple redraw](/images/h3-environment-hd/temple-final-compare.png)
 
+## University
+
+University (`AVSUNIV0`) now retains its four corner towers, paired red-tile roofs, courtyard and central gate at a clearer 2×, 3× and 4× body resolution. The native canvas, shadows, overlays and object behavior remain intact.
+
+![Native and final University redraw](/images/h3-environment-hd/university-final-compare.png)
+
 ## Idol of Fortune
 
 Idol of Fortune (`AVSIDOL0`) now preserves the native totem proportions, five crest pieces and three front beads in a clearer single-frame body at 2×, 3× and 4×. The original canvas, shadows, overlays and object behavior remain intact.

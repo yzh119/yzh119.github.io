@@ -66,6 +66,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![原版与最终神庙重绘](/images/h3-environment-hd/temple-final-compare.png)
 
+## 大学
+
+大学（`AVSUNIV0`）现已在更清晰的 2×、3×、4× 主体中保留四座角塔、两组红瓦、庭院与中央入口。原始画布、阴影、覆盖层和对象行为保持不变。
+
+![原版与最终大学重绘](/images/h3-environment-hd/university-final-compare.png)
+
 ## 财富神像
 
 财富神像（`AVSIDOL0`）现已在更清晰的 2×、3×、4× 单帧主体中保留原版图腾比例、五根顶饰与三枚前方圆珠。原始画布、阴影、覆盖层和对象行为保持不变。
