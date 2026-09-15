@@ -56,7 +56,9 @@ Marletto Tower (`AVSMARL`) now has a faithful high-detail body: its open crenell
 
 ## Magic and knowledge landmarks
 
-The magic spring, Seer's Hut and Library are now included as well. Library (`AVSLIBR0`) retains its two low roof wings, centered pediment and stair, open colonnade and small foundation stones; its 2×, 3× and 4× body bounds were vertically calibrated to the native placement. Their redrawn bodies leave native shadows and interaction resources intact, so visit rules remain unchanged.
+~~The magic spring, Seer's Hut and Library are now included as well.~~
+
+Correction: Magic Spring (AVSFNTN0) is an eight-frame animated object, so it does not belong in this static-landmark batch and remains on its native sequence. It will only be replaced with a Blender-rendered animation. Seer's Hut and Library are the completed static entries; Library (AVSLIBR0) retains its two low roof wings, centered pediment and stair, open colonnade and small foundation stones; its 2x, 3x and 4x body bounds were vertically calibrated to the native placement. Their redrawn bodies leave native shadows and interaction resources intact, so visit rules remain unchanged.
 
 ![Magic spring and Seer's Hut](/images/h3-environment-hd/functional-landmarks-compare.png)
 
