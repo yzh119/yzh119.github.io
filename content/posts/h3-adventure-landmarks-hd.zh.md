@@ -60,7 +60,7 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 更正：魔法泉（AVSFNTN0）是八帧循环动画，不属于本批单帧地标，游戏中仍保留原始动画序列；后续只能以 Blender 渲染的完整动画替换。已完成的静态条目为先知小屋与图书馆。图书馆（AVSLIBR0）保留两侧低矮屋顶、居中的山花与台阶、开放柱廊和小型地基石；其 2x、3x、4x 主体边界经纵向校正后与原始位置一致。重绘主体继续沿用原始阴影和交互资源，因此不会影响访问规则。
 
-![魔法泉与先知小屋](/images/h3-environment-hd/functional-landmarks-compare.png)
+~~![被否决的魔法泉静态草案，未接入游戏](/images/h3-environment-hd/functional-landmarks-compare.png)~~
 
 ![原版与最终图书馆重绘](/images/h3-environment-hd/library-final-compare.png)
 
