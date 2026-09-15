@@ -14,9 +14,13 @@ The new local **necropolis-ui-hd 0.1.0** provides two portrait sizes for all fou
 
 ## Building thumbnails
 
-The building list, construction details and fort recruitment screen share `HALLNECR`, whose original frames are 150×70. Its 44 slots contain **36 distinct images**. Each was repainted using the original as a reference, retaining separate mage-guild, fortification, civic-hall and creature-dwelling upgrade stages. Duplicate slots reuse the same new image.
+The building list, construction details and fort recruitment screen share `HALLNECR`, whose original frames are 150×70. Its 44 slots contain **36 distinct images**. ~~Each was repainted using the original as a reference, retaining separate mage-guild, fortification, civic-hall and creature-dwelling upgrade stages. Duplicate slots reuse the same new image.~~
 
-The images add stonework, carvings, roof and terrain detail, with some changes to local architectural design. These are generative repaints rather than sharpening or pixel-exact restoration. Existing town layers still determine clickable buildings, overlap and construction state; this package replaces their thumbnails.
+~~The images add stonework, carvings, roof and terrain detail, with some changes to local architectural design. These are generative repaints rather than sharpening or pixel-exact restoration.~~
+
+A later review found that those independent generative repaints changed some buildings too much and could not reliably retain each native thumbnail's placement. The current revision derives 35 of the 36 building masters directly from the completed Necropolis town layers, with one native empty construction marker retained. Each base and upgraded dwelling is registered against its own thumbnail region. The HD town backdrop (TBNCBACK) supplies the ground and mountain context; Dragon Vaults use the mountain-side portal composition. Existing town layers still determine clickable buildings, overlap and construction state; this package replaces their thumbnails.
+
+![Native and final town-layer building thumbnails: base and upgraded temple plus Dragon Vault](/demos/necropolis-ui-01/town-layer-final-compare.png)
 
 ![Seven base recruitment buildings, original and HD; offline comparison](/demos/necropolis-ui-01/dwelling-comparison.png)
 
