@@ -66,6 +66,12 @@ Temple (`AVSTMPL0`) now retains its original shallow stepped roof, two gold fini
 
 ![Native and final Temple redraw](/images/h3-environment-hd/temple-final-compare.png)
 
+## Warlock's Lab
+
+Warlock's Lab (AVSWAR20) now preserves the two tall rear towers, central round tower, lower front gate and four small corner towers in a clearer 2x, 3x and 4x body. Its native canvas, shadow and interaction layers stay untouched.
+
+![Native and final Warlock's Lab redraw](/images/h3-environment-hd/warlocks-lab-final-compare.png)
+
 ## University
 
 University (`AVSUNIV0`) now retains its four corner towers, paired red-tile roofs, courtyard and central gate at a clearer 2×, 3× and 4× body resolution. The native canvas, shadows, overlays and object behavior remain intact.

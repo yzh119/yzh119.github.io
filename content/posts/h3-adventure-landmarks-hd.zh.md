@@ -66,6 +66,12 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![原版与最终神庙重绘](/images/h3-environment-hd/temple-final-compare.png)
 
+## 法师塔
+
+法师塔（AVSWAR20）现以更清晰的 2x、3x、4x 主体保留原作后方双高塔、中央圆塔、低矮前门与四座角塔。原始画布、阴影和交互层均未改动。
+
+![原版与最终法师塔重绘](/images/h3-environment-hd/warlocks-lab-final-compare.png)
+
 ## 大学
 
 大学（`AVSUNIV0`）现已在更清晰的 2×、3×、4× 主体中保留四座角塔、两组红瓦、庭院与中央入口。原始画布、阴影、覆盖层和对象行为保持不变。
