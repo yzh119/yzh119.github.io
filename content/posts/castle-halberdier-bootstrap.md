@@ -3,7 +3,7 @@ title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All fourteen Castle units now have independently reviewed Meshy meshes. Halberdier and Pikeman have local rigs plus holding/walking reviews; the other twelve await creature-specific local animation. No Castle unit is installed in the game."
+homeSummary: "All fourteen Castle units have independently reviewed Meshy meshes. Halberdier and Pikeman passed local holding/walking review; Griffin and Swordsman have stable holding but rejected gait trials because of Meshy layered topology. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -24,8 +24,8 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Halberdier | mesh, local rig, 8-frame holding and 6-frame walk |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
 | Archer | mesh and holding review; shooting rig needs repair |
-| Griffin | mesh review; wing and ground rig next |
-| Swordsman | mesh review; sword and shield rig next |
+| Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
+| Swordsman | mesh and 8-frame holding accepted; 8-frame gait rejected pending skirt/shield-side rebind |
 | Monk | mesh review; hand-gesture and spell rig next |
 | Cavalier | mesh review; mounted and charge rig next |
 | Angel | mesh review; flight and two-handed-sword rig next |
@@ -35,6 +35,16 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Zealot | mesh review; hand-gesture and spell rig next |
 | Champion | mesh review; mounted and charge rig next |
 | Archangel | mesh review; flight and two-handed-sword rig next |
+
+## Griffin and Swordsman motion calibration
+
+The original Griffin has eight holding frames and four walking frames; the Swordsman has eight of each. Both tests use the original 450×400 canvas. Each now has a stable local holding review: the Griffin uses continuous weights for wings, neck and tail, while the Swordsman keeps sword, shield and armour intact in the rest pose.
+
+<s>The first Griffin trial rigidly parented 2,829 disconnected components to bones. Its chest feathers separated in motion. Continuous surface weights repaired holding, but its gait then pulled apart layered surfaces near the legs and tail, so the four-frame walk was rejected.</s>
+
+<s>The Swordsman's eight-frame gait was also rejected: layered components around the skirt and shield side separate. Its holding and walking Actions are saved independently; the rejected walk will not enter DEF assembly.</s>
+
+These trials show that a convincing Meshy surface is not automatically an animatable continuous character topology. The next pass will rebuild local weights from visible joints and connected regions. Until then, these are Blender review assets only: no creature frames, shadows, overlays, DEF output, or game installation.
 
 ## Meshy mesh
 
