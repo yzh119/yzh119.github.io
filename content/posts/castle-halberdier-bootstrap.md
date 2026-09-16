@@ -83,6 +83,14 @@ The combined Angel now also passes its native-count seven-frame `CANGEL.DEF` fli
 
 <s>The first six-frame independent-sword Angel front-attack probe reparented the sword around the static dual-hand guard pivot. An imported parent-inverse transform made it orbit an incorrect world point and leave the Angel, so it is rejected. Flight remains accepted; an attack needs an explicit world-space carrier rather than this inherited parent relationship.</s>
 
+The replacement six-frame `ATTACK_FRONT` uses an explicit world-space sword matrix around the visible dual-hand guard. It fixes the rejected inherited-parent pivot: all front frames and side frames 1, 3, 4 and 6 keep the one sword, torso and wings continuous. This accepts the weapon path; a later local rig pass will add larger arm travel.
+
+![Angel independent-sword front attack, wind-up](/images/castle-halberdier-01/angel-independent-attack-front-03.png)
+
+![Angel independent-sword front attack, contact](/images/castle-halberdier-01/angel-independent-attack-front-04.png)
+
+![Angel independent-sword front attack, side continuity](/images/castle-halberdier-01/angel-independent-attack-side-04.png)
+
 The old Marksman rig could make a front shot but could not reliably lift the light crossbow to the original high-angle direction, so its draft was not treated as an upward attack. Candidate 02 starts again from an independent blue-and-gold crossbowman mesh and Meshy humanoid rig; eight static angles retain the crossbow, both hands and sleeve cuffs. A native six-frame `CHCBOW.DEF` upward attack then moves from low level aim through raise and high release into recovery. Front and side key frames keep the grip, crossbow, hands and sleeves continuous. Its eight-frame front shooting body action also passes: low carry, level aim, short release recoil and recovery retain the crossbow, both hands and sleeve cuffs in front and side review. A separate eight-frame downward shooting action then passes as well: the crossbow presses into a low aim and recovers after release while hands and sleeve cuffs remain continuous from both views. A third eight-frame upward shooting action then passes: it moves from low carry through high aim/release and recovery while crossbow, hands and sleeve cuffs remain continuous in both views. All three ranged shooting body Actions are saved independently; projectile VFX remains a separate layer. Hit and defence were independently reviewed on the same candidate: the six-frame hit uses torso recoil while both hands retain the light crossbow, and the ten-frame defence raises it across the chest without detachment in either view. These are Blender character-motion reviews only, with no DEF output or game installation.
 
 <s>Candidate 02’s first eight-frame moving pass used excessive hip, knee and ankle amplitude, reading as a crouched jump in side view, so it is rejected and will not enter export.</s>
