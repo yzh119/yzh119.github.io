@@ -42,6 +42,14 @@ The giant redwood and a large castle-style landmark have also been redrawn while
 
 ![Castle landmark](/images/h3-environment-hd/castle-landmark-compare.png)
 
+## Fidelity corrections
+
+Review found several earlier redraws had become more elaborate by changing the original landmark type. `AVXALTAR` is again a low sacrifice altar with its broken rear arch and red ritual surface; `AVXTHRN` is again the compact, irregular ochre castle on rock; and `AVXSHYD0` is again an open timber slipway with lifting posts rather than a warehouse pier. The green, red and blue obelisks have also returned to simple coloured monoliths with small stone bases. These are single-frame bodies at 2×, 3× and 4×; native canvas, shadows, overlays and object behavior remain intact.
+
+![Original base and final fidelity corrections](/images/h3-environment-hd/fidelity-corrections-compare.png)
+
+The Haunted Graveyard review also found eight body frames. It was deliberately not overwritten with a static redraw: a correction there requires the deferred Blender animation workflow.
+
 ## Arena
 
 Arena (`AVSARNA0`) is now redrawn as a compact limestone amphitheater with the original three arcade tiers, oval interior, front entrance and steps. Its generated checkerboard backdrop was removed by retaining only the connected object alpha; a final vertical projection calibration makes the 2×, 3× and 4× body bounds match the native top, left, right and bottom. Native shadows, overlays, canvas and object behavior remain unchanged.
