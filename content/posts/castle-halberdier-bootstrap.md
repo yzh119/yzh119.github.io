@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
 | Swordsman | Meshy humanoid rig; 8-frame holding/walk plus 7-frame front/up attack reviews accepted |
-| Monk | Meshy humanoid rig; 6-frame holding/walk and strengthened 10-frame front-cast review accepted |
+| Monk | Meshy humanoid rig; 6-frame holding/walk accepted; <s>10-frame front-cast review accepted</s>—re-review rejects its near-clasped peak pose |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
 | Marksman | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
@@ -78,7 +78,7 @@ Cavalier and Champion each ran a local horse-and-rider probe against their own m
 
 Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 component-classified wing vertices. Its eight-frame holding wing review passes; its ground gait will not reuse the rejected Griffin leg/tail weights.
 
-The Monk’s original ten-frame gesture calibration has been replaced with a stronger front-cast review at its native count: hands open and rise before returning, while sleeves, robe and sash stay continuous in front and side views. Spell effects and up/down casts remain separate work.
+<s>The Monk’s original ten-frame gesture calibration was described as a stronger native-count front cast with hands opening and rising. A re-review of its rendered peak frame shows it remains near the clasped holding pose, so that claim and acceptance are withdrawn; the clip will not seed the remaining cast groups.</s>
 
 The Zealot now has a strengthened native-count fourteen-frame front-cast review on its own Meshy rig. Its open-handed raise and return keep the white robe, green stole, sleeves and hands continuous in front and side checks; spell effects, up/down and special groups are still separate work.
 
