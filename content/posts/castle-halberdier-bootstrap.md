@@ -3,7 +3,7 @@ title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All fourteen Castle units have independently reviewed Meshy meshes. Halberdier, Pikeman and Swordsman passed local holding/walking review; Griffin gait is still being rebuilt. No Castle unit is installed in the game."
+homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Narrow Blender motion reviews cover bow shots, casting, sword strikes, mounted probes and Angel flight; rejected topology and weight trials are recorded in the post. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
