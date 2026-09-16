@@ -34,7 +34,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
 | Zealot | Meshy humanoid rig; 6-frame holding, 6-frame walk and 14-frame cast preliminary review complete |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
-| Archangel | Meshy humanoid rig, four local wing bones and 8-frame holding wing review accepted; flight/two-handed sword next |
+| Archangel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; remaining actions next |
 
 ## Griffin and Swordsman motion calibration
 
@@ -57,6 +57,8 @@ After static review of the Angel Meshy humanoid rig, Astra did not rotate the wh
 Angel now also has a seven-frame `CANGEL.DEF` moving review: root and tip bones drive the existing classified wing regions through a full flap, while the torso and two-handed sword remain continuous in front and side checks. It is flight motion only, still without the remaining action groups, creature layers, DEF output or game installation.
 
 Archangel completed the same local wing process on its separate mesh: 8,888 position-classified wing vertices are assigned to four root/tip bones. The eight-frame review keeps upgraded armour, torso and two-handed sword stable. It does not reuse Angel vertex groups, and is not flight or game installation.
+
+Archangel now has its own seven-frame `CRANGL.DEF` moving review, built from its separate wing mesh and weights. Front and side checks keep both wings, upgraded armour, torso and sword continuous through the flap. It does not cover its remaining action groups or game-ready layers.
 
 Cavalier and Champion each ran a local horse-and-rider probe against their own meshes and original alpha-height anchors. Holding, walking, front lance, move start and move end pass crop checks; a three-frame side review also keeps the horse legs, rider, barding and lance connected through the gait. This is still a probe: each needs its complete 87-frame action set and per-action timing before export.
 
