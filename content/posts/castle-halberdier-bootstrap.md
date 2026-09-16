@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
 | Swordsman | Meshy humanoid rig; 8-frame holding/walk and 7-frame front-attack review accepted |
-| Monk | Meshy humanoid rig; 6-frame holding/walk accepted, 10-frame cast gesture needs refinement |
+| Monk | Meshy humanoid rig; 6-frame holding/walk and strengthened 10-frame front-cast review accepted |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
 | Marksman | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
@@ -65,6 +65,8 @@ Archangel now has its own seven-frame `CRANGL.DEF` moving review, built from its
 Cavalier and Champion each ran a local horse-and-rider probe against their own meshes and original alpha-height anchors. Holding, walking, front lance, move start and move end pass crop checks; a three-frame side review also keeps the horse legs, rider, barding and lance connected through the gait. This is still a probe: each needs its complete 87-frame action set and per-action timing before export.
 
 Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 component-classified wing vertices. Its eight-frame holding wing review passes; its ground gait will not reuse the rejected Griffin leg/tail weights.
+
+The Monk’s original ten-frame gesture calibration has been replaced with a stronger front-cast review at its native count: hands open and rise before returning, while sleeves, robe and sash stay continuous in front and side views. Spell effects and up/down casts remain separate work.
 
 The Marksman now has its own equivalent review on its separate Meshy rig: its `CHCBOW.DEF` front-shot group also has eight frames, and the raise, aim, recoil and return keep the light crossbow, sleeves and hands continuous. It has no bolt release or up/down firing groups yet.
 
