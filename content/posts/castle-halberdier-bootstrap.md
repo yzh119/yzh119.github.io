@@ -86,7 +86,9 @@ Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 componen
 
 The Zealot now has a strengthened native-count fourteen-frame front-cast review on its own Meshy rig. Its open-handed raise and return keep the white robe, green stole, sleeves and hands continuous in front and side checks; spell effects, up/down and special groups are still separate work.
 
-The Zealot now also has its native-count thirteen-frame upward-cast review. The hands rise clearly above the chest at the peak; front frames and the side start, peak and recovery checks preserve both sleeves, the robe and stole. It remains a Blender motion review without spell VFX, DEF assembly or game installation.
+<s>The Zealot’s first native-count thirteen-frame upward-cast review used a symmetric two-hand raise. It stayed continuous, but extracted `CZEALT.DEF` frames show a single high forward hand with the other compact, so the first pose is superseded.</s>
+
+The replacement thirteen-frame upward cast blocks from that original single-hand high-forward silhouette. Its front frames and side start, peak and recovery checks preserve hands, sleeves, robe and stole. It remains character motion only, without spell VFX, DEF assembly or game installation.
 
 <s>A first thirteen-frame downward-cast counterpart keeps cloth continuous but collapses both hands into the torso silhouette at its peak. It is rejected; the next attempt will use hand positions measured from original frames rather than reversing the upward pose.</s>
 
