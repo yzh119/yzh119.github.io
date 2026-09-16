@@ -32,7 +32,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
 | Royal Griffin | four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
-| Zealot | Meshy humanoid rig; 6-frame holding/walk, 14-frame front-cast and 13-frame up-cast reviews accepted |
+| Zealot | Meshy humanoid rig; 6-frame holding/walk, 14-frame front-cast, 13-frame up-cast and 13-frame down-cast character-motion reviews accepted |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; remaining actions next |
 
@@ -89,6 +89,8 @@ The Zealot now has a strengthened native-count fourteen-frame front-cast review 
 The Zealot now also has its native-count thirteen-frame upward-cast review. The hands rise clearly above the chest at the peak; front frames and the side start, peak and recovery checks preserve both sleeves, the robe and stole. It remains a Blender motion review without spell VFX, DEF assembly or game installation.
 
 <s>A first thirteen-frame downward-cast counterpart keeps cloth continuous but collapses both hands into the torso silhouette at its peak. It is rejected; the next attempt will use hand positions measured from original frames rather than reversing the upward pose.</s>
+
+A second thirteen-frame down-cast now blocks from extracted `CZEALT.DEF` frames: one hand projects low and forward while the other stays compact. All frames plus side start, peak and recovery keep the hands, sleeves, robe and stole continuous. This is character motion only; the original spell VFX, DEF assembly and game installation remain separate.
 
 The Marksman now has its own equivalent review on its separate Meshy rig: its `CHCBOW.DEF` front-shot group also has eight frames, and the raise, aim, recoil and return keep the light crossbow, sleeves and hands continuous. It has no bolt release or up/down firing groups yet.
 
