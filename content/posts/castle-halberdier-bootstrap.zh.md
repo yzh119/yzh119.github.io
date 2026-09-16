@@ -3,6 +3,7 @@ title: "[AI]城堡长戟兵建模"
 date: 2026-09-16T17:10:00+08:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
+homeSummary: "城堡兵种建模已经开始：长戟兵已完成通过审查的 Meshy 网格、本地 Blender 骨架及待机、行走审查；枪兵也有独立通过审查的网格和首轮本地绑定。两者都还没有装进游戏。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 

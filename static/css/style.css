@@ -138,3 +138,26 @@ figure figcaption {
 .history-context { padding: .75rem; border-left: 3px solid #888; }
 .history-content { border-top: 1px solid #8886; padding-top: 1rem; }
 @media print { .post-history { break-before: page; } }
+
+.latest-update {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.35rem 1.45rem 1.45rem;
+  margin-bottom: 2.75rem;
+}
+.latest-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin: 0 0 0.35rem;
+  text-transform: uppercase;
+}
+.latest-update h1 {
+  font-size: 1.45rem;
+  line-height: 1.32;
+  margin: 0;
+}
+.latest-summary { margin: 0.8rem 0 1rem; }
+.latest-link { font-weight: 600; }
+.archive-heading { font-size: 1.15rem; margin: 0 0 0.75rem; }

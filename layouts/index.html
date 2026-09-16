@@ -1,9 +1,19 @@
 {{ define "main" }}
+{{ $posts := where site.RegularPages "Section" "posts" }}
+{{ with index $posts 0 }}
+<section class="latest-update">
+  <p class="latest-label">{{ if eq site.Language.Lang "zh" }}最新进展{{ else }}Latest update{{ end }}</p>
+  <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+  {{ with .Params.homeSummary }}<p class="latest-summary">{{ . }}</p>{{ end }}
+  <a class="latest-link" href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}查看进展{{ else }}Read the update{{ end }} →</a>
+</section>
+{{ end }}
+<h2 class="archive-heading">{{ if eq site.Language.Lang "zh" }}文章{{ else }}Posts{{ end }}</h2>
 <ul class="post-list">
-  {{ range where site.RegularPages "Section" "posts" }}
+  {{ range $posts }}
   <li>
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
-    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
   </li>
   {{ end }}
 </ul>

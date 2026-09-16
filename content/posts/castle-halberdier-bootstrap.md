@@ -3,6 +3,7 @@ title: "[AI] Castle halberdier bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
+homeSummary: "Castle creature modelling has begun: the Halberdier has an accepted Meshy mesh, a local Blender rig, and reviewed holding and walking cycles; the Pikeman has an independent accepted mesh and first local rig review. Neither unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
