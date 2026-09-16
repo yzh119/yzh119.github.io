@@ -25,7 +25,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
 | Archer | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
-| Swordsman | Meshy humanoid rig; 8-frame holding/walk plus 7-frame front/up attack reviews accepted |
+| Swordsman | Meshy humanoid rig; local reviews accepted for 8-frame holding/walk, 7-frame front/up attacks and 6-frame hit |
 | Monk | Meshy humanoid rig; 6-frame holding/walk accepted; <s>10-frame front-cast review accepted</s>—re-review rejects its near-clasped peak pose |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
@@ -123,6 +123,8 @@ The replacement native-count eight-frame `HITTED` review makes the rearward reco
 The native two-frame `MOVE_START` and `MOVE_END` reviews now explicitly bridge holding to the first gait pose and back, rather than cutting the walking loop. Their front and side frames keep feet, sleeves, robe and stole continuous. They remain Blender reviews, without DEF assembly or game installation.
 
 <s>The Crusader’s first mesh attempted a component-level sword rebind: a screen-space selection included blade strips together with forearm and tabard fragments, creating separated ribbons during the seven-frame double strike. It remains rejected.</s> A second Meshy candidate was generated from the same reviewed concept as a 20k-quad, 4K-texture mesh with image enhancement disabled (30 credits), then received a 5-credit humanoid rig. Its eight-view static mesh and rig-rest reviews keep sword, shield and cape distinct, but the first seven-frame double-strike still bends the sword’s layered surfaces through Meshy smooth weights. Removing its non-character `Cube` and `Icosphere` placeholders fixes an import artifact, not the blade deformation; a targeted sword rebind is still required. Neither candidate is DEF output or an in-game installation.
+
+The Swordsman now has a native six-frame `HITTED` review: a visible rearward recoil and raised shield keep the original defensive silhouette readable. Front full-sequence and side start, peak and recovery checks keep sword, shield, hands, armour and tabard continuous. It remains a Blender review, without DEF assembly or game installation.
 
 ## Meshy mesh
 
