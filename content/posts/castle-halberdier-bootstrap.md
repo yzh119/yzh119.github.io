@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | Meshy body and original long-weapon components; 8-frame holding, 6-frame walk, and 6-frame front attack accepted in front and side review |
+| Halberdier | Meshy body and original long-weapon components; 8-frame holding, 6-frame walk, 6-frame front/up attacks and 7-frame down attack accepted in front and side review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -332,6 +332,16 @@ The next six-frame `ATTACK_FRONT` review accepts the original Meshy long weapon 
 ![Halberdier original Meshy halberd, front contact](/images/castle-halberdier-01/halberdier-original-component-attack-impact.png)
 
 ![Halberdier original Meshy halberd, side contact review](/images/castle-halberdier-01/halberdier-original-component-attack-side.png)
+
+The same complete-component carrier now passes both remaining native directions: six-frame `ATTACK_UP` rises through a diagonal high contact, and seven-frame `ATTACK_DOWN` completes its descending diagonal contact and recovery. Front and side keys show the original axe head, shaft, butt cap and visible grip as one coherent object in each direction.
+
+![Halberdier upward attack, front contact](/images/castle-halberdier-01/halberdier-original-component-attack-up-impact.png)
+
+![Halberdier upward attack, side review](/images/castle-halberdier-01/halberdier-original-component-attack-up-side.png)
+
+![Halberdier downward attack, front contact](/images/castle-halberdier-01/halberdier-original-component-attack-down-impact.png)
+
+![Halberdier downward attack, side review](/images/castle-halberdier-01/halberdier-original-component-attack-down-side.png)
 
 ## Meshy mesh
 

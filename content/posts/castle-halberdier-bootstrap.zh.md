@@ -22,7 +22,7 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 | 兵种 | 已审查状态 |
 | --- | --- |
-| 长戟兵 | Meshy 身体与原始长戟组件；8 帧待机、6 帧行走和 6 帧正面攻击均通过正侧面审查 |
+| 长戟兵 | Meshy 身体与原始长戟组件；8 帧待机、6 帧行走、6 帧正面／上方攻击和 7 帧下方攻击均通过正侧面审查 |
 | 枪兵 | 网格、本地骨架、7 帧待机、6 帧行走；独立人体／长枪的双手约束及 10 帧正面冲刺探针通过 |
 | 弓箭手 | Meshy 人形骨架；三方向原生 8 帧身体射击与独立 Meshy 弩矢层连续性审查通过 |
 | 狮鹫 | 网格、8 帧待机通过；4 帧步态试验拒绝，需重做腿尾权重 |
@@ -332,6 +332,16 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ![长戟兵原始 Meshy 长戟正面命中](/images/castle-halberdier-01/halberdier-original-component-attack-impact.png)
 
 ![长戟兵原始 Meshy 长戟侧面命中审查](/images/castle-halberdier-01/halberdier-original-component-attack-side.png)
+
+同一套完整组件载体也通过了剩余两个原版方向：6 帧 `ATTACK_UP` 经由高位斜向命中，7 帧 `ATTACK_DOWN` 完成下方斜向命中与回收。各方向的正侧面关键帧中，原始斧刃、枪杆、尾帽和可见握手始终是一个连续对象。
+
+![长戟兵上方攻击正面命中](/images/castle-halberdier-01/halberdier-original-component-attack-up-impact.png)
+
+![长戟兵上方攻击侧面审查](/images/castle-halberdier-01/halberdier-original-component-attack-up-side.png)
+
+![长戟兵下方攻击正面命中](/images/castle-halberdier-01/halberdier-original-component-attack-down-impact.png)
+
+![长戟兵下方攻击侧面审查](/images/castle-halberdier-01/halberdier-original-component-attack-down-side.png)
 
 ## Meshy 网格
 
