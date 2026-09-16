@@ -32,7 +32,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
 | Royal Griffin | four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
-| Zealot | Meshy humanoid rig; 6-frame holding, 6-frame walk and 14-frame cast preliminary review complete |
+| Zealot | Meshy humanoid rig; 6-frame holding/walk and strengthened 14-frame front-cast review accepted |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; remaining actions next |
 
@@ -67,6 +67,8 @@ Cavalier and Champion each ran a local horse-and-rider probe against their own m
 Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 component-classified wing vertices. Its eight-frame holding wing review passes; its ground gait will not reuse the rejected Griffin leg/tail weights.
 
 The Monk’s original ten-frame gesture calibration has been replaced with a stronger front-cast review at its native count: hands open and rise before returning, while sleeves, robe and sash stay continuous in front and side views. Spell effects and up/down casts remain separate work.
+
+The Zealot now has a strengthened native-count fourteen-frame front-cast review on its own Meshy rig. Its open-handed raise and return keep the white robe, green stole, sleeves and hands continuous in front and side checks; spell effects, up/down and special groups are still separate work.
 
 The Marksman now has its own equivalent review on its separate Meshy rig: its `CHCBOW.DEF` front-shot group also has eight frames, and the raise, aim, recoil and return keep the light crossbow, sleeves and hands continuous. It has no bolt release or up/down firing groups yet.
 
