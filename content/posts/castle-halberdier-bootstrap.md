@@ -107,6 +107,12 @@ The six-frame `ATTACK_DOWN` completes Angel’s three-direction independent-swor
 
 ![Angel independent-sword downward attack, side review](/images/castle-halberdier-01/angel-independent-attack-down-side-04.png)
 
+Angel’s native ten-frame `DEFENCE` now passes with a high diagonal sword guard. All front frames plus side frames 1, 4, 6 and 10 retain one sword and continuous hands, body and wings.
+
+![Angel independent-sword defence, high guard](/images/castle-halberdier-01/angel-independent-defence-front-05.png)
+
+![Angel independent-sword defence, side review](/images/castle-halberdier-01/angel-independent-defence-side-06.png)
+
 The old Marksman rig could make a front shot but could not reliably lift the light crossbow to the original high-angle direction, so its draft was not treated as an upward attack. Candidate 02 starts again from an independent blue-and-gold crossbowman mesh and Meshy humanoid rig; eight static angles retain the crossbow, both hands and sleeve cuffs. A native six-frame `CHCBOW.DEF` upward attack then moves from low level aim through raise and high release into recovery. Front and side key frames keep the grip, crossbow, hands and sleeves continuous. Its eight-frame front shooting body action also passes: low carry, level aim, short release recoil and recovery retain the crossbow, both hands and sleeve cuffs in front and side review. A separate eight-frame downward shooting action then passes as well: the crossbow presses into a low aim and recovers after release while hands and sleeve cuffs remain continuous from both views. A third eight-frame upward shooting action then passes: it moves from low carry through high aim/release and recovery while crossbow, hands and sleeve cuffs remain continuous in both views. All three ranged shooting body Actions are saved independently; projectile VFX remains a separate layer. Hit and defence were independently reviewed on the same candidate: the six-frame hit uses torso recoil while both hands retain the light crossbow, and the ten-frame defence raises it across the chest without detachment in either view. These are Blender character-motion reviews only, with no DEF output or game installation.
 
 <s>Candidate 02’s first eight-frame moving pass used excessive hip, knee and ankle amplitude, reading as a crouched jump in side view, so it is rejected and will not enter export.</s>
