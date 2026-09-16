@@ -23,16 +23,16 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | mesh, local rig, 8-frame holding and 6-frame walk |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
-| Archer | mesh and holding review; shooting rig needs repair |
+| Archer | Meshy humanoid rig passed static review; raised-crossbow and shooting review next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
 | Swordsman | Meshy humanoid rig plus local 8-frame holding and walking review accepted |
 | Monk | Meshy humanoid rig; 6-frame holding/walk accepted, 10-frame cast gesture needs refinement |
 | Cavalier | mesh review; mounted and charge rig next |
-| Angel | mesh review; flight and two-handed-sword rig next |
-| Marksman | mesh review; shares the upcoming repaired two-hand crossbow interface |
+| Angel | Meshy humanoid rig, four local wing bones and 8-frame holding wing review accepted; flight/two-handed sword next |
+| Marksman | Meshy humanoid rig passed static review; holding-crossbow and shooting review next |
 | Royal Griffin | mesh review; wing and ground rig next |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
-| Zealot | mesh review; hand-gesture and spell rig next |
+| Zealot | Meshy humanoid rig; 6-frame holding, 6-frame walk and 14-frame cast preliminary review complete |
 | Champion | mesh review; mounted and charge rig next |
 | Archangel | mesh review; flight and two-handed-sword rig next |
 
@@ -49,6 +49,8 @@ Update: the Swordsman now uses a Meshy humanoid rig (an additional 5 credits), w
 Crusader and Monk each now use their own Meshy humanoid rig (an additional 5 credits each); neither reuses the Swordsman's mesh or weights. The Crusader's eight-frame holding and walking reviews pass intact. Its seven-frame double-strike test is rejected because part of the sword remains weighted to the body chain, and will return after a local rebind. The Monk's six-frame holding and walking reviews pass; its ten-frame front cast is saved as a gesture calibration. The robe remains intact, but the raised-hand amplitude needs refinement, so it is not a final spell delivery.
 
 These trials show that a convincing Meshy surface is not automatically an animatable continuous character topology. The next pass will rebuild local weights from visible joints and connected regions. Until then, these are Blender review assets only: no creature frames, shadows, overlays, DEF output, or game installation.
+
+After static review of the Angel Meshy humanoid rig, Astra did not rotate the whole wing as one object. It located wing components by position among 1,356 connected components of the shared surface. Four local root/tip bones control 10,319 wing vertices; an eight-frame restrained wing review keeps armour, two-handed sword and torso still. This is a holding-wing result only: flight and sword motion remain to be authored.
 
 ## Meshy mesh
 
