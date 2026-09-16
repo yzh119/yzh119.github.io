@@ -357,6 +357,8 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 ![已拒绝的长戟兵死亡探针](/images/castle-halberdier-01/halberdier-death-rejected-front.png)
 
+<s>第二版把共用载体缩向原版紧凑终点，却只是把同一悬空横躺缩小，也已拒绝。缩放与整体旋转不能替代真正的地面接触死亡姿势。</s>
+
 ## Meshy 网格
 
 <s>第一次把整张四视图直接交给 Meshy，花了 30 credits。它把四个角度理解成多把长戟，结果没有生成人物，所以没有进入绑定和动画。</s>

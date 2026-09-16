@@ -357,6 +357,8 @@ A six-frame `HITTED` recoil now translates both the body and the complete origin
 
 ![Rejected Halberdier death probe](/images/castle-halberdier-01/halberdier-death-rejected-front.png)
 
+<s>A second probe shrank the shared carrier toward the original compact endpoint, but it only made the same airborne horizontal fall smaller. It is also rejected; scale and whole-object rotation cannot substitute for a ground-contact death pose.</s>
+
 ## Meshy mesh
 
 <s>The first Meshy request used the complete four-view sheet as one input image. It spent 30 credits and returned several copies of the halberd without a person, so it was rejected before rigging or animation.</s>
