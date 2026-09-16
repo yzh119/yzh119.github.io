@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-16T23:40:00+08:00
+lastmod: 2026-09-17T00:00:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; after a cast-arm rebind, Monk candidate 03 passes front and downward casts; Marksman candidate 02 passes its new mesh, rig, holding/moving, move transitions, directional attack/shooting, hit, defence and death body reviews. No Castle unit is installed in the game."
+homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; after a cast-arm rebind, Monk candidate 03 passes front and downward casts; Marksman candidate 02 passes its new mesh, rig, holding/moving, move transitions, three-direction ranged shooting, upward attack, hit, defence and death body reviews. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,14 +30,14 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
-| Marksman | candidate 02 independent Meshy mesh and humanoid rig pass static review; 8-frame holding/moving, 6-frame upward attack, 8-frame front/down shooting, 6-frame hit/death, 10-frame defence and 2-frame move-start/end body actions pass; projectile and presentation groups next |
+| Marksman | candidate 02 independent Meshy mesh and humanoid rig pass static review; 8-frame holding/moving, 6-frame upward attack, 8-frame three-direction shooting, 6-frame hit/death, 10-frame defence and 2-frame move-start/end body actions pass; projectile and presentation groups next |
 | Royal Griffin | four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; remaining actions next |
 
-The old Marksman rig could make a front shot but could not reliably lift the light crossbow to the original high-angle direction, so its draft was not treated as an upward attack. Candidate 02 starts again from an independent blue-and-gold crossbowman mesh and Meshy humanoid rig; eight static angles retain the crossbow, both hands and sleeve cuffs. A native six-frame `CHCBOW.DEF` upward attack then moves from low level aim through raise and high release into recovery. Front and side key frames keep the grip, crossbow, hands and sleeves continuous. Its eight-frame front shooting body action also passes: low carry, level aim, short release recoil and recovery retain the crossbow, both hands and sleeve cuffs in front and side review. A separate eight-frame downward shooting action then passes as well: the crossbow presses into a low aim and recovers after release while hands and sleeve cuffs remain continuous from both views. Projectile VFX remains a separate layer. Hit and defence were independently reviewed on the same candidate: the six-frame hit uses torso recoil while both hands retain the light crossbow, and the ten-frame defence raises it across the chest without detachment in either view. These are Blender character-motion reviews only, with no DEF output or game installation.
+The old Marksman rig could make a front shot but could not reliably lift the light crossbow to the original high-angle direction, so its draft was not treated as an upward attack. Candidate 02 starts again from an independent blue-and-gold crossbowman mesh and Meshy humanoid rig; eight static angles retain the crossbow, both hands and sleeve cuffs. A native six-frame `CHCBOW.DEF` upward attack then moves from low level aim through raise and high release into recovery. Front and side key frames keep the grip, crossbow, hands and sleeves continuous. Its eight-frame front shooting body action also passes: low carry, level aim, short release recoil and recovery retain the crossbow, both hands and sleeve cuffs in front and side review. A separate eight-frame downward shooting action then passes as well: the crossbow presses into a low aim and recovers after release while hands and sleeve cuffs remain continuous from both views. A third eight-frame upward shooting action then passes: it moves from low carry through high aim/release and recovery while crossbow, hands and sleeve cuffs remain continuous in both views. All three ranged shooting body Actions are saved independently; projectile VFX remains a separate layer. Hit and defence were independently reviewed on the same candidate: the six-frame hit uses torso recoil while both hands retain the light crossbow, and the ten-frame defence raises it across the chest without detachment in either view. These are Blender character-motion reviews only, with no DEF output or game installation.
 
 <s>Candidate 02’s first eight-frame moving pass used excessive hip, knee and ankle amplitude, reading as a crouched jump in side view, so it is rejected and will not enter export.</s>
 
