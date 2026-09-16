@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T05:05:00+08:00
+lastmod: 2026-09-17T05:25:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Castle has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; Monk candidate 03 passes front, upward and downward casts with independent three-dimensional hand VFX; Marksman remote candidate 02 completes core, shooting, hit, defence, death, turns and front/up bolt layers, while separate melee candidate 01 completes three-direction sword attacks. Royal Griffin’s four-frame airborne flight and Pikeman two-hand pike binding remain in reconstruction. No Castle unit is installed in the game."
@@ -24,7 +24,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | mesh, local rig, 8-frame holding and 6-frame walk |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
-| Archer | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
+| Archer | Meshy humanoid rig; 8-frame front and upward shot reviews pass continuity; bolt layers and downward group next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
 | Swordsman | Meshy humanoid rig; local reviews accepted for 8-frame holding/walk, 7-frame front/up attacks, 6-frame hit/death and 11-frame defence |
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
@@ -141,7 +141,7 @@ Remote candidate 02 subsequently gained the native eight-frame up/down shooting 
 
 The Monk’s ten-frame upward cast now has its independent three-dimensional hand VFX: one blue core and eight physical spark meshes pulse with the raised right hand. <s>The first screen-space vertex range anchored it on the chest; a local offset remained below the palm, and a later world offset occluded the hood. All were rejected.</s> The repaired version reads the rebound right-hand bone in world space and applies a palm-side world offset, keeping hand, hood and VFX distinct at peak, start and recovery. This remains Blender review, with no DEF or game installation.
 
-The Archer now has a separate Meshy-rig pose check after its earlier rejected local attempt: a five-key raised-crossbow motion keeps both sleeves and the light crossbow connected through the aiming pose. The first front-shot review now uses the original eight-frame group count at 450×400: raise, aim, recoil and return remain continuous. It still has no separate bolt release and no up/down groups, so it is not a finished firing clip.
+<s>The Archer now has a separate Meshy-rig pose check after its earlier rejected local attempt: a five-key raised-crossbow motion keeps both sleeves and the light crossbow connected through the aiming pose. The first front-shot review now uses the original eight-frame group count at 450×400: raise, aim, recoil and return remain continuous. It still has no separate bolt release and no up/down groups, so it is not a finished firing clip.</s> The native eight-frame `SHOOT_UP` body action has now passed front and side key-frame review: low carry rises to the aiming peak and recovers while the light crossbow, both hands and sleeve cuffs remain continuous. Its bolt layer and the separate downward group still need authoring; this is private Blender review only, with no DEF output or game installation.
 
 <s>The Zealot’s eight-frame `HITTED` probe used a rearward torso and defensive arms, but its peak silhouette remained close to holding because the robe hid the deformation. It is rejected and will not enter DEF assembly.</s>
 
