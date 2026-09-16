@@ -84,6 +84,8 @@ The Zealot now has a strengthened native-count fourteen-frame front-cast review 
 
 The Zealot now also has its native-count thirteen-frame upward-cast review. The hands rise clearly above the chest at the peak; front frames and the side start, peak and recovery checks preserve both sleeves, the robe and stole. It remains a Blender motion review without spell VFX, DEF assembly or game installation.
 
+<s>A first thirteen-frame downward-cast counterpart keeps cloth continuous but collapses both hands into the torso silhouette at its peak. It is rejected; the next attempt will use hand positions measured from original frames rather than reversing the upward pose.</s>
+
 The Marksman now has its own equivalent review on its separate Meshy rig: its `CHCBOW.DEF` front-shot group also has eight frames, and the raise, aim, recoil and return keep the light crossbow, sleeves and hands continuous. It has no bolt release or up/down firing groups yet.
 
 The Archer now has a separate Meshy-rig pose check after its earlier rejected local attempt: a five-key raised-crossbow motion keeps both sleeves and the light crossbow connected through the aiming pose. The first front-shot review now uses the original eight-frame group count at 450×400: raise, aim, recoil and return remain continuous. It still has no separate bolt release and no up/down groups, so it is not a finished firing clip.
