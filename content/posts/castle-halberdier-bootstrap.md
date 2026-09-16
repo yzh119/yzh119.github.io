@@ -1,17 +1,32 @@
 ---
-title: "[AI] Castle halberdier bootstrap"
+title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle creature modelling has begun: the Halberdier has an accepted Meshy mesh, a local Blender rig, and reviewed holding and walking cycles; the Pikeman has an independent accepted mesh and first local rig review. Neither unit is installed in the game."
+homeSummary: "Castle creature modelling has begun with six independently reviewed base meshes. The Halberdier and Pikeman have local rigs and holding/walking reviews; Archer shooting, Griffin flight, Swordsman weapon work and Monk spell gestures are still under local animation review. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
-The Castle roster starts with the Halberdier because it tests the full human workflow: cloth, armour, a long held weapon, and the original's upright carriage. Its battle asset is <code>CHALBD.DEF</code>: a 450×400 canvas with 67 body frames. The eight-frame holding group and six-frame moving group provide the first review targets.
+The first Castle batch covers six base units: Halberdier, Pikeman, Archer, Griffin, Swordsman and Monk. They span long held equipment, a two-handed light crossbow, a winged quadruped, shield-and-sword combat, and an unarmed spellcaster. Each asset needs its own mesh and its own animation constraints.
 
 ![Three-quarter concept for the Castle Halberdier](/images/castle-halberdier-01/concept-34.png)
 
 The concept fixes the features that need to survive generation: blue-and-gold tabard, brown boots, uncovered face under a steel cap, and a halberd held vertically at the left side. It is a reference for construction rather than an in-game image.
+
+## First six base meshes
+
+![Six independently reviewed Castle mesh bootstraps: Halberdier, Pikeman, Archer, Griffin, Swordsman and Monk](/images/castle-halberdier-01/roster-bootstrap-01.png)
+
+The six models were generated from separate reviewed concepts and then checked from eight Blender angles. The Halberdier and Pikeman are now past the first local rig stage: both have holding and walking review sequences at their original 450×400 canvas. The Archer holds its crossbow in the static and holding review, but its first raised-shooting test exposed separated sleeve topology and was rejected. The Griffin, Swordsman and Monk have accepted mesh reviews and move on to creature-specific local rigs.
+
+| Unit | reviewed state |
+| --- | --- |
+| Halberdier | mesh, local rig, 8-frame holding and 6-frame walk |
+| Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
+| Archer | mesh and holding review; shooting rig needs repair |
+| Griffin | mesh review; wing and ground rig next |
+| Swordsman | mesh review; sword and shield rig next |
+| Monk | mesh review; hand-gesture and spell rig next |
 
 ## Meshy mesh
 
