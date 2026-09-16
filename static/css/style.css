@@ -145,6 +145,18 @@ figure figcaption {
   padding: 1.35rem 1.45rem 1.45rem;
   margin-bottom: 2.75rem;
 }
+.home-intro { margin: 0 0 2.5rem; }
+.home-intro h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .75rem; }
+.home-intro p { margin: 0; color: var(--muted); }
+.project-overview { margin: 0 0 2.75rem; }
+.project-overview h2 { font-size: 1.15rem; margin: 0 0 .75rem; }
+.project-grid { display: grid; gap: .75rem; }
+.project-card { border: 1px solid var(--border); border-radius: 8px; padding: 1rem 1.1rem 1.1rem; }
+.project-card-current { border-color: var(--accent); }
+.project-kicker { color: var(--muted); font-size: .78rem; font-weight: 600; letter-spacing: .04em; margin: 0 0 .2rem; text-transform: uppercase; }
+.project-card h3 { font-size: 1.1rem; margin: 0; }
+.project-card p:not(.project-kicker) { font-size: .95rem; margin: .5rem 0 .65rem; }
+.project-link { font-size: .93rem; font-weight: 600; }
 .latest-label {
   color: var(--muted);
   font-size: 0.85rem;

@@ -1,6 +1,42 @@
 {{ define "main" }}
 {{ $posts := where site.RegularPages "Section" "posts" }}
 {{ $posts = $posts.ByDate.Reverse }}
+{{ $castle := site.GetPage "/posts/castle-halberdier-bootstrap" }}
+{{ $necropolis := site.GetPage "/posts/necropolis-bootstrap" }}
+{{ $adventure := site.GetPage "/posts/h3-environment-hd" }}
+<section class="home-intro">
+  {{ if eq site.Language.Lang "zh" }}
+  <h1>用生成式 AI 增强英雄无敌 III</h1>
+  <p>这是一个持续进行的 VCMI 美术增强项目。页面按项目主线汇总进度，文章保留每次可验证的交付、修正与失败尝试。</p>
+  {{ else }}
+  <h1>Enhancing Heroes III with Generative AI</h1>
+  <p>An ongoing VCMI art-enhancement project. This page groups the work by track; the posts retain every verifiable delivery, correction, and rejected trial.</p>
+  {{ end }}
+</section>
+
+<section class="project-overview" aria-label="{{ if eq site.Language.Lang "zh" }}项目主线{{ else }}Project tracks{{ end }}">
+  <h2>{{ if eq site.Language.Lang "zh" }}项目主线{{ else }}Project tracks{{ end }}</h2>
+  <div class="project-grid">
+    {{ with $castle }}<article class="project-card project-card-current">
+      <p class="project-kicker">{{ if eq site.Language.Lang "zh" }}当前推进{{ else }}Current work{{ end }}</p>
+      <h3><a href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}城堡兵种建模{{ else }}Castle creature modelling{{ end }}</a></h3>
+      <p>{{ if eq site.Language.Lang "zh" }}十四种兵各有独立 Meshy 网格；动作按原版帧组在 Blender 中逐组审查。当前仍是私有审查资产，尚未导出或装入游戏。{{ else }}Fourteen units have separate Meshy meshes; Blender reviews follow original frame groups action by action. These remain private review assets, with no export or in-game installation yet.{{ end }}</p>
+      <a class="project-link" href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}查看城堡进展{{ else }}Open Castle progress{{ end }} →</a>
+    </article>{{ end }}
+    {{ with $necropolis }}<article class="project-card">
+      <p class="project-kicker">{{ if eq site.Language.Lang "zh" }}已接入路线{{ else }}Integrated track{{ end }}</p>
+      <h3><a href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}墓园{{ else }}Necropolis{{ end }}</a></h3>
+      <p>{{ if eq site.Language.Lang "zh" }}兵种、城镇界面与高清展示素材的完整工作流；文章按已验证的游戏内结果和后续修正记录。{{ else }}The complete workflow for creatures, town screens, and higher-resolution presentation assets, documented through verified in-game results and subsequent fixes.{{ end }}</p>
+      <a class="project-link" href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}查看墓园系列{{ else }}Open Necropolis series{{ end }} →</a>
+    </article>{{ end }}
+    {{ with $adventure }}<article class="project-card">
+      <p class="project-kicker">{{ if eq site.Language.Lang "zh" }}地图美术{{ else }}Adventure map art{{ end }}</p>
+      <h3><a href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}地形与地标高清化{{ else }}Terrain and landmark upscaling{{ end }}</a></h3>
+      <p>{{ if eq site.Language.Lang "zh" }}地形、山体、植被和地标按资源类别推进，同时保留原版可读性、遮挡和点击范围。{{ else }}Terrain, mountains, vegetation, and landmarks are updated by resource family while preserving original readability, occlusion, and click bounds.{{ end }}</p>
+      <a class="project-link" href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}查看地图美术{{ else }}Open map-art work{{ end }} →</a>
+    </article>{{ end }}
+  </div>
+</section>
 {{ with index $posts 0 }}
 <section class="latest-update">
   <p class="latest-label">{{ if eq site.Language.Lang "zh" }}最新进展{{ else }}Latest update{{ end }}</p>
@@ -9,9 +45,9 @@
   <a class="latest-link" href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}查看进展{{ else }}Read the update{{ end }} →</a>
 </section>
 {{ end }}
-<h2 class="archive-heading">{{ if eq site.Language.Lang "zh" }}文章{{ else }}Posts{{ end }}</h2>
+<h2 class="archive-heading">{{ if eq site.Language.Lang "zh" }}最近更新{{ else }}Recent updates{{ end }}</h2>
 <ul class="post-list">
-  {{ range first 12 $posts }}
+  {{ range first 8 $posts }}
   <li>
     <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
