@@ -3,7 +3,7 @@ title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle creature modelling has begun with all fourteen independently reviewed creature meshes. The Halberdier and Pikeman have local rigs and holding/walking reviews; Archer shooting, Griffin flight, Swordsman weapon work, Monk spell gestures, Cavalier charge and Angel flight are still under local animation review. No Castle unit is installed in the game."
+homeSummary: "All fourteen Castle units now have independently reviewed Meshy meshes. Halberdier and Pikeman have local rigs plus holding/walking reviews; the other twelve await creature-specific local animation. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
