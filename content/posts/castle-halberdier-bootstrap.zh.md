@@ -35,7 +35,7 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 | 十字军 | Meshy 人形骨架；8 帧待机、8 帧行走及修复后的刚性剑 7 帧双击通过 |
 | 狂热者 | Meshy 人形骨架；6 帧待机/行走、14 帧正面施法、13 帧上下施法与对应三维手部特效、8 帧受击、7 帧防御、11 帧死亡的本地审查通过 |
 | 骑士统领 | 本地骑乘探针通过：待机、行走、正面长枪攻击、起步、收步；完整组待扩展 |
-| 大天使 | Meshy 人形骨架、四根本地翼骨；8 帧待机与 7 帧飞行审查通过，剩余动作待做 |
+| 大天使 | 独立 Meshy 剑与本地翼部人形骨架；待机、7 帧飞行和三套 6 帧挥剑动作均通过正侧面审查 |
 
 ## 审查图集
 
@@ -123,11 +123,25 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 大天使现采用同一套独立剑策略：先剔除中央嵌入式剑刃岛，再将独立审查过的 Meshy 剑放到保留的手部。静态正面、斜视、侧视，以及全部 7 帧飞行和 4 个侧视关键帧中，均只保留一把剑，盔甲和翅膀连续。
 
+三套原版方向的 6 帧武器路径也已分别审查：前劈、上挑和下劈。剑围绕测量得到的双手护手点使用显式世界空间矩阵控制，因此不会继承导入模型的父级枢轴或异常手部尾骨变换。下方的接触与回收关键帧，以及每个方向的侧视检查，都持续显示同一把剑被双手控制。这仍是 Blender 动作审查，不主张已完成 DEF 封装或游戏安装。
+
 ![大天使独立剑斜视静态审查](/images/castle-halberdier-01/archangel-combined-sword-oblique.png)
 
 ![大天使独立剑飞行翼部峰值](/images/castle-halberdier-01/archangel-independent-flight-04.png)
 
 ![大天使独立剑飞行侧视审查](/images/castle-halberdier-01/archangel-independent-flight-side-03.png)
+
+![大天使前劈接触帧](/images/castle-halberdier-01/archangel-independent-attack-front-impact.png)
+
+![大天使前劈侧视审查](/images/castle-halberdier-01/archangel-independent-attack-front-side.png)
+
+![大天使上挑峰值](/images/castle-halberdier-01/archangel-independent-attack-up-peak.png)
+
+![大天使上挑侧视审查](/images/castle-halberdier-01/archangel-independent-attack-up-side.png)
+
+![大天使下劈接触帧](/images/castle-halberdier-01/archangel-independent-attack-down-contact.png)
+
+![大天使下劈侧视审查](/images/castle-halberdier-01/archangel-independent-attack-down-side.png)
 
 神射手的旧骨架虽然能做正面射击，却没有稳定地把轻弩抬到原版的高位方向，因此没有把那组草稿当作上方攻击。本轮候选 02 从独立蓝金轻弩手概念重新生成网格与 Meshy 人形骨架；八个静态角度中，弩、双手和袖口都保持连接。随后按原版 `CHCBOW.DEF` 的 6 帧上方攻击组制作了低位平举、抬弩、高位击发和回落：正面与侧面关键帧均保持握把、弩身、双手和衣袖连续。对应的 8 帧正面射击组也已通过：从低位持弩到平射、短后坐再回位，正面和侧面均没有袖口拉裂、手脱把或弩身错位。独立的 8 帧下方射击组随后也通过：弩稳定下压、击发后回位，双手和袖口在正侧面持续连贯。第三套 8 帧上方射击组随后也通过：从低位持弩抬至高位瞄准、击发再回位，正侧面中弩、双手和袖口连续。三套远程射击本体 Action 都已独立保存；弹体特效仍须作为独立层制作。受击与防御也在同一候选上独立审查：6 帧受击以躯干后仰传达冲击，轻弩仍由双手控制；10 帧防御把轻弩抬至胸前，正面和侧面均不发生脱链。这些是 Blender 角色动作审查，不含 DEF 输出或游戏安装。
 
