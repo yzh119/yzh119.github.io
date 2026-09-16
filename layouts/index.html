@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{ $posts := where site.RegularPages "Section" "posts" }}
-{{ $posts = $posts.ByDate.Reverse }}
+{{ $posts = $posts.ByLastmod.Reverse }}
 {{ $castle := site.GetPage "/posts/castle-halberdier-bootstrap" }}
 {{ $necropolis := site.GetPage "/posts/necropolis-bootstrap" }}
 {{ $adventure := site.GetPage "/posts/h3-environment-hd" }}
@@ -30,6 +30,15 @@
       <dd>{{ if eq site.Language.Lang "zh" }}地形、山体、植被、地标、常见战场和墓园地图城镇持续以高清静态资源替换。{{ else }}Terrain, mountains, vegetation, landmarks, common battlefields, and Necropolis map towns are being replaced with higher-resolution static assets.{{ end }}</dd>
     </div>
   </dl>
+</section>
+
+<section class="current-focus" aria-label="{{ if eq site.Language.Lang "zh" }}当前制作重点{{ else }}Current production focus{{ end }}">
+  <h2>{{ if eq site.Language.Lang "zh" }}当前制作重点{{ else }}Current production focus{{ end }}</h2>
+  {{ if eq site.Language.Lang "zh" }}
+  <p>城堡线正在从已审查的单体网格进入逐帧动作阶段：狂热者已完成主要动作；僧侣候选 03 的正面、上方、下方施法及独立三维手部特效已通过；神射手的远程与独立近战动作已完成本地审查。当前在处理皇家狮鹫的四足地面骨架；枪兵的双手—长枪约束仍需重建。所有这些均为私有 Blender 审查资产，尚未导出或接入游戏。</p>
+  {{ else }}
+  <p>The Castle track has moved from reviewed individual meshes into frame-by-frame motion work: Zealot’s principal motions pass; Monk candidate 03 passes front, upward and downward casts with independent 3D hand VFX; and Marksman’s ranged and separate melee motions pass local review. Current work is rebuilding Royal Griffin’s quadruped ground rig, while Pikeman still needs a dedicated two-hand-to-pike constraint. All of this remains private Blender review work, with no export or in-game integration.</p>
+  {{ end }}
 </section>
 
 <section class="project-overview" aria-label="{{ if eq site.Language.Lang "zh" }}项目主线{{ else }}Project tracks{{ end }}">
