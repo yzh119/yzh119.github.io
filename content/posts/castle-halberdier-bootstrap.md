@@ -34,7 +34,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
 | Zealot | Meshy humanoid rig; 6-frame holding, 6-frame walk and 14-frame cast preliminary review complete |
 | Champion | mesh review; mounted and charge rig next |
-| Archangel | mesh review; flight and two-handed-sword rig next |
+| Archangel | Meshy humanoid rig, four local wing bones and 8-frame holding wing review accepted; flight/two-handed sword next |
 
 ## Griffin and Swordsman motion calibration
 
@@ -51,6 +51,8 @@ Crusader and Monk each now use their own Meshy humanoid rig (an additional 5 cre
 These trials show that a convincing Meshy surface is not automatically an animatable continuous character topology. The next pass will rebuild local weights from visible joints and connected regions. Until then, these are Blender review assets only: no creature frames, shadows, overlays, DEF output, or game installation.
 
 After static review of the Angel Meshy humanoid rig, Astra did not rotate the whole wing as one object. It located wing components by position among 1,356 connected components of the shared surface. Four local root/tip bones control 10,319 wing vertices; an eight-frame restrained wing review keeps armour, two-handed sword and torso still. This is a holding-wing result only: flight and sword motion remain to be authored.
+
+Archangel completed the same local wing process on its separate mesh: 8,888 position-classified wing vertices are assigned to four root/tip bones. The eight-frame review keeps upgraded armour, torso and two-handed sword stable. It does not reuse Angel vertex groups, and is not flight or game installation.
 
 ## Meshy mesh
 
