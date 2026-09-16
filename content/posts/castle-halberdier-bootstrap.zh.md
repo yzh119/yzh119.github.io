@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-17T18:00:00+08:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
-homeSummary: "城堡十四种兵都已有独立审查过的 Meshy 网格。天使的独立剑、飞行、三方向挥剑、受击、防御与起止步已通过；大天使的独立剑、飞行和三方向挥剑均通过正侧面审查。它们仍是私有 Blender 审查资产，尚未有城堡兵种装进游戏。"
+homeSummary: "城堡十四种兵都已有独立审查过的 Meshy 网格。天使的独立剑、飞行、三方向挥剑、受击、防御与起止步已通过；大天使的独立剑、飞行、三方向挥剑、防御、受击和起止步均通过正侧面审查。它们仍是私有 Blender 审查资产，尚未有城堡兵种装进游戏。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 | 十字军 | Meshy 人形骨架；8 帧待机、8 帧行走及修复后的刚性剑 7 帧双击通过 |
 | 狂热者 | Meshy 人形骨架；6 帧待机/行走、14 帧正面施法、13 帧上下施法与对应三维手部特效、8 帧受击、7 帧防御、11 帧死亡的本地审查通过 |
 | 骑士统领 | 本地骑乘探针通过：待机、行走、正面长枪攻击、起步、收步；完整组待扩展 |
-| 大天使 | 独立 Meshy 剑与本地翼部人形骨架；待机、7 帧飞行和三套 6 帧挥剑动作均通过正侧面审查 |
+| 大天使 | 独立 Meshy 剑与本地翼部人形骨架；待机、7 帧飞行、三套 6 帧挥剑、10 帧防御、6 帧受击和起止步均通过审查 |
 
 ## 审查图集
 
@@ -142,6 +142,20 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ![大天使下劈接触帧](/images/castle-halberdier-01/archangel-independent-attack-down-contact.png)
 
 ![大天使下劈侧视审查](/images/castle-halberdier-01/archangel-independent-attack-down-side.png)
+
+10 帧防御、6 帧受击、2 帧起步和 3 帧收步也已通过同样的正侧面审查。防御峰值时独立剑在胸前仍清晰可读；受击让身体和剑使用同一份世界空间位移；短过渡使用大天使自身的翼骨，同时保留唯一的剑载体。这一组刻意不主张已经完成死亡姿态、DEF 封装或游戏安装。
+
+![大天使防御峰值](/images/castle-halberdier-01/archangel-independent-defence-peak.png)
+
+![大天使防御侧视审查](/images/castle-halberdier-01/archangel-independent-defence-side.png)
+
+![大天使受击后仰](/images/castle-halberdier-01/archangel-independent-hit-recoil.png)
+
+![大天使受击侧视审查](/images/castle-halberdier-01/archangel-independent-hit-side.png)
+
+![大天使起步翼部关键帧](/images/castle-halberdier-01/archangel-independent-move-start.png)
+
+![大天使收步翼部关键帧](/images/castle-halberdier-01/archangel-independent-move-end.png)
 
 神射手的旧骨架虽然能做正面射击，却没有稳定地把轻弩抬到原版的高位方向，因此没有把那组草稿当作上方攻击。本轮候选 02 从独立蓝金轻弩手概念重新生成网格与 Meshy 人形骨架；八个静态角度中，弩、双手和袖口都保持连接。随后按原版 `CHCBOW.DEF` 的 6 帧上方攻击组制作了低位平举、抬弩、高位击发和回落：正面与侧面关键帧均保持握把、弩身、双手和衣袖连续。对应的 8 帧正面射击组也已通过：从低位持弩到平射、短后坐再回位，正面和侧面均没有袖口拉裂、手脱把或弩身错位。独立的 8 帧下方射击组随后也通过：弩稳定下压、击发后回位，双手和袖口在正侧面持续连贯。第三套 8 帧上方射击组随后也通过：从低位持弩抬至高位瞄准、击发再回位，正侧面中弩、双手和袖口连续。三套远程射击本体 Action 都已独立保存；弹体特效仍须作为独立层制作。受击与防御也在同一候选上独立审查：6 帧受击以躯干后仰传达冲击，轻弩仍由双手控制；10 帧防御把轻弩抬至胸前，正面和侧面均不发生脱链。这些是 Blender 角色动作审查，不含 DEF 输出或游戏安装。
 
