@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-17T18:00:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; Monk candidate 03 passes front, upward and downward casts with independent three-dimensional hand VFX; Marksman remote candidate 02 completes core, shooting, hit, defence, death, turns and front/up bolt layers, while separate melee candidate 01 completes three-direction sword attacks. Royal Griffin’s four-frame airborne flight and Pikeman two-hand pike binding remain in reconstruction. No Castle unit is installed in the game."
+homeSummary: "Castle has fourteen independently reviewed Meshy meshes. Angel passes its independent sword, flight, three sword directions, hit, defence and move transitions; Archangel passes its independent sword, flight and three sword directions in front and side review. These remain private Blender reviews, with no Castle unit installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
