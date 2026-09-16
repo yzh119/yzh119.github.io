@@ -27,13 +27,13 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
 | Swordsman | Meshy humanoid rig plus local 8-frame holding and walking review accepted |
 | Monk | Meshy humanoid rig; 6-frame holding/walk accepted, 10-frame cast gesture needs refinement |
-| Cavalier | local mounted probe passed: holding, walk, front lance, move start/end; full groups next |
+| Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones and 8-frame holding wing review accepted; flight/two-handed sword next |
 | Marksman | Meshy humanoid rig passed static review; holding-crossbow and shooting review next |
 | Royal Griffin | four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
 | Zealot | Meshy humanoid rig; 6-frame holding, 6-frame walk and 14-frame cast preliminary review complete |
-| Champion | local mounted probe passed: holding, walk, front lance, move start/end; full groups next |
+| Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Meshy humanoid rig, four local wing bones and 8-frame holding wing review accepted; flight/two-handed sword next |
 
 ## Griffin and Swordsman motion calibration
@@ -54,7 +54,7 @@ After static review of the Angel Meshy humanoid rig, Astra did not rotate the wh
 
 Archangel completed the same local wing process on its separate mesh: 8,888 position-classified wing vertices are assigned to four root/tip bones. The eight-frame review keeps upgraded armour, torso and two-handed sword stable. It does not reuse Angel vertex groups, and is not flight or game installation.
 
-Cavalier and Champion each ran a local horse-and-rider probe against their own meshes and original alpha-height anchors. Both pass crop checks for holding, walking, front lance, move start and move end; each still needs expansion to its full 87-frame action set.
+Cavalier and Champion each ran a local horse-and-rider probe against their own meshes and original alpha-height anchors. Holding, walking, front lance, move start and move end pass crop checks; a three-frame side review also keeps the horse legs, rider, barding and lance connected through the gait. This is still a probe: each needs its complete 87-frame action set and per-action timing before export.
 
 Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 component-classified wing vertices. Its eight-frame holding wing review passes; its ground gait will not reuse the rejected Griffin leg/tail weights.
 
