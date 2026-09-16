@@ -23,7 +23,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | mesh, local rig, 8-frame holding and 6-frame walk |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
-| Archer | Meshy humanoid rig passed static review; raised-crossbow and shooting review next |
+| Archer | Meshy humanoid rig; raised-crossbow pose passes review, native shooting groups next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
 | Swordsman | Meshy humanoid rig plus local 8-frame holding and walking review accepted |
 | Monk | Meshy humanoid rig; 6-frame holding/walk accepted, 10-frame cast gesture needs refinement |
@@ -57,6 +57,8 @@ Archangel completed the same local wing process on its separate mesh: 8,888 posi
 Cavalier and Champion each ran a local horse-and-rider probe against their own meshes and original alpha-height anchors. Holding, walking, front lance, move start and move end pass crop checks; a three-frame side review also keeps the horse legs, rider, barding and lance connected through the gait. This is still a probe: each needs its complete 87-frame action set and per-action timing before export.
 
 Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 component-classified wing vertices. Its eight-frame holding wing review passes; its ground gait will not reuse the rejected Griffin leg/tail weights.
+
+The Archer now has a separate Meshy-rig pose check after its earlier rejected local attempt: a five-key raised-crossbow motion keeps both sleeves and the light crossbow connected through the aiming pose. It validates the direction of the rig, not a finished firing clip; the original shooting group counts and release timing still need authoring.
 
 ## Meshy mesh
 
