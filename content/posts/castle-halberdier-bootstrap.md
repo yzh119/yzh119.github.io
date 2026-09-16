@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | Meshy body and original long-weapon components; 8-frame holding, 6-frame walk, 6-frame front/up attacks and 7-frame down attack accepted in front and side review |
+| Halberdier | Meshy body and original long-weapon components; holding, walk, three attack directions, 6-frame hit and 12-frame defence accepted in front and side review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -342,6 +342,16 @@ The same complete-component carrier now passes both remaining native directions:
 ![Halberdier downward attack, front contact](/images/castle-halberdier-01/halberdier-original-component-attack-down-impact.png)
 
 ![Halberdier downward attack, side review](/images/castle-halberdier-01/halberdier-original-component-attack-down-side.png)
+
+A six-frame `HITTED` recoil now translates both the body and the complete original-weapon carrier together. Twelve-frame `DEFENCE` then raises the same original axe head and shaft through a diagonal chest guard and recovery. The selected front and side keys keep the grip, shaft, axe head and butt cap continuous; they remain Blender reviews without DEF assembly or installation.
+
+![Halberdier hit recoil](/images/castle-halberdier-01/halberdier-original-component-hit-recoil.png)
+
+![Halberdier hit side review](/images/castle-halberdier-01/halberdier-original-component-hit-side.png)
+
+![Halberdier defence peak](/images/castle-halberdier-01/halberdier-original-component-defence-peak.png)
+
+![Halberdier defence side review](/images/castle-halberdier-01/halberdier-original-component-defence-side.png)
 
 ## Meshy mesh
 
