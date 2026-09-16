@@ -48,7 +48,7 @@ Review found several earlier redraws had become more elaborate by changing the o
 
 ![Original base and final fidelity corrections](/images/h3-environment-hd/fidelity-corrections-compare.png)
 
-The Haunted Graveyard review also found eight body frames. It was deliberately not overwritten with a static redraw: a correction there requires the deferred Blender animation workflow.
+The Haunted Graveyard review also found eight body frames. It was deliberately not overwritten with a static redraw: a correction there requires the deferred Blender animation workflow. A faithful roadside-tavern draft was likewise rejected before registration after the preflight check found eight body frames in `AVXTVRN0`; it was not installed.
 
 ## Arena
 

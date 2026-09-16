@@ -48,7 +48,7 @@ tags: ["vcmi", "ai", "graphics", "astra"]
 
 ![原始底图与最终忠实度更正](/images/h3-environment-hd/fidelity-corrections-compare.png)
 
-闹鬼墓园的复查还发现它有八帧主体。没有用静态图覆盖它；该项更正必须使用已暂缓的 Blender 动画流程。
+闹鬼墓园的复查还发现它有八帧主体。没有用静态图覆盖它；该项更正必须使用已暂缓的 Blender 动画流程。路边酒馆的忠实草稿也在登记前被拒绝：预检发现 `AVXTVRN0` 同样有八帧主体，因此没有接入游戏。
 
 ## 竞技场
 
