@@ -148,6 +148,12 @@ figure figcaption {
 .home-intro { margin: 0 0 2.5rem; }
 .home-intro h1 { font-size: 1.7rem; line-height: 1.25; margin: 0 0 .75rem; }
 .home-intro p { margin: 0; color: var(--muted); }
+.project-snapshot { margin: 0 0 2.75rem; }
+.project-snapshot h2 { font-size: 1.15rem; margin: 0 0 .75rem; }
+.snapshot-grid { display: grid; gap: .75rem; margin: 0; }
+.snapshot-grid > div { border-left: 3px solid var(--accent); padding: .35rem 0 .35rem .9rem; }
+.snapshot-grid dt { font-size: .9rem; font-weight: 700; }
+.snapshot-grid dd { color: var(--muted); font-size: .95rem; line-height: 1.55; margin: .22rem 0 0; }
 .project-overview { margin: 0 0 2.75rem; }
 .project-overview h2 { font-size: 1.15rem; margin: 0 0 .75rem; }
 .project-grid { display: grid; gap: .75rem; }
