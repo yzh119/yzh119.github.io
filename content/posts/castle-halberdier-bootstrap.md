@@ -1,9 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
+lastmod: 2026-09-16T20:30:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Narrow Blender motion reviews cover bow shots, casting, sword strikes, mounted probes and Angel flight; rejected topology and weight trials are recorded in the post. No Castle unit is installed in the game."
+homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; after a cast-arm rebind, Monk candidate 03 also passes front and downward casts. The new Marksman mesh and rig are under review. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
