@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T17:00:00+08:00
+lastmod: 2026-09-17T18:00:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Castle has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; Monk candidate 03 passes front, upward and downward casts with independent three-dimensional hand VFX; Marksman remote candidate 02 completes core, shooting, hit, defence, death, turns and front/up bolt layers, while separate melee candidate 01 completes three-direction sword attacks. Royal Griffin’s four-frame airborne flight and Pikeman two-hand pike binding remain in reconstruction. No Castle unit is installed in the game."
@@ -36,6 +36,34 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; remaining actions next |
+
+## Review gallery
+
+These are Blender review renders from the accepted local states. They show the actual material under review, rather than concepts or a claimed game result.
+
+### Halberdier: eight-frame holding cadence
+
+![Halberdier holding frame one](/images/castle-halberdier-01/halberdier-holding-01.png)
+
+![Halberdier holding frame three](/images/castle-halberdier-01/halberdier-holding-03.png)
+
+![Halberdier holding frame five](/images/castle-halberdier-01/halberdier-holding-05.png)
+
+![Halberdier holding frame seven](/images/castle-halberdier-01/halberdier-holding-07.png)
+
+![Halberdier six-frame walking review](/images/castle-halberdier-01/halberdier-walking-contact-sheet.png)
+
+### Angel: independent replacement sword, static eight-view check
+
+The replacement sword has passed its own static review. It is deliberately shown separately: the compatible unarmed Angel body did not pass wing review, so this is not yet a combined Angel action.
+
+![Independent Angel sword, front](/images/castle-halberdier-01/angel-independent-sword-000.png)
+
+![Independent Angel sword, three-quarter](/images/castle-halberdier-01/angel-independent-sword-045.png)
+
+![Independent Angel sword, side](/images/castle-halberdier-01/angel-independent-sword-090.png)
+
+![Independent Angel sword, rear](/images/castle-halberdier-01/angel-independent-sword-180.png)
 
 The old Marksman rig could make a front shot but could not reliably lift the light crossbow to the original high-angle direction, so its draft was not treated as an upward attack. Candidate 02 starts again from an independent blue-and-gold crossbowman mesh and Meshy humanoid rig; eight static angles retain the crossbow, both hands and sleeve cuffs. A native six-frame `CHCBOW.DEF` upward attack then moves from low level aim through raise and high release into recovery. Front and side key frames keep the grip, crossbow, hands and sleeves continuous. Its eight-frame front shooting body action also passes: low carry, level aim, short release recoil and recovery retain the crossbow, both hands and sleeve cuffs in front and side review. A separate eight-frame downward shooting action then passes as well: the crossbow presses into a low aim and recovers after release while hands and sleeve cuffs remain continuous from both views. A third eight-frame upward shooting action then passes: it moves from low carry through high aim/release and recovery while crossbow, hands and sleeve cuffs remain continuous in both views. All three ranged shooting body Actions are saved independently; projectile VFX remains a separate layer. Hit and defence were independently reviewed on the same candidate: the six-frame hit uses torso recoil while both hands retain the light crossbow, and the ten-frame defence raises it across the chest without detachment in either view. These are Blender character-motion reviews only, with no DEF output or game installation.
 
