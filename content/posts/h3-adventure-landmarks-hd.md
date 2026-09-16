@@ -48,7 +48,7 @@ Review found several earlier redraws had become more elaborate by changing the o
 
 ![Original base and final fidelity corrections](/images/h3-environment-hd/fidelity-corrections-compare.png)
 
-Watering Hole (`AVXWTRH0`) was also corrected from an oversized lush pond to its original low shallow pool: left rock mound, bare shrubs, central rock and thin right stone shore are retained. The Haunted Graveyard review also found eight body frames. It was deliberately not overwritten with a static redraw: a correction there requires the deferred Blender animation workflow. A faithful roadside-tavern draft was likewise rejected before registration after the preflight check found eight body frames in `AVXTVRN0`; it was not installed.
+Watering Hole (`AVXWTRH0`) was also corrected from an oversized lush pond to its original low shallow pool: left rock mound, bare shrubs, central rock and thin right stone shore are retained. Marketplace (`AVXMKTB0`) likewise returns to one low central booth and two small side awnings, rather than a multi-roofed market hall. The Haunted Graveyard review also found eight body frames. It was deliberately not overwritten with a static redraw: a correction there requires the deferred Blender animation workflow. A faithful roadside-tavern draft was likewise rejected before registration after the preflight check found eight body frames in `AVXTVRN0`; it was not installed.
 
 ## Arena
 
