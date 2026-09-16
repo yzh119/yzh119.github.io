@@ -25,7 +25,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
 | Archer | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
-| Swordsman | Meshy humanoid rig; 8-frame holding/walk and 7-frame front-attack review accepted |
+| Swordsman | Meshy humanoid rig; 8-frame holding/walk plus 7-frame front/up attack reviews accepted |
 | Monk | Meshy humanoid rig; 6-frame holding/walk and strengthened 10-frame front-cast review accepted |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
@@ -51,6 +51,8 @@ The original Griffin has eight holding frames and four walking frames; the Sword
 Update: the Swordsman now uses a Meshy humanoid rig (an additional 5 credits), with Astra authoring the local holding and walking Actions. Both eight-frame clips were reviewed at 450×400. The left and right feet travel 0.105 and 0.089 model units front-to-back, while the sword hand travels 0.072. Side review keeps sword, shield and skirt continuous, so this local walk review is accepted. It is still not DEF output or a game installation.
 
 The Swordsman now also has a seven-frame `CSWORD.DEF` front-attack review. The wind-up carries the sword behind the body, but front and side checks keep the blade connected to the hand and preserve the shield; up/down strikes and the remaining groups still need authoring.
+
+The Swordsman also now has an independent seven-frame `CSWORD.DEF` upward attack review. Its high-ready motion resolves into an elevated forward strike while the blade, hand, shield and skirt remain continuous in front and side checks. Downward attack and remaining groups still need authoring.
 
 Crusader and Monk each now use their own Meshy humanoid rig (an additional 5 credits each); neither reuses the Swordsman's mesh or weights. The Crusader's eight-frame holding and walking reviews pass intact. Its seven-frame double-strike test is rejected because part of the sword remains weighted to the body chain, and will return after a local rebind. The Monk's six-frame holding and walking reviews pass; its ten-frame front cast is saved as a gesture calibration. The robe remains intact, but the raised-hand amplitude needs refinement, so it is not a final spell delivery.
 
