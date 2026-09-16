@@ -22,7 +22,7 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 | 兵种 | 已审查状态 |
 | --- | --- |
-| 长戟兵 | 网格、本地骨架、8 帧待机、6 帧行走 |
+| 长戟兵 | Meshy 身体与原始长戟组件；8 帧待机、6 帧行走和 6 帧正面攻击均通过正侧面审查 |
 | 枪兵 | 网格、本地骨架、7 帧待机、6 帧行走；独立人体／长枪的双手约束及 10 帧正面冲刺探针通过 |
 | 弓箭手 | Meshy 人形骨架；三方向原生 8 帧身体射击与独立 Meshy 弩矢层连续性审查通过 |
 | 狮鹫 | 网格、8 帧待机通过；4 帧步态试验拒绝，需重做腿尾权重 |
@@ -324,6 +324,14 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 <s>长戟兵首个 6 帧正面攻击探针尝试把导入的松散长戟组件作为左手单一载体转动。可视检查发现旋转枪杆旁仍留下未动的斧头和下段杆件，因此已拒绝。已恢复通过的待机与行走状态；下一次攻击探针必须先提取完整、干净的武器组件。</s>
 
 <s>第二个 6 帧正面攻击重建使用一根刚性长杆、矛尖、斧刃与尾帽替换武器。宽范围遮罩虽然移除了 Meshy 武器碎片，却连持戟手也一并移除；保留手部局部区域又留下竖直枪杆残片。两个子版本均已拒绝。下一次攻击制作必须先提取完整的 Meshy 手—武器组件集。</s>
+
+下一套 6 帧 `ATTACK_FRONT` 审查改为保留原始 Meshy 长戟，而不再以替代武器蒙混。所有前方枪杆／戟头组件围绕测量得到的可见握点重新归为同一个载体；此前被误判为左脚部件的下端杆帽也已纳入。完整起始帧、命中帧和侧视关键帧中，唯一的长戟、原始斧刃轮廓和持戟手均连续，不再有静态残片。这只是 Blender 武器路径审查，不主张完成 DEF 组装或游戏安装。
+
+![长戟兵原始 Meshy 长戟完整起始帧](/images/castle-halberdier-01/halberdier-original-component-attack-holding.png)
+
+![长戟兵原始 Meshy 长戟正面命中](/images/castle-halberdier-01/halberdier-original-component-attack-impact.png)
+
+![长戟兵原始 Meshy 长戟侧面命中审查](/images/castle-halberdier-01/halberdier-original-component-attack-side.png)
 
 ## Meshy 网格
 

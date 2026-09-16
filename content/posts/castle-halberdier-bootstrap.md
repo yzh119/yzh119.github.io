@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | mesh, local rig, 8-frame holding and 6-frame walk |
+| Halberdier | Meshy body and original long-weapon components; 8-frame holding, 6-frame walk, and 6-frame front attack accepted in front and side review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -324,6 +324,14 @@ The Swordsman’s native two-frame `MOVE_START` and `MOVE_END` reviews now expli
 <s>The first six-frame Halberdier front-attack probe tried to turn the imported loose pole pieces as one left-hand carrier. The visual check exposed unmoved head and lower-shaft fragments alongside the rotated shaft, so it is rejected. The accepted holding and walking states were restored; attack work now needs a clean full-weapon component extraction before another probe.</s>
 
 <s>The second six-frame front-attack reconstruction replaced the pole with one rigid authored shaft, spear, axe head and butt cap. Its broad mask correctly removed the Meshy weapon fragments but also removed the holding hand; keeping the hand’s local region retained a vertical shaft remnant. Both sub-passes are rejected. The next attempt must extract a complete Meshy hand-and-weapon component set before action authoring.</s>
+
+The next six-frame `ATTACK_FRONT` review accepts the original Meshy long weapon rather than a substitute. All forward pole/head components are regrouped around the measured visible grip as one carrier; the lower cap previously misclassified as a left-foot piece is included as well. The full rest frame, contact and side key retain the single long halberd, its original axe silhouette, and the holding hand without residual static fragments. This is a Blender weapon-path review only; it does not claim DEF assembly or game installation.
+
+![Halberdier original Meshy halberd, full rest frame](/images/castle-halberdier-01/halberdier-original-component-attack-holding.png)
+
+![Halberdier original Meshy halberd, front contact](/images/castle-halberdier-01/halberdier-original-component-attack-impact.png)
+
+![Halberdier original Meshy halberd, side contact review](/images/castle-halberdier-01/halberdier-original-component-attack-side.png)
 
 ## Meshy mesh
 
