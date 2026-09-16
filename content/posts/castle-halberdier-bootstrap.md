@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-16T22:55:00+08:00
+lastmod: 2026-09-16T23:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; after a cast-arm rebind, Monk candidate 03 passes front and downward casts; Marksman candidate 02 passes its new mesh, rig, holding/moving, directional attack/shooting, hit and defence body reviews. No Castle unit is installed in the game."
+homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; after a cast-arm rebind, Monk candidate 03 passes front and downward casts; Marksman candidate 02 passes its new mesh, rig, holding/moving, directional attack/shooting, hit, defence and death body reviews. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
-| Marksman | candidate 02 independent Meshy mesh and humanoid rig pass static review; 8-frame holding/moving, 6-frame upward attack, 8-frame front/down shooting, 6-frame hit and 10-frame defence body actions pass; projectile, death and move transitions next |
+| Marksman | candidate 02 independent Meshy mesh and humanoid rig pass static review; 8-frame holding/moving, 6-frame upward attack, 8-frame front/down shooting, 6-frame hit/death and 10-frame defence body actions pass; projectile and move transitions next |
 | Royal Griffin | four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -44,6 +44,8 @@ The old Marksman rig could make a front shot but could not reliably lift the lig
 The same rig’s eight-frame holding and revised moving review then pass. The revision retains the clearly alternating stride in the original `CHCBOW.DEF` moving frames while removing the excessive crouch; front and side checks preserve the low carried crossbow, both hands, robe and legs. This remains local Blender review work rather than DEF or game art.
 
 <s>Candidate 02’s first six-frame death probe attempted a root-side fall, but its terminal frames did not form a stable physical collapse and instead stretched the crossbow-hand chain. It is rejected and will not export. Death needs independent ground anchoring and a local arm-weight repair.</s>
+
+Import hierarchy review showed that the Marksman mesh and Armature are siblings: rotating only the rig cannot physically carry the full model into a fall. The repaired version gives both a shared carrier parent and drives the sideward collapse through that parent. Its six-frame death now passes, resolving to a low fallen silhouette while the crossbow and both hands remain intact in front and side review.
 
 ## Griffin and Swordsman motion calibration
 
