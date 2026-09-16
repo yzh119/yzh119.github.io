@@ -3,21 +3,21 @@ title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle creature modelling has begun with eight independently reviewed base meshes. The Halberdier and Pikeman have local rigs and holding/walking reviews; Archer shooting, Griffin flight, Swordsman weapon work, Monk spell gestures, Cavalier charge and Angel flight are still under local animation review. No Castle unit is installed in the game."
+homeSummary: "Castle creature modelling has begun with all fourteen independently reviewed creature meshes. The Halberdier and Pikeman have local rigs and holding/walking reviews; Archer shooting, Griffin flight, Swordsman weapon work, Monk spell gestures, Cavalier charge and Angel flight are still under local animation review. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
-The first Castle batch now has eight independently reviewed meshes: Halberdier, Pikeman, Archer, Griffin, Swordsman, Monk, Cavalier and Angel. They span long held equipment, a two-handed light crossbow, a winged quadruped, shield-and-sword combat, and an unarmed spellcaster. Each asset needs its own mesh and its own animation constraints.
+The Castle roster now has independently reviewed meshes for all fourteen units: Pikeman, Halberdier, Archer, Marksman, Griffin, Royal Griffin, Swordsman, Crusader, Monk, Zealot, Cavalier, Champion, Angel and Archangel. They span long held equipment, a two-handed light crossbow, a winged quadruped, shield-and-sword combat, and an unarmed spellcaster. Each asset needs its own mesh and its own animation constraints.
 
 ![Three-quarter concept for the Castle Halberdier](/images/castle-halberdier-01/concept-34.png)
 
 The concept fixes the features that need to survive generation: blue-and-gold tabard, brown boots, uncovered face under a steel cap, and a halberd held vertically at the left side. It is a reference for construction rather than an in-game image.
 
-## First eight meshes
+## All fourteen meshes
 
-![Eight independently reviewed Castle mesh bootstraps: Halberdier, Pikeman, Archer, Griffin, Swordsman, Monk, Cavalier and Angel](/images/castle-halberdier-01/roster-bootstrap-01.png)
+![Fourteen independently reviewed Castle mesh bootstraps, ordered by level and upgrade](/images/castle-halberdier-01/roster-bootstrap-01.png)
 
-The eight models were generated from separate reviewed concepts and then checked from eight Blender angles. The Halberdier and Pikeman are now past the first local rig stage: both have holding and walking review sequences at their original 450×400 canvas. The Archer holds its crossbow in the static and holding review, but its first raised-shooting test exposed separated sleeve topology and was rejected. The Griffin, Swordsman and Monk have accepted mesh reviews and move on to creature-specific local rigs.
+All fourteen models were generated from separate reviewed concepts and then checked from eight Blender angles. Accepted Meshy mesh tasks consumed 420 credits; the earlier rejected four-view Halberdier request consumed another 30. The Halberdier and Pikeman are now past the first local rig stage: both have holding and walking review sequences at their original 450×400 canvas. The Archer holds its crossbow in the static and holding review, but its first raised-shooting test exposed separated sleeve topology and was rejected. The remaining units have accepted mesh reviews and move on to creature-specific local rigs.
 
 | Unit | reviewed state |
 | --- | --- |
@@ -29,6 +29,12 @@ The eight models were generated from separate reviewed concepts and then checked
 | Monk | mesh review; hand-gesture and spell rig next |
 | Cavalier | mesh review; mounted and charge rig next |
 | Angel | mesh review; flight and two-handed-sword rig next |
+| Marksman | mesh review; shares the upcoming repaired two-hand crossbow interface |
+| Royal Griffin | mesh review; wing and ground rig next |
+| Crusader | mesh review; sword-and-shield double-strike rig next |
+| Zealot | mesh review; hand-gesture and spell rig next |
+| Champion | mesh review; mounted and charge rig next |
+| Archangel | mesh review; flight and two-handed-sword rig next |
 
 ## Meshy mesh
 
