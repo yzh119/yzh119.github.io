@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T02:00:00+08:00
+lastmod: 2026-09-17T02:15:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Castle now has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; after a cast-arm rebind, Monk candidate 03 passes front and downward casts; Marksman remote candidate 02 completes core, shooting, hit, defence and death work, while separate melee candidate 01 completes three-direction sword attacks, and the remote front/up bolt layers pass too. No Castle unit is installed in the game."
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
-| Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers pass; presentation groups next |
+| Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers plus left/right turns pass; presentation groups next |
 | Royal Griffin | four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
