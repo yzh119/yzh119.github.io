@@ -1,6 +1,6 @@
 ---
 title: "[AI] Castle halberdier bootstrap"
-date: 2026-09-16T17:18:00+08:00
+date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]

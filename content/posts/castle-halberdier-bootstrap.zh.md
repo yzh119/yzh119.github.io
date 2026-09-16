@@ -1,6 +1,6 @@
 ---
 title: "[AI]城堡长戟兵建模"
-date: 2026-09-16T17:18:00+08:00
+date: 2026-09-16T17:10:00+08:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
