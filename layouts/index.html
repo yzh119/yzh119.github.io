@@ -19,7 +19,7 @@
   <dl class="snapshot-grid">
     <div>
       <dt>{{ if eq site.Language.Lang "zh" }}城堡兵种{{ else }}Castle creatures{{ end }}</dt>
-      <dd>{{ if eq site.Language.Lang "zh" }}14 个独立 Meshy 网格；狂热者已完成主要动作的本地审查，僧侣候选 03 已完成局部重绑、三方向施法与独立三维手部特效，神射手候选 02 已通过待机、移动、起止步、上方攻击、三方向射击、受击、防御、死亡、三方向弩矢层、左右转向与独立近战三方向攻击审查。{{ else }}14 separate Meshy meshes; Zealot has its principal motions locally reviewed; Monk candidate 03 has a local rebind, three cast directions and independent three-dimensional hand VFX, and Marksman candidate 02 passes holding, moving, move start/end, upward attack, three-direction shooting, hit, defence, death, three-direction bolt layers, left/right turns and separate melee three-direction attack review.{{ end }}</dd>
+      <dd>{{ if eq site.Language.Lang "zh" }}14 个独立 Meshy 网格；狂热者已完成主要动作的本地审查，僧侣候选 03 已完成局部重绑、三方向施法与独立三维手部特效，弓箭手已完成三方向射击与独立 Meshy 弩矢层审查，神射手候选 02 已通过待机、移动、起止步、上方攻击、三方向射击、受击、防御、死亡、三方向弩矢层、左右转向与独立近战三方向攻击审查。{{ else }}14 separate Meshy meshes; Zealot has its principal motions locally reviewed; Monk candidate 03 has a local rebind, three cast directions and independent three-dimensional hand VFX; Archer passes three shooting directions with independent Meshy bolt layers; and Marksman candidate 02 passes holding, moving, move start/end, upward attack, three-direction shooting, hit, defence, death, three-direction bolt layers, left/right turns and separate melee three-direction attack review.{{ end }}</dd>
     </div>
     <div>
       <dt>{{ if eq site.Language.Lang "zh" }}墓园兵种{{ else }}Necropolis creatures{{ end }}</dt>
@@ -35,9 +35,9 @@
 <section class="current-focus" aria-label="{{ if eq site.Language.Lang "zh" }}当前制作重点{{ else }}Current production focus{{ end }}">
   <h2>{{ if eq site.Language.Lang "zh" }}当前制作重点{{ else }}Current production focus{{ end }}</h2>
   {{ if eq site.Language.Lang "zh" }}
-  <p>城堡线正在从已审查的单体网格进入逐帧动作阶段：狂热者已完成主要动作；僧侣候选 03 的正面、上方、下方施法及独立三维手部特效已通过；神射手的远程与独立近战动作已完成本地审查。当前在修复皇家狮鹫的四帧空中飞行动作；枪兵的双手—长枪约束仍需重建。所有这些均为私有 Blender 审查资产，尚未导出或接入游戏。</p>
+  <p>城堡线正在从已审查的单体网格进入逐帧动作阶段：狂热者已完成主要动作；僧侣候选 03 的正面、上方、下方施法及独立三维手部特效已通过；弓箭手的三方向射击与独立 Meshy 弩矢层已通过；神射手的远程与独立近战动作已完成本地审查。当前在修复皇家狮鹫的四帧空中飞行动作；枪兵的双手—长枪约束仍需重建。所有这些均为私有 Blender 审查资产，尚未导出或接入游戏。</p>
   {{ else }}
-  <p>The Castle track has moved from reviewed individual meshes into frame-by-frame motion work: Zealot’s principal motions pass; Monk candidate 03 passes front, upward and downward casts with independent 3D hand VFX; and Marksman’s ranged and separate melee motions pass local review. Current work is repairing Royal Griffin’s four-frame airborne flight motion, while Pikeman still needs a dedicated two-hand-to-pike constraint. All of this remains private Blender review work, with no export or in-game integration.</p>
+  <p>The Castle track has moved from reviewed individual meshes into frame-by-frame motion work: Zealot’s principal motions pass; Monk candidate 03 passes front, upward and downward casts with independent 3D hand VFX; Archer passes three shooting directions with independent Meshy bolt layers; and Marksman’s ranged and separate melee motions pass local review. Current work is repairing Royal Griffin’s four-frame airborne flight motion, while Pikeman still needs a dedicated two-hand-to-pike constraint. All of this remains private Blender review work, with no export or in-game integration.</p>
   {{ end }}
 </section>
 
