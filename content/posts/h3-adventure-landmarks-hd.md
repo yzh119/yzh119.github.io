@@ -92,11 +92,13 @@ Garden of Revelation (`AVSGRDN0`) now retains its rounded hedge, small pale stat
 
 ![Native and final Garden of Revelation redraw](/images/h3-environment-hd/garden-final-compare.png)
 
-## Reworked observatory and Dragon Utopia
+## Giant Redwood correction and Dragon Utopia
 
-The earlier giant redwood was sharper but still read as an ordinary tree. It is now an unmistakable observatory: an exterior spiral stair, circular platform, lookout cabin, telescope and pennant all survive in the silhouette.
+<s>The earlier giant redwood was sharper but still read as an ordinary tree. It is now an unmistakable observatory: an exterior spiral stair, circular platform, lookout cabin, telescope and pennant all survive in the silhouette.</s>
 
-![Observatory](/images/h3-environment-hd/observatory-compare.png)
+That made the landmark conspicuous by changing its identity. The final `AVXREDW` redraw returns to the original tall, narrow redwood: exposed roots, one exceptionally long trunk, sparse side boughs, and the small upper lookout with its broad diagonal pale-wood roof. It is a lookout built into a giant tree, not a separate fantasy tower. Only the single body frame is replaced at 2×, 3× and 4×; the original canvas, shadow, overlay and object behavior remain in use.
+
+![Original base and faithful final Giant Redwood redraw](/images/h3-environment-hd/redwood-faithful-final-compare.png)
 
 <s>The first Dragon Utopia pass expanded the stone temple into a giant dragon roost; a later pass was planned to add only masonry, weathering and moss to the original outline. Review still found the generated result too fantastical, so it was fully withdrawn and the game used native `AVSUTOP0` artwork directly.</s>
 
