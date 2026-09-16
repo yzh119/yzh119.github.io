@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T04:30:00+08:00
+lastmod: 2026-09-17T05:05:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; Monk candidate 03 passes front, upward and downward casts with independent three-dimensional hand VFX; Marksman remote candidate 02 completes core, shooting, hit, defence, death, turns and front/up bolt layers, while separate melee candidate 01 completes three-direction sword attacks. Royal Griffin ground motion and Pikeman two-hand pike binding remain in reconstruction. No Castle unit is installed in the game."
+homeSummary: "Castle has fourteen independently reviewed Meshy meshes. Zealot’s principal motions pass local review; Monk candidate 03 passes front, upward and downward casts with independent three-dimensional hand VFX; Marksman remote candidate 02 completes core, shooting, hit, defence, death, turns and front/up bolt layers, while separate melee candidate 01 completes three-direction sword attacks. Royal Griffin’s four-frame airborne flight and Pikeman two-hand pike binding remain in reconstruction. No Castle unit is installed in the game."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -31,7 +31,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
 | Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers plus left/right turns pass; presentation groups next |
-| Royal Griffin | four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild |
+| Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; candidate 02 passes initial static review, while its whole-wing flight repair remains under review |
 | Crusader | Meshy humanoid rig; 8-frame holding/walk accepted, 7-frame double strike awaits sword-weight repair |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
@@ -95,7 +95,7 @@ Archangel now has its own seven-frame `CRANGL.DEF` moving review, built from its
 
 Cavalier and Champion each ran a local horse-and-rider probe against their own meshes and original alpha-height anchors. Holding, walking, front lance, move start and move end pass crop checks; a three-frame side review also keeps the horse legs, rider, barding and lance connected through the gait. This is still a probe: each needs its complete 87-frame action set and per-action timing before export.
 
-Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 component-classified wing vertices. Its eight-frame holding wing review passes; its ground gait will not reuse the rejected Griffin leg/tail weights.
+<s>Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 component-classified wing vertices. Its eight-frame holding wing review passes; its ground gait will not reuse the rejected Griffin leg/tail weights.</s> Rechecking `CRGRIF.DEF` corrects the premise: its four-frame `MOVING` group is airborne flight, not a terrestrial gait. The first split root/tip flight attempt tears neck, chest and wing-root components, so it is rejected. A separate 30-credit Meshy candidate now passes initial eight-view static review with its airborne wings, talons, rear lion legs and tail present. Its replacement assigns complete connected wing components to one shoulder bone per side, which removes the earlier wing-root tearing; chest feather defects remain in side review, so the four-frame flight is still under review and has no DEF or game installation.
 
 <s>The Monk’s original ten-frame gesture calibration was described as a stronger native-count front cast with hands opening and rising. A re-review of its rendered peak frame shows it remains near the clasped holding pose, so that claim and acceptance are withdrawn; the clip will not seed the remaining cast groups.</s>
 
