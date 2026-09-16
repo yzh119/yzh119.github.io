@@ -84,7 +84,9 @@ Royal Griffin uses its own mesh for four root/tip wing bones and 24,793 componen
 
 <s>A second Meshy humanoid-rig candidate for the same Monk mesh cost 5 credits. Its four-axis arm probe pulls the integrated cloak and sleeves into long stretches or collapses the hands, so it too is rejected. Re-running automatic humanoid binding is not a repair for this robe topology.</s>
 
-The Zealot now has a strengthened native-count fourteen-frame front-cast review on its own Meshy rig. Its open-handed raise and return keep the white robe, green stole, sleeves and hands continuous in front and side checks; spell effects, up/down and special groups are still separate work.
+<s>The Zealot’s first fourteen-frame front-cast review used a symmetric two-hand raise. It stayed continuous, but extracted `CZEALT.DEF` frames show an asymmetric main-hand-forward silhouette, so this first pose is superseded.</s>
+
+The replacement native-count fourteen-frame front cast blocks from that asymmetric original silhouette. All frames and side start, peak and recovery checks keep both hands, sleeves, robe and stole continuous. It is character motion only; spell VFX, DEF assembly and game installation remain separate.
 
 <s>The Zealot’s first native-count thirteen-frame upward-cast review used a symmetric two-hand raise. It stayed continuous, but extracted `CZEALT.DEF` frames show a single high forward hand with the other compact, so the first pose is superseded.</s>
 
