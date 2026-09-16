@@ -121,6 +121,14 @@ Angel’s independent-sword path now includes a six-frame hit recoil and its nat
 
 ![Angel independent-sword flight start](/images/castle-halberdier-01/angel-independent-move-start-02.png)
 
+Archangel now uses the same separate-sword strategy: central embedded blade islands are removed, then an independently reviewed Meshy sword is placed at its retained hands. Static front, oblique and side review plus all seven flight frames and four side keys pass with one sword and continuous armour and wings.
+
+![Archangel independent sword, oblique static review](/images/castle-halberdier-01/archangel-combined-sword-oblique.png)
+
+![Archangel independent-sword flight, wing peak](/images/castle-halberdier-01/archangel-independent-flight-04.png)
+
+![Archangel independent-sword flight, side review](/images/castle-halberdier-01/archangel-independent-flight-side-03.png)
+
 The old Marksman rig could make a front shot but could not reliably lift the light crossbow to the original high-angle direction, so its draft was not treated as an upward attack. Candidate 02 starts again from an independent blue-and-gold crossbowman mesh and Meshy humanoid rig; eight static angles retain the crossbow, both hands and sleeve cuffs. A native six-frame `CHCBOW.DEF` upward attack then moves from low level aim through raise and high release into recovery. Front and side key frames keep the grip, crossbow, hands and sleeves continuous. Its eight-frame front shooting body action also passes: low carry, level aim, short release recoil and recovery retain the crossbow, both hands and sleeve cuffs in front and side review. A separate eight-frame downward shooting action then passes as well: the crossbow presses into a low aim and recovers after release while hands and sleeve cuffs remain continuous from both views. A third eight-frame upward shooting action then passes: it moves from low carry through high aim/release and recovery while crossbow, hands and sleeve cuffs remain continuous in both views. All three ranged shooting body Actions are saved independently; projectile VFX remains a separate layer. Hit and defence were independently reviewed on the same candidate: the six-frame hit uses torso recoil while both hands retain the light crossbow, and the ten-frame defence raises it across the chest without detachment in either view. These are Blender character-motion reviews only, with no DEF output or game installation.
 
 <s>Candidate 02’s first eight-frame moving pass used excessive hip, knee and ankle amplitude, reading as a crouched jump in side view, so it is rejected and will not enter export.</s>
