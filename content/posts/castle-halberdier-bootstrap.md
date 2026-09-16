@@ -25,7 +25,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk |
 | Archer | Meshy humanoid rig; 8-frame front-shot review passes continuity; release and up/down groups next |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
-| Swordsman | Meshy humanoid rig; local reviews accepted for 8-frame holding/walk, 7-frame front/up attacks, 6-frame hit and 6-frame death |
+| Swordsman | Meshy humanoid rig; local reviews accepted for 8-frame holding/walk, 7-frame front/up attacks, 6-frame hit/death and 11-frame defence |
 | Monk | Meshy humanoid rig; 6-frame holding/walk accepted; <s>10-frame front-cast review accepted</s>—re-review rejects its near-clasped peak pose |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; sword actions next |
@@ -127,6 +127,8 @@ The native two-frame `MOVE_START` and `MOVE_END` reviews now explicitly bridge h
 The Swordsman now has a native six-frame `HITTED` review: a visible rearward recoil and raised shield keep the original defensive silhouette readable. Front full-sequence and side start, peak and recovery checks keep sword, shield, hands, armour and tabard continuous. It remains a Blender review, without DEF assembly or game installation.
 
 The Swordsman also has a native six-frame `DEATH` review. It physically collapses diagonally into a low horizontal final silhouette rather than fading out; front full sequence and side start, mid and end checks keep sword, shield, hands, armour and tabard continuous within the canvas. It remains a Blender review, without DEF assembly or game installation.
+
+<s>The Swordsman’s first eleven-frame `DEFENCE` trial raised the sword sideways; a second reused the upward-strike axis but left it behind the shoulder. Neither matched the original high guard.</s> The accepted native-count third review raises the complete sword diagonally before the head while the shield closes over the torso. Front full-sequence and side start, peak and recovery checks keep sword, shield, hands, armour and tabard continuous. It remains a Blender review, without DEF assembly or game installation.
 
 ## Meshy mesh
 
