@@ -353,6 +353,10 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 ![长戟兵防御侧面审查](/images/castle-halberdier-01/halberdier-original-component-defence-side.png)
 
+<s>长戟兵首个 4 帧死亡探针把身体与完整原始武器置于同一载体，因此没有脱链，但最终变成悬空的侧倒。原版 `CHALBD.DEF` 终点是紧凑的地面剪影。该探针已拒绝；后续死亡组必须制作落地接触和收拢终姿，不能只把整个角色旋转。</s>
+
+![已拒绝的长戟兵死亡探针](/images/castle-halberdier-01/halberdier-death-rejected-front.png)
+
 ## Meshy 网格
 
 <s>第一次把整张四视图直接交给 Meshy，花了 30 credits。它把四个角度理解成多把长戟，结果没有生成人物，所以没有进入绑定和动画。</s>

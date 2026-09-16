@@ -353,6 +353,10 @@ A six-frame `HITTED` recoil now translates both the body and the complete origin
 
 ![Halberdier defence side review](/images/castle-halberdier-01/halberdier-original-component-defence-side.png)
 
+<s>The first four-frame Halberdier death probe shared one carrier between the body and complete original weapon, so it retained continuity, but it became an airborne sideways fall. The original `CHALBD.DEF` ends as a compact ground silhouette. This probe is rejected; a future death pass must author ground contact and a folded final pose rather than simply rotate the full character.</s>
+
+![Rejected Halberdier death probe](/images/castle-halberdier-01/halberdier-death-rejected-front.png)
+
 ## Meshy mesh
 
 <s>The first Meshy request used the complete four-view sheet as one input image. It spent 30 credits and returned several copies of the halberd without a person, so it was rejected before rigging or animation.</s>
