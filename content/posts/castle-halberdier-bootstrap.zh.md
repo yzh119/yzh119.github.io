@@ -492,3 +492,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫 HITTED 后仰，侧面审查](/images/castle-halberdier-01/griffin-hitted-recoil-side.png)
 
 ![狮鹫 HITTED 后仰，斜侧审查](/images/castle-halberdier-01/griffin-hitted-recoil-oblique.png)
+
+### 狮鹫：防御审查
+
+8 帧 `DEFENCE` 遵循原版的抬翼护身、保持与回收节奏。它使用克制的局部翼部运动和收束前爪，不复用攻击载体。峰值的侧面与斜侧帧均保持翼根、胸羽表面、前爪、躯干、狮类后腿和尾巴连续。死亡、移动衔接、输出图层、DEF 封装与游戏接入仍未完成。
+
+![狮鹫 DEFENCE 峰值，侧面审查](/images/castle-halberdier-01/griffin-defence-side.png)
+
+![狮鹫 DEFENCE 峰值，斜侧审查](/images/castle-halberdier-01/griffin-defence-oblique.png)

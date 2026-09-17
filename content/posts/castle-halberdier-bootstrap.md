@@ -492,3 +492,11 @@ The native `CGRIFF.DEF` downward attack resolves from a wing lift into a descend
 ![Griffin HITTED recoil, side review](/images/castle-halberdier-01/griffin-hitted-recoil-side.png)
 
 ![Griffin HITTED recoil, oblique review](/images/castle-halberdier-01/griffin-hitted-recoil-oblique.png)
+
+### Griffin: defence review
+
+The eight-frame `DEFENCE` pass follows the native wing-guard rise, held protection and recovery. It uses restrained local wing motion and tucked foreclaws instead of the attack carrier. Side and oblique peak frames retain the wing roots, chest feather surface, foreclaws, torso, lion hind legs and tail. Death, move transitions, export layers, DEF packing and game installation remain outstanding.
+
+![Griffin DEFENCE peak, side review](/images/castle-halberdier-01/griffin-defence-side.png)
+
+![Griffin DEFENCE peak, oblique review](/images/castle-halberdier-01/griffin-defence-oblique.png)
