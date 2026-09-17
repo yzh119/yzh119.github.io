@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T22:07:10Z
+lastmod: 2026-09-17T22:17:21Z
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The Crusader 1×/2× test mod is installed and new resources were read during a test battle; visual acceptance remains pending. Swordsman mesh/rig alignment and shield bending are corrected, with new body-driven holding, defence and attack drafts. Other Castle creatures remain in progress."
@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
-| Swordsman | <s>replacement Meshy candidate 02: static/rig rest, 8-frame holding, all three 7-frame attack directions and an 8-frame walk pass local review; earlier candidate retains hit/death, defence and move-transition reviews</s> Candidate 02 mesh/armature normalization corrected; recoil leg shape repaired; <s>rigid shield binding pending</s> shield corrected, with 40 new holding, defence and attack draft frames; previous action acceptance withdrawn; not installed |
+| Swordsman | Mesh/rig alignment and shield bending corrected; nine groups and 58 draft frames including lunges, recoil, walking and move transitions; turns, hover, death and game integration remain |
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
@@ -385,7 +385,17 @@ Reversing that recorded mesh transform reduces severely stretched edges at the s
 
 ![Revision 57 recoil with rigid shield binding](/images/castle-halberdier-01/swordsman-shield57-recoil.png)
 
-The new set contains 40 frames: eight holding, eleven defence, and seven attacks in each direction. They share a raised-sword guard, with the arm carrying the blade through the parry and swing. Reopening the saved scene preserves the selected shield surface and returns defence and attack endpoints to the holding pose. Leg lunges, full contact checks and the remaining groups are unfinished. The Swordsman is not installed in the game.
+<s>The new set contains 40 frames: eight holding, eleven defence, and seven attacks in each direction. They share a raised-sword guard, with the arm carrying the blade through the parry and swing. Reopening the saved scene preserves the selected shield surface and returns defence and attack endpoints to the holding pose. Leg lunges, full contact checks and the remaining groups are unfinished. The Swordsman is not installed in the game.</s>
+
+The drafts now cover nine groups and 58 frames. Each attack direction adds a foot lift, forward step and recovery. The six-frame recoil returns to the same guard. The eight-frame walk alternates the legs and swings the sword hand opposite its same-side foot, raising the blade as the arm moves forward and lowering it on the backswing. Move start and move end each have two frames.
+
+After reopening, the lowest body point across all 58 frames stays within about 0.0016 model units of the ground, and the walk closure key reproduces the first-frame mesh. These checks do not establish the absence of foot sliding, stop-phase jumps or intersections in the game. Turns, hover and death remain unfinished, and the Swordsman is not installed.
+
+![Front attack draft with a forward step](/images/castle-halberdier-01/swordsman-lunge61.png)
+
+![Eight-frame walk and side key poses, rendered offline in Blender](/images/castle-halberdier-01/swordsman-walk63-review.jpg)
+
+The following revision 60 guard and attack images are retained as history; the attacks did not yet have leg lunges.
 
 ![Blender draft of the Swordsman high guard](/images/castle-halberdier-01/swordsman-defence60.png)
 
@@ -735,5 +745,13 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Superseded homepage summary</summary>
 
 <s>Castle has fourteen independently reviewed Meshy meshes. Angel passes its independent sword, flight, three sword directions, hit, defence and move transitions; Archangel passes its independent sword, flight, three sword directions, defence, hit and move transitions in front and side review. These remain private Blender reviews, with no Castle unit installed in the game.</s>
+
+</details>
+
+
+<details>
+<summary>Superseded Swordsman table entry</summary>
+
+<s>replacement Meshy candidate 02: static/rig rest, 8-frame holding, all three 7-frame attack directions and an 8-frame walk pass local review; earlier candidate retains hit/death, defence and move-transition reviews Candidate 02 mesh/armature normalization corrected; recoil leg shape repaired; rigid shield binding pending shield corrected, with 40 new holding, defence and attack draft frames; previous action acceptance withdrawn; not installed</s>
 
 </details>
