@@ -546,3 +546,11 @@ The flight-specific Royal Griffin now has a separate nine-frame `ATTACK_FRONT` r
 ![Royal Griffin ATTACK_FRONT claw reach, side review](/images/castle-halberdier-01/royal-griffin-attack-front-side.png)
 
 ![Royal Griffin ATTACK_FRONT claw reach, oblique review](/images/castle-halberdier-01/royal-griffin-attack-front-oblique.png)
+
+### Royal Griffin: hit recoil review
+
+Royal Griffin now has its own seven-frame `HITTED` recoil and recovery. Its peak side and oblique frames preserve the crown, wing roots, tail, chest feather surface, foreclaws, torso and airborne hind legs. This remains a private Blender review; up/down attacks, defence, death, transitions, DEF output and game installation remain unmade.
+
+![Royal Griffin HITTED recoil, side review](/images/castle-halberdier-01/royal-griffin-hitted-side.png)
+
+![Royal Griffin HITTED recoil, oblique review](/images/castle-halberdier-01/royal-griffin-hitted-oblique.png)

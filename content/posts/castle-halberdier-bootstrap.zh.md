@@ -546,3 +546,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![皇家狮鹫 ATTACK_FRONT 伸爪，侧面审查](/images/castle-halberdier-01/royal-griffin-attack-front-side.png)
 
 ![皇家狮鹫 ATTACK_FRONT 伸爪，斜侧审查](/images/castle-halberdier-01/royal-griffin-attack-front-oblique.png)
+
+### 皇家狮鹫：受击后仰审查
+
+皇家狮鹫现有独立的 7 帧 `HITTED` 后仰与回收。峰值的侧面与斜侧帧均保住皇冠、翼根、尾巴、胸羽表面、前爪、躯干和腾空后腿。它仍是私有 Blender 审查；上/下攻击、防御、死亡、衔接、DEF 输出与游戏接入尚未完成。
+
+![皇家狮鹫 HITTED 后仰，侧面审查](/images/castle-halberdier-01/royal-griffin-hitted-side.png)
+
+![皇家狮鹫 HITTED 后仰，斜侧审查](/images/castle-halberdier-01/royal-griffin-hitted-oblique.png)
