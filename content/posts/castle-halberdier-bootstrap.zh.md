@@ -594,3 +594,19 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![骑士 MOVING 关键帧，侧面审查](/images/castle-halberdier-01/cavalier-moving-side.png)
 
 ![骑士 MOVING 关键帧，斜侧审查](/images/castle-halberdier-01/cavalier-moving-oblique.png)
+
+### 骑士：独立骑枪与前刺审查
+
+<s>首版拆分骑手仍把骑枪嵌在角色网格内。轴向探针证明那支嵌入式骑枪没有绑定到 `RightHand`：手臂移动时枪保持不动，因此不能用于冲锋。</s> 修正版改用无武器 Meshy 骑手和 Meshy 标准人体骨架，并使用独立 Meshy 骑枪。Blender 在每一帧将动画后的右手位置采样给独立武器。10 帧 `ATTACK_FRONT` 审查现可让骑枪上举、放平、前刺并回收，枪尖始终朝马的前进方向，且不会留下静止的重复骑枪。这里只验收武器与骑手动作基础；马的攻击动作、原版姿态校准、其余动作组、DEF 输出与游戏接入仍未完成。
+
+![骑士 ATTACK_FRONT 前刺，侧面审查](/images/castle-halberdier-01/cavalier-attack-front-side.png)
+
+![骑士 ATTACK_FRONT 前刺，斜侧审查](/images/castle-halberdier-01/cavalier-attack-front-oblique.png)
+
+### 冠军骑士：组件式骑乘静态底模
+
+<s>原版整体冠军骑士可用作视觉参考，但马、骑手、马具和武器是混合网格，无法成为可靠的动画底模。</s> 新流程提供有四条可读腿、蓝白条纹马衣、面甲与空鞍的深色冠军战马；独立的无武器金冠冠军骑手随后通过 Meshy 标准人体骨架。独立骑枪则复用已验证的武器路径。侧面与斜侧 Blender 审查均保住完整坐骑、坐姿骑手、盔冠与骑枪。它仅是私有静态基础；四足步态、攻击、受击、防御、死亡、衔接、DEF 输出与游戏接入尚未制作。
+
+![冠军骑士骑乘静态，侧面审查](/images/castle-halberdier-01/champion-mounted-static-side.png)
+
+![冠军骑士骑乘静态，斜侧审查](/images/castle-halberdier-01/champion-mounted-static-oblique.png)
