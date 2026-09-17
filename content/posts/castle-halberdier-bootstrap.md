@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T23:17:22Z
+lastmod: 2026-09-17T23:31:01+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman 1×/2× test candidates are installed and their new resources were read in test battles; visual acceptance remains open. The Halberdier weapon binding is corrected, but the two-hand attack exposes support-hand/clothing deformation and has not passed review. Other Castle creatures remain in progress."
+homeSummary: "Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. A new arm-separated Meshy Halberdier body avoids the earlier coat strips in a six-frame arm test; shoulder armour and grips still need work. Other Castle creatures remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | Meshy remesh and humanoid skin obtained; rigid halberd binding corrected, but the six-frame two-hand attack still stretches the support-hand/clothing boundary; rejected and not installed |
+| Halberdier | New A-pose body and Meshy rig obtained; six unarmed arm-test frames stay below the large-edge threshold. Shoulder deformation, grips and full motion remain unfinished; not installed |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -69,7 +69,25 @@ The first two-hand attack pulled the coat upward with the arm. Attenuating dista
 
 ![Impact pose from the same rejected candidate; a usable weapon path does not establish a finished attack](/images/castle-halberdier-01/halberdier-attack99-impact.png)
 
-Reopening the latest six-frame file gives a maximum selected-weapon edge-length change below 4.6×10⁻⁷ model units. Each body frame still has 258–274 edges longer than 0.08 model units and more than three times their rest length. Weapon rigidity passes this check; body skinning fails. The next step is to resolve the support-hand/clothing geometry boundary before extending the binding and motion. The Halberdier remains uninstalled.
+Reopening candidate 99’s six-frame file gives a maximum selected-weapon edge-length change below 4.6×10⁻⁷ model units. Each body frame still has 258–274 edges longer than 0.08 model units and more than three times their rest length. Weapon rigidity passes this check; body skinning fails. <s>The next step is to resolve the support-hand/clothing geometry boundary before extending the binding and motion.</s> Work subsequently moved to the arm-separated body below. The Halberdier remains uninstalled.
+
+### Arm-separated body candidate (September 18)
+
+Local selection changes did not resolve the support hand pulling on the coat. A built-in imagegen edit now places the same character in an A-pose with open hands clear of the torso, removing the halberd. The blue-and-gold tabard, heraldic emblem, helmet and boots follow the previous design. The weapon will be attached separately.
+
+![A-pose modelling reference, generated concept art](/images/castle-halberdier-01/halberdier-body100-concept.png)
+
+Meshy 7 received this image through the API with a 40,000-quad target and 4K textures. The downloaded body contains 75,660 triangles. Generation cost 30 credits and the subsequent humanoid rig cost 5. The 1200×1400 Blender still below shows the new geometry; front and side views were inspected for hand separation and body depth.
+
+![High-resolution Blender still of the new unarmed body](/images/castle-halberdier-01/halberdier-body100-portrait.png)
+
+Astra authored five larger single-joint probes and a six-frame two-arm range test. Reopening the saved six-frame scene found no edges longer than 0.08 units and more than three times their rest length. Four front/side key-pose renders show no strips pulling the coat toward the support hand. This covers the tested range only.
+
+![Raised-arm Blender probe: the shoulder plate deforms and the hands are not posed for a grip](/images/castle-halberdier-01/halberdier-body100-raised.png)
+
+![Side view of the forward-arm probe, without a weapon, grip or attack footwork](/images/castle-halberdier-01/halberdier-body100-forward.png)
+
+The raised pose still compresses the shoulder armour. Rigid plate controls, wrist orientation, finger grips and weapon attachment remain ahead of the native animation set. This is a working body candidate; the Halberdier remains uninstalled.
 
 ### Earlier Halberdier fragment rig
 
@@ -869,5 +887,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>| Halberdier | Existing Meshy model remeshed and given a humanoid skin; static, knee and arm probes rendered; full clips need rebuilding, with the earlier fragment-based rig retained as history |</s>
 
 <s>Crusader and Swordsman 1×/2× test candidates are installed, with new resources read in test battles; visual acceptance remains open. The Halberdier now has a remeshed Meshy model and humanoid skin under joint-deformation review. Other Castle creatures remain in progress.</s>
+
+</details>
+
+<details>
+<summary>Homepage summary and Halberdier status before September 18</summary>
+
+<s>Crusader and Swordsman 1×/2× test candidates are installed and their new resources were read in test battles; visual acceptance remains open. The Halberdier weapon binding is corrected, but the two-hand attack exposes support-hand/clothing deformation and has not passed review. Other Castle creatures remain in progress.</s>
+
+<s> /  Halberdier  /  Meshy remesh and humanoid skin obtained; rigid halberd binding corrected, but the six-frame two-hand attack still stretches the support-hand/clothing boundary; rejected and not installed  / </s>
 
 </details>
