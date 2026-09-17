@@ -446,3 +446,13 @@ A new Meshy Image-to-3D request used a deliberately spread-wing, airborne Griffi
 ![Flight-specific Griffin Meshy bootstrap, oblique review](/images/castle-halberdier-01/griffin-flight-meshy-oblique.png)
 
 ![Flight-specific Griffin small wing cycle, oblique review](/images/castle-halberdier-01/griffin-flight-wing-cycle-oblique.png)
+
+### Griffin: native four-frame moving review
+
+The original `CGRIFF.DEF` moving group is airborne rather than a ground gait. Its four reference frames read as closed wings, a low sweep, closed wings, then a high sweep. The flight-specific Meshy asset now has a matching four-frame Blender review: conservative local wing weights carry the two wings through that cadence while a shared carrier supplies the small airborne lift. Side and oblique checks retain both wing roots, torso, eagle forequarters, lion hindquarters and tucked limbs at every key. This accepts the timing and pose basis for `MOVING` only; attack, hit, defence, death, move transitions, output layers, DEF packing and game installation are still outstanding.
+
+![Griffin MOVING frame one, side review](/images/castle-halberdier-01/griffin-moving-01-side.png)
+
+![Griffin MOVING frame four, side review](/images/castle-halberdier-01/griffin-moving-04-side.png)
+
+![Griffin MOVING frame four, oblique review](/images/castle-halberdier-01/griffin-moving-04-oblique.png)

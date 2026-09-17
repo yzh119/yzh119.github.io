@@ -446,3 +446,13 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![飞行专用狮鹫 Meshy 底模，斜侧审查](/images/castle-halberdier-01/griffin-flight-meshy-oblique.png)
 
 ![飞行专用狮鹫小幅拍翼，斜侧审查](/images/castle-halberdier-01/griffin-flight-wing-cycle-oblique.png)
+
+### 狮鹫：原版四帧移动审查
+
+原始 `CGRIFF.DEF` 的 `MOVING` 是空中动作，并非地面步态。四帧参考读作：收翼、下扫、收翼、上扬。飞行专用 Meshy 资产现已有对应的四帧 Blender 审查：保守的局部翼部权重让双翼完成这一节奏，共享载体提供细小的腾空起伏。每个关键帧的侧面和斜侧检查均保住了双翼根、躯干、鹰类前躯、狮类后躯与收起的肢体。此次只验收 `MOVING` 的时序与姿态基础；攻击、受击、防御、死亡、移动衔接、输出图层、DEF 封装与游戏接入仍未完成。
+
+![狮鹫 MOVING 第一帧，侧面审查](/images/castle-halberdier-01/griffin-moving-01-side.png)
+
+![狮鹫 MOVING 第四帧，侧面审查](/images/castle-halberdier-01/griffin-moving-04-side.png)
+
+![狮鹫 MOVING 第四帧，斜侧审查](/images/castle-halberdier-01/griffin-moving-04-oblique.png)
