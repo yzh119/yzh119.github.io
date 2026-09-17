@@ -562,3 +562,17 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![皇家狮鹫 DEFENCE 峰值，侧面审查](/images/castle-halberdier-01/royal-griffin-defence-side.png)
 
 ![皇家狮鹫 DEFENCE 峰值，斜侧审查](/images/castle-halberdier-01/royal-griffin-defence-oblique.png)
+
+### 骑士：拆分的 Meshy 战马与骑手底模
+
+<s>此前的一体式骑士网格将骑手、马与马具交织在一起，因此自动四足权重、最近骨段权重和程序化换腿均失败。它不能再靠一次完整网格的换腿修复。</s>
+
+替代路线从两个 Meshy 资产开始：带空鞍的骑士战马，以及拿红白骑枪的独立甲胄骑手。战马在正面、侧面与斜侧静态审查中保住了可读的四腿、缰具、尾巴、蓝白马甲与鞍座。骑手保住骑枪握点、盔甲、战袍与肢体，随后通过 Meshy 标准人体骨架任务。下一步是 Blender 骑乘姿势和鞍座接口；尚没有骑乘动画、DEF 输出或游戏接入。
+
+![骑士战马组件，侧面审查](/images/castle-halberdier-01/cavalier-horse-component-side.png)
+
+![骑士战马组件，斜侧审查](/images/castle-halberdier-01/cavalier-horse-component-oblique.png)
+
+![骑士骑手组件，侧面审查](/images/castle-halberdier-01/cavalier-rider-component-side.png)
+
+![骑士骑手组件，斜侧审查](/images/castle-halberdier-01/cavalier-rider-component-oblique.png)

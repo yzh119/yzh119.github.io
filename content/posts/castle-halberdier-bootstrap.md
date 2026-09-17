@@ -562,3 +562,17 @@ Royal Griffin’s independent eight-frame `DEFENCE` uses a wing-guard rise, tuck
 ![Royal Griffin DEFENCE peak, side review](/images/castle-halberdier-01/royal-griffin-defence-side.png)
 
 ![Royal Griffin DEFENCE peak, oblique review](/images/castle-halberdier-01/royal-griffin-defence-oblique.png)
+
+### Cavalier: split Meshy horse and rider bootstrap
+
+<s>The earlier one-piece Cavalier mesh interleaved rider, horse and tack, so automatic quadruped weighting, nearest-bone weights and procedural leg replacement all failed. It cannot be repaired by another whole-mesh leg pass.</s>
+
+The replacement begins with two Meshy assets: an empty-saddle Cavalier horse and a separate armoured rider with the red-white lance. The horse passes front, side and oblique static review with four readable legs, bridle, tail, blue-white barding and saddle. The rider preserves the lance grip, armour, tabard and limbs, then passes Meshy’s standard humanoid rigging task. The next step is a Blender riding pose and saddle interface; there is no mounted animation, DEF output or game installation yet.
+
+![Cavalier horse component, side review](/images/castle-halberdier-01/cavalier-horse-component-side.png)
+
+![Cavalier horse component, oblique review](/images/castle-halberdier-01/cavalier-horse-component-oblique.png)
+
+![Cavalier rider component, side review](/images/castle-halberdier-01/cavalier-rider-component-side.png)
+
+![Cavalier rider component, oblique review](/images/castle-halberdier-01/cavalier-rider-component-oblique.png)
