@@ -630,3 +630,14 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![冠军骑姿与脚掌方向修正，精确马镫接触待审查](/images/castle-halberdier-01/champion-seat-contact09.png)
 
 ![冠军四腿权重测试，尚非完整行走动画](/images/castle-halberdier-01/champion-leg-weights12.png)
+
+
+### 冠军骑士：分段腿骨与落蹄检查（仍未验收）
+
+在 Meshy 战马底模上，Blender 骨架现包含分段腿骨、蹄前骨段和独立蹄部朝向；马身起伏与俯仰会带动骑手、鞍座和骑枪，蹄部目标则补偿这些运动。八帧里指定支撑蹄的最低点保持在地面附近。这项检查只证明采样点的高度，不能证明完整落脚、关节形状或原版动作已经还原。
+
+这轮试验也排除了几条路线：焊接接缝并平滑会改变其它部位的光照外观；按贴图颜色直接扩大腿根权重会引入局部拉扯，平滑权重后仍不足以采用。相关候选已保留为失败记录，没有替换当前底模。新增骨段减轻了部分变形，但下面的抬腿轮廓仍不自然，因此尚未验收移动动画，更没有输出 DEF 或接入游戏。
+
+![冠军支撑姿态，分段骨架测试](/images/castle-halberdier-01/champion-stance23-side.png)
+
+![冠军抬腿候选，腿形仍待修正](/images/castle-halberdier-01/champion-stride23-oblique.png)

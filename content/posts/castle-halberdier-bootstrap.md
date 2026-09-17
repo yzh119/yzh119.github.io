@@ -630,3 +630,14 @@ The rider now faces forward with both legs outside the horse. A proportion adjus
 ![Champion seated pose and boot direction; exact stirrup contact under review](/images/castle-halberdier-01/champion-seat-contact09.png)
 
 ![Champion leg-weight probe, not a complete walk animation](/images/castle-halberdier-01/champion-leg-weights12.png)
+
+
+### Champion: segmented legs and ground checks (not accepted yet)
+
+The Blender rig over the Meshy horse now has segmented legs, a pastern segment and independent hoof orientation. Body bob and pitch carry the rider, saddle and lance; hoof targets compensate for those motions. Sampled support-hoof minimum heights stay close to the ground across eight frames. This verifies only those sample heights, not complete contact, anatomical shape or fidelity to the original animation.
+
+Rejected experiments include seam welding with surface smoothing, which altered shading elsewhere, and texture-color-based root weights, which introduced local stretching even after weight smoothing. Those candidates remain failure records and do not replace the baseline. The additional segment reduces some distortion, but the lifted-leg silhouette below remains unnatural. Movement is still unaccepted, with no DEF export or game integration.
+
+![Champion support pose in segmented-rig review](/images/castle-halberdier-01/champion-stance23-side.png)
+
+![Champion lift candidate; leg shape still needs correction](/images/castle-halberdier-01/champion-stride23-oblique.png)
