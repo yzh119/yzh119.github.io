@@ -319,6 +319,14 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 ![受击草稿，后抬腿与甩盾；手盾接触仍待修](/images/castle-halberdier-01/crusader-hitted24-pending-contact.png)
 
+**攻击节奏更正**
+
+旧版在七帧内安排了两次挥剑。逐帧查看原版 `ATTACK_FRONT` 后，确认参考里是一轮抬剑、下斩和收回，因此旧版“双斩通过”的判断已撤回。新草稿保留七帧，只做一次斩击。抬剑过头时又发现原剑柄部分网格受前臂权重牵扯，改为随手腕刚性运动后，已检查的正侧面抬剑帧不再出现分离的柄头。下身弓步、完整剑路和另外两个攻击方向尚未完成。
+
+![单次斩击候选的抬剑姿态，尚未验收整组攻击](/images/castle-halberdier-01/crusader-single-slash29-windup.png)
+
+下面三图保留的是早期双斩草稿，动作节奏已弃用。
+
 ![十字军双击起手](/images/castle-halberdier-01/crusader-double-strike-start.png)
 
 ![十字军双击第二斩](/images/castle-halberdier-01/crusader-double-strike-cut.png)

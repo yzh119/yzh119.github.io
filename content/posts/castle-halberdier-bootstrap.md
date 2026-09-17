@@ -319,6 +319,14 @@ The walk uses two-segment leg solves and changes the sword from raised to lowere
 
 ![Rear leg lift and shield throw; glove/shield contact remains unresolved](/images/castle-halberdier-01/crusader-hitted24-pending-contact.png)
 
+**Attack timing correction**
+
+The old seven-frame draft contained two swings. Inspecting the original `ATTACK_FRONT` sequence showed one raise, slash and recovery, so the earlier double-strike acceptance is withdrawn. The replacement keeps seven frames and authors a single slash. Raising the sword overhead also exposed source handle pieces following forearm weights; binding them rigidly to the wrist removed the separated pommel in the inspected front and side wind-up views. The lower-body lunge, full sword path and the other attack directions remain unfinished.
+
+![Single-slash wind-up candidate; the full attack is not accepted](/images/castle-halberdier-01/crusader-single-slash29-windup.png)
+
+The next three images preserve the earlier double-swing draft; that timing has been discarded.
+
 ![Crusader double-strike start](/images/castle-halberdier-01/crusader-double-strike-start.png)
 
 ![Crusader double-strike second cut](/images/castle-halberdier-01/crusader-double-strike-cut.png)
