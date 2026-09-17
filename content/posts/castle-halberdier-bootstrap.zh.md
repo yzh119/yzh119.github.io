@@ -484,3 +484,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫 ATTACK_DOWN 触及帧，侧面审查](/images/castle-halberdier-01/griffin-attack-down-impact-side.png)
 
 ![狮鹫 ATTACK_DOWN 触及帧，斜侧审查](/images/castle-halberdier-01/griffin-attack-down-impact-oblique.png)
+
+### 狮鹫：受击后仰审查
+
+<s>首个 7 帧受击探针的整体位移过小，读感接近待机，已拒绝。</s> 修订后的 `HITTED` 使用更大的后仰载体与回收，同时保持局部双翼和前爪完整。峰值的侧面与斜侧帧均保住翼根、胸羽、前爪、躯干、狮类后腿和尾巴。防御、死亡、衔接与输出仍未完成。
+
+![狮鹫 HITTED 后仰，侧面审查](/images/castle-halberdier-01/griffin-hitted-recoil-side.png)
+
+![狮鹫 HITTED 后仰，斜侧审查](/images/castle-halberdier-01/griffin-hitted-recoil-oblique.png)

@@ -484,3 +484,11 @@ The native `CGRIFF.DEF` downward attack resolves from a wing lift into a descend
 ![Griffin ATTACK_DOWN impact, side review](/images/castle-halberdier-01/griffin-attack-down-impact-side.png)
 
 ![Griffin ATTACK_DOWN impact, oblique review](/images/castle-halberdier-01/griffin-attack-down-impact-oblique.png)
+
+### Griffin: hit recoil review
+
+<s>The first seven-frame hit probe displaced the whole body too little to read beyond holding, so it is rejected.</s> The revised `HITTED` pass uses a larger rearward carrier recoil and recovery while keeping the local wings and foreclaws intact. Side and oblique peak frames retain wing roots, chest feathers, foreclaws, torso, lion hind legs and tail. Defence, death, transitions and export remain outstanding.
+
+![Griffin HITTED recoil, side review](/images/castle-halberdier-01/griffin-hitted-recoil-side.png)
+
+![Griffin HITTED recoil, oblique review](/images/castle-halberdier-01/griffin-hitted-recoil-oblique.png)
