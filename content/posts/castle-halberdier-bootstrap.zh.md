@@ -412,3 +412,5 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![冠军 Image-to-3D 引导，侧面审查](/images/castle-halberdier-01/champion-meshy-api-image-side.png)
 
 ![冠军 Image-to-3D 引导，斜侧审查](/images/castle-halberdier-01/champion-meshy-api-image-oblique.png)
+
+<s>去皇冠的 Image-to-3D 重试也失败：它把伪影减为单角，却把金色前肢夸张化，并丢失了原版 `CRGRIF.DEF` 轮廓。纯提示词重试到此结束；后续必须以原始帧作约束，重建连续的局部拓扑。</s>

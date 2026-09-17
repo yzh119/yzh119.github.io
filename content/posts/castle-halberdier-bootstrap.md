@@ -412,3 +412,5 @@ A holding frame from `CCAVLR.DEF` now seeds a Meshy Image-to-3D Cavalier. Front,
 ![Champion Image-to-3D bootstrap, side review](/images/castle-halberdier-01/champion-meshy-api-image-side.png)
 
 ![Champion Image-to-3D bootstrap, oblique review](/images/castle-halberdier-01/champion-meshy-api-image-oblique.png)
+
+<s>A crown-reduced Image-to-3D retry also failed: it reduced the artifact to one horn but enlarged the gold forelimbs and lost the original `CRGRIF.DEF` silhouette. Prompt-only retries are now closed; future work must use the original frames as constraints while rebuilding continuous local topology.</s>
