@@ -468,3 +468,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫 ATTACK_FRONT 伸爪帧，侧面审查](/images/castle-halberdier-01/griffin-attack-front-impact-side.png)
 
 ![狮鹫 ATTACK_FRONT 伸爪帧，斜侧审查](/images/castle-halberdier-01/griffin-attack-front-impact-oblique.png)
+
+### 狮鹫：上向爪击审查
+
+<s>首个上向 9 帧版本的载体与前爪抬升不足，无法与飞行待机清晰区分，已拒绝。</s> 修订后的 `ATTACK_UP` 增加了上掠载体轨迹与局部前爪抬举，同时保住 Meshy 飞行网格的翼根和羽片表面。峰值的侧面与斜侧帧均保持双翼、胸部、前爪、狮类后腿和尾巴连续。它仍只是私有 Blender 审查；下向攻击与其余动作组尚未制作。
+
+![狮鹫 ATTACK_UP 伸击帧，侧面审查](/images/castle-halberdier-01/griffin-attack-up-reach-side.png)
+
+![狮鹫 ATTACK_UP 伸击帧，斜侧审查](/images/castle-halberdier-01/griffin-attack-up-reach-oblique.png)

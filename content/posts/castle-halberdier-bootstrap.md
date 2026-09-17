@@ -468,3 +468,11 @@ The replacement uses separate left/right foreclaw regions alongside the flight-w
 ![Griffin ATTACK_FRONT claw reach, side review](/images/castle-halberdier-01/griffin-attack-front-impact-side.png)
 
 ![Griffin ATTACK_FRONT claw reach, oblique review](/images/castle-halberdier-01/griffin-attack-front-impact-oblique.png)
+
+### Griffin: upward claw attack review
+
+<s>The first upward nine-frame pass did not lift its carrier or foreclaws far enough to read separately from flight idle, so it is rejected.</s> The revised `ATTACK_UP` pass increases the upward carrier arc and local claw lift while preserving the Meshy flight mesh’s wing roots and feather surface. Side and oblique peak frames keep both wings, chest, foreclaws, lion hind legs and tail continuous. It is a private Blender review only; downward attack and the remaining groups are still unmade.
+
+![Griffin ATTACK_UP reach, side review](/images/castle-halberdier-01/griffin-attack-up-reach-side.png)
+
+![Griffin ATTACK_UP reach, oblique review](/images/castle-halberdier-01/griffin-attack-up-reach-oblique.png)
