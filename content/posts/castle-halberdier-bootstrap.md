@@ -576,3 +576,13 @@ The replacement begins with two Meshy assets: an empty-saddle Cavalier horse and
 ![Cavalier rider component, side review](/images/castle-halberdier-01/cavalier-rider-component-side.png)
 
 ![Cavalier rider component, oblique review](/images/castle-halberdier-01/cavalier-rider-component-oblique.png)
+
+### Cavalier: mounted static assembly
+
+<s>The first two assembly passes are rejected: Meshy’s rigged GLB included an unbound `Icosphere` proxy, then an incorrect reparenting step broke the `char1 → Armature` skin hierarchy and enlarged the rider mesh. A later alignment pass left the rider above the saddle or facing opposite the horse.</s>
+
+The accepted assembly excludes the proxy, preserves the native humanoid skin parent, aligns the rider root to the saddle and horse forward axis, and folds the rider’s legs through its own rig. Side and oblique reviews retain the horse, four legs, bridle, blue barding, saddle, seated rider, red-white lance and coherent direction. This is the mounted static foundation only: quadruped rigging, saddle/stirrup constraints and all creature action groups are still unmade.
+
+![Cavalier mounted static, side review](/images/castle-halberdier-01/cavalier-mounted-static-side.png)
+
+![Cavalier mounted static, oblique review](/images/castle-halberdier-01/cavalier-mounted-static-oblique.png)

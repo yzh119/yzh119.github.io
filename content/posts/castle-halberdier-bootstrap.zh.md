@@ -576,3 +576,13 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![骑士骑手组件，侧面审查](/images/castle-halberdier-01/cavalier-rider-component-side.png)
 
 ![骑士骑手组件，斜侧审查](/images/castle-halberdier-01/cavalier-rider-component-oblique.png)
+
+### 骑士：骑乘静态组合
+
+<s>前两版组合已拒绝：Meshy 的绑定 GLB 带有未绑定的 `Icosphere` 代理物体；随后一次错误的重设父级破坏了 `char1 → Armature` 蒙皮层级，导致骑手网格放大。之后的对齐版本又让骑手高悬在鞍座上或朝向与马相反。</s>
+
+验收版排除了代理物体，保留原生人体蒙皮父级，将骑手根节点对准鞍座和马的前进轴，并通过其自身骨架折叠双腿。侧面与斜侧审查均保住了战马、四腿、缰具、蓝色马甲、鞍座、坐姿骑手、红白骑枪与一致的朝向。这只是骑乘静态基础：四足骨架、鞍座/马镫约束以及所有兵种动作组仍未制作。
+
+![骑士骑乘静态，侧面审查](/images/castle-halberdier-01/cavalier-mounted-static-side.png)
+
+![骑士骑乘静态，斜侧审查](/images/castle-halberdier-01/cavalier-mounted-static-oblique.png)
