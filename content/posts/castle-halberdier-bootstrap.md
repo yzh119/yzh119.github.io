@@ -476,3 +476,11 @@ The replacement uses separate left/right foreclaw regions alongside the flight-w
 ![Griffin ATTACK_UP reach, side review](/images/castle-halberdier-01/griffin-attack-up-reach-side.png)
 
 ![Griffin ATTACK_UP reach, oblique review](/images/castle-halberdier-01/griffin-attack-up-reach-oblique.png)
+
+### Griffin: downward claw attack review
+
+The native `CGRIFF.DEF` downward attack resolves from a wing lift into a descending pounce and lowered claw contact. The nine-frame Blender pass now follows that arc with its own downward carrier trajectory while retaining local wings and foreclaws. Side and oblique contact frames preserve wing roots, chest feather surface, foreclaws, torso, lion hind legs and tail. This accepts `ATTACK_DOWN` as a private motion review; hit, defence, death, move transitions, export layers, DEF packing and game installation remain outstanding.
+
+![Griffin ATTACK_DOWN impact, side review](/images/castle-halberdier-01/griffin-attack-down-impact-side.png)
+
+![Griffin ATTACK_DOWN impact, oblique review](/images/castle-halberdier-01/griffin-attack-down-impact-oblique.png)

@@ -476,3 +476,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫 ATTACK_UP 伸击帧，侧面审查](/images/castle-halberdier-01/griffin-attack-up-reach-side.png)
 
 ![狮鹫 ATTACK_UP 伸击帧，斜侧审查](/images/castle-halberdier-01/griffin-attack-up-reach-oblique.png)
+
+### 狮鹫：下向爪击审查
+
+原版 `CGRIFF.DEF` 的下向攻击从抬翼进入下扑，并以降低的前爪接触收束。新的 9 帧 Blender 版本使用独立的下扑载体轨迹，同时保持局部翼部与前爪。触及帧的侧面与斜侧审查均保住了翼根、胸羽表面、前爪、躯干、狮类后腿和尾巴连续。此次验收的是私有动作审查中的 `ATTACK_DOWN`；受击、防御、死亡、移动衔接、输出图层、DEF 封装与游戏接入仍未完成。
+
+![狮鹫 ATTACK_DOWN 触及帧，侧面审查](/images/castle-halberdier-01/griffin-attack-down-impact-side.png)
+
+![狮鹫 ATTACK_DOWN 触及帧，斜侧审查](/images/castle-halberdier-01/griffin-attack-down-impact-oblique.png)
