@@ -384,3 +384,13 @@ The third four-frame Halberdier `DEATH` pass replaces the failed scale trick wit
 ![Halberdier ground-contact death, fall](/images/castle-halberdier-01/halberdier-death-ground-contact-fall.png)
 
 ![Halberdier ground-contact death, end](/images/castle-halberdier-01/halberdier-death-ground-contact-end.png)
+
+### Royal Griffin: Meshy API bootstrap
+
+<s>The first two Royal Griffin text-to-3D previews were rejected. One became an upright bird; the other replaced the eagle head with a lion. Neither preserves the `CRGRIF.DEF` silhouette, so neither will enter Blender animation work.</s>
+
+The next bootstrap uses an enlarged holding frame from the original `CRGRIF.DEF` through Meshy’s Image-to-3D API. It restores the eagle head, folded wings and tawny lower body visible in the original. Its crown has been misread as tall horns, and the gold forward-limb ornament still needs local cleanup, so this is a review-stage mesh only—not a rig, DEF export, or in-game asset.
+
+![Rejected Royal Griffin text-to-3D preview](/images/castle-halberdier-01/royal-griffin-meshy-api-text-rejected.png)
+
+![Royal Griffin Image-to-3D bootstrap, side review](/images/castle-halberdier-01/royal-griffin-meshy-api-image-side.png)

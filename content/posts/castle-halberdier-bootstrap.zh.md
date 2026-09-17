@@ -384,3 +384,13 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![长戟兵接地死亡，中段](/images/castle-halberdier-01/halberdier-death-ground-contact-fall.png)
 
 ![长戟兵接地死亡，终帧](/images/castle-halberdier-01/halberdier-death-ground-contact-end.png)
+
+### 皇家狮鹫：Meshy API 引导
+
+<s>皇家狮鹫前两次 Text-to-3D 预览已拒绝：第一版变成直立鸟形，第二版把鹰首误做成狮首。两者都没有保留 `CRGRIF.DEF` 的轮廓，因此不会进入 Blender 动画环节。</s>
+
+下一版以原版 `CRGRIF.DEF` 的放大待机帧调用 Meshy Image-to-3D API。它重新取得了原作可见的鹰首、折翼和棕色下身。皇冠仍被误读成长角，金色前肢饰物也要局部清理，所以它目前只是审查阶段的网格，并非绑定、DEF 导出或游戏资源。
+
+![已拒绝的皇家狮鹫 Text-to-3D 预览](/images/castle-halberdier-01/royal-griffin-meshy-api-text-rejected.png)
+
+![皇家狮鹫 Image-to-3D 引导，侧面审查](/images/castle-halberdier-01/royal-griffin-meshy-api-image-side.png)
