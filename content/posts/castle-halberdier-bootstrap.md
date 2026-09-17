@@ -32,7 +32,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers plus left/right turns pass; presentation groups next |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
-| Crusader | Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; remaining actions need the same fixes; no game installation |
+| Crusader | Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
@@ -308,6 +308,16 @@ The original `CCRUSD` defence group contains eleven frames: raise the shield, lo
 ![Revised defence candidate, side](/images/castle-halberdier-01/crusader-defence-clean-side.png)
 
 ![Start, shield raise and recovery; other action groups remain pending](/images/castle-halberdier-01/crusader-defence-clean-grid.jpg)
+
+**Holding, recoil and walking studies**
+
+The repaired equipment now carries eight holding frames, six recoil frames and eight walking frames. An early recoil draft lifted the leg forward. Reviewing the original sequence corrected that to a forward torso lean, rear leg lift and extension, with the shield arm thrown backwards. The larger motion still exposes an unresolved glove/shield-edge contact problem.
+
+The walk uses two-segment leg solves and changes the sword from raised to lowered carriage across the cycle. Each wrist travels opposite its same-side ankle. An extra ninth key closes the eight-frame loop; it is not an exported native frame. Endpoint vertex positions match, and sampled stance soles stay within roughly 1.2 mm of the ground. These checks do not establish native gait fidelity. Final frame-by-frame equipment review, movement transitions, attacks and death remain pending, with no game installation.
+
+![Walking study with lowered sword carriage](/images/castle-halberdier-01/crusader-moving26-side.png)
+
+![Rear leg lift and shield throw; glove/shield contact remains unresolved](/images/castle-halberdier-01/crusader-hitted24-pending-contact.png)
 
 ![Crusader double-strike start](/images/castle-halberdier-01/crusader-double-strike-start.png)
 
