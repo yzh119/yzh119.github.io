@@ -500,3 +500,13 @@ The eight-frame `DEFENCE` pass follows the native wing-guard rise, held protecti
 ![Griffin DEFENCE peak, side review](/images/castle-halberdier-01/griffin-defence-side.png)
 
 ![Griffin DEFENCE peak, oblique review](/images/castle-halberdier-01/griffin-defence-oblique.png)
+
+### Griffin death constraint; Royal Griffin crown repair
+
+<s>The nine-frame Griffin death probe rolled the complete flight mesh toward the ground. Its rigid wing remained upright at the terminal frame instead of forming the original compact grounded corpse, so it is rejected and will not export.</s> Death requires a local wing-fold and grounded-limb reconstruction.
+
+Royal Griffin now has a new Meshy static bootstrap from an explicit three-point crown concept. The full-body side and oblique Blender reviews retain a small three-point gold crown band rather than horns, along with two folded wings, eagle forequarters, lion hindquarters and four limbs. Its bright front plumage still needs palette comparison against `CRGRIF.DEF`; no rig, animation, DEF output or game installation is claimed.
+
+![Royal Griffin Meshy crown bootstrap, side review](/images/castle-halberdier-01/royal-griffin-crown-meshy-side.png)
+
+![Royal Griffin Meshy crown bootstrap, oblique review](/images/castle-halberdier-01/royal-griffin-crown-meshy-oblique.png)

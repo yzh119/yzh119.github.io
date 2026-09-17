@@ -500,3 +500,13 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫 DEFENCE 峰值，侧面审查](/images/castle-halberdier-01/griffin-defence-side.png)
 
 ![狮鹫 DEFENCE 峰值，斜侧审查](/images/castle-halberdier-01/griffin-defence-oblique.png)
+
+### 狮鹫死亡约束；皇家狮鹫皇冠修复
+
+<s>9 帧狮鹫死亡探针把完整飞行网格向地面滚落。终帧仍有刚性翼竖起，无法形成原版紧凑的地面尸体，因此已拒绝，不会导出。</s> 死亡需要局部折翼与落地肢体重建。
+
+皇家狮鹫现有一个基于明确三齿皇冠概念的新 Meshy 静态底模。完整的侧面和斜侧 Blender 审查保住了小型三齿金冠带而非角，同时有双侧折翼、鹰类前躯、狮类后躯与四肢。其亮色前羽仍须与 `CRGRIF.DEF` 对照调色；尚未声称有骨架、动画、DEF 输出或游戏接入。
+
+![皇家狮鹫 Meshy 皇冠底模，侧面审查](/images/castle-halberdier-01/royal-griffin-crown-meshy-side.png)
+
+![皇家狮鹫 Meshy 皇冠底模，斜侧审查](/images/castle-halberdier-01/royal-griffin-crown-meshy-oblique.png)
