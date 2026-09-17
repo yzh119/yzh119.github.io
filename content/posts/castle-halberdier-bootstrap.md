@@ -32,7 +32,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers plus left/right turns pass; presentation groups next |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
-| Crusader | Meshy mesh and rig; 11-frame defence study exposed shield folding, now rigidly bound; grip and surface remnants remain unresolved; no game installation |
+| Crusader | Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; remaining actions need the same fixes; no game installation |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
@@ -295,13 +295,19 @@ The native two-frame `MOVE_START` and `MOVE_END` reviews now explicitly bridge h
 
 The original `CCRUSD` defence group contains eleven frames: raise the shield, lower the blade, and recover. The imported skin weights fold the shield as the forearm rises. A dedicated shield bone now drives 1,453 vertices from the existing Meshy mesh, including the small trim pieces. Across eleven frames, 3,648 internal shield edges change length by at most approximately 0.003%. This measures shield rigidity only.
 
-The front and side renders still show grey remnants on the shield and leftover geometry around the sword grip. Delivery remains pending. A narrower selection left small trim fragments floating outside the shield and was rejected; the retained candidate includes those pieces. Contact and surface cleanup are still unfinished, with no DEF export or game installation. These images are Blender renders.
+<s>The front and side renders still show grey remnants on the shield and leftover geometry around the sword grip. Delivery remains pending.</s> Rendering the shield alone traced the grey patches to the hand penetrating its surface. Two sampled rays measured roughly 1–1.5 cm of penetration; adjusting the holding offset clears it. A grip close-up also showed that the original Meshy handle was intact. The revision retains that handle and the hand, removes the duplicate procedural handle, and replaces only the damaged guard and blade. A narrower selection left small trim fragments floating outside the shield and was rejected; the retained candidate includes those pieces. The revised candidate has eleven front and eleven side renders. Sampled start, raise, block and recovery poses no longer show the identified floating blade remnants. Other actions still need the same attachment fixes; there is no DEF export or game installation. The failure images remain below, followed by the revised Blender renders.
 
 ![Rejected defence study: automatic weights fold the shield](/images/castle-halberdier-01/crusader-defence-flexible-failure.png)
 
 ![Rigid shield, front review; surface and grip remnants remain](/images/castle-halberdier-01/crusader-defence-rigid-front.png)
 
 ![Side review of the same unfinished defence pose](/images/castle-halberdier-01/crusader-defence-rigid-side.png)
+
+![Revised defence candidate, front](/images/castle-halberdier-01/crusader-defence-clean-front.png)
+
+![Revised defence candidate, side](/images/castle-halberdier-01/crusader-defence-clean-side.png)
+
+![Start, shield raise and recovery; other action groups remain pending](/images/castle-halberdier-01/crusader-defence-clean-grid.jpg)
 
 ![Crusader double-strike start](/images/castle-halberdier-01/crusader-double-strike-start.png)
 
