@@ -554,3 +554,11 @@ Royal Griffin now has its own seven-frame `HITTED` recoil and recovery. Its peak
 ![Royal Griffin HITTED recoil, side review](/images/castle-halberdier-01/royal-griffin-hitted-side.png)
 
 ![Royal Griffin HITTED recoil, oblique review](/images/castle-halberdier-01/royal-griffin-hitted-oblique.png)
+
+### Royal Griffin: defence review
+
+Royal Griffin’s independent eight-frame `DEFENCE` uses a wing-guard rise, tucked foreclaws and recovery, rather than its attack carrier. Side and oblique peak frames retain crown, wing roots, tail, chest feathers, foreclaws, torso and airborne hind legs. Up/down attacks, death, transitions, DEF output and game installation remain outstanding.
+
+![Royal Griffin DEFENCE peak, side review](/images/castle-halberdier-01/royal-griffin-defence-side.png)
+
+![Royal Griffin DEFENCE peak, oblique review](/images/castle-halberdier-01/royal-griffin-defence-oblique.png)
