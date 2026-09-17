@@ -597,7 +597,7 @@ The horse-only Meshy mesh now passes an eight-frame quadruped walk: four conserv
 
 ### Cavalier: independent lance and front-thrust review
 
-<s>The first split rider still embedded its lance in the character mesh. An axis probe showed that the embedded lance was not weighted to `RightHand`, so it stayed still when the arm moved and could not support a charge.</s> The corrected assembly uses an unarmed Meshy rider with Meshy’s humanoid armature and a separate Meshy lance. Blender samples the animated right-hand position into the independent weapon on every frame. The ten-frame `ATTACK_FRONT` review now raises, levels, thrusts and recovers the lance toward the horse’s forward direction without leaving a static duplicate behind. This accepts the weapon/rider motion foundation only: horse attack motion, native pose calibration, other groups, DEF output and game installation remain outstanding.
+<s>The first split rider still embedded its lance in the character mesh. An axis probe showed that the embedded lance was not weighted to `RightHand`, so it stayed still when the arm moved and could not support a charge. The corrected assembly uses an unarmed Meshy rider with Meshy’s humanoid armature and a separate Meshy lance. Blender samples the animated right-hand position into the independent weapon on every frame. The ten-frame `ATTACK_FRONT` review now raises, levels, thrusts and recovers the lance toward the horse’s forward direction without leaving a static duplicate behind. This accepts the weapon/rider motion foundation only: horse attack motion, native pose calibration, other groups, DEF output and game installation remain outstanding.</s>
 
 ![Cavalier ATTACK_FRONT thrust, side review](/images/castle-halberdier-01/cavalier-attack-front-side.png)
 
@@ -605,8 +605,17 @@ The horse-only Meshy mesh now passes an eight-frame quadruped walk: four conserv
 
 ### Champion: component-based mounted static bootstrap
 
-<s>The original one-piece Champion is useful as a visual reference, but its horse, rider, tack and weapon are one mixed mesh and cannot be used as a dependable animation base.</s> A new component workflow supplies a dark Champion horse with four visible legs, blue-white striped barding, face armour and an empty saddle; a separate unarmed, gold-crested Champion rider then passes Meshy’s standard humanoid rig. The independent lance is reused through the proven weapon path. Side and oblique Blender review retain the complete mount, seated rider, crest and lance. This is a private static foundation only; quadruped gait, attacks, reactions, death, transitions, DEF output and game installation are still unmade.
+<s>The original one-piece Champion is useful as a visual reference, but its horse, rider, tack and weapon are one mixed mesh and cannot be used as a dependable animation base. A new component workflow supplies a dark Champion horse with four visible legs, blue-white striped barding, face armour and an empty saddle; a separate unarmed, gold-crested Champion rider then passes Meshy’s standard humanoid rig. The independent lance is reused through the proven weapon path. Side and oblique Blender review retain the complete mount, seated rider, crest and lance. This is a private static foundation only; quadruped gait, attacks, reactions, death, transitions, DEF output and game installation are still unmade.</s>
 
 ![Champion mounted static, side review](/images/castle-halberdier-01/champion-mounted-static-side.png)
 
 ![Champion mounted static, oblique review](/images/castle-halberdier-01/champion-mounted-static-oblique.png)
+
+
+### Review correction: mounted alignment is not accepted yet
+
+The two acceptance claims above were premature: Cavalier 12 faces away from the horse, Champion 05 sits sideways, and the lance origin was mistaken for its grip. Those claims are withdrawn; the old images remain as failure records. Cavalier 13 and Champion 06 align the riders with their horses and anchor the leather grip instead. The images below are work in progress. Champion legs still intersect the barding; stirrup contact, wrist orientation and the complete attack cadence remain unresolved. These are not finished animations or game integrations.
+
+![Cavalier 13: revised direction and grip, under review](/images/castle-halberdier-01/cavalier-alignment-review13.png)
+
+![Champion 06: revised direction, leg intersections unresolved](/images/castle-halberdier-01/champion-alignment-review06.png)
