@@ -394,3 +394,5 @@ The next bootstrap uses an enlarged holding frame from the original `CRGRIF.DEF`
 ![Rejected Royal Griffin text-to-3D preview](/images/castle-halberdier-01/royal-griffin-meshy-api-text-rejected.png)
 
 ![Royal Griffin Image-to-3D bootstrap, side review](/images/castle-halberdier-01/royal-griffin-meshy-api-image-side.png)
+
+<s>Four local crown-placement probes and one complete primitive head-replacement probe were rejected after front/side review. The source mesh does not expose the malformed horns as separable components; overlays either obscured the face, sat behind the wing, or left the artifact visible. Replacing the whole head with primitives created a visible neck seam and the wrong proportions. The next repair must reshape continuous local topology from the Image-to-3D mesh rather than stack cover geometry on top.</s>

@@ -394,3 +394,5 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![已拒绝的皇家狮鹫 Text-to-3D 预览](/images/castle-halberdier-01/royal-griffin-meshy-api-text-rejected.png)
 
 ![皇家狮鹫 Image-to-3D 引导，侧面审查](/images/castle-halberdier-01/royal-griffin-meshy-api-image-side.png)
+
+<s>四次皇冠定位探针与一次基本体完整换头探针均在正侧面审查后拒绝。源网格没有把误生成的长角分离为可独立处理的部件；覆盖层要么遮住脸、要么落在翼后、要么仍能看到伪影。基本体换头则形成明显的颈部接缝与错误比例。下一步必须直接重塑 Image-to-3D 网格的连续局部拓扑，而不是继续叠加遮盖几何。</s>
