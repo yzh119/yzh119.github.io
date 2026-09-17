@@ -418,3 +418,11 @@ A holding frame from `CCAVLR.DEF` now seeds a Meshy Image-to-3D Cavalier. Front,
 <s>The first Cavalier quadruped-rig probe was also rejected. Heat weights assigned no vertices on the overlapping rider-and-horse mesh; deterministic nearest-bone weights covered every vertex but coupled a forehoof to tack geometry, breaking the side-view joint line during a small leg probe. A usable mounted rig needs explicit component separation before weighting.</s>
 
 <s>The Cavalier local leg-replacement probe was also rejected: removing the old legs disrupted the belly connection, while procedural upper/lower legs and hooves broke the source mesh’s style and proportions. It cannot substitute for continuous mesh reconstruction.</s>
+
+### Griffin: concept-guided Meshy bootstrap
+
+<s>The raw `CGRIFF.DEF` Image-to-3D attempt was rejected because it exaggerated the ear tufts and foreclaws and lost the resting wing pose.</s> A clean side concept derived from the same frame gives Meshy an unambiguous anatomy reference. Its resulting mesh passes front, side and oblique static review with a continuous eagle head, folded wing pair, lion hindquarters and four limbs. The ear tufts remain longer than the original, so this accepts static bootstrap only; wing rigging remains future work.
+
+![Griffin concept-guided Meshy bootstrap, side review](/images/castle-halberdier-01/griffin-meshy-concept-side.png)
+
+![Griffin concept-guided Meshy bootstrap, oblique review](/images/castle-halberdier-01/griffin-meshy-concept-oblique.png)
