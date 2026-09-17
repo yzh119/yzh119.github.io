@@ -426,3 +426,11 @@ A holding frame from `CCAVLR.DEF` now seeds a Meshy Image-to-3D Cavalier. Front,
 ![Griffin concept-guided Meshy bootstrap, side review](/images/castle-halberdier-01/griffin-meshy-concept-side.png)
 
 ![Griffin concept-guided Meshy bootstrap, oblique review](/images/castle-halberdier-01/griffin-meshy-concept-oblique.png)
+
+### Griffin: wing-root rig probe
+
+<s>The first six-frame wing probe was rejected because the wing root separated from the torso in oblique review.</s> The revised grouping includes the high side feathers at the wing root, preserving continuity through a small six-frame fold cadence in both side and oblique review. This accepts a restrained idle-wing path only; flight and combat actions still need dedicated choreography.
+
+![Griffin wing idle, side review](/images/castle-halberdier-01/griffin-wing-idle-side.png)
+
+![Griffin wing idle, oblique review](/images/castle-halberdier-01/griffin-wing-idle-oblique.png)

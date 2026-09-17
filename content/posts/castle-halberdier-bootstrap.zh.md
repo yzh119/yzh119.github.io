@@ -426,3 +426,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫概念图引导 Meshy 底模，侧面审查](/images/castle-halberdier-01/griffin-meshy-concept-side.png)
 
 ![狮鹫概念图引导 Meshy 底模，斜侧审查](/images/castle-halberdier-01/griffin-meshy-concept-oblique.png)
+
+### 狮鹫：翼根骨架探针
+
+<s>首个 6 帧翼部探针已拒绝：斜侧审查中翼根与躯干分离。</s> 修订分组纳入翼根附近的高位侧向羽片，在侧面和斜侧审查中都能通过小幅 6 帧折翼节奏保持连续。它只验收克制的待机翼部路径；飞行和战斗动作仍需专门编排。
+
+![狮鹫翼部待机，侧面审查](/images/castle-halberdier-01/griffin-wing-idle-side.png)
+
+![狮鹫翼部待机，斜侧审查](/images/castle-halberdier-01/griffin-wing-idle-oblique.png)
