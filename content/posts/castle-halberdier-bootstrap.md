@@ -586,3 +586,11 @@ The accepted assembly excludes the proxy, preserves the native humanoid skin par
 ![Cavalier mounted static, side review](/images/castle-halberdier-01/cavalier-mounted-static-side.png)
 
 ![Cavalier mounted static, oblique review](/images/castle-halberdier-01/cavalier-mounted-static-oblique.png)
+
+### Cavalier: mounted eight-frame moving review
+
+The horse-only Meshy mesh now passes an eight-frame quadruped walk: four conservative lower-leg regions alternate while saddle, tack, barding and torso remain on the root. The rider is then carried by the horse body root rather than placed in leg weights, with a small matching body rise. Side and oblique key frames retain four legs, bridle, saddle, blue barding, seated rider, red-white lance, skin hierarchy and direction. This accepts `MOVING` at the original eight-frame count only; attack, hit, defence, death, transitions, exact per-frame pose calibration, DEF output and game installation remain outstanding.
+
+![Cavalier MOVING key frame, side review](/images/castle-halberdier-01/cavalier-moving-side.png)
+
+![Cavalier MOVING key frame, oblique review](/images/castle-halberdier-01/cavalier-moving-oblique.png)

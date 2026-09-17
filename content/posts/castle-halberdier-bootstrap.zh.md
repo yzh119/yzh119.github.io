@@ -586,3 +586,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![骑士骑乘静态，侧面审查](/images/castle-halberdier-01/cavalier-mounted-static-side.png)
 
 ![骑士骑乘静态，斜侧审查](/images/castle-halberdier-01/cavalier-mounted-static-oblique.png)
+
+### 骑士：骑乘八帧移动审查
+
+无骑手 Meshy 战马现已通过 8 帧四足步态：四个保守的下肢区域交替运动，鞍座、马具、马甲和躯干保持在根节点。骑手随后由马身根节点承载，而不被放入腿部权重，并随马身作细小的同步起伏。侧面与斜侧关键帧均保住四腿、缰具、鞍座、蓝色马甲、坐姿骑手、红白骑枪、蒙皮层级与朝向。此次只验收原版 8 帧数的 `MOVING`；攻击、受击、防御、死亡、衔接、逐帧原版姿态校准、DEF 输出与游戏接入仍未完成。
+
+![骑士 MOVING 关键帧，侧面审查](/images/castle-halberdier-01/cavalier-moving-side.png)
+
+![骑士 MOVING 关键帧，斜侧审查](/images/castle-halberdier-01/cavalier-moving-oblique.png)
