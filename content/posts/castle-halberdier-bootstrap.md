@@ -538,3 +538,11 @@ A separate Meshy airborne Royal Griffin now supplies actual spread-wing geometry
 ![Royal Griffin MOVING high-wing frame, side review](/images/castle-halberdier-01/royal-griffin-moving-04-side.png)
 
 ![Royal Griffin MOVING high-wing frame, oblique review](/images/castle-halberdier-01/royal-griffin-moving-04-oblique.png)
+
+### Royal Griffin: front claw attack review
+
+The flight-specific Royal Griffin now has a separate nine-frame `ATTACK_FRONT` review. Crown-safe palette regions and tail-excluded wing groups are retained while left/right foreclaws make the forward/downward reach. Side and oblique contact checks preserve the crown, wing roots, tail, chest feathers, foreclaws, torso and airborne hind legs. Up/down attacks, hit, defence, death, transitions, DEF output and game installation remain outstanding.
+
+![Royal Griffin ATTACK_FRONT claw reach, side review](/images/castle-halberdier-01/royal-griffin-attack-front-side.png)
+
+![Royal Griffin ATTACK_FRONT claw reach, oblique review](/images/castle-halberdier-01/royal-griffin-attack-front-oblique.png)

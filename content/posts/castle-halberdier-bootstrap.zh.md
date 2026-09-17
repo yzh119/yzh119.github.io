@@ -538,3 +538,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![皇家狮鹫 MOVING 高翼帧，侧面审查](/images/castle-halberdier-01/royal-griffin-moving-04-side.png)
 
 ![皇家狮鹫 MOVING 高翼帧，斜侧审查](/images/castle-halberdier-01/royal-griffin-moving-04-oblique.png)
+
+### 皇家狮鹫：前向爪击审查
+
+飞行专用皇家狮鹫现有独立的 9 帧 `ATTACK_FRONT` 审查。它保留皇冠安全配色区与排除尾部的翼部分组，并让左右前爪完成向前下方的伸击。触及帧的侧面和斜侧检查均保住皇冠、翼根、尾巴、胸羽、前爪、躯干和腾空后腿。上/下攻击、受击、防御、死亡、衔接、DEF 输出与游戏接入仍未完成。
+
+![皇家狮鹫 ATTACK_FRONT 伸爪，侧面审查](/images/castle-halberdier-01/royal-griffin-attack-front-side.png)
+
+![皇家狮鹫 ATTACK_FRONT 伸爪，斜侧审查](/images/castle-halberdier-01/royal-griffin-attack-front-oblique.png)
