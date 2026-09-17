@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T22:26:43Z
+lastmod: 2026-09-17T22:39:24Z
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader 1×/2× test package is installed and its resources were read in a test battle; visual acceptance remains pending. The Swordsman has twelve groups and 70 draft frames, including turns and mouse hover. Death and game integration remain; the rest of Castle is still in progress."
+homeSummary: "Crusader and Swordsman 1×/2× test candidates are installed. The Swordsman now has thirteen groups and 76 frames, with corpse support and detected forearm crossings corrected; native playback is pending. Crusader resource loading was verified in a test battle, with visual acceptance still open. Other Castle creatures remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
-| Swordsman | Mesh/rig alignment and shield bending corrected; twelve groups and 70 draft frames, now including both turns and mouse hover; death, full contact review and game integration remain |
+| Swordsman | The 1×/2× test candidate is installed with thirteen groups and 76 frames; import alignment, shield bending and detected forearm crossings corrected; native playback, movement transitions and creature-panel review remain |
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
@@ -387,9 +387,9 @@ Reversing that recorded mesh transform reduces severely stretched edges at the s
 
 <s>The new set contains 40 frames: eight holding, eleven defence, and seven attacks in each direction. They share a raised-sword guard, with the arm carrying the blade through the parry and swing. Reopening the saved scene preserves the selected shield surface and returns defence and attack endpoints to the holding pose. Leg lunges, full contact checks and the remaining groups are unfinished. The Swordsman is not installed in the game.</s>
 
-The current draft covers twelve groups and 70 frames. The preceding nine-group, 58-frame version added lunges and walking. Each attack direction adds a foot lift, forward step and recovery. The six-frame recoil returns to the same guard. The eight-frame walk alternates the legs and swings the sword hand opposite its same-side foot, raising the blade as the arm moves forward and lowering it on the backswing. Move start and move end each have two frames.
+The current Swordsman test candidate has thirteen groups and 76 frames and is installed in the local Castle mod. The preceding nine-group, 58-frame version added lunges and walking. Each attack direction adds a foot lift, forward step and recovery. The six-frame recoil returns to the same guard. The eight-frame walk alternates the legs and swings the sword hand opposite its same-side foot, raising the blade as the arm moves forward and lowering it on the backswing. Move start and move end each have two frames.
 
-After reopening, the lowest body point across all 58 frames stays within about 0.0016 model units of the ground, and the walk closure key reproduces the first-frame mesh. These checks do not establish the absence of foot sliding, stop-phase jumps or intersections in the game. <s>Turns, hover and death remain unfinished, and the Swordsman is not installed.</s> Two two-frame turns and an eight-frame mouse-hover clip have since brought the draft to twelve groups and 70 frames. Death, full contact review and game integration remain unfinished.
+After reopening, the lowest body point across all 58 frames stays within about 0.0016 model units of the ground, and the walk closure key reproduces the first-frame mesh. These checks do not establish the absence of foot sliding, stop-phase jumps or intersections in the game. <s>Turns, hover and death remain unfinished, and the Swordsman is not installed.</s> Both turns contain two frames and mouse hover contains eight. Death and installation are covered below; sliding and stops from arbitrary walk phases still need native review.
 
 ![Front attack draft with a forward step](/images/castle-halberdier-01/swordsman-lunge61.png)
 
@@ -401,7 +401,25 @@ The turn rotates the body and equipment together while bringing the sword hand t
 
 ![Both turns and eight mouse-hover poses, rendered offline in Blender](/images/castle-halberdier-01/swordsman-turns64-review.jpg)
 
-These images use the diagnostic camera, which has not been registered for final game frames.
+The turn and hover images above retain their earlier diagnostic camera. The current test package registers the camera to the original holding height, horizontal centre and ground position.
+
+
+
+The six-frame death leans back, lifts the legs and turns toward the camera as the body lands. The first draft fell too far sideways and left the lowest sword and shield points about 0.099 and 0.142 model units above the floor. That version was not used.
+
+![Rejected first fall, with suspended equipment](/images/castle-halberdier-01/swordsman-death65-rejected.jpg)
+
+The correction measures body support separately from equipment clearance and lowers the arm targets. The diagnostic floor below is excluded from exported game frames.
+
+![Corrected final fall pose, a static Blender floor diagnostic](/images/castle-halberdier-01/swordsman-death69-ground.png)
+
+The collision check had its own failure: the initial weight threshold selected three hand vertices and no triangles, so its zero-intersection result was invalid. An expanded mask covers 2,862 arm vertices and 3,968 triangles. It exposed crossings in defence frames 4 and 8 and death frames 2–6. Adjusting the elbow direction while preserving the wrist and shield poses removes those crossings in a reopened, 76-frame check. Coplanar contact and body regions outside the mask remain outside its scope.
+
+![Collision mask: arm in red, shield in yellow](/images/castle-halberdier-01/swordsman-contact68-selection.png)
+
+![Six death frames composited offline on the fixed game canvas with precomputed shadows](/images/castle-halberdier-01/swordsman-death69-sheet.jpg)
+
+The local Castle mod is now version 0.2.0, adding Swordsman bodies, shadows and selection outlines at 1× and 2×. Existing Crusader files retain their hashes. All 76 frames fit the canvas, and format validation reports no errors or warnings. These are offline renders; native Swordsman playback, movement transitions and creature-panel placement still need verification.
 
 The following revision 60 guard and attack images are retained as history; the attacks did not yet have leg lunges.
 
@@ -773,5 +791,21 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Mesh/rig alignment and shield bending corrected; nine groups and 58 draft frames including lunges, recoil, walking and move transitions; turns, hover, death and game integration remain</s>
 
 <s>The Crusader 1×/2× test mod is installed and new resources were read during a test battle; visual acceptance remains pending. Swordsman mesh/rig alignment and shield bending are corrected, with new body-driven holding, defence and attack drafts. Other Castle creatures remain in progress.</s>
+
+</details>
+
+
+<details>
+<summary>Swordsman status before installation</summary>
+
+<s>| Swordsman | Mesh/rig alignment and shield bending corrected; twelve groups and 70 draft frames, now including both turns and mouse hover; death, full contact review and game integration remain |</s>
+
+<s>The Crusader 1×/2× test package is installed and its resources were read in a test battle; visual acceptance remains pending. The Swordsman has twelve groups and 70 draft frames, including turns and mouse hover. Death and game integration remain; the rest of Castle is still in progress.</s>
+
+<s>The current draft covers twelve groups and 70 frames.</s>
+
+<s>Two two-frame turns and an eight-frame mouse-hover clip have since brought the draft to twelve groups and 70 frames. Death, full contact review and game integration remain unfinished.</s>
+
+<s>These images use the diagnostic camera, which has not been registered for final game frames.</s>
 
 </details>
