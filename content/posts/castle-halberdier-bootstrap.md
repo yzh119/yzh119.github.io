@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T22:52:42Z
+lastmod: 2026-09-17T23:17:22Z
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman 1×/2× test candidates are installed, with new resources read in test battles; visual acceptance remains open. The Halberdier now has a remeshed Meshy model and humanoid skin under joint-deformation review. Other Castle creatures remain in progress."
+homeSummary: "Crusader and Swordsman 1×/2× test candidates are installed and their new resources were read in test battles; visual acceptance remains open. The Halberdier weapon binding is corrected, but the two-hand attack exposes support-hand/clothing deformation and has not passed review. Other Castle creatures remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | Existing Meshy model remeshed and given a humanoid skin; static, knee and arm probes rendered; full clips need rebuilding, with the earlier fragment-based rig retained as history |
+| Halberdier | Meshy remesh and humanoid skin obtained; rigid halberd binding corrected, but the six-frame two-hand attack still stretches the support-hand/clothing boundary; rejected and not installed |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -39,7 +39,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 ## Review gallery
 
-These are Blender review renders from the accepted local states. They show the actual material under review, rather than concepts or a claimed game result.
+<s>These are Blender review renders from the accepted local states. They show the actual material under review, rather than concepts or a claimed game result.</s> The gallery retains drafts, rejected candidates and historical review results, with their scope stated in the surrounding text and captions. Unless explicitly identified otherwise, these are offline Blender renders and do not establish native-game acceptance.
 
 ### Halberdier skinning revision
 
@@ -56,6 +56,20 @@ Knee, elbow and shoulder probes exercise individual joints. None triggers the cu
 ![Single knee probe, not a finished walk](/images/castle-halberdier-01/halberdier-knee73.png)
 
 [The remesh tool and reproduction instructions](https://github.com/yzh119/h3-art-pipeline/commit/2a331f9) are public. Three tests cover recovery without a new submission, duplicate-task prevention and rejection of a different source task. Models and complete mods remain local.
+
+The full six-frame front attack exposed problems that the small joint probes had missed. The halberd head carried upper-arm weights while its butt carried pelvis weights. The complete weapon and primary grip now share a rigid hand control. The mask below shows the weapon in yellow and primary grip in red.
+
+![Rigid weapon and primary-grip selection, a Blender diagnostic](/images/castle-halberdier-01/halberdier-weapon75-mask.png)
+
+The first two-hand attack pulled the coat upward with the arm. Attenuating distant arm weights reduced the large displaced cloth panels, but the support hand, cuff and clothing boundary still formed stretched strips. Extending the mask using skin colour also selected some gold trim; tightening it left parts of the hand behind. None of these candidates passed review.
+
+![First full-range attack probe, rejected because the arm pulls up the coat](/images/castle-halberdier-01/halberdier-attack76-failure.png)
+
+![Later rejected candidate: less displaced cloth, but visible strips remain beside the support hand](/images/castle-halberdier-01/halberdier-attack99-failure.png)
+
+![Impact pose from the same rejected candidate; a usable weapon path does not establish a finished attack](/images/castle-halberdier-01/halberdier-attack99-impact.png)
+
+Reopening the latest six-frame file gives a maximum selected-weapon edge-length change below 4.6×10⁻⁷ model units. Each body frame still has 258–274 edges longer than 0.08 model units and more than three times their rest length. Weapon rigidity passes this check; body skinning fails. The next step is to resolve the support-hand/clothing geometry boundary before extending the binding and motion. The Halberdier remains uninstalled.
 
 ### Earlier Halberdier fragment rig
 
@@ -845,5 +859,15 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Crusader and Swordsman 1×/2× test candidates are installed. The Swordsman now has thirteen groups and 76 frames, with corpse support and detected forearm crossings corrected; native playback is pending. Crusader resource loading was verified in a test battle, with visual acceptance still open. Other Castle creatures remain in progress.</s>
 
 <s>These are offline renders; native Swordsman playback, movement transitions and creature-panel placement still need verification.</s>
+
+</details>
+
+
+<details>
+<summary>Status before full-range Halberdier review</summary>
+
+<s>| Halberdier | Existing Meshy model remeshed and given a humanoid skin; static, knee and arm probes rendered; full clips need rebuilding, with the earlier fragment-based rig retained as history |</s>
+
+<s>Crusader and Swordsman 1×/2× test candidates are installed, with new resources read in test battles; visual acceptance remains open. The Halberdier now has a remeshed Meshy model and humanoid skin under joint-deformation review. Other Castle creatures remain in progress.</s>
 
 </details>
