@@ -321,9 +321,13 @@ The walk uses two-segment leg solves and changes the sword from raised to lowere
 
 **Attack timing correction**
 
-The old seven-frame draft contained two swings. Inspecting the original `ATTACK_FRONT` sequence showed one raise, slash and recovery, so the earlier double-strike acceptance is withdrawn. The replacement keeps seven frames and authors a single slash. Raising the sword overhead also exposed source handle pieces following forearm weights; binding them rigidly to the wrist removed the separated pommel in the inspected front and side wind-up views. The lower-body lunge, full sword path and the other attack directions remain unfinished.
+The old seven-frame draft contained two swings. Inspecting the original `ATTACK_FRONT` sequence showed one raise, slash and recovery, so the earlier double-strike acceptance is withdrawn. The replacement keeps seven frames and authors a single slash. Raising the sword overhead also exposed source handle pieces following forearm weights; binding them rigidly to the wrist removed the separated pommel in the inspected front and side wind-up views. <s>The lower-body lunge, full sword path and the other attack directions remain unfinished.</s> Three directional candidates now provide seven frames each on the repaired grip model, with a wider planted lunge. All 21 poses were inspected in front and side contact sheets; sampled low-foot vertices remain roughly -0.8 to +0.9 mm from the floor. The original anticipatory leg lift, torso turn and shield-arm coordination still need closer matching. These remain production candidates without game integration.
 
 ![Single-slash wind-up candidate; the full attack is not accepted](/images/castle-halberdier-01/crusader-single-slash29-windup.png)
+
+![Side review of seven-frame up, front and down attack candidates](/images/castle-halberdier-01/crusader-attacks31-side.jpg)
+
+![Front review of the same candidates; native pose refinement remains pending](/images/castle-halberdier-01/crusader-attacks31-front.jpg)
 
 The next three images preserve the earlier double-swing draft; that timing has been discarded.
 
