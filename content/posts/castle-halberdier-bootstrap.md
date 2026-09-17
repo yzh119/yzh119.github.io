@@ -378,3 +378,9 @@ The first holding loop has eight authored frames. The six-frame walking review k
 ![Six-frame walking review, frame three](/images/castle-halberdier-01/local-rig-walk.png)
 
 The next pass is to inspect the walk against the original group frame by frame, then author the remaining <code>CHALBD.DEF</code> groups before any local mod is assembled. Meshy supplies the textured geometry; Astra supplies the local rig, motion, render and validation tooling.
+
+The third four-frame Halberdier `DEATH` pass replaces the failed scale trick with a ground-contact pivot at the forward foot and local limb curl. In the battle-facing review it reaches a readable low, horizontal end silhouette while the entire original halberd stays connected to the left hand. This is accepted for the front sprite path only: the side view confirms that the current model is authored for the battle camera, not as a free-rotation character performance. It remains a Blender review asset, with no DEF packing or game installation claimed.
+
+![Halberdier ground-contact death, fall](/images/castle-halberdier-01/halberdier-death-ground-contact-fall.png)
+
+![Halberdier ground-contact death, end](/images/castle-halberdier-01/halberdier-death-ground-contact-end.png)

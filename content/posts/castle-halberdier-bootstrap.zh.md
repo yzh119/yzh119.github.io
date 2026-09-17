@@ -378,3 +378,9 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![六帧行走审查的第三帧](/images/castle-halberdier-01/local-rig-walk.png)
 
 下一步会逐帧对照原版行走组，再补齐 <code>CHALBD.DEF</code> 的其余动作组，之后才组装本地 mod。Meshy 提供带贴图的几何体；Astra 编写本地绑定、动作、渲染和验证工具。
+
+长戟兵第三版 4 帧 `DEATH` 放弃了失败的缩放手法，改为以前脚接地点为枢轴，并在局部骨骼中收拢四肢。战斗正面审查中，它落到可读的低位横躺终帧，整把原始长戟始终与左手连通。这一版只验收正面精灵路径：侧视确认当前模型是为战斗镜头定向制作，尚不是可自由旋转的角色表演。它仍是 Blender 审查资产，未宣称 DEF 封装或游戏安装。
+
+![长戟兵接地死亡，中段](/images/castle-halberdier-01/halberdier-death-ground-contact-fall.png)
+
+![长戟兵接地死亡，终帧](/images/castle-halberdier-01/halberdier-death-ground-contact-end.png)
