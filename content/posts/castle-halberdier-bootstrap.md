@@ -329,6 +329,16 @@ The old seven-frame draft contained two swings. Inspecting the original `ATTACK_
 
 ![Front review of the same candidates; native pose refinement remains pending](/images/castle-halberdier-01/crusader-attacks31-front.jpg)
 
+**Full-set draft review**
+
+The Crusader now has drafts for thirteen standard groups, totaling 76 native frames, with an explicit action list for one shared model. Turning follows VCMI's two `TURN_L` frames, facing flip, and two `TURN_R` frames. The middle pose brings the equipment closer to the centerline; hover has eight separate frames. The six-frame death study falls backwards and ends face-up with lowered arms and equipment beside the body.
+
+This completes draft coverage only. Glove/shield-edge contact, corpse support, final camera alignment and transitions still need full-set review. Later hand-weight edits also affect earlier actions, so their individual review results cannot establish that the combined set is ready. There is no DEF export or game installation.
+
+![Turn halves with the engine facing flip simulated; contact remains unresolved](/images/castle-halberdier-01/crusader-turn34-flip-review.jpg)
+
+![Six-frame death candidate, front and side review](/images/castle-halberdier-01/crusader-death36-review.jpg)
+
 The next three images preserve the earlier double-swing draft; that timing has been discarded.
 
 ![Crusader double-strike start](/images/castle-halberdier-01/crusader-double-strike-start.png)

@@ -329,6 +329,16 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 ![同一批候选的正面审查，原版姿态仍待细化](/images/castle-halberdier-01/crusader-attacks31-front.jpg)
 
+**整套草稿审查**
+
+十字军目前有 13 个常用动作组、76 个原版帧数对应的草稿，已整理到同一模型的动作清单。转身按 VCMI 的顺序播放两帧 `TURN_L`、翻转朝向，再播放两帧 `TURN_R`，所以中间姿态把剑盾收近身体中线；鼠标悬停另有八帧。六帧死亡从后仰到仰面落地，末帧手臂放低，剑盾落在两侧。
+
+这次补齐的是草稿。手套与盾边接触、倒地后的身体支撑、最终镜头和动作间切换仍需整套审查。后来的手部权重修改也会影响先前的动作，不能直接沿用各阶段“通过”的结论。尚未输出 DEF 或接入游戏。
+
+![两段转身的翻转模拟，手盾接触仍待修正](/images/castle-halberdier-01/crusader-turn34-flip-review.jpg)
+
+![六帧死亡候选，正侧面检查](/images/castle-halberdier-01/crusader-death36-review.jpg)
+
 下面三图保留的是早期双斩草稿，动作节奏已弃用。
 
 ![十字军双击起手](/images/castle-halberdier-01/crusader-double-strike-start.png)
