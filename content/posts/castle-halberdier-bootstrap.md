@@ -434,3 +434,15 @@ A holding frame from `CCAVLR.DEF` now seeds a Meshy Image-to-3D Cavalier. Front,
 ![Griffin wing idle, side review](/images/castle-halberdier-01/griffin-wing-idle-side.png)
 
 ![Griffin wing idle, oblique review](/images/castle-halberdier-01/griffin-wing-idle-oblique.png)
+
+### Griffin: flight-specific Meshy bootstrap
+
+<s>The first six-frame flight probe reused the folded-wing mesh. At flight amplitude its oblique review opened a gap at the wing root, so it is rejected and will not be exported.</s>
+
+A new Meshy Image-to-3D request used a deliberately spread-wing, airborne Griffin reference instead of attempting to stretch the folded-wing asset. Its front, side and oblique Blender reviews retain two continuous wing surfaces, eagle forequarters, lion hindquarters and tucked airborne limbs. A conservative four-frame reciprocal wing cycle also remains continuous in side and oblique review. This accepts a flight-idle foundation only: it is not yet the native `CGRIFF.DEF` moving, attack, hit, defence or death set, and it has no DEF output or game installation.
+
+![Flight-specific Griffin Meshy bootstrap, side review](/images/castle-halberdier-01/griffin-flight-meshy-side.png)
+
+![Flight-specific Griffin Meshy bootstrap, oblique review](/images/castle-halberdier-01/griffin-flight-meshy-oblique.png)
+
+![Flight-specific Griffin small wing cycle, oblique review](/images/castle-halberdier-01/griffin-flight-wing-cycle-oblique.png)

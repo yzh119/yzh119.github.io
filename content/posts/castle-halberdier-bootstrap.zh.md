@@ -434,3 +434,15 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫翼部待机，侧面审查](/images/castle-halberdier-01/griffin-wing-idle-side.png)
 
 ![狮鹫翼部待机，斜侧审查](/images/castle-halberdier-01/griffin-wing-idle-oblique.png)
+
+### 狮鹫：飞行专用的 Meshy 底模
+
+<s>首个 6 帧飞行探针复用了折翼网格。增加飞行振幅后，斜侧审查露出翼根裂缝，因此已拒绝，不会导出。</s>
+
+新的 Meshy Image-to-3D 请求改用明确展翼、腾空的狮鹫参考图，而不是强行拉伸折翼资产。正面、侧面和斜侧 Blender 审查均保住了连续的双翼、鹰类前躯、狮类后躯与收起的腾空四肢。保守的 4 帧双翼反向拍动在侧面和斜侧审查中也保持连续。此次只验收飞行待机基础：它尚不是原版 `CGRIFF.DEF` 的完整移动、攻击、受击、防御或死亡组，也没有 DEF 输出或游戏接入。
+
+![飞行专用狮鹫 Meshy 底模，侧面审查](/images/castle-halberdier-01/griffin-flight-meshy-side.png)
+
+![飞行专用狮鹫 Meshy 底模，斜侧审查](/images/castle-halberdier-01/griffin-flight-meshy-oblique.png)
+
+![飞行专用狮鹫小幅拍翼，斜侧审查](/images/castle-halberdier-01/griffin-flight-wing-cycle-oblique.png)
