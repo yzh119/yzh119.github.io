@@ -404,3 +404,11 @@ A holding frame from `CCAVLR.DEF` now seeds a Meshy Image-to-3D Cavalier. Front,
 ![Cavalier Image-to-3D bootstrap, side review](/images/castle-halberdier-01/cavalier-meshy-api-image-side.png)
 
 ![Cavalier Image-to-3D bootstrap, oblique review](/images/castle-halberdier-01/cavalier-meshy-api-image-oblique.png)
+
+### Champion: corrected Image-to-3D static bootstrap
+
+<s>The first `CCHAMP.DEF` Image-to-3D candidate was rejected after side review because it added a second red-and-white spike from the horse’s forehead.</s> The corrected second candidate has one lance only and keeps the gold-helmeted rider, horse armour and blue-and-white barding intact in front, side and oblique review. It is accepted as a static bootstrap; quadruped separation and rigging are still required before animation.
+
+![Champion Image-to-3D bootstrap, side review](/images/castle-halberdier-01/champion-meshy-api-image-side.png)
+
+![Champion Image-to-3D bootstrap, oblique review](/images/castle-halberdier-01/champion-meshy-api-image-oblique.png)

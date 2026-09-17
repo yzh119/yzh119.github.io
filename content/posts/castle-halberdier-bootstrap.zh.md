@@ -404,3 +404,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![骑士 Image-to-3D 引导，侧面审查](/images/castle-halberdier-01/cavalier-meshy-api-image-side.png)
 
 ![骑士 Image-to-3D 引导，斜侧审查](/images/castle-halberdier-01/cavalier-meshy-api-image-oblique.png)
+
+### 冠军：修正后的 Image-to-3D 静态引导
+
+<s>首个 `CCHAMP.DEF` Image-to-3D 候选在侧面审查后拒绝：它从马额外长出第二支红白尖刺。</s> 修正后的第二版只有一支骑枪，且在正面、侧面和斜侧审查中保住了金盔骑手、马甲与蓝白鞍饰。它作为静态引导验收；动画前仍要拆分四足组件并制作骨架。
+
+![冠军 Image-to-3D 引导，侧面审查](/images/castle-halberdier-01/champion-meshy-api-image-side.png)
+
+![冠军 Image-to-3D 引导，斜侧审查](/images/castle-halberdier-01/champion-meshy-api-image-oblique.png)
