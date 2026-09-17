@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T22:39:24Z
+lastmod: 2026-09-17T22:52:42Z
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman 1×/2× test candidates are installed. The Swordsman now has thirteen groups and 76 frames, with corpse support and detected forearm crossings corrected; native playback is pending. Crusader resource loading was verified in a test battle, with visual acceptance still open. Other Castle creatures remain in progress."
+homeSummary: "Crusader and Swordsman 1×/2× test candidates are installed, with new resources read in test battles; visual acceptance remains open. The Halberdier now has a remeshed Meshy model and humanoid skin under joint-deformation review. Other Castle creatures remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,11 +22,11 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | Meshy body and original long-weapon components; holding, walk, three attack directions, 6-frame hit and 12-frame defence accepted in front and side review |
+| Halberdier | Existing Meshy model remeshed and given a humanoid skin; static, knee and arm probes rendered; full clips need rebuilding, with the earlier fragment-based rig retained as history |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
-| Swordsman | The 1×/2× test candidate is installed with thirteen groups and 76 frames; import alignment, shield bending and detected forearm crossings corrected; native playback, movement transitions and creature-panel review remain |
+| Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
@@ -41,7 +41,27 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 These are Blender review renders from the accepted local states. They show the actual material under review, rather than concepts or a claimed game result.
 
-### Halberdier: eight-frame holding cadence
+### Halberdier skinning revision
+
+The earlier local rig split the Meshy surface into fragments and attached each rigidly to a nearby bone. That supported weapon-path studies, but continuous joint deformation needed a skin. The existing model has now gone through Meshy's humanoid rigging API.
+
+The first request returned HTTP 400 because the source had 741,522 faces, above the rigging limit. A remesh request targeted 50,000 quads and returned a GLB with 98,106 triangles. Rigging then succeeded; each task cost 5 credits. The source design was reused. The imported Icosphere bone-display helper was explicitly excluded before normalizing the mesh and armature together.
+
+![Halberdier with the new Meshy humanoid skin, rendered in Blender](/images/castle-halberdier-01/halberdier-meshy-rig72.png)
+
+Knee, elbow and shoulder probes exercise individual joints. None triggers the current large-edge stretch threshold, which does not establish weapon rigidity, cloth quality or grip contact. Weapon weights and the grip need separate checks before authoring native-length clips.
+
+![Single elbow probe, not a finished attack](/images/castle-halberdier-01/halberdier-elbow73.png)
+
+![Single knee probe, not a finished walk](/images/castle-halberdier-01/halberdier-knee73.png)
+
+[The remesh tool and reproduction instructions](https://github.com/yzh119/h3-art-pipeline/commit/2a331f9) are public. Three tests cover recovery without a new submission, duplicate-task prevention and rejection of a different source task. Models and complete mods remain local.
+
+### Earlier Halberdier fragment rig
+
+The holding and walking images below document the earlier local rig. They do not establish finished motion on the new skin.
+
+<s>Halberdier: eight-frame holding cadence</s>
 
 ![Halberdier holding frame one](/images/castle-halberdier-01/halberdier-holding-01.png)
 
@@ -419,7 +439,11 @@ The collision check had its own failure: the initial weight threshold selected t
 
 ![Six death frames composited offline on the fixed game canvas with precomputed shadows](/images/castle-halberdier-01/swordsman-death69-sheet.jpg)
 
-The local Castle mod is now version 0.2.0, adding Swordsman bodies, shadows and selection outlines at 1× and 2×. Existing Crusader files retain their hashes. All 76 frames fit the canvas, and format validation reports no errors or warnings. These are offline renders; native Swordsman playback, movement transitions and creature-panel placement still need verification.
+The local Castle mod is now version 0.2.0, adding Swordsman bodies, shadows and selection outlines at 1× and 2×. Existing Crusader files retain their hashes. All 76 frames fit the canvas, and format validation reports no errors or warnings. A subsequent native test battle reached its result and loaded 45 distinct 2× body frames across nine groups, plus shadows and outlines, for 106 distinct 2× resources. The observed groups were holding, mouse hover, movement, movement start/end, both turns, downward attack and death. This does not establish runtime coverage of all thirteen groups. Screen capture remained black, leaving visual acceptance and transition review open. Display settings were restored after the test.
+
+![Six Swordsman poses using the client panel crop, composited offline](/images/castle-halberdier-01/swordsman-panel70.jpg)
+
+Reproducing the client's 100×130 panel and crop origin places the holding silhouette at x=51/100. None of the six sampled poses clips the body. This is an offline placement check using the original Castle background, not a native window capture.
 
 The following revision 60 guard and attack images are retained as history; the attacks did not yet have leg lunges.
 
@@ -807,5 +831,19 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Two two-frame turns and an eight-frame mouse-hover clip have since brought the draft to twelve groups and 70 frames. Death, full contact review and game integration remain unfinished.</s>
 
 <s>These images use the diagnostic camera, which has not been registered for final game frames.</s>
+
+</details>
+
+
+<details>
+<summary>Status before native testing and the new skin</summary>
+
+<s>| Halberdier | Meshy body and original long-weapon components; holding, walk, three attack directions, 6-frame hit and 12-frame defence accepted in front and side review |</s>
+
+<s>| Swordsman | The 1×/2× test candidate is installed with thirteen groups and 76 frames; import alignment, shield bending and detected forearm crossings corrected; native playback, movement transitions and creature-panel review remain |</s>
+
+<s>Crusader and Swordsman 1×/2× test candidates are installed. The Swordsman now has thirteen groups and 76 frames, with corpse support and detected forearm crossings corrected; native playback is pending. Crusader resource loading was verified in a test battle, with visual acceptance still open. Other Castle creatures remain in progress.</s>
+
+<s>These are offline renders; native Swordsman playback, movement transitions and creature-panel placement still need verification.</s>
 
 </details>
