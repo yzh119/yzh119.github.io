@@ -510,3 +510,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![皇家狮鹫 Meshy 皇冠底模，侧面审查](/images/castle-halberdier-01/royal-griffin-crown-meshy-side.png)
 
 ![皇家狮鹫 Meshy 皇冠底模，斜侧审查](/images/castle-halberdier-01/royal-griffin-crown-meshy-oblique.png)
+
+### 皇家狮鹫：原版配色校正
+
+对照 `CRGRIF.DEF` 待机帧确认：明亮的前羽是忠实的，而首个 Meshy 翼色过近黑色。新的 Blender 纹理翼部校正将其移至银灰，同时不替换原有羽片细节。侧面与斜侧审查保住皇冠、前羽、翼面、狮类后躯与肢体。它仍只是静态基线；骨架和所有动作组尚未制作。
+
+![皇家狮鹫校正配色，侧面审查](/images/castle-halberdier-01/royal-griffin-palette-side.png)
+
+![皇家狮鹫校正配色，斜侧审查](/images/castle-halberdier-01/royal-griffin-palette-oblique.png)

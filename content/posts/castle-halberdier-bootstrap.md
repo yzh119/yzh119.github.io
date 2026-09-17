@@ -510,3 +510,11 @@ Royal Griffin now has a new Meshy static bootstrap from an explicit three-point 
 ![Royal Griffin Meshy crown bootstrap, side review](/images/castle-halberdier-01/royal-griffin-crown-meshy-side.png)
 
 ![Royal Griffin Meshy crown bootstrap, oblique review](/images/castle-halberdier-01/royal-griffin-crown-meshy-oblique.png)
+
+### Royal Griffin: original-palette correction
+
+A `CRGRIF.DEF` holding comparison confirms that the bright front plumage is faithful, while the first Meshy wings were too near-black. A textured Blender wing-region correction now shifts them to silver gray without replacing the feather detail. Side and oblique review retains the crown, front plumage, wing surfaces, lion hindquarters and limbs. This is the static baseline only; rigging and all action groups remain unmade.
+
+![Royal Griffin corrected palette, side review](/images/castle-halberdier-01/royal-griffin-palette-side.png)
+
+![Royal Griffin corrected palette, oblique review](/images/castle-halberdier-01/royal-griffin-palette-oblique.png)
