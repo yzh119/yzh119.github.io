@@ -396,3 +396,11 @@ The next bootstrap uses an enlarged holding frame from the original `CRGRIF.DEF`
 ![Royal Griffin Image-to-3D bootstrap, side review](/images/castle-halberdier-01/royal-griffin-meshy-api-image-side.png)
 
 <s>Four local crown-placement probes and one complete primitive head-replacement probe were rejected after front/side review. The source mesh does not expose the malformed horns as separable components; overlays either obscured the face, sat behind the wing, or left the artifact visible. Replacing the whole head with primitives created a visible neck seam and the wrong proportions. The next repair must reshape continuous local topology from the Image-to-3D mesh rather than stack cover geometry on top.</s>
+
+### Cavalier: Image-to-3D static bootstrap
+
+A holding frame from `CCAVLR.DEF` now seeds a Meshy Image-to-3D Cavalier. Front, side and oblique Blender reviews retain one mounted rider, brown horse, blue saddle cloth and a full red-and-white lance. This accepts the static bootstrap only: the horse-leg topology still needs separation and a dedicated quadruped rig before any holding, movement, or charge group can be reviewed.
+
+![Cavalier Image-to-3D bootstrap, side review](/images/castle-halberdier-01/cavalier-meshy-api-image-side.png)
+
+![Cavalier Image-to-3D bootstrap, oblique review](/images/castle-halberdier-01/cavalier-meshy-api-image-oblique.png)
