@@ -32,7 +32,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers plus left/right turns pass; presentation groups next |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
-| Crusader | Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation |
+| Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
 | Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
@@ -333,7 +333,17 @@ The old seven-frame draft contained two swings. Inspecting the original `ATTACK_
 
 The Crusader now has drafts for thirteen standard groups, totaling 76 native frames, with an explicit action list for one shared model. Turning follows VCMI's two `TURN_L` frames, facing flip, and two `TURN_R` frames. The middle pose brings the equipment closer to the centerline; hover has eight separate frames. The six-frame death study falls backwards and ends face-up with lowered arms and equipment beside the body.
 
-This completes draft coverage only. Glove/shield-edge contact, corpse support, final camera alignment and transitions still need full-set review. Later hand-weight edits also affect earlier actions, so their individual review results cannot establish that the combined set is ready. There is no DEF export or game installation.
+<s>This completes draft coverage only. Glove/shield-edge contact, corpse support, final camera alignment and transitions still need full-set review. Later hand-weight edits also affect earlier actions, so their individual review results cannot establish that the combined set is ready. There is no DEF export or game installation.</s>
+
+September 17 review: after adjusting the shield, the selected hand/forearm and shield triangles show no crossings across the 76 frames. This excludes other body regions and does not establish a natural grip. A ground-plane render also exposed a floating corpse: placing the lowest equipment or hand point at ground level left the body elevated. The body has been lowered and the arms repositioned.
+
+![Revised corpse support with a ground plane; Blender review only](/images/castle-halberdier-01/crusader-ground45.png)
+
+All 76 body frames have been rendered on transparent 900×800 canvases, with holding height and foot placement registered to the original. No geometry exceeds the canvas. Comparing them with the original exposed another problem: the camera was too frontal, making the front strike point toward the viewer. The revised camera below gives a more side-on view. Each pair shows the original on the left and the new model on the right. Turns still need adjustment for that camera; shadow and outline layers and in-game validation remain unfinished. The Crusader is not installed in the game.
+
+![Original holding and front strike alongside the revised camera candidate](/images/castle-halberdier-01/crusader-camera46-comparison.png)
+
+The next two images preserve the earlier turn and death candidates, before the contact and support corrections described above.
 
 ![Turn halves with the engine facing flip simulated; contact remains unresolved](/images/castle-halberdier-01/crusader-turn34-flip-review.jpg)
 
