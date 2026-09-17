@@ -518,3 +518,11 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![皇家狮鹫校正配色，侧面审查](/images/castle-halberdier-01/royal-griffin-palette-side.png)
 
 ![皇家狮鹫校正配色，斜侧审查](/images/castle-halberdier-01/royal-griffin-palette-oblique.png)
+
+### 皇家狮鹫：独立待机翼部审查
+
+调色后的皇家狮鹫现有自己的 8 帧待机翼部审查，帧数对应原版 `CRGRIF.DEF` 待机组。它使用独立的局部翼根分组，不复用普通狮鹫的权重。克制的折翼节奏中，侧面与斜侧检查均保住皇冠、翼根、银灰纹理、白色前羽、狮类后躯与肢体。此次只验收待机；飞行和所有战斗组尚未制作。
+
+![皇家狮鹫待机翼部，侧面审查](/images/castle-halberdier-01/royal-griffin-wing-idle-side.png)
+
+![皇家狮鹫待机翼部，斜侧审查](/images/castle-halberdier-01/royal-griffin-wing-idle-oblique.png)

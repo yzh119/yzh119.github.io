@@ -518,3 +518,11 @@ A `CRGRIF.DEF` holding comparison confirms that the bright front plumage is fait
 ![Royal Griffin corrected palette, side review](/images/castle-halberdier-01/royal-griffin-palette-side.png)
 
 ![Royal Griffin corrected palette, oblique review](/images/castle-halberdier-01/royal-griffin-palette-oblique.png)
+
+### Royal Griffin: independent idle wing review
+
+The palette-corrected Royal Griffin now has its own eight-frame holding-wing review, based on the native `CRGRIF.DEF` holding count. It uses separate local wing-root groups rather than the standard Griffin’s weights. Side and oblique checks preserve the crown, wing roots, silver-gray texture, white front plumage, lion hindquarters and limbs throughout the restrained fold cadence. This accepts holding only; flight and all combat groups remain unmade.
+
+![Royal Griffin idle wings, side review](/images/castle-halberdier-01/royal-griffin-wing-idle-side.png)
+
+![Royal Griffin idle wings, oblique review](/images/castle-halberdier-01/royal-griffin-wing-idle-oblique.png)
