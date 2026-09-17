@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T23:31:01+00:00
+lastmod: 2026-09-17T23:40:54+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. A new arm-separated Meshy Halberdier body avoids the earlier coat strips in a six-frame arm test; shoulder armour and grips still need work. Other Castle creatures remain in progress."
@@ -87,7 +87,17 @@ Astra authored five larger single-joint probes and a six-frame two-arm range tes
 
 ![Side view of the forward-arm probe, without a weapon, grip or attack footwork](/images/castle-halberdier-01/halberdier-body100-forward.png)
 
-The raised pose still compresses the shoulder armour. Rigid plate controls, wrist orientation, finger grips and weapon attachment remain ahead of the native animation set. This is a working body candidate; the Halberdier remains uninstalled.
+<s>The raised pose still compresses the shoulder armour.</s> The separate-plate experiment below follows up on this failure. Rigid plate controls, wrist orientation, finger grips and weapon attachment remain ahead of the native animation set. This is a working body candidate; the Halberdier remains uninstalled.
+
+Two shoulder treatments followed. Assigning the entire mask to the upper-arm bone stretched the adjacent cloth, producing 6–112 large edges per frame; that candidate was rejected. Candidate 103 extracts two independent plates and follows part of the upper-arm rotation. Across six reopened poses, plate edge lengths vary by less than 2.92×10⁻⁷ units and the retained body stays below the large-edge threshold. Raised-plate placement and the neckline seam still need visual correction.
+
+![Independent rigid plates in a raised-arm probe; placement and seams remain unfinished](/images/castle-halberdier-01/halberdier-shoulder103.png)
+
+Grip work starts from the open hands. Curl attempts 104–106 flattened fingers or thumbs and were rejected. Candidate 108 adjusts the curl axis and separates the thumb treatment from the other fingers. A diagnostic shaft of radius 0.014 units exposes the remaining gaps: the thumb is open and finger contact is unfinished. This rod is not the final halberd.
+
+![Rejected early curl, with collapsed hand geometry](/images/castle-halberdier-01/halberdier-grip104-rejected.png)
+
+![Current grip close-up draft; thumb closure and shaft contact remain unfinished](/images/castle-halberdier-01/halberdier-grip108.png)
 
 ### Earlier Halberdier fragment rig
 
