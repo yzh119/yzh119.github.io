@@ -619,3 +619,14 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![骑士 13 版：朝向与握点修正，待审查](/images/castle-halberdier-01/cavalier-alignment-review13.png)
 
 ![冠军 06 版：朝向修正，腿部与马衣穿插待修](/images/castle-halberdier-01/champion-alignment-review06.png)
+
+
+### 冠军骑士：骑姿与腿部权重修正（制作中）
+
+骑手现在与马同向，双腿跨在马身两侧。调整骑手比例并保持骨盆位置后，用两段腿骨求解脚踝位置，再让靴子朝前，使靴底更接近马镫。脚踝目标来自视觉定位，精确踏板接触仍未验收。
+
+<s>初版四腿权重可作为完整步态基础。</s> 检查发现后腿曾混入尾巴；缩小范围后又漏掉了部分蹄部。最新版改用最近蹄部中心分配和渐变权重：指定低位蹄部检查区域中，未获得完整腿部权重的顶点从 43 个降至 0；尾部检查区域在八帧里没有可测的明显腿骨拖动。这只是小幅变形测试，完整迈步、落蹄、原版节奏与游戏接入都还未完成。
+
+![冠军骑姿与脚掌方向修正，精确马镫接触待审查](/images/castle-halberdier-01/champion-seat-contact09.png)
+
+![冠军四腿权重测试，尚非完整行走动画](/images/castle-halberdier-01/champion-leg-weights12.png)

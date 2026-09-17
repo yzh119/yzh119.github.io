@@ -619,3 +619,14 @@ The two acceptance claims above were premature: Cavalier 12 faces away from the 
 ![Cavalier 13: revised direction and grip, under review](/images/castle-halberdier-01/cavalier-alignment-review13.png)
 
 ![Champion 06: revised direction, leg intersections unresolved](/images/castle-halberdier-01/champion-alignment-review06.png)
+
+
+### Champion: seated pose and leg weights (work in progress)
+
+The rider now faces forward with both legs outside the horse. A proportion adjustment preserves the pelvis position; a two-segment leg solve positions the ankles and turns the boots forward, bringing the soles closer to the stirrups. Targets were located visually, so exact tread contact remains unverified.
+
+<s>The initial four-leg weights are ready for a complete walk.</s> Inspection found tail vertices in a hind-leg group; narrowing the region then missed parts of a hoof. Nearest-hoof-center assignment and blended weights reduce vertices lacking full leg weights in the specified lower-hoof check region from 43 to zero. The tail check region shows no appreciable leg-driven deformation across eight frames. This is still a small-angle deformation probe; full stepping, hoof contact, original timing and game integration remain unfinished.
+
+![Champion seated pose and boot direction; exact stirrup contact under review](/images/castle-halberdier-01/champion-seat-contact09.png)
+
+![Champion leg-weight probe, not a complete walk animation](/images/castle-halberdier-01/champion-leg-weights12.png)
