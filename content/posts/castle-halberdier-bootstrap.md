@@ -526,3 +526,15 @@ The palette-corrected Royal Griffin now has its own eight-frame holding-wing rev
 ![Royal Griffin idle wings, side review](/images/castle-halberdier-01/royal-griffin-wing-idle-side.png)
 
 ![Royal Griffin idle wings, oblique review](/images/castle-halberdier-01/royal-griffin-wing-idle-oblique.png)
+
+### Royal Griffin: flight mesh and four-frame moving review
+
+A separate Meshy airborne Royal Griffin now supplies actual spread-wing geometry for the native flying `MOVING` group. <s>The first palette pass recolored crown polygons; the next crown-safe region fixed that, but its first four-frame wing rig still admitted tail vertices, producing a pale tail band at the high-wing frame. Both are rejected.</s> The revised local wing grouping excludes the tail. Its four-frame `CRGRIF.DEF` cadence—folded, low sweep, folded, high sweep—keeps crown, wing roots, tail, torso, lion hindquarters and airborne limbs intact in side and oblique review. This covers `MOVING` only, with no DEF output or game installation.
+
+![Royal Griffin flight palette, side review](/images/castle-halberdier-01/royal-griffin-flight-palette-side.png)
+
+![Royal Griffin flight palette, oblique review](/images/castle-halberdier-01/royal-griffin-flight-palette-oblique.png)
+
+![Royal Griffin MOVING high-wing frame, side review](/images/castle-halberdier-01/royal-griffin-moving-04-side.png)
+
+![Royal Griffin MOVING high-wing frame, oblique review](/images/castle-halberdier-01/royal-griffin-moving-04-oblique.png)

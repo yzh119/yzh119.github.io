@@ -526,3 +526,15 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![皇家狮鹫待机翼部，侧面审查](/images/castle-halberdier-01/royal-griffin-wing-idle-side.png)
 
 ![皇家狮鹫待机翼部，斜侧审查](/images/castle-halberdier-01/royal-griffin-wing-idle-oblique.png)
+
+### 皇家狮鹫：飞行网格与四帧移动审查
+
+新的独立 Meshy 腾空皇家狮鹫提供了原版飞行 `MOVING` 组所需的真实展翼几何。<s>首个配色版本误将皇冠多边形纳入翼色；后续皇冠安全分区修正了它，但第一个四帧翼骨仍误纳入尾部顶点，在高翼帧形成了浅色尾带。两者均已拒绝。</s> 修订后的局部翼部分组排除了尾巴。其四帧 `CRGRIF.DEF` 节奏——收翼、下扫、收翼、上扬——在侧面与斜侧审查中均保住皇冠、翼根、尾巴、躯干、狮类后躯与腾空肢体。这次只覆盖 `MOVING`，没有 DEF 输出或游戏接入。
+
+![皇家狮鹫飞行配色，侧面审查](/images/castle-halberdier-01/royal-griffin-flight-palette-side.png)
+
+![皇家狮鹫飞行配色，斜侧审查](/images/castle-halberdier-01/royal-griffin-flight-palette-oblique.png)
+
+![皇家狮鹫 MOVING 高翼帧，侧面审查](/images/castle-halberdier-01/royal-griffin-moving-04-side.png)
+
+![皇家狮鹫 MOVING 高翼帧，斜侧审查](/images/castle-halberdier-01/royal-griffin-moving-04-oblique.png)
