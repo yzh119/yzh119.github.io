@@ -456,3 +456,15 @@ Astra 在 Blender 里补了绑定，没有继续重试自动 rig。Meshy 导出�
 ![狮鹫 MOVING 第四帧，侧面审查](/images/castle-halberdier-01/griffin-moving-04-side.png)
 
 ![狮鹫 MOVING 第四帧，斜侧审查](/images/castle-halberdier-01/griffin-moving-04-oblique.png)
+
+### 狮鹫：前向爪击审查
+
+<s>首个 9 帧前向攻击探针只使用共享俯冲载体。翼根虽保持完整，前爪却没有独立的伸击，因此不满足原版攻击轮廓，已拒绝。</s>
+
+替代版本在飞行翼部骨架之外，单独分出了左右前爪区域。在原版 9 帧的准备、抬翼、向前下方伸爪与回收节奏中，侧面和斜侧触及帧均保持双翼根、胸羽、双前爪、躯干和腾空后肢连续。此次只验收私有 Blender 动作审查中的 `ATTACK_FRONT`；上/下方向攻击、受击、防御、死亡、衔接、DEF 输出与游戏接入仍未完成。
+
+![狮鹫 ATTACK_FRONT 准备帧，侧面审查](/images/castle-halberdier-01/griffin-attack-front-ready-side.png)
+
+![狮鹫 ATTACK_FRONT 伸爪帧，侧面审查](/images/castle-halberdier-01/griffin-attack-front-impact-side.png)
+
+![狮鹫 ATTACK_FRONT 伸爪帧，斜侧审查](/images/castle-halberdier-01/griffin-attack-front-impact-oblique.png)

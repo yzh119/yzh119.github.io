@@ -456,3 +456,15 @@ The original `CGRIFF.DEF` moving group is airborne rather than a ground gait. It
 ![Griffin MOVING frame four, side review](/images/castle-halberdier-01/griffin-moving-04-side.png)
 
 ![Griffin MOVING frame four, oblique review](/images/castle-halberdier-01/griffin-moving-04-oblique.png)
+
+### Griffin: front claw attack review
+
+<s>The first nine-frame front-attack probe used only a shared dive carrier. Although its wing roots stayed intact, its foreclaws never made an independent reach, so it does not satisfy the original attack silhouette and is rejected.</s>
+
+The replacement uses separate left/right foreclaw regions alongside the flight-wing rig. Across the native nine-frame preparation, wing lift, forward/downward claw reach and recovery, the side and oblique contact reviews keep wing roots, chest feathers, both foreclaws, torso and airborne hind legs continuous. This accepts `ATTACK_FRONT` as a private Blender motion review only; the upward/downward strikes, hit, defence, death, transitions, DEF output and game installation remain outstanding.
+
+![Griffin ATTACK_FRONT ready, side review](/images/castle-halberdier-01/griffin-attack-front-ready-side.png)
+
+![Griffin ATTACK_FRONT claw reach, side review](/images/castle-halberdier-01/griffin-attack-front-impact-side.png)
+
+![Griffin ATTACK_FRONT claw reach, oblique review](/images/castle-halberdier-01/griffin-attack-front-impact-oblique.png)
