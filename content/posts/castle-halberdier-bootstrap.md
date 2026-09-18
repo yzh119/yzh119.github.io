@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T04:33:31+00:00
+lastmod: 2026-09-18T04:44:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Separate Meshy body and crossbow for Marksman; a reversed finger curl is corrected, but wrist and grip defects remain. Halberdier’s 63-frame preview awaits acceptance; Crusader and Swordsman test candidates are installed."
+homeSummary: "Marksman’s finger weights now pass the distal-finger isolation probe; grasp and wrist appearance remain unfinished. Halberdier’s 63-frame preview awaits acceptance; Crusader and Swordsman test candidates are installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -422,9 +422,15 @@ A subsequent joint-direction check found that the four fingers curled away from 
 
 ![Trial 212 close-up after reversing finger flexion; intersections and wrist defects remain](/images/castle-halberdier-01/marksman-grip212-draft.png)
 
-Trimming excess hand geometry beneath the cuff reduced the exposed skin in low-carry trial 218. Smooth wrist weights alone had made it worse and were discarded. A subsequent bone-contact fitter reduced sampled skin vertices inside the stock from 2,843 to 1,772, but left substantial intersections. Moving the palm and fitting again produced extended little fingers and distorted skin in trial 223, shown below. These grasp trials are rejected. Finger-joint placement and cross-finger weights need inspection before further fitting; vertex counts alone do not establish a usable grip.
+Trimming excess hand geometry beneath the cuff reduced the exposed skin in low-carry trial 218. Smooth wrist weights alone had made it worse and were discarded. A subsequent bone-contact fitter reduced sampled skin vertices inside the stock from 2,843 to 1,772, but left substantial intersections. Moving the palm and fitting again produced extended little fingers and distorted skin in trial 223, shown below. These grasp trials are rejected. <s>Finger-joint placement and cross-finger weights need inspection before further fitting</s>; the weight inspection and revision follow below; vertex counts alone do not establish a usable grip.
 
 ![Rejected trial 223: contact fitting produces unnatural fingers and skin deformation](/images/castle-halberdier-01/marksman-contact223-rejected.png)
+
+The next check found cross-finger influence that the earlier whole-hand isolation test had missed. A first region selector also misclassified vertices between nearby fingers; the corrected check uses disjoint connected fingertip regions. Across ten single-joint probes, unintended motion in those regions fell from 5.15 mm to below 0.002 mm after the weight revision. The body's and hands' rest geometry is unchanged.
+
+A hard division of all finger weights produced spikes in the webs and was rejected. Candidate 233 retains the palm transitions and changes the weights gradually toward the fingertips. This result covers the tested fingertip regions, not the complete grasp: the low-carry render still has stock intersections, wrist defects and an unfinished thumb. Full actions and game installation remain pending.
+
+![Single middle-finger control probe after the weight revision; a Blender diagnostic, not a finished grasp](/images/castle-halberdier-01/marksman-digit233-probe.png)
 
 <details>
 <summary>Earlier grip and hand trials</summary>
