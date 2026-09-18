@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T22:15:38+00:00
+lastmod: 2026-09-18T22:30:28+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk skirt now follows the body surface at its upper rim, with a longer hem. Death frames seven and eight raise the correct screen-side arm; new stills and the full sequence remain under review."
+homeSummary: "Monk death frames seven through nine now follow the original torso lean and arm spread more closely. Cloth has been rebaked and all eleven frames rerendered; the model remains an uninstalled draft."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1088,6 +1088,22 @@ The following pixel comparison records the arm-only edit before refreshing the c
 The combined scene resamples the waist references to account for the few millimetres of body movement introduced by the arm changes, then rebakes the full cloth simulation. The sequence below now shows both repairs together.
 
 ![Original sequence above the eleven-frame waist and arm revision; offline body renders, not an accepted or installed result](/images/castle-monk-641/waist-arm-death-frames.png)
+
+### Torso lean and arm spread in the Monk death sequence (2026-09-18)
+
+Enlarging frames seven through nine showed that the waist heights in seven and eight were already fairly close to the original. The clearer differences were the missing lean toward screen right and arms drawn inward too early in frame nine. This trial keeps the waist position and revises the torso and wrists.
+
+![Original, previous and revised frames seven through nine; the new candidate still lacks overall visual acceptance](/images/castle-monk-641/death-reference-three-poses.png)
+
+Six wrist reference points were selected manually from the original three frames. After rotating the torso, the first arm solve kept the previous wrist depths and could not reach several targets. Adjusting depth along the camera rays reduces their mean projected error from about 19.6 to 2.8 logical pixels while retaining bone lengths. This describes the six manually estimated wrist targets only; it is not a score for overall pose fidelity. The [depth-selection helper](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/projected_ik.py) is now public, checked with synthetic cases and these six wrist solves.
+
+![Revised torso lean and raised arm in frame seven, actual 1200×1200 Blender still; shoulder clothing and palms remain unfinished](/images/castle-monk-641/death-reference-frame7.png)
+
+![Frame nine with the arms spread again, actual 1200×1200 Blender still; knee and waist folds remain unaccepted](/images/castle-monk-641/death-reference-frame9.png)
+
+The torso rotation also requires new waist targets and an updated torso collision surface. These were refreshed before rebaking the 101-frame cloth simulation and exporting eleven 900×800 body images, all within the canvas. Reopening the saved scene reproduces frame seven pixel for pixel. The final collapse silhouette, shoulder and waist folds, palm orientation and integration with the other actions remain unfinished. Game resources have not been replaced.
+
+![Complete eleven-frame trial after updating the torso, wrists, waist targets and collision surfaces, compared with the original](/images/castle-monk-641/death-reference-full-sequence.png)
 
 ### Zealot identity correction (2026-09-18)
 
