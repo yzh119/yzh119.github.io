@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T08:08:44+00:00
+lastmod: 2026-09-18T08:22:07+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Marksman has nine offline groups and 60 body frames, with new hit and defence renders and original-frame comparisons. Pose fidelity, grip anatomy and game integration remain unfinished."
+homeSummary: "The Marksman adds hover and death drafts and revises hit and defence: eleven offline groups, 75 frames. New stills, original comparisons and a preview are up; death fidelity, grip and integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | <s>Holding, walking, movement start/end and three shooting directions: seven groups, 44 offline candidate frames; grip and finger constraints unaccepted, other actions and game integration pending</s> Nine groups, 60 offline candidate frames, adding six hit and ten defence frames; pose fidelity, grip and integration unfinished |
+| Marksman | <s>Holding, walking, movement start/end and three shooting directions: seven groups, 44 offline candidate frames; grip and finger constraints unaccepted, other actions and game integration pending</s> <s>Nine groups, 60 offline candidate frames, adding six hit and ten defence frames; pose fidelity, grip and integration unfinished</s> Eleven groups, 75 offline body draft frames, adding hover and death; death timing/pose, grip, melee/turns and game integration unfinished |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -217,9 +217,46 @@ The first shadow pass transformed body alpha around a fixed ground line. It lack
 
 The sixty-three geometry shadows produce 126 files at 1×/2×. Body and selection-outline files match the preceding package byte for byte. Format validation reports zero errors, zero warnings and twenty informational notices about movement inside the canvas. No temporal averaging or frame-count change was applied. Flicker, transitions and appearance still need native playback review.
 
+### Marksman reactions, hover and death drafts
+
+The current body set has eleven draft groups and 75 frames. This pass revises hit and defence, adds the original nine-frame hover interaction, and introduces a six-frame death draft. Astra authored the animation in Blender around existing Meshy geometry, with no new generation charges. All four groups remain offline; the death timing and final pose still need substantial reference work.
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-halberdier-01/marksman-reactions441.mp4"></video>
+
+The review adds four-frame pauses at each clip boundary. Its 8 fps playback is for inspection and does not establish engine timing.
+
+![Hit peak, high-resolution static Blender render](/images/castle-halberdier-01/marksman-hitted442.png)
+
+![Six hit frames, using a shared crop for original and candidate](/images/castle-halberdier-01/marksman-hitted442-comparison.png)
+
+![Defence now raises the crossbow in front of the face, static Blender render](/images/castle-halberdier-01/marksman-defence442.png)
+
+![Ten-frame defence comparison](/images/castle-halberdier-01/marksman-defence442-comparison.png)
+
+The stronger recoil and higher defensive carry preserve continuous left-hand attachment. Maximum sampled drift is 0.50 mm for hit and 0.56 mm for defence. Defence starts and ends at holding; the hit also returns to the same evaluated body and weapon endpoint. Finger anatomy and cloth contact remain unaccepted.
+
+![Hover interaction, high-resolution static Blender render](/images/castle-halberdier-01/marksman-mouseon442.png)
+
+![Nine hover frames against the original](/images/castle-halberdier-01/marksman-mouseon442-comparison.png)
+
+The first hover draft put the crossbow below the left hand's reachable range, leaving more than 5 cm of error. Raising it and moving it toward that shoulder reduced drift to 0.05 mm across 129 samples. Both endpoints match holding. The original still looks farther down toward the weapon.
+
+![Final death pose, static Blender render; visual acceptance pending](/images/castle-halberdier-01/marksman-death442.png)
+
+![Six death frames: the draft lands later and leaves the legs more extended](/images/castle-halberdier-01/marksman-death442-comparison.png)
+
+The first fall merely rotated the recoil pose and left the free arm raised at the end. It is rejected. The revised scene settles the arm and weapon as the body falls backward. Across 321 samples, the body, hands, bow and string stay above the floor within numerical precision; left-hand drift peaks at 2.11 mm. These checks do not establish plausible support or collision-free cloth. Frames four and five need an earlier, more compact fall, and the final legs need to follow the original more closely.
+
+![Rejected first death draft, with the free arm still raised](/images/castle-halberdier-01/marksman-death424-rejected.png)
+
+Directional melee, turns, the constrained trigger finger, loading continuity, layered export and native review remain unfinished.
+
+<details>
+<summary>Hit and defence at candidate 415 (superseded by 421)</summary>
+
 ### Marksman hit and defence candidates
 
-The new clips preserve the original six hit frames and ten defence frames, bringing the current body draft to nine groups and 60 frames. Astra authored these actions in Blender using the existing Meshy body, hands and crossbow. The hit raises one leg and opens the free hand; defence brings both hands onto the weapon with a small crouch. Comparison with the original still shows insufficient sideways recoil and a less protective weapon position near the head. These are offline candidates awaiting further pose work and game review.
+<s>The new clips preserve the original six hit frames and ten defence frames, bringing the current body draft to nine groups and 60 frames. Astra authored these actions in Blender using the existing Meshy body, hands and crossbow. The hit raises one leg and opens the free hand; defence brings both hands onto the weapon with a small crouch. Comparison with the original still shows insufficient sideways recoil and a less protective weapon position near the head. These are offline candidates awaiting further pose work and game review.</s>
 
 ![Six hit frames: original on the left, candidate on the right](/images/castle-halberdier-01/marksman-hitted419-comparison.png)
 
@@ -229,7 +266,9 @@ The new clips preserve the original six hit frames and ten defence frames, bring
 
 ![Two-handed defensive carry, high-resolution static Blender render](/images/castle-halberdier-01/marksman-defence418.png)
 
-The first hit draft needed a stronger recoil and leg lift. A later subframe check caught a separate defect: equivalent quaternion rotations had opposite signs on adjacent keys, producing a roughly 38 cm left-hand jump during defence. Keeping quaternion signs continuous reduced the maximum grip drift to 0.32 mm across 145 samples; the hit measured 0.49 mm across 81 samples. Defence endpoints and the final hit pose match holding to below 0.001 mm across the evaluated body, hands, bow and string. These checks cover continuity and endpoint geometry, leaving finger anatomy, cloth collisions and fidelity to the original unresolved.
+<s>The first hit draft needed a stronger recoil and leg lift. A later subframe check caught a separate defect: equivalent quaternion rotations had opposite signs on adjacent keys, producing a roughly 38 cm left-hand jump during defence. Keeping quaternion signs continuous reduced the maximum grip drift to 0.32 mm across 145 samples; the hit measured 0.49 mm across 81 samples. Defence endpoints and the final hit pose match holding to below 0.001 mm across the evaluated body, hands, bow and string. These checks cover continuity and endpoint geometry, leaving finger anatomy, cloth collisions and fidelity to the original unresolved.</s>
+
+</details>
 
 <details>
 <summary>Grip close-ups and rejected corrections</summary>
