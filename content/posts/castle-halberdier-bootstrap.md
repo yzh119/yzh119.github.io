@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T11:44:58+00:00
+lastmod: 2026-09-18T13:40:40+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot native-canvas review widened its 80-pixel-tall body from about 24 to 34 pixels, added a mantle and belt, and produced a fourteen-frame cast draft. Cloth intersections remain open."
+homeSummary: "Zealot now has a continuous skinned mantle plus walking, starting and turning drafts. Sole height is corrected, but local hem stretching remains; the unit is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Blue-robed mesh, face emission, mantle and belt; 6-frame holding, 10-frame fidget and 14-frame cast drafts with native-canvas calibration. Mantle intersections, hands and remaining actions unresolved; not installed |
+| Zealot | Continuous skinned mantle and separate robe bone; seven draft groups covering idle, fidget, cast, walk, start and turns. Hem stretching, hands and turn review remain unresolved; not installed |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -995,7 +995,29 @@ The original fourteen-frame front cast gathers the hands, sends them forward at 
 
 ![Sixth Blender casting frame during the raised-arm hold](/images/castle-zealot-512/cast528-raised.png)
 
-Holding, fidget and front casting now have 30 RGBA body frames exported through one fixed camera at 900×800, all within the canvas. This verifies export and bounds for these three groups only. The other fifteen groups, shadows, effects and game integration remain unfinished.
+<s>Holding, fidget and front casting now have 30 RGBA body frames exported through one fixed camera at 900×800, all within the canvas. This verifies export and bounds for these three groups only. The other fifteen groups, shadows, effects and game integration remain unfinished.</s>
+
+Two mantle constructions were tested next. Copying and thickening the Meshy surface amplified fragmented seams and irregular boundaries. Welding, normal repair and smoothing did not produce a usable garment; the failed trial is preserved below.
+
+![Rejected copied-and-thickened mantle with a fragmented surface and edge](/images/castle-zealot-512/rejected-mantle530.png)
+
+The replacement uses a continuous low-resolution mesh shaped against the shoulder surface, with skin weights transferred from the body. It now deforms with the shoulders during the forward cast without the fragmented surface seen above. The lifted lower edge, fit from other angles and hand contact still need review.
+
+![Blender casting still with the continuous skinned mantle, still under review](/images/castle-zealot-512/mantle533-cast.png)
+
+The new six-frame walk exposed another binding error: each leg pulled part of the long robe, producing a trouser-like silhouette. A separate garment bone removed most of that deformation. Remaining failures came from missed hem vertices and coincident UV-seam vertices with different weights. An attempted cut treated the mixed-weight region as a boot seam and created holes; that edit was discarded. The current mesh is intact, with garment selection based on texture colour, position and bone membership, and matching weights at coincident vertices.
+
+![Rejected first walking trial, with the robe deformed by separate leg bones](/images/castle-zealot-512/rejected-walk534.png)
+
+Walking is still not accepted: some hem edges stretch in the six-frame sequence. Floating soles were corrected separately by evaluating the sole vertices and adjusting the character root. The largest previous minimum-sole height was about 2.86 centimetres; the corrected minimum reaches the ground. That measurement establishes lowest-sole contact only, not complete gait or cloth acceptance.
+
+![Revised Blender walking draft, with residual local hem stretching](/images/castle-zealot-512/walk544.png)
+
+Two-frame move-start, left-turn and right-turn drafts were also added. They remain offline; the transition through the engine’s facing flip has not been verified in game. No `MOVE_END` group was invented for a source that does not contain one.
+
+![Blender turn draft; mantle fit and the in-game facing transition remain under review](/images/castle-zealot-512/turn544.png)
+
+The seven current groups now have 42 body frames re-exported through a fixed camera at 900×800, all within the canvas. Eleven original groups, shadows, effects and integration remain unfinished, and walking is still an unaccepted draft.
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
