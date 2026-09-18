@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:01:07+00:00
+lastmod: 2026-09-18T02:06:32+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Halberdier turns and hover bring the working candidate to 59 frames in ten groups. A four-frame death trial is rejected for coat folds and corpse pose, with high-resolution failure images retained. Crusader and Swordsman test candidates are installed; Castle production continues."
@@ -196,6 +196,14 @@ Trial 157 keeps the pole in the left hand through frame three and releases it in
 ![Trial 157 frame three, 1800×1400 Blender still; not installed, with grip and cloth review outstanding](/images/castle-halberdier-01/halberdier-death157-held.png)
 
 Early release and the edge-on blade have been addressed. The second pose is still less curled than the original, and the final corpse and dropped weapon silhouettes differ. Death remains outside the fifty-nine-frame working candidate. Body compression, weapon landing, contact and transitions remain to be revised; sampled clearance does not establish complete collision or appearance acceptance.
+
+Trial 160 folds the hips and knees further in frame two and moves the holding arm forward to clear the head. The final weapon now rests with its blade flat; its previous upright blade held the shaft too high. This remains a death draft. The body is more compact, but the final pole is more prominent than in the original, and grip, cloth and transitions remain unaccepted.
+
+![Original and trial 160 death poses; not installed](/images/castle-halberdier-01/halberdier-death160-comparison.jpg)
+
+![Trial 160 endpoint, 1800×1400 Blender still, with the blade lying flat](/images/castle-halberdier-01/halberdier-death160-ground.png)
+
+A separate triangle-surface check covers the complete weapon, including blade and metal butt. Across sixty-three poses it finds no intersections with either shoulder plate or the body after excluding wholly hand-dominant triangles. The same check detects 349 and 199 intersecting triangle pairs in frames two and three of known-failing trial 155. This does not cover complete containment without a surface crossing, finger contact, body self-intersection or motion between sampled frames. All previous fifty-nine poses still match 140 at every evaluated vertex.
 
 <details>
 <summary>Candidate 126 attack record, superseded by further edits in 131</summary>
