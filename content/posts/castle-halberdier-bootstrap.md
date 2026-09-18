@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T20:56:31+00:00
+lastmod: 2026-09-18T21:40:05+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk has an eleven-frame death trial, but its robe folds into stretched strips. The failed poses and a failed volume-preserving skinning trial are documented; it remains uninstalled."
+homeSummary: "The Monk now has a separate skirt with transferred Meshy textures. Kneeling improves, but the collapse and cloth simulation remain rejected; new Blender stills document the results."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1034,9 +1034,27 @@ The first versions stopped in a crouch or kneel. Inspecting the actual bone hier
 
 ![Original death sequence above the new failed body trial](/images/castle-monk-641/death-trial-frames.png)
 
-A volume-preserving skinning trial did not fix the skirt: the overlapping strips remain. A separate check found identical weights at coincident seam vertices, so averaging seam weights would not address this defect. The next repair needs to handle the robe independently of the deeply bent legs. The death trial is kept separately from the preceding fourteen-action scene; no game installation was made.
+A volume-preserving skinning trial did not fix the skirt: the overlapping strips remain. A separate check found identical weights at coincident seam vertices, so averaging seam weights would not address this defect. <s>The next repair needs to handle the robe independently of the deeply bent legs.</s> The separate-surface trials below follow this checkpoint. The death trial is kept separately from the preceding fourteen-action scene; no game installation was made.
 
 ![Rejected volume-preserving skinning trial, actual Blender still](/images/castle-monk-641/death-volume-failure.png)
+
+### A separate skirt for the Monk (2026-09-18)
+
+Further weight and smoothing trials did not repair the folded robe. A dedicated skirt bone still left distorted boundaries; broader selections pulled the sleeves, and stronger smoothing softened the texture without restoring a usable collapse. The original Meshy model and the preceding fourteen-action scene are preserved.
+
+A new surface follows the existing robe with 5,248 vertices and 5,120 quads, leaving the hem open. Its 2048×2048 colour texture was baked from the Meshy material. This isolated Blender render shows the transferred brown fabric and pale cord on the new surface; it is an intermediate mesh, not a finished unit.
+
+![Separate skirt with colour baked from the Meshy model, actual 1200×1200 Blender still](/images/castle-monk-641/independent-skirt.png)
+
+Separating the skirt from leg skinning removes the earlier strip-like stretching in the kneeling pose. The sideways collapse still leaves a rigid tube, however. Flattening it exposes gaps between the boots and the body. The latter two candidates in this comparison were rejected.
+
+![Blender stills of the kneeling trial, rejected tubular collapse and rejected flattened skirt with exposed boot openings](/images/castle-monk-641/independent-skirt-trials.jpg)
+
+A cloth trial spreads the eleven death poses over 101 simulation frames, pins the waist and uses simplified leg, torso and floor collisions. The bake completes, but the skirt contracts into the body. Reopening the saved scene and measuring the evaluated mesh confirms the contraction; the completed bake does not establish a usable result.
+
+![Rejected cloth simulation with the skirt contracted into the body; actual 900×900 Blender still, not a game capture](/images/castle-monk-641/skirt-simulation-failure.png)
+
+The separate surface and transferred texture remain available for further repair. The simulation shrinkage and the connection around the boots need attention before reviewing the other actions with this mesh. Existing Meshy outputs were reused without new paid jobs. The Monk remains uninstalled.
 
 ### Zealot identity correction (2026-09-18)
 
