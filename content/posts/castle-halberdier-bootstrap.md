@@ -1145,6 +1145,16 @@ All 66 directional effect slots have been re-exported, and every expected empty 
 
 ![Six complete original-versus-candidate clips with revised arms and shadows](/images/castle-zealot-512/layered611-compare.png)
 
+A separate mantle trial adds pose corrective shape keys. Candidate 613 moves nearby vertices outward when their nearest body-surface normal indicates penetration, then inverts skin deformation to store editable coordinates. The diagnostic count falls from 96, 86 and 116 to 3, 10 and 5 across three poses. This heuristic does not prove collision-free geometry; front and side renders still show underarm folds.
+
+Candidate 615 extends the correction to all 14 front-cast frames and fades it at the endpoints. Corrective weights sum to one at all 53 quarter-frame samples, and all native rendered frames fit the canvas. These checks cover weight interpolation and bounds only. Hiding the added mantle leaves folds in the original underarm garment, so sleeve deformation also needs inspection. Neither trial replaces candidate 611 or enters the game.
+
+![Three poses before and after local corrections, actual front and side Blender renders](/images/castle-zealot-512/mantle614-compare.png)
+
+![Full fourteen-frame corrective trial, not adopted](/images/castle-zealot-512/mantle616-frames.png)
+
+![Diagnostic render with the added mantle hidden; not a proposed new design](/images/castle-zealot-512/mantle617-hidden.png)
+
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
 <details>
