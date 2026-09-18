@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-18T15:18:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot upward casting and melee have 22 revised body frames, with larger effect trials and an overexposed failure comparison. Cloth, effect appearance and game integration remain unfinished."
+homeSummary: "Zealot now has a nine-direction 3D projectile and 1×/2× resource drafts. Transparent-core dark patches are fixed; charge-to-projectile size and colour jumps remain. Not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1111,7 +1111,7 @@ Defence also has a seven-frame curved magical ward built from independent three-
 
 On September 18, candidate 595 added 3D effects for front, upward and downward ranged casts and melee actions. The six clips occupy 66 original frame slots: 26 contain effects and the rest are empty. Each slot has a full-scene render and a transparent effect pass with body occlusion, composited offline over the existing body and shadow. All effects fit the canvas. Visible-pixel mean RGBA error between recomposition and full-scene rendering reaches 4.79/255; these are still trial layers.
 
-The comparison exposes smaller bursts than the original, while the high-resolution stars look too hard. Upward casts also place the hands and burst too low. Sleeves still intersect the mantle. Both images retain this unaccepted attempt. The original projectile has been extracted in nine directions for reference; its 3D replacement remains unmade, and the Zealot package is not installed.
+The comparison exposes smaller bursts than the original, while the high-resolution stars look too hard. Upward casts also place the hands and burst too low. Sleeves still intersect the mantle. Both images retain this unaccepted attempt. <s>The original projectile has been extracted in nine directions for reference; its 3D replacement remains unmade, and the Zealot package is not installed.</s> This records candidate 595. A projectile draft follows below; game integration remains unfinished.
 
 ![Front cast frame five, actual high-resolution Blender render; unaccepted effect and cloth trial](/images/castle-zealot-512/cast595-front.png)
 
@@ -1124,6 +1124,18 @@ Larger particles and a wider cloud then produced an overexposed white core in ca
 ![Frame five: original, candidate 595, overexposed 600 and revised 601](/images/castle-zealot-512/cast601-compare.png)
 
 ![Revised upward cast, high-resolution Blender still; colour, star shapes and cloth remain unfinished](/images/castle-zealot-512/cast601-up.png)
+
+The projectile now has a separate 3D model with 900 crossed stars and 15 transparent cores. The original `CPRZEAX.DEF` contains nine directions, and the Zealot row in `CRANIM.TXT` releases it on frame six. The angles are 90°, 72°, 45°, 27°, 0° and the corresponding downward angles. Candidate 606 renders all nine onto a 120×120 canvas for a logical 60×60 image, with a separate 1× export. All nine fit the canvas. Resources and candidate launch offsets are stored locally, not installed.
+
+The first cloud was small and showed distinct core boundaries. The larger revision also exposed dark patches where transparent cores overlapped. Raising Cycles transparent bounces to 64, with geometry and materials unchanged, removed those patches. The comparison preserves the original, faulty 604 and revised 606. Spherical core boundaries and hard star shapes still need work at high resolution.
+
+![Nine directions: original, candidate 604 and revised 606; actual 3D renders](/images/castle-zealot-512/projectile606-compare.png)
+
+![Horizontal projectile, high-resolution Blender still; shape remains under review](/images/castle-zealot-512/projectile606.png)
+
+An offline handoff uses the fifth-frame charge centre to place the projectile on frame six, then illustrates travel by 16 and 32 logical pixels. Candidate offsets are `(22,-54)` forward, `(13,-74)` upward and `(9,-34)` downward. These come from the current camera and right-facing geometry, with no native validation yet. The downward charge still uses the earlier small effect and visibly jumps in size. The other directions also change colour. Charge and flight appearance need to be unified before native handoff testing.
+
+![Offline release illustration in three directions; not a game capture or an accepted animation](/images/castle-zealot-512/projectile607-handoff.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
@@ -1815,5 +1827,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary: candidate 595</summary>
 
 <s>Zealot casting and melee now have six directional effect drafts across 66 frame slots. Small bursts, raised-arm poses and cloth still need revision; the unit is not installed.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary: candidate 601</summary>
+
+<s>Zealot upward casting and melee have 22 revised body frames, with larger effect trials and an overexposed failure comparison. Cloth, effect appearance and game integration remain unfinished.</s>
 
 </details>
