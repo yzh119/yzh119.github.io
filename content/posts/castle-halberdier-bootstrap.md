@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:13:17+00:00
+lastmod: 2026-09-18T02:20:38+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Halberdier has an offline 63-frame layered preview with geometry-projected shadows. Death poses and transitions remain unaccepted, and the package is not installed. Crusader and Swordsman test candidates are installed; Castle production continues."
@@ -216,6 +216,19 @@ The first shadow pass transformed body alpha around a fixed ground line. It lack
 ![Layered walk from package 164, shown at 150 milliseconds per frame rather than measured game timing](/images/castle-halberdier-01/halberdier-walk-layered164.gif)
 
 The sixty-three geometry shadows produce 126 files at 1×/2×. Body and selection-outline files match the preceding package byte for byte. Format validation reports zero errors, zero warnings and twenty informational notices about movement inside the canvas. No temporal averaging or frame-count change was applied. Flicker, transitions and appearance still need native playback review.
+
+<details>
+<summary>Grip close-ups and rejected corrections</summary>
+
+Comparing the hit endpoint with holding shows that the original also finishes with a released hand. The endpoint was therefore not replaced by holding just to remove the jump. Native transition review remains outstanding.
+
+Close-ups expose the current unfinished grip: four fingers curl around the pole while the thumb remains outside. Trial 166 adds thumb opposition that fades out with the hand-opening control. All sixty-three poses preserve vertices outside its mask, and fully open poses restore the original hand. It nevertheless increases thumb penetration and was rejected.
+
+![Unfinished current grip, rejected thumb opposition 166, and rejected radial correction 167](/images/castle-halberdier-01/halberdier-grip-failures167.jpg)
+
+Trial 167 pushes vertices inside the approximate shaft cylinder outward. In holding frame one, left/right inside-vertex counts fall from 108/124 to 13/0, but the correction creates spikes and an unnatural palm shape. It was also rejected. These vertex distances do not prove surface clearance. Further work needs joint-based finger and palm shaping from the original open-hand mesh. Preview package 164 remains unchanged.
+
+</details>
 
 <details>
 <summary>Candidate 126 attack record, superseded by further edits in 131</summary>
