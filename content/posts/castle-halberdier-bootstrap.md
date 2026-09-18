@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T20:20:21+00:00
+lastmod: 2026-09-18T20:27:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The brown-robed Monk now has nine body-action drafts, including melee timing, recoil and defence. Clothing repair remains open; the new Monk is not installed."
+homeSummary: "The brown-robed Monk now has fourteen body-action drafts, adding a smaller walking stride, turns, movement start and mouse-over. Death, cloth repairs, effects and installation remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -29,7 +29,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
-| Monk | Brown-robed Meshy rig: nine body-action drafts, 76 frame slots from 50 renders. Six groups, clothing repairs, effects and integration remain unfinished |
+| Monk | Brown-robed Meshy rig: fourteen body-action drafts, 98 frame slots from 72 renders. Death, clothing repair, effects and integration remain unfinished |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
@@ -996,7 +996,7 @@ The forward cast now keeps the preparation longer and reaches forward on frames 
 All 35 body frames fit the 900×800 canvas. Forward and upward endpoints match holding pixel for pixel; downward endpoints differ at 30 pixels by at most 2 on an 8-bit channel. Reopening the saved scene and sampling the four actions at quarter-frame intervals found no adjacent keyed quaternion sign reversals. These checks cover framing and continuity, not clothing collisions or final appearance. <s>Fingers, sleeve/cowl deformation and reference fidelity remain open; the other eleven action groups, effects, shadows and game integration still need work.</s>
 
 
-The current scene contains nine body-action drafts: holding, three casting directions, three melee directions, recoil and defence. That is 76 frame slots from 50 body renders. Pixel comparisons against the original establish that melee reuses the casting poses: the forward sequence drops two preparation frames, upward drops one, and downward retains the same nine. The new melee actions preserve that timing in separate editable Blender actions; effects and projectiles still require separate treatment.
+<s>The current scene contains nine body-action drafts: holding, three casting directions, three melee directions, recoil and defence. That is 76 frame slots from 50 body renders.</s> This records the nine-action checkpoint; five further groups follow below. Pixel comparisons against the original establish that melee reuses the casting poses: the forward sequence drops two preparation frames, upward drops one, and downward retains the same nine. The new melee actions preserve that timing in separate editable Blender actions; effects and projectiles still require separate treatment.
 
 The shoulder-weight experiment below was rejected. Moving upper-arm influence toward the chest preserved holding within a micrometer, but produced a horizontal shelf at the shoulder when raised. The working scene retains the earlier weights. The first recoil draft also buried the lowered hand in the waist; the revised target moves it outside the torso.
 
@@ -1008,7 +1008,21 @@ The shoulder-weight experiment below was rejected. Moving upper-arm influence to
 
 ![Original recoil and defence above each new body row; original defence includes its light shield](/images/castle-monk-641/reaction-frames.png)
 
-Reopening the saved scene confirmed all nine actions were retained. An earlier library-import attempt discarded unused actions on save; the corrected import explicitly retains them. The fifteen new recoil/defence body images fit the canvas. Their endpoints differ from holding at five pixels by at most one 8-bit channel value. Walking, mouse-over, death, both turns and movement start remain unauthored on this model, along with cloth repair, effects, shadows and native integration. The Monk is not installed.
+Reopening the saved scene confirmed all nine actions were retained. An earlier library-import attempt discarded unused actions on save; the corrected import explicitly retains them. The fifteen new recoil/defence body images fit the canvas. Their endpoints differ from holding at five pixels by at most one 8-bit channel value. <s>Walking, mouse-over, death, both turns and movement start remain unauthored on this model, along with cloth repair, effects, shadows and native integration.</s> The Monk is not installed.
+
+Five further body drafts add the six-frame walk, two-frame movement start, two frames for each turn, and ten mouse-over frames. The saved scene now retains fourteen actions, covering 98 original frame slots with 72 rendered body images. Death remains the one missing body group; clothing, effects, shadows and game integration are still unfinished.
+
+The first walking trial raised the knees too far and pushed a large bulge through the robe. A smaller stride and lower foot lift reduce that deformation while retaining the folded arms. The two-frame turns pass through a front-facing pose, matching the original reference sequence. Mouse-over adds a restrained head movement.
+
+![Rejected larger-step walking trial: the raised knee bulges through the robe; actual Blender still](/images/castle-monk-641/walk-knee-failure.png)
+
+![Revised smaller-step walk, actual 1200×1200 Blender still; gait and cloth remain under review](/images/castle-monk-641/walk-hq.png)
+
+![Intermediate turn pose, actual 1200×1200 Blender still](/images/castle-monk-641/turn-hq.png)
+
+![Walking, start, turns and mouse-over: original above each new body row](/images/castle-monk-641/movement-frames.png)
+
+All 22 new body images fit the fixed 900×800 canvas. Movement start ends on the exact first walking image. The foot check confirms alternating lifts of about one centimetre, with the support foot near the floor; a few body vertices still dip by up to one millimetre. This is an offline geometry check, and does not establish a slide-free walk at VCMI's playback speed. The next body action is the eleven-frame collapse; its first five original frames are pixel-identical to recoil.
 
 ### Zealot identity correction (2026-09-18)
 
