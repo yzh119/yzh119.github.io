@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T06:31:42+00:00
+lastmod: 2026-09-18T06:57:46+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Marksman has an eight-frame shooting-body candidate, a loaded Meshy bolt and nine projectile directions. A mod configuration draft aligns release timing; string, trigger, remaining actions and integration are pending."
+homeSummary: "The Marksman now has coordinated 3D string, limb and loaded-bolt motion, with front-shot launch position and projectile scale calibrated offline. Trigger, remaining actions and game integration are pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | Eight-frame shooting-body candidate, loaded bolt and nine projectile direction drafts; string, trigger, hand detail, remaining actions and integration pending |
+| Marksman | Eight-frame shooting-body candidate; coordinated string, limb and bolt motion, front-shot projectile scale and origin calibrated offline; trigger, hand detail, other actions and integration pending |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -464,13 +464,47 @@ The clip presents the eight body frames at eight frames per second for review, n
 
 Reopening the file and checking 113 times gives a maximum hand-to-bow deviation of about 0.51 mm: the left grip is checked throughout, and the right from frame 4 onward. No coarse large-edge stretch check triggers. More solved poses and linear interpolation reduce sliding around the raised-bow reversal. All evaluated body, hand and bow vertices at the eight integer frames remain exactly unchanged by the interpolation update.
 
-This is still a front-shot body candidate. Projectile, string and trigger behavior, hand close-ups, the return to holding and the other actions remain unfinished. Nothing new has been installed. This pass reused existing Meshy models without additional API charges.
+<s>This is still a front-shot body candidate. Projectile, string and trigger behavior, hand close-ups, the return to holding and the other actions remain unfinished. Nothing new has been installed. This pass reused existing Meshy models without additional API charges.</s>
+
+That paragraph records body candidate 289. Subsequent string and bolt work follows below.
+
+### String motion and projectile handoff
+
+The independent Meshy crossbow and bolt remain the source models. Astra added an articulated 3D string and limb deformation in Blender. During release, the string centre advances with the bolt tail while the limbs return toward their relaxed shape. These are 1400×1400 Blender stills.
+
+![Cocked crossbow with bent limbs and the bolt tail at the string centre](/images/castle-halberdier-01/marksman-string315-cocked.png)
+
+![Mid-release: the bolt advances with the string](/images/castle-halberdier-01/marksman-string315-middle.png)
+
+![Released string; the loaded bolt is hidden for the separate projectile handoff](/images/castle-halberdier-01/marksman-string315-released.png)
+
+The saved scene was reopened at 68 times, including 65 distinct draw values during release. String length stays near 0.556 metres; maximum bolt-tail deviation from its centre is below 0.001 mm. All 15,175 protected central-stock vertices remain unchanged. This verifies the authored geometric relationship. Limb material strain was not simulated, and finger, trigger and full collision checks are unfinished.
+
+Advancing the bolt also changes its launch origin. In the current battle camera, the front-shot offset draft is `(25, -56)`, still releasing on frame 4. The previous flying bolt was visibly oversized: recalibration reduces the horizontal alpha bounds from 54 to 23 pixels at 2x, close to the loaded bolt’s projected longitudinal span of 11.3 logical pixels. Up/down shots, native direction changes and readability still need review.
+
+![Projectile size comparison on identical canvases: previous draft above, front-shot calibration below; shown at four times logical size](/images/castle-halberdier-01/marksman-projectile319-scale.png)
+
+<details>
+<summary>Rejected string and bolt motion trials</summary>
+
+The first string-only edit kept the limbs rigid and stretched the cord from roughly 0.556 to 0.845 metres. It was rejected. Dense keys in the short release interval still introduced interpolation error. Formula drivers removed that error, but an integer control property then snapped between endpoints. Recreating the control as floating point and explicitly checking 65 different intermediate values exposed and fixed that mistake. A later render caught a stationary bolt while the string moved; the bolt tail now follows the string centre.
+
+![Rejected early trial: moving the string centre without bending the limbs stretched the cord](/images/castle-halberdier-01/marksman-string303-rejected.png)
+
+</details>
+
+This remains an offline candidate, with no new Meshy charges or game installation. Trigger/finger interaction, recovery into holding and the other actions remain unfinished.
+
+<details>
+<summary>Historical loaded-bolt and projectile drafts (296–297)</summary>
+
+<s>| Marksman | Eight-frame shooting-body candidate, loaded bolt and nine projectile direction drafts; string, trigger, hand detail, remaining actions and integration pending |</s>
 
 ### Loaded bolt and separate projectile
 
 The existing independent Meshy bolt is now aligned along the new crossbow groove and follows the weapon while loaded. The first import retained quaternion rotation mode, so writing Euler angles did not change its actual orientation: the bolt lay across the stock. Explicitly switching rotation mode corrected that trial.
 
-![Blender close-up of the loaded bolt; the string is still relaxed, with cocking and release unfinished](/images/castle-halberdier-01/marksman-loaded296.png)
+![Blender close-up of the loaded bolt; historical version 296, before the coordinated string motion shown above](/images/castle-halberdier-01/marksman-loaded296.png)
 
 Release timing needs a configuration change. Both original resource archives set the Marksman’s climax to frame 7 in `CRANIM.TXT`. VCMI emits a separate projectile there and pauses the body animation while it travels. The new mod draft uses the level-aim frame 4, keeping the loaded bolt visible in frames 1–3 and hiding it from frame 4. This uses `graphics.missile.attackClimaxFrame`; no engine source was changed, and the draft is not installed.
 
@@ -478,7 +512,10 @@ The flying bolt has separate renders for the nine directions in the original `PL
 
 ![Nine projectile direction renders from the Meshy bolt, each sourced from a 60×60 image](/images/castle-halberdier-01/marksman-projectile297-directions.png)
 
-These are projectile drafts. String cocking and release, the trigger, remaining actions and full integration are unfinished. No additional Meshy credits were used.
+<s>These are projectile drafts. String cocking and release, the trigger, remaining actions and full integration are unfinished. No additional Meshy credits were used.</s>
+
+
+</details>
 
 <details>
 <summary>Rejected first bolt import</summary>
