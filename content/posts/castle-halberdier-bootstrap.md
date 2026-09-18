@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T04:22:59+00:00
+lastmod: 2026-09-18T04:33:31+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Separate Meshy body and crossbow for Marksman; a reversed finger curl is corrected, but wrist and grip defects remain. Halberdier’s 63-frame preview awaits acceptance; Crusader and Swordsman test candidates are installed."
@@ -421,6 +421,10 @@ The previous carry was too high, with the rear stock extending toward the should
 A subsequent joint-direction check found that the four fingers curled away from the stock. Trial 212 reverses their flexion, bringing the fingertips around the wood. The close-up still shows intersections, an unfinished thumb and distorted wrist skin. It remains a rejected grasp candidate; fixing the rotation sign does not finish the hands.
 
 ![Trial 212 close-up after reversing finger flexion; intersections and wrist defects remain](/images/castle-halberdier-01/marksman-grip212-draft.png)
+
+Trimming excess hand geometry beneath the cuff reduced the exposed skin in low-carry trial 218. Smooth wrist weights alone had made it worse and were discarded. A subsequent bone-contact fitter reduced sampled skin vertices inside the stock from 2,843 to 1,772, but left substantial intersections. Moving the palm and fitting again produced extended little fingers and distorted skin in trial 223, shown below. These grasp trials are rejected. Finger-joint placement and cross-finger weights need inspection before further fitting; vertex counts alone do not establish a usable grip.
+
+![Rejected trial 223: contact fitting produces unnatural fingers and skin deformation](/images/castle-halberdier-01/marksman-contact223-rejected.png)
 
 <details>
 <summary>Earlier grip and hand trials</summary>
