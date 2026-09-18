@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T00:28:43+00:00
+lastmod: 2026-09-18T00:45:11+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. The Halberdier now has holding, walking and front-attack candidates totalling 20 frames, registered to the original canvas. Attack reach, finger detail and remaining clips still need work."
+homeSummary: "Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier holding, walking and three attack directions now total 33 candidate frames, with original-frame comparisons and a new high-resolution still. Pose fidelity, fingers and remaining clips need work."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | New Meshy body and independent weapon; 8 holding, 6 walking and 6 front-attack candidate frames. 2× native-canvas registration and loop checks done; complete visual acceptance, remaining clips and installation pending |
+| Halberdier | New Meshy body and independent weapon; holding, walking and three attack directions, 5 groups and 33 candidate frames. Native-canvas comparison done; pose fidelity, fingers, remaining clips and installation pending |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -117,19 +117,31 @@ This front-attack candidate includes a small forward step. The editable base and
 
 ### Holding, walking and native registration
 
-Eight holding frames and six walking frames now share the editable scene with the six-frame front attack: three candidate groups, twenty native frames. Both new groups keep the original two-handed, slanted pole carriage with alternating legs. The first walk sank a sole by about 0.00391 units. Rigid sole weights blended into the ankle reduce maximum penetration across the twenty native frames to about 8×10⁻⁸ units. Some lowest points sit slightly above the floor, by at most about 0.000095 units.
+At candidate 121, eight holding frames and six walking frames joined the earlier six-frame front attack: three groups and twenty native frames. Both new groups keep the original two-handed, slanted pole carriage with alternating legs. The first walk sank a sole by about 0.00391 units. Rigid sole weights blended into the ankle reduce maximum penetration across the twenty native frames to about 8×10⁻⁸ units. Some lowest points sit slightly above the floor, by at most about 0.000095 units.
 
-![Current holding candidate, a 1280×1600 Blender still](/images/castle-halberdier-01/halberdier-holding122.png)
+![Candidate 121 holding, a 1280×1600 Blender still](/images/castle-halberdier-01/halberdier-holding122.png)
 
 Side-by-side review exposed a reversed blade side and an opposite starting leg phase. The blade was rolled over, the walk shifted by half a cycle, and camera azimuth changed to 52° while retaining 30° elevation. This remains an offline review camera.
 
-![Original and current candidate at matching display scale; the right column uses 2× Blender frames, not game captures](/images/castle-halberdier-01/halberdier-native122-comparison.jpg)
+![Original and candidate 121 at matching display scale; the right column uses 2× Blender frames, not game captures](/images/castle-halberdier-01/halberdier-native122-comparison.jpg)
 
 The original canvas is 450×400. The first holding frame sets height, horizontal centre and ground registration; the same camera then renders all three groups without per-frame scaling. All twenty frames fit. Evaluated vertices match exactly between holding keys 1 and 9, and between walking keys 1 and 7. Those final closure keys are not extra exported frames.
 
 ![Six walking frames after the starting-phase correction](/images/castle-halberdier-01/halberdier-moving122-sheet.jpg)
 
-No frame triggers the large-edge threshold, and the nine longitudinal shaft samples avoid non-hand body and shoulder-plate triangles. The sampling limitations above still apply. The comparison also shows insufficient attack reach and stance, with detailed finger contact still unreviewed. These clips have not passed complete visual acceptance. Up/down attacks, hit, defence, death, turns, hover, shadow layers and game integration remain unfinished.
+No frame triggers the large-edge threshold, and the nine longitudinal shaft samples avoid non-hand body and shoulder-plate triangles. The sampling limitations above still apply. The comparison also shows insufficient attack reach and stance, with detailed finger contact still unreviewed. These clips have not passed complete visual acceptance. <s>Up/down attacks, hit, defence, death, turns, hover, shadow layers and game integration remain unfinished.</s> Up/down candidates have since been added below; the other items remain unfinished.
+
+### Three attack directions
+
+Candidate 126 contains six front, six upward and seven downward attack frames, matching the original counts. Each direction has its own preparation, strike and recovery poses. Together with holding and walking, the editable scene now has five groups and thirty-three frames. These remain offline candidates.
+
+![Original frames above Blender candidate 126 in each direction; matching display scale without per-frame resizing](/images/castle-halberdier-01/halberdier-attacks126-comparison.jpg)
+
+Draft 123 drove the shaft through the body during front preparation and put the late downward grip beyond the left arm's reach, missing by as much as 0.051 units. Pulling the hands inward or advancing the torso introduced chest intersections. Candidate 126 adjusts hand spacing, low-strike direction and grip positions. After reopening the scene, all nineteen attack frames have grip-target errors below 5.2×10⁻⁷ units and no edges above the existing stretch threshold. Nine longitudinal shaft samples miss non-hand body and plate triangles across all thirty-three frames. This does not certify the blade surface, finger contact or motion between frames.
+
+![Front strike, an 1800×1400 Blender still of the offline candidate](/images/castle-halberdier-01/halberdier-impact126.png)
+
+All thirty-three frames fit the fixed native camera, and both locomotion loops retain matching closure keys. The comparison still shows differences in raised-hand height, the upward wind-up and knee bend during the strike and recovery. Those poses and the fingers need more work, followed by hit, defence, death, turns and hover. Shadow layers and game integration are unfinished.
 
 ### Earlier Halberdier fragment rig
 
@@ -956,5 +968,16 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. The new Meshy Halberdier body now carries the independent weapon in a six-frame front-attack candidate, with grip order and arm/shaft intersections corrected. Finger detail, native camera and remaining clips are unfinished.</s>
 
 <s> /  Halberdier  /  New Meshy body, independent plates and weapon combined in a six-frame front-attack candidate. Limited shaft sampling passes; finger detail, native stance/camera and full clips remain unfinished; not installed  / </s>
+
+</details>
+
+<details>
+<summary>Summary before the September 18 attack-direction candidates</summary>
+
+<s>Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. The Halberdier now has holding, walking and front-attack candidates totalling 20 frames, registered to the original canvas. Attack reach, finger detail and remaining clips still need work.</s>
+
+<s>| Halberdier | New Meshy body and independent weapon; 8 holding, 6 walking and 6 front-attack candidate frames. 2× native-canvas registration and loop checks done; complete visual acceptance, remaining clips and installation pending |</s>
+
+<s>Eight holding frames and six walking frames now share the editable scene with the six-frame front attack: three candidate groups, twenty native frames.</s>
 
 </details>
