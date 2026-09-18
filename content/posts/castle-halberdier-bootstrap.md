@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-18T15:18:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All 130 Zealot body frames now have geometry-projected shadows, plus a seven-frame curved ward and isolated effect layers. Cloth and effect appearance remain unfinished; the unit is not installed."
+homeSummary: "Zealot casting and melee now have six directional effect drafts across 66 frame slots. Small bursts, raised-arm poses and cloth still need revision; the unit is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1107,7 +1107,15 @@ Defence also has a seven-frame curved magical ward built from independent three-
 
 ![Original defence and the draft with geometry shadows and a separate effect layer](/images/castle-zealot-512/ward592-compare.png)
 
-Only special actions and defence currently have isolated effect trials. Other casting and melee effects, the projectile, mantle intersections, hands, death pose and final layered appearance remain unfinished. The Zealot package is not installed in the game.
+<s>Only special actions and defence currently have isolated effect trials. Other casting and melee effects, the projectile, mantle intersections, hands, death pose and final layered appearance remain unfinished. The Zealot package is not installed in the game.</s> This records candidate 592.
+
+On September 18, candidate 595 added 3D effects for front, upward and downward ranged casts and melee actions. The six clips occupy 66 original frame slots: 26 contain effects and the rest are empty. Each slot has a full-scene render and a transparent effect pass with body occlusion, composited offline over the existing body and shadow. All effects fit the canvas. Visible-pixel mean RGBA error between recomposition and full-scene rendering reaches 4.79/255; these are still trial layers.
+
+The comparison exposes smaller bursts than the original, while the high-resolution stars look too hard. Upward casts also place the hands and burst too low. Sleeves still intersect the mantle. Both images retain this unaccepted attempt. The original projectile has been extracted in nine directions for reference; its 3D replacement remains unmade, and the Zealot package is not installed.
+
+![Front cast frame five, actual high-resolution Blender render; unaccepted effect and cloth trial](/images/castle-zealot-512/cast595-front.png)
+
+![Six complete comparisons: original above each offline body, shadow and effect composite; not game screenshots](/images/castle-zealot-512/cast595-compare.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
@@ -1785,5 +1793,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Halberdier turns and hover bring the working candidate to 59 frames in ten groups. A four-frame death trial is rejected for coat folds and corpse pose, with high-resolution failure images retained. Crusader and Swordsman test candidates are installed; Castle production continues.</s>
 
 <s>Halberdier | New Meshy body and independent weapon; 10 groups, 59 candidate frames including turns and hover. Four-frame death trial rejected; cloth, grip, transitions and installation unfinished</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary: candidate 592</summary>
+
+<s>All 130 Zealot body frames now have geometry-projected shadows, plus a seven-frame curved ward and isolated effect layers. Cloth and effect appearance remain unfinished; the unit is not installed.</s>
 
 </details>
