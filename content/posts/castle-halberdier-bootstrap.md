@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T10:55:39+00:00
+lastmod: 2026-09-18T11:44:58+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot now has a blue/gold mesh, graded face emission and Blender drafts for six-frame holding and ten-frame fidget. Hand/sleeve fidelity remains open; it is not installed."
+homeSummary: "Zealot native-canvas review widened its 80-pixel-tall body from about 24 to 34 pixels, added a mantle and belt, and produced a fourteen-frame cast draft. Cloth intersections remain open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | New blue-robed Meshy mesh/rig; graded face emission, six-frame holding and ten-frame fidget drafts. Hand/sleeve fidelity, remaining actions, native framing and installation are unfinished |
+| Zealot | Blue-robed mesh, face emission, mantle and belt; 6-frame holding, 10-frame fidget and 14-frame cast drafts with native-canvas calibration. Mantle intersections, hands and remaining actions unresolved; not installed |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -971,7 +971,7 @@ The new mesh has 939,712 faces. The rigging API rejected it with HTTP 400 becaus
 
 ![Side view of the same Blender pose probe](/images/castle-zealot-512/fold-side.png)
 
-The next local revision raises the crossed arms and turns the wrists inward. It adds six keyed holding frames and a ten-frame head-turn draft on the editable Blender rig. These use the original frame counts but enlarged offline framing, not the game canvas. Too much of each hand remains exposed and the cuffs are more open than the reference; the pose is still under review.
+The next local revision raises the crossed arms and turns the wrists inward. It adds six keyed holding frames and a ten-frame head-turn draft on the editable Blender rig. <s>These use the original frame counts but enlarged offline framing, not the game canvas.</s> The subsequent native-canvas comparison appears below. Too much of each hand remains exposed and the cuffs are more open than the reference; the pose is still under review.
 
 The first emissive face selection missed much of the mask and accidentally lit the hood rim. Expanding that selection still leaked light. A mesh attribute now supplies a gradual emission mask, bright at the face centre and fading toward its edge, while retaining the trim’s ordinary material.
 
@@ -980,6 +980,22 @@ The first emissive face selection missed much of the mask and accidentally lit t
 ![Current Blender holding still with graded face emission; folded arms and cuffs remain unfinished](/images/castle-zealot-512/holding524.png)
 
 ![Frame five of the ten-frame Blender head-turn draft, not an in-game capture](/images/castle-zealot-512/mouseon524.png)
+
+Exporting a `900×800` body frame for the original `450×400` logical canvas exposed a proportion error that the large previews had obscured. At roughly 80 pixels tall, the narrow candidate projected to only about 24 pixels wide; the original bounding box is 37 pixels wide. Widening the Meshy mesh and rig brought the body projection to about 34 pixels. The comparison holds height and placement consistent and is entirely offline.
+
+![Original, narrow candidate and widened clothing trial at common framing](/images/castle-zealot-512/native-comparison527.png)
+
+Astra added a three-dimensional shoulder mantle, waist cord and hanging ends in Blender. A material mask fades the generated gold front seam below the chest. The additions still need repair: the mantle is too stiff and intersects the upper arm in places, while the folded hands and open cuffs remain unlike the reference. This is an unfinished shape trial.
+
+![High-resolution Blender still of the wider clothing trial, with unfinished mantle](/images/castle-zealot-512/shape527.png)
+
+The original fourteen-frame front cast gathers the hands, sends them forward at different heights, holds both arms raised, and recovers. The blue-robed rig now has separate 3D keys for that sequence. All fourteen frames and the forward pose’s side view were inspected. This is body motion only, without spell effects, a projectile or geometry shadows, and the cloth-intersection review remains unresolved.
+
+![Fourth Blender casting frame with hands projected forward at different heights](/images/castle-zealot-512/cast528-release.png)
+
+![Sixth Blender casting frame during the raised-arm hold](/images/castle-zealot-512/cast528-raised.png)
+
+Holding, fidget and front casting now have 30 RGBA body frames exported through one fixed camera at 900×800, all within the canvas. This verifies export and bounds for these three groups only. The other fifteen groups, shadows, effects and game integration remain unfinished.
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
