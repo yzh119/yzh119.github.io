@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T23:00:18+00:00
+lastmod: 2026-09-18T23:34:48+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Monk hood and lining revisions now include high-resolution Blender stills, a rejected hood trial and all eleven death frames. Collapse folds and raised boots remain unfinished; no installation."
+homeSummary: "Monk death revisions lower the boots, repair an intervening floor penetration and smooth the free skirt. New HQ stills and all eleven frames are online; waist seams and full action integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1118,11 +1118,29 @@ A triangular patch beside the upper leg came from the inner lining intersecting 
 
 ![Cropped Blender renders before and after narrowing the upper lining, with the same camera](/images/castle-monk-641/monk-lining-comparison.png)
 
-All eleven exported body frames fit the canvas. The final pose still lifts the boots too far and bunches the clothing around the waist; it has not passed visual review. This work reuses the Meshy model, with Astra editing and rendering the Blender geometry. There were no new paid generation jobs or changes to installed game assets.
+All eleven exported body frames fit the canvas. <s>The final pose still lifts the boots too far and bunches the clothing around the waist; it has not passed visual review.</s> This describes the preceding candidate; the next section records the subsequent foot and skirt revisions. This work reuses the Meshy model, with Astra editing and rendering the Blender geometry. There were no new paid generation jobs or changes to installed game assets.
 
 ![All eleven body frames with the revised hood, compared with the original; appearance remains unaccepted](/images/castle-monk-641/monk-hood-full-sequence.png)
 
 ![High-resolution Blender side view of the unfinished collapse, exposing the raised boots and waist folds](/images/castle-monk-641/monk-collapse-unfinished.png)
+
+
+
+#### Foot placement and skirt folds during collapse
+
+Both boots were suspended in the previous final pose. Revising lower-leg and foot rotations brings the soles close to the floor while retaining bone lengths. Editing only the last two native poses left a roughly 2 cm floor penetration during interpolation. Additional transition keys address that dip, with matching updates to the inner lining and collision surfaces.
+
+![Previous raised boots, lowered feet with crumpled cloth, and the revised candidate; cropped Blender renders from the same camera](/images/castle-monk-641/monk-ground-contact-comparison.png)
+
+A self-collision experiment took longer to simulate and retained tangled folds, so it was rejected. The current candidate smooths the free portion of the simulated skirt, excluding the fully pinned waist vertices. This reduces the fragmented folds near the hem; the waist seam remains rough.
+
+![Rejected cloth self-collision experiment, actual high-resolution Blender still](/images/castle-monk-641/monk-self-collision-failure.png)
+
+![Revised foot transitions and free skirt, actual 1200×1200 Blender still; the waist and overall design remain unaccepted](/images/castle-monk-641/monk-ground-contact-hq.png)
+
+Reopening the saved scene reproduces the native-camera final frame pixel for pixel. Across forty-three poses sampled at half-frame intervals over the final part of the motion, vertices with combined foot/toe weight above 0.55 remain above the floor, with about 5.1 mm minimum clearance at the current model scale. This check covers the feet, not all intersections in the character. All eleven exported frames fit the canvas. Waist seams, palms, hood proportions relative to the original and adaptation of the other fourteen actions to this skirt remain unfinished. Installed game assets are unchanged.
+
+![All eleven frames with the current foot and skirt revisions, compared with the original; offline body-only candidate](/images/castle-monk-641/monk-ground-contact-sequence.png)
 
 
 ### Zealot identity correction (2026-09-18)
