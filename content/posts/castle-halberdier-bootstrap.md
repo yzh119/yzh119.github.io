@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T22:30:28+00:00
+lastmod: 2026-09-18T23:00:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Monk death frames seven through nine now follow the original torso lean and arm spread more closely. Cloth has been rebaked and all eleven frames rerendered; the model remains an uninstalled draft."
+homeSummary: "Monk hood and lining revisions now include high-resolution Blender stills, a rejected hood trial and all eleven death frames. Collapse folds and raised boots remain unfinished; no installation."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1104,6 +1104,26 @@ Six wrist reference points were selected manually from the original three frames
 The torso rotation also requires new waist targets and an updated torso collision surface. These were refreshed before rebaking the 101-frame cloth simulation and exporting eleven 900×800 body images, all within the canvas. Reopening the saved scene reproduces frame seven pixel for pixel. The final collapse silhouette, shoulder and waist folds, palm orientation and integration with the other actions remain unfinished. Game resources have not been replaced.
 
 ![Complete eleven-frame trial after updating the torso, wrists, waist targets and collision surfaces, compared with the original](/images/castle-monk-641/death-reference-full-sequence.png)
+
+
+#### Hood and inner lining revisions
+
+The preceding figures retain the earlier hood geometry. Lowering its tip alone produced a backward-pointing spike; that candidate was rejected. Moving the upper tip toward the head as well produces the shorter hood below. Its height and match to the original silhouette still need review.
+
+![Rejected height-only hood edit, actual Blender side render](/images/castle-monk-641/monk-hood-flat-tip-failure.png)
+
+![Shorter hood and corrected lining, actual 1200×1200 Blender still; offline candidate, not installed](/images/castle-monk-641/monk-short-hood.png)
+
+A triangular patch beside the upper leg came from the inner lining intersecting the robe. At four sampled camera rays, the lining was about 1–4 mm in front of the robe surface. The upper lining radius is now reduced by 18%, tapering smoothly to the unchanged knee. The edit covers all twelve shape keys and preserves the dimensions at the boot opening. After reopening the scene, all four patch samples and two adjacent control samples hit the robe first. The rendered triangle is gone.
+
+![Cropped Blender renders before and after narrowing the upper lining, with the same camera](/images/castle-monk-641/monk-lining-comparison.png)
+
+All eleven exported body frames fit the canvas. The final pose still lifts the boots too far and bunches the clothing around the waist; it has not passed visual review. This work reuses the Meshy model, with Astra editing and rendering the Blender geometry. There were no new paid generation jobs or changes to installed game assets.
+
+![All eleven body frames with the revised hood, compared with the original; appearance remains unaccepted](/images/castle-monk-641/monk-hood-full-sequence.png)
+
+![High-resolution Blender side view of the unfinished collapse, exposing the raised boots and waist folds](/images/castle-monk-641/monk-collapse-unfinished.png)
+
 
 ### Zealot identity correction (2026-09-18)
 
