@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T14:32:59+00:00
+lastmod: 2026-09-18T15:05:49+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot death now folds over bent knees, with waist cords rebound to the pelvis. The ending is more compact but still differs from the original; cloth, effects and integration remain unfinished."
+homeSummary: "Two Zealot mantle simulations remain unaccepted because of shape and intersection problems. Attachment repairs now reach the effect scene; final art and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1077,7 +1077,23 @@ The cord and both hanging ends now follow the pelvis while retaining their holdi
 
 An additional sweep checked 41 poses at quarter-frame intervals. It found roughly 1.6 mm of body penetration between keyed frames. The continuous motion therefore remains unaccepted even where the native keyed frames meet the floor.
 
-All 130 body frame files have now been re-exported from one scene containing both attachment repairs. Every frame fits the fixed 900×800 canvas, and the full contact sheets were inspected. The mapping was checked against every original group: 150 active slots across eighteen groups, plus the duplicate turn slots referencing the same files. Separate effect scenes still need these attachment repairs; game integration remains unfinished.
+All 130 body frame files have now been re-exported from one scene containing both attachment repairs. Every frame fits the fixed 900×800 canvas, and the full contact sheets were inspected. The mapping was checked against every original group: 150 active slots across eighteen groups, plus the duplicate turn slots referencing the same files. <s>Separate effect scenes still need these attachment repairs; game integration remains unfinished.</s> This records the synchronization state at candidate 581.
+
+Two cloth simulations were then tested on the mantle. The front cast was stretched over 85 simulation frames, using a reduced body mesh for collisions. Pinning only the collar region let the first trial bunch into a scarf-like shape even at rest, so it was rejected.
+
+![Rejected first cloth simulation at rest, actual Blender render](/images/castle-zealot-512/cloth584-rejected.png)
+
+The second trial pins more of the shoulder, increases stiffness and retains 15% of the body mesh for collision instead of 5%. It preserves more of the resting silhouette, but raised-arm intersections and unnatural edges remain. It has not replaced the current mantle.
+
+![Second simulation at rest, high-resolution Blender still; unaccepted](/images/castle-zealot-512/cloth586-holding.png)
+
+![Raised-arm cast in the second simulation; intersections remain unresolved](/images/castle-zealot-512/cloth586-cast.png)
+
+Both trials are saved separately; current body exports still use candidate 581. The separate effect scene now includes the mantle-root and waist-to-pelvis attachment repairs. All ten combined frames were re-rendered, checked and remain inside the canvas. Effect appearance is still unaccepted.
+
+The special action also has ten transparent effect-layer renders. The body acts as an occluder without appearing in that layer. Frames 1, 9 and 10 are empty; the remaining effects can be composited over the existing body frames. Recomposition still differs from the integrated scene render, with a peak-frame mean RGBA channel error of about 6/255 over visible pixels. These layers are not yet accepted for the game.
+
+![Body, isolated effect and recomposition, using actual Blender exports](/images/castle-zealot-512/special587-layers.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
