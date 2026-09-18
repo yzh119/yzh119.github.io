@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:48:48+00:00
+lastmod: 2026-09-18T03:00:36+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Marksman's low crossbow carry exposed shoulder distortion. A separate body and humanoid rig are now generated through the Meshy API; motion remains unverified. Halberdier's 63-frame offline preview awaits acceptance; Crusader and Swordsman test candidates are installed."
@@ -398,7 +398,19 @@ Candidate 175 starts with an empty-handed A-pose body so the crossbow can receiv
 
 ![Side view of the same mesh](/images/castle-halberdier-01/marksman-body175-side.png)
 
-Meshy humanoid rigging subsequently completed for another 5 credits. Single-joint checks in Blender are in progress; crossbow handling, shooting and game frames have not been produced from this body.
+<s>Meshy humanoid rigging subsequently completed for another 5 credits. Single-joint checks in Blender are in progress; crossbow handling, shooting and game frames have not been produced from this body.</s> Single-joint checks and three two-arm poses—low carry, level aim and raised aim—have since been rendered. These empty-handed tests did not reproduce the earlier severe shoulder distortion. Full actions and game frames remain unfinished.
+
+A separate crossbow was generated through the Meshy API for another 30 credits. Astra calibrated its size, top orientation and attachment coordinates in Blender. This body, humanoid rig and crossbow cost 65 credits together, excluding earlier models and trials.
+
+![Independent Meshy crossbow, top view rendered in Blender, showing the groove, paired limbs and string](/images/castle-halberdier-01/marksman-crossbow179-top.png)
+
+![Oblique render of the same crossbow](/images/castle-halberdier-01/marksman-crossbow179-oblique.png)
+
+Combined trial 180 inverted the crossbow and bent the wrists incorrectly; it is rejected. Trial 181 corrects the orientation, but the hands remain open and carry is higher than the original. A subsequent uniform finger-curl trial, 182, compresses parts of the fingers and is also rejected. Individual finger fitting and original-pose registration are next. The combined images below are drafts, not installed artwork.
+
+![Rejected combination 180, with inverted crossbow and wrist problems](/images/castle-halberdier-01/marksman-combined180-rejected.png)
+
+![Combination 181: orientation adjusted; finger contact and carry height remain unfinished](/images/castle-halberdier-01/marksman-combined181-draft.png)
 
 <details>
 <summary>Earlier Marksman reviews (historical scope, not current acceptance)</summary>

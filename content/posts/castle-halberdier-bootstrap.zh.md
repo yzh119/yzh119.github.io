@@ -1,7 +1,7 @@
 ---
 title: "[AI]城堡兵种建模"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:48:48+00:00
+lastmod: 2026-09-18T03:00:36+00:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
 homeSummary: "神射手低位持弩暴露肩部变形，已通过 Meshy API 生成空手身体与新绑定，动作仍待验证。长戟兵 63 帧离线预览尚未验收；十字军、剑士测试素材已安装。"
@@ -398,7 +398,19 @@ Astra 编写了五个较大幅度的单关节测试，以及六帧双臂位置�
 
 ![同一模型的侧面渲染](/images/castle-halberdier-01/marksman-body175-side.png)
 
-Meshy 人形绑定随后完成，另消耗 5 credits，正在 Blender 中检查单关节姿势。这一步还没有生成持弩、射击或游戏序列帧。
+<s>Meshy 人形绑定随后完成，另消耗 5 credits，正在 Blender 中检查单关节姿势。这一步还没有生成持弩、射击或游戏序列帧。</s> 单关节检查和低位、平射、高举三个双臂姿势随后完成；这三种空手测试没有重现旧模型的肩部大幅拉扯。完整动作和游戏序列帧仍未制作。
+
+独立弩也通过 Meshy API 生成，另消耗 30 credits。Astra 在 Blender 中校准了尺寸、弩槽朝向与挂点。身体、绑定和这把弩合计消耗 65 credits；原有模型与失败试验不计在这笔新增用量里。
+
+![独立 Meshy 弩的 Blender 俯视渲染，可见弩槽、两侧弓臂和弦](/images/castle-halberdier-01/marksman-crossbow179-top.png)
+
+![同一独立弩的三分之四渲染](/images/castle-halberdier-01/marksman-crossbow179-oblique.png)
+
+首轮组合 180 的弩发生翻转，手腕也反折，已拒绝。候选 181 修正了朝向，但手掌仍张开，持弩高度也高于原版。后续 182 用统一圆弧卷曲手指，出现局部挤压，仍未采用。下一步需要逐指处理握持，再对齐原版待机；下面是组合草稿，尚未接入游戏。
+
+![组合 180 的翻转和手腕问题，失败草稿](/images/castle-halberdier-01/marksman-combined180-rejected.png)
+
+![组合 181：朝向已调整，握指和持弩高度仍待修正](/images/castle-halberdier-01/marksman-combined181-draft.png)
 
 <details>
 <summary>此前神射手的局部审查记录（保留历史，不代表当前验收）</summary>
