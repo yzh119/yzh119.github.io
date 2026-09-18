@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T05:22:14+00:00
+lastmod: 2026-09-18T05:40:35+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The new Meshy hand has a local finger rig and passes 15 individual joint isolation probes. Actual crossbow contact remains unaccepted; the hand is not yet attached to the body. Halberdier preview pending; Crusader and Swordsman test candidates installed."
+homeSummary: "The Marksman’s new Meshy hands are assembled and follow the body wrists; cuffs and grip contact still need repair, with no installation. Halberdier review continues; Swordsman and Crusader test assets are installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | Separate Meshy body, crossbow and hand; local hand rig and 15 joint probes complete, grasp and body assembly pending. Full actions unfinished; not installed |
+| Marksman | Independent Meshy hands assembled and following body wrists; cuff points and grip intersections remain, full motion pending, not installed |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -424,9 +424,28 @@ The new hand now has three bones per digit, including a separate thumb-base join
 
 ![Blender curl probe for the new hand rig; palm folds and contact still under review](/images/castle-halberdier-01/marksman-hand248-curl.png)
 
-Combining the hand with the actual Meshy crossbow still produces skin intersections. The stock measures about 5.6 cm deep at the test grip. A 2.8 cm depth variant reduces some intersections; a separate trial preserves the original shape and changes placement. Neither passes, and the thinner variant has not been adopted as a fidelity correction. The hand remains separate from the character while finger contact is repaired. No additional API credits were used for these local rigging trials.
+Combining the hand with the actual Meshy crossbow still produces skin intersections. The stock measures about 5.6 cm deep at the test grip. A 2.8 cm depth variant reduces some intersections; a separate trial preserves the original shape and changes placement. Neither passes, and the thinner variant has not been adopted as a fidelity correction. <s>The hand remains separate from the character while finger contact is repaired.</s> The subsequent body assembly is shown below. No additional API credits were used for these local rigging trials.
 
 ![Rejected first fit with the actual crossbow: the fingers penetrate the wood](/images/castle-halberdier-01/marksman-hand249-grasp-rejected.png)
+
+The next fitting pass evaluates the deformed skin while retaining the original independent crossbow dimensions. In the standalone hand test, vertices more than 0.2 mm inside the stock fell from 2,998 to 65, with maximum depth falling from roughly 8.6 to 1.6 mm. This checks every hand vertex, but does not cover full triangle intersections or finger self-collision; the grip is still unaccepted.
+
+The left hand and a mirrored right hand have now been assembled with the Marksman body. The first assembly exposed excess wrist geometry and placed the left wrist target about 6 cm beyond the arm’s reach. Trimming the extra wrist section and raising the carry brought both wrists onto their targets. Each hand retains its own finger rig and follows the character’s wrist.
+
+![1400×1600 Blender still of the assembled body and new hands; a candidate, not an in-game result](/images/castle-halberdier-01/marksman-assembled262.png)
+
+![Close-up of the same candidate, showing cuff points and contact still needing repair](/images/castle-halberdier-01/marksman-assembled262-grip.png)
+
+Moving the grips along the stock changes their cross-sections, so contact must be checked again. The assembled left hand has 29 vertices more than 0.2 mm inside the wood, reaching about 2.2 mm; the right has 176, reaching about 4.1 mm. Pointed cuff geometry is also visible in the close-up. These need repair before full motion. This is an editable body-and-hands candidate, with no new game installation or API charges.
+
+<details>
+<summary>Rejected first assembly</summary>
+
+<s>Separate Meshy body, crossbow and hand; local hand rig and 15 joint probes complete, grasp and body assembly pending. Full actions unfinished; not installed</s>
+
+![Candidate 260: excess wrist geometry outside the cuff, with an unreachable left wrist target](/images/castle-halberdier-01/marksman-assembled260-rejected.png)
+
+</details>
 
 <details>
 <summary>Donor-hand repairs (historical candidates, not final acceptance)</summary>
