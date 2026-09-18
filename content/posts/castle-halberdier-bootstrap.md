@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T14:21:11+00:00
+lastmod: 2026-09-18T14:32:59+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot has an eleven-frame death draft and a fix for the mantle failing to follow the falling character. All eighteen groups have body drafts; pose, cloth, effects and integration remain unfinished."
+homeSummary: "Zealot death now folds over bent knees, with waist cords rebound to the pelvis. The ending is more compact but still differs from the original; cloth, effects and integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1061,9 +1061,23 @@ Parenting the mantle to the armature object preserved the holding shape and made
 
 ![Death ending after repairing mantle root following, high-resolution Blender still; pose remains unfinished](/images/castle-zealot-512/death570.png)
 
-The first timing pass also reached the floor by frame nine, earlier than the original; a subsequent revision delays the main fall to the last frames. A further revision adjusts the falling root’s ground-plane travel with the camera held fixed. The original ending occupies 44×28 logical pixels; the draft is about 44.5×40.5 and remains too tall. Body drafts now cover all eighteen native groups: 130 distinct images mapped to 150 active frame slots. Cloth, hands, effects, shadows and game integration are still unfinished. Earlier exports and separate effect scenes have not yet been regenerated with the mantle root-follow repair.
+The first timing pass also reached the floor by frame nine, earlier than the original; a subsequent revision delays the main fall to the last frames. A further revision adjusts the falling root’s ground-plane travel with the camera held fixed. <s>The original ending occupies 44×28 logical pixels; the draft is about 44.5×40.5 and remains too tall.</s> These dimensions describe candidate 574. Body drafts now cover all eighteen native groups: 130 distinct images mapped to 150 active frame slots. Cloth, hands, effects, shadows and game integration are still unfinished. <s>Earlier exports and separate effect scenes have not yet been regenerated with the mantle root-follow repair.</s> This records the export state at candidate 574.
 
 ![Original death and revised fall timing; the ending silhouette remains unaccepted](/images/castle-zealot-512/death574-compare.png)
+
+Further trials showed that turning the corpse sideways or laying it flatter still left it too extended; one side-facing trial reached 90 logical pixels in width and was rejected. Folding the torso over bent knees produced a more compact pose. That stronger bend exposed another attachment error: the waist cord followed the chest and floated above the lower back.
+
+![Folded-pose trial exposing a floating waist cord, high-resolution Blender still](/images/castle-zealot-512/corpse577-belt-failure.png)
+
+The cord and both hanging ends now follow the pelvis while retaining their holding-pose positions. The revised pose has been incorporated into the eleven-frame death clip. Its ending occupies 44×33 logical pixels, closer to the original 44×28 but still too tall; hand and cloth shapes remain unaccepted.
+
+![Compact death ending with repaired waist attachment, high-resolution Blender draft](/images/castle-zealot-512/death579.png)
+
+![Original and revised eleven-frame death sequences](/images/castle-zealot-512/death579-compare.png)
+
+An additional sweep checked 41 poses at quarter-frame intervals. It found roughly 1.6 mm of body penetration between keyed frames. The continuous motion therefore remains unaccepted even where the native keyed frames meet the floor.
+
+All 130 body frame files have now been re-exported from one scene containing both attachment repairs. Every frame fits the fixed 900×800 canvas, and the full contact sheets were inspected. The mapping was checked against every original group: 150 active slots across eighteen groups, plus the duplicate turn slots referencing the same files. Separate effect scenes still need these attachment repairs; game integration remains unfinished.
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
