@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T00:55:28+00:00
+lastmod: 2026-09-18T01:05:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier now has 45 candidate frames in six groups, including twelve-frame defence and revised attacks. Original-frame comparisons and a high-resolution Blender still show remaining finger and shoulder-trim work."
+homeSummary: "Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier now has 51 candidate frames in seven groups, including a six-frame hit reaction with hand release. Death, turns, hover and visual detail remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | New Meshy body and independent weapon; holding, walking, three attack directions and defence: 6 groups, 45 candidate frames. Defence returns to holding; visual detail, remaining clips and installation pending |
+| Halberdier | New Meshy body and independent weapon; holding, walking, three attack directions, defence and hit: 7 groups, 51 candidate frames. Defence returns to holding; visual detail, remaining clips and installation pending |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -143,7 +143,19 @@ Defence opens from the slanted holding pose, turns into a cross-body block and r
 
 ![Cross-body block, an 1800×1400 Blender still; fingers and shoulder trim remain unfinished](/images/castle-halberdier-01/halberdier-defence131.png)
 
-Reopening the scene gives a maximum grip-target error of about 5.7×10⁻⁷ units across nineteen attack and twelve defence frames, with no edges above the existing stretch threshold. Nine shaft rays avoid non-hand body and shoulder plates in all forty-five frames; all frames fit the native canvas. Evaluated body, plate and weapon vertices at both defence endpoints match holding frame one exactly. These checks do not certify complete surfaces, finger contact or between-frame motion. The close-up still shows incomplete finger closure and distorted shoulder trim. Hit, death, turns, hover, shadows and game integration remain unfinished.
+Reopening the scene gives a maximum grip-target error of about 5.7×10⁻⁷ units across nineteen attack and twelve defence frames, with no edges above the existing stretch threshold. Nine shaft rays avoid non-hand body and shoulder plates in all forty-five frames; all frames fit the native canvas. Evaluated body, plate and weapon vertices at both defence endpoints match holding frame one exactly. These checks do not certify complete surfaces, finger contact or between-frame motion. The close-up still shows incomplete finger closure and distorted shoulder trim. <s>Hit, death, turns, hover, shadows and game integration remain unfinished.</s> A hit candidate is included below; the other items remain unfinished.
+
+### Hit reaction and hand release
+
+Candidate 137 adds the original six-frame hit reaction, bringing the scene to seven groups and fifty-one frames. The body recoils, the stance widens, and the later frames lean forward again. The secondary hand leaves the shaft and opens. Astra turned the original Meshy open-hand geometry into an animated shape key; other groups keep it disabled.
+
+![Six hit frames, original above candidate 137 at matching display scale](/images/castle-halberdier-01/halberdier-hit137-comparison.jpg)
+
+Draft 132 drove the shaft tail through the right thigh. Adjusting the weapon cleared that issue, but candidate 135 still had a narrow stance and weak recovery. Candidate 137 revises foot placement and weight shift. After reopening, all fifty-one poses stay below the existing large-edge threshold and avoid the nine shaft rays against non-hand body and plates. Evaluated body, plate and weapon vertices in the earlier forty-five frames match candidate 131 exactly. Six new frames were rendered; unchanged images were reused after checking vertices and projected bounds.
+
+![Hit-reaction key pose with the secondary hand open, an 1800×1400 Blender still](/images/castle-halberdier-01/halberdier-hit137.png)
+
+The last hit frame still has a released hand, so its return to holding needs review. The gripping fingers, shoulder trim and pose detail remain unfinished. Death, turns and hover account for twelve missing native frames, followed by shadow/outline layers and in-game verification. The Halberdier is not installed.
 
 <details>
 <summary>Candidate 126 attack record, superseded by further edits in 131</summary>
@@ -1008,5 +1020,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier holding, walking and three attack directions now total 33 candidate frames, with original-frame comparisons and a new high-resolution still. Pose fidelity, fingers and remaining clips need work.</s>
 
 <s>| Halberdier | New Meshy body and independent weapon; holding, walking and three attack directions, 5 groups and 33 candidate frames. Native-canvas comparison done; pose fidelity, fingers, remaining clips and installation pending |</s>
+
+</details>
+
+<details>
+<summary>Summary before the hit reaction was added</summary>
+
+<s>Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier now has 45 candidate frames in six groups, including twelve-frame defence and revised attacks. Original-frame comparisons and a high-resolution Blender still show remaining finger and shoulder-trim work.</s>
+
+<s>| Halberdier | New Meshy body and independent weapon; holding, walking, three attack directions and defence: 6 groups, 45 candidate frames. Defence returns to holding; visual detail, remaining clips and installation pending |</s>
 
 </details>
