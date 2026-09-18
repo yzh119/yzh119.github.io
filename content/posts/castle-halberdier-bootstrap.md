@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T08:22:07+00:00
+lastmod: 2026-09-18T08:57:38+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Marksman adds hover and death drafts and revises hit and defence: eleven offline groups, 75 frames. New stills, original comparisons and a preview are up; death fidelity, grip and integration remain unfinished."
+homeSummary: "Marksman body drafts now cover all 18 original groups and 101 frame slots, adding sword melee and turns. New stills, comparisons and previews are up; pose, transition, layer and native review remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,24 +18,37 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ![Fourteen independently reviewed Castle mesh bootstraps, ordered by level and upgrade](/images/castle-halberdier-01/roster-bootstrap-01.png)
 
-All fourteen models were generated from separate reviewed concepts and then checked from eight Blender angles. Accepted Meshy mesh tasks consumed 420 credits; the earlier rejected four-view Halberdier request consumed another 30. The Halberdier and Pikeman are now past the first local rig stage: both have holding and walking review sequences at their original 450×400 canvas. The Archer holds its crossbow in the static and holding review, but its first raised-shooting test exposed separated sleeve topology and was rejected. The remaining units have accepted mesh reviews and move on to creature-specific local rigs.
+All fourteen models were generated from separate reviewed concepts and then checked from eight Blender angles. Accepted Meshy mesh tasks consumed 420 credits; the earlier rejected four-view Halberdier request consumed another 30. The Halberdier and Pikeman are now past the first local rig stage: both have holding and walking review sequences at their original 450×400 canvas. The Archer holds its crossbow in the static and holding review, but its first raised-shooting test exposed separated sleeve topology and was rejected. <s>The remaining units have accepted mesh reviews and move on to creature-specific local rigs.</s> That was the initial bootstrap review; the table below records later problems and current action status.
 
 | Unit | reviewed state |
 | --- | --- |
 | Halberdier | Offline 1×/2× layered preview: 63 frames in 11 groups, with geometry-projected shadows; death, grip, shoulder cloth and transitions remain unaccepted; not installed |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
-| Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
+| Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
-| Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
+| Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | <s>Holding, walking, movement start/end and three shooting directions: seven groups, 44 offline candidate frames; grip and finger constraints unaccepted, other actions and game integration pending</s> <s>Nine groups, 60 offline candidate frames, adding six hit and ten defence frames; pose fidelity, grip and integration unfinished</s> Eleven groups, 75 offline body draft frames, adding hover and death; death timing/pose, grip, melee/turns and game integration unfinished |
-| Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
+| Marksman | All 18 original groups /101 body draft frames, including duplicate turns; melee and turns added, with death, fingers, draw/sheath and loading transitions, layers and native integration unfinished |
+| Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
-| Champion | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
+| Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
+
+<details>
+<summary>Roster overview before this update (historical)</summary>
+
+| Unit | Previous record |
+| --- | --- |
+| Griffin | <s>mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting</s> |
+| Cavalier | <s>mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next</s> |
+| Marksman | <s>Holding, walking, movement start/end and three shooting directions: seven groups, 44 offline candidate frames; grip and finger constraints unaccepted, other actions and game integration pending Nine groups, 60 offline candidate frames, adding six hit and ten defence frames; pose fidelity, grip and integration unfinished Eleven groups, 75 offline body draft frames, adding hover and death; death timing/pose, grip, melee/turns and game integration unfinished</s> |
+| Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild — native moving is airborne flight, not a ground gait; candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected; Royal Griffin now moves to a component-model reconstruction</s> |
+| Champion | <s>mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next</s> |
+
+</details>
 
 ## Review gallery
 
@@ -217,9 +230,52 @@ The first shadow pass transformed body alpha around a fixed ground line. It lack
 
 The sixty-three geometry shadows produce 126 files at 1×/2×. Body and selection-outline files match the preceding package byte for byte. Format validation reports zero errors, zero warnings and twenty informational notices about movement inside the canvas. No temporal averaging or frame-count change was applied. Flicker, transitions and appearance still need native playback review.
 
+### Marksman melee and turns
+
+The offline body draft now covers **all 18 original groups and 101 frame slots**. Groups 9 and 10 duplicate the two turn clips, leaving 97 distinct body images. Each directional melee clip has six frames; each turn half has two. Coverage is complete at the body-draft level. Pose fidelity, transitions, shadow and player-colour layers, projectile handling and native acceptance remain unfinished.
+
+The original keeps the crossbow in the left hand while the right uses a short sword. This pass reuses the independent sword previously generated through the Meshy API, with no additional generation charge. Astra aligns the grip and authors the wind-up, strike and recovery in Blender. The final melee frame still holds the sword; drawing and sheathing across the empty-handed holding pose remain unresolved.
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-halberdier-01/marksman-melee473.mp4"></video>
+
+An 8 fps offline review, with four-frame pauses added at each clip boundary.
+
+![Front strike, high-resolution static Blender render](/images/castle-halberdier-01/marksman-melee-front475.png)
+
+![Six-frame front melee comparison](/images/castle-halberdier-01/marksman-melee-front475-comparison.png)
+
+![Upward strike, high-resolution static Blender render](/images/castle-halberdier-01/marksman-melee-up475.png)
+
+![Six-frame upward melee comparison](/images/castle-halberdier-01/marksman-melee-up475-comparison.png)
+
+![Downward strike with the crossbow carried back, static Blender render](/images/castle-halberdier-01/marksman-melee-down475.png)
+
+![Six-frame downward comparison; stance and body amplitude still need reference work](/images/castle-halberdier-01/marksman-melee-down475-comparison.png)
+
+The first forward and downward paths exceeded arm reach by as much as 12 cm. Bringing the grip closer restored attachment. Reusing the crossbow finger pose also left the sword resting on an open-looking palm; the revised grip bends the four fingers farther and rotates the hand around the handle. The battle camera exposed another mismatch: the initial front strike projected too low and the downward strike too vertically. The latest paths adjust both sword direction and the bow arm's backward travel.
+
+Each saved scene was reopened and sampled at 321 times. Maximum right-hand drift against the sword is about 2.89 mm across the three clips, with no coarse body-edge distortion flags. These measurements do not establish finger anatomy, clearance around the guard or fidelity to the original poses.
+
+<details>
+<summary>Superseded crossbow-grip trial</summary>
+
+![Earlier front strike with an open-looking palm and incorrect projected sword direction](/images/castle-halberdier-01/marksman-melee448-rejected-grip.png)
+
+</details>
+
+![Front-facing turn pose, high-resolution static Blender render](/images/castle-halberdier-01/marksman-turn475.png)
+
+![First two turn frames against the original](/images/castle-halberdier-01/marksman-turn-l475-comparison.png)
+
+![Second two turn frames against the original](/images/castle-halberdier-01/marksman-turn-r475-comparison.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-halberdier-01/marksman-turn473.mp4"></video>
+
+This offline demonstration follows VCMI's existing sequence: play the first half, flip facing, then play the second half. The engine source was read and left unchanged. Both halves share a frontal pose, but native positioning, the visible weapon-side change and footwork still require an in-game review.
+
 ### Marksman reactions, hover and death drafts
 
-The current body set has eleven draft groups and 75 frames. This pass revises hit and defence, adds the original nine-frame hover interaction, and introduces a six-frame death draft. Astra authored the animation in Blender around existing Meshy geometry, with no new generation charges. All four groups remain offline; the death timing and final pose still need substantial reference work.
+<s>The current body set has eleven draft groups and 75 frames.</s> This records the stage before melee and turns; the current coverage is listed above. This pass revises hit and defence, adds the original nine-frame hover interaction, and introduces a six-frame death draft. Astra authored the animation in Blender around existing Meshy geometry, with no new generation charges. All four groups remain offline; the death timing and final pose still need substantial reference work.
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-halberdier-01/marksman-reactions441.mp4"></video>
 
@@ -249,7 +305,7 @@ The first fall merely rotated the recoil pose and left the free arm raised at th
 
 ![Rejected first death draft, with the free arm still raised](/images/castle-halberdier-01/marksman-death424-rejected.png)
 
-Directional melee, turns, the constrained trigger finger, loading continuity, layered export and native review remain unfinished.
+<s>Directional melee, turns, the constrained trigger finger, loading continuity, layered export and native review remain unfinished.</s> Melee and turn body drafts now exist; the other issues remain open.
 
 <details>
 <summary>Hit and defence at candidate 415 (superseded by 421)</summary>
