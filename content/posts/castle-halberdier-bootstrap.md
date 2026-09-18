@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:06:32+00:00
+lastmod: 2026-09-18T02:13:17+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Halberdier turns and hover bring the working candidate to 59 frames in ten groups. A four-frame death trial is rejected for coat folds and corpse pose, with high-resolution failure images retained. Crusader and Swordsman test candidates are installed; Castle production continues."
+homeSummary: "Halberdier has an offline 63-frame layered preview with geometry-projected shadows. Death poses and transitions remain unaccepted, and the package is not installed. Crusader and Swordsman test candidates are installed; Castle production continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | New Meshy body and independent weapon; 10 groups, 59 candidate frames including turns and hover. Four-frame death trial rejected; cloth, grip, transitions and installation unfinished |
+| Halberdier | Offline 1×/2× layered preview: 63 frames in 11 groups, with geometry-projected shadows; death, grip, shoulder cloth and transitions remain unaccepted; not installed |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -173,7 +173,7 @@ Four-frame death trials 141–144 were made separately. In 141, torso and arm ro
 
 ![Rejected death still: the coat folds and corpse pose need revision](/images/castle-halberdier-01/halberdier-death144-rejected.png)
 
-No edge exceeded the stretch threshold. The final body's lowest point is about 0.008 units above the floor and the weapon's about 0.006. Those measurements cannot establish plausible cloth folds. The next work is the coat and leg pose during collapse, followed by gripping fingers, shoulder trim, transitions and fuller collision review. Shadow/outline layers, installation and native visual acceptance remain unfinished.
+No edge exceeded the stretch threshold. The final body's lowest point is about 0.008 units above the floor and the weapon's about 0.006. Those measurements cannot establish plausible cloth folds. The next work is the coat and leg pose during collapse, followed by gripping fingers, shoulder trim, transitions and fuller collision review. <s>Shadow/outline layers, installation and native visual acceptance remain unfinished.</s> Shadow and outline layers are now included in offline preview 164 below; installation and native visual acceptance remain unfinished.
 
 
 
@@ -204,6 +204,18 @@ Trial 160 folds the hips and knees further in frame two and moves the holding ar
 ![Trial 160 endpoint, 1800×1400 Blender still, with the blade lying flat](/images/castle-halberdier-01/halberdier-death160-ground.png)
 
 A separate triangle-surface check covers the complete weapon, including blade and metal butt. Across sixty-three poses it finds no intersections with either shoulder plate or the body after excluding wholly hand-dominant triangles. The same check detects 349 and 199 intersecting triangle pairs in frames two and three of known-failing trial 155. This does not cover complete containment without a surface crossing, finger contact, body self-intersection or motion between sampled frames. All previous fifty-nine poses still match 140 at every evaluated vertex.
+
+### Layered review and geometry shadows
+
+Offline package 164 contains eleven groups and sixty-three frames of 1×/2× bodies, shadows and the required selection outlines. Four death poses still await appearance acceptance. This package is not installed.
+
+The first shadow pass transformed body alpha around a fixed ground line. It lacked the vertices' individual heights and depth positions. The replacement reads the evaluated Blender mesh, projects it along a fixed light direction onto world z=0, and renders that silhouette through the same camera. Opacity and spatial softness are shared between the comparisons; body images remain unchanged.
+
+![Body-alpha projection above, geometry-ground projection below; offline death comparison](/images/castle-halberdier-01/halberdier-shadow-comparison162.jpg)
+
+![Layered walk from package 164, shown at 150 milliseconds per frame rather than measured game timing](/images/castle-halberdier-01/halberdier-walk-layered164.gif)
+
+The sixty-three geometry shadows produce 126 files at 1×/2×. Body and selection-outline files match the preceding package byte for byte. Format validation reports zero errors, zero warnings and twenty informational notices about movement inside the canvas. No temporal averaging or frame-count change was applied. Flicker, transitions and appearance still need native playback review.
 
 <details>
 <summary>Candidate 126 attack record, superseded by further edits in 131</summary>
@@ -1086,5 +1098,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier now has 51 candidate frames in seven groups, including a six-frame hit reaction with hand release. Death, turns, hover and visual detail remain unfinished.</s>
 
 <s>| Halberdier | New Meshy body and independent weapon; holding, walking, three attack directions, defence and hit: 7 groups, 51 candidate frames. Defence returns to holding; visual detail, remaining clips and installation pending |</s>
+
+</details>
+
+<details>
+<summary>Homepage and status before layered review</summary>
+
+<s>Halberdier turns and hover bring the working candidate to 59 frames in ten groups. A four-frame death trial is rejected for coat folds and corpse pose, with high-resolution failure images retained. Crusader and Swordsman test candidates are installed; Castle production continues.</s>
+
+<s>Halberdier | New Meshy body and independent weapon; 10 groups, 59 candidate frames including turns and hover. Four-frame death trial rejected; cloth, grip, transitions and installation unfinished</s>
 
 </details>
