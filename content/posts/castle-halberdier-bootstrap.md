@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:20:38+00:00
+lastmod: 2026-09-18T02:27:39+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Halberdier has an offline 63-frame layered preview with geometry-projected shadows. Death poses and transitions remain unaccepted, and the package is not installed. Crusader and Swordsman test candidates are installed; Castle production continues."
@@ -227,6 +227,10 @@ Close-ups expose the current unfinished grip: four fingers curl around the pole 
 ![Unfinished current grip, rejected thumb opposition 166, and rejected radial correction 167](/images/castle-halberdier-01/halberdier-grip-failures167.jpg)
 
 Trial 167 pushes vertices inside the approximate shaft cylinder outward. In holding frame one, left/right inside-vertex counts fall from 108/124 to 13/0, but the correction creates spikes and an unnatural palm shape. It was also rejected. These vertex distances do not prove surface clearance. Further work needs joint-based finger and palm shaping from the original open-hand mesh. Preview package 164 remains unchanged.
+
+Trial 168 labels five digits from distal connected regions of the original open-hand mesh, then propagates those labels along mesh edges. The little finger ends closer to the wrist than the other three fingers. Trials 169 and 170 introduce three bending segments, but close-ups still show collapsed joints and holding-frame shaft penetration exceeds the previous candidate. Both were rejected. Grip location, palm shape and finger joints need joint calibration; the segmentation data is retained for that work.
+
+![Rejected segmented-finger trial 170; visible joint collapse and shaft intersections](/images/castle-halberdier-01/halberdier-finger-joints170-rejected.png)
 
 </details>
 
