@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T23:56:16+00:00
+lastmod: 2026-09-18T00:28:43+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. The new Meshy Halberdier body now carries the independent weapon in a six-frame front-attack candidate, with grip order and arm/shaft intersections corrected. Finger detail, native camera and remaining clips are unfinished."
+homeSummary: "Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. The Halberdier now has holding, walking and front-attack candidates totalling 20 frames, registered to the original canvas. Attack reach, finger detail and remaining clips still need work."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | New Meshy body, independent plates and weapon combined in a six-frame front-attack candidate. Limited shaft sampling passes; finger detail, native stance/camera and full clips remain unfinished; not installed |
+| Halberdier | New Meshy body and independent weapon; 8 holding, 6 walking and 6 front-attack candidate frames. 2× native-canvas registration and loop checks done; complete visual acceptance, remaining clips and installation pending |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -107,13 +107,29 @@ Early combinations put the right hand forward and kept the shaft aligned with th
 
 ![Rejected early combination with body intersections and incorrect blade roll](/images/castle-halberdier-01/halberdier-combined111-rejected.png)
 
-![High-resolution Blender impact pose from candidate 116, before native camera and scale calibration](/images/castle-halberdier-01/halberdier-combined116-portrait.png)
+![Historical Blender impact pose from candidate 116; blade side and camera changed in the subsequent review](/images/castle-halberdier-01/halberdier-combined116-portrait.png)
 
 ![Six-frame combination candidate: raise, strike, follow-through and recovery; offline Blender renders](/images/castle-halberdier-01/halberdier-combined116-sheet.jpg)
 
 After reopening the saved scene, none of the six body poses triggers the large-edge stretch threshold. Nine longitudinal rays along the shaft centre and circumference find no intersections with non-hand body triangles or either shoulder plate at those six frames. Grip-hand faces are explicitly excluded. Finite ray sampling does not cover every weapon surface, finger contact, self-intersections or intermediate poses, so this is not a complete collision guarantee.
 
 This front-attack candidate includes a small forward step. The editable base and combined action are saved separately. Finger detail, native stance/camera/scale and the remaining animation groups still need work; the Halberdier remains uninstalled. No new Meshy requests were made in this step.
+
+### Holding, walking and native registration
+
+Eight holding frames and six walking frames now share the editable scene with the six-frame front attack: three candidate groups, twenty native frames. Both new groups keep the original two-handed, slanted pole carriage with alternating legs. The first walk sank a sole by about 0.00391 units. Rigid sole weights blended into the ankle reduce maximum penetration across the twenty native frames to about 8×10⁻⁸ units. Some lowest points sit slightly above the floor, by at most about 0.000095 units.
+
+![Current holding candidate, a 1280×1600 Blender still](/images/castle-halberdier-01/halberdier-holding122.png)
+
+Side-by-side review exposed a reversed blade side and an opposite starting leg phase. The blade was rolled over, the walk shifted by half a cycle, and camera azimuth changed to 52° while retaining 30° elevation. This remains an offline review camera.
+
+![Original and current candidate at matching display scale; the right column uses 2× Blender frames, not game captures](/images/castle-halberdier-01/halberdier-native122-comparison.jpg)
+
+The original canvas is 450×400. The first holding frame sets height, horizontal centre and ground registration; the same camera then renders all three groups without per-frame scaling. All twenty frames fit. Evaluated vertices match exactly between holding keys 1 and 9, and between walking keys 1 and 7. Those final closure keys are not extra exported frames.
+
+![Six walking frames after the starting-phase correction](/images/castle-halberdier-01/halberdier-moving122-sheet.jpg)
+
+No frame triggers the large-edge threshold, and the nine longitudinal shaft samples avoid non-hand body and shoulder-plate triangles. The sampling limitations above still apply. The comparison also shows insufficient attack reach and stance, with detailed finger contact still unreviewed. These clips have not passed complete visual acceptance. Up/down attacks, hit, defence, death, turns, hover, shadow layers and game integration remain unfinished.
 
 ### Earlier Halberdier fragment rig
 
@@ -931,5 +947,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. A new arm-separated Meshy Halberdier body avoids the earlier coat strips in a six-frame arm test; shoulder armour and grips still need work. Other Castle creatures remain in progress.</s>
 
 <s> /  Halberdier  /  New A-pose body and Meshy rig obtained; six unarmed arm-test frames stay below the large-edge threshold. Shoulder deformation, grips and full motion remain unfinished; not installed  / </s>
+
+</details>
+
+<details>
+<summary>Summary and status before holding and walking</summary>
+
+<s>Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. The new Meshy Halberdier body now carries the independent weapon in a six-frame front-attack candidate, with grip order and arm/shaft intersections corrected. Finger detail, native camera and remaining clips are unfinished.</s>
+
+<s> /  Halberdier  /  New Meshy body, independent plates and weapon combined in a six-frame front-attack candidate. Limited shaft sampling passes; finger detail, native stance/camera and full clips remain unfinished; not installed  / </s>
 
 </details>
