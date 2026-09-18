@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T06:57:46+00:00
+lastmod: 2026-09-18T07:08:21+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Marksman now has coordinated 3D string, limb and loaded-bolt motion, with front-shot launch position and projectile scale calibrated offline. Trigger, remaining actions and game integration are pending."
+homeSummary: "The Marksman has a 3D index-finger and trigger draft, with rejected grip trials documented. String and projectile candidates are present; hand detail, other actions and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -494,6 +494,22 @@ The first string-only edit kept the limbs rigid and stretched the cord from roug
 </details>
 
 This remains an offline candidate, with no new Meshy charges or game installation. Trigger/finger interaction, recovery into holding and the other actions remain unfinished.
+
+### Index finger and trigger draft
+
+A view beneath the crossbow exposed a missing part of the grip review: the right index finger wrapped over the stock and could not reach the trigger lever.
+
+![Candidate 314 before the grip revision: the index finger cannot operate the lever](/images/castle-halberdier-01/marksman-trigger321-before.png)
+
+The first attempt moved the support hand far forward and inverted the rear grip. It failed: the support-hand target exceeded arm reach by as much as 12.4 cm, and the rear cuff turned upward. The replacement keeps the support hand in place, advances the rear grip by 2.5 cm and rotates it 45 degrees before articulating the index separately.
+
+![Rejected broad grip change, with an upturned cuff and unreachable support-hand targets](/images/castle-halberdier-01/marksman-grip324-rejected.png)
+
+The new 3D action brings the index toward the underside of the lever, rotates the lever slightly about its front attachment and resets it after release. An earlier target touched the upper side while lifting the lever, an inconsistent contact direction; the target is now underneath.
+
+![Candidate 333 trigger close-up, a 1200×1000 Blender still; joint motion and surface contact remain under review](/images/castle-halberdier-01/marksman-trigger334-candidate.png)
+
+The body, hand and crossbow are still Meshy assets, with local motion authored by Astra. The index solver does not yet constrain every joint degree of freedom. A small fingertip-to-target error does not establish anatomical motion or collision-free surfaces. Thumb folds, joint limits, metal contact and recovery into holding remain unfinished. Nothing was installed and no Meshy credits were spent. The preceding version 315 string views retain the earlier grip.
 
 <details>
 <summary>Historical loaded-bolt and projectile drafts (296–297)</summary>
