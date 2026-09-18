@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:34:10+00:00
+lastmod: 2026-09-18T02:48:48+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Halberdier has an offline 63-frame layered preview with geometry-projected shadows. Death poses and transitions remain unaccepted, and the package is not installed. Crusader and Swordsman test candidates are installed; Castle production continues."
+homeSummary: "Marksman's low crossbow carry exposed shoulder distortion. A separate body and humanoid rig are now generated through the Meshy API; motion remains unverified. Halberdier's 63-frame offline preview awaits acceptance; Crusader and Swordsman test candidates are installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers plus left/right turns pass; presentation groups next |
+| Marksman | Low-carry trials 173 and 174 rejected for shoulder distortion; empty-handed Meshy body 175 generated. Posed rig and separate crossbow remain unverified; not installed |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -384,6 +384,27 @@ A ten-frame defence, six-frame hit recoil, two-frame move start, and three-frame
 
 ![Rejected Archangel death probe, side endpoint](/images/castle-halberdier-01/archangel-independent-death-rejected-side.png)
 
+### Marksman body and crossbow separation (September 18)
+
+Lowering the crossbow toward the original nine-frame hover pose exposed severe shoulder and sleeve distortion in trials 173 and 174. Earlier continuity reviews did not cover this pose. Both trials are rejected; earlier model and action files remain available.
+
+![Rejected trial 174: lowering the crossbow distorts the shoulders, rendered in Blender](/images/castle-halberdier-01/marksman-hover174-rejected.png)
+
+Candidate 175 starts with an empty-handed A-pose body so the crossbow can receive separate controls. Built-in imagegen produced the reference; Meshy API model meshy-7 generated the textured body for 30 credits. The request used a 40,000-polygon target and 4K textures; Blender imports 43,343 vertices and 69,924 triangles. Front, side and rear renders show no obvious volume collapse. Posed shoulders, fingers and crossbow attachment remain unverified, and the model is not installed.
+
+![A-pose reference concept; not game artwork](/images/castle-halberdier-01/marksman-body175-concept.png)
+
+![Meshy body 175, front view rendered in Blender](/images/castle-halberdier-01/marksman-body175-front.png)
+
+![Side view of the same mesh](/images/castle-halberdier-01/marksman-body175-side.png)
+
+Meshy humanoid rigging subsequently completed for another 5 credits. Single-joint checks in Blender are in progress; crossbow handling, shooting and game frames have not been produced from this body.
+
+<details>
+<summary>Earlier Marksman reviews (historical scope, not current acceptance)</summary>
+
+<s>| Marksman | remote candidate 02: holding, moving, three-direction shooting, hit, defence, death and move transitions pass; melee candidate 01: separate sword mesh plus 6-frame three-direction attacks pass; three-direction projectile layers plus left/right turns pass; presentation groups next |</s>
+
 The old Marksman rig could make a front shot but could not reliably lift the light crossbow to the original high-angle direction, so its draft was not treated as an upward attack. Candidate 02 starts again from an independent blue-and-gold crossbowman mesh and Meshy humanoid rig; eight static angles retain the crossbow, both hands and sleeve cuffs. A native six-frame `CHCBOW.DEF` upward attack then moves from low level aim through raise and high release into recovery. Front and side key frames keep the grip, crossbow, hands and sleeves continuous. Its eight-frame front shooting body action also passes: low carry, level aim, short release recoil and recovery retain the crossbow, both hands and sleeve cuffs in front and side review. A separate eight-frame downward shooting action then passes as well: the crossbow presses into a low aim and recovers after release while hands and sleeve cuffs remain continuous from both views. A third eight-frame upward shooting action then passes: it moves from low carry through high aim/release and recovery while crossbow, hands and sleeve cuffs remain continuous in both views. All three ranged shooting body Actions are saved independently; projectile VFX remains a separate layer. Hit and defence were independently reviewed on the same candidate: the six-frame hit uses torso recoil while both hands retain the light crossbow, and the ten-frame defence raises it across the chest without detachment in either view. These are Blender character-motion reviews only, with no DEF output or game installation.
 
 <s>Candidate 02’s first eight-frame moving pass used excessive hip, knee and ankle amplitude, reading as a crouched jump in side view, so it is rejected and will not enter export.</s>
@@ -400,7 +421,7 @@ The original six-frame `CHCBOW.DEF` `attack_front`, `attack_up` and `attack_down
 
 Remote candidate 02’s eight-frame front shot now also has a separate three-dimensional bolt layer. A Meshy bolt generated from its own concept passes static review, seats in the crossbow through aim/release, then travels left-forward. <s>The first probe launched it from the waist; the second moved it forward but remained below the crossbow groove; the fourth lifted the attachment too far above it. All three are rejected and will not export.</s> The fifth pass retains the bolt body and a coherent origin/flight path in front and oblique key frames, so the front projectile layer passes. <s>The first up-shot bolt layer reused the horizontal axis, so it neither seated on the raised groove nor remained in frame; it is rejected.</s> The second turns the bolt with the elevated crossbow, seats it through release and sends it upper-left over eight frames; front and oblique review pass. The down trajectory remains to be authored. This is still neither DEF output nor game installation. <s>A separate Meshy sword was generated for an overlay on remote candidate 02, but the crossbow is embedded in that mesh and its imported hand space does not provide a stable attachment: the sword detached, so the overlay is rejected and will not export.</s> Melee candidate 01 therefore starts again from a complete sword-bearing Marksman Meshy mesh and humanoid rig. Static front, side and rear review retains the sword in the right hand. Its three six-frame actions now pass too: front moves from low guard through raised wind-up into a forward slash and recovery; down resolves from a high wind-up into a low strike; up rises from low guard into a high upward strike and returns. The right-hand sword grip remains continuous in front and side key frames. This remains private Blender motion review, with no DEF output or game installation.
 
-
+</details>
 
 The original Griffin has eight holding frames and four walking frames; the Swordsman has eight of each. Both tests use the original 450×400 canvas. Each now has a stable local holding review: the Griffin uses continuous weights for wings, neck and tail, while the Swordsman keeps sword, shield and armour intact in the rest pose.
 
