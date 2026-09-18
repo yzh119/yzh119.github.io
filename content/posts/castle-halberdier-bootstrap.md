@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-18T15:18:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Native Zealot tests cover 113 body images in 14 groups. New Blender close-ups and a complete body-motion comparison show a mantle binding repair; the revised binding is still offline."
+homeSummary: "The Zealot mantle revision is installed with regenerated shadows and effect occlusion. New ranged and melee tests read 113 body images across 14 groups; layered comparisons are included while visual review continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Installed 1×/2× test: 18 groups, 150 slots. Combined native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
+| Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -1175,9 +1175,15 @@ The next modeling trial changes how the mantle follows the arms. Candidate 630 r
 
 ![Actual Blender close-ups with 100%, 35% and 0% upper-arm influence; sleeve-to-mantle contact remains unresolved](/images/castle-zealot-512/mantle630-bindings.png)
 
-Candidate 631 also tried projecting the mantle away from the body at front-cast, upward-cast and defence poses. Contact still looks unresolved, so those corrective shapes were not adopted. Candidate 632 uses the binding with no upper-arm influence and exports all 130 body images inside the original canvas. Complete action comparisons were reviewed, with another 472 quarter-frame samples per binding measuring mantle deformation. **This revised body is offline; the installed game still uses 611.** Sleeves, hands and corpse shape need further review. Shadows and effect occlusion have not been regenerated for the new geometry.
+Candidate 631 also tried projecting the mantle away from the body at front-cast, upward-cast and defence poses. Contact still looks unresolved, so those corrective shapes were not adopted. Candidate 632 uses the binding with no upper-arm influence and exports all 130 body images inside the original canvas. Complete action comparisons were reviewed, with another 472 quarter-frame samples per binding measuring mantle deformation. At candidate 632: <s>This revised body is offline; the installed game still uses 611.</s> Installation 638 follows below. Sleeves, hands and corpse shape need further review. <s>Shadows and effect occlusion have not been regenerated for the new geometry.</s> This records the layer state at candidate 632.
 
 ![Body-only comparison for front and downward melee, special motion and death: installed 611 above offline 632 in each group; shadows and effects excluded](/images/castle-zealot-512/mantle632-motion.png)
+
+The mantle revision is now installed locally as test 638, in mod version 0.5.1. Its new body has 130 regenerated geometry-shadow frames and 83 effect layers rendered with the revised mantle as an occluder. All 45 expected blank effect frames remain empty; repeating the holding shadow produces identical pixels. Every composite fits its canvas. The 1×/2× body, separate shadows and outlines pass resource checks against the original action inventory with zero errors and warnings. Appearance remains under review.
+
+Installation adds 552 files, switches the two `CZEALT` indexes and updates the mod version, preserving the other 1,974 existing files. Ranged and melee tests 639–640 read 113 body images from the new `czealt636` resource directory across 14 groups, plus three projectile directions. Both clients required forced termination after their test limits; original settings and ammunition configuration were restored. Window capture failed in these runs, so the image below is an offline layer comparison. The earlier native screenshot from test 627 shows the previous version. Defence and the three special groups still lack native loading evidence; sleeves, hands, death shape and effects remain unfinished.
+
+![Offline composites: previous 611 on the left of each pair, installed 636 layers on the right, including regenerated shadows and effect occlusion; not a native screenshot](/images/castle-zealot-512/layered636-installed.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
@@ -1910,5 +1916,15 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical summary: formation tests 629</summary>
 
 <s>Installed Zealot tests now read 113 body images across 14 groups and three projectile directions. A seven-stack melee screenshot is included; defence, special actions and visual acceptance remain under review.</s>
+
+</details>
+
+
+<details>
+<summary>Historical summary: offline mantle trial 633</summary>
+
+<s>Native Zealot tests cover 113 body images in 14 groups. New Blender close-ups and a complete body-motion comparison show a mantle binding repair; the revised binding is still offline.</s>
+
+<s>| Zealot | Installed 1×/2× test: 18 groups, 150 slots. Combined native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |</s>
 
 </details>
