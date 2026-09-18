@@ -1051,7 +1051,7 @@ Spell effects are also built from three-dimensional Blender meshes. The first 49
 
 ![Original and draft special sequences at matched scale; effect density and pose differences remain visible](/images/castle-zealot-512/special566-compare.png)
 
-Body and effects live in separate editable scenes so particles cannot accidentally appear in other clips. The current exports are body images and combined review renders; game-ready effect layers and occlusion checks remain unfinished.
+Body and effects live in separate editable scenes so particles cannot accidentally appear in other clips. <s>The current exports are body images and combined review renders; game-ready effect layers and occlusion checks remain unfinished.</s> This records candidate 566; the later isolated-layer trial is described below.
 
 The eleven-frame death draft starts with the hit poses, opens the arms, loses balance and falls forward. Bent legs and a shortened robe bone gather the lower garment in the later frames. Its first render exposed an object relationship error: the independent mantle deformed with the bones but did not follow the whole-character root during the fall, leaving it suspended above the body.
 
