@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-17T23:40:54+00:00
+lastmod: 2026-09-17T23:56:16+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. A new arm-separated Meshy Halberdier body avoids the earlier coat strips in a six-frame arm test; shoulder armour and grips still need work. Other Castle creatures remain in progress."
+homeSummary: "Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. The new Meshy Halberdier body now carries the independent weapon in a six-frame front-attack candidate, with grip order and arm/shaft intersections corrected. Finger detail, native camera and remaining clips are unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | New A-pose body and Meshy rig obtained; six unarmed arm-test frames stay below the large-edge threshold. Shoulder deformation, grips and full motion remain unfinished; not installed |
+| Halberdier | New Meshy body, independent plates and weapon combined in a six-frame front-attack candidate. Limited shaft sampling passes; finger detail, native stance/camera and full clips remain unfinished; not installed |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -73,7 +73,7 @@ Reopening candidate 99’s six-frame file gives a maximum selected-weapon edge-l
 
 ### Arm-separated body candidate (September 18)
 
-Local selection changes did not resolve the support hand pulling on the coat. A built-in imagegen edit now places the same character in an A-pose with open hands clear of the torso, removing the halberd. The blue-and-gold tabard, heraldic emblem, helmet and boots follow the previous design. The weapon will be attached separately.
+Local selection changes did not resolve the support hand pulling on the coat. A built-in imagegen edit now places the same character in an A-pose with open hands clear of the torso, removing the halberd. The blue-and-gold tabard, heraldic emblem, helmet and boots follow the previous design. <s>The weapon will be attached separately.</s> The subsequent six-frame combination is documented below.
 
 ![A-pose modelling reference, generated concept art](/images/castle-halberdier-01/halberdier-body100-concept.png)
 
@@ -98,6 +98,22 @@ Grip work starts from the open hands. Curl attempts 104–106 flattened fingers 
 ![Rejected early curl, with collapsed hand geometry](/images/castle-halberdier-01/halberdier-grip104-rejected.png)
 
 ![Current grip close-up draft; thumb closure and shaft contact remain unfinished](/images/castle-halberdier-01/halberdier-grip108.png)
+
+### Six-frame body and halberd combination
+
+The original Meshy halberd is now extracted. The first extraction retained part of the old gripping hand, so the affected central band was removed and a short wooden handle segment inserted. The head, remaining shaft and butt cap reuse the existing geometry. Candidate 116 combines this weapon with the new body and independent shoulder plates in the original six-frame front-attack group.
+
+Early combinations put the right hand forward and kept the shaft aligned with the body's forward axis. The horizontal pose intersected the torso and arms, and the axe face lay flat. Comparing the original impact frame led to a right hand close to the body, a forward left hand, and a shaft crossing diagonally in front. Adjusting the rear elbow then cleared the buttward shaft. Candidates 111–115 remain rejected history.
+
+![Rejected early combination with body intersections and incorrect blade roll](/images/castle-halberdier-01/halberdier-combined111-rejected.png)
+
+![High-resolution Blender impact pose from candidate 116, before native camera and scale calibration](/images/castle-halberdier-01/halberdier-combined116-portrait.png)
+
+![Six-frame combination candidate: raise, strike, follow-through and recovery; offline Blender renders](/images/castle-halberdier-01/halberdier-combined116-sheet.jpg)
+
+After reopening the saved scene, none of the six body poses triggers the large-edge stretch threshold. Nine longitudinal rays along the shaft centre and circumference find no intersections with non-hand body triangles or either shoulder plate at those six frames. Grip-hand faces are explicitly excluded. Finite ray sampling does not cover every weapon surface, finger contact, self-intersections or intermediate poses, so this is not a complete collision guarantee.
+
+This front-attack candidate includes a small forward step. The editable base and combined action are saved separately. Finger detail, native stance/camera/scale and the remaining animation groups still need work; the Halberdier remains uninstalled. No new Meshy requests were made in this step.
 
 ### Earlier Halberdier fragment rig
 
@@ -906,5 +922,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Crusader and Swordsman 1×/2× test candidates are installed and their new resources were read in test battles; visual acceptance remains open. The Halberdier weapon binding is corrected, but the two-hand attack exposes support-hand/clothing deformation and has not passed review. Other Castle creatures remain in progress.</s>
 
 <s> /  Halberdier  /  Meshy remesh and humanoid skin obtained; rigid halberd binding corrected, but the six-frame two-hand attack still stretches the support-hand/clothing boundary; rejected and not installed  / </s>
+
+</details>
+
+<details>
+<summary>Summary and status before the combined candidate</summary>
+
+<s>Crusader and Swordsman test candidates are installed and read in test battles; visual acceptance remains open. A new arm-separated Meshy Halberdier body avoids the earlier coat strips in a six-frame arm test; shoulder armour and grips still need work. Other Castle creatures remain in progress.</s>
+
+<s> /  Halberdier  /  New A-pose body and Meshy rig obtained; six unarmed arm-test frames stay below the large-edge threshold. Shoulder deformation, grips and full motion remain unfinished; not installed  / </s>
 
 </details>
