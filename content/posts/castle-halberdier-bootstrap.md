@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-18T15:18:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot 1×/2× test assets are installed. Native battle logs read 62 body frames in six groups and two projectile directions; an actual battle screenshot is included. Sleeve trials and full animation acceptance remain unfinished."
+homeSummary: "Installed Zealot tests now read 113 body images across 14 groups and three projectile directions. A seven-stack melee screenshot is included; defence, special actions and visual acceptance remain under review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Installed 1×/2× test package: 18 active groups / 150 slots. Native logs read 62 body frames in 6 groups and 2 projectile directions. Cloth, hands, full coverage and release handoff remain unaccepted |
+| Zealot | Installed 1×/2× test: 18 groups, 150 slots. Combined native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -1161,9 +1161,15 @@ Further sleeve trials reject two shortcuts: preserve-volume skinning bulges the 
 
 **The Zealot test package was installed locally on September 18, 2026.** It uses candidate 611 layers and excludes the sleeve experiment above. The package covers 18 active groups and 150 slots, reusing 130 body images, at two resolutions, with geometry shadows, holding/hover outlines and nine projectile directions. All 1,401 existing files for the other four units are preserved.
 
-The test battle reads 62 distinct 2× body images across holding, hover, hit, death, front shooting and upward shooting, plus two projectile directions. The actual screenshot below shows the new unit, corpse and flying cloud. It does not prove playback of the other twelve groups. Cloth, hands, death shape, full action coverage and release handoff still need review. The client exited and original settings were restored. Logs also contain text-encoding errors and an exit-stage query error, so this is not an error-free run.
+The first test (624) reads 62 distinct 2× body images across holding, hover, hit, death, front shooting and upward shooting, plus two projectile directions. The actual screenshot below shows the new unit, corpse and flying cloud. <s>It does not prove playback of the other twelve groups.</s> This describes the first test; formation tests below extend its coverage. Cloth, hands, death shape, full action coverage and release handoff still need review. The client exited and original settings were restored. Logs also contain text-encoding errors and an exit-stage query error, so this is not an error-free run.
 
 ![Actual local VCMI battle with Zealot test 624; not a Blender composite](/images/castle-zealot-512/native624-battle.png)
+
+Tests 626 and 627 temporarily removed ammunition to exercise movement, starting, turns and all three melee directions. A seven-stack ranged battle in test 628 also loaded downward shooting. Across the four runs, logs identify **113 distinct 2× body images in 14 groups**, plus the 27°, 0° and −27° projectile images. Defence and the three special groups still lack native loading evidence. Loading records alone do not establish correct display of every frame or acceptable motion.
+
+The image below is an actual game-window capture from test 627. Test 628 produced logs but no successful window capture. Tests 626–628 required forced termination after their time limits; their original game settings and creature configuration were restored byte for byte. The installed unit retains its ranged attack. Cloth intersections, hands, corpse shape and release timing still need review.
+
+![Actual seven-stack Zealot melee test 627; motion and cloth remain under review](/images/castle-zealot-512/native627-melee.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
@@ -1878,5 +1884,15 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Zealot charge and flight now share a 3D cloud. All 66 directional effect slots and 22 revised arm-pose shadows are consolidated into 130-frame offline layers. Cloth and native validation remain unfinished.</s>
 
 <s>| Zealot | Body drafts cover all eighteen groups, with shared special frames. Death silhouette, cloth and hands, effects and integration remain unaccepted |</s>
+
+</details>
+
+
+<details>
+<summary>Historical summary: first installation test 624</summary>
+
+<s>Zealot 1×/2× test assets are installed. Native battle logs read 62 body frames in six groups and two projectile directions; an actual battle screenshot is included. Sleeve trials and full animation acceptance remain unfinished.</s>
+
+<s>| Zealot | Installed 1×/2× test package: 18 active groups / 150 slots. Native logs read 62 body frames in 6 groups and 2 projectile directions. Cloth, hands, full coverage and release handoff remain unaccepted |</s>
 
 </details>
