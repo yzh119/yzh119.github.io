@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T03:00:36+00:00
+lastmod: 2026-09-18T03:33:01+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Marksman's low crossbow carry exposed shoulder distortion. A separate body and humanoid rig are now generated through the Meshy API; motion remains unverified. Halberdier's 63-frame offline preview awaits acceptance; Crusader and Swordsman test candidates are installed."
@@ -411,6 +411,18 @@ Combined trial 180 inverted the crossbow and bent the wrists incorrectly; it is 
 ![Rejected combination 180, with inverted crossbow and wrist problems](/images/castle-halberdier-01/marksman-combined180-rejected.png)
 
 ![Combination 181: orientation adjusted; finger contact and carry height remain unfinished](/images/castle-halberdier-01/marksman-combined181-draft.png)
+
+Close-up inspection found that some fingers in body 175 are fused in the mesh. The earlier full-body and shoulder reviews missed this defect; the existing geometry cannot directly support independent five-finger motion.
+
+![Original hand from body 175, with partially fused fingers](/images/castle-halberdier-01/marksman-hand183-fused.png)
+
+Trials 185–190 reuse five-finger geometry from the earlier Meshy Halberdier body, replacing only the hands while retaining the Marksman body and shoulder rig. Initial seam and curl trials failed. Subsequent welding and weight smoothing produced a rig with 28 added finger bones. After reopening the scene, ten individual digit-rotation checks left the body and opposite hand unchanged; hand vertex weights sum to one. These checks establish control isolation, not a correct grip.
+
+![Replacement five-finger geometry; the wrist seam is still unfinished and unaccepted](/images/castle-halberdier-01/marksman-hand190-draft.png)
+
+Combined trial 191 still has wrist-seam and contact problems. Its low-carry left wrist misses the target by about 2.5 cm, so it remains rejected. Wrist repair, thumb opposition and two-hand weapon placement precede full animation. This pass reused existing Meshy geometry and incurred no new API charges.
+
+![Rejected level-aim trial 191, showing remaining wrist and grip problems](/images/castle-halberdier-01/marksman-combined191-rejected.png)
 
 <details>
 <summary>Earlier Marksman reviews (historical scope, not current acceptance)</summary>
