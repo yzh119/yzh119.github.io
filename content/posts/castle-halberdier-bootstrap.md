@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T08:57:38+00:00
+lastmod: 2026-09-18T09:16:37+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Marksman body drafts now cover all 18 original groups and 101 frame slots, adding sword melee and turns. New stills, comparisons and previews are up; pose, transition, layer and native review remain unfinished."
+homeSummary: "Marksman 1×/2× test assets are installed: 16 active groups, 97 frames, geometry shadows and a separate Meshy bolt. A native battle screenshot is up; pose and transition repairs remain open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | All 18 original groups /101 body draft frames, including duplicate turns; melee and turns added, with death, fingers, draw/sheath and loading transitions, layers and native integration unfinished |
+| Marksman | 1×/2× test package installed: 16 active groups /97 frames with body, geometry shadows and selection outlines; battle loaded 39 body images in five groups and the bolt. Pose, transitions and remaining native coverage unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -230,9 +230,29 @@ The first shadow pass transformed body alpha around a fixed ground line. It lack
 
 The sixty-three geometry shadows produce 126 files at 1×/2×. Body and selection-outline files match the preceding package byte for byte. Format validation reports zero errors, zero warnings and twenty informational notices about movement inside the canvas. No temporal averaging or frame-count change was applied. Flicker, transitions and appearance still need native playback review.
 
+### Marksman layers and battle test
+
+Private package 479 is installed locally. The original file contains two unused duplicate turn groups, 9 and 10. VCMI uses **16 groups and 97 frames** from this set; the full reference comparison retains 18 groups and 101 slots. The first export incorrectly included both unused IDs in its configuration. Removing them resolved the format errors; the body animation validator now reports zero errors and zero warnings.
+
+Shadows come from each evaluated 3D pose projected onto the ground, including visible hands, weapons and the bowstring. A fixed opacity and soft edge are applied before exporting both resolutions. Holding and hover also receive selection outlines. Those outlines support highlighting; the clothing keeps its original model colours, without player-colour recolouring.
+
+![Nine offline pose composites with geometry-projected shadows; animation drafts remain under review](/images/castle-halberdier-01/marksman-layers479.png)
+
+The native battle loaded **39 distinct 2× body images** across holding, hover, forward shooting, downward shooting and death, plus two directions of the separate Meshy bolt. The mod sets release to frame 4 and uses Blender-derived launch positions. Directional foreshortening and the visible handoff still need frame-by-frame review. This encounter did not exercise every group. Its log also contains text-encoding errors, a test-map Grail-placement warning and a query -1 error at termination, so this is not a clean-log claim.
+
+![VCMI battle capture: the Marksman on the left shoots as the defender reacts; desktop areas were cropped, with no repainting](/images/castle-halberdier-01/marksman-battle480.png)
+
+Existing Swordsman and Crusader files were preserved byte for byte. The late fall, straight corpse legs, finger anatomy, sword-to-empty-hand transition and loading continuity remain unresolved. Movement, turns, melee and upward shooting need dedicated native coverage. Earlier installation statements below describe the named historical versions.
+
+<details><summary>Overview before installation, 2026-09-18</summary>
+
+<s>| Marksman | All 18 original groups /101 body draft frames, including duplicate turns; melee and turns added, with death, fingers, draw/sheath and loading transitions, layers and native integration unfinished |</s>
+
+</details>
+
 ### Marksman melee and turns
 
-The offline body draft now covers **all 18 original groups and 101 frame slots**. Groups 9 and 10 duplicate the two turn clips, leaving 97 distinct body images. Each directional melee clip has six frames; each turn half has two. Coverage is complete at the body-draft level. Pose fidelity, transitions, shadow and player-colour layers, projectile handling and native acceptance remain unfinished.
+The offline body draft now covers **all 18 original groups and 101 frame slots**. Groups 9 and 10 duplicate the two turn clips, leaving 97 distinct body images. Each directional melee clip has six frames; each turn half has two. Coverage is complete at the body-draft level. <s>Pose fidelity, transitions, shadow and player-colour layers, projectile handling and native acceptance remain unfinished.</s> Body, shadow, selection-outline and projectile drafts are now installed; the preceding section lists observed native coverage and remaining work.
 
 The original keeps the crossbow in the left hand while the right uses a short sword. This pass reuses the independent sword previously generated through the Meshy API, with no additional generation charge. Astra aligns the grip and authors the wind-up, strike and recovery in Blender. The final melee frame still holds the sword; drawing and sheathing across the empty-handed holding pose remain unresolved.
 
@@ -275,7 +295,7 @@ This offline demonstration follows VCMI's existing sequence: play the first half
 
 ### Marksman reactions, hover and death drafts
 
-<s>The current body set has eleven draft groups and 75 frames.</s> This records the stage before melee and turns; the current coverage is listed above. This pass revises hit and defence, adds the original nine-frame hover interaction, and introduces a six-frame death draft. Astra authored the animation in Blender around existing Meshy geometry, with no new generation charges. All four groups remain offline; the death timing and final pose still need substantial reference work.
+<s>The current body set has eleven draft groups and 75 frames.</s> This records the stage before melee and turns; the current coverage is listed above. This pass revises hit and defence, adds the original nine-frame hover interaction, and introduces a six-frame death draft. Astra authored the animation in Blender around existing Meshy geometry, with no new generation charges. <s>All four groups remain offline.</s> They are now included in installed test package 479; death timing and the final pose still need substantial reference work.
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-halberdier-01/marksman-reactions441.mp4"></video>
 
@@ -697,7 +717,7 @@ The existing independent Meshy bolt is now aligned along the new crossbow groove
 
 ![Blender close-up of the loaded bolt; historical version 296, before the coordinated string motion shown above](/images/castle-halberdier-01/marksman-loaded296.png)
 
-Release timing needs a configuration change. Both original resource archives set the Marksman’s climax to frame 7 in `CRANIM.TXT`. VCMI emits a separate projectile there and pauses the body animation while it travels. The new mod draft uses the level-aim frame 4, keeping the loaded bolt visible in frames 1–3 and hiding it from frame 4. This uses `graphics.missile.attackClimaxFrame`; no engine source was changed, and the draft is not installed.
+Release timing needs a configuration change. Both original resource archives set the Marksman’s climax to frame 7 in `CRANIM.TXT`. VCMI emits a separate projectile there and pauses the body animation while it travels. The new mod draft uses the level-aim frame 4, keeping the loaded bolt visible in frames 1–3 and hiding it from frame 4. This uses `graphics.missile.attackClimaxFrame`; no engine source was changed. <s>The draft is not installed.</s> Package 479 now installs this setting.
 
 The flying bolt has separate renders for the nine directions in the original `PLCBOWX.DEF`, retaining its 30×30 logical canvas at 2x. The enlarged inspection grid below does not establish final display scale relative to the loaded bolt. A launch-offset draft is calculated from the loaded bolt centre in the current battle camera; it still needs native battle verification.
 
