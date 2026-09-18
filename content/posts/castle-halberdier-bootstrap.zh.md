@@ -1,7 +1,7 @@
 ---
 title: "[AI]城堡兵种建模"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:27:39+00:00
+lastmod: 2026-09-18T02:34:10+00:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
 homeSummary: "长戟兵已有 11 组 63 帧离线分层预览，包含三维投影阴影；四帧倒地与动作衔接仍待验收，尚未安装。十字军、剑士测试素材已安装；城堡兵种整体仍在制作。"
@@ -231,6 +231,12 @@ Astra 编写了五个较大幅度的单关节测试，以及六帧双臂位置�
 168 号先按原始张手网格的末端连通区域标记五指，再沿网格扩展分区；小指的末端比另外三根手指更靠近手腕。169、170 号尝试分别设置三段弯曲，但近景仍有指节塌陷，待机第一帧的穿杆顶点数也高于原候选，两版均未采用。下一步需联合校准握点、掌形与各指节；分区检查数据保留，供后续修正使用。
 
 ![170 号分段指节试验，指节与杆身仍有明显穿插，未采用](/images/castle-halberdier-01/halberdier-finger-joints170-rejected.png)
+
+171 号检查发现了生成代码错误：`shape_key_add` 默认使用 `from_mix=True`，创建右手修正时复制了已经生效的左手修正。170 号的右手形态键额外携带了 862 个左手顶点的变形。之前只检查双手选区以外，因此漏掉了左右手之间的影响。显式指定 `from_mix=False` 后，两个形态键分别对各自选区检查均通过。
+
+![171 号去除重复变形后的左手，握持仍未验收](/images/castle-halberdier-01/halberdier-grip171-isolated.png)
+
+这解释了部分重复变形，但握持仍有穿杆，171 号没有替换预览包。[逐形态键选区检查器](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/check_shape_key_isolation.py)和[用法说明](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/docs/shape-key-isolation.md)已公开；检查器拒绝旧版 170，并通过了重新生成的 171。
 
 </details>
 

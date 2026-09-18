@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T02:27:39+00:00
+lastmod: 2026-09-18T02:34:10+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Halberdier has an offline 63-frame layered preview with geometry-projected shadows. Death poses and transitions remain unaccepted, and the package is not installed. Crusader and Swordsman test candidates are installed; Castle production continues."
@@ -231,6 +231,12 @@ Trial 167 pushes vertices inside the approximate shaft cylinder outward. In hold
 Trial 168 labels five digits from distal connected regions of the original open-hand mesh, then propagates those labels along mesh edges. The little finger ends closer to the wrist than the other three fingers. Trials 169 and 170 introduce three bending segments, but close-ups still show collapsed joints and holding-frame shaft penetration exceeds the previous candidate. Both were rejected. Grip location, palm shape and finger joints need joint calibration; the segmentation data is retained for that work.
 
 ![Rejected segmented-finger trial 170; visible joint collapse and shaft intersections](/images/castle-halberdier-01/halberdier-finger-joints170-rejected.png)
+
+Audit 171 found a generation bug. `shape_key_add` defaults to `from_mix=True`, so creating the right-hand key captured the already active left-hand correction. Trial 170's right-hand key carried changes to 862 left-hand vertices. The earlier check considered only vertices outside the union of both hand masks and missed this cross-hand effect. Explicit `from_mix=False` creation passes separate checks for both keys.
+
+![Left hand after removing duplicated deformation in 171; grip remains unaccepted](/images/castle-halberdier-01/halberdier-grip171-isolated.png)
+
+This explains part of the deformation, not correct gripping: 171 still penetrates the shaft and has not replaced the preview package. The public tools repository includes the [per-key mask checker](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/check_shape_key_isolation.py) and [usage notes](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/docs/shape-key-isolation.md). It rejects known-failing 170 and passes the independently regenerated keys in 171.
 
 </details>
 
