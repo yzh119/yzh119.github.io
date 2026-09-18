@@ -1,16 +1,16 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T15:18:53+00:00
+lastmod: 2026-09-18T20:10:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk now has a new brown-robed Meshy model and rig, with high-resolution Blender stills and two-arm pose probes. It is not installed; the revised Zealot remains installed."
+homeSummary: "The brown-robed Monk has 35 body-frame drafts for holding and three casting directions, with Blender stills and original-frame comparisons. It is not installed; the revised Zealot remains installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
 <s>The Castle roster now has independently reviewed meshes for all fourteen units: Pikeman, Halberdier, Archer, Marksman, Griffin, Royal Griffin, Swordsman, Crusader, Monk, Zealot, Cavalier, Champion, Angel and Archangel. They span long held equipment, a two-handed light crossbow, a winged quadruped, shield-and-sword combat, and an unarmed spellcaster. Each asset needs its own mesh and its own animation constraints.</s>
 
-All fourteen Castle units have Meshy bootstrap attempts, with modeling, motion repair and integration still in progress. The Zealot has returned to modeling because its old white-robed design did not match the original. The table distinguishes installed drafts from offline trials and rejected candidates.
+All fourteen Castle units have Meshy bootstrap attempts, with modeling, motion repair and integration still in progress. <s>The Zealot has returned to modeling because its old white-robed design did not match the original.</s> The corrected blue-robed Zealot is now installed as a private test; the brown-robed Monk remains in offline animation work. The table distinguishes installed drafts from offline trials and rejected candidates.
 
 ![Three-quarter concept for the Castle Halberdier](/images/castle-halberdier-01/concept-34.png)
 
@@ -29,7 +29,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
-| Monk | Gray robe and long stole rejected. Brown-robed model 641 and a new Meshy rig have static turnaround and two-arm pose probes; the full 15 groups, 109 frames and integration remain unfinished |
+| Monk | Brown-robed Meshy model and rig; four body-action drafts, 35 frames, with original-camera comparisons. Eleven groups, cloth repairs, effects and integration remain unfinished |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
@@ -966,7 +966,35 @@ Astra then posed both arms in gathered, forward and raised positions, checking t
 
 ![Actual Blender pose probes on the new rig; not complete animation or a native game capture](/images/castle-monk-641/two-arm-probes.png)
 
-The new Monk is not installed. Original groups 9 and 10 are pixel-identical duplicates of 7 and 8. Excluding them leaves 15 groups and 109 frames to author, along with 3D effects, shadows, outlines, projectile integration and native review. The old gray-robed clips will not be passed off as the finished replacement.
+<details>
+<summary>Pose-only checkpoint, September 18; superseded below</summary>
+
+<s>Gray robe and long stole rejected. Brown-robed model 641 and a new Meshy rig have static turnaround and two-arm pose probes; the full 15 groups, 109 frames and integration remain unfinished</s>
+
+<s>The new Monk is not installed. Original groups 9 and 10 are pixel-identical duplicates of 7 and 8. Excluding them leaves 15 groups and 109 frames to author, along with 3D effects, shadows, outlines, projectile integration and native review. The old gray-robed clips will not be passed off as the finished replacement.</s>
+
+</details>
+
+The new rig now has four body-action drafts: holding (6 frames), forward casting (10), upward casting (10) and downward casting (9). Astra authored the motion in Blender using the existing Meshy geometry and rig; this stage made no new paid Meshy requests. These 35 rendered body frames cover four of the required fifteen groups. The Monk is still not installed.
+
+The first folded-arm pose left both palms facing outward. A hand-axis correction brought the hands across the opposite sleeves. A separate proportion pass widened the model in the horizontal plane: its projected holding width was about 28 original pixels, against 33 in the reference at the same 78-pixel height.
+
+![Blender trials 645, 646 and 647: the splayed-hand failure, wrist correction and proportion adjustment](/images/castle-monk-641/hand-corrections.png)
+
+The forward cast now keeps the preparation longer and reaches forward on frames six and seven. Upward casting raises both hands; downward casting bends and turns the torso. The first upward trial looked high enough in a close view but read too flat through the game camera, so the revised motion raises the hands further.
+
+![Forward cast, actual 1200×1200 Blender still; body motion only](/images/castle-monk-641/cast-front-hq.png)
+
+![Upward cast, actual 1200×1200 Blender still; sleeve and shoulder-cowl deformation still need work](/images/castle-monk-641/cast-up-hq.png)
+
+![Downward cast, actual 1200×1200 Blender still; not a game screenshot](/images/castle-monk-641/cast-down-hq.png)
+
+![Holding and forward cast: original above each new rendered row; the original includes effects, the new body draft does not](/images/castle-monk-641/holding-front-frames.png)
+
+![Upward and downward casts in the fixed game camera: original above each new body row](/images/castle-monk-641/directional-frames.png)
+
+All 35 body frames fit the 900×800 canvas. Forward and upward endpoints match holding pixel for pixel; downward endpoints differ at 30 pixels by at most 2 on an 8-bit channel. Reopening the saved scene and sampling the four actions at quarter-frame intervals found no adjacent keyed quaternion sign reversals. These checks cover framing and continuity, not clothing collisions or final appearance. Fingers, sleeve/cowl deformation and reference fidelity remain open; the other eleven action groups, effects, shadows and game integration still need work.
+
 
 ### Zealot identity correction (2026-09-18)
 
