@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T13:40:40+00:00
+lastmod: 2026-09-18T14:04:29+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot has nine body-action drafts, including hit and defence. Hem binding has improved; mantle intersections, shield effects and game integration remain unfinished."
+homeSummary: "Zealot has fourteen body-action drafts, including directional casts and melee. Death, special actions, cloth repairs and effects remain unfinished; the unit is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Nine body-action drafts, 57 frames including hit and defence. Hem binding partly repaired; mantle intersections, hands, effects and turn review remain unfinished; not installed |
+| Zealot | Fourteen body-action drafts, 109 frames including directional casting and melee. Death, specials, mantle and hand repairs, effects and integration remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -1029,7 +1029,17 @@ The original hit sequence unfolds the arms, dips the head and raises one hand du
 
 ![Fourth defence frame, high-resolution Blender body draft without the magical barrier](/images/castle-zealot-512/defence550.png)
 
-All fifteen new frames fit the fixed 900×800 export canvas. Each clip returns to holding with a maximum body-vertex difference of about 0.00037 mm; this checks endpoint continuity, not cloth intersections. The current inventory is nine draft groups and 57 body frames. Nine original groups with 93 frames, shadows, effects and game integration remain unfinished. The earlier 42 rendered images predate this hem repair and must be regenerated before packaging. Existing Meshy geometry and rigging were reused without new paid requests.
+All fifteen new frames fit the fixed 900×800 export canvas. Each clip returns to holding with a maximum body-vertex difference of about 0.00037 mm; this checks endpoint continuity, not cloth intersections. <s>The current inventory is nine draft groups and 57 body frames. Nine original groups with 93 frames, shadows, effects and game integration remain unfinished. The earlier 42 rendered images predate this hem repair and must be regenerated before packaging.</s> This records candidate 551. Existing Meshy geometry and rigging were reused without new paid requests.
+
+Upward and downward casting now each have thirteen body frames, with direction-specific facing, arm height and recovery. The upward pose turns farther from the camera; the downward pose bends toward it. Original melee counts are nine frames upward, eight forward and nine downward. Upper and lower melee recover sooner than their ranged counterparts, while the forward attack pushes both hands out horizontally. These actual Blender stills retain unresolved mantle intersections, cuffs and hand shapes.
+
+![Sixth upward casting frame, high-resolution Blender still with unfinished mantle fit](/images/castle-zealot-512/up556.png)
+
+![Sixth downward casting frame, high-resolution Blender still](/images/castle-zealot-512/down556.png)
+
+![Fourth forward melee frame, high-resolution Blender still without casting effects](/images/castle-zealot-512/melee558.png)
+
+All fourteen groups have now been re-rendered from the repaired scene: 109 body frames at 900×800, all within the canvas, with the complete contact sheets inspected. The five new clips add 52 body frames. Their endpoints match holding within 0.0004 mm at the body vertices. A separate RGBA comparison confirmed that all ten original special-action frames are identical across the three direction groups, allowing one shared body clip. Eleven death frames, thirty frames across the special groups, cloth repairs, shadows, effects and game integration remain unfinished. A mantle-weight smoothing trial preserved the holding shape and softened angular edges, but raised-arm intersections remained; it was not adopted as the current version.
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
