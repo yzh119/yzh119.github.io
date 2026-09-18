@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T07:08:21+00:00
+lastmod: 2026-09-18T07:20:49+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Marksman has a 3D index-finger and trigger draft, with rejected grip trials documented. String and projectile candidates are present; hand detail, other actions and game integration remain unfinished."
+homeSummary: "The Marksman has eight holding frames and a corrected shooting recovery with the right hand at the waist. New renders and native comparisons are up; constrained finger tests still reject the grip, and directional shots and integration remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | Eight-frame shooting-body candidate; coordinated string, limb and bolt motion, front-shot projectile scale and origin calibrated offline; trigger, hand detail, other actions and integration pending |
+| Marksman | Eight-frame shooting and eight-frame holding candidates; rear hand withdraws, string/projectile drafts present; grip and finger constraints unaccepted, other actions and game integration pending |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -511,8 +511,30 @@ The new 3D action brings the index toward the underside of the lever, rotates th
 
 The body, hand and crossbow are still Meshy assets, with local motion authored by Astra. The index solver does not yet constrain every joint degree of freedom. A small fingertip-to-target error does not establish anatomical motion or collision-free surfaces. Thumb folds, joint limits, metal contact and recovery into holding remain unfinished. Nothing was installed and no Meshy credits were spent. The preceding version 315 string views retain the earlier grip.
 
+### Holding and the final shooting pose
+
+The native eight-frame sequence exposed another pose mismatch: its final frame returns the right hand toward the waist, whereas the previous candidate retained a two-handed grip. Candidate 353 now releases the rear grip after the raised-bow pose, including the trigger finger, without changing the frame count.
+
+![Original and current eight-frame shooting candidate; new images use the fixed battle camera at 2x](/images/castle-halberdier-01/marksman-shoot360-comparison.png)
+
+<video controls loop muted playsinline preload="metadata" width="300"><source src="/images/castle-halberdier-01/marksman-shoot360.mp4" type="video/mp4"></video>
+
+Playback is eight frames per second for offline review. The high-resolution final pose below shows the withdrawn right hand.
+
+![Frame eight, a 1400×1600 Blender still](/images/castle-halberdier-01/marksman-recovery355.png)
+
+Holding candidate 354 has eight frames, a nearly vertical bow beside the leg, the free hand near the waist and a small carriage motion. The first free-hand pose was too open; the fingers were subsequently curled further. Holding currently uses a relaxed string and no visible loaded bolt. Loading, cocking and the start of shooting still need a consistent treatment.
+
+![Eight-frame holding candidate, shown as a 1400×1600 Blender still](/images/castle-halberdier-01/marksman-holding356.png)
+
+Reopened checks find identical body vertices at the holding loop endpoints. The right-hand mesh also matches exactly between the final shot frame and the first holding frame. That is a partial handoff: the bow and support arm still differ, so the whole transition is not seamless. Both actions were sampled at 113 times without triggering the existing coarse body-edge stretch threshold.
+
+The trigger remains unaccepted. Restricting the two distal index joints to their bending axes and limiting the knuckle leaves the current grip about 3.8 cm short of the selected contact target. This probe did not replace the old solver in the animation. It shows why reaching a target with unrestricted joint rotation was insufficient. Grip and contact must be revised together on the existing Meshy models. Up/down shots still need the body orientation seen in the original. No mod was installed and no new Meshy credits were spent.
+
 <details>
 <summary>Historical loaded-bolt and projectile drafts (296–297)</summary>
+
+<s>| Marksman | Eight-frame shooting-body candidate; coordinated string, limb and bolt motion, front-shot projectile scale and origin calibrated offline; trigger, hand detail, other actions and integration pending |</s>
 
 <s>| Marksman | Eight-frame shooting-body candidate, loaded bolt and nine projectile direction drafts; string, trigger, hand detail, remaining actions and integration pending |</s>
 
