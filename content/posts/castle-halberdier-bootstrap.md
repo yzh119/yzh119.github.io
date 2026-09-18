@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T22:10:18+00:00
+lastmod: 2026-09-18T22:15:38+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The Monk skirt now follows the body surface at its upper rim, with a longer hem. Death frames seven and eight raise the correct screen-side arm; new stills and the full sequence remain under review."
@@ -1083,7 +1083,9 @@ A colour-and-foot-weight cleanup removed 315 suspected old robe faces in a separ
 
 ![Corrected raised-arm direction in frame seven, actual 1200×1200 Blender still; shoulder connection and palm orientation remain unfinished](/images/castle-monk-641/death-raised-arm.png)
 
-All eleven frames were rendered again. Pixel comparison with the longer-skirt candidate confirms that this arm edit changes only frames seven and eight; the other nine match exactly. A forearm quaternion sign flip was also corrected before export. The timing of the body lowering, final collapse, shoulder connection and clothing still differ from the original. This remains a local trial, with no installed resource replacement.
+The following pixel comparison records the arm-only edit before refreshing the cloth binding. All eleven frames were rendered again. Pixel comparison with the longer-skirt candidate confirms that this arm edit changes only frames seven and eight; the other nine match exactly. A forearm quaternion sign flip was also corrected before export. The timing of the body lowering, final collapse, shoulder connection and clothing still differ from the original. This remains a local trial, with no installed resource replacement.
+
+The combined scene resamples the waist references to account for the few millimetres of body movement introduced by the arm changes, then rebakes the full cloth simulation. The sequence below now shows both repairs together.
 
 ![Original sequence above the eleven-frame waist and arm revision; offline body renders, not an accepted or installed result](/images/castle-monk-641/waist-arm-death-frames.png)
 
