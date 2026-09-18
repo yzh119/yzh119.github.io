@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T14:04:29+00:00
+lastmod: 2026-09-18T14:13:46+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot has fourteen body-action drafts, including directional casts and melee. Death, special actions, cloth repairs and effects remain unfinished; the unit is not installed."
+homeSummary: "Zealot now has a shared ten-frame special action and geometric spell-effect trials. Death, cloth and effect appearance remain unfinished; the unit is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Fourteen body-action drafts, 109 frames including directional casting and melee. Death, specials, mantle and hand repairs, effects and integration remain unfinished |
+| Zealot | Body drafts cover 17 native groups, with three special groups sharing ten frames. Death, mantle and hand repairs, effects and integration remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -1039,7 +1039,19 @@ Upward and downward casting now each have thirteen body frames, with direction-s
 
 ![Fourth forward melee frame, high-resolution Blender still without casting effects](/images/castle-zealot-512/melee558.png)
 
-All fourteen groups have now been re-rendered from the repaired scene: 109 body frames at 900×800, all within the canvas, with the complete contact sheets inspected. The five new clips add 52 body frames. Their endpoints match holding within 0.0004 mm at the body vertices. A separate RGBA comparison confirmed that all ten original special-action frames are identical across the three direction groups, allowing one shared body clip. Eleven death frames, thirty frames across the special groups, cloth repairs, shadows, effects and game integration remain unfinished. A mantle-weight smoothing trial preserved the holding shape and softened angular edges, but raised-arm intersections remained; it was not adopted as the current version.
+All fourteen groups have now been re-rendered from the repaired scene: 109 body frames at 900×800, all within the canvas, with the complete contact sheets inspected. The five new clips add 52 body frames. Their endpoints match holding within 0.0004 mm at the body vertices. A separate RGBA comparison confirmed that all ten original special-action frames are identical across the three direction groups, allowing one shared body clip. <s>Eleven death frames, thirty frames across the special groups, cloth repairs, shadows, effects and game integration remain unfinished.</s> This records candidate 559. A mantle-weight smoothing trial preserved the holding shape and softened angular edges, but raised-arm intersections remained; it was not adopted as the current version.
+
+A shared ten-frame special body clip now serves all three original direction groups. There are 119 distinct body images covering 139 frame slots across 17 native groups. The new clip fits the canvas and returns to holding; the eleven-frame death remains unauthored.
+
+Spell effects are also built from three-dimensional Blender meshes. The first 49 glowing particles looked like white chunks and were rejected. A second trial used 181 crossed-axis sparks, but remained too small and sparse at native scale. The third expands the burst, adds five emissive core lobes and leaves the released tail in the air. It still lacks the original’s dense light and soft transition; mantle intersections also persist. These are unaccepted trials.
+
+![Rejected particle effect, high-resolution Blender still](/images/castle-zealot-512/special563-rejected.png)
+
+![Crossed sparks and emissive core trial, high-resolution Blender still; not accepted](/images/castle-zealot-512/special566.png)
+
+![Original and draft special sequences at matched scale; effect density and pose differences remain visible](/images/castle-zealot-512/special566-compare.png)
+
+Body and effects live in separate editable scenes so particles cannot accidentally appear in other clips. The current exports are body images and combined review renders; game-ready effect layers and occlusion checks remain unfinished.
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
