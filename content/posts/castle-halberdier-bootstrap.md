@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T01:52:11+00:00
+lastmod: 2026-09-18T02:01:07+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Halberdier turns and hover bring the working candidate to 59 frames in ten groups. A four-frame death trial is rejected for coat folds and corpse pose, with high-resolution failure images retained. Crusader and Swordsman test candidates are installed; Castle production continues."
@@ -188,6 +188,14 @@ A closer look at the original endpoint led to a side collapse with asymmetric kn
 ![Trial 150 side-collapse draft, 1800×1400 Blender still; neither accepted nor installed](/images/castle-halberdier-01/halberdier-death150-draft.png)
 
 The coat is more compact than in 144. However, the original still holds its pole aloft in frame three, while this draft has released it. Corpse and weapon silhouettes also differ. **Death remains an unaccepted draft outside the fifty-nine-frame candidate.** All sixty-three trial poses fit the canvas and pass the existing edge threshold. Those checks do not establish cloth self-collision, complete surface clearance or plausible weight support. The next revision needs to retain the pole during the intermediate fall and improve body pose before reviewing landing contact and transitions.
+
+Trial 157 keeps the pole in the left hand through frame three and releases it in frame four. Arm elevation and wrist orientation are controlled separately. Rotating the whole arm in 152 drove the butt into the floor; the wrist roll in 155 put the shaft through the forearm. Reversing that roll and moving the frame-two holding arm forward restores a visible diagonal blade. Nine shaft rays find no non-hand body or plate intersections across all sixty-three poses. Body, plates and weapon remain above the floor, and the previous fifty-nine poses match 140 at every evaluated vertex.
+
+![Original death poses and trial 157; frame three retains the pole, but frame two is still too extended](/images/castle-halberdier-01/halberdier-death157-comparison.jpg)
+
+![Trial 157 frame three, 1800×1400 Blender still; not installed, with grip and cloth review outstanding](/images/castle-halberdier-01/halberdier-death157-held.png)
+
+Early release and the edge-on blade have been addressed. The second pose is still less curled than the original, and the final corpse and dropped weapon silhouettes differ. Death remains outside the fifty-nine-frame working candidate. Body compression, weapon landing, contact and transitions remain to be revised; sampled clearance does not establish complete collision or appearance acceptance.
 
 <details>
 <summary>Candidate 126 attack record, superseded by further edits in 131</summary>
