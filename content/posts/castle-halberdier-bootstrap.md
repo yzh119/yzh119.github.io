@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T10:18:53+00:00
+lastmod: 2026-09-18T10:47:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Halberdier draft installed; Marksman logs cover 15 groups and 87 frames. The Zealot returns to modeling: its old white robe was inaccurate, and the new blue candidate has holes."
+homeSummary: "Halberdier draft installed; Marksman logs cover 15 groups and 87 frames. A new dense Meshy Zealot restores the blue/gold design without the previous visible holes; rigging is complete and folded-arm tests have begun."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Legacy white-robed model rejected for reference fidelity; blue/gold replacement has axilla and cuff holes that remeshing did not fix. New rig and installation pending |
+| Zealot | White-robed design rejected; first blue candidate had holes. New dense mesh has no previous visible holes in eight static views; 300k mesh rigged with a folded-arm probe; palm orientation, face emission and full motion remain unfinished. Not installed |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -956,6 +956,20 @@ Built-in imagegen produced this construction reference. A direct Meshy API reque
 The clay render confirms a geometry defect. Welding duplicate vertices and recalculating normals did not resolve it. A further 5-credit Meshy remesh to 50k triangles also retained visible holes. This candidate is not ready for animation binding.
 
 ![Blender render after Meshy remeshing, still rejected for geometry defects](/images/castle-zealot-512/remesh-front.png)
+
+A fresh Meshy request used the same concept with automatic remeshing disabled, retaining the dense reconstruction for another 30 credits. Its eight Blender views do not show the previous axilla or cuff holes. Because this was a fresh generation, the comparison alone cannot prove that remeshing caused all of the earlier defects.
+
+![Actual Blender front render of the new dense candidate](/images/castle-zealot-512/dense-front.png)
+
+![Eight Blender views of the dense candidate before binding](/images/castle-zealot-512/dense-turnaround.png)
+
+The new mesh has 939,712 faces. The rigging API rejected it with HTTP 400 because it exceeds the 320,000-face limit. The 300,000-face result retains the closed axilla and cuffs in front/rear review, though small dark surface marks remain. The dense source is preserved for repair. Meshy completed the reduced model’s rig for 5 credits. The emissive face material, original folded-arm pose and deformation checks also remain unfinished; this is not an in-game delivery.
+
+Astra then authored a two-arm IK probe in Blender, checking the rest pose, a midpoint and crossed forearms from front and side. The wide sleeves do not show the earlier large tears in these three sampled poses. Both palms still turn outward, however, instead of resting inside the original folded-arm silhouette. This is an unfinished pose test, not a completed holding animation. The face remains a gold surface awaiting its emissive material.
+
+![Actual Blender folded-arm probe with unfinished outward-facing palms](/images/castle-zealot-512/fold-front.png)
+
+![Side view of the same Blender pose probe](/images/castle-zealot-512/fold-side.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
