@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T20:27:45+00:00
+lastmod: 2026-09-18T20:56:31+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The brown-robed Monk now has fourteen body-action drafts, adding a smaller walking stride, turns, movement start and mouse-over. Death, cloth repairs, effects and installation remain unfinished."
+homeSummary: "The Monk has an eleven-frame death trial, but its robe folds into stretched strips. The failed poses and a failed volume-preserving skinning trial are documented; it remains uninstalled."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -29,7 +29,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
-| Monk | Brown-robed Meshy rig: fourteen body-action drafts, 98 frame slots from 72 renders. Death, clothing repair, effects and integration remain unfinished |
+| Monk | Fourteen body-action drafts plus an eleven-frame death trial rejected for robe deformation. All fifteen groups have been attempted; death repair, clothing, effects and integration remain unfinished |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
@@ -1010,7 +1010,7 @@ The shoulder-weight experiment below was rejected. Moving upper-arm influence to
 
 Reopening the saved scene confirmed all nine actions were retained. An earlier library-import attempt discarded unused actions on save; the corrected import explicitly retains them. The fifteen new recoil/defence body images fit the canvas. Their endpoints differ from holding at five pixels by at most one 8-bit channel value. <s>Walking, mouse-over, death, both turns and movement start remain unauthored on this model, along with cloth repair, effects, shadows and native integration.</s> The Monk is not installed.
 
-Five further body drafts add the six-frame walk, two-frame movement start, two frames for each turn, and ten mouse-over frames. The saved scene now retains fourteen actions, covering 98 original frame slots with 72 rendered body images. Death remains the one missing body group; clothing, effects, shadows and game integration are still unfinished.
+Five further body drafts add the six-frame walk, two-frame movement start, two frames for each turn, and ten mouse-over frames. The saved scene now retains fourteen actions, covering 98 original frame slots with 72 rendered body images. <s>Death remains the one missing body group; clothing, effects, shadows and game integration are still unfinished.</s>
 
 The first walking trial raised the knees too far and pushed a large bulge through the robe. A smaller stride and lower foot lift reduce that deformation while retaining the folded arms. The two-frame turns pass through a front-facing pose, matching the original reference sequence. Mouse-over adds a restrained head movement.
 
@@ -1022,7 +1022,21 @@ The first walking trial raised the knees too far and pushed a large bulge throug
 
 ![Walking, start, turns and mouse-over: original above each new body row](/images/castle-monk-641/movement-frames.png)
 
-All 22 new body images fit the fixed 900×800 canvas. Movement start ends on the exact first walking image. The foot check confirms alternating lifts of about one centimetre, with the support foot near the floor; a few body vertices still dip by up to one millimetre. This is an offline geometry check, and does not establish a slide-free walk at VCMI's playback speed. The next body action is the eleven-frame collapse; its first five original frames are pixel-identical to recoil.
+All 22 new body images fit the fixed 900×800 canvas. Movement start ends on the exact first walking image. The foot check confirms alternating lifts of about one centimetre, with the support foot near the floor; a few body vertices still dip by up to one millimetre. This is an offline geometry check, and does not establish a slide-free walk at VCMI's playback speed. <s>The next body action is the eleven-frame collapse; its first five original frames are pixel-identical to recoil.</s>
+
+The eleven-frame death sequence now has a first motion trial. Its first five poses follow recoil; the remaining six spread the arms, bend the knees, fold the torso and roll onto the side. Reopening the scene confirms fifteen editable actions with the original 109 frame slots, and the eleven new images fit the canvas. **The death trial has not passed visual review.**
+
+The first versions stopped in a crouch or kneel. Inspecting the actual bone hierarchy showed that this rig names its lower spine `Spine02` and its upper spine `Spine`. Redistributing the bend toward the waist and adding a final side fall changed the pose, but exposed severe robe deformation around the folded legs.
+
+![Rejected kneeling endpoint, actual 1200×1200 Blender still](/images/castle-monk-641/death-kneeling-failure.png)
+
+![Side-fall trial with stretched, overlapping robe folds; actual 1200×1200 Blender still, not an accepted result](/images/castle-monk-641/death-cloth-failure.png)
+
+![Original death sequence above the new failed body trial](/images/castle-monk-641/death-trial-frames.png)
+
+A volume-preserving skinning trial did not fix the skirt: the overlapping strips remain. A separate check found identical weights at coincident seam vertices, so averaging seam weights would not address this defect. The next repair needs to handle the robe independently of the deeply bent legs. The death trial is kept separately from the preceding fourteen-action scene; no game installation was made.
+
+![Rejected volume-preserving skinning trial, actual Blender still](/images/castle-monk-641/death-volume-failure.png)
 
 ### Zealot identity correction (2026-09-18)
 
