@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T05:51:29+00:00
+lastmod: 2026-09-18T06:17:56+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Marksman cuffs and grip contact improved; a carry-to-aim study is now checked. Hand detail and full actions remain unfinished, with no installation. Halberdier review continues; Swordsman and Crusader test assets are installed."
+homeSummary: "The Marksman now has an eight-frame front-shot body candidate following the original pose order, with a 2x comparison, clip and high-resolution still. Projectile work, other actions and integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | Cuffs and grips revised; carry-to-aim study checked at 33 times. Hand detail, full native actions and game integration pending |
+| Marksman | Native eight-frame front-shot body candidate, 2x offline comparison and 113-time local checks complete; projectile work, hand detail, remaining actions and integration pending |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -444,14 +444,32 @@ The cuff section extending into the palm has been shortened by 3 cm. Its endpoin
 
 ![Blender close-up after shortening the cuffs and refitting both grips, candidate 269](/images/castle-halberdier-01/marksman-cuff269.png)
 
-The assembled character now has a carry-to-aim study. With only three poses, hands followed the bow at the keys but drifted by about 2.1 cm between them. Solving 17 poses along the path reduces maximum relative drift to about 0.24 mm across 33 times checked after reopening the file. No body edge exceeded both three times its rest length and 8 cm in this coarse tear check. The nine-frame study covers raising the bow only; firing, recovery and the other native actions remain unfinished, with no game installation.
+The assembled character now has a carry-to-aim study. With only three poses, hands followed the bow at the keys but drifted by about 2.1 cm between them. Solving 17 poses along the path reduces maximum relative drift to about 0.24 mm across 33 times checked after reopening the file. No body edge exceeded both three times its rest length and 8 cm in this coarse tear check. The nine-frame study covers raising the bow only; <s>firing, recovery and the other native actions remain unfinished</s>; the subsequent eight-frame body candidate is shown below, while the complete action package remains unfinished, with no game installation.
 
 ![Blender still of the raised-bow study, not a complete firing animation](/images/castle-halberdier-01/marksman-raise274.png)
 
 ![Side view of the same aim pose for wrist, cuff and crossbow review](/images/castle-halberdier-01/marksman-raise274-side.png)
 
+### Native eight-frame shot
+
+Reviewing `CHCBOW.DEF` frame by frame shows the right hand starting beside the waist, then joining the crossbow. Frames 4–6 hold a level aim, frame 7 raises the bow sharply, and frame 8 lowers it. The new body candidate follows that order, with the right fingers changing from a relaxed curl to their fitted grip. The first level aim sat at chest height; comparison led to a higher position closer to the original jaw-level aim.
+
+![Original and new 2x body frames; original on the left of each pair](/images/castle-halberdier-01/marksman-shoot288-comparison.png)
+
+<video controls loop muted playsinline preload="metadata" width="300"><source src="/images/castle-halberdier-01/marksman-shoot288-body.mp4" type="video/mp4"></video>
+
+The clip presents the eight body frames at eight frames per second for review, not as a claim about in-game timing. They come from a Blender 3D action, rendered on a fixed 900×800 canvas and camera at 2x. None reaches the canvas edge.
+
+![1400×1600 Blender still of the raised bow in frame 7](/images/castle-halberdier-01/marksman-shoot286-raised.png)
+
+Reopening the file and checking 113 times gives a maximum hand-to-bow deviation of about 0.51 mm: the left grip is checked throughout, and the right from frame 4 onward. No coarse large-edge stretch check triggers. More solved poses and linear interpolation reduce sliding around the raised-bow reversal. All evaluated body, hand and bow vertices at the eight integer frames remain exactly unchanged by the interpolation update.
+
+This is still a front-shot body candidate. Projectile, string and trigger behavior, hand close-ups, the return to holding and the other actions remain unfinished. Nothing new has been installed. This pass reused existing Meshy models without additional API charges.
+
 <details>
 <summary>Rejected first assembly</summary>
+
+<s>| Marksman | Cuffs and grips revised; carry-to-aim study checked at 33 times. Hand detail, full native actions and game integration pending |</s>
 
 <s>| Marksman | Independent Meshy hands assembled and following body wrists; cuff points and grip intersections remain, full motion pending, not installed |</s>
 
