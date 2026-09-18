@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T09:16:37+00:00
+lastmod: 2026-09-18T09:32:37+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Marksman 1×/2× test assets are installed: 16 active groups, 97 frames, geometry shadows and a separate Meshy bolt. A native battle screenshot is up; pose and transition repairs remain open."
+homeSummary: "The installed Marksman draft now ends its fall prone with bent legs. New Blender comparisons and a native corpse screenshot are up; mid-fall motion, fingers and action transitions still need work."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -242,7 +242,7 @@ The native battle loaded **39 distinct 2× body images** across holding, hover, 
 
 ![VCMI battle capture: the Marksman on the left shoots as the defender reacts; desktop areas were cropped, with no repainting](/images/castle-halberdier-01/marksman-battle480.png)
 
-Existing Swordsman and Crusader files were preserved byte for byte. The late fall, straight corpse legs, finger anatomy, sword-to-empty-hand transition and loading continuity remain unresolved. Movement, turns, melee and upward shooting need dedicated native coverage. Earlier installation statements below describe the named historical versions.
+Existing Swordsman and Crusader files were preserved byte for byte. <s>The late fall, straight corpse legs, finger anatomy, sword-to-empty-hand transition and loading continuity remain unresolved.</s> Revision 502 installs the prone, bent-leg ending; the mid-fall motion, fingers, sword transition and loading continuity still need work. Movement, turns, melee and upward shooting need dedicated native coverage. Earlier installation statements below describe the named historical versions.
 
 <details><summary>Overview before installation, 2026-09-18</summary>
 
@@ -299,6 +299,8 @@ This offline demonstration follows VCMI's existing sequence: play the first half
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-halberdier-01/marksman-reactions441.mp4"></video>
 
+This video retains death version 437. The revised 499 comparison, stills and native capture appear below.
+
 The review adds four-frame pauses at each clip boundary. Its 8 fps playback is for inspection and does not establish engine timing.
 
 ![Hit peak, high-resolution static Blender render](/images/castle-halberdier-01/marksman-hitted442.png)
@@ -317,15 +319,37 @@ The stronger recoil and higher defensive carry preserve continuous left-hand att
 
 The first hover draft put the crossbow below the left hand's reachable range, leaving more than 5 cm of error. Raising it and moving it toward that shoulder reduced drift to 0.05 mm across 129 samples. Both endpoints match holding. The original still looks farther down toward the weapon.
 
+Death revision 499 replaces the supine, extended-leg ending with a prone pose and asymmetrical knee bends. The fall also reaches the ground sooner in frames four and five. It reuses editable Meshy geometry and local animation without another API charge. Test package 502 installs the six revised body frames and their geometry shadows.
+
+![High-resolution Blender still of the new prone ending; the tumble and overall reference fidelity remain under review](/images/castle-halberdier-01/marksman-death502.png)
+
+![Original and revised six-frame death sequence; frame four and the rolling path still differ visibly](/images/castle-halberdier-01/marksman-death502-comparison.png)
+
+A ground-plane render exposed elevated hands and a floating crossbow that were less obvious against transparency. Lowering the torso, hands and weapon brought them close to the floor. Across 321 reopened-scene samples, the gripping hand drifts by at most 0.047 mm relative to the bow, with up to 0.074 mm of floor penetration and no coarse long-edge flags. This does not validate finger anatomy, cloth contact or the tumble's timing.
+
+![Blender ground-plane diagnostic for torso, hand and crossbow placement](/images/castle-halberdier-01/marksman-death502-ground.png)
+
+The native client read all six revised 2× death bodies and shadows. Its battlefield now shows the prone corpse below. Only 24 body/shadow images across both resolutions were replaced; 1,099 other mod files retained identical bytes.
+
+![Native VCMI battle capture with the revised corpse at the upper right](/images/castle-halberdier-01/marksman-death503-battle.png)
+
+<details><summary>Rejected trials and earlier death versions</summary>
+
+Trial 482 bent both legs too symmetrically. Trial 485 crossed them, requiring a correction to the outward rotation. Trial 489 delayed the roll until frame five left the body balanced on its side. Trial 493 rolled earlier but still floated its hands and bow above the ground. The following revisions lowered the torso and weapon; the failed ground render is retained here.
+
+![Rejected trial 493: knees touch the ground while hands and crossbow remain elevated](/images/castle-halberdier-01/marksman-death493-floating.png)
+
 ![Final death pose, static Blender render; visual acceptance pending](/images/castle-halberdier-01/marksman-death442.png)
 
 ![Six death frames: the draft lands later and leaves the legs more extended](/images/castle-halberdier-01/marksman-death442-comparison.png)
 
-The first fall merely rotated the recoil pose and left the free arm raised at the end. It is rejected. The revised scene settles the arm and weapon as the body falls backward. Across 321 samples, the body, hands, bow and string stay above the floor within numerical precision; left-hand drift peaks at 2.11 mm. These checks do not establish plausible support or collision-free cloth. Frames four and five need an earlier, more compact fall, and the final legs need to follow the original more closely.
+<s>The first fall merely rotated the recoil pose and left the free arm raised at the end. It is rejected. The revised scene settles the arm and weapon as the body falls backward. Across 321 samples, the body, hands, bow and string stay above the floor within numerical precision; left-hand drift peaks at 2.11 mm. These checks do not establish plausible support or collision-free cloth. Frames four and five need an earlier, more compact fall, and the final legs need to follow the original more closely.</s>
 
 ![Rejected first death draft, with the free arm still raised](/images/castle-halberdier-01/marksman-death424-rejected.png)
 
 <s>Directional melee, turns, the constrained trigger finger, loading continuity, layered export and native review remain unfinished.</s> Melee and turn body drafts now exist; the other issues remain open.
+
+</details>
 
 <details>
 <summary>Hit and defence at candidate 415 (superseded by 421)</summary>
