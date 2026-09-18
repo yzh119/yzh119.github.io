@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T10:47:18+00:00
+lastmod: 2026-09-18T10:55:39+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Halberdier draft installed; Marksman logs cover 15 groups and 87 frames. A new dense Meshy Zealot restores the blue/gold design without the previous visible holes; rigging is complete and folded-arm tests have begun."
+homeSummary: "Zealot now has a blue/gold mesh, graded face emission and Blender drafts for six-frame holding and ten-frame fidget. Hand/sleeve fidelity remains open; it is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | White-robed design rejected; first blue candidate had holes. New dense mesh has no previous visible holes in eight static views; 300k mesh rigged with a folded-arm probe; palm orientation, face emission and full motion remain unfinished. Not installed |
+| Zealot | New blue-robed Meshy mesh/rig; graded face emission, six-frame holding and ten-frame fidget drafts. Hand/sleeve fidelity, remaining actions, native framing and installation are unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -963,13 +963,23 @@ A fresh Meshy request used the same concept with automatic remeshing disabled, r
 
 ![Eight Blender views of the dense candidate before binding](/images/castle-zealot-512/dense-turnaround.png)
 
-The new mesh has 939,712 faces. The rigging API rejected it with HTTP 400 because it exceeds the 320,000-face limit. The 300,000-face result retains the closed axilla and cuffs in front/rear review, though small dark surface marks remain. The dense source is preserved for repair. Meshy completed the reduced model’s rig for 5 credits. The emissive face material, original folded-arm pose and deformation checks also remain unfinished; this is not an in-game delivery.
+The new mesh has 939,712 faces. The rigging API rejected it with HTTP 400 because it exceeds the 320,000-face limit. The 300,000-face result retains the closed axilla and cuffs in front/rear review, though small dark surface marks remain. The dense source is preserved for repair. Meshy completed the reduced model’s rig for 5 credits. <s>The emissive face material, original folded-arm pose and deformation checks also remain unfinished; this is not an in-game delivery.</s> Subsequent material and motion trials appear below; the model remains uninstalled.
 
-Astra then authored a two-arm IK probe in Blender, checking the rest pose, a midpoint and crossed forearms from front and side. The wide sleeves do not show the earlier large tears in these three sampled poses. Both palms still turn outward, however, instead of resting inside the original folded-arm silhouette. This is an unfinished pose test, not a completed holding animation. The face remains a gold surface awaiting its emissive material.
+<s>Astra then authored a two-arm IK probe in Blender, checking the rest pose, a midpoint and crossed forearms from front and side. The wide sleeves do not show the earlier large tears in these three sampled poses. Both palms still turn outward, however, instead of resting inside the original folded-arm silhouette. This is an unfinished pose test, not a completed holding animation. The face remains a gold surface awaiting its emissive material.</s>
 
 ![Actual Blender folded-arm probe with unfinished outward-facing palms](/images/castle-zealot-512/fold-front.png)
 
 ![Side view of the same Blender pose probe](/images/castle-zealot-512/fold-side.png)
+
+The next local revision raises the crossed arms and turns the wrists inward. It adds six keyed holding frames and a ten-frame head-turn draft on the editable Blender rig. These use the original frame counts but enlarged offline framing, not the game canvas. Too much of each hand remains exposed and the cuffs are more open than the reference; the pose is still under review.
+
+The first emissive face selection missed much of the mask and accidentally lit the hood rim. Expanding that selection still leaked light. A mesh attribute now supplies a gradual emission mask, bright at the face centre and fading toward its edge, while retaining the trim’s ordinary material.
+
+![Rejected Blender emission selection: a small face patch and accidental hood highlights](/images/castle-zealot-512/rejected-glow521.png)
+
+![Current Blender holding still with graded face emission; folded arms and cuffs remain unfinished](/images/castle-zealot-512/holding524.png)
+
+![Frame five of the ten-frame Blender head-turn draft, not an in-game capture](/images/castle-zealot-512/mouseon524.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
