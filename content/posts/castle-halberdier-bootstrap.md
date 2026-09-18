@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-18T15:18:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot charge and flight now share a 3D cloud. All 66 directional effect slots and 22 revised arm-pose shadows are consolidated into 130-frame offline layers. Cloth and native validation remain unfinished."
+homeSummary: "Zealot 1×/2× test assets are installed. Native battle logs read 62 body frames in six groups and two projectile directions; an actual battle screenshot is included. Sleeve trials and full animation acceptance remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Body drafts cover all eighteen groups, with shared special frames. Death silhouette, cloth and hands, effects and integration remain unaccepted |
+| Zealot | Installed 1×/2× test package: 18 active groups / 150 slots. Native logs read 62 body frames in 6 groups and 2 projectile directions. Cloth, hands, full coverage and release handoff remain unaccepted |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -963,7 +963,7 @@ A fresh Meshy request used the same concept with automatic remeshing disabled, r
 
 ![Eight Blender views of the dense candidate before binding](/images/castle-zealot-512/dense-turnaround.png)
 
-The new mesh has 939,712 faces. The rigging API rejected it with HTTP 400 because it exceeds the 320,000-face limit. The 300,000-face result retains the closed axilla and cuffs in front/rear review, though small dark surface marks remain. The dense source is preserved for repair. Meshy completed the reduced model’s rig for 5 credits. <s>The emissive face material, original folded-arm pose and deformation checks also remain unfinished; this is not an in-game delivery.</s> Subsequent material and motion trials appear below; the model remains uninstalled.
+The new mesh has 939,712 faces. The rigging API rejected it with HTTP 400 because it exceeds the 320,000-face limit. The 300,000-face result retains the closed axilla and cuffs in front/rear review, though small dark surface marks remain. The dense source is preserved for repair. Meshy completed the reduced model’s rig for 5 credits. <s>The emissive face material, original folded-arm pose and deformation checks also remain unfinished; this is not an in-game delivery.</s> Subsequent material and motion trials appear below; the model <s>remains uninstalled</s>.
 
 <s>Astra then authored a two-arm IK probe in Blender, checking the rest pose, a midpoint and crossed forearms from front and side. The wide sleeves do not show the earlier large tears in these three sampled poses. Both palms still turn outward, however, instead of resting inside the original folded-arm silhouette. This is an unfinished pose test, not a completed holding animation. The face remains a gold surface awaiting its emissive material.</s>
 
@@ -1019,7 +1019,7 @@ Two-frame move-start, left-turn and right-turn drafts were also added. They rema
 
 <s>The seven current groups now have 42 body frames re-exported through a fixed camera at 900×800, all within the canvas. Eleven original groups, shadows, effects and integration remain unfinished, and walking is still an unaccepted draft.</s> This records candidate 545.
 
-A follow-up on September 18 identified 54 missed garment vertices through mesh connectivity. Rebinding these islands to the robe bone preserved both the boot weights and the uncut mesh. The low-hem diagnostic counts edges longer than 3 cm and four times their rest length. Counts across the six walking frames fell from 111, 134, 94, 110, 167 and 94 to 0, 22, 0, 0, 54 and 0. Two frames still contain roughly 3.6 cm stretches; the walk remains unaccepted.
+A follow-up on September 18 identified 54 missed garment vertices through mesh connectivity. Rebinding these islands to the robe bone preserved both the boot weights and the uncut mesh. The low-hem diagnostic counts edges longer than 3 cm and four times their rest length. Counts across the six walking frames fell from 111,134, 94,110,167 and 94 to 0, 22, 0, 0, 54 and 0. Two frames still contain roughly 3.6 cm stretches; the walk remains unaccepted.
 
 ![Third walking frame after the binding repair, high-resolution Blender still; other frames still fail the hem check](/images/castle-zealot-512/walk547.png)
 
@@ -1111,7 +1111,7 @@ Defence also has a seven-frame curved magical ward built from independent three-
 
 On September 18, candidate 595 added 3D effects for front, upward and downward ranged casts and melee actions. The six clips occupy 66 original frame slots: 26 contain effects and the rest are empty. Each slot has a full-scene render and a transparent effect pass with body occlusion, composited offline over the existing body and shadow. All effects fit the canvas. Visible-pixel mean RGBA error between recomposition and full-scene rendering reaches 4.79/255; these are still trial layers.
 
-The comparison exposes smaller bursts than the original, while the high-resolution stars look too hard. Upward casts also place the hands and burst too low. Sleeves still intersect the mantle. Both images retain this unaccepted attempt. <s>The original projectile has been extracted in nine directions for reference; its 3D replacement remains unmade, and the Zealot package is not installed.</s> This records candidate 595. A projectile draft follows below; game integration remains unfinished.
+The comparison exposes smaller bursts than the original, while the high-resolution stars look too hard. Upward casts also place the hands and burst too low. Sleeves still intersect the mantle. Both images retain this unaccepted attempt. <s>The original projectile has been extracted in nine directions for reference; its 3D replacement remains unmade, and the Zealot package is not installed.</s> This records candidate 595. A projectile draft follows below; <s>game integration remains unfinished</s>.
 
 ![Front cast frame five, actual high-resolution Blender render; unaccepted effect and cloth trial](/images/castle-zealot-512/cast595-front.png)
 
@@ -1119,13 +1119,13 @@ The comparison exposes smaller bursts than the original, while the high-resoluti
 
 The next revision raises both hands in upward ranged casting and melee, with 22 body frames re-exported. The first target shift exceeded arm reach and left the solver near a straight elbow. Candidate 599 caps targets at 94% of the combined arm-segment length. Keyed target error is below 0.001 mm and all 22 frames fit the canvas. This verifies target placement only; sleeve and mantle intersections remain.
 
-Larger particles and a wider cloud then produced an overexposed white core in candidate 600. Candidate 601 reduces brightness and opacity, restores blue and gold, and rotates the elongated core toward the casting direction. It is still too blue and its high-resolution stars remain hard. Only frames four and five of the front and upward casts have been rendered for this comparison; <s>the complete 66-slot export above has not been replaced, and revised body shadows have not been regenerated.</s> This records candidate 601; candidate 611 below updates the complete export. These are actual Blender renders; the unit remains uninstalled.
+Larger particles and a wider cloud then produced an overexposed white core in candidate 600. Candidate 601 reduces brightness and opacity, restores blue and gold, and rotates the elongated core toward the casting direction. It is still too blue and its high-resolution stars remain hard. Only frames four and five of the front and upward casts have been rendered for this comparison; <s>the complete 66-slot export above has not been replaced, and revised body shadows have not been regenerated.</s> This records candidate 601; candidate 611 below updates the complete export. These are actual Blender renders; the unit <s>remains uninstalled</s>.
 
 ![Frame five: original, candidate 595, overexposed 600 and revised 601](/images/castle-zealot-512/cast601-compare.png)
 
 ![Revised upward cast, high-resolution Blender still; colour, star shapes and cloth remain unfinished](/images/castle-zealot-512/cast601-up.png)
 
-The projectile now has a separate 3D model with 900 crossed stars and 15 transparent cores. The original `CPRZEAX.DEF` contains nine directions, and the Zealot row in `CRANIM.TXT` releases it on frame six. The angles are 90°, 72°, 45°, 27°, 0° and the corresponding downward angles. Candidate 606 renders all nine onto a 120×120 canvas for a logical 60×60 image, with a separate 1× export. All nine fit the canvas. Resources and candidate launch offsets are stored locally, not installed.
+The projectile now has a separate 3D model with 900 crossed stars and 15 transparent cores. The original `CPRZEAX.DEF` contains nine directions, and the Zealot row in `CRANIM.TXT` releases it on frame six. The angles are 90°, 72°, 45°, 27°, 0° and the corresponding downward angles. Candidate 606 renders all nine onto a 120×120 canvas for a logical 60×60 image, with a separate 1× export. All nine fit the canvas. Resources and candidate launch offsets are stored locally, <s>not installed</s>.
 
 The first cloud was small and showed distinct core boundaries. The larger revision also exposed dark patches where transparent cores overlapped. Raising Cycles transparent bounces to 64, with geometry and materials unchanged, removed those patches. The comparison preserves the original, faulty 604 and revised 606. Spherical core boundaries and hard star shapes still need work at high resolution.
 
@@ -1139,7 +1139,7 @@ An offline handoff uses the fifth-frame charge centre to place the projectile on
 
 Candidate 609 directly reuses projectile 606 geometry and materials, scaling by the pixel ratio between the orthographic cameras and rotating toward each casting direction. Effect layers share the projectile colour transform and retain body occlusion; existing body renders keep their own colour treatment. The downward size jump shown above is reduced in the new offline comparison. Fidelity and native handoff remain unverified.
 
-All 66 directional effect slots have been re-exported, and every expected empty frame is empty. The raised-arm clips also have 22 regenerated shadows; all four start/end shadows match holding pixel for pixel. Candidate 611 consolidates 130 body frames, 130 shadows and 83 effect slots. Seventeen defence and special-action slots still use older trials. All composites fit the canvas. Cloth, hands, death and walking detail remain unfinished, and the unit is not installed.
+All 66 directional effect slots have been re-exported, and every expected empty frame is empty. The raised-arm clips also have 22 regenerated shadows; all four start/end shadows match holding pixel for pixel. Candidate 611 consolidates 130 body frames, 130 shadows and 83 effect slots. Seventeen defence and special-action slots still use older trials. All composites fit the canvas. Cloth, hands, death and walking detail remain unfinished, and the unit is <s>not installed</s>.
 
 ![Release handoff with shared 3D geometry, offline composite](/images/castle-zealot-512/shared609-handoff.png)
 
@@ -1154,6 +1154,16 @@ Candidate 615 extends the correction to all 14 front-cast frames and fades it at
 ![Full fourteen-frame corrective trial, not adopted](/images/castle-zealot-512/mantle616-frames.png)
 
 ![Diagnostic render with the added mantle hidden; not a proposed new design](/images/castle-zealot-512/mantle617-hidden.png)
+
+Further sleeve trials reject two shortcuts: preserve-volume skinning bulges the torso, while local smoothing creates broken underarm edges. Candidate 621 first welds coincident vertices, then applies the same smoothing to shoulder weight transitions. Vertex count falls from 247,757 to 132,649; polygon count stays 265,495 and the UV layer remains. The new raised-arm render avoids those broken edges, but folds still need work. Holding and front/upward casting total 33 checked native-canvas frames. This trial does not replace the main resource set.
+
+![Actual Blender comparison: linear skinning, preserve-volume skinning, smoothing alone, then welding plus smoothing](/images/castle-zealot-512/sleeve 622-compare.png)
+
+**The Zealot test package was installed locally on September 18, 2026.** It uses candidate 611 layers and excludes the sleeve experiment above. The package covers 18 active groups and 150 slots, reusing 130 body images, at two resolutions, with geometry shadows, holding/hover outlines and nine projectile directions. All 1,401 existing files for the other four units are preserved.
+
+The test battle reads 62 distinct 2× body images across holding, hover, hit, death, front shooting and upward shooting, plus two projectile directions. The actual screenshot below shows the new unit, corpse and flying cloud. It does not prove playback of the other twelve groups. Cloth, hands, death shape, full action coverage and release handoff still need review. The client exited and original settings were restored. Logs also contain text-encoding errors and an exit-stage query error, so this is not an error-free run.
+
+![Actual local VCMI battle with Zealot test 624; not a Blender composite](/images/castle-zealot-512/native 624-battle.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
@@ -1859,5 +1869,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Candidate 606 homepage history</summary>
 
 <s>Zealot now has a nine-direction 3D projectile and 1×/2× resource drafts. Transparent-core dark patches are fixed; charge-to-projectile size and colour jumps remain. Not installed.</s>
+
+</details>
+
+<details>
+<summary>Before local Zealot installation</summary>
+
+<s>Zealot charge and flight now share a 3D cloud. All 66 directional effect slots and 22 revised arm-pose shadows are consolidated into 130-frame offline layers. Cloth and native validation remain unfinished.</s>
+
+<s>| Zealot | Body drafts cover all eighteen groups, with shared special frames. Death silhouette, cloth and hands, effects and integration remain unaccepted |</s>
 
 </details>
