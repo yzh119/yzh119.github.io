@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T15:05:49+00:00
+lastmod: 2026-09-18T15:18:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Two Zealot mantle simulations remain unaccepted because of shape and intersection problems. Attachment repairs now reach the effect scene; final art and game integration remain unfinished."
+homeSummary: "All 130 Zealot body frames now have geometry-projected shadows, plus a seven-frame curved ward and isolated effect layers. Cloth and effect appearance remain unfinished; the unit is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1061,7 +1061,7 @@ Parenting the mantle to the armature object preserved the holding shape and made
 
 ![Death ending after repairing mantle root following, high-resolution Blender still; pose remains unfinished](/images/castle-zealot-512/death570.png)
 
-The first timing pass also reached the floor by frame nine, earlier than the original; a subsequent revision delays the main fall to the last frames. A further revision adjusts the falling root’s ground-plane travel with the camera held fixed. <s>The original ending occupies 44×28 logical pixels; the draft is about 44.5×40.5 and remains too tall.</s> These dimensions describe candidate 574. Body drafts now cover all eighteen native groups: 130 distinct images mapped to 150 active frame slots. Cloth, hands, effects, shadows and game integration are still unfinished. <s>Earlier exports and separate effect scenes have not yet been regenerated with the mantle root-follow repair.</s> This records the export state at candidate 574.
+The first timing pass also reached the floor by frame nine, earlier than the original; a subsequent revision delays the main fall to the last frames. A further revision adjusts the falling root’s ground-plane travel with the camera held fixed. <s>The original ending occupies 44×28 logical pixels; the draft is about 44.5×40.5 and remains too tall.</s> These dimensions describe candidate 574. Body drafts now cover all eighteen native groups: 130 distinct images mapped to 150 active frame slots. <s>Cloth, hands, effects, shadows and game integration are still unfinished.</s> This records the outstanding work at candidate 574; shadow drafts follow below. <s>Earlier exports and separate effect scenes have not yet been regenerated with the mantle root-follow repair.</s> This records the export state at candidate 574.
 
 ![Original death and revised fall timing; the ending silhouette remains unaccepted](/images/castle-zealot-512/death574-compare.png)
 
@@ -1094,6 +1094,20 @@ Both trials are saved separately; current body exports still use candidate 581. 
 The special action also has ten transparent effect-layer renders. The body acts as an occluder without appearing in that layer. Frames 1, 9 and 10 are empty; the remaining effects can be composited over the existing body frames. Recomposition still differs from the integrated scene render, with a peak-frame mean RGBA channel error of about 6/255 over visible pixels. These layers are not yet accepted for the game.
 
 ![Body, isolated effect and recomposition, using actual Blender exports](/images/castle-zealot-512/special587-layers.png)
+
+All 130 body frame files now have separate shadows. Each shadow projects the evaluated body, mantle and waist attachments onto the ground in a fixed direction, using the same camera as the body render. Denoising and animated random seeds are disabled. The masks then receive uniform 50% opacity and a 1.6-pixel blur on the 2× canvas.
+
+Every shadow fits the canvas. Repeating the same holding pose produced identical RGBA pixels, and ten action endings matched the holding shadow exactly. These checks exclude random rendering differences and endpoint jumps in the tested poses; they do not establish flicker-free playback for the whole animation in game.
+
+![Offline body and geometry-shadow composites for movement, turns, casting and death; these are not game screenshots](/images/castle-zealot-512/shadows590-review.png)
+
+Defence also has a seven-frame curved magical ward built from independent three-dimensional star meshes. The first 151-spark trial was visible in a large render but too thin and faint at native size. The revision uses 241 larger sparks, leaves a released tail in frame six and has empty effect layers at both endpoints. All seven body, shadow and effect recompositions fit the canvas.
+
+![Fourth defence frame, high-resolution Blender still; hands, cloth and effect appearance remain under review](/images/castle-zealot-512/ward592.png)
+
+![Original defence and the draft with geometry shadows and a separate effect layer](/images/castle-zealot-512/ward592-compare.png)
+
+Only special actions and defence currently have isolated effect trials. Other casting and melee effects, the projectile, mantle intersections, hands, death pose and final layered appearance remain unfinished. The Zealot package is not installed in the game.
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
