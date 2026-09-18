@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T09:32:37+00:00
+lastmod: 2026-09-18T09:43:43+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The installed Marksman draft now ends its fall prone with bent legs. New Blender comparisons and a native corpse screenshot are up; mid-fall motion, fingers and action transitions still need work."
+homeSummary: "The Halberdier 11-group, 63-frame draft is installed with a native battle capture. Marksman logs now cover 15 groups and 87 frames; grip, cloth and transition work remains open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | Offline 1×/2× layered preview: 63 frames in 11 groups, with geometry-projected shadows; death, grip, shoulder cloth and transitions remain unaccepted; not installed |
+| Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | 1×/2× test package installed: 16 active groups /97 frames with body, geometry shadows and selection outlines; battle loaded 39 body images in five groups and the bolt. Pose, transitions and remaining native coverage unfinished |
+| Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -220,7 +220,7 @@ A separate triangle-surface check covers the complete weapon, including blade an
 
 ### Layered review and geometry shadows
 
-Offline package 164 contains eleven groups and sixty-three frames of 1×/2× bodies, shadows and the required selection outlines. Four death poses still await appearance acceptance. This package is not installed.
+Offline package 164 contains eleven groups and sixty-three frames of 1×/2× bodies, shadows and the required selection outlines. Four death poses still await appearance acceptance. <s>This package is not installed.</s> Installation record 507 now installs it as a test candidate; the observed native coverage follows below.
 
 The first shadow pass transformed body alpha around a fixed ground line. It lacked the vertices' individual heights and depth positions. The replacement reads the evaluated Blender mesh, projects it along a fixed light direction onto world z=0, and renders that silhouette through the same camera. Opacity and spatial softness are shared between the comparisons; body images remain unchanged.
 
@@ -228,7 +228,21 @@ The first shadow pass transformed body alpha around a fixed ground line. It lack
 
 ![Layered walk from package 164, shown at 150 milliseconds per frame rather than measured game timing](/images/castle-halberdier-01/halberdier-walk-layered164.gif)
 
-The sixty-three geometry shadows produce 126 files at 1×/2×. Body and selection-outline files match the preceding package byte for byte. Format validation reports zero errors, zero warnings and twenty informational notices about movement inside the canvas. No temporal averaging or frame-count change was applied. Flicker, transitions and appearance still need native playback review.
+The sixty-three geometry shadows produce 126 files at 1×/2×. Body and selection-outline files match the preceding package byte for byte. Format validation reports zero errors, zero warnings and twenty informational notices about movement inside the canvas. No temporal averaging or frame-count change was applied. The native encounter below now covers some groups. Flicker, transitions and full appearance acceptance remain under review.
+
+Installation record 507 adds the preceding package 164 to the local mod. It retains that package's grip and does not include the later rejected finger experiments. The source-scene hash and format checks were revalidated. The installation adds 278 files while preserving 1,123 existing Swordsman, Crusader and Marksman resource files.
+
+The native encounter loaded **38 distinct 2× body images in eight groups**: holding, hover, movement, both turns, forward attack, hit and death. Upward/downward attacks and defence were not exercised. The capture below shows the installed draft; grip anatomy, shoulder cloth, corpse support and transitions remain open, along with a dedicated review of shadow stability over time.
+
+![Native Halberdier battle capture showing the installed combat and corpse drafts; full appearance acceptance remains open](/images/castle-halberdier-01/halberdier-battle508.png)
+
+<details><summary>Overview before expanded native testing, 2026-09-18</summary>
+
+<s>| Halberdier | Offline 1×/2× layered preview: 63 frames in 11 groups, with geometry-projected shadows; death, grip, shoulder cloth and transitions remain unaccepted; not installed |</s>
+
+<s>| Marksman | 1×/2× test package installed: 16 active groups /97 frames with body, geometry shadows and selection outlines; battle loaded 39 body images in five groups and the bolt. Pose, transitions and remaining native coverage unfinished |</s>
+
+</details>
 
 ### Marksman layers and battle test
 
@@ -242,13 +256,19 @@ The native battle loaded **39 distinct 2× body images** across holding, hover, 
 
 ![VCMI battle capture: the Marksman on the left shoots as the defender reacts; desktop areas were cropped, with no repainting](/images/castle-halberdier-01/marksman-battle480.png)
 
-Existing Swordsman and Crusader files were preserved byte for byte. <s>The late fall, straight corpse legs, finger anatomy, sword-to-empty-hand transition and loading continuity remain unresolved.</s> Revision 502 installs the prone, bent-leg ending; the mid-fall motion, fingers, sword transition and loading continuity still need work. Movement, turns, melee and upward shooting need dedicated native coverage. Earlier installation statements below describe the named historical versions.
+Existing Swordsman and Crusader files were preserved byte for byte. <s>The late fall, straight corpse legs, finger anatomy, sword-to-empty-hand transition and loading continuity remain unresolved.</s> Revision 502 installs the prone, bent-leg ending; the mid-fall motion, fingers, sword transition and loading continuity still need work. <s>Movement, turns, melee and upward shooting need dedicated native coverage.</s> Subsequent logs cover these groups, as recorded below; appearance and transitions still need review. Earlier installation statements below describe the named historical versions.
 
 <details><summary>Overview before installation, 2026-09-18</summary>
 
 <s>| Marksman | All 18 original groups /101 body draft frames, including duplicate turns; melee and turns added, with death, fingers, draw/sheath and loading transitions, layers and native integration unfinished |</s>
 
 </details>
+
+Diagnostic run 506 temporarily sets Marksman ammunition to zero so the AI approaches and uses melee. It restores both creature configuration and user settings byte for byte afterwards. That battle read **63 body frames in 12 groups**, including all three melee directions, movement, start/stop, both turns, hit, holding, hover and death. Together with the previous shooting and death runs, native logs now cover **87 distinct body images in 15 groups**. Run 503 also exercised upward shooting. The ten-frame defence group still lacks native coverage.
+
+![Marksman melee diagnostic capture; the temporary ammunition override has been removed](/images/castle-halberdier-01/marksman-melee506-battle.png)
+
+These observations establish that the game selected and read those assets. They do not validate the visible sword draw, facing change, recovery or loading transitions.
 
 ### Marksman melee and turns
 
