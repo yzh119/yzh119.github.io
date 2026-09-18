@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T21:40:05+00:00
+lastmod: 2026-09-18T21:54:57+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk now has a separate skirt with transferred Meshy textures. Kneeling improves, but the collapse and cloth simulation remain rejected; new Blender stills document the results."
+homeSummary: "The Monk skirt contraction traced to oversized collision proxies. Corrected joint collisions and eleven new death renders are documented; appearance remains unaccepted."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -29,7 +29,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
-| Monk | Fourteen body-action drafts plus an eleven-frame death trial rejected for robe deformation. All fifteen groups have been attempted; death repair, clothing, effects and integration remain unfinished |
+| Monk | Fourteen body drafts preserved; corrected skirt collision lengths and eleven new death renders. Pose, clothing and boot connections still need repair; uninstalled |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
@@ -44,6 +44,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | Previous record |
 | --- | --- |
+| Monk | <s>Fourteen body-action drafts plus an eleven-frame death trial rejected for robe deformation. All fifteen groups have been attempted; death repair, clothing, effects and integration remain unfinished</s> |
 | Griffin | <s>mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting</s> |
 | Cavalier | <s>mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next</s> |
 | Marksman | <s>Holding, walking, movement start/end and three shooting directions: seven groups, 44 offline candidate frames; grip and finger constraints unaccepted, other actions and game integration pending Nine groups, 60 offline candidate frames, adding six hit and ten defence frames; pose fidelity, grip and integration unfinished Eleven groups, 75 offline body draft frames, adding hover and death; death timing/pose, grip, melee/turns and game integration unfinished</s> |
@@ -1054,7 +1055,23 @@ A cloth trial spreads the eleven death poses over 101 simulation frames, pins th
 
 ![Rejected cloth simulation with the skirt contracted into the body; actual 900×900 Blender still, not a game capture](/images/castle-monk-641/skirt-simulation-failure.png)
 
-The separate surface and transferred texture remain available for further repair. The simulation shrinkage and the connection around the boots need attention before reviewing the other actions with this mesh. Existing Meshy outputs were reused without new paid jobs. The Monk remains uninstalled.
+The separate surface and transferred texture remain available for further repair. <s>The simulation shrinkage and the connection around the boots need attention before reviewing the other actions with this mesh.</s> The diagnosis and follow-up trials are recorded below. Existing Meshy outputs were reused without new paid jobs. The Monk remains uninstalled.
+
+### Incorrect collision lengths on the Monk (2026-09-18)
+
+The contraction investigation found a concrete error in my local collision builder. It used bone tails from this scene: the left thigh's tail was roughly 34 metres from its head, while the knee joint was about 34 centimetres away. The collision surface was therefore about a hundred times too long. A run without collisions did not produce the same contraction. Using adjacent joint heads restores a skirt that bends around the knees. The existing Meshy model is unchanged.
+
+![Kneeling trial after correcting joint collision lengths and adding inner leg surfaces; actual 1200×1200 Blender still, clothing unfinished](/images/castle-monk-641/joint-collision-kneel.png)
+
+Removing the original robe also exposed missing internal surfaces between the body and boot openings. Dark-brown leg geometry now fills that space. A separate self-collision and forearm-collision trial still turned the hem outward and was rejected. The current candidate uses the corrected joint collisions and adds forward tilt to the last two poses, lowering the previously raised head. Waist seams, lifted boots and the final curled silhouette remain unaccepted.
+
+![Forward-tilted final collapse, actual 1200×1200 Blender still; not an accepted result](/images/castle-monk-641/joint-collision-collapse.png)
+
+Eleven body frames were exported again with the battle camera at 900×800; all remain inside the canvas. The complete comparison still shows differences from the original poses in the second half. This is an offline death trial. The preceding fourteen-action scene and the installed game resources have not been replaced.
+
+![Original eleven-frame death sequence above the new offline body trial; not a running-game capture](/images/castle-monk-641/joint-collision-frames.png)
+
+The reusable [joint collision builder](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/build_joint_colliders.py) now checks segment lengths across the requested frames before creating proxies. Its synthetic-rig regression needs no game assets. Models and complete mods remain local.
 
 ### Zealot identity correction (2026-09-18)
 
