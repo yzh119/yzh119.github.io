@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T01:21:45+00:00
+lastmod: 2026-09-18T01:52:11+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Halberdier turns and hover bring the working candidate to 59 frames in ten groups. A four-frame death trial is rejected for coat folds and corpse pose, with high-resolution failure images retained. Crusader and Swordsman test candidates are installed; Castle production continues."
@@ -174,6 +174,20 @@ Four-frame death trials 141–144 were made separately. In 141, torso and arm ro
 ![Rejected death still: the coat folds and corpse pose need revision](/images/castle-halberdier-01/halberdier-death144-rejected.png)
 
 No edge exceeded the stretch threshold. The final body's lowest point is about 0.008 units above the floor and the weapon's about 0.006. Those measurements cannot establish plausible cloth folds. The next work is the coat and leg pose during collapse, followed by gripping fingers, shoulder trim, transitions and fuller collision review. Shadow/outline layers, installation and native visual acceptance remain unfinished.
+
+
+
+Trials 145–150 examined the lower coat weights. Thigh bones account for most of the selected blue-and-gold fabric weights; shin bones contribute about 0.7%. Added coat-fold controls in 146 tore the selection boundaries into strips. Expanding and smoothing that selection in 147 reduced the outer-coat damage, but the inner mail still stretched. Both were rejected.
+
+![Rejected cloth-control trial 147, with stretched inner surfaces](/images/castle-halberdier-01/halberdier-cloth147-rejected.png)
+
+A closer look at the original endpoint led to a side collapse with asymmetric knees and the raised arm brought back toward the body. Trial 150 retains the existing cloth weights. Ground placement now includes both shoulder plates, correcting the previous trial's roughly 0.026-unit right-plate penetration. Evaluated body, plate and weapon vertices in all previous fifty-nine frames remain identical.
+
+![Original and trial 150 death poses; weapon release still happens too early](/images/castle-halberdier-01/halberdier-death150-comparison.jpg)
+
+![Trial 150 side-collapse draft, 1800×1400 Blender still; neither accepted nor installed](/images/castle-halberdier-01/halberdier-death150-draft.png)
+
+The coat is more compact than in 144. However, the original still holds its pole aloft in frame three, while this draft has released it. Corpse and weapon silhouettes also differ. **Death remains an unaccepted draft outside the fifty-nine-frame candidate.** All sixty-three trial poses fit the canvas and pass the existing edge threshold. Those checks do not establish cloth self-collision, complete surface clearance or plausible weight support. The next revision needs to retain the pole during the intermediate fall and improve body pose before reviewing landing contact and transitions.
 
 <details>
 <summary>Candidate 126 attack record, superseded by further edits in 131</summary>
