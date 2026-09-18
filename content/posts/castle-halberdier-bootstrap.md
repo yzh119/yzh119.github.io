@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T14:13:46+00:00
+lastmod: 2026-09-18T14:21:11+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot now has a shared ten-frame special action and geometric spell-effect trials. Death, cloth and effect appearance remain unfinished; the unit is not installed."
+homeSummary: "Zealot has an eleven-frame death draft and a fix for the mantle failing to follow the falling character. All eighteen groups have body drafts; pose, cloth, effects and integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -35,7 +35,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
-| Zealot | Body drafts cover 17 native groups, with three special groups sharing ten frames. Death, mantle and hand repairs, effects and integration remain unfinished |
+| Zealot | Body drafts cover all eighteen groups, with shared special frames. Death silhouette, cloth and hands, effects and integration remain unaccepted |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
 
@@ -1041,7 +1041,7 @@ Upward and downward casting now each have thirteen body frames, with direction-s
 
 All fourteen groups have now been re-rendered from the repaired scene: 109 body frames at 900×800, all within the canvas, with the complete contact sheets inspected. The five new clips add 52 body frames. Their endpoints match holding within 0.0004 mm at the body vertices. A separate RGBA comparison confirmed that all ten original special-action frames are identical across the three direction groups, allowing one shared body clip. <s>Eleven death frames, thirty frames across the special groups, cloth repairs, shadows, effects and game integration remain unfinished.</s> This records candidate 559. A mantle-weight smoothing trial preserved the holding shape and softened angular edges, but raised-arm intersections remained; it was not adopted as the current version.
 
-A shared ten-frame special body clip now serves all three original direction groups. There are 119 distinct body images covering 139 frame slots across 17 native groups. The new clip fits the canvas and returns to holding; the eleven-frame death remains unauthored.
+A shared ten-frame special body clip now serves all three original direction groups. There are 119 distinct body images covering 139 frame slots across 17 native groups. The new clip fits the canvas and returns to holding; <s>the eleven-frame death remains unauthored.</s> This records candidate 563.
 
 Spell effects are also built from three-dimensional Blender meshes. The first 49 glowing particles looked like white chunks and were rejected. A second trial used 181 crossed-axis sparks, but remained too small and sparse at native scale. The third expands the burst, adds five emissive core lobes and leaves the released tail in the air. It still lacks the original’s dense light and soft transition; mantle intersections also persist. These are unaccepted trials.
 
@@ -1052,6 +1052,18 @@ Spell effects are also built from three-dimensional Blender meshes. The first 49
 ![Original and draft special sequences at matched scale; effect density and pose differences remain visible](/images/castle-zealot-512/special566-compare.png)
 
 Body and effects live in separate editable scenes so particles cannot accidentally appear in other clips. The current exports are body images and combined review renders; game-ready effect layers and occlusion checks remain unfinished.
+
+The eleven-frame death draft starts with the hit poses, opens the arms, loses balance and falls forward. Bent legs and a shortened robe bone gather the lower garment in the later frames. Its first render exposed an object relationship error: the independent mantle deformed with the bones but did not follow the whole-character root during the fall, leaving it suspended above the body.
+
+![Rejected death ending with a detached mantle, actual Blender render](/images/castle-zealot-512/death569-rejected.png)
+
+Parenting the mantle to the armature object preserved the holding shape and made it follow the fall. Minimum-height checks across visible geometry found no substantial floor penetration in the eleven keyed frames; this does not establish correct hand or cloth contact. The corpse remains too extended for visual acceptance.
+
+![Death ending after repairing mantle root following, high-resolution Blender still; pose remains unfinished](/images/castle-zealot-512/death570.png)
+
+The first timing pass also reached the floor by frame nine, earlier than the original; a subsequent revision delays the main fall to the last frames. A further revision adjusts the falling root’s ground-plane travel with the camera held fixed. The original ending occupies 44×28 logical pixels; the draft is about 44.5×40.5 and remains too tall. Body drafts now cover all eighteen native groups: 130 distinct images mapped to 150 active frame slots. Cloth, hands, effects, shadows and game integration are still unfinished. Earlier exports and separate effect scenes have not yet been regenerated with the mantle root-follow repair.
+
+![Original death and revised fall timing; the ending silhouette remains unaccepted](/images/castle-zealot-512/death574-compare.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
