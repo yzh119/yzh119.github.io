@@ -1157,13 +1157,13 @@ Candidate 615 extends the correction to all 14 front-cast frames and fades it at
 
 Further sleeve trials reject two shortcuts: preserve-volume skinning bulges the torso, while local smoothing creates broken underarm edges. Candidate 621 first welds coincident vertices, then applies the same smoothing to shoulder weight transitions. Vertex count falls from 247,757 to 132,649; polygon count stays 265,495 and the UV layer remains. The new raised-arm render avoids those broken edges, but folds still need work. Holding and front/upward casting total 33 checked native-canvas frames. This trial does not replace the main resource set.
 
-![Actual Blender comparison: linear skinning, preserve-volume skinning, smoothing alone, then welding plus smoothing](/images/castle-zealot-512/sleeve 622-compare.png)
+![Actual Blender comparison: linear skinning, preserve-volume skinning, smoothing alone, then welding plus smoothing](/images/castle-zealot-512/sleeve622-compare.png)
 
 **The Zealot test package was installed locally on September 18, 2026.** It uses candidate 611 layers and excludes the sleeve experiment above. The package covers 18 active groups and 150 slots, reusing 130 body images, at two resolutions, with geometry shadows, holding/hover outlines and nine projectile directions. All 1,401 existing files for the other four units are preserved.
 
 The test battle reads 62 distinct 2× body images across holding, hover, hit, death, front shooting and upward shooting, plus two projectile directions. The actual screenshot below shows the new unit, corpse and flying cloud. It does not prove playback of the other twelve groups. Cloth, hands, death shape, full action coverage and release handoff still need review. The client exited and original settings were restored. Logs also contain text-encoding errors and an exit-stage query error, so this is not an error-free run.
 
-![Actual local VCMI battle with Zealot test 624; not a Blender composite](/images/castle-zealot-512/native 624-battle.png)
+![Actual local VCMI battle with Zealot test 624; not a Blender composite](/images/castle-zealot-512/native624-battle.png)
 
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
