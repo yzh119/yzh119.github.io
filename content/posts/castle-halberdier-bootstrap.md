@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T03:33:01+00:00
+lastmod: 2026-09-18T04:22:59+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Marksman's low crossbow carry exposed shoulder distortion. A separate body and humanoid rig are now generated through the Meshy API; motion remains unverified. Halberdier's 63-frame offline preview awaits acceptance; Crusader and Swordsman test candidates are installed."
+homeSummary: "Separate Meshy body and crossbow for Marksman; a reversed finger curl is corrected, but wrist and grip defects remain. Halberdier’s 63-frame preview awaits acceptance; Crusader and Swordsman test candidates are installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,7 +30,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |
 | Cavalier | mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
-| Marksman | Low-carry trials 173 and 174 rejected for shoulder distortion; empty-handed Meshy body 175 generated. Posed rig and separate crossbow remain unverified; not installed |
+| Marksman | Separate Meshy body and crossbow, 28 finger bones; wrist repair and low carry remain under review. Full actions unfinished; not installed |
 | Royal Griffin | <s>four local wing bones and 8-frame holding wing review accepted; ground gait needs rebuild</s> — native moving is airborne flight, not a ground gait; <s>candidate 02 passed only initial static review, but its whole-wing flight exposed black chest-feather defects and is rejected</s>; candidate 03 fixed the chest but collapsed into a near-planar wing spread in side review and is rejected; <s>candidate 04 generated from a strict three-quarter-volume concept and passed volume review, but its chest contains mesh holes that neither thin geometry nor UV-only repair can correct; it is rejected</s>; Royal Griffin now moves to a component-model reconstruction |
 | Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
 | Zealot | Meshy humanoid rig; local reviews accepted for 6-frame holding/walk, front/up/down casts with hand VFX, 8-frame hit, 7-frame defence and 11-frame death |
@@ -406,6 +406,27 @@ A separate crossbow was generated through the Meshy API for another 30 credits. 
 
 ![Oblique render of the same crossbow](/images/castle-halberdier-01/marksman-crossbow179-oblique.png)
 
+The wrist repair now fits the original Meshy body's cross-sections and trims the cuff with a plane. An earlier deletion trial also cut the coat and was rejected. The corrected hand selection preserves 37,330 central-body vertices and 60,952 polygons. All ten individual digit-control checks pass again. Close-up edge defects remain, so this is not final art acceptance.
+
+![Candidate 205 wrist close-up; posed continuity remains under review](/images/castle-halberdier-01/marksman-wrist205.png)
+
+Cross-section measurements place the wooden stock centre about 2.1 cm above the model origin. Trial 206 uses the measured centre and reduces hand spacing; both wrists reach their targets in all three test poses. Distributing some rotation through the forearms reduces the level-aim wrist distortion in trial 208. Neither result establishes finger contact with the stock.
+
+![Level-aim trial 208, with finger contact still unaccepted](/images/castle-halberdier-01/marksman-level208-draft.png)
+
+The previous carry was too high, with the rear stock extending toward the shoulder. Low-carry trials 210–211 move the grips toward the rear and adjust the Meshy crossbow's proportions, lowering its front toward the original silhouette. Trial 210 puts a hand inside the torso and is rejected. Trial 211 moves the grip forward, but wrist orientation, thumb opposition and contact remain unnatural; it is not adopted. Original-pose fitting and grasp repair continue, with no full animation or installation for this body. This pass incurred no new API charges.
+
+![Unaccepted low-carry trial 211 after placement changes](/images/castle-halberdier-01/marksman-low211-draft.png)
+
+A subsequent joint-direction check found that the four fingers curled away from the stock. Trial 212 reverses their flexion, bringing the fingertips around the wood. The close-up still shows intersections, an unfinished thumb and distorted wrist skin. It remains a rejected grasp candidate; fixing the rotation sign does not finish the hands.
+
+![Trial 212 close-up after reversing finger flexion; intersections and wrist defects remain](/images/castle-halberdier-01/marksman-grip212-draft.png)
+
+<details>
+<summary>Earlier grip and hand trials</summary>
+
+<s>| Marksman | Low-carry trials 173 and 174 rejected for shoulder distortion; empty-handed Meshy body 175 generated. Posed rig and separate crossbow remain unverified; not installed |</s>
+
 Combined trial 180 inverted the crossbow and bent the wrists incorrectly; it is rejected. Trial 181 corrects the orientation, but the hands remain open and carry is higher than the original. A subsequent uniform finger-curl trial, 182, compresses parts of the fingers and is also rejected. Individual finger fitting and original-pose registration are next. The combined images below are drafts, not installed artwork.
 
 ![Rejected combination 180, with inverted crossbow and wrist problems](/images/castle-halberdier-01/marksman-combined180-rejected.png)
@@ -423,6 +444,8 @@ Trials 185–190 reuse five-finger geometry from the earlier Meshy Halberdier bo
 Combined trial 191 still has wrist-seam and contact problems. Its low-carry left wrist misses the target by about 2.5 cm, so it remains rejected. Wrist repair, thumb opposition and two-hand weapon placement precede full animation. This pass reused existing Meshy geometry and incurred no new API charges.
 
 ![Rejected level-aim trial 191, showing remaining wrist and grip problems](/images/castle-halberdier-01/marksman-combined191-rejected.png)
+
+</details>
 
 <details>
 <summary>Earlier Marksman reviews (historical scope, not current acceptance)</summary>
