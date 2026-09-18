@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T21:54:57+00:00
+lastmod: 2026-09-18T22:10:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk skirt contraction traced to oversized collision proxies. Corrected joint collisions and eleven new death renders are documented; appearance remains unaccepted."
+homeSummary: "The Monk skirt now follows the body surface at its upper rim, with a longer hem. Death frames seven and eight raise the correct screen-side arm; new stills and the full sequence remain under review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1072,6 +1072,20 @@ Eleven body frames were exported again with the battle camera at 900×800; all r
 ![Original eleven-frame death sequence above the new offline body trial; not a running-game capture](/images/castle-monk-641/joint-collision-frames.png)
 
 The reusable [joint collision builder](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/build_joint_colliders.py) now checks segment lengths across the requested frames before creating proxies. Its synthetic-rig regression needs no game assets. Models and complete mods remain local.
+
+### Monk waist attachment and raised-arm direction (2026-09-18)
+
+The skirt's upper 640 vertices now follow sampled points on the original body, retaining their holding offsets. Across the eleven sampled poses, the two fully pinned rings' maximum error relative to those targets falls from about 3.9 centimetres to less than 0.001 millimetres. This verifies the attachment targets, not the appearance of the waist folds. A longer hem also reduces the exposed boot openings in the standing pose.
+
+![Standing pose with the longer hem, actual 1200×1200 Blender still; model still under repair](/images/castle-monk-641/longer-robe-standing.png)
+
+A colour-and-foot-weight cleanup removed 315 suspected old robe faces in a separate trial, without visibly repairing the collapse folds; it was not adopted. Comparing the full sequence exposed another error: frames seven and eight raised the opposite screen-side arm from the original. Swapping the raised arm initially put the hand against the hood. Lifting and opening the arms improves that direction, while the high-resolution view shows distorted, layered folds at the shoulder/sleeve connection.
+
+![Corrected raised-arm direction in frame seven, actual 1200×1200 Blender still; shoulder connection and palm orientation remain unfinished](/images/castle-monk-641/death-raised-arm.png)
+
+All eleven frames were rendered again. Pixel comparison with the longer-skirt candidate confirms that this arm edit changes only frames seven and eight; the other nine match exactly. A forearm quaternion sign flip was also corrected before export. The timing of the body lowering, final collapse, shoulder connection and clothing still differ from the original. This remains a local trial, with no installed resource replacement.
+
+![Original sequence above the eleven-frame waist and arm revision; offline body renders, not an accepted or installed result](/images/castle-monk-641/waist-arm-death-frames.png)
 
 ### Zealot identity correction (2026-09-18)
 
