@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-18T15:18:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Zealot casting and melee now have six directional effect drafts across 66 frame slots. Small bursts, raised-arm poses and cloth still need revision; the unit is not installed."
+homeSummary: "Zealot upward casting and melee have 22 revised body frames, with larger effect trials and an overexposed failure comparison. Cloth, effect appearance and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1117,6 +1117,14 @@ The comparison exposes smaller bursts than the original, while the high-resoluti
 
 ![Six complete comparisons: original above each offline body, shadow and effect composite; not game screenshots](/images/castle-zealot-512/cast595-compare.png)
 
+The next revision raises both hands in upward ranged casting and melee, with 22 body frames re-exported. The first target shift exceeded arm reach and left the solver near a straight elbow. Candidate 599 caps targets at 94% of the combined arm-segment length. Keyed target error is below 0.001 mm and all 22 frames fit the canvas. This verifies target placement only; sleeve and mantle intersections remain.
+
+Larger particles and a wider cloud then produced an overexposed white core in candidate 600. Candidate 601 reduces brightness and opacity, restores blue and gold, and rotates the elongated core toward the casting direction. It is still too blue and its high-resolution stars remain hard. Only frames four and five of the front and upward casts have been rendered for this comparison; the complete 66-slot export above has not been replaced, and revised body shadows have not been regenerated. These are actual Blender renders; the unit remains uninstalled.
+
+![Frame five: original, candidate 595, overexposed 600 and revised 601](/images/castle-zealot-512/cast601-compare.png)
+
+![Revised upward cast, high-resolution Blender still; colour, star shapes and cloth remain unfinished](/images/castle-zealot-512/cast601-up.png)
+
 The original action inventory contains 18 active groups and 150 frames after excluding two duplicate turn slots. It has a two-frame `MOVE_START` and no `MOVE_END`; the earlier description incorrectly called our additional settling clip a native group.
 
 <details>
@@ -1800,5 +1808,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary: candidate 592</summary>
 
 <s>All 130 Zealot body frames now have geometry-projected shadows, plus a seven-frame curved ward and isolated effect layers. Cloth and effect appearance remain unfinished; the unit is not installed.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary: candidate 595</summary>
+
+<s>Zealot casting and melee now have six directional effect drafts across 66 frame slots. Small bursts, raised-arm poses and cloth still need revision; the unit is not installed.</s>
 
 </details>
