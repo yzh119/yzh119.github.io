@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T01:05:45+00:00
+lastmod: 2026-09-18T01:21:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier now has 51 candidate frames in seven groups, including a six-frame hit reaction with hand release. Death, turns, hover and visual detail remain unfinished."
+homeSummary: "Halberdier turns and hover bring the working candidate to 59 frames in ten groups. A four-frame death trial is rejected for coat folds and corpse pose, with high-resolution failure images retained. Crusader and Swordsman test candidates are installed; Castle production continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | reviewed state |
 | --- | --- |
-| Halberdier | New Meshy body and independent weapon; holding, walking, three attack directions, defence and hit: 7 groups, 51 candidate frames. Defence returns to holding; visual detail, remaining clips and installation pending |
+| Halberdier | New Meshy body and independent weapon; 10 groups, 59 candidate frames including turns and hover. Four-frame death trial rejected; cloth, grip, transitions and installation unfinished |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting |
@@ -155,7 +155,25 @@ Draft 132 drove the shaft tail through the right thigh. Adjusting the weapon cle
 
 ![Hit-reaction key pose with the secondary hand open, an 1800×1400 Blender still](/images/castle-halberdier-01/halberdier-hit137.png)
 
-The last hit frame still has a released hand, so its return to holding needs review. The gripping fingers, shoulder trim and pose detail remain unfinished. Death, turns and hover account for twelve missing native frames, followed by shadow/outline layers and in-game verification. The Halberdier is not installed.
+The last hit frame still has a released hand, so its return to holding needs review. The gripping fingers, shoulder trim and pose detail remain unfinished. <s>Death, turns and hover account for twelve missing native frames, followed by shadow/outline layers and in-game verification.</s> Turn and hover candidates are added below; the death trial is rejected. The Halberdier is not installed.
+
+### Turns, hover and a rejected death draft
+
+Candidate 140 adds two frames for each turn direction and four hover frames, extending the working candidate to ten groups and fifty-nine frames. VCMI plays the first turn segment, flips facing, then plays the second. Both segments follow the original frame counts and bring the pole upright; hover adds a small pole lift.
+
+![Original turn and hover frames above candidate 140; in-game transitions remain unverified](/images/castle-halberdier-01/halberdier-turn-hover140.jpg)
+
+![Front-facing turn key, an 1800×1400 Blender still; shoulder and grip detail remain unfinished](/images/castle-halberdier-01/halberdier-turn140.png)
+
+Adding the groups exposed a control-type regression: an integer assignment reduced the earlier hand-release values to fully open or closed. Float assignments restore the intermediate values. Reopening and comparing evaluated vertices confirms that the prior fifty-one body, plate and weapon poses match candidate 137 exactly. The eight new poses stay below the large-edge threshold. All fifty-nine fit the canvas and avoid the nine shaft samples against non-hand body and plates.
+
+Four-frame death trials 141–144 were made separately. In 141, torso and arm rotations cancelled too much of the fall, leaving a seated-looking endpoint. Later drafts release the pole onto the ground and bring the arms back in. The high-resolution result exposes an unnatural fan of coat folds around the bent knees, and the corpse differs substantially from the original silhouette. **The death group is rejected and excluded from the fifty-nine-frame candidate.**
+
+![Original death sequence above rejected draft 144](/images/castle-halberdier-01/halberdier-death144-comparison.jpg)
+
+![Rejected death still: the coat folds and corpse pose need revision](/images/castle-halberdier-01/halberdier-death144-rejected.png)
+
+No edge exceeded the stretch threshold. The final body's lowest point is about 0.008 units above the floor and the weapon's about 0.006. Those measurements cannot establish plausible cloth folds. The next work is the coat and leg pose during collapse, followed by gripping fingers, shoulder trim, transitions and fuller collision review. Shadow/outline layers, installation and native visual acceptance remain unfinished.
 
 <details>
 <summary>Candidate 126 attack record, superseded by further edits in 131</summary>
@@ -1029,5 +1047,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier now has 45 candidate frames in six groups, including twelve-frame defence and revised attacks. Original-frame comparisons and a high-resolution Blender still show remaining finger and shoulder-trim work.</s>
 
 <s>| Halberdier | New Meshy body and independent weapon; holding, walking, three attack directions and defence: 6 groups, 45 candidate frames. Defence returns to holding; visual detail, remaining clips and installation pending |</s>
+
+</details>
+
+<details>
+<summary>Summary before turns and hover</summary>
+
+<s>Crusader and Swordsman test candidates are installed; visual acceptance remains open. Halberdier now has 51 candidate frames in seven groups, including a six-frame hit reaction with hand release. Death, turns, hover and visual detail remain unfinished.</s>
+
+<s>| Halberdier | New Meshy body and independent weapon; holding, walking, three attack directions, defence and hit: 7 groups, 51 candidate frames. Defence returns to holding; visual detail, remaining clips and installation pending |</s>
 
 </details>
