@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T07:39:50+00:00
+lastmod: 2026-09-19T07:48:49+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer melee and two-frame turn drafts now have high-resolution Blender previews. Death, grip repairs, facing transitions and game integration remain in progress."
+homeSummary: "The installed Crusader design was rejected for poor fidelity. A new Meshy model restores the round shield, enclosed helm and short white-and-blue cloth, with concept art and actual Blender renders."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -15,6 +15,24 @@ All fourteen Castle units have Meshy bootstrap attempts, with modeling, motion r
 ![Three-quarter concept for the Castle Halberdier](/images/castle-halberdier-01/concept-34.png)
 
 The concept fixes the features that need to survive generation: blue-and-gold tabard, brown boots, uncovered face under a steel cap, and a halberd held vertically at the left side. It is a reference for construction rather than an in-game image.
+
+## Crusader design correction
+
+The user found that the current Crusader model did not resemble the original. Comparing the native frames confirms several major differences: the enclosed helm and blue crest became an open-face helmet, the round shield became a pointed shield, and bright silver armour with short white-and-blue cloth became a long blue heraldic robe. Repairs to sword deformation, collision and export formatting did not address those design errors.
+
+![Rejected Crusader design, actual Blender render](/images/castle-crusader-969/old-model.png)
+
+The revised concept restores those original features. Its first version introduced an oversized plume and a shoulder spike; both were revised. The [rejected concept](/images/castle-crusader-969/plume-rejected.png) remains in the record. The sword now lies outside the leg silhouette for a clearer modeling input.
+
+![Revised Crusader concept for Meshy; not a finished Blender model or game capture](/images/castle-crusader-969/concept.png)
+
+The concept was generated with built-in imagegen and submitted through the Meshy Image to 3D API using Meshy 7.1, a 20k quad target and 4K textures, with image enhancement disabled. The task succeeded for 30 credits, producing 29,508 vertices, 37,611 faces and a 4096-pixel base-colour texture. Eight views have been rendered and inspected; rigging, motion and replacement in the game remain unfinished. The earlier installation history remains below; **it does not establish acceptance of the old design**.
+
+
+![Actual 1200-pixel Blender render of the new Meshy model, unrigged and not installed](/images/castle-crusader-969/model.png)
+
+The [eight-view review under the original lighting](/images/castle-crusader-969/views.png) is retained. The portrait adds studio fill lights without changing geometry or textures. The enclosed helm, round shield and short cloth survive generation. Metallic finish, plume thickness and sword-hand shape remain rough, and the right shin has a generated colour blemish. This is a replacement bootstrap awaiting further repair and acceptance.
+
 
 ## All fourteen meshes
 
@@ -34,7 +52,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified |
+| Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified  **User rejected the design; replacement modeling is underway. Installation does not imply art acceptance.** |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
@@ -2574,5 +2592,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>The Archer gains three six-frame melee drafts, with high-resolution Blender stills and videos. Downward blade visibility and intermediate sole penetration are repaired; grip, transitions and game integration remain unfinished.</s>
 
 <s>New blue-and-white Meshy body, separate hands and crossbow; 13 groups and 86 offline body frames including three dagger melee directions. Grip, five remaining groups, layered export and installation unfinished</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before Crusader design correction</summary>
+
+<s>Archer melee and two-frame turn drafts now have high-resolution Blender previews. Death, grip repairs, facing transitions and game integration remain in progress.</s>
 
 </details>
