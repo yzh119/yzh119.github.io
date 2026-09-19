@@ -1,16 +1,16 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T02:02:48+00:00
+lastmod: 2026-09-19T02:18:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Monk melee effects, a curved defence ward and nine projectile directions now join 109 body-and-shadow frames and 62 effect slots. Full comparisons and a high-resolution projectile still are available; not installed."
+homeSummary: "The Monk 1×/2× test is installed in local mod 0.6.0. Native logs read 109 body images across 15 groups and three projectile directions. Release comparisons are included; visual acceptance remains open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
 <s>The Castle roster now has independently reviewed meshes for all fourteen units: Pikeman, Halberdier, Archer, Marksman, Griffin, Royal Griffin, Swordsman, Crusader, Monk, Zealot, Cavalier, Champion, Angel and Archangel. They span long held equipment, a two-handed light crossbow, a winged quadruped, shield-and-sword combat, and an unarmed spellcaster. Each asset needs its own mesh and its own animation constraints.</s>
 
-All fourteen Castle units have Meshy bootstrap attempts, with modeling, motion repair and integration still in progress. <s>The Zealot has returned to modeling because its old white-robed design did not match the original.</s> The corrected blue-robed Zealot is now installed as a private test; the brown-robed Monk remains in offline animation work. The table distinguishes installed drafts from offline trials and rejected candidates.
+All fourteen Castle units have Meshy bootstrap attempts, with modeling, motion repair and integration still in progress. <s>The Zealot has returned to modeling because its old white-robed design did not match the original.</s> The corrected blue-robed Zealot is now installed as a private test; <s>the brown-robed Monk remains in offline animation work.</s> The Monk is also installed as a private 0.6.0 candidate. The table distinguishes installed drafts from offline trials and rejected candidates.
 
 ![Three-quarter concept for the Castle Halberdier](/images/castle-halberdier-01/concept-34.png)
 
@@ -29,7 +29,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
-| Monk | Offline body and geometry-shadow composites cover fifteen groups and 109 frames, including the shoulder correction and independent skirt. Cloth, palms, original proportions, spells, transitions and integration remain unfinished |
+| Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
@@ -952,6 +952,8 @@ Cavalier and Champion each ran a local horse-and-rider probe against their own m
 
 ### Monk identity correction (2026-09-18)
 
+**Current status: the Monk is installed as a private test; see [installation and runtime checks](#monk-installation). The following sections retain the offline development history, including their earlier uninstalled status.**
+
 The original `CMONKK.DEF` also exposes a design mismatch in the old Monk. It wears a plain brown hooded robe and a pale rope belt, with a shadowed face and both arms participating in forward and raised casts. The old model has a gray-black robe and long stole, with motion built largely around one hand. Earlier skinning and continuity checks did not establish reference fidelity; those trials remain in the history above.
 
 ![Original Monk holding and directional casts, enlarged with nearest-neighbor sampling for reference](/images/castle-monk-641/original-reference.png)
@@ -1247,6 +1249,24 @@ Flight uses the casting layer's actual star meshes and materials. Several initia
 ![Actual 900×900 Blender still of the same projectile model](/images/castle-monk-641/monk-projectile-hq.png)
 
 The consolidated offline inventory contains 109 body-and-shadow frames and 62 effect slots, including 27 original-timing blanks. Reopening the three melee scenes, the ward scene and the projectile scene reproduces one sampled frame from each exactly. Body source files remain unchanged. Packaging, release alignment and native checks come next; clothing, palms, original proportions and full visual acceptance remain unfinished.
+
+#### Local Monk test installation {#monk-installation}
+
+The private Castle mod is now **0.6.0**, adding the brown-robed Monk at 1× and 2× with separate shadows, selection outlines and 3D spell projectiles. Its fifteen effective action groups contain 109 frames; duplicate original turn groups use the existing fallback behavior. Resource validation reports zero errors and warnings. The installation adds 491 files while preserving the hashes of 2,528 existing files. No VCMI source changes were made.
+
+The original `CRANIM.TXT` fires the Monk projectile on frame **8**, compared with frame 6 for the Zealot. The test keeps the Monk timing. The first release comparison exposed a size jump: flight was visibly larger than the charge. The median ratio of alpha-weighted radii across three directions reduced the flight model to about 63.3% of its previous scale, followed by nine new renders. Offsets align charge and projectile alpha centroids. This offline alignment still needs native visual review.
+
+![Rejected release comparison with an oversized flight cloud; offline composites](/images/castle-monk-641/monk-release-large-failure.png)
+
+![Installed test candidate at release and successive flight positions in three directions; offline composites, not game captures](/images/castle-monk-641/monk-release-installed.png)
+
+![Actual 900×900 Blender still from the current projectile scene](/images/castle-monk-641/monk-projectile-installed-hq.png)
+
+Native logs collectively read **109 distinct 2× body images across 15 groups**, plus upward-diagonal, horizontal and downward-diagonal projectiles. The ranged test records 39 emissions. These were bounded observations, not proof of a completed battle or visual acceptance. Display settings and temporary creature parameters were restored byte for byte, and installed resources were checked again.
+
+Defence requires a specific trigger. Choosing the defend action alone does not play the whole ward; VCMI uses that animation when a defending stack survives a melee attack. An initial test with neither side able to move or shoot did not cover it. A Marksman attack trial also failed to trigger it: ranged attacks count as indirect attacks in this code path. A subsequent setup uses a Crusader in melee. Effective groups still absent from the observed loading: `none`.
+
+Window capture still reports `could not create image from window`, so the figures remain offline comparisons. Logs establish loading and execution; cloth, palms, proportions, transitions, ward brightness and native appearance remain under review.
 
 ### Zealot identity correction (2026-09-18)
 
@@ -2264,5 +2284,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary before melee, defence and projectile layers</summary>
 
 <s>The Monk has three directional 3D casting trials across 29 frames, including 14 original-timing blanks. Full layered sheets and three particle-density trials are shown; flight and game integration remain unfinished.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary and overview before Monk installation</summary>
+
+<s>Monk melee effects, a curved defence ward and nine projectile directions now join 109 body-and-shadow frames and 62 effect slots. Full comparisons and a high-resolution projectile still are available; not installed.</s>
+
+<s>| Monk | Offline body and geometry-shadow composites cover fifteen groups and 109 frames, including the shoulder correction and independent skirt. Cloth, palms, original proportions, spells, transitions and integration remain unfinished |</s>
 
 </details>
