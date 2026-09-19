@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T10:25:49+00:00
+lastmod: 2026-09-19T10:42:03+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader gains separate Meshy gauntlet and sword drafts. Palm orientation and malformed hand geometry prompted a replacement; sword proportions are repaired. Equipment contact and animation remain unfinished."
+homeSummary: "The Crusader shield grip now follows the gauntlet’s oblique opening. Static hand/grip surfaces are separated; cuff seams, strap fit, mesh connectivity and animation remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -101,13 +101,26 @@ imagegen used the existing silver plates, brass rivets and short cuff to produce
 
 ![Actual Blender render of the new gauntlet, inspected at a provisional height of 17 cm; not concept art](/images/castle-crusader-1021/hand-model.png)
 
-The new mesh has curled fingers and a folded thumb, but Meshy capped the wrist opening. The interior grip space still needs inspection. The [assembly close-up](/images/castle-crusader-1021/hand-fit.png) aligns the cuff with the forearm; it also shows that the fist and handle remain misaligned. Wrist boundaries and the retaining strap are not accepted, and no game resources were replaced.
+The new mesh has curled fingers and a folded thumb, but Meshy capped the wrist opening. <s>The interior grip space still needs inspection.</s> An oblique passage and static grip clearance are inspected in the next section. The [assembly close-up](/images/castle-crusader-1021/hand-fit.png) aligns the cuff with the forearm; <s>it also shows that the fist and handle remain misaligned.</s> This earlier assembly image is retained; the next section revises the alignment. Wrist boundaries and the retaining strap are not accepted, and no game resources were replaced.
 
 A separate Meshy Text to 3D sword cost 30 credits across geometry and texture stages. Its [original output](/images/castle-crusader-1021/sword-rejected.png) had a blade-shaped handle, pointed end and an unwanted blade bump. Blender retains the generated crossguard, rebuilds a clean blade surface from its outline, applies a simple steel material, and adds a leather grip and round pommel. The blade reaches about 78 cm from the guard; overall length is about 101 cm.
 
 ![Repaired sword draft, actual Blender render; character grip is unfinished](/images/castle-crusader-1021/sword.png)
 
 These two bootstraps cost 60 new Meshy credits. Editable gauntlet, sword and shield drafts now exist. Equipment contact, wrist seams, shoulder articulation and the full action set remain unfinished.
+
+
+### Shield-grip alignment
+
+[Three gauntlet sections](/images/castle-crusader-1030/sections.png) reveal an oblique interior space. A horizontal-axis search found no suitable placement. Searching more directions found clearance, but maximizing clearance alone placed the grip outside the intended grasp. The [misplaced, over-expanded trial](/images/castle-crusader-1030/rejected.png) was rejected.
+
+The sections then guided the handle between the thumb and curled fingers. Its 24 mm diameter is retained while excess generated geometry at the passage ends is removed. The shield and body are hidden below to expose the actual hand/grip relationship.
+
+![Static gauntlet and grip alignment, actual Blender render with shield and body hidden for inspection](/images/castle-crusader-1030/grip.png)
+
+In this static pose, triangle-surface distances sampled every 0.5 mm along the grip axis yield a conservative clearance lower bound of about 0.14 mm after subtracting sampling uncertainty and the grip radius. This covers only hand/grip surface separation. Mesh connectivity defects remain; the result does not establish complete equipment or animation clearance, or acceptance of the hand pose.
+
+The shield and its two standoffs now follow the grip axis. A retaining-strap trial moves toward the wrist. The [current side close-up](/images/castle-crusader-1030/mounted.png) retains the unresolved cuff boundary and strap-fit issues. No new Meshy tasks or game-resource replacements were made.
 
 
 ## All fourteen meshes
@@ -2710,5 +2723,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary before the separate-hand bootstrap</summary>
 
 <s>The Crusader shield now has grip hardware and a retaining strap, with a character fit render. Finger-curl trials still penetrate the grip; the replacement is not installed.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before grip realignment</summary>
+
+<s>The Crusader gains separate Meshy gauntlet and sword drafts. Palm orientation and malformed hand geometry prompted a replacement; sword proportions are repaired. Equipment contact and animation remain unfinished.</s>
 
 </details>
