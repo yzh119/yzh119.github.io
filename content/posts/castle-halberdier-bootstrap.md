@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T15:28:11+00:00
+lastmod: 2026-09-19T15:57:04+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "A revised Crusader is installed as local test 0.7.0. Later Blender drafts adjust blade length, plate materials and the helmet crown, with new high-resolution stills. Those edits remain unexported; game and visual acceptance are open."
+homeSummary: "The Crusader blade, materials, crown and attack-step revisions are installed as local test 0.8.0. Includes high-resolution stills and a seven-frame attack preview; game and visual acceptance remain open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,14 +18,17 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ## Crusader design correction
 
-The earlier Crusader was rejected because its helmet, shield, cloth and stance departed from the original. Meshy supplied the replacement body and rig, plus separate sword, shield and gauntlet meshes. Astra authored Blender tools for assembly, mesh repairs and animation. The installed test and later offline edits are at different stages.
+The earlier Crusader was rejected because its helmet, shield, cloth and stance departed from the original. Meshy supplied the replacement body and rig, plus separate sword, shield and gauntlet meshes. Astra authored Blender tools for assembly, mesh repairs and animation. The current test package and its remaining checks are recorded below.
 
 | Version | Current state |
 | --- | --- |
-| Local test 0.7.0 | The new body and equipment replace the old Crusader assets, with 1×/2× bodies, shadows and selection outlines. Format validation reports zero errors and warnings. The attempted game check encountered a locked desktop and stopped at display presentation; it produced no battle verification. |
-| Later Blender draft | The blade is 28% longer, plate and cloth use separate material treatment, and the helmet crown and plume have revised geometry. Old crown fragments and floating debris were removed. These changes are propagated across action files but have not been exported or installed. |
+| Local test 0.8.0 | Revised blade length, plate materials, crown, plume and front-attack steps are exported and installed, with 1×/2× bodies, shadows and selection outlines. Format validation reports zero errors and warnings. The previous test is backed up and other units are unchanged. The desktop remains locked, so this version has no battle verification. |
 
-![A 1000-pixel Blender still of the later draft; not installed, concept art or an in-game screenshot](/images/castle-crusader-1124/model.png)
+![A 1000-pixel Blender still of the appearance used in local test 0.8.0; not an in-game screenshot](/images/castle-crusader-1124/model.png)
+
+The front attack was compared against the source again: the sword hand should drop toward the waist at the end of the cut. The arm path, lead-foot step, landing and recovery were revised. This keeps the feet from converging in the game camera. The seven-frame preview below comes from the 3D action and uses a 140 ms interval; its cadence has not been verified in-game.
+
+![Revised front attack, an offline preview of the Blender 3D action](/images/castle-crusader-1143/attack.webp)
 
 The source animation has 15 groups and 80 frame entries, including two duplicate turn groups. The test package uses 13 active groups and 76 entries, including movement start and end. Hit and death drafts are present. These counts describe file coverage; appearance, wrist joins, equipment contact and transitions still need review.
 
@@ -42,6 +45,23 @@ An early crown patch covered the old geometry but left fragments visible around 
 ![Rejected crown patch with old mesh fragments still visible around it](/images/castle-crusader-1124/crown-rejected.png)
 
 These later edits made no new Meshy requests and changed no VCMI source. The full fourteen-unit Castle roster remains unfinished.
+
+<details>
+<summary>Status record before installation of 0.8.0</summary>
+
+<s>The installed test and later offline edits are at different stages.</s>
+
+<s>| Local test 0.7.0 | The new body and equipment replace the old Crusader assets, with 1×/2× bodies, shadows and selection outlines. Format validation reports zero errors and warnings. The attempted game check encountered a locked desktop and stopped at display presentation; it produced no battle verification. |</s>
+
+<s>| Later Blender draft | The blade is 28% longer, plate and cloth use separate material treatment, and the helmet crown and plume have revised geometry. Old crown fragments and floating debris were removed. These changes are propagated across action files but have not been exported or installed. |</s>
+
+<s>A 1000-pixel Blender still of the later draft; not installed, concept art or an in-game screenshot</s>
+
+<s>A revised Crusader is installed as local test 0.7.0. Later Blender drafts adjust blade length, plate materials and the helmet crown, with new high-resolution stills. Those edits remain unexported; game and visual acceptance are open.</s>
+
+<s>| Crusader | New-body local test 0.7.0 installed: 13 active groups /76 entries. Later blade, material and crown edits remain in Blender, unexported. Game and visual acceptance are unfinished. |</s>
+
+</details>
 
 <details>
 <summary>Earlier Crusader production record: statuses below predate local test 0.7.0</summary>
@@ -273,7 +293,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | New-body local test 0.7.0 installed: 13 active groups /76 entries. Later blade, material and crown edits remain in Blender, unexported. Game and visual acceptance are unfinished. |
+| Crusader | Local test 0.8.0 installed: 13 active groups /76 entries, including blade, material, crown and attack-step revisions. Game, equipment joins and visual acceptance remain unfinished. |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
