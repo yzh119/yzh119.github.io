@@ -1,10 +1,10 @@
 ---
 title: "[AI]城堡兵种建模"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T05:11:38+00:00
+lastmod: 2026-09-19T05:48:45+00:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
-homeSummary: "弓箭手已补齐三个方向的八帧射击候选，新增头部、上身调整及高清静帧与视频；弹道校准、剩余动作和游戏接入仍未完成。"
+homeSummary: "弓箭手新增低持弩待机循环，三个射击入口已对齐，高清静帧与视频已刷新；装填细节、收弩衔接、其它动作和接入仍待完成。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1050,29 +1050,39 @@ Meshy 生成的独立弩和弩箭继续作为底模。Astra 在 Blender 里拆�
 
 ![武器举得过高并遮脸的失败后坐试稿](/images/castle-archer-900/rejected-recoil.png)
 
-![修改后的瞄准姿势，1200 像素 Blender 实际静帧](/images/castle-archer-900/aim.png)
+![修改后的瞄准姿势，1200 像素 Blender 实际静帧](/images/castle-archer-909/front.png)
 
-![降低支点后的上扬后坐，1200 像素 Blender 实际静帧](/images/castle-archer-900/recoil.png)
+![降低支点后的上扬后坐，1200 像素 Blender 实际静帧](/images/castle-archer-909/recoil.png)
 
 装填的箭矢先跟随弦中心，在第 7 帧从兵种画面中隐藏，弦和弩臂同时复位。重开场景后采样了 175 个时刻，弦长、箭尾与弦的连接、弩身中央不变形以及箭矢显示时序通过检查。这些只能说明机构的局部关系，不能说明双手已无穿插或射击姿势已经验收。飞行箭矢、<s>其它方向射击</s>、剩余动作、分层输出和游戏接入仍待完成。向上与向下的射击候选已补在下方，尚未安装。
 
-![装填箭矢与拉紧弩弦的 Blender 俯视近景，手腕接缝仍未修好](/images/castle-archer-900/loaded.png)
+![装填箭矢与拉紧弩弦的 Blender 俯视近景，手腕接缝仍未修好](/images/castle-archer-909/loaded.png)
 
-<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-900/shoot.mp4"></video>
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-909/front.mp4"></video>
 
 视频按每秒五帧播放这八帧。发射后没有把飞行箭矢画进人物序列里；游戏中的飞行弹道需要单独的素材，这个预览尚未包含。
 
 向上、向下两组候选还调整了上身和头部，让瞄准方向随弩一起变化。右手依旧先在腰侧，再移到扳机附近。现在三个方向各有八帧人物试稿，都在第 7 帧发射；新增两组的外观仍待验收。
 
-![向上瞄准候选，1200 像素 Blender 实际静帧](/images/castle-archer-903/up.png)
+![向上瞄准候选，1200 像素 Blender 实际静帧](/images/castle-archer-909/up.png)
 
-<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-903/up.mp4"></video>
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-909/up.mp4"></video>
 
-![向下瞄准候选，1200 像素 Blender 实际静帧](/images/castle-archer-903/down.png)
+![向下瞄准候选，1200 像素 Blender 实际静帧](/images/castle-archer-909/down.png)
 
-<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-903/down.mp4"></video>
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-909/down.mp4"></video>
 
 两段视频均按每秒五帧播放。重开场景后，两组各采样 175 个时刻，检查弦长、箭尾连接、弩身中央不变形与箭矢显示时序，均通过；瞄准静帧的全部 RGBA 通道也能复现。这些检查不等于握法、手腕接缝和原版还原度已经合格。现有 Meshy 箭矢及九方向弹道试稿可以复用，但尺寸与发射位置仍需按新版弓箭手校准后才能打包。
+
+新增的八帧待机把弩垂在身体侧面，右手停在腰侧，并保留轻微呼吸起伏。编辑场景里另设一个闭合关键帧，实际仍只渲染八帧。对比循环开始与结束时的可见网格，顶点位置一致。三个射击候选也都改为从同一个待机姿势开始，网格位置差小于 0.001 毫米。
+
+![低持弩待机候选，1200 像素 Blender 实际静帧](/images/castle-archer-909/holding.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-909/holding.mp4"></video>
+
+这版待机让弦放松、箭矢隐藏；进入射击时再拉弦，第 3 帧显示装填箭矢，第 7 帧隐藏。这只是设定了机构和显示顺序，手如何逐步装填还没做完整。射击最后一帧与垂弩待机仍有姿势落差，收弩衔接也要继续处理。
+
+上面的三个方向视频及当前静帧已重新生成。此前的[正面](/images/castle-archer-900/shoot.mp4)、[向上](/images/castle-archer-903/up.mp4)、[向下](/images/castle-archer-903/down.mp4)视频，以及对应的[正面](/images/castle-archer-900/aim.png)、[向上](/images/castle-archer-903/up.png)、[向下](/images/castle-archer-903/down.png)旧静帧作为历史保留。现在有待机和三个方向射击，共四组人物动画候选；手腕收尾、其它动作、弹道校准、分层输出与游戏接入仍未完成。
 
 ### 僧侣的造型修正（2026-09-18）
 
