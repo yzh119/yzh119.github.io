@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T02:18:45+00:00
+lastmod: 2026-09-19T02:47:08+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk 1×/2× test is installed in local mod 0.6.0. Native logs read 109 body images across 15 groups and three projectile directions. Release comparisons are included; visual acceptance remains open."
+homeSummary: "The Archer has a new blue-and-white Meshy body, Blender stills and four rig probes; its old design is rejected. Six Castle test candidates remain installed; the replacement Archer is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
-| Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
+| Archer | <s>Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review</s> New blue-and-white Meshy body and humanoid rig; four deformation probes reviewed, old design rejected. Crossbow, actions and integration pending |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
@@ -950,6 +950,30 @@ Cavalier and Champion each ran a local horse-and-rider probe against their own m
 
 </details>
 
+### Archer identity and rig correction (2026-09-19) {#archer-identity}
+
+The Archer is back in modeling. Comparing the old body with `CLCBOW.DEF` at battle scale exposed a mismatch: the long dark tunic, gold trim and tall pointed helmet had survived the earlier motion checks. The reference has a shorter blue tunic, visible white clothing and a low brimmed helmet. The old shooting experiments are retained below as history; their continuity results do not establish a faithful character design.
+
+![Original Archer and the rejected old body at several camera angles](/images/castle-archer-829/old-identity.png)
+
+The replacement reference was made with built-in image generation. Meshy 7 then generated the textured body through its image-to-3D API: 300,000 target triangles, 4K textures, image enhancement disabled, 30 credits. Its separate humanoid rig cost 5 credits. The body reference deliberately leaves out the crossbow so that the weapon can remain rigid and both hands can be posed around it.
+
+![Body concept used as the Meshy reference; this is not a Blender render](/images/castle-archer-829/concept.png)
+
+![Actual 1200-pixel Blender still of the new Meshy body, before posing and weapon attachment](/images/castle-archer-829/body-hq.png)
+
+![Eight Blender views of the generated body](/images/castle-archer-829/turnaround.png)
+
+The rig review found a normalization bug in our tool. Blender imported an unlinked bone-control sphere alongside the character, and its bounds were counted as part of the body. Requesting a 1.7 m character produced a 1.07 m body with its feet 0.63 m above the floor. The tool now excludes objects referenced as bone custom shapes before measuring the model; a synthetic, asset-free regression test checks poses before and after reopening the scene. The correction is in [the public tools repository](https://github.com/yzh119/h3-art-pipeline/commit/4faebac).
+
+![Same camera before and after excluding the bone widget from normalization](/images/castle-archer-829/normalization.png)
+
+Raising the arms also stretched two short edges at the upper back to about seven times their rest length. Their endpoints had inconsistent upper-arm influence. A first local weight transfer used a hard cutoff and made the boundary worse: thirteen edges exceeded six times their rest length. That attempt is rejected. A smoothly tapered transfer to the spine reduced the largest measured raised-arm ratio to 3.03; none exceeded six in the four sampled poses. The measurement includes edges longer than 1 mm at rest and does not establish collision-free skinning across a complete animation.
+
+![Rest, raised arms, spread arms and one step pose, viewed from three angles in Blender](/images/castle-archer-829/probes.png)
+
+All four three-quarter images reproduced pixel-for-pixel after reopening the saved scene. These are discrete deformation probes. The step has not been grounded into a walk cycle, and the body still needs the light crossbow, hand grips, original action timing, shadows and game integration. An unnecessary image-background cleanup also changed the cloth design; it was discarded and the initial reference above was used. The Archer replacement has not been installed.
+
 ### Monk identity correction (2026-09-18)
 
 **Current status: the Monk is installed as a private test; see [installation and runtime checks](#monk-installation). The following sections retain the offline development history, including their earlier uninstalled status.**
@@ -1547,7 +1571,12 @@ The original action inventory contains 18 active groups and 150 frames after exc
 
 Remote candidate 02 subsequently gained the native eight-frame up/down shooting body groups; bolt release still needs its own three-dimensional layer.
 
+<details>
+<summary>History: old Archer shooting experiments; body design rejected on 2026-09-19</summary>
+
 <s>The Archer now has a separate Meshy-rig pose check after its earlier rejected local attempt: a five-key raised-crossbow motion keeps both sleeves and the light crossbow connected through the aiming pose. The first front-shot review now uses the original eight-frame group count at 450×400: raise, aim, recoil and return remain continuous. It still has no separate bolt release and no up/down groups, so it is not a finished firing clip.</s> <s>The native eight-frame `SHOOT_UP` body action has now passed front and side key-frame review: low carry rises to the aiming peak and recovers while the light crossbow, both hands and sleeve cuffs remain continuous. Its bolt layer and the separate downward group still need authoring; this is private Blender review only, with no DEF output or game installation.</s> <s>The native eight-frame `SHOOT_DOWN` body action now also passes front and side review: the low target aim and return keep light crossbow, hands and sleeve cuffs continuous. All three body shot directions are present; each still needs its own three-dimensional bolt layer. This remains private Blender review only, with no DEF output or game installation.</s> The first front bolt layer launched from the character’s left, and the second kept the correct rightward direction but sat below the crossbow groove; both are rejected. The third seats in the right-side groove through aim and exits rightward on recoil. Separate upward and downward layers use the same independently reviewed Meshy bolt but their own attached locations and rising/declining trajectories. All three eight-frame projectile layers pass front and side key-frame review. This remains private Blender review only, with no DEF output or game installation.
+
+</details>
 
 <details>
 <summary>History: motion checks on the white-robed Zealot, rejected for identity on 2026-09-18</summary>
