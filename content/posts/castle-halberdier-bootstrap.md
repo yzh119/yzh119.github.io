@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T07:28:44+00:00
+lastmod: 2026-09-19T07:39:50+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Archer gains three six-frame melee drafts, with high-resolution Blender stills and videos. Downward blade visibility and intermediate sole penetration are repaired; grip, transitions and game integration remain unfinished."
+homeSummary: "Archer melee and two-frame turn drafts now have high-resolution Blender previews. Death, grip repairs, facing transitions and game integration remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
-| Archer | New blue-and-white Meshy body, separate hands and crossbow; 13 groups and 86 offline body frames including three dagger melee directions. Grip, five remaining groups, layered export and installation unfinished |
+| Archer |New Meshy body, hands, crossbow and dagger; 17 offline groups cover 94 frame entries, including four reused turn entries. Six death frames, appearance repairs, layered export and installation remain unfinished |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
@@ -1184,8 +1184,23 @@ The [18-frame sheet](/images/castle-archer-962/frames.png) shows the full sequen
 
 Front and upward attacks were sampled at 161 times each. Across all three clips, upper-arm and forearm length errors stay below 0.001 mm and the left-hand anchor error below 0.16 mm. All 18 renders fit the current canvas. Reopened fourth-frame renders differ in 3, 1 and 6 pixels respectively, by one channel value; alpha is identical. These checks exclude full surface collision. Fingers, thumb web, upward blade contrast, cloth and timing still need work. Both melee endpoints hold the dagger, so switching to ordinary holding remains unresolved.
 
-The Archer now has **13 candidate groups and 86 body frames**. Death, both turns and groups 9 and 10 account for the remaining five groups and 14 frames. Native registration, projectiles, layered export and game integration are unfinished. The full Castle roster remains in progress.
+<s>The Archer now has **13 candidate groups and 86 body frames**. Death, both turns and groups 9 and 10 account for the remaining five groups and 14 frames.</s> This records the melee stage; the turn draft follows below. Native registration, projectiles, layered export and game integration are unfinished. The full Castle roster remains in progress.
 
+
+
+### Archer turn drafts (September 19)
+
+The original turn gathers the bow and faces forward in two frames. The draft slightly raises the left foot, narrows the stance and brings the crossbow to waist height. The second clip reverses this motion. This is an actual 1200-pixel Blender render; finger and wrist appearance still need repair.
+
+![Front-facing turn pose rendered in Blender](/images/castle-archer-965/front.png)
+
+![Two frames per turn in the offline review camera](/images/castle-archer-965/frames.png)
+
+Each reopened scene was sampled at 65 times. The selected soles stay at least 0.498 mm above the reference floor, arm-length errors remain below 0.001 mm, and hand anchors follow their changing grip targets within 0.05 mm. The reopened front-facing renders match in every RGBA channel. These checks do not establish a planted foot pivot or correct surface contact.
+
+The original groups 9 and 10 exactly duplicate both frames of the corresponding left and right turns, across body, shadow and overlay layers. VCMI marks these duplicate groups as unused. The current count is therefore **17 groups and 94 frame entries**, with four new turn renders reused for another four entries. Six death frames remain unauthored.
+
+VCMI changes facing between the two turn clips. Registration across that flip, the apparent change in bow side and transitions to holding remain unverified. These drafts are offline; grip, cloth, foot placement and game integration still need work.
 
 
 ### Monk identity correction (2026-09-18)
@@ -2550,5 +2565,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical roster table: Archer before melee drafts</summary>
 
 <s> Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review New blue-and-white Meshy body and humanoid rig; four deformation probes reviewed, old design rejected. Crossbow, actions and integration pending Separate hands are now attached in a static crossbow trial; grip and wrist review continues</s>
+
+</details>
+
+<details>
+<summary>Historical summary and roster row before the turn draft</summary>
+
+<s>The Archer gains three six-frame melee drafts, with high-resolution Blender stills and videos. Downward blade visibility and intermediate sole penetration are repaired; grip, transitions and game integration remain unfinished.</s>
+
+<s>New blue-and-white Meshy body, separate hands and crossbow; 13 groups and 86 offline body frames including three dagger melee directions. Grip, five remaining groups, layered export and installation unfinished</s>
 
 </details>
