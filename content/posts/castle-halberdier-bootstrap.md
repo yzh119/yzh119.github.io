@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T01:54:01+00:00
+lastmod: 2026-09-19T02:02:48+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk has three directional 3D casting trials across 29 frames, including 14 original-timing blanks. Full layered sheets and three particle-density trials are shown; flight and game integration remain unfinished."
+homeSummary: "Monk melee effects, a curved defence ward and nine projectile directions now join 109 body-and-shadow frames and 62 effect slots. Full comparisons and a high-resolution projectile still are available; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1226,7 +1226,27 @@ The first pass was too dense and cloud-like. Reducing the mist opacity and parti
 
 ![All 29 upward, horizontal and downward casting frames with body, shadow and 3D effect layers](/images/castle-monk-641/monk-ranged-effects.png)
 
-Fourteen effect frames remain empty, matching the original timing, and every composite fits the canvas. Reopening each of the three scenes and rendering frame 6 reproduces its saved output exactly. The source body scenes and all 109 body images retain their hashes. Flight after release, effects required by melee or defence, appearance repairs, transitions and native validation remain unfinished. Meshy supplies the reused creature model; Astra authored the 3D effects and adaptation scripts.
+Fourteen effect frames remain empty, matching the original timing, and every composite fits the canvas. Reopening each of the three scenes and rendering frame 6 reproduces its saved output exactly. The source body scenes and all 109 body images retain their hashes. <s>Flight after release, effects required by melee or defence, appearance repairs, transitions and native validation remain unfinished.</s> The following section adds flight, melee and defence candidates; appearance, transitions and native validation remain open. Meshy supplies the reused creature model; Astra authored the 3D effects and adaptation scripts.
+
+#### Melee, defence and projectile layers
+
+The three melee directions add 26 effect slots using the same 3D sparks as casting. Defence needs a separate shape: the original opens a curved band of light. A seven-frame star arc now renders against the current sleeves and body as occluders.
+
+![Complete offline melee composites in three directions; not installed](/images/castle-monk-641/monk-melee-effects.png)
+
+The first ward was a thin, predominantly golden line. The revision gives the particles a thicker distribution and restores white-blue stars. Brightness and the unfolding motion still need comparison with the original.
+
+![Rejected thin-line defence arc](/images/castle-monk-641/monk-defence-thin-failure.png)
+
+![Revised seven-frame defence ward, still an offline candidate](/images/castle-monk-641/monk-defence-effects.png)
+
+Flight uses the casting layer's actual star meshes and materials. Several initial angles touched the 120×120 canvas edges. Reducing the overall scale leaves transparent margins at all nine angles. The larger still below renders the same 3D model; native projectile size and its release position remain unverified.
+
+![Nine directional projectile candidates](/images/castle-monk-641/monk-projectile-directions.png)
+
+![Actual 900×900 Blender still of the same projectile model](/images/castle-monk-641/monk-projectile-hq.png)
+
+The consolidated offline inventory contains 109 body-and-shadow frames and 62 effect slots, including 27 original-timing blanks. Reopening the three melee scenes, the ward scene and the projectile scene reproduces one sampled frame from each exactly. Body source files remain unchanged. Packaging, release alignment and native checks come next; clothing, palms, original proportions and full visual acceptance remain unfinished.
 
 ### Zealot identity correction (2026-09-18)
 
@@ -2237,5 +2257,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary before directional casting</summary>
 
 <s>The Monk now has 109 geometry-projected shadow frames across fifteen actions, with complete layered review sheets. Repeat renders match; spell effects, appearance review and game integration remain unfinished.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before melee, defence and projectile layers</summary>
+
+<s>The Monk has three directional 3D casting trials across 29 frames, including 14 original-timing blanks. Full layered sheets and three particle-density trials are shown; flight and game integration remain unfinished.</s>
 
 </details>
