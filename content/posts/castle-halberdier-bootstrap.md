@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T08:17:20+00:00
+lastmod: 2026-09-19T08:33:37+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The armed Crusader failed pose estimation. A new empty-handed body now has a Meshy rig; four static probes expose shoulder and armpit stretching that needs repair before animation and installation."
+homeSummary: "Crusader arm weights pulled the middle of the back during raised-arm poses. A local binding repair reduces that displacement; shoulder articulation and armpit stretching remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -46,11 +46,28 @@ The new Meshy 7.1 body consumed 30 credits, followed by a successful 5-credit ri
 
 ![Actual Blender render of the new body with its Meshy rig](/images/castle-crusader-977/body.png)
 
-Astra authored three static arm-raising probes using actual joint positions, alongside the rest pose. These four poses are deformation tests, not completed native animation groups. Joint-length changes stay below 0.001 mm, but the both-arms-raised pose stretches 42 mesh edges longer than 1 mm by more than three times their rest length. The largest ratio is about 4.28. These edges lie around the shoulders and armpits, where soft skin weights still pull the armour.
+Astra authored three static arm-raising probes using actual joint positions, alongside the rest pose. These four poses are deformation tests, not completed native animation groups. Joint-length changes stay below 0.001 mm, but the original binding in the both-arms-raised pose stretches 42 mesh edges longer than 1 mm by more than three times their rest length. The largest ratio is about 4.28. These edges lie around the shoulders and armpits, where soft skin weights still pull the armour.
 
 ![Right-arm probe rendered in Blender; shoulder and armpit deformation remains unaccepted](/images/castle-crusader-977/raised.png)
 
 The [four-pose sheet](/images/castle-crusader-977/probes.png) records the test. Reopening the saved scene reproduces the right-arm render in every RGBA channel. Fingers, metallic finish, armour binding, separate equipment, complete actions and replacement in the game remain unfinished.
+
+
+### Crusader back-weight repair
+
+Vertices near the back centre included left- and right-arm influences. Raising both arms pulled the back armour and cloth outward. The repair reduces those influences inside the torso, assigns the removed weight to the spine, and smooths the transition along mesh adjacency. Coincident UV-seam vertices share the weight calculation; geometry and textures remain unchanged.
+
+![Rear view of the same pose: original binding left, revised binding right](/images/castle-crusader-987/comparison.png)
+
+For 108 selected central-back vertices, the largest displacement from rest falls from about 83.6 mm to 0.080 mm. This measurement covers only that back region. In the both-arms-raised probe, edges exceeding three times their rest length fall from 42 to 35. Remaining stretch is concentrated around the armpits; full armour articulation is unfinished.
+
+![Current rear pose, actual 1200-pixel Blender render](/images/castle-crusader-987/back.png)
+
+![Diagnostic red indicates larger weight changes](/images/castle-crusader-987/mask.png)
+
+Several trials were rejected. Removing weights and renormalizing worsened armpit stretching; the [failed render](/images/castle-crusader-987/rejected.png) is retained. Spatial-neighbour smoothing mixed nearby surfaces and also made the result worse. Additional iterations of surface-adjacency smoothing did not improve the result, so the shorter pass was kept.
+
+Reopening reproduces the raised-arm render in every RGBA channel. Rest-surface changes stay below 0.001 mm. Moving shoulder plates still need separate treatment from the flexible armpit region. Equipment binding, fingers, materials, complete actions and game replacement remain unfinished.
 
 
 ## All fourteen meshes
@@ -2625,5 +2642,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary before the empty-handed rigging trial</summary>
 
 <s>The installed Crusader design was rejected for poor fidelity. A new Meshy model restores the round shield, enclosed helm and short white-and-blue cloth, with concept art and actual Blender renders.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before the back-weight repair</summary>
+
+<s>The armed Crusader failed pose estimation. A new empty-handed body now has a Meshy rig; four static probes expose shoulder and armpit stretching that needs repair before animation and installation.</s>
 
 </details>
