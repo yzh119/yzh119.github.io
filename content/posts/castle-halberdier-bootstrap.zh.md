@@ -1026,9 +1026,11 @@ Meshy 生成的独立弩和弩箭继续作为底模。Astra 在 Blender 里拆�
 
 最新试稿降低了右手腕，并重新调整弯指。双手更靠近弩身了，但食指还没形成正确的扣扳机姿势，手腕过渡也依然明显。表面距离与面法线检查可以帮助找悬空和疑似穿插，不能据此宣布握法合格。这一步仍是静态建模试稿，原版站姿、射击动作和接入游戏都还没完成。
 
-![最新接触试稿的 Blender 全身静帧](/images/castle-archer-885/body.png)
+随后还修正了手掌朝向轴没有互相垂直的问题，避免姿态变换把意外缩放带进手部。下面两图已包含这项修正；此前的[全身试稿](/images/castle-archer-885/body.png)和[握法近景](/images/castle-archer-885/grip.png)作为历史保留。
 
-![最新双手近景，扣扳机和手腕过渡仍待修整](/images/castle-archer-885/grip.png)
+![最新接触试稿的 Blender 全身静帧](/images/castle-archer-888/aim.png)
+
+![最新双手近景，扣扳机和手腕过渡仍待修整](/images/castle-archer-888/grip.png)
 
 ### 僧侣的造型修正（2026-09-18）
 

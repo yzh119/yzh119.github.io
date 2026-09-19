@@ -1026,9 +1026,11 @@ The next contact study moves the support palm toward the stock and adjusts each 
 
 The latest draft uses a lower trigger wrist and revised finger curls. Both hands now sit closer to the weapon, but the index finger still needs a proper trigger pose, and the wrist transition remains visible. Surface-distance and face-normal checks help locate gaps and possible intersections; they do not establish a usable grip. This remains a static modeling study, with original stance, shooting motion and game integration still pending.
 
-![Latest full-body Blender contact-study render](/images/castle-archer-885/body.png)
+A further correction makes the palm orientation axes perpendicular before applying the pose, removing unintended scale from the hand transform. The figures below include this fix; the [preceding full-body](/images/castle-archer-885/body.png) and [grip trial](/images/castle-archer-885/grip.png) remain as history.
 
-![Latest hand close-up; trigger placement and wrist finish remain unresolved](/images/castle-archer-885/grip.png)
+![Latest full-body Blender contact-study render](/images/castle-archer-888/aim.png)
+
+![Latest hand close-up; trigger placement and wrist finish remain unresolved](/images/castle-archer-888/grip.png)
 
 ### Monk identity correction (2026-09-18)
 
