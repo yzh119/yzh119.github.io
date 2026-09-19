@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T00:45:42+00:00
+lastmod: 2026-09-19T01:35:50+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk waist seam is revised, and the new body and independent skirt now cover fifteen groups and 109 body-draft frames. HQ stills and full sheets are online; effects, shadows and game integration remain unfinished."
+homeSummary: "The Monk shoulder correction is checked across fifteen groups and 109 body frames. Volume blending activates in ten native frames; the other 99 match the preceding images exactly. New HQ comparisons and an open-source helper are available; no game installation."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1147,6 +1147,8 @@ Reopening the saved scene reproduces the native-camera final frame pixel for pix
 
 #### Waist seam and full body-action drafts
 
+These figures document the waist revision, before the shoulder correction in the next section.
+
 The jagged waist edge came from the junction between the retained body and the separate skirt. Deleting whole triangles had left the boundary following irregular mesh edges. The revised body is split along a defined waist plane in its standing pose, interpolating UV coordinates and bone weights at new vertices before converting them back to animated model space. Skirt attachment offsets now follow the corresponding source vertices' skin transforms as well.
 
 ![Waist seam before and after revision, cropped Blender renders from the same camera](/images/castle-monk-641/monk-waist-comparison.png)
@@ -1174,6 +1176,28 @@ The original's fifteen effective groups now have 109 body images at 900×800, ex
 ![Complete current body frames for hit reaction, defence and death](/images/castle-monk-641/monk-cloth-reaction-sheet.png)
 
 This work reuses the Meshy model, with Astra authoring the Blender repair and action-adaptation scripts. Shoulder clothing, palms and proportions against the original still need review. Spell effects, shadows, transitions and native-game validation are also unfinished. The Monk has not been installed.
+
+
+
+#### Shoulder volume during raised-arm poses
+
+The junction between the mantle and upper arm becomes thin when the arms rise. Moving upper-arm weights to the torso produced a sideways flap, so that approach was rejected. Enabling volume-preserving skinning over the entire body filled out the shoulder but also moved the waist: selected waist-band vertices shifted by up to about 7 mm in the inspected upward-cast pose.
+
+![Original linear skinning, rejected weight transfer and local volume blending during arm elevation; cropped Blender renders from the same camera](/images/castle-monk-641/monk-shoulder-comparison.png)
+
+![Rejected full-body volume-preserving skinning experiment, which also changes the waist](/images/castle-monk-641/monk-shoulder-global-volume-failure.png)
+
+The current candidate blends the two skinning methods near the shoulders, excluding vertices dominated by head, neck, hand and forearm bones. Leaving the local blend enabled throughout still changed the collapsed shoulder. Its influence now increases smoothly with upper-arm elevation relative to the torso, returning to the original linear deformation when the arms are lowered.
+
+![Upward-cast draft with the shoulder correction controlled by arm elevation, actual 1200×1200 Blender still; mantle folds and palms remain unfinished](/images/castle-monk-641/monk-shoulder-raised-hq.png)
+
+All fifteen groups and 109 native body frames were rerendered. Ten frames activate the correction; the other 99 match the preceding images pixel for pixel. The 172,195 vertices outside the selected region retain their positions across all 109 poses. Each scene was also reopened and one frame rerendered, matching its saved image exactly. These checks bound the change; they do not establish visual acceptance of every mantle deformation.
+
+![Updated shoulder deformation in the three melee and ranged directions, body frames without effect layers](/images/castle-monk-641/monk-shoulder-combat-sheet.png)
+
+![Updated hit, defence and death body frames; not installed](/images/castle-monk-641/monk-shoulder-reaction-sheet.png)
+
+The [local skinning-blend helper](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/blend_armature_volume.py) is public. A synthetic mesh without game assets tests zero, full and partial influence, plus rejection of invalid settings. This round reuses the Meshy model with repair and verification scripts authored by Astra; no new paid model job was submitted. Mantle folds, palms, original proportions, spell effects, shadows and native-game validation remain unfinished.
 
 
 ### Zealot identity correction (2026-09-18)
