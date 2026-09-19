@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T07:08:32+00:00
+lastmod: 2026-09-19T07:28:44+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "A new Meshy dagger follows the Archer’s right hand; high-resolution Blender grip studies include a rejected thumb closure. Hand deformation and melee motion remain unfinished."
+homeSummary: "The Archer gains three six-frame melee drafts, with high-resolution Blender stills and videos. Downward blade visibility and intermediate sole penetration are repaired; grip, transitions and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
-| Archer | <s>Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review</s> New blue-and-white Meshy body and humanoid rig; four deformation probes reviewed, old design rejected. <s>Crossbow, actions and integration pending</s> Separate hands are now attached in a static crossbow trial; grip and wrist review continues |
+| Archer | New blue-and-white Meshy body, separate hands and crossbow; 13 groups and 86 offline body frames including three dagger melee directions. Grip, five remaining groups, layered export and installation unfinished |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
@@ -1119,7 +1119,7 @@ With the control direction revised, maximum adjacent elbow displacement at 1/32-
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-archer-929/hitted.mp4"></video>
 
-After reopening, 161 sampled times keep the selected actual sole vertices above the reference floor, with about 0.5 mm of support-foot clearance and less than 0.08 mm of holding-hand anchor drift. The reopened second-frame render matches in every RGBA channel. This does not establish collision-free hands, weapon, cloth or legs. <s>There are now eight candidate groups and 50 body frames; ten groups, another 50 frames and game export remain unfinished.</s> <s>The defence draft below adds nine frames, bringing the current total to nine groups and 59 frames.</s> Defence and hover drafts follow below; the current total is ten groups and 68 frames.
+After reopening, 161 sampled times keep the selected actual sole vertices above the reference floor, with about 0.5 mm of support-foot clearance and less than 0.08 mm of holding-hand anchor drift. The reopened second-frame render matches in every RGBA channel. This does not establish collision-free hands, weapon, cloth or legs. <s>There are now eight candidate groups and 50 body frames; ten groups, another 50 frames and game export remain unfinished.</s> <s>The defence draft below adds nine frames, bringing the current total to nine groups and 59 frames.</s> Defence and hover drafts follow below; the total at the hover stage was ten groups and 68 frames.
 
 The stop-entry investigation also isolated ankle jumps of roughly 25–29 cm in the worst phases, alongside the weapon jump. In the current source, the same duration parameter scales walking frame rate and travel rate, yielding nominally five sprite frames per hex. An eight-frame loop can therefore end in different phases; adjusting walk duration alone cannot align every stop. The stop poses and actual game playback still need review.
 
@@ -1134,7 +1134,7 @@ A later check found an omission in the defence review: the hand anchors were sta
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-archer-940/defence.mp4"></video>
 
-After reopening, 257 sampled times keep the selected actual sole vertices above the reference floor. Both hand anchors remain stable during the full guard in frames four through six. Grip changes are checked separately from holding the guard, since intentional repositioning is not drift. All nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Full hand-to-weapon contact, cloth intersections and transitions in the game remain unverified. <s>This brings the candidates to nine groups and 59 body frames; another nine groups, 41 frames, layered export and game installation remain unfinished.</s> The hover action below adds nine frames, bringing the current total to ten groups and 68 frames, still uninstalled.
+After reopening, 257 sampled times keep the selected actual sole vertices above the reference floor. Both hand anchors remain stable during the full guard in frames four through six. Grip changes are checked separately from holding the guard, since intentional repositioning is not drift. All nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Full hand-to-weapon contact, cloth intersections and transitions in the game remain unverified. <s>This brings the candidates to nine groups and 59 body frames; another nine groups, 41 frames, layered export and game installation remain unfinished.</s> The hover action below adds nine frames, bringing the hover-stage total to ten groups and 68 frames, still uninstalled.
 
 
 A nine-frame mouse-hover candidate now brings the crossbow to waist height, turns the torso slightly, looks down and returns to holding. The first pass rotated the bow the wrong way, increasing its projected length. Correcting the turn then exposed about 1.2 cm of left-forearm stretch while reaching the bow; moving the bow closer resolved it. The generation scripts now fail on unreachable hand targets rather than forcing the hand into place.
@@ -1147,22 +1147,45 @@ A nine-frame mouse-hover candidate now brings the crossbow to waist height, turn
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-archer-940/mouseon.mp4"></video>
 
-After reopening, visible meshes at both hover endpoints match the first holding pose within 0.001 mm. Arm-length and sole checks pass at 257 sampled times, all nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Checking exported integer frames in the other existing actions found the same substantial stretch in the old defence draft, now repaired; this does not cover all intermediate poses in those other actions. There are now ten candidate groups and 68 body frames, with eight groups, 32 frames, appearance work, layered export and game installation still remaining.
+After reopening, visible meshes at both hover endpoints match the first holding pose within 0.001 mm. Arm-length and sole checks pass at 257 sampled times, all nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Checking exported integer frames in the other existing actions found the same substantial stretch in the old defence draft, now repaired; this does not cover all intermediate poses in those other actions. <s>There are now ten candidate groups and 68 body frames, with eight groups, 32 frames, appearance work, layered export and game installation still remaining.</s> This is the hover-stage count; the melee section below records current progress.
 
 
 The melee reference swings a short blade in the right hand while the left keeps the crossbow at the side. The existing longsword's guard and proportions did not fit, so this pass uses the [Meshy Text to 3D API](https://docs.meshy.ai/en/api/text-to-3d) for a plain dagger. Meshy 7.1 geometry consumed 20 credits and texturing consumed 10; both tasks succeeded. The downloaded base-colour texture is 4096 pixels.
 
 ![Meshy dagger preview before local handle fitting](/images/castle-archer-949/meshy-preview.png)
 
-In Blender, the dagger was fitted to about 40 cm total length, with a longer and thicker handle for the fist. It remains a separate mesh constrained to the right-hand bone; three small wrist-rotation probes match the expected transform. The reopened full-body render differs in ten pixels by one channel value, with identical alpha and frame bounds. This is a static grip study; the three six-frame melee directions have not been authored yet.
+In Blender, the dagger was fitted to about 40 cm total length, with a longer and thicker handle for the fist. It remains a separate mesh constrained to the right-hand bone; three small wrist-rotation probes match the expected transform. The reopened full-body render differs in ten pixels by one channel value, with identical alpha and frame bounds. <s>This is a static grip study; the three six-frame melee directions have not been authored yet.</s> This records the static study at 949; the three melee drafts follow below.
 
 ![Right-hand dagger and left-hand crossbow pose, actual 1200-pixel Blender render with grip acceptance pending](/images/castle-archer-949/body.png)
 
 ![Grip with restricted thumb twist; the web and skin seam still need work](/images/castle-archer-949/grip.png)
 
-The first thumb closure put the selected fingertip-surface centre about 0.11 mm from the handle target, but visibly creased the thumb web and was rejected. Restricting joint twist reduces the creasing while leaving about 15 mm to that target; the grip is unfinished. The next check must consider whether the thumb should rest on the index finger or the handle, together with actual surface contact. The editable dagger follows the hand, but hand appearance and melee motion remain unfinished. The body-animation count stays at ten groups and 68 frames.
+The first thumb closure put the selected fingertip-surface centre about 0.11 mm from the handle target, but visibly creased the thumb web and was rejected. Restricting joint twist reduces the creasing while leaving about 15 mm to that target; the grip is unfinished. The next check must consider whether the thumb should rest on the index finger or the handle, together with actual surface contact. <s>The editable dagger follows the hand, but hand appearance and melee motion remain unfinished. The body-animation count stays at ten groups and 68 frames.</s> This records stage 949. Hand appearance remains unfinished; subsequent melee drafts follow below.
 
 ![Rejected thumb closure: close to the target, with visible web deformation](/images/castle-archer-949/creased.png)
+
+### Archer melee drafts (September 19)
+
+The textured dagger comes from the Meshy API task above. Astra authored three attack directions in Blender, retaining six frames each. The right hand carries the constrained dagger while the left moves the crossbow aside. These are actual 1200-pixel Blender renders; the review videos play at five frames per second.
+
+![Front cut](/images/castle-archer-962/front.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-962/front.mp4"></video>
+
+![Upward thrust; blade contrast still needs work](/images/castle-archer-962/up.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-962/up.mp4"></video>
+
+![Downward thrust with the blade ahead of the legs](/images/castle-archer-962/down.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-962/down.mp4"></video>
+
+The [18-frame sheet](/images/castle-archer-962/frames.png) shows the full sequences. Earlier drafts had [insufficient forward reach](/images/castle-archer-962/short-reach.png) and a [blade obscured by the thigh](/images/castle-archer-962/hidden-blade.png). After moving the downward wrist target, denser pose keys also repaired about 0.038 mm of intermediate sole penetration. A reopened scene sampled at 321 times keeps the selected soles at least 0.343 mm above the reference floor.
+
+Front and upward attacks were sampled at 161 times each. Across all three clips, upper-arm and forearm length errors stay below 0.001 mm and the left-hand anchor error below 0.16 mm. All 18 renders fit the current canvas. Reopened fourth-frame renders differ in 3, 1 and 6 pixels respectively, by one channel value; alpha is identical. These checks exclude full surface collision. Fingers, thumb web, upward blade contrast, cloth and timing still need work. Both melee endpoints hold the dagger, so switching to ordinary holding remains unresolved.
+
+The Archer now has **13 candidate groups and 86 body frames**. Death, both turns and groups 9 and 10 account for the remaining five groups and 14 frames. Native registration, projectiles, layered export and game integration are unfinished. The full Castle roster remains in progress.
+
 
 
 ### Monk identity correction (2026-09-18)
@@ -2513,5 +2536,19 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>Monk melee effects, a curved defence ward and nine projectile directions now join 109 body-and-shadow frames and 62 effect slots. Full comparisons and a high-resolution projectile still are available; not installed.</s>
 
 <s>| Monk | Offline body and geometry-shadow composites cover fifteen groups and 109 frames, including the shoulder correction and independent skirt. Cloth, palms, original proportions, spells, transitions and integration remain unfinished |</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary: stage 949</summary>
+
+<s>A new Meshy dagger follows the Archer’s right hand; high-resolution Blender grip studies include a rejected thumb closure. Hand deformation and melee motion remain unfinished.</s>
+
+</details>
+
+<details>
+<summary>Historical roster table: Archer before melee drafts</summary>
+
+<s> Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review New blue-and-white Meshy body and humanoid rig; four deformation probes reviewed, old design rejected. Crossbow, actions and integration pending Separate hands are now attached in a static crossbow trial; grip and wrist review continues</s>
 
 </details>
