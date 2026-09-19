@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T08:33:37+00:00
+lastmod: 2026-09-19T09:55:22+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader arm weights pulled the middle of the back during raised-arm poses. A local binding repair reduces that displacement; shoulder articulation and armpit stretching remain unfinished."
+homeSummary: "The Crusader revision restores the closed helmet, short cloth and round shield. The separate shield mesh is ready for grip work; shoulder trials remain rejected and the replacement is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -68,6 +68,21 @@ For 108 selected central-back vertices, the largest displacement from rest falls
 Several trials were rejected. Removing weights and renormalizing worsened armpit stretching; the [failed render](/images/castle-crusader-987/rejected.png) is retained. Spatial-neighbour smoothing mixed nearby surfaces and also made the result worse. Additional iterations of surface-adjacency smoothing did not improve the result, so the shorter pass was kept.
 
 Reopening reproduces the raised-arm render in every RGBA channel. Rest-surface changes stay below 0.001 mm. Moving shoulder plates still need separate treatment from the flexible armpit region. Equipment binding, fingers, materials, complete actions and game replacement remain unfinished.
+
+
+### Separate round shield and shoulder trials
+
+A separate shield was generated through the Meshy Text to 3D API. Preview and texture stages succeeded, costing 30 credits together. The Blender import contains 12,025 vertices and 19,638 faces, inspected at a provisional diameter of 55 cm. Its circular outline, central boss and concentric metal rings fit the original equipment type; rim colour and scale still need comparison on the character.
+
+![Separate shield front, actual 1000-pixel Blender render; not bound](/images/castle-crusader-996/shield-front.png)
+
+The [rear render](/images/castle-crusader-996/shield-back.png) shows one broad band rather than the requested complete pair of straps and grip. Finger contact and forearm attachment still need work before installation.
+
+Shoulder experiments duplicated part of the original mesh into rigid plates over a dark flexible backing. Three follow angles were tried; the final trial also moved the plates outward and upward. Raised arms still exposed floating edges and discontinuous joins. All three trials were rejected. The current body remains the back-weight repair described above; the image below records a failed experiment.
+
+![Rejected separate-shoulder trial: floating edges with both arms raised, actual Blender render](/images/castle-crusader-996/shoulder-rejected.png)
+
+The replacement Crusader is not installed. Shoulder boundaries and joins, a separate sword, equipment grips and the full action set remain unfinished.
 
 
 ## All fourteen meshes
@@ -2649,5 +2664,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary before the back-weight repair</summary>
 
 <s>The armed Crusader failed pose estimation. A new empty-handed body now has a Meshy rig; four static probes expose shoulder and armpit stretching that needs repair before animation and installation.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before the separate-shield review</summary>
+
+<s>Crusader arm weights pulled the middle of the back during raised-arm poses. A local binding repair reduces that displacement; shoulder articulation and armpit stretching remain unfinished.</s>
 
 </details>
