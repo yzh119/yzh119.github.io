@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T01:35:50+00:00
+lastmod: 2026-09-19T01:46:06+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk shoulder correction is checked across fifteen groups and 109 body frames. Volume blending activates in ten native frames; the other 99 match the preceding images exactly. New HQ comparisons and an open-source helper are available; no game installation."
+homeSummary: "The Monk now has 109 geometry-projected shadow frames across fifteen actions, with complete layered review sheets. Repeat renders match; spell effects, appearance review and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -29,7 +29,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
-| Monk | Fifteen groups and 109 body-draft frames now use the revised waist and independent skirt; one reopened render per group reproduced exactly. Shoulder cloth, palms, effects, shadows and integration remain unfinished |
+| Monk | Offline body and geometry-shadow composites cover fifteen groups and 109 frames, including the shoulder correction and independent skirt. Cloth, palms, original proportions, spells, transitions and integration remain unfinished |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
@@ -1175,7 +1175,7 @@ The original's fifteen effective groups now have 109 body images at 900×800, ex
 
 ![Complete current body frames for hit reaction, defence and death](/images/castle-monk-641/monk-cloth-reaction-sheet.png)
 
-This work reuses the Meshy model, with Astra authoring the Blender repair and action-adaptation scripts. Shoulder clothing, palms and proportions against the original still need review. Spell effects, shadows, transitions and native-game validation are also unfinished. The Monk has not been installed.
+This work reuses the Meshy model, with Astra authoring the Blender repair and action-adaptation scripts. Shoulder clothing, palms and proportions against the original still need review. <s>Spell effects, shadows, transitions and native-game validation are also unfinished.</s> Offline shadow candidates appear below; the other items remain open. The Monk has not been installed.
 
 
 
@@ -1197,8 +1197,24 @@ All fifteen groups and 109 native body frames were rerendered. Ten frames activa
 
 ![Updated hit, defence and death body frames; not installed](/images/castle-monk-641/monk-shoulder-reaction-sheet.png)
 
-The [local skinning-blend helper](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/blend_armature_volume.py) is public. A synthetic mesh without game assets tests zero, full and partial influence, plus rejection of invalid settings. This round reuses the Meshy model with repair and verification scripts authored by Astra; no new paid model job was submitted. Mantle folds, palms, original proportions, spell effects, shadows and native-game validation remain unfinished.
+The [local skinning-blend helper](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/blend_armature_volume.py) is public. A synthetic mesh without game assets tests zero, full and partial influence, plus rejection of invalid settings. This round reuses the Meshy model with repair and verification scripts authored by Astra; no new paid model job was submitted. <s>Mantle folds, palms, original proportions, spell effects, shadows and native-game validation remain unfinished.</s> The next section adds offline shadow candidates; the other items remain open.
 
+
+#### Separate shadows for all fifteen actions
+
+The current body scenes now produce **109 geometry-projected shadow frames**. Each action retains its own saved cloth cache. The exporter evaluates the deformed body, lining and skirt, projects them onto the ground along one fixed direction, and renders through the body camera. Existing body images remain unchanged.
+
+![Six offline body-and-shadow composites covering holding, walking, casting, defence and death; not installed](/images/castle-monk-641/monk-shadow-review.png)
+
+All shadows use 50% opacity and a 1.6-pixel blur, with no per-frame resizing or recentering. Every composite fits the 900×800 canvas. Rendering the first frame of each action a second time gives identical pixels in all fifteen cases. This establishes repeatability; temporal stability during native playback still needs review.
+
+![Complete body-and-shadow sequences for holding, walking, mouse-over, move-start and turns](/images/castle-monk-641/monk-shadow-motion.png)
+
+![Three melee and three ranged directions with projected shadows; spell effects are still absent](/images/castle-monk-641/monk-shadow-combat.png)
+
+![Complete hit, defence and death sequences with shadows](/images/castle-monk-641/monk-shadow-reaction.png)
+
+Astra authored the projection and layer checks using the existing Meshy model. These are offline shadow candidates. Mantle folds, palms, original proportions, spells, transitions and game integration remain unfinished.
 
 ### Zealot identity correction (2026-09-18)
 
@@ -2193,5 +2209,14 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>The Zealot mantle revision is installed with regenerated shadows and effect occlusion. New ranged and melee tests read 113 body images across 14 groups; layered comparisons are included while visual review continues.</s>
 
 <s>| Monk | original rig: 6-frame holding/walk accepted; candidate 03 adds locally repaired 10-frame front/up and 9-frame downward casts |</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary and Monk overview before shadow export</summary>
+
+<s>The Monk shoulder correction is checked across fifteen groups and 109 body frames. Volume blending activates in ten native frames; the other 99 match the preceding images exactly. New HQ comparisons and an open-source helper are available; no game installation.</s>
+
+<s>| Monk | Fifteen groups and 109 body-draft frames now use the revised waist and independent skirt; one reopened render per group reproduced exactly. Shoulder cloth, palms, effects, shadows and integration remain unfinished |</s>
 
 </details>
