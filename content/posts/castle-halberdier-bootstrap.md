@@ -1036,7 +1036,7 @@ The next grip approaches the trigger from below. Its index-finger surface sample
 
 ![Revised trigger-hand study, actual 1200-pixel Blender render](/images/castle-archer-895/trigger.png)
 
-An eight-frame raising probe now moves the crossbow and both arms from chest height toward the shoulder. Initial interpolation let the right-hand anchor slip by about 4 mm relative to the weapon. Baking intermediate arm poses reduced the largest sampled slip to about 0.064 mm across 113 times, while the export remains eight frames. These measurements track hand-bone anchors, not skin contact or intersection. The raised still reproduces pixel-for-pixel after reopening the scene.
+An eight-frame raising probe now moves the crossbow and both arms from chest height toward the shoulder. Initial interpolation let the right-hand anchor slip by about <s>4</s> 3.2 mm relative to the weapon. Baking intermediate arm poses reduced the largest sampled slip to about <s>0.064</s> 0.051 mm across 113 times, while the export remains eight frames. The corrected distances include the weapon’s 0.8 scale and are in world units. These measurements track hand-bone anchors, not skin contact or intersection. The raised still reproduces pixel-for-pixel after reopening the scene.
 
 ![Raised crossbow in the new-body motion probe, actual 1200-pixel Blender render](/images/castle-archer-895/raised.png)
 
