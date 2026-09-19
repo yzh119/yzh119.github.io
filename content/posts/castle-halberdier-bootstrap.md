@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-18T23:34:48+00:00
+lastmod: 2026-09-19T00:45:42+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Monk death revisions lower the boots, repair an intervening floor penetration and smooth the free skirt. New HQ stills and all eleven frames are online; waist seams and full action integration remain unfinished."
+homeSummary: "The Monk waist seam is revised, and the new body and independent skirt now cover fifteen groups and 109 body-draft frames. HQ stills and full sheets are online; effects, shadows and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -29,7 +29,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Archer | Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
-| Monk | Fourteen body drafts preserved; corrected skirt collision lengths and eleven new death renders. Pose, clothing and boot connections still need repair; uninstalled |
+| Monk | Fifteen groups and 109 body-draft frames now use the revised waist and independent skirt; one reopened render per group reproduced exactly. Shoulder cloth, palms, effects, shadows and integration remain unfinished |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
@@ -45,6 +45,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Unit | Previous record |
 | --- | --- |
 | Monk | <s>Fourteen body-action drafts plus an eleven-frame death trial rejected for robe deformation. All fifteen groups have been attempted; death repair, clothing, effects and integration remain unfinished</s> |
+| Monk | <s>Fourteen body drafts preserved; corrected skirt collision lengths and eleven new death renders. Pose, clothing and boot connections still need repair; uninstalled</s> |
 | Griffin | <s>mesh and 8-frame holding accepted; 4-frame gait rejected pending leg/tail reweighting</s> |
 | Cavalier | <s>mounted probe passes crop and side-motion review for holding, walk, front lance, move start/end; full 87 frames next</s> |
 | Marksman | <s>Holding, walking, movement start/end and three shooting directions: seven groups, 44 offline candidate frames; grip and finger constraints unaccepted, other actions and game integration pending Nine groups, 60 offline candidate frames, adding six hit and ten defence frames; pose fidelity, grip and integration unfinished Eleven groups, 75 offline body draft frames, adding hover and death; death timing/pose, grip, melee/turns and game integration unfinished</s> |
@@ -1132,15 +1133,47 @@ Both boots were suspended in the previous final pose. Revising lower-leg and foo
 
 ![Previous raised boots, lowered feet with crumpled cloth, and the revised candidate; cropped Blender renders from the same camera](/images/castle-monk-641/monk-ground-contact-comparison.png)
 
-A self-collision experiment took longer to simulate and retained tangled folds, so it was rejected. The current candidate smooths the free portion of the simulated skirt, excluding the fully pinned waist vertices. This reduces the fragmented folds near the hem; the waist seam remains rough.
+A self-collision experiment took longer to simulate and retained tangled folds, so it was rejected. The current candidate smooths the free portion of the simulated skirt, excluding the fully pinned waist vertices. This reduces the fragmented folds near the hem; <s>the waist seam remains rough.</s> The following section records its subsequent repair.
 
 ![Rejected cloth self-collision experiment, actual high-resolution Blender still](/images/castle-monk-641/monk-self-collision-failure.png)
 
 ![Revised foot transitions and free skirt, actual 1200×1200 Blender still; the waist and overall design remain unaccepted](/images/castle-monk-641/monk-ground-contact-hq.png)
 
-Reopening the saved scene reproduces the native-camera final frame pixel for pixel. Across forty-three poses sampled at half-frame intervals over the final part of the motion, vertices with combined foot/toe weight above 0.55 remain above the floor, with about 5.1 mm minimum clearance at the current model scale. This check covers the feet, not all intersections in the character. All eleven exported frames fit the canvas. Waist seams, palms, hood proportions relative to the original and adaptation of the other fourteen actions to this skirt remain unfinished. Installed game assets are unchanged.
+Reopening the saved scene reproduces the native-camera final frame pixel for pixel. Across forty-three poses sampled at half-frame intervals over the final part of the motion, vertices with combined foot/toe weight above 0.55 remain above the floor, with about 5.1 mm minimum clearance at the current model scale. This check covers the feet, not all intersections in the character. All eleven exported frames fit the canvas. <s>Waist seams, palms, hood proportions relative to the original and adaptation of the other fourteen actions to this skirt remain unfinished.</s> The following section records the waist repair and adaptation of the other fourteen actions; palms, original proportions, effects and integration remain unfinished. Installed game assets are unchanged.
 
 ![All eleven frames with the current foot and skirt revisions, compared with the original; offline body-only candidate](/images/castle-monk-641/monk-ground-contact-sequence.png)
+
+
+
+#### Waist seam and full body-action drafts
+
+The jagged waist edge came from the junction between the retained body and the separate skirt. Deleting whole triangles had left the boundary following irregular mesh edges. The revised body is split along a defined waist plane in its standing pose, interpolating UV coordinates and bone weights at new vertices before converting them back to animated model space. Skirt attachment offsets now follow the corresponding source vertices' skin transforms as well.
+
+![Waist seam before and after revision, cropped Blender renders from the same camera](/images/castle-monk-641/monk-waist-comparison.png)
+
+Tucking a wide band of the skirt inside the body produced a dark horizontal line while standing, so that trial was rejected. Narrowing the overlap removes the line and the jagged collapse boundary in the two views below.
+
+![Rejected broad-overlap trial with a dark line across the waist, actual Blender still](/images/castle-monk-641/monk-waist-overlap-failure.png)
+
+![Standing check after narrowing the overlap, actual 1200×1200 Blender still](/images/castle-monk-641/monk-waist-standing.png)
+
+![Final collapse with the same revised model, actual 1200×1200 Blender still; overall pose fidelity remains unaccepted](/images/castle-monk-641/monk-waist-collapse.png)
+
+The body, lining and separate skirt are now adapted to the other fourteen actions. Each action gets new waist targets, inner-leg poses, collision surfaces and its own cloth bake. Holding and walking simulate three cycles and export the third. The maximum skirt-vertex displacement across the holding wrap drops from about 3.3 cm to 1.8 mm; it is not perfectly seamless.
+
+![Front-cast body draft, actual high-resolution Blender still; spell effects are absent](/images/castle-monk-641/monk-cloth-front-cast.png)
+
+![Upward-cast body draft, actual high-resolution Blender still; shoulder compression and palms still need work](/images/castle-monk-641/monk-cloth-up-cast.png)
+
+The original's fifteen effective groups now have 109 body images at 900×800, excluding duplicate turn aliases from the count. Every image fits the canvas. Bone transforms at the 98 native poses in the other fourteen actions match the preceding local skeletal drafts exactly. Each of the fifteen scenes was reopened and one frame rerendered, reproducing its corresponding image pixel for pixel. These checks establish reproducibility, not fidelity to the original or visual acceptance.
+
+![Complete current body frames for holding, walking, mouse-over, move-start and turns](/images/castle-monk-641/monk-cloth-motion-sheet.png)
+
+![Complete current body frames for three melee and three ranged directions; no effect layers](/images/castle-monk-641/monk-cloth-combat-sheet.png)
+
+![Complete current body frames for hit reaction, defence and death](/images/castle-monk-641/monk-cloth-reaction-sheet.png)
+
+This work reuses the Meshy model, with Astra authoring the Blender repair and action-adaptation scripts. Shoulder clothing, palms and proportions against the original still need review. Spell effects, shadows, transitions and native-game validation are also unfinished. The Monk has not been installed.
 
 
 ### Zealot identity correction (2026-09-18)
