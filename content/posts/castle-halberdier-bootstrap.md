@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T05:02:24+00:00
+lastmod: 2026-09-19T05:11:38+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer front-shot candidate now includes the Meshy bolt, moving bowstring and frame-7 release, with revised recoil and new Blender stills; full actions and installation remain pending."
+homeSummary: "Archer now has eight-frame shooting candidates in all three directions, with head and torso adjustment, new Blender stills and videos; projectile calibration, remaining actions and installation are unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1054,13 +1054,25 @@ It reuses the Meshy crossbow and bolt from the Marksman study, including the loc
 
 ![Revised upward recoil, actual 1200-pixel Blender still](/images/castle-archer-900/recoil.png)
 
-The loaded bolt follows the cord until it disappears from the body render on frame 7. The cord and bow limbs release together. Reopening and sampling 175 times checks the cord length, bolt-tail attachment, central-stock preservation and bolt visibility; those mechanism checks pass. They do not establish collision-free hands or a finished firing pose. The flying projectile, directional shots, remaining actions, layered export and native installation are still pending.
+The loaded bolt follows the cord until it disappears from the body render on frame 7. The cord and bow limbs release together. Reopening and sampling 175 times checks the cord length, bolt-tail attachment, central-stock preservation and bolt visibility; those mechanism checks pass. They do not establish collision-free hands or a finished firing pose. The flying projectile, <s>directional shots</s>, remaining actions, layered export and native installation are still pending. Upward and downward shooting candidates now follow below; neither is installed.
 
 ![Loaded Meshy bolt and drawn cord, viewed from above in Blender; unfinished wrist seams remain visible](/images/castle-archer-900/loaded.png)
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-archer-900/shoot.mp4"></video>
 
 This eight-frame preview runs at five frames per second. The empty space after release is deliberate: the flying projectile belongs to a separate game layer and has not been added to this body-only preview.
+
+The upward and downward candidates add changes to the torso and head as the crossbow changes angle. The right hand still starts near the waist and reaches the trigger before aiming. All three shooting directions now have eight-frame body trials, with release on frame 7; the new directions remain appearance candidates.
+
+![Upward aiming candidate, actual 1200-pixel Blender still](/images/castle-archer-903/up.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-903/up.mp4"></video>
+
+![Downward aiming candidate, actual 1200-pixel Blender still](/images/castle-archer-903/down.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-903/down.mp4"></video>
+
+Both previews play at five frames per second. Each scene passed 175 sampled checks of cord length, bolt-tail attachment, central-stock preservation and visibility timing after reopening. The aiming render also reproduces across all RGBA channels. These checks leave grip, wrist finish and reference fidelity open. The existing Meshy projectile and nine direction-frame trials can be reused, but their size and emission position still need calibration against this Archer before packaging.
 
 ### Monk identity correction (2026-09-18)
 
