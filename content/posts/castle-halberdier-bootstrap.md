@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-19T04:02:47+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Archer's separate Meshy hands are attached in an offline crossbow pose. New Blender stills show wrist and grip corrections; contact, original stance, full animations and integration remain unfinished."
+homeSummary: "Archer hand contact study: closer palm placement and new Blender stills, with trigger grip and wrist finish still unresolved; full animation and installation remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1004,7 +1004,7 @@ Five separate digit-motion probes move the selected finger while the other finge
 
 #### Hand attachment and crossbow pose
 
-The separate Meshy hand is now attached on both sides of the blue-and-white body as an offline modeling trial. The first transfer left an obvious open cut at the forearm. We resampled both cut contours, fitted the donor forearm to the body and assigned the seam to the same forearm transform. In the current aim pose, the largest sampled seam-pair separation is about 0.013 mm. This is a registration check for one pose, not a watertightness or full-animation claim.
+The separate Meshy hand is now attached on both sides of the blue-and-white body as an offline modeling trial. The first transfer left an obvious open cut at the forearm. We resampled both cut contours, fitted the donor forearm to the body and assigned the seam to the same forearm transform. In the earlier attached aim pose shown below, the largest sampled seam-pair separation is about 0.013 mm. This is a registration check for one pose, not a watertightness or full-animation claim.
 
 ![Initial open cut and matched wrist contour, before the later color transition](/images/castle-archer-875/wrist-comparison.png)
 
@@ -1012,13 +1012,23 @@ The first fitted hand bent its fingers sideways: the imported armature's scale t
 
 ![Rejected finger-axis and over-bent-wrist trials](/images/castle-archer-875/grip-history.png)
 
-The current trial brings the index control point near the trigger while the other hand supports the stock. Forearm rotation reduces the support wrist's twist. A material blend samples the body's skin color at the cut and fades into the generated hand texture; the source textures remain unchanged. The webbing between fingers still stretched sharply under curl, so part of the root influence was returned gradually to the palm. The largest measured hand-edge stretch fell from about 8.85× to 5.92× for rest edges longer than 0.3 mm. That remaining deformation still needs visual review.
+<s>The current trial brings the index control point near the trigger while the other hand supports the stock.</s> Surface measurements later found that the sampled support-palm region was still about 49 mm from the weapon; proximity of a fingertip control point did not establish a grip. Forearm rotation reduces the support wrist's twist. A material blend samples the body's skin color at the cut and fades into the generated hand texture; the source textures remain unchanged. The webbing between fingers still stretched sharply under curl, so part of the root influence was returned gradually to the palm. The largest measured hand-edge stretch fell from about 8.85× to 5.92× for rest edges longer than 0.3 mm. That remaining deformation still needs visual review.
 
-![Actual 1200-pixel Blender still of the current fitted aim trial; no animation or game installation is implied](/images/castle-archer-875/body.png)
+![Earlier 1200-pixel Blender still of the fitted aim trial; no animation or game installation is implied](/images/castle-archer-875/body.png)
 
-![Close-up of the current trigger and support-hand study; creases and contact remain under review](/images/castle-archer-875/grip.png)
+![Earlier close-up of the trigger and support-hand study; creases and contact remain under review](/images/castle-archer-875/grip.png)
 
 The saved scene reproduces both of these views pixel-for-pixel after reopening. The hand-to-stock surface contact, thumb position, joint creases and the original Archer stance remain unfinished. No native action sequence, sprite package or new Archer installation was made in this step.
+
+The next contact study moves the support palm toward the stock and adjusts each finger separately. Raising the trigger hand above the stock produced an excessive wrist bend and was rejected:
+
+![Rejected raised-wrist grip, rendered in Blender](/images/castle-archer-885/rejected-wrist.png)
+
+The latest draft uses a lower trigger wrist and revised finger curls. Both hands now sit closer to the weapon, but the index finger still needs a proper trigger pose, and the wrist transition remains visible. Surface-distance and face-normal checks help locate gaps and possible intersections; they do not establish a usable grip. This remains a static modeling study, with original stance, shooting motion and game integration still pending.
+
+![Latest full-body Blender contact-study render](/images/castle-archer-885/body.png)
+
+![Latest hand close-up; trigger placement and wrist finish remain unresolved](/images/castle-archer-885/grip.png)
 
 ### Monk identity correction (2026-09-18)
 
