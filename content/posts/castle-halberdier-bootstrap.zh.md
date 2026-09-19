@@ -1,10 +1,10 @@
 ---
 title: "[AI]城堡兵种建模"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T05:48:45+00:00
+lastmod: 2026-09-19T06:02:57+00:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
-homeSummary: "弓箭手新增低持弩待机循环，三个射击入口已对齐，高清静帧与视频已刷新；装填细节、收弩衔接、其它动作和接入仍待完成。"
+homeSummary: "弓箭手新增八帧双手持弩行走候选，修正重心与靴底穿地，高清静帧、视频和失败对照已更新；动作衔接、其余动作和接入仍待完成。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1082,7 +1082,17 @@ Meshy 生成的独立弩和弩箭继续作为底模。Astra 在 Blender 里拆�
 
 这版待机让弦放松、箭矢隐藏；进入射击时再拉弦，第 3 帧显示装填箭矢，第 7 帧隐藏。这只是设定了机构和显示顺序，手如何逐步装填还没做完整。射击最后一帧与垂弩待机仍有姿势落差，收弩衔接也要继续处理。
 
-上面的三个方向视频及当前静帧已重新生成。此前的[正面](/images/castle-archer-900/shoot.mp4)、[向上](/images/castle-archer-903/up.mp4)、[向下](/images/castle-archer-903/down.mp4)视频，以及对应的[正面](/images/castle-archer-900/aim.png)、[向上](/images/castle-archer-903/up.png)、[向下](/images/castle-archer-903/down.png)旧静帧作为历史保留。现在有待机和三个方向射击，共四组人物动画候选；手腕收尾、其它动作、弹道校准、分层输出与游戏接入仍未完成。
+上面的三个方向视频及当前静帧已重新生成。此前的[正面](/images/castle-archer-900/shoot.mp4)、[向上](/images/castle-archer-903/up.mp4)、[向下](/images/castle-archer-903/down.mp4)视频，以及对应的[正面](/images/castle-archer-900/aim.png)、[向上](/images/castle-archer-903/up.png)、[向下](/images/castle-archer-903/down.png)旧静帧作为历史保留。<s>现在有待机和三个方向射击，共四组人物动画候选；</s> 下方已新增第五组行走候选；手腕收尾、其它动作、弹道校准、分层输出与游戏接入仍未完成。
+
+八帧行走候选按原版移动姿势，把弩双手抱在腰前。肩部与髋部交错转动，两腿交替迈步，持弩限制了摆臂幅度。第一版重心降得太多，看起来有些蹲着走；随后抬高身体，并把脚的轨迹移到髋部下方。
+
+![重心过低的较早行走试稿，保留作失败对照](/images/castle-archer-914/crouched.png)
+
+![调整后的双手持弩行走候选，1200 像素 Blender 实际静帧](/images/castle-archer-914/walk.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-914/walk.mp4"></video>
+
+中间一版虽然脚踝走在预设轨迹上，实际靴底网格仍有约 2.7 毫米穿地。现在根据蒙皮后的靴底位置微调落脚高度。在 129 个采样时刻里，修正后的靴底均位于参考地面上方，支撑阶段的离地间隙小于 0.9 毫米。循环边界的可见网格位置一致，重开后的首帧全部 RGBA 通道也能复现。这些检查尚未覆盖衣袍穿插和实际游戏速度下的滑步。视频按每秒五帧播放，起步、停步衔接、外观收尾、其它动作与游戏接入仍待完成。
 
 ### 僧侣的造型修正（2026-09-18）
 

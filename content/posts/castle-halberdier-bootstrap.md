@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T05:48:45+00:00
+lastmod: 2026-09-19T06:02:57+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer has a new low-crossbow holding loop and matching shooting starts; refreshed stills and videos show all three directions. Loading detail, shot return, other actions and installation remain unfinished."
+homeSummary: "Archer has an eight-frame two-handed walking candidate, with revised posture and sole-ground checks. New stills and video are live; transitions, other actions and game installation remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1082,7 +1082,17 @@ The new eight-frame holding loop lowers the crossbow beside the body, with the f
 
 For this candidate, holding leaves the cord relaxed and the bolt hidden. The cord is drawn during the opening of the shot; the bolt becomes visible on frame 3 and disappears on frame 7. This is an authored visibility and mechanism sequence, not a completed hand-loading action. The final shot pose also still differs from holding, so the return transition needs work.
 
-The three shooting videos and their current stills above have been regenerated. Earlier previews remain available for [front](/images/castle-archer-900/shoot.mp4), [up](/images/castle-archer-903/up.mp4) and [down](/images/castle-archer-903/down.mp4), along with their earlier [front](/images/castle-archer-900/aim.png), [up](/images/castle-archer-903/up.png) and [down](/images/castle-archer-903/down.png) stills. Holding and the three shot directions now account for four body-animation candidates; wrist finish, other actions, projectile calibration, layered export and game installation remain open.
+The three shooting videos and their current stills above have been regenerated. Earlier previews remain available for [front](/images/castle-archer-900/shoot.mp4), [up](/images/castle-archer-903/up.mp4) and [down](/images/castle-archer-903/down.mp4), along with their earlier [front](/images/castle-archer-900/aim.png), [up](/images/castle-archer-903/up.png) and [down](/images/castle-archer-903/down.png) stills. <s>Holding and the three shot directions now account for four body-animation candidates;</s> the walking candidate below adds a fifth group; wrist finish, other actions, projectile calibration, layered export and game installation remain open.
+
+The eight-frame walking candidate carries the crossbow in both hands near the waist, following the original moving reference. The shoulders counter the hips while the legs alternate; the held weapon limits the arm swing. The first pass lowered the hips too far and looked crouched, so the revised pass raises the body and centers the foot paths beneath the hips.
+
+![Earlier crouched walking trial, retained as a failed pose study](/images/castle-archer-914/crouched.png)
+
+![Revised two-handed walking candidate, actual 1200-pixel Blender still](/images/castle-archer-914/walk.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-914/walk.mp4"></video>
+
+Actual sole-vertex checks found about 2.7 mm of ground penetration in the intermediate pass. Foot targets now receive a small correction from the deformed sole surface. At 129 sampled times, the revised soles stay above the reference floor, with less than 0.9 mm of stance clearance. The visible meshes also match at the loop boundary, and the reopened first-frame render matches across all RGBA channels. These checks do not validate cloth intersections or sliding at the game's actual movement speed. The preview runs at five frames per second; movement transitions, appearance, the other actions and installation remain unfinished.
 
 ### Monk identity correction (2026-09-18)
 
