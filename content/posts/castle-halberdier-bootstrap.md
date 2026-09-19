@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T04:47:36+00:00
+lastmod: 2026-09-19T05:02:24+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer now has an eight-frame crossbow-raising probe on the new Meshy body and hands, with a high-resolution raised still; trigger finish, full shooting animation and installation remain pending."
+homeSummary: "Archer front-shot candidate now includes the Meshy bolt, moving bowstring and frame-7 release, with revised recoil and new Blender stills; full actions and installation remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1042,7 +1042,25 @@ An eight-frame raising probe now moves the crossbow and both arms from chest hei
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-archer-895/raise.mp4"></video>
 
-The preview plays at five frames per second to expose the movement. It only tests raising and lowering: the original stance and firing rhythm, moving string, bolt release, remaining actions and game installation are unfinished.
+The preview plays at five frames per second to expose the movement. <s>It only tests raising and lowering: the original stance and firing rhythm, moving string, bolt release, remaining actions and game installation are unfinished.</s> This earlier raising probe is followed by the front-shot candidate below; the full action set and installation remain unfinished.
+
+The front-shot candidate now follows more of the original eight-frame sequence: right hand at the waist, two-handed aim, an upward recoil and lowering. The original animation data places projectile release on frame 7, using one-based numbering; VCMI converts that to index 6. This candidate keeps that timing.
+
+It reuses the Meshy crossbow and bolt from the Marksman study, including the locally repaired bow limbs and separate animated cord. The first recoil pivot put the weapon above the frame and obscured the face; lowering the pivot produces the revised pose below. The stance, skin deformation and grip still need review.
+
+![Rejected recoil with the weapon too high and the face obscured](/images/castle-archer-900/rejected-recoil.png)
+
+![Revised aim, actual 1200-pixel Blender still](/images/castle-archer-900/aim.png)
+
+![Revised upward recoil, actual 1200-pixel Blender still](/images/castle-archer-900/recoil.png)
+
+The loaded bolt follows the cord until it disappears from the body render on frame 7. The cord and bow limbs release together. Reopening and sampling 175 times checks the cord length, bolt-tail attachment, central-stock preservation and bolt visibility; those mechanism checks pass. They do not establish collision-free hands or a finished firing pose. The flying projectile, directional shots, remaining actions, layered export and native installation are still pending.
+
+![Loaded Meshy bolt and drawn cord, viewed from above in Blender; unfinished wrist seams remain visible](/images/castle-archer-900/loaded.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-900/shoot.mp4"></video>
+
+This eight-frame preview runs at five frames per second. The empty space after release is deliberate: the flying projectile belongs to a separate game layer and has not been added to this body-only preview.
 
 ### Monk identity correction (2026-09-18)
 
