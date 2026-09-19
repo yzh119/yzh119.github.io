@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T01:46:06+00:00
+lastmod: 2026-09-19T01:54:01+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Monk now has 109 geometry-projected shadow frames across fifteen actions, with complete layered review sheets. Repeat renders match; spell effects, appearance review and game integration remain unfinished."
+homeSummary: "The Monk has three directional 3D casting trials across 29 frames, including 14 original-timing blanks. Full layered sheets and three particle-density trials are shown; flight and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1216,6 +1216,18 @@ All shadows use 50% opacity and a 1.6-pixel blur, with no per-frame resizing or 
 
 Astra authored the projection and layer checks using the existing Meshy model. These are offline shadow candidates. Mantle folds, palms, original proportions, spells, transitions and game integration remain unfinished.
 
+#### Directional casting effects
+
+The original Monk starts its upward charge on frame 3, the horizontal charge on frame 4, and the downward charge on frame 2. White-blue pixel bounds provide a timing and size reference. Existing 3D stars and mist cores are positioned around the revised hands, with the evaluated body, sleeves and skirt supplying occlusion.
+
+The first pass was too dense and cloud-like. Reducing the mist opacity and particle count made the second too sparse. The current trial restores some smaller particles while retaining larger stars. These are Blender effects composited over the saved body and shadow layers; the close-ups are enlarged for comparison.
+
+![Three density trials: dense mist, sparse particles and the current revision; enlarged offline crops](/images/castle-monk-641/monk-effect-density-trials.png)
+
+![All 29 upward, horizontal and downward casting frames with body, shadow and 3D effect layers](/images/castle-monk-641/monk-ranged-effects.png)
+
+Fourteen effect frames remain empty, matching the original timing, and every composite fits the canvas. Reopening each of the three scenes and rendering frame 6 reproduces its saved output exactly. The source body scenes and all 109 body images retain their hashes. Flight after release, effects required by melee or defence, appearance repairs, transitions and native validation remain unfinished. Meshy supplies the reused creature model; Astra authored the 3D effects and adaptation scripts.
+
 ### Zealot identity correction (2026-09-18)
 
 The original `CZEALT.DEF` wears a navy hood and robe with narrow gold trim; its face is a featureless light. The previous mesh had a white robe, green stole and visible bearded face. Earlier continuity checks did not establish a faithful design. Those motion experiments remain in the collapsed history below, but the white-robed mesh is no longer a candidate for final integration.
@@ -2218,5 +2230,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <s>The Monk shoulder correction is checked across fifteen groups and 109 body frames. Volume blending activates in ten native frames; the other 99 match the preceding images exactly. New HQ comparisons and an open-source helper are available; no game installation.</s>
 
 <s>| Monk | Fifteen groups and 109 body-draft frames now use the revised waist and independent skirt; one reopened render per group reproduced exactly. Shoulder cloth, palms, effects, shadows and integration remain unfinished |</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before directional casting</summary>
+
+<s>The Monk now has 109 geometry-projected shadow frames across fifteen actions, with complete layered review sheets. Repeat renders match; spell effects, appearance review and game integration remain unfinished.</s>
 
 </details>
