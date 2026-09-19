@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T07:48:49+00:00
+lastmod: 2026-09-19T08:17:20+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The installed Crusader design was rejected for poor fidelity. A new Meshy model restores the round shield, enclosed helm and short white-and-blue cloth, with concept art and actual Blender renders."
+homeSummary: "The armed Crusader failed pose estimation. A new empty-handed body now has a Meshy rig; four static probes expose shoulder and armpit stretching that needs repair before animation and installation."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -32,6 +32,25 @@ The concept was generated with built-in imagegen and submitted through the Meshy
 ![Actual 1200-pixel Blender render of the new Meshy model, unrigged and not installed](/images/castle-crusader-969/model.png)
 
 The [eight-view review under the original lighting](/images/castle-crusader-969/views.png) is retained. The portrait adds studio fill lights without changing geometry or textures. The enclosed helm, round shield and short cloth survive generation. Metallic finish, plume thickness and sword-hand shape remain rough, and the right shin has a generated colour blemish. This is a replacement bootstrap awaiting further repair and acceptance.
+
+
+### Binding the Crusader body separately from equipment
+
+The armed model returned HTTP 422, `Pose estimation failed`, before the API created a rigging task. The [Meshy rigging documentation](https://docs.meshy.ai/en/api/rigging) lists this failure mode. Shield occlusion is a possible contributor; the response alone does not identify the cause.
+
+After coincident vertices are welded for inspection, the body, sword and shield form one main connected region. Removing small components would not separate the equipment cleanly. A new empty-handed A-pose concept retains the same armour design while leaving the arms clearly separated from the torso. The equipment will receive separate bindings.
+
+![Empty-handed A-pose concept used as modeling input, not a mesh render](/images/castle-crusader-977/concept.png)
+
+The new Meshy 7.1 body consumed 30 credits, followed by a successful 5-credit rigging task. This actual 1200-pixel Blender render shows the rigged body. The armed bootstrap remains as a reference; the new body has no attached weapons and is not installed.
+
+![Actual Blender render of the new body with its Meshy rig](/images/castle-crusader-977/body.png)
+
+Astra authored three static arm-raising probes using actual joint positions, alongside the rest pose. These four poses are deformation tests, not completed native animation groups. Joint-length changes stay below 0.001 mm, but the both-arms-raised pose stretches 42 mesh edges longer than 1 mm by more than three times their rest length. The largest ratio is about 4.28. These edges lie around the shoulders and armpits, where soft skin weights still pull the armour.
+
+![Right-arm probe rendered in Blender; shoulder and armpit deformation remains unaccepted](/images/castle-crusader-977/raised.png)
+
+The [four-pose sheet](/images/castle-crusader-977/probes.png) records the test. Reopening the saved scene reproduces the right-arm render in every RGBA channel. Fingers, metallic finish, armour binding, separate equipment, complete actions and replacement in the game remain unfinished.
 
 
 ## All fourteen meshes
@@ -2599,5 +2618,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary before Crusader design correction</summary>
 
 <s>Archer melee and two-frame turn drafts now have high-resolution Blender previews. Death, grip repairs, facing transitions and game integration remain in progress.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before the empty-handed rigging trial</summary>
+
+<s>The installed Crusader design was rejected for poor fidelity. A new Meshy model restores the round shield, enclosed helm and short white-and-blue cloth, with concept art and actual Blender renders.</s>
 
 </details>
