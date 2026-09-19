@@ -974,6 +974,10 @@ Raising the arms also stretched two short edges at the upper back to about seven
 
 All four three-quarter images reproduced pixel-for-pixel after reopening the saved scene. These are discrete deformation probes. The step has not been grounded into a walk cycle, and the body still needs the light crossbow, hand grips, original action timing, shadows and game integration. An unnecessary image-background cleanup also changed the cloth design; it was discarded and the initial reference above was used. The Archer replacement has not been installed.
 
+A subsequent light-crossbow placement test reused the separate Meshy weapon from the Marksman work. The first setup wrote Euler angles to an object still in quaternion mode and rendered both trials at the same frame; those images were discarded. After fixing both errors, two-handed low carry left the support wrist 5.3 cm beyond its reachable target. Single-handed carry is the next basis for the holding pose. A later attempt to point each hand's weighted vertex centroid toward the stock merely clasped both hands over it. That grip is also rejected: individual fingers, palm roll and contact points still need a dedicated pass. The saved trial reproduces both reviewed three-quarter images after reopening, including these visible defects.
+
+![Rejected carry and hand-orientation tests; these are Blender development images](/images/castle-archer-829/grip-failures.png)
+
 ### Monk identity correction (2026-09-18)
 
 **Current status: the Monk is installed as a private test; see [installation and runtime checks](#monk-installation). The following sections retain the offline development history, including their earlier uninstalled status.**
