@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T19:05:11+00:00
+lastmod: 2026-09-19T19:50:08+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader plume, tabard and armour-joint revisions, with high-resolution Blender stills and rejected trials. Latest drafts remain uninstalled; 0.8.0 is not visually accepted."
+homeSummary: "Crusader crown repair and shorter tabard, propagated to thirteen action drafts. Blender stills and rejected trials; uninstalled, with visual fidelity still unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,27 +18,52 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ## Crusader design correction
 
-The Crusader is still being revised against the original. The game retains local test 0.8.0. The longer plume, tabard and joint changes below are later Blender drafts; they are uninstalled and have not passed overall visual review.
+The Crusader is still being revised against the original. Local test 0.8.0 remains installed. The Blender drafts below are uninstalled and have not passed overall visual review.
+
+![Standing draft with a shorter tabard and repaired helmet crown, a 1000-pixel Blender still; not installed](/images/castle-crusader-1301/holding.png)
+
+The previously lengthened front tabard looked too long. Its lower panel is now shorter and narrower, retaining the existing UVs and skin weights. The white chest panel is unchanged. Shoulder, boot and plume silhouettes still need work against the original.
+
+Removing the old plume exposed holes in the crown. Its metal and blue surfaces had been separated by texture colour, leaving boundaries that depended on each other for coverage. A continuous roof now follows the original 92-point lower interface, with a gold rim and without the torn upper mount. The feathers still look too regular and remain unfinished.
+
+![Side view of the repaired crown and gold rim; plume shape remains unfinished](/images/castle-crusader-1301/crown.png)
+
+A separate upright tuft and trailing feather bundle was also tried. It read as two disconnected sets of thin rods and exposed the torn crown, so it was rejected. Death-pose cloth experiments failed too: projecting cloth onto the body introduced intersections, while rolling back the intersecting areas produced stepped folds. Those cloth deformations are absent from the current draft.
+
+![Rejected plume trial: disconnected upright and trailing bundles expose broken crown surfaces](/images/castle-crusader-1301/rejected.png)
+
+The new crown and shorter tabard are present in thirteen action scenes. Across 76 integer poses, the new crown interface differs from the old one by less than 0.001 mm and the crown stays above the floor. The tabard edit adds no intersections between the tested cloth and body faces. Holding, movement and death also received 79 quarter-frame tabard samples. These checks exclude transition faces, complete equipment contact and other intermediate frames; they do not establish visual fidelity.
+
+![Defence pose after propagation, rendered in Blender; elbow joins and other visual issues remain](/images/castle-crusader-1301/defence.png)
+
+These edits reuse the Meshy body and rig, with Blender tools written by Astra. This round made no new Meshy requests and changed no VCMI source. Modeling, animation and integration for the full fourteen-unit Castle roster remain unfinished.
+
+<details>
+<summary>Drafts before the crown repair and shorter tabard: original text and images retained</summary>
+
+<s>The Crusader is still being revised against the original. The game retains local test 0.8.0. The longer plume, tabard and joint changes below are later Blender drafts; they are uninstalled and have not passed overall visual review.</s>
 
 ![Long-plume and body-proportion draft, a 1000-pixel Blender still; excludes the separate upper-arm plate experiment](/images/castle-crusader-1260/body.png)
 
-The plume retains its original Meshy root, with layered feathers falling along the side and back of the helmet. Stretching the old mesh produced pointed slivers. Moving the whole tail backward made the side silhouette too square. The current feathers still look too regular, and the root needs refinement.
+<s>The plume retains its original Meshy root, with layered feathers falling along the side and back of the helmet. Stretching the old mesh produced pointed slivers. Moving the whole tail backward made the side silhouette too square. The current feathers still look too regular, and the root needs refinement.</s>
 
 ![Side view of the plume draft; silhouette and root remain unfinished](/images/castle-crusader-1260/plume.png)
 
-The front tabard is longer, the elbow guards smaller and the shoulder plates thinner. The first cloth edit used a material-region mask and produced abrupt deformation at its boundary; it was discarded. A continuous spatial deformation was then reviewed in holding, raised-sword and defence poses. Cloth edges and equipment joins remain unfinished. These latest revisions have only a few pose checks; the earlier draft's thirteen-action checks do not apply to them.
+<s>The front tabard is longer, the elbow guards smaller and the shoulder plates thinner. The first cloth edit used a material-region mask and produced abrupt deformation at its boundary; it was discarded. A continuous spatial deformation was then reviewed in holding, raised-sword and defence poses. Cloth edges and equipment joins remain unfinished. These latest revisions have only a few pose checks; the earlier draft's thirteen-action checks do not apply to them.</s>
 
-The elbow looked as though faces were missing. Welding coincident vertices in a diagnostic copy left no open edges in that region. The visible problem comes mainly from the generated joint shape and skinning deformation. Preserve-volume skinning did not resolve the join, and local weight edits pulled neighbouring plates out of shape. Splitting existing triangles into rigid parts also failed, leaving jagged boundaries.
+<s>The elbow looked as though faces were missing. Welding coincident vertices in a diagnostic copy left no open edges in that region. The visible problem comes mainly from the generated joint shape and skinning deformation. Preserve-volume skinning did not resolve the join, and local weight edits pulled neighbouring plates out of shape. Splitting existing triangles into rigid parts also failed, leaving jagged boundaries.</s>
 
 ![Rejected coarse plate split with broken shoulder, elbow and wrist boundaries, rendered in Blender](/images/castle-crusader-1260/split-rejected.png)
 
-A later trial cuts through boundary triangles, preserves their UVs and adds thickness to separate upper-arm plates. An ownership filter removes accidentally selected chest faces. The first flexible elbow sleeve protruded over the gold guard. Fitting it beneath the evaluated armour in the defence pose removed that patch. Front-attack frames 1, 3 and 7 were also inspected without the same large protrusion. The guard connection remains visibly unfinished below; complete motion and contact are not accepted.
+<s>A later trial cuts through boundary triangles, preserves their UVs and adds thickness to separate upper-arm plates. An ownership filter removes accidentally selected chest faces. The first flexible elbow sleeve protruded over the gold guard. Fitting it beneath the evaluated armour in the defence pose removed that patch. Front-attack frames 1, 3 and 7 were also inspected without the same large protrusion. The guard connection remains visibly unfinished below; complete motion and contact are not accepted.</s>
 
 ![Rejected elbow sleeve protruding over the gold guard](/images/castle-crusader-1260/sleeve-rejected.png)
 
 ![Defence pose after fitting the sleeve inward, a Blender close-up; the elbow remains unfinished](/images/castle-crusader-1260/joint.png)
 
-These trials reuse the Meshy body and rig. Astra writes the Blender tools for geometry, binding and motion repairs. This round made no new Meshy requests and changed no VCMI source. The full fourteen-unit Castle roster remains unfinished.
+<s>These trials reuse the Meshy body and rig. Astra writes the Blender tools for geometry, binding and motion repairs. This round made no new Meshy requests and changed no VCMI source. The full fourteen-unit Castle roster remains unfinished.</s>
+
+</details>
 
 <details>
 <summary>Earlier plume and shoulder drafts: superseded states, with original text and images retained</summary>
@@ -335,7 +360,7 @@ The eight-frame mouse-over draft follows the original small lift-and-return swor
 
 Previous roster-table record:
 
-| Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified  **User rejected the old design; installation does not imply art acceptance.** <s>The new body has sword/shield assembly, wrist liners and eight offline drafts covering 52 frame entries, including all three attack directions and defence, with unresolved stop-entry jumps. Full scope: 15 groups / 80 frame entries; replacement is not installed.</s> New-body drafts cover 13 groups / 68 entries; hit review and death remain. Appearance revisions are not unified; replacement is not installed. |
+| Crusader | <s><s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified  **User rejected the old design; installation does not imply art acceptance.** <s>The new body has sword/shield assembly, wrist liners and eight offline drafts covering 52 frame entries, including all three attack directions and defence, with unresolved stop-entry jumps. Full scope: 15 groups / 80 frame entries; replacement is not installed.</s> New-body drafts cover 13 groups / 68 entries; hit review and death remain. Appearance revisions are not unified; replacement is not installed.</s> Test 0.8.0 remains installed and visually unaccepted. New crown and shorter tabard are unified across thirteen drafts with limited interface, floor and cloth-intersection checks; uninstalled, with overall appearance and full contact unaccepted. |
 
 Previous homepage summary:
 
