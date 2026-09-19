@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T04:02:47+00:00
+lastmod: 2026-09-19T04:47:36+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer hand contact study: closer palm placement and new Blender stills, with trigger grip and wrist finish still unresolved; full animation and installation remain pending."
+homeSummary: "Archer now has an eight-frame crossbow-raising probe on the new Meshy body and hands, with a high-resolution raised still; trigger finish, full shooting animation and installation remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1024,13 +1024,25 @@ The next contact study moves the support palm toward the stock and adjusts each 
 
 ![Rejected raised-wrist grip, rendered in Blender](/images/castle-archer-885/rejected-wrist.png)
 
-The latest draft uses a lower trigger wrist and revised finger curls. Both hands now sit closer to the weapon, but the index finger still needs a proper trigger pose, and the wrist transition remains visible. Surface-distance and face-normal checks help locate gaps and possible intersections; they do not establish a usable grip. This remains a static modeling study, with original stance, shooting motion and game integration still pending.
+The following static draft used a lower trigger wrist and revised finger curls. Both hands now sit closer to the weapon, but the index finger still needs a proper trigger pose, and the wrist transition remains visible. Surface-distance and face-normal checks help locate gaps and possible intersections; they do not establish a usable grip. <s>This remains a static modeling study, with original stance, shooting motion and game integration still pending.</s> The raising probe below follows this static stage; a complete shooting action and game integration are still pending.
 
 A further correction makes the palm orientation axes perpendicular before applying the pose, removing unintended scale from the hand transform. The figures below include this fix; the [preceding full-body](/images/castle-archer-885/body.png) and [grip trial](/images/castle-archer-885/grip.png) remain as history.
 
-![Latest full-body Blender contact-study render](/images/castle-archer-888/aim.png)
+![Earlier static Blender contact study](/images/castle-archer-888/aim.png)
 
-![Latest hand close-up; trigger placement and wrist finish remain unresolved](/images/castle-archer-888/grip.png)
+![Earlier hand close-up; trigger placement and wrist finish were unresolved](/images/castle-archer-888/grip.png)
+
+The next grip approaches the trigger from below. Its index-finger surface sample is fitted toward a selected point on the trigger, followed by a small wrist adjustment. The close-up still shows the unfinished skin transition and crowded fingers; this is not an accepted grip.
+
+![Revised trigger-hand study, actual 1200-pixel Blender render](/images/castle-archer-895/trigger.png)
+
+An eight-frame raising probe now moves the crossbow and both arms from chest height toward the shoulder. Initial interpolation let the right-hand anchor slip by about 4 mm relative to the weapon. Baking intermediate arm poses reduced the largest sampled slip to about 0.064 mm across 113 times, while the export remains eight frames. These measurements track hand-bone anchors, not skin contact or intersection. The raised still reproduces pixel-for-pixel after reopening the scene.
+
+![Raised crossbow in the new-body motion probe, actual 1200-pixel Blender render](/images/castle-archer-895/raised.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-895/raise.mp4"></video>
+
+The preview plays at five frames per second to expose the movement. It only tests raising and lowering: the original stance and firing rhythm, moving string, bolt release, remaining actions and game installation are unfinished.
 
 ### Monk identity correction (2026-09-18)
 
