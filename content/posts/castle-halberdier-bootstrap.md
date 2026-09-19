@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T06:15:59+00:00
+lastmod: 2026-09-19T06:23:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer movement-start and stop drafts add four Blender frames and new stills; the return to holding is checked, while stop-entry jumps and game integration remain unfinished."
+homeSummary: "Archer hit-reaction drafts add six frames, a high-resolution Blender still and a failed-pose comparison; elbow, wrist, transitions and game integration remain open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1094,13 +1094,28 @@ The eight-frame walking candidate carries the crossbow in both hands near the wa
 
 Actual sole-vertex checks found about 2.7 mm of ground penetration in the intermediate pass. Foot targets now receive a small correction from the deformed sole surface. At 129 sampled times, the revised soles stay above the reference floor, with less than 0.9 mm of stance clearance. The visible meshes also match at the loop boundary, and the reopened first-frame render matches across all RGBA channels. These checks do not validate cloth intersections or sliding at the game's actual movement speed. The preview runs at five frames per second; movement transitions, appearance, the other actions and installation remain unfinished.
 
-The Archer now also has two-frame start and stop drafts. Starting raises the lowered crossbow toward the two-handed carry; stopping releases the right hand and lowers it again. These are actual Blender renders, with start on the left and stop on the right. This brings the candidate set to seven groups and 44 body frames, still uninstalled.
+The Archer now also has two-frame start and stop drafts. Starting raises the lowered crossbow toward the two-handed carry; stopping releases the right hand and lowers it again. These are actual Blender renders, with start on the left and stop on the right. <s>This brings the candidate set to seven groups and 44 body frames, still uninstalled.</s> The hit draft below brings it to eight groups and 50 frames, still uninstalled.
 
 ![Four Blender draft frames for the Archer movement start and stop](/images/castle-archer-916/sheet.png)
 
 [Full start frame two](/images/castle-archer-916/start-02.png) · [Full stop frame two](/images/castle-archer-916/end-02.png)
 
 The final stop pose now matches the first holding pose at the mesh level, and reopened renders reproduce the saved candidates. Entry into stopping remains unresolved: VCMI ends movement by travel progress, without guaranteeing a particular walking phase. Across all eight possible walking poses, the maximum visible-mesh displacement into this fixed stop frame is about 0.28–0.32 metres in model space, not screen pixels. Leg recovery and weapon speed still need playback review; these transitions are unfinished.
+
+
+A six-frame hit-reaction draft now adds a backward flinch, a lifted leg, an opening free arm and an upward crossbow follow-through. The first pass looked like a knee lift and barely threw the free hand outward. The second moves the foot forward, throws the hand back and raises the bow further. The elbow and wrist still look stiff, and recovery into low-bow holding remains unfinished. Appearance has not passed review.
+
+![Earlier hit draft with insufficient leg extension and free-hand throw, retained as a failed pose study](/images/castle-archer-921/earlier.png)
+
+![Revised hit frame two, actual 1200-pixel Blender render with elbow and wrist work still pending](/images/castle-archer-921/hitted.png)
+
+[View all six frames](/images/castle-archer-921/frames.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-921/hitted.mp4"></video>
+
+After reopening, 161 sampled times keep the selected actual sole vertices above the reference floor, with about 0.5 mm of support-foot clearance and less than 0.08 mm of holding-hand anchor drift. The reopened second-frame render matches in every RGBA channel. This does not establish collision-free hands, weapon, cloth or legs. There are now eight candidate groups and 50 body frames; ten groups, another 50 frames and game export remain unfinished.
+
+The stop-entry investigation also isolated ankle jumps of roughly 25–29 cm in the worst phases, alongside the weapon jump. In the current source, the same duration parameter scales walking frame rate and travel rate, yielding nominally five sprite frames per hex. An eight-frame loop can therefore end in different phases; adjusting walk duration alone cannot align every stop. The stop poses and actual game playback still need review.
 
 
 ### Monk identity correction (2026-09-18)
