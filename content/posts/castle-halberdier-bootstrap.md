@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T03:34:17+00:00
+lastmod: 2026-09-19T04:02:47+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Archer now has a separate Meshy hand and locally authored finger rig. Blender stills and rejected hand transfers are included; wrist attachment, crossbow contact and integration remain unfinished."
+homeSummary: "The Archer's separate Meshy hands are attached in an offline crossbow pose. New Blender stills show wrist and grip corrections; contact, original stance, full animations and integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -26,7 +26,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
-| Archer | <s>Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review</s> New blue-and-white Meshy body and humanoid rig; four deformation probes reviewed, old design rejected. Crossbow, actions and integration pending |
+| Archer | <s>Meshy humanoid rig; three native 8-frame body shot directions and separate Meshy bolt layers pass continuity review</s> New blue-and-white Meshy body and humanoid rig; four deformation probes reviewed, old design rejected. <s>Crossbow, actions and integration pending</s> Separate hands are now attached in a static crossbow trial; grip and wrist review continues |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
@@ -972,7 +972,7 @@ Raising the arms also stretched two short edges at the upper back to about seven
 
 ![Rest, raised arms, spread arms and one step pose, viewed from three angles in Blender](/images/castle-archer-829/probes.png)
 
-All four three-quarter images reproduced pixel-for-pixel after reopening the saved scene. These are discrete deformation probes. The step has not been grounded into a walk cycle, and the body still needs the light crossbow, hand grips, original action timing, shadows and game integration. An unnecessary image-background cleanup also changed the cloth design; it was discarded and the initial reference above was used. The Archer replacement has not been installed.
+All four three-quarter images reproduced pixel-for-pixel after reopening the saved scene. These are discrete deformation probes. The step has not been grounded into a walk cycle, and <s>the body still needs the light crossbow, hand grips, original action timing, shadows and game integration.</s> The later hand-attachment section records the current fitted trial; full actions and game integration remain unfinished. An unnecessary image-background cleanup also changed the cloth design; it was discarded and the initial reference above was used. The Archer replacement has not been installed.
 
 A subsequent light-crossbow placement test reused the separate Meshy weapon from the Marksman work. The first setup wrote Euler angles to an object still in quaternion mode and rendered both trials at the same frame; those images were discarded. After fixing both errors, two-handed low carry left the support wrist 5.3 cm beyond its reachable target. Single-handed carry is the next basis for the holding pose. A later attempt to point each hand's weighted vertex centroid toward the stock merely clasped both hands over it. That grip is also rejected: individual fingers, palm roll and contact points still need a dedicated pass. The saved trial reproduces both reviewed three-quarter images after reopening, including these visible defects.
 
@@ -1000,7 +1000,25 @@ The new mesh has four distinct distal finger components and a separately identif
 
 ![Side view of the same moderate curl](/images/castle-archer-849/curl-side.png)
 
-Five separate digit-motion probes move the selected finger while the other fingers' fully weighted core vertices remain within numerical tolerance. This test excludes shared web and palm regions and does not establish collision-free motion. Three saved curl views reproduce pixel-for-pixel after reopening. The hand is still an isolated modeling candidate: it has not replaced the Archer's hands or been fitted to the trigger and support grip. Mirroring, wrist attachment, skin-tone matching and full weapon contact remain unfinished.
+Five separate digit-motion probes move the selected finger while the other fingers' fully weighted core vertices remain within numerical tolerance. This test excludes shared web and palm regions and does not establish collision-free motion. Three saved curl views reproduce pixel-for-pixel after reopening. <s>The hand is still an isolated modeling candidate: it has not replaced the Archer's hands or been fitted to the trigger and support grip. Mirroring, wrist attachment, skin-tone matching and full weapon contact remain unfinished.</s>
+
+#### Hand attachment and crossbow pose
+
+The separate Meshy hand is now attached on both sides of the blue-and-white body as an offline modeling trial. The first transfer left an obvious open cut at the forearm. We resampled both cut contours, fitted the donor forearm to the body and assigned the seam to the same forearm transform. In the current aim pose, the largest sampled seam-pair separation is about 0.013 mm. This is a registration check for one pose, not a watertightness or full-animation claim.
+
+![Initial open cut and matched wrist contour, before the later color transition](/images/castle-archer-875/wrist-comparison.png)
+
+The first fitted hand bent its fingers sideways: the imported armature's scale turned a direction vector into a vector of length 100, and the bone-roll setup required a normalized direction. Correcting that input aligned the local finger axes. A later overhand grip reached the trigger but bent the wrist excessively, so that pose was also rejected.
+
+![Rejected finger-axis and over-bent-wrist trials](/images/castle-archer-875/grip-history.png)
+
+The current trial brings the index control point near the trigger while the other hand supports the stock. Forearm rotation reduces the support wrist's twist. A material blend samples the body's skin color at the cut and fades into the generated hand texture; the source textures remain unchanged. The webbing between fingers still stretched sharply under curl, so part of the root influence was returned gradually to the palm. The largest measured hand-edge stretch fell from about 8.85× to 5.92× for rest edges longer than 0.3 mm. That remaining deformation still needs visual review.
+
+![Actual 1200-pixel Blender still of the current fitted aim trial; no animation or game installation is implied](/images/castle-archer-875/body.png)
+
+![Close-up of the current trigger and support-hand study; creases and contact remain under review](/images/castle-archer-875/grip.png)
+
+The saved scene reproduces both of these views pixel-for-pixel after reopening. The hand-to-stock surface contact, thumb position, joint creases and the original Archer stance remain unfinished. No native action sequence, sprite package or new Archer installation was made in this step.
 
 ### Monk identity correction (2026-09-18)
 
