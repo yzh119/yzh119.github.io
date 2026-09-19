@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T06:51:28+00:00
+lastmod: 2026-09-19T07:08:32+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer hover adds nine frames, while defence repairs previously missed forearm stretch; both previews are updated, with ten groups and 68 candidate frames still uninstalled."
+homeSummary: "A new Meshy dagger follows the Archer’s right hand; high-resolution Blender grip studies include a rejected thumb closure. Hand deformation and melee motion remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1148,6 +1148,21 @@ A nine-frame mouse-hover candidate now brings the crossbow to waist height, turn
 <video controls loop muted playsinline preload="metadata" src="/images/castle-archer-940/mouseon.mp4"></video>
 
 After reopening, visible meshes at both hover endpoints match the first holding pose within 0.001 mm. Arm-length and sole checks pass at 257 sampled times, all nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Checking exported integer frames in the other existing actions found the same substantial stretch in the old defence draft, now repaired; this does not cover all intermediate poses in those other actions. There are now ten candidate groups and 68 body frames, with eight groups, 32 frames, appearance work, layered export and game installation still remaining.
+
+
+The melee reference swings a short blade in the right hand while the left keeps the crossbow at the side. The existing longsword's guard and proportions did not fit, so this pass uses the [Meshy Text to 3D API](https://docs.meshy.ai/en/api/text-to-3d) for a plain dagger. Meshy 7.1 geometry consumed 20 credits and texturing consumed 10; both tasks succeeded. The downloaded base-colour texture is 4096 pixels.
+
+![Meshy dagger preview before local handle fitting](/images/castle-archer-949/meshy-preview.png)
+
+In Blender, the dagger was fitted to about 40 cm total length, with a longer and thicker handle for the fist. It remains a separate mesh constrained to the right-hand bone; three small wrist-rotation probes match the expected transform. The reopened full-body render differs in ten pixels by one channel value, with identical alpha and frame bounds. This is a static grip study; the three six-frame melee directions have not been authored yet.
+
+![Right-hand dagger and left-hand crossbow pose, actual 1200-pixel Blender render with grip acceptance pending](/images/castle-archer-949/body.png)
+
+![Grip with restricted thumb twist; the web and skin seam still need work](/images/castle-archer-949/grip.png)
+
+The first thumb closure put the selected fingertip-surface centre about 0.11 mm from the handle target, but visibly creased the thumb web and was rejected. Restricting joint twist reduces the creasing while leaving about 15 mm to that target; the grip is unfinished. The next check must consider whether the thumb should rest on the index finger or the handle, together with actual surface contact. The editable dagger follows the hand, but hand appearance and melee motion remain unfinished. The body-animation count stays at ten groups and 68 frames.
+
+![Rejected thumb closure: close to the target, with visible web deformation](/images/castle-archer-949/creased.png)
 
 
 ### Monk identity correction (2026-09-18)
