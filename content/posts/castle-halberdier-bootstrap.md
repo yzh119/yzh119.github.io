@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T20:28:51+00:00
+lastmod: 2026-09-19T21:52:12+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader chest cloth and toes narrowed, with a repaired crown, Blender stills and rejected trials. Thirteen action drafts remain uninstalled; shoulders and plume need work."
+homeSummary: "The Crusader is being generated again in Meshy after the previous design failed visual review. New concepts and rejected shoulder repairs are shown; the replacement is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,33 +18,58 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ## Crusader design correction
 
-The Crusader is still being revised against the original. Local test 0.8.0 remains installed. The Blender drafts below are uninstalled and have not passed overall visual review.
+The existing Crusader still misses the original design. Local repairs improved individual seams and materials, but the helmet, shoulders, tabard and proportions did not come together. A fresh Meshy model is now being prepared. Local test 0.8.0 remains installed, and the full fourteen-unit Castle roster is unfinished.
+
+![New Crusader modeling reference generated with built-in imagegen; this is neither a Blender render nor a game asset](/images/castle-crusader-1346/concept.png)
+
+The native frames guide the thin, outward-flared shoulder plates, predominantly white tabard and narrower waist. The first reference added a tall gold plume mount and an excessively long crest. A targeted head edit removed the post and shortened the feathers. That revised image has been submitted through the Meshy API using meshy-7.1, a 30,000-face target and 4K textures, with image enhancement disabled. The new mesh has been generated and downloaded for 30 credits. Its first 1200 × 1600 Blender still has been inspected: the flared shoulders and white tabard follow the reference more closely than the old draft. Hands and joints still need close inspection; rigging and motion remain unvalidated.
+
+![High-resolution Blender still of the new Meshy mesh; unrigged and uninstalled, not concept art](/images/castle-crusader-1346/blender.png)
+
+![Rejected first reference: the tall plume mount and long feathers depart from the native design](/images/castle-crusader-1346/concept-rejected.png)
+
+The old shoulders belong to the same connected mesh as the torso. Selecting plates by bone weights fragmented the gold border; a spatial selection split the round fasteners instead. Blender closeups of holding, raised-sword and defence poses exposed the joins. Neither separation was adopted.
+
+![Rejected shoulder separation, rendered in Blender; fragmented trim leaves visible gaps](/images/castle-crusader-1346/cap-cut-rejected.png)
+
+Another trial kept the body mesh closed and added continuous shoulder shells above it. Lowering and narrowing them still left overlapping ornaments with the old gold collar protruding behind. This was rejected too. Earlier plume trials resembled comb teeth, ribbons or scales and were also left out of the installed assets.
+
+![Rejected outer-shell trial, rendered in Blender; the new plates do not join the old armour convincingly](/images/castle-crusader-1346/shell-rejected.png)
+
+Rigging, equipment and motion will follow inspection of the new model. Meshy supplies textured geometry; Astra handles review, local repairs, animation and packaging. No VCMI source changes were made.
+
+<details>
+<summary>Local repairs before the fresh model request (superseded working direction)</summary>
+
+<s>The Crusader is still being revised against the original. Local test 0.8.0 remains installed. The Blender drafts below are uninstalled and have not passed overall visual review.</s>
 
 ![Standing draft with narrower chest cloth and toes, a 1000-pixel Blender still; not installed](/images/castle-crusader-1318/holding.png)
 
-The tabard hem is shorter and narrower, and the white chest panel is now a narrower stripe. Computing its colour mask at vertices produced zigzags after interpolation. Evaluating the mask per fragment in the material restored a smooth border in holding, movement and defence renders. This material edit changed no texture, geometry or skin weights.
+<s>The tabard hem is shorter and narrower, and the white chest panel is now a narrower stripe. Computing its colour mask at vertices produced zigzags after interpolation. Evaluating the mask per fragment in the material restored a smooth border in holding, movement and defence renders. This material edit changed no texture, geometry or skin weights.</s>
 
 ![Rejected chest-colour trial with a visibly jagged white border](/images/castle-crusader-1318/chest-rejected.png)
 
-The toes were also narrowed and lowered, fading the change out at the ankle. Both changes are present in thirteen action drafts. The toe audit covers 76 integer poses with no added intersections between the tested foot and body faces. The lowest point remains about 1.2 mm below the floor, so slight penetration remains. Intermediate frames, complete equipment contact and visual acceptance are outside that check.
+<s>The toes were also narrowed and lowered, fading the change out at the ankle. Both changes are present in thirteen action drafts. The toe audit covers 76 integer poses with no added intersections between the tested foot and body faces. The lowest point remains about 1.2 mm below the floor, so slight penetration remains. Intermediate frames, complete equipment contact and visual acceptance are outside that check.</s>
 
-The shoulder armour remains unresolved. Flattening the whole region left local dimples. More uniform shoulder/upper-arm weights did not remove edge distortion either. The unadopted binding trial below also shows underarm folds that already existed in the previous draft.
+<s>The shoulder armour remains unresolved. Flattening the whole region left local dimples. More uniform shoulder/upper-arm weights did not remove edge distortion either. The unadopted binding trial below also shows underarm folds that already existed in the previous draft.</s>
 
 ![Unadopted shoulder-binding trial in a raised-sword pose; plate edges and underarm remain unfinished](/images/castle-crusader-1318/shoulder-trial.png)
 
-Removing the old plume exposed holes in the crown. Its metal and blue surfaces had been separated by texture colour, leaving boundaries that depended on each other for coverage. A continuous roof now follows the original 92-point lower interface, with a gold rim and without the torn upper mount. The feathers still look too regular and remain unfinished.
+<s>Removing the old plume exposed holes in the crown. Its metal and blue surfaces had been separated by texture colour, leaving boundaries that depended on each other for coverage. A continuous roof now follows the original 92-point lower interface, with a gold rim and without the torn upper mount. The feathers still look too regular and remain unfinished.</s>
 
 ![Side view of the repaired crown and gold rim; plume shape remains unfinished](/images/castle-crusader-1301/crown.png)
 
-A separate upright tuft and trailing feather bundle was also tried. It read as two disconnected sets of thin rods and exposed the torn crown, so it was rejected. Death-pose cloth experiments failed too: projecting cloth onto the body introduced intersections, while rolling back the intersecting areas produced stepped folds. Those cloth deformations are absent from the current draft.
+<s>A separate upright tuft and trailing feather bundle was also tried. It read as two disconnected sets of thin rods and exposed the torn crown, so it was rejected. Death-pose cloth experiments failed too: projecting cloth onto the body introduced intersections, while rolling back the intersecting areas produced stepped folds. Those cloth deformations are absent from the current draft.</s>
 
 ![Rejected plume trial: disconnected upright and trailing bundles expose broken crown surfaces](/images/castle-crusader-1301/rejected.png)
 
-The new crown and shorter tabard are present in thirteen action scenes. Across 76 integer poses, the new crown interface differs from the old one by less than 0.001 mm and the crown stays above the floor. The tabard edit adds no intersections between the tested cloth and body faces. Holding, movement and death also received 79 quarter-frame tabard samples. These checks exclude transition faces, complete equipment contact and other intermediate frames; they do not establish visual fidelity.
+<s>The new crown and shorter tabard are present in thirteen action scenes. Across 76 integer poses, the new crown interface differs from the old one by less than 0.001 mm and the crown stays above the floor. The tabard edit adds no intersections between the tested cloth and body faces. Holding, movement and death also received 79 quarter-frame tabard samples. These checks exclude transition faces, complete equipment contact and other intermediate frames; they do not establish visual fidelity.</s>
 
 
 
-These edits reuse the Meshy body and rig, with Blender tools written by Astra. This round made no new Meshy requests and changed no VCMI source. Modeling, animation and integration for the full fourteen-unit Castle roster remain unfinished.
+<s>These edits reuse the Meshy body and rig, with Blender tools written by Astra. This round made no new Meshy requests and changed no VCMI source. Modeling, animation and integration for the full fourteen-unit Castle roster remain unfinished.</s>
+
+</details>
 
 <details>
 <summary>State before the chest and toe revisions (2026-09-19)</summary>
