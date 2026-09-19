@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T10:42:03+00:00
+lastmod: 2026-09-19T11:03:51+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader shield grip now follows the gauntlet’s oblique opening. Static hand/grip surfaces are separated; cuff seams, strap fit, mesh connectivity and animation remain unfinished."
+homeSummary: "The Crusader now carries its sword and round shield, with new full-body and grip renders. Cuff seams, sword pose, shoulder armor and animation remain unfinished; the old game assets are unchanged."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -42,7 +42,7 @@ After coincident vertices are welded for inspection, the body, sword and shield 
 
 ![Empty-handed A-pose concept used as modeling input, not a mesh render](/images/castle-crusader-977/concept.png)
 
-The new Meshy 7.1 body consumed 30 credits, followed by a successful 5-credit rigging task. This actual 1200-pixel Blender render shows the rigged body. The armed bootstrap remains as a reference; the new body has no attached weapons and is not installed.
+The new Meshy 7.1 body consumed 30 credits, followed by a successful 5-credit rigging task. This actual 1200-pixel Blender render shows the rigged body. The armed bootstrap remains as a reference; <s>the new body has no attached weapons and is not installed.</s> This records the earlier stage; sword and shield are assembled below, while game replacement remains unfinished.
 
 ![Actual Blender render of the new body with its Meshy rig](/images/castle-crusader-977/body.png)
 
@@ -90,7 +90,7 @@ Shoulder experiments duplicated part of the original mesh into rigid plates over
 
 ![Rejected separate-shoulder trial: floating edges with both arms raised, actual Blender render](/images/castle-crusader-996/shoulder-rejected.png)
 
-The replacement Crusader is not installed. Shoulder boundaries and joins, a separate sword, equipment grips and the full action set remain unfinished.
+The replacement Crusader is not installed. Shoulder boundaries and joins, <s>a separate sword, equipment grips</s> and the full action set remain unfinished. Sword and grip assembly now appears below; seams and motion still need work.
 
 
 ### Separate gauntlet and sword
@@ -122,6 +122,16 @@ In this static pose, triangle-surface distances sampled every 0.5 mm along the g
 
 The shield and its two standoffs now follow the grip axis. A retaining-strap trial moves toward the wrist. The [current side close-up](/images/castle-crusader-1030/mounted.png) retains the unresolved cuff boundary and strap-fit issues. No new Meshy tasks or game-resource replacements were made.
 
+
+### Crusader sword and shield assembly
+
+The separate gauntlet mesh is mirrored for the right hand, with its normals corrected, and the sword is now attached to the character. The hilt is narrowed to fit the hand passage. The blade material is lightened for readability under the current lighting. No new Meshy tasks were submitted.
+
+![Crusader sword and shield assembly draft, actual Blender still; the old game model has not been replaced](/images/castle-crusader-1033/front.png)
+
+![Right-hand sword close-up, actual Blender render; the cuff seam remains unfinished](/images/castle-crusader-1033/right-grip.png)
+
+The first assembly omitted a scene update after importing the sword, leaving its hilt, wrap and pommel misplaced. The corrected assembly was rendered again in full-body and close-up views. Static right-hand/hilt surface clearance passes, but that check does not cover the guard, body or collisions during motion. A cuff seam remains, and the sword obscures part of the helmet from the front; its angle still needs to follow the original motion. Shoulder armor, straps and the full animation set remain unfinished. The game still uses the old test assets.
 
 ## All fourteen meshes
 
