@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T11:03:51+00:00
+lastmod: 2026-09-19T12:01:45+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader now carries its sword and round shield, with new full-body and grip renders. Cuff seams, sword pose, shoulder armor and animation remain unfinished; the old game assets are unchanged."
+homeSummary: "The Crusader has a revised sword pose, wrist liners and its first eight-frame holding draft. Other actions, shoulder armor and game replacement remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -131,7 +131,17 @@ The separate gauntlet mesh is mirrored for the right hand, with its normals corr
 
 ![Right-hand sword close-up, actual Blender render; the cuff seam remains unfinished](/images/castle-crusader-1033/right-grip.png)
 
-The first assembly omitted a scene update after importing the sword, leaving its hilt, wrap and pommel misplaced. The corrected assembly was rendered again in full-body and close-up views. Static right-hand/hilt surface clearance passes, but that check does not cover the guard, body or collisions during motion. A cuff seam remains, and the sword obscures part of the helmet from the front; its angle still needs to follow the original motion. Shoulder armor, straps and the full animation set remain unfinished. The game still uses the old test assets.
+The first assembly omitted a scene update after importing the sword, leaving its hilt, wrap and pommel misplaced. The corrected assembly was rendered again in full-body and close-up views. Static right-hand/hilt surface clearance passes, but that check does not cover the guard, body or collisions during motion. A cuff seam remains, and <s>the sword obscures part of the helmet from the front; its angle still needs to follow the original motion.</s> The pose below revises the direction; game-view calibration remains unfinished. Shoulder armor, straps and the full animation set remain unfinished. The game still uses the old test assets.
+
+Comparison with the original holding frames led to a lower right hand and a blade directed forward. This full-body still shows the revised pose. Sword length, angle and stance still need calibration in the game view.
+
+![Crusader with revised sword direction, actual Blender still of an offline draft](/images/castle-crusader-1040/front.png)
+
+A flexible liner now blends between forearm and hand bones. The [first trial](/images/castle-crusader-1040/liner-rejected.png) was too wide and protruded through the metal; the second still had a smaller protrusion. Both were rejected. Narrowing the liner and aligning its end sections removed those two obvious protrusions in the [current close-up](/images/castle-crusader-1040/wrist.png). Cuff boundaries, the left retaining strap and large movements remain unaccepted.
+
+![Eight-frame holding draft from a Blender 3D action, shown at eight frames per second for offline review](/images/castle-crusader-1040/holding.webp)
+
+The first holding draft adds small movements to both arms and their equipment. After reopening the scene, all 80,490 inspected mesh vertices match between frame 1 and the closing key at frame 9. This proves positional loop closure, not visual or animation acceptance. The native frame table also contains movement start and stop: the full scope is **15 groups and 80 frame entries**. Earlier internal notes counted 13 groups and 76 frames, omitting those two groups. This is the new body's only action draft; other actions and game replacement remain unfinished.
 
 ## All fourteen meshes
 
@@ -151,7 +161,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified  **User rejected the design; replacement modeling is underway. Installation does not imply art acceptance.** |
+| Crusader | <s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified  **User rejected the old design; installation does not imply art acceptance.** The new body has sword/shield assembly, wrist liners and one eight-frame holding draft. Full scope: 15 groups / 80 frame entries; replacement is not installed. |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
