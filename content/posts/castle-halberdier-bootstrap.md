@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T06:23:45+00:00
+lastmod: 2026-09-19T06:32:42+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer hit-reaction drafts add six frames, a high-resolution Blender still and a failed-pose comparison; elbow, wrist, transitions and game integration remain open."
+homeSummary: "Archer hit reactions now revise the raised elbow, palm-up throw and an intermediate pose flip; six frames and high-resolution renders are updated, with holding recovery and installation still open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1103,15 +1103,21 @@ The Archer now also has two-frame start and stop drafts. Starting raises the low
 The final stop pose now matches the first holding pose at the mesh level, and reopened renders reproduce the saved candidates. Entry into stopping remains unresolved: VCMI ends movement by travel progress, without guaranteeing a particular walking phase. Across all eight possible walking poses, the maximum visible-mesh displacement into this fixed stop frame is about 0.28–0.32 metres in model space, not screen pixels. Leg recovery and weapon speed still need playback review; these transitions are unfinished.
 
 
-A six-frame hit-reaction draft now adds a backward flinch, a lifted leg, an opening free arm and an upward crossbow follow-through. The first pass looked like a knee lift and barely threw the free hand outward. The second moves the foot forward, throws the hand back and raises the bow further. The elbow and wrist still look stiff, and recovery into low-bow holding remains unfinished. Appearance has not passed review.
+A six-frame hit-reaction draft now adds a backward flinch, a lifted leg, an opening free arm and an upward crossbow follow-through. The first pass looked like a knee lift and barely threw the free hand outward. The second moves the foot forward, throws the hand back and raises the bow further. <s>The elbow and wrist still look stiff, and recovery into low-bow holding remains unfinished.</s> The free-arm revision follows below; holding recovery remains unfinished. Appearance has not passed review.
 
 ![Earlier hit draft with insufficient leg extension and free-hand throw, retained as a failed pose study](/images/castle-archer-921/earlier.png)
 
-![Revised hit frame two, actual 1200-pixel Blender render with elbow and wrist work still pending](/images/castle-archer-921/hitted.png)
+This pass revises the free arm. In the old third frame, the right elbow rose about 9.7 cm above the shoulder while the palm retained its holding orientation. The throw now extends farther and the palm follows the forearm; the right elbow stays below the shoulder at all 161 checked times. One intermediate version lowered the elbow but looked like a shrug. Another brought the elbow control direction close to the arm axis and produced a rapid flip between poses. Both were discarded.
 
-[View all six frames](/images/castle-archer-921/frames.png)
+[Earlier raised elbow](/images/castle-archer-929/raised-elbow.png) · [Discarded palm-up version](/images/castle-archer-929/palm-up.png)
 
-<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-921/hitted.mp4"></video>
+With the control direction revised, maximum adjacent elbow displacement at 1/32-frame sampling fell from 4.5 cm in the failed intermediate pass to 1.2 cm. This compares equal sampling intervals and does not establish final playback smoothness. Reopened checks cover soles, the bow-hand anchor and frame bounds, and the second-frame render reproduces exactly. The still and video below now show this version; the [previous still](/images/castle-archer-921/hitted.png), [frame sheet](/images/castle-archer-921/frames.png) and [video](/images/castle-archer-921/hitted.mp4) remain as history. Silhouette, skin seams and the return to holding still need work.
+
+![Hit frame two with the revised free arm, actual 1200-pixel Blender render](/images/castle-archer-929/hitted.png)
+
+[View all six frames](/images/castle-archer-929/frames.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-929/hitted.mp4"></video>
 
 After reopening, 161 sampled times keep the selected actual sole vertices above the reference floor, with about 0.5 mm of support-foot clearance and less than 0.08 mm of holding-hand anchor drift. The reopened second-frame render matches in every RGBA channel. This does not establish collision-free hands, weapon, cloth or legs. There are now eight candidate groups and 50 body frames; ten groups, another 50 frames and game export remain unfinished.
 
