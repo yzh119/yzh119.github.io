@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T06:40:29+00:00
+lastmod: 2026-09-19T06:51:28+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer defence adds nine crouching, raised-crossbow frames with a high-resolution still and video; nine groups and 59 candidate frames now exist, with remaining actions and integration unfinished."
+homeSummary: "Archer hover adds nine frames, while defence repairs previously missed forearm stretch; both previews are updated, with ten groups and 68 candidate frames still uninstalled."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1094,7 +1094,7 @@ The eight-frame walking candidate carries the crossbow in both hands near the wa
 
 Actual sole-vertex checks found about 2.7 mm of ground penetration in the intermediate pass. Foot targets now receive a small correction from the deformed sole surface. At 129 sampled times, the revised soles stay above the reference floor, with less than 0.9 mm of stance clearance. The visible meshes also match at the loop boundary, and the reopened first-frame render matches across all RGBA channels. These checks do not validate cloth intersections or sliding at the game's actual movement speed. The preview runs at five frames per second; movement transitions, appearance, the other actions and installation remain unfinished.
 
-The Archer now also has two-frame start and stop drafts. Starting raises the lowered crossbow toward the two-handed carry; stopping releases the right hand and lowers it again. These are actual Blender renders, with start on the left and stop on the right. <s>This brings the candidate set to seven groups and 44 body frames, still uninstalled.</s> The hit and defence drafts below bring it to nine groups and 59 frames, still uninstalled.
+The Archer now also has two-frame start and stop drafts. Starting raises the lowered crossbow toward the two-handed carry; stopping releases the right hand and lowers it again. These are actual Blender renders, with start on the left and stop on the right. <s>This brings the candidate set to seven groups and 44 body frames, still uninstalled.</s> The hit, defence and hover drafts below bring it to ten groups and 68 frames, still uninstalled.
 
 ![Four Blender draft frames for the Archer movement start and stop](/images/castle-archer-916/sheet.png)
 
@@ -1119,20 +1119,35 @@ With the control direction revised, maximum adjacent elbow displacement at 1/32-
 
 <video controls loop muted playsinline preload="metadata" src="/images/castle-archer-929/hitted.mp4"></video>
 
-After reopening, 161 sampled times keep the selected actual sole vertices above the reference floor, with about 0.5 mm of support-foot clearance and less than 0.08 mm of holding-hand anchor drift. The reopened second-frame render matches in every RGBA channel. This does not establish collision-free hands, weapon, cloth or legs. <s>There are now eight candidate groups and 50 body frames; ten groups, another 50 frames and game export remain unfinished.</s> The defence draft below adds nine frames, bringing the current total to nine groups and 59 frames.
+After reopening, 161 sampled times keep the selected actual sole vertices above the reference floor, with about 0.5 mm of support-foot clearance and less than 0.08 mm of holding-hand anchor drift. The reopened second-frame render matches in every RGBA channel. This does not establish collision-free hands, weapon, cloth or legs. <s>There are now eight candidate groups and 50 body frames; ten groups, another 50 frames and game export remain unfinished.</s> <s>The defence draft below adds nine frames, bringing the current total to nine groups and 59 frames.</s> Defence and hover drafts follow below; the current total is ten groups and 68 frames.
 
 The stop-entry investigation also isolated ankle jumps of roughly 25–29 cm in the worst phases, alongside the weapon jump. In the current source, the same duration parameter scales walking frame rate and travel rate, yielding nominally five sprite frames per hex. An eight-frame loop can therefore end in different phases; adjusting walk duration alone cannot align every stop. The stop poses and actual game playback still need review.
 
 
 The Archer now has a nine-frame defence draft. Following the original sequence, both hands raise the crossbow in front of the face as the knees bend; frames four through six hold the guard before the bow lowers again. It reuses the repaired 3D crossbow with a relaxed string and no loaded bolt. This remains an offline candidate.
 
-![Raised-crossbow guard from the nine-frame defence draft, actual 1200-pixel Blender render](/images/castle-archer-932/defence.png)
+A later check found an omission in the defence review: the hand anchors were stable, but the left forearm stretched by about 5.6 cm in full guard. Forcing the hand onto its target concealed this from the earlier anchor-only check. The bow now sits 6.5 cm closer to the body and 4 cm lower while retaining the raised guard, and upper-arm and forearm lengths are checked as well. Across 257 sampled times, revised arm lengths vary by less than 0.001 mm and the sole checks still pass. This does not establish collision-free hands or cloth. The still and video below are updated; the [old defence still](/images/castle-archer-932/defence.png), [frame sheet](/images/castle-archer-932/frames.png) and [video](/images/castle-archer-932/defence.mp4) remain as failed-version history. Defence transitions into and out of holding are still unfinished.
 
-[View all nine frames](/images/castle-archer-932/frames.png)
+![Defence after repairing forearm stretch, actual 1200-pixel Blender render](/images/castle-archer-940/defence.png)
 
-<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-932/defence.mp4"></video>
+[View all nine frames](/images/castle-archer-940/defence-frames.png)
 
-After reopening, 257 sampled times keep the selected actual sole vertices above the reference floor. Both hand anchors remain stable during the full guard in frames four through six. Grip changes are checked separately from holding the guard, since intentional repositioning is not drift. All nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Full hand-to-weapon contact, cloth intersections and transitions in the game remain unverified. This brings the candidates to nine groups and 59 body frames; another nine groups, 41 frames, layered export and game installation remain unfinished.
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-940/defence.mp4"></video>
+
+After reopening, 257 sampled times keep the selected actual sole vertices above the reference floor. Both hand anchors remain stable during the full guard in frames four through six. Grip changes are checked separately from holding the guard, since intentional repositioning is not drift. All nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Full hand-to-weapon contact, cloth intersections and transitions in the game remain unverified. <s>This brings the candidates to nine groups and 59 body frames; another nine groups, 41 frames, layered export and game installation remain unfinished.</s> The hover action below adds nine frames, bringing the current total to ten groups and 68 frames, still uninstalled.
+
+
+A nine-frame mouse-hover candidate now brings the crossbow to waist height, turns the torso slightly, looks down and returns to holding. The first pass rotated the bow the wrong way, increasing its projected length. Correcting the turn then exposed about 1.2 cm of left-forearm stretch while reaching the bow; moving the bow closer resolved it. The generation scripts now fail on unreachable hand targets rather than forcing the hand into place.
+
+[First pass with the wrong turn direction](/images/castle-archer-940/wrong-yaw.png)
+
+![Middle hover pose, actual 1200-pixel Blender render](/images/castle-archer-940/mouseon.png)
+
+[View all nine hover frames](/images/castle-archer-940/mouseon-frames.png)
+
+<video controls loop muted playsinline preload="metadata" src="/images/castle-archer-940/mouseon.mp4"></video>
+
+After reopening, visible meshes at both hover endpoints match the first holding pose within 0.001 mm. Arm-length and sole checks pass at 257 sampled times, all nine frames fit the canvas and the reopened fourth-frame render matches in every RGBA channel. Checking exported integer frames in the other existing actions found the same substantial stretch in the old defence draft, now repaired; this does not cover all intermediate poses in those other actions. There are now ten candidate groups and 68 body frames, with eight groups, 32 frames, appearance work, layered export and game installation still remaining.
 
 
 ### Monk identity correction (2026-09-18)
