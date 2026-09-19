@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T09:55:22+00:00
+lastmod: 2026-09-19T10:06:31+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader revision restores the closed helmet, short cloth and round shield. The separate shield mesh is ready for grip work; shoulder trials remain rejected and the replacement is not installed."
+homeSummary: "The Crusader shield now has grip hardware and a retaining strap, with a character fit render. Finger-curl trials still penetrate the grip; the replacement is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -77,6 +77,14 @@ A separate shield was generated through the Meshy Text to 3D API. Preview and te
 ![Separate shield front, actual 1000-pixel Blender render; not bound](/images/castle-crusader-996/shield-front.png)
 
 The [rear render](/images/castle-crusader-996/shield-back.png) shows one broad band rather than the requested complete pair of straps and grip. Finger contact and forearm attachment still need work before installation.
+
+Blender geometry adds a raised grip, metal standoffs and a retaining strap while preserving the generated shield surface and textures. The shield is provisionally reduced to 46 cm and positioned in front of the left hand. The arm reaches its target before hand orientation is adjusted. This is an equipment fit pose, not the original idle action.
+
+![Character and shield fit, actual 1100-pixel Blender render; sword and grip remain unfinished](/images/castle-crusader-1004/fit.png)
+
+![Shield rear with added grip and retaining strap, actual Blender render](/images/castle-crusader-1004/hardware.png)
+
+The automatic rig has no finger bones. A mesh-bending trial closes the fingers in the [second grip close-up](/images/castle-crusader-1004/grip-trial.png), but 89 sampled hand vertices still enter the grip cylinder, with a maximum depth of about 11.8 mm. The thumb remains open. This trial is rejected. The check samples vertices within the grip length and does not establish complete collision coverage. Individual finger joints and the thumb need separate treatment.
 
 Shoulder experiments duplicated part of the original mesh into rigid plates over a dark flexible backing. Three follow angles were tried; the final trial also moved the plates outward and upward. Raised arms still exposed floating edges and discontinuous joins. All three trials were rejected. The current body remains the back-weight repair described above; the image below records a failed experiment.
 
@@ -2671,5 +2679,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>Historical homepage summary before the separate-shield review</summary>
 
 <s>Crusader arm weights pulled the middle of the back during raised-arm poses. A local binding repair reduces that displacement; shoulder articulation and armpit stretching remain unfinished.</s>
+
+</details>
+
+<details>
+<summary>Historical homepage summary before shield fitting</summary>
+
+<s>The Crusader revision restores the closed helmet, short cloth and round shield. The separate shield mesh is ready for grip work; shoulder trials remain rejected and the replacement is not installed.</s>
 
 </details>
