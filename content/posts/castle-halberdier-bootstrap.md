@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T21:52:12+00:00
+lastmod: 2026-09-19T23:46:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader is being generated again in Meshy after the previous design failed visual review. New concepts and rejected shoulder repairs are shown; the replacement is not installed."
+homeSummary: "The replacement Crusader is rigged and undergoing motion repairs. Blender stills show holding, hit, low-attack and turn poses; upward attack and death remain unresolved, and the draft is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,25 +18,48 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ## Crusader design correction
 
-The existing Crusader still misses the original design. Local repairs improved individual seams and materials, but the helmet, shoulders, tabard and proportions did not come together. A fresh Meshy model is now being prepared. Local test 0.8.0 remains installed, and the full fourteen-unit Castle roster is unfinished.
+The replacement Crusader now has a Meshy body and rig, with animation work underway in Blender. The white tabard, waist and flared shoulders have been revised, and the crest now uses separate quills and barbs. The design still needs comparison with the original. Private test 0.8.0 remains installed; the fourteen-unit Castle roster is unfinished.
+
+![Replacement Crusader holding pose, a 700 × 700 Blender still; not installed](/images/castle-crusader-1438/holding.png)
+
+[Meshy](https://www.meshy.ai/) supplied the new body with 4K textures for 30 credits and the rig for another 5. Astra wrote the Blender scripts for shoulder and crest repairs, equipment assembly, arm posing and motion. The generated hands had fused shapes, so this draft reuses independently generated Meshy gauntlets bound to the hand bones. There are no articulated finger bones, and the cuff joins still need inspection.
+
+Thirteen action drafts now use the replacement body. The hit reaction has a reposed sword arm to recover the original outward blade direction. The low attack has revised shield poses during the strike and recovery. These are Blender renders of the actual model; continuous motion and in-game appearance remain unvalidated.
+
+![Outward sword motion during the hit reaction, a 1000 × 1000 Blender still of the draft](/images/castle-crusader-1438/hitted.png)
+
+![Low-attack shield pose, a 1000 × 1000 Blender still; wrist anatomy and the full motion remain under review](/images/castle-crusader-1438/attack-down.png)
+
+Turning exposed intersections between the sword guard and shield. Moving only the sword hand was insufficient, and some trials introduced arm-to-shield contact. Both arms have now been adjusted while retaining the upright sword. Each turn was sampled at 65 poses with no surface intersections between the tested body, blade, guard and shield. Separate gauntlets, cuffs, containment and complete action transitions are outside that check.
+
+![Turn pose after adjusting both arms, a 1000 × 1000 Blender still; not installed](/images/castle-crusader-1438/turn.png)
+
+Upward-attack recovery and death still contain intersections. Another hit-reaction trial passed the body/equipment surface check but left the sword nearly vertical instead of swinging outward as in the original; that trial was rejected. Crest shape, shoulders, material contrast and stance also await full visual review against the native frames. No VCMI source changes were made.
+
+<details>
+<summary>Initial model-generation record (superseded by the rigging and motion work above)</summary>
+
+<s>The existing Crusader still misses the original design. Local repairs improved individual seams and materials, but the helmet, shoulders, tabard and proportions did not come together. A fresh Meshy model is now being prepared. Local test 0.8.0 remains installed, and the full fourteen-unit Castle roster is unfinished.</s>
 
 ![New Crusader modeling reference generated with built-in imagegen; this is neither a Blender render nor a game asset](/images/castle-crusader-1346/concept.png)
 
-The native frames guide the thin, outward-flared shoulder plates, predominantly white tabard and narrower waist. The first reference added a tall gold plume mount and an excessively long crest. A targeted head edit removed the post and shortened the feathers. That revised image has been submitted through the Meshy API using meshy-7.1, a 30,000-face target and 4K textures, with image enhancement disabled. The new mesh has been generated and downloaded for 30 credits. Its first 1200 × 1600 Blender still has been inspected: the flared shoulders and white tabard follow the reference more closely than the old draft. Hands and joints still need close inspection; rigging and motion remain unvalidated.
+<s>The native frames guide the thin, outward-flared shoulder plates, predominantly white tabard and narrower waist. The first reference added a tall gold plume mount and an excessively long crest. A targeted head edit removed the post and shortened the feathers. That revised image has been submitted through the Meshy API using meshy-7.1, a 30,000-face target and 4K textures, with image enhancement disabled. The new mesh has been generated and downloaded for 30 credits. Its first 1200 × 1600 Blender still has been inspected: the flared shoulders and white tabard follow the reference more closely than the old draft. Hands and joints still need close inspection; rigging and motion remain unvalidated.</s>
 
 ![High-resolution Blender still of the new Meshy mesh; unrigged and uninstalled, not concept art](/images/castle-crusader-1346/blender.png)
 
 ![Rejected first reference: the tall plume mount and long feathers depart from the native design](/images/castle-crusader-1346/concept-rejected.png)
 
-The old shoulders belong to the same connected mesh as the torso. Selecting plates by bone weights fragmented the gold border; a spatial selection split the round fasteners instead. Blender closeups of holding, raised-sword and defence poses exposed the joins. Neither separation was adopted.
+<s>The old shoulders belong to the same connected mesh as the torso. Selecting plates by bone weights fragmented the gold border; a spatial selection split the round fasteners instead. Blender closeups of holding, raised-sword and defence poses exposed the joins. Neither separation was adopted.</s>
 
 ![Rejected shoulder separation, rendered in Blender; fragmented trim leaves visible gaps](/images/castle-crusader-1346/cap-cut-rejected.png)
 
-Another trial kept the body mesh closed and added continuous shoulder shells above it. Lowering and narrowing them still left overlapping ornaments with the old gold collar protruding behind. This was rejected too. Earlier plume trials resembled comb teeth, ribbons or scales and were also left out of the installed assets.
+<s>Another trial kept the body mesh closed and added continuous shoulder shells above it. Lowering and narrowing them still left overlapping ornaments with the old gold collar protruding behind. This was rejected too. Earlier plume trials resembled comb teeth, ribbons or scales and were also left out of the installed assets.</s>
 
 ![Rejected outer-shell trial, rendered in Blender; the new plates do not join the old armour convincingly](/images/castle-crusader-1346/shell-rejected.png)
 
-Rigging, equipment and motion will follow inspection of the new model. Meshy supplies textured geometry; Astra handles review, local repairs, animation and packaging. No VCMI source changes were made.
+<s>Rigging, equipment and motion will follow inspection of the new model. Meshy supplies textured geometry; Astra handles review, local repairs, animation and packaging. No VCMI source changes were made.</s>
+
+</details>
 
 <details>
 <summary>Local repairs before the fresh model request (superseded working direction)</summary>
