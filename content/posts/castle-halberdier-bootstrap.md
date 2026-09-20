@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T19:29:56+00:00
+lastmod: 2026-09-20T19:44:32+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The new Pikeman has a ten-frame thrust draft and Blender preview; knees, wrists and footwork remain under review. It is not installed; the Castle roster remains unfinished."
+homeSummary: "Pikeman adds a seven-frame idle and revised thrust knees. Upward/downward drafts still intersect the sleeves or arms; none is installed and the Castle roster remains in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,15 +1135,41 @@ Previous homepage summary:
 
 ## Pikeman model and motion {#pikeman-thrust}
 
+Four action drafts now exist; none is installed:
+
+| Action | Native frames | Current checks |
+| --- | --- | --- |
+| Idle | 7 | Subtle torso motion; no pike/hand or pike/body surface intersections at 121 sampled times. |
+| Forward thrust | 10 | Knees now bend toward their respective toes; no such surface intersections at 181 sampled times. |
+| Upward thrust | 10 | Raised-pike draft; little-finger contact was repaired, but the left sleeve still intersects the shaft. Failed review. |
+| Downward thrust | 11 | Lowered-pike draft; the right arm still intersects the rear shaft. Failed review. |
+
+Both knees previously bent in the attack direction despite the outward-facing toes. The revision retains foot positions and orientations and changes the knee bend planes. Key-frame measurements show the rear sole staying near the ground while the front foot rises during the step. Dense samples still contain small negative heights below about 0.07 mm, so this does not establish complete ground-contact correctness. Wrist skin, body self-collision and full footwork remain under review.
+
+![A frame from the seven-frame idle, actual 1200 × 1400 Blender still; not a game capture](/images/castle-pikeman-2012/holding.png)
+
+![Revised knee directions in the thrust, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2012/front.png)
+
+<details>
+<summary>Upward/downward drafts and remaining intersections</summary>
+
+Two attempts to move the entire pike outward exceeded the left arm's reach and stopped with errors, producing no usable animation. Keeping the grip targets and changing elbow directions reduced the intersections but did not remove them. These trials are retained as failed work; the arms were not lengthened to bypass the reach check.
+
+![Upward draft, actual Blender render; left-sleeve intersection remains](/images/castle-pikeman-2012/up-draft.png)
+
+![Downward draft, actual Blender render; right-arm/rear-shaft intersection remains](/images/castle-pikeman-2012/down-draft.png)
+
+</details>
+
 The new body now has a ten-frame forward-thrust draft following the original sequence of lowering, extending and recovering the pike. It adds torso lean, forward pelvis movement and a front-foot step. Both arms continue to solve against grip positions on the shaft, retaining the original hand mesh.
 
 <video controls loop muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-1995/attack.mp4"></video>
 
-This looping preview contains ten actual Blender-rendered frames played at 12 fps for draft review. It is not a game capture or an accepted gameplay speed.
+This retained preview predates the knee revision and contains ten actual Blender-rendered frames played at 12 fps for draft review. It is not a game capture or an accepted gameplay speed.
 
 ![Maximum extension, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-1995/thrust.png)
 
-After saving and reopening the scene, triangle checks at 181 times found no intersections between the pike and either hand or the body mesh. This excludes body self-intersection, containment and ground contact. Knee posture, wrist skin deformation, footwork and fidelity to the original still need review. Only a forward-thrust candidate exists on the new body; walking and the full action set have not been transferred. The Pikeman is not installed, and the fourteen-unit Castle roster remains unfinished.
+After saving and reopening the scene, triangle checks at 181 times found no intersections between the pike and either hand or the body mesh. This excludes body self-intersection, containment and ground contact. Knee posture, wrist skin deformation, footwork and fidelity to the original still need review. <s>Only a forward-thrust candidate exists on the new body;</s> the additional drafts are listed above; walking and the full action set have not been transferred. The Pikeman is not installed, and the fourteen-unit Castle roster remains unfinished.
 
 <details>
 <summary>Earlier grip repairs and lowering probe (historical)</summary>
