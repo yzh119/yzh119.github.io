@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T13:35:15+00:00
+lastmod: 2026-09-20T14:07:46+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader tabard now covers walking and start/stop transitions, with the specified idle/start/walk and stop/idle joins checked. Walking still has local intersections; the remaining actions need the same revision."
+homeSummary: "The Crusader tabard revision now covers all thirteen draft groups. Selection and turns passed the stated local checks; combat and death remain unresolved. Three high-resolution combat stills are included."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -188,7 +188,21 @@ The [walking inspection video](/images/castle-crusader-1833/walking-inspection.m
 
 Start and stop transitions now use bone poses and cloth shapes from the actual adjoining scenes. Each was reopened and checked at 33 times with no detected intersections among the six listed mesh pairs. At the specified idle→start, start→walk and stop→idle endpoints, the six checked meshes differ by less than one micrometre. Stopping from arbitrary walking phases still needs in-game inspection.
 
-The tabard revision now covers idle, walking, start, stop and hit. Selection, turns, attacks, defence and death still need the same treatment. Overall likeness is unaccepted, and the new draft is not installed.
+<s>The tabard revision now covers idle, walking, start, stop and hit. Selection, turns, attacks, defence and death still need the same treatment. Overall likeness is unaccepted, and the new draft is not installed.</s>
+
+The remaining eight groups now have the broader, longer tabard: selection, both turns, three attack directions, defence and death. All thirteen groups have drafts with this coverage design, retaining the existing bone motion. Overall likeness and in-game presentation remain unaccepted.
+
+Both selection endpoints were reattached to the actual idle cloth shapes; the six checked endpoint meshes differ by less than one micrometre. After reopening, selection was checked at 225 times and each turn at 33 times, with no intersections detected among the six listed pairs. Defence still has right-skirt intersections at two sampled times, and all three attack directions retain garment intersections. Death also retains an unnatural pose and shield/body intersections.
+
+![Defence draft with the revised tabard; 1200 × 1400 Blender still, not installed](/images/castle-crusader-1842/defence.png)
+
+![Upward-attack draft with the revised tabard; 1200 × 1400 Blender still, motion and overall likeness unaccepted](/images/castle-crusader-1842/attack_up.png)
+
+The high-resolution downward-attack render exposed a conspicuous folded skirt panel. A separate smooth-surface trial retained the fold and increased some intersections, so it was rejected. The image below preserves that unresolved defect; the panel shape and motion path need revision.
+
+![Downward-attack draft with a visible folded panel below the waist; 1200 × 1400 Blender still, defect unresolved](/images/castle-crusader-1842/attack_down.png)
+
+These remain local 3D working scenes. They have not replaced the in-game Crusader and do not mean the fourteen-creature Castle roster is complete.
 
 <details>
 <summary>Before local clearance correction (history)</summary>
