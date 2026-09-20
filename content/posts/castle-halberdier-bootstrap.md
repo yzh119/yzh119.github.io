@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T19:44:32+00:00
+lastmod: 2026-09-20T19:57:40+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman adds a seven-frame idle and revised thrust knees. Upward/downward drafts still intersect the sleeves or arms; none is installed and the Castle roster remains in progress."
+homeSummary: "Pikeman has idle and three attack drafts. Upward/downward revisions avoid the pike, but sleeve/torso contact remains under review. None is installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1141,8 +1141,16 @@ Four action drafts now exist; none is installed:
 | --- | --- | --- |
 | Idle | 7 | Subtle torso motion; no pike/hand or pike/body surface intersections at 121 sampled times. |
 | Forward thrust | 10 | Knees now bend toward their respective toes; no such surface intersections at 181 sampled times. |
-| Upward thrust | 10 | Raised-pike draft; little-finger contact was repaired, but the left sleeve still intersects the shaft. Failed review. |
-| Downward thrust | 11 | Lowered-pike draft; the right arm still intersects the rear shaft. Failed review. |
+| Upward thrust | 10 | <s>Raised-pike draft; little-finger contact was repaired, but the left sleeve still intersects the shaft. Failed review.</s> Revised elbow path: no pike intersections at 181 samples; body contact remains under review. |
+| Downward thrust | 11 | <s>Lowered-pike draft; the right arm still intersects the rear shaft. Failed review.</s> Revised path: no pike intersections at 201 samples; right-arm/torso contact remains unresolved. |
+
+The upward and downward revisions retain the pike and grip positions while routing the elbows around the shoulder–wrist axes, blending back to the idle pose at the endpoints. The upward little-finger adjustment now blends too, correcting its initial mismatch with idle. Reopened samples found no pike/hand or pike/body surface intersections in either action.
+
+![Revised upward elbow path, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2023/up.png)
+
+![Downward candidate retaining the original grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2023/down.png)
+
+Broader arm/body checks found intersections near the left sleeve already in idle, plus right-arm/torso contact during the downward thrust. Their locations and visible impact still need close-up review. Minimizing elbow rotation around the shaft crowded the right arm against the chest; a separate trial sliding the right grip 6 cm along the shaft increased detected body intersections and was rejected. The results address shaft contact, not complete collision or appearance acceptance.
 
 Both knees previously bent in the attack direction despite the outward-facing toes. The revision retains foot positions and orientations and changes the knee bend planes. Key-frame measurements show the rear sole staying near the ground while the front foot rises during the step. Dense samples still contain small negative heights below about 0.07 mm, so this does not establish complete ground-contact correctness. Wrist skin, body self-collision and full footwork remain under review.
 
