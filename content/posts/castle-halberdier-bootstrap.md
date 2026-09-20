@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T12:04:18+00:00
+lastmod: 2026-09-20T12:12:46+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader skirt studies now include volume-preserving skinning and two cloth simulations, with Blender renders. The second unfolds at the end but still crumples in recoil. None was adopted; current candidate and game assets are unchanged."
+homeSummary: "A third Crusader cloth trial reduces excessive initial collision margins and is baked for reopened inspection. Crumpling decreased but body intersections remain; it was not adopted and game assets are unchanged."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -142,7 +142,13 @@ Volume-preserving skinning was also tested on the skirt. At the same 161 reopene
 
 ![Final recovery pose of the second simulation, with the panels unfolded; this frame does not validate the full action](/images/castle-crusader-1753/stiff-recovery.png)
 
-The simulations include an idle warm-up and transition and use a different timescale. These are cloth studies, not in-game animation. The saved scenes contain simulation setup, not baked exportable animation. Panel shape and collision surfaces need further investigation; current game assets are unchanged.
+The simulations include an idle warm-up and transition and use a different timescale. These are cloth studies, not in-game animation. Those two saved scenes contain simulation setup, not baked animation. Panel shape and collision surfaces need further investigation; current game assets are unchanged.
+
+The third trial first checked the initial clearance. Median skirt-to-body distances were about 5.2 and 4.2 mm, while the body and cloth collision margins had each been set to 5 mm. Reducing them to 1 mm each and moving initially close vertices by at most about 2 mm reduced the crumpling in recoil.
+
+This version bakes 41 simulation samples per panel into shape keys on the original rig action and renders after reopening. At 161 checked times, however, the panels still intersect the body at 160 and 161 times respectively, so it was not adopted. The bake makes the result persistent and inspectable; garment contacts remain unresolved. The current candidate and game assets are unchanged.
+
+![Reopened Blender render of the third baked skirt trial; less crumpling but intersections remain, not adopted](/images/castle-crusader-1758/baked-hit.png)
 
 Death still has only an overall height correction: all 22 bound meshes, including the helmet, stayed above the floor at 81 sampled times. Back support, limb placement and cloth/shield intersections remain unresolved. The revised Crusader is not installed.
 
