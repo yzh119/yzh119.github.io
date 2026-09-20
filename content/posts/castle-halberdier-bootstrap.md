@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T20:40:11+00:00
+lastmod: 2026-09-20T20:48:25+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Pikeman idle, forward and upward drafts clear the tested arm/body surfaces. Downward contact, grip appearance and remaining actions are unfinished; not installed."
@@ -1155,6 +1155,19 @@ Four offline drafts cover 38 native frames; the new Pikeman is not installed. Cl
 Samples are spaced 0.025 frame apart. The arm/body test uses skin-weight partitions, excluding mixed-weight seams; it is not a complete self-collision or containment test. The grip still looks loose and the wrist connections need work. Shaft clearance does not establish convincing contact. Full footwork, the other nine action groups and game installation remain unfinished.
 
 A larger fixed elbow rotation cleared one downward pose but failed elsewhere in the motion, so that trial was rejected. The first forward revision cleared the breastplate but introduced a few wrist/pike intersections; a smaller left-elbow adjustment cleared those checks. This work used existing Meshy assets without a new API request. The installed Castle test mod remains 0.13.0.
+
+<details>
+<summary>Downward elbow and guard-position trials (not adopted)</summary>
+
+The right arm needs different routes during the lowering phase and at full extension. An alternative elbow path cleared the tested surface pairs at all 401 sampled times, but its raised elbow crowded the arm across the chest. The rendered pose was rejected despite those counts.
+
+![Downward trial with clear sampled surfaces but an awkward elbow, actual 1200 × 1400 Blender still; rejected](/images/castle-pikeman-2043/rejected-elbow.png)
+
+Moving the pike an additional 4 cm forward and 8 cm down exceeded the left arm's reach at frame 4.7, so that attempt produced no usable scene. Reducing those offsets to 2 cm forward and 4 cm down produced an eleven-frame draft within the strict arm-length constraints. A reopened 401-sample audit then found left-wrist/pike and both arm/body intersections, so this trial was also rejected. The image records the experiment; it has not replaced the working draft in the table.
+
+![Lower-guard experiment, actual 1200 × 1400 Blender still; not adopted or installed](/images/castle-pikeman-2043/lower-guard.png)
+
+</details>
 
 <details>
 <summary>Earlier shaft-contact revisions and action drafts (history)</summary>
