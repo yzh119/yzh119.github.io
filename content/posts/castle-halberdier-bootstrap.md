@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T14:38:07+00:00
+lastmod: 2026-09-20T15:05:35+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader helmet and shoulder revisions now cover thirteen draft action groups. New close-ups include the rejected shoulder trial. Overall likeness remains unaccepted; game assets were not replaced."
+homeSummary: "Crusader cloth folds and colors now cover thirteen drafts. Native-size improvement is modest; the downward-attack bulge remains under revision. Not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -50,6 +50,24 @@ The body and helmet base coordinates matched the holding source exactly in all t
 ![Lowering the upper edge left a domed-looking cap; rejected Blender trial](/images/castle-crusader-1867/rejected-cap.png)
 
 </details>
+
+### Cloth surface and downward-attack trial
+
+Two shallow, nonparallel folds were added to the chest and split skirts, with a cooler, brighter white and a slightly deeper blue edge. These are vertex edits applied equally to every shape key of each panel, not cloth simulation. Reopening the holding scene showed that the existing differences between shape keys changed by less than 0.00002 mm.
+
+![Shallow cloth folds and revised colors, actual Blender close-up; design draft](/images/castle-crusader-1877/cloth.png)
+
+The edit now covers thirteen draft action groups. All eight holding frames were inspected without obvious abrupt changes in the added folds; representative attack poses still have earlier problems. At native silhouette height, the color improvement is modest and the model still differs from the original. The close-up does not establish how well it reads at game size.
+
+![Original and before/after cloth revision; model renders reduced to native silhouette height, then all panels enlarged sixfold with nearest-neighbor sampling; not a game capture](/images/castle-crusader-1877/native-scale.png)
+
+The shallow folds did not remove the downward-attack bulge. An initial reset targeted the wrong panel and barely changed the image. Coloring the chest red, the panel named Left skirt green, and the other skirt blue identified the green panel as the source. These colors are diagnostic only.
+
+![Downward-attack panel diagnostic: the green skirt forms the prominent bulge; actual Blender render](/images/castle-crusader-1877/diagnostic.png)
+
+That panel's local surface was then reset to its holding shape while retaining bone motion and weights. The bulge is reduced at frame 4, but the lower edge still folds. This is a separate trial branch and has not replaced the downward attack in the thirteen-scene draft set. Fit, between-frame behavior and overall likeness remain unverified. Game assets were not replaced.
+
+![Downward-attack frame 4 after resetting the correct panel; separate Blender trial, not adopted](/images/castle-crusader-1877/downattack-trial.png)
 
 ### Earlier garment, proportion and motion trials
 
