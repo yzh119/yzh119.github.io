@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T01:41:55+00:00
+lastmod: 2026-09-20T01:54:15+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader likeness revisions remain unaccepted. Archer shooting, selection and melee bow carriage have six new Blender stills; dagger/body intersections and game integration remain unfinished."
+homeSummary: "Crusader comparison and Blender stills show revised gold shoulders and headgear. Waist proportions and sword posture remain unfinished; Archer motion work continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,19 +22,32 @@ Private Crusader test 0.9.0 is installed with thirteen active groups and 76 nati
 
 ### Still studies after the likeness feedback
 
-The first trials separate body proportions from shading. Inspection found the body material set to metallic 1 and roughness 1 throughout, including its cloth. A texture-color mask now tests separate metal and cloth responses, alongside shorter legs and a broader torso. The mask is provisional. The proportion changes are a holding-pose study and have not been transferred to the rest mesh, rig and full motion set.
+Matching the full silhouettes to the same displayed height makes the shoulder colors and headgear easier to compare. The latest Blender study gives the upper pauldrons a broad brass surface, increases the helmet and crest-mount height, and extends the trailing feathers. Astra authored the Blender changes to the existing Meshy body; this round made no new Meshy requests.
+
+![Original at left, previous study in the middle, latest Blender study at right. Each retains its aspect ratio at equal silhouette height; the original uses nearest-neighbor enlargement.](/images/castle-crusader-1516/comparison.png)
+
+The comparison still shows a high belt and sword hand, a different blade angle and shield placement, and mismatched white-and-blue cloth areas. These are static studies. The proportion deformation has not been transferred to the rig and full motion set, and the installed 0.9.0 test still has the rejected appearance. Overall likeness remains unaccepted.
+
+![Latest Crusader appearance study, a 1000 × 1000 Blender still; not installed or visually accepted](/images/castle-crusader-1516/holding.png)
+
+<details>
+<summary>Earlier proportion, material and short-crest trials (historical; revised above)</summary>
+
+<s>The first trials separate body proportions from shading. Inspection found the body material set to metallic 1 and roughness 1 throughout, including its cloth. A texture-color mask now tests separate metal and cloth responses, alongside shorter legs and a broader torso. The mask is provisional. The proportion changes are a holding-pose study and have not been transferred to the rest mesh, rig and full motion set.</s>
 
 ![Before revision: a 1000 × 1000 Blender still, with the same camera and lights as the next image](/images/castle-crusader-1471/before.png)
 
 ![Proportion and material study, rendered in Blender at 1000 × 1000; offline and not visually accepted](/images/castle-crusader-1471/proportion-material.png)
 
-Raising the crest first produced a thin hook, which was rejected. Adding a brass mount then made it too tall; reviewing the earlier record showed that this same feature had already failed. The next study reduces the mount and uses a shorter trailing feather cluster. Feather attachment, helmet shape and shoulder outlines still need work.
+<s>Raising the crest first produced a thin hook, which was rejected. Adding a brass mount then made it too tall; reviewing the earlier record showed that this same feature had already failed. The next study reduces the mount and uses a shorter trailing feather cluster. Feather attachment, helmet shape and shoulder outlines still need work.</s>
 
 ![Rejected hooked crest, an actual Blender still](/images/castle-crusader-1471/rejected-hook.png)
 
 ![Head study with the smaller mount, rendered in Blender at 1000 × 1000; attachment and overall likeness remain unresolved](/images/castle-crusader-1471/crest-study.png)
 
-Astra wrote these Blender revisions to the existing Meshy body; no new Meshy requests were submitted in this round. Test 0.9.0 remains installed. The installation and motion records below refer to that version.
+<s>Astra wrote these Blender revisions to the existing Meshy body; no new Meshy requests were submitted in this round. Test 0.9.0 remains installed. The installation and motion records below refer to that version.</s>
+
+</details>
 
 ### Test 0.9.0 installation and motion record
 
