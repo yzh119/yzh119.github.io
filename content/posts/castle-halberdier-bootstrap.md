@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T14:29:55+00:00
+lastmod: 2026-09-20T14:38:07+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader likeness work continues with a taller helmet face and narrower crest. New reference comparisons and high-resolution front and side renders; the old in-game test assets remain installed."
+homeSummary: "Crusader helmet and shoulder revisions now cover thirteen draft action groups. New close-ups include the rejected shoulder trial. Overall likeness remains unaccepted; game assets were not replaced."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -32,7 +32,24 @@ The side-by-side holding comparison makes the short helmet face and broad crest 
 
 ![Side helmet close-up, actual Blender render](/images/castle-crusader-1860/side.png)
 
-Both views have been inspected. This revision changes only the holding scene; shoulder armor, cloth folds and overall proportions still need work, and the crest has no independent animation. The earlier design and motion trials remain below, with images from their respective versions. They do not show this helmet applied to every action.
+Both views have been inspected. <s>This revision changes only the holding scene; shoulder armor, cloth folds and overall proportions still need work, and the crest has no independent animation.</s> The shoulder candidate below has since been completed and propagated with the helmet to thirteen draft action groups. Overall likeness and complete animation remain unaccepted. The earlier design and motion trials remain below, with images from their respective versions. They do not show this helmet applied to every action.
+
+The first shoulder trial lowered the upper edge and made the near cap look more domed; it was rejected. The second uses the original cap vertex set and blends the surface toward two pitched planes while retaining some thickness and curvature. Reopening confirmed that only 2,033 vertices within that cap set changed. The close-up shows a straighter front edge and clearer tips. Underside fit and overall proportions still need review.
+
+![Shoulder revision candidate, actual Blender close-up; likeness still under review](/images/castle-crusader-1867/shoulders.png)
+
+![Crusader with revised helmet and shoulders, actual 1200 × 1400 Blender still; not installed](/images/castle-crusader-1867/holding.png)
+
+The body and helmet base coordinates matched the holding source exactly in all thirteen action scenes, so both appearance edits have been applied to all thirteen drafts. Actual renders were inspected for four representative holding, walking, upward-attack and death poses. This did not reauthor motion, and earlier intersection checks do not validate the revised appearance. Cloth folds, motion timing, the falling pose and native likeness remain unfinished. Game assets were not replaced.
+
+![Representative upward-attack pose with the revised helmet and shoulders, actual Blender render; not full animation acceptance](/images/castle-crusader-1867/attack-up.png)
+
+<details>
+<summary>Rejected shoulder-lowering trial</summary>
+
+![Lowering the upper edge left a domed-looking cap; rejected Blender trial](/images/castle-crusader-1867/rejected-cap.png)
+
+</details>
 
 ### Earlier garment, proportion and motion trials
 
