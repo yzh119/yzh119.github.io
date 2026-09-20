@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T01:28:09+00:00
+lastmod: 2026-09-20T01:41:55+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader likeness revisions remain unaccepted. Archer shooting, selection and string-driver repairs have four new Blender stills; melee and game integration remain in progress."
+homeSummary: "Crusader likeness revisions remain unaccepted. Archer shooting, selection and melee bow carriage have six new Blender stills; dagger/body intersections and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1449,10 +1449,18 @@ A selection-motion trial rotated the crossbow clear of the body but made it too 
 
 ![Middle of the selection action, rendered in Blender at 900 × 900; a clearance draft with full motion review still open](/images/castle-archer-1499/selection.png)
 
-Melee remains unfinished. The right hand uses a dagger while the left carries the crossbow, whose stock still crosses the left thigh or hip in some phases. Translation, wrist-angle changes and a trial based on the idle left-arm pose have not passed. Meshy supplied the models and base rig; Astra authored the Blender motion repairs, driver restoration, renders and checks. This round used no additional Meshy requests and changed no installed game assets.
+The melee drafts now use the idle wrist-to-bow grip with 30° of left upper-arm abduction. Untouched body and right-hand animation curves are preserved. Across 161 sampled poses per direction, the tested body/crossbow and crossbow/dagger surfaces do not intersect. Maximum left-grip position error is about 0.064 mm; the right wrist matches the original position and orientation.
+
+![Revised crossbow carriage during forward melee, a 900 × 900 Blender still; the dagger path still has body intersections and is not installed](/images/castle-archer-1499/melee-front.png)
+
+![Upward melee, rendered in Blender at 900 × 900; full motion and native appearance remain under review](/images/castle-archer-1499/melee-up.png)
+
+The wider equipment check exposed an existing dagger-path problem: forward and downward attacks still intersect the body at 12 and 9 sampled poses respectively. Those swings need repair. Earlier translation, wrist-rotation and unmodified idle-arm trials were not adopted. Meshy supplied the models and base rig; Astra authored these Blender revisions. No additional Meshy requests or game-asset installation occurred in this round.
 
 <details>
 <summary>Earlier Archer modeling and motion records (current scope and status above)</summary>
+
+<s>Melee remains unfinished. The right hand uses a dagger while the left carries the crossbow, whose stock still crosses the left thigh or hip in some phases. Translation, wrist-angle changes and a trial based on the idle left-arm pose have not passed. Meshy supplied the models and base rig; Astra authored the Blender motion repairs, driver restoration, renders and checks. This round used no additional Meshy requests and changed no installed game assets.</s>
 
 ### Archer identity and rig correction (2026-09-19) {#archer-identity-history}
 
