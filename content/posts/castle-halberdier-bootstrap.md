@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T18:23:05+00:00
+lastmod: 2026-09-20T19:13:59+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Pikeman now has separate hand meshes and a static grip draft; wrist fit and animated contact remain unfinished and it is not installed. Crusader likeness and the fourteen-unit roster remain in progress."
@@ -1135,7 +1135,25 @@ Previous homepage summary:
 
 ## Pikeman model and motion {#pikeman-thrust}
 
-The current draft reuses independent Meshy hand meshes retained from the Archer work and adds 28 finger bones. Astra rebinds the hands, trims the cuffs, changes the right-hand approach to the shaft, and curls the fingers and thumbs. The left thumb is no longer raised; the conspicuous right sleeve/shaft intersection is also corrected. These are actual Blender stills. Wrist openings remain loose, and full surface contact, joint deformation and animated grip have not been accepted. The new Pikeman is not installed. No new Meshy calls were made for this pass.
+This pass continues hand/shaft contact repair. The previous close-ups looked plausible, but triangle checks found both hands intersecting the wood. After moving the palms, remaining intersections were concentrated in the ring and little fingers. Their joints were adjusted individually, then the thumbs curled along the outside of the shaft. Reopening the saved scene found no hand/shaft triangle intersections in this static pose; radial checks of all 44,925 vertices per hand also found none inside the shaft. This does not cover hand self-intersection, body contact or animation. Natural grip and wrist fit still need work; the new Pikeman is not installed.
+
+![Revised left contact, actual 800 × 800 Blender still; only this pose was checked](/images/castle-pikeman-1986/left.png)
+
+![Revised right contact, actual 800 × 800 Blender still; wrist fit and animated grip remain unfinished](/images/castle-pikeman-1986/right.png)
+
+<details>
+<summary>Rejected vertex projection repair</summary>
+
+Pushing penetrating vertices directly onto the shaft flattened fingers into strips and damaged the tips. That version was rejected; later work returned to the original hand mesh and adjusted the bone poses.
+
+![Direct vertex projection flattened the fingers, actual Blender render; rejected](/images/castle-pikeman-1986/failed-projection.png)
+
+</details>
+
+<details>
+<summary>Earlier hand replacement and grip draft (historical; contact issues revised above)</summary>
+
+<s>The current draft reuses independent Meshy hand meshes retained from the Archer work and adds 28 finger bones. Astra rebinds the hands, trims the cuffs, changes the right-hand approach to the shaft, and curls the fingers and thumbs. The left thumb is no longer raised; the conspicuous right sleeve/shaft intersection is also corrected. These are actual Blender stills. Wrist openings remain loose, and full surface contact, joint deformation and animated grip have not been accepted. The new Pikeman is not installed. No new Meshy calls were made for this pass.</s>
 
 ![Current pike-holding draft, actual 1200 × 1400 Blender render; not installed](/images/castle-pikeman-1973/holding.png)
 
@@ -1151,6 +1169,8 @@ Cutting the old hands at the wrist left the sleeve covering the palm and the sha
 ![Earlier sleeve/shaft intersection, actual Blender close-up; rejected](/images/castle-pikeman-1973/failed-cuff.png)
 
 ![Shorter cuff with the thumb still raised, actual intermediate Blender render; revised afterward](/images/castle-pikeman-1973/open-thumb.png)
+
+</details>
 
 </details>
 
