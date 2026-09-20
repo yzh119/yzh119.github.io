@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T19:22:05+00:00
+lastmod: 2026-09-20T19:29:56+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman now has separate hand meshes and a static grip draft; wrist fit and animated contact remain unfinished and it is not installed. Crusader likeness and the fourteen-unit roster remain in progress."
+homeSummary: "The new Pikeman has a ten-frame thrust draft and Blender preview; knees, wrists and footwork remain under review. It is not installed; the Castle roster remains unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,9 +1135,22 @@ Previous homepage summary:
 
 ## Pikeman model and motion {#pikeman-thrust}
 
+The new body now has a ten-frame forward-thrust draft following the original sequence of lowering, extending and recovering the pike. It adds torso lean, forward pelvis movement and a front-foot step. Both arms continue to solve against grip positions on the shaft, retaining the original hand mesh.
+
+<video controls loop muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-1995/attack.mp4"></video>
+
+This looping preview contains ten actual Blender-rendered frames played at 12 fps for draft review. It is not a game capture or an accepted gameplay speed.
+
+![Maximum extension, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-1995/thrust.png)
+
+After saving and reopening the scene, triangle checks at 181 times found no intersections between the pike and either hand or the body mesh. This excludes body self-intersection, containment and ground contact. Knee posture, wrist skin deformation, footwork and fidelity to the original still need review. Only a forward-thrust candidate exists on the new body; walking and the full action set have not been transferred. The Pikeman is not installed, and the fourteen-unit Castle roster remains unfinished.
+
+<details>
+<summary>Earlier grip repairs and lowering probe (historical)</summary>
+
 This pass continues hand/shaft contact repair. The previous close-ups looked plausible, but triangle checks found both hands intersecting the wood. After moving the palms, remaining intersections were concentrated in the ring and little fingers. Their joints were adjusted individually, then the thumbs curled along the outside of the shaft. Reopening the saved scene found no hand/shaft triangle intersections in this static pose; radial checks of all 44,925 vertices per hand also found none inside the shaft. This does not cover hand self-intersection, body contact or animation. Natural grip and wrist fit still need work; the new Pikeman is not installed.
 
-A reversible shape key subsequently narrows the cuffs while retaining the original mesh. A new 25-frame grip probe lowers the pike from 58 to roughly 33 degrees and raises it again, solving both arms against the moving shaft. After saving and reopening, 49 samples including interpolated times showed no hand/shaft triangle intersections. Close-ups still reveal wrist skin deformation that needs work; the check also excludes body self-collision and cuff collisions. This is a grip probe only. The native thrust, walk and full action set have not been transferred, and the new Pikeman is not installed.
+A reversible shape key subsequently narrows the cuffs while retaining the original mesh. A new 25-frame grip probe lowers the pike from 58 to roughly 33 degrees and raises it again, solving both arms against the moving shaft. After saving and reopening, 49 samples including interpolated times showed no hand/shaft triangle intersections. Close-ups still reveal wrist skin deformation that needs work; the check also excludes body self-collision and cuff collisions. This is a grip probe only. <s>The native thrust, walk and full action set have not been transferred</s> (a thrust draft now appears above; the rest remains unfinished), and the new Pikeman is not installed.
 
 ![Narrower left cuff, actual 800 × 800 Blender still](/images/castle-pikeman-1991/cuff.png)
 
@@ -1182,6 +1195,8 @@ Cutting the old hands at the wrist left the sleeve covering the palm and the sha
 ![Earlier sleeve/shaft intersection, actual Blender close-up; rejected](/images/castle-pikeman-1973/failed-cuff.png)
 
 ![Shorter cuff with the thumb still raised, actual intermediate Blender render; revised afterward](/images/castle-pikeman-1973/open-thumb.png)
+
+</details>
 
 </details>
 
