@@ -1,10 +1,10 @@
 ---
 title: "[AI]城堡兵种建模"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T17:10:26+00:00
+lastmod: 2026-09-20T17:20:34+00:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
-homeSummary: "十字军继续按原版修订头盔、盾面与站姿，新增高清 Blender 候选及失败试验；尚未替换 0.13.0。枪兵新身体与绑定已完成，完整动作未完成。"
+homeSummary: "十字军继续修订盔体和羽饰比例，补充高清 Blender 正背面与未采用试验；尚未替换 0.13.0。城堡十四兵种继续制作。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,6 +18,26 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 
 ## 十字军的本地测试稿
 
+这轮继续修订十字军的头部比例。原版羽饰只略高于盔顶，旧模型的羽饰上拱过高、盔体偏短。候选加高盔体、压低羽饰上拱，保留下垂部分；另调整钢甲暗部和肩甲外缘。以下是实际 1200 × 1400 Blender 渲染，侧面与背面也做了检查。造型仍未验收，修改只在待机分支，游戏保留 0.13.0。
+
+![头盔与羽饰比例修订候选，实际 Blender 静帧；未安装](/images/castle-crusader-1956/holding.png)
+
+原版和新候选用相同固定投影、相同画框裁切时，顶部和脚底位置一致。这只验证显示位置，不证明造型相似。此前标作 panel-source 的草稿实际上用了近景镜头，本轮对照已改用游戏导出的固定投影。
+
+<details>
+<summary>背面检查与未采用的羽饰试验</summary>
+
+![当前候选的背面，实际 800 × 1000 Blender 静帧](/images/castle-crusader-1956/back.png)
+
+只压低羽饰会让头部整体变矮，因此没有单独采用这一步。
+
+![仅压低羽饰的中间试验，实际 Blender 静帧；未采用](/images/castle-crusader-1956/crest-only.png)
+
+</details>
+
+<details>
+<summary>前一轮待机候选（历史，未安装）</summary>
+
 当前 0.13.0 的造型仍被指出不像原版。重新对照后，头盔直筒感、肩甲轮廓和站姿仍有差异；圆盾本身符合原版，盾面的厚度与凸起层次需要调整。新的离线候选收窄头盔下半部、突出眉部轮廓，并调整盾面弧度。双脚收拢时同时抬高骨盆，避免加重屈膝。下面是实际 1200 × 1400 Blender 静帧；只修改了待机分支，未安装，也没有认定造型过关。
 
 ![十字军待机造型修订候选，实际 Blender 渲染；未接入游戏](/images/castle-crusader-1950/holding.png)
@@ -28,6 +48,8 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 第一版只收拢双脚，保持骨盆高度，结果膝盖弯得更明显。第二版连同骨盆高度修正；两版都保留为离线建模记录，尚未推广到攻击、行走等动作。
 
 ![第一版站姿试验，实际 Blender 静帧；未采用](/images/castle-crusader-1950/rejected-stance.png)
+
+</details>
 
 </details>
 

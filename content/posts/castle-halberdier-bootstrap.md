@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T17:10:26+00:00
+lastmod: 2026-09-20T17:20:34+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader helmet, shield and stance revisions include new Blender stills and an unadopted trial; installed 0.13.0 is unchanged. The new Pikeman body and rig still need the full action set."
+homeSummary: "Crusader helmet and crest proportions remain under revision, with actual Blender front/rear stills and an unadopted trial. Installed 0.13.0 is unchanged; the fourteen-unit Castle roster remains in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,6 +18,26 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ## Crusader local test package
 
+The Crusader head proportions remain under revision. The original crest rises only slightly above the helmet; the previous model had a higher crest arch and a shorter helmet shell. This candidate lengthens the helmet and lowers the arch while preserving the trailing feathers. Steel shading and shoulder edges were also adjusted. The image below is an actual 1200 × 1400 Blender render; side and rear views were reviewed as well. Likeness remains unaccepted, the edits cover the holding branch only, and the game retains 0.13.0.
+
+![Helmet and crest proportion candidate, actual Blender still; not installed](/images/castle-crusader-1956/holding.png)
+
+With the same fixed projection and panel crop, the original and candidate share the top and foot baseline. That verifies placement, not likeness. Earlier draft files named panel-source actually used a close-up camera. This comparison restores the fixed projection used by the game export.
+
+<details>
+<summary>Rear review and unadopted crest trial</summary>
+
+![Rear of the current candidate, actual 800 × 1000 Blender still](/images/castle-crusader-1956/back.png)
+
+Lowering only the crest made the whole head appear too short, so that intermediate step was not adopted on its own.
+
+![Intermediate crest-only trial, actual Blender still; not adopted](/images/castle-crusader-1956/crest-only.png)
+
+</details>
+
+<details>
+<summary>Previous holding candidate (history; not installed)</summary>
+
 The installed 0.13.0 appearance was again judged unlike the original. The comparison still shows differences in the straight-sided helmet, shoulder silhouette and stance. A round shield is consistent with the reference; its thickness and raised profile need attention. A new offline candidate tapers the lower helmet, emphasizes the brow and adjusts the shield curvature. Narrowing the stance also raises the pelvis to avoid increasing the knee bend. This actual 1200 × 1400 Blender still belongs to the holding branch only. It is not installed and does not establish likeness acceptance.
 
 ![Crusader holding revision candidate, actual Blender render; not installed](/images/castle-crusader-1950/holding.png)
@@ -28,6 +48,8 @@ The installed 0.13.0 appearance was again judged unlike the original. The compar
 The first trial brought the feet closer while retaining pelvis height, increasing the visible knee bend. The second adjusts pelvis height as well. Both remain offline modeling records; neither has been propagated to walking, attacks or the other actions.
 
 ![First stance trial, actual Blender still; not adopted](/images/castle-crusader-1950/rejected-stance.png)
+
+</details>
 
 </details>
 
