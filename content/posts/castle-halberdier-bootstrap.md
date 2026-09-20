@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T08:08:09+00:00
+lastmod: 2026-09-20T08:20:23+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader crest, stance and gold trim studies, with a high-resolution still, original comparison and retargeted idle. Shoulder shape and tabard coverage remain unresolved; the model is unaccepted and not installed."
+homeSummary: "Archer’s 96-frame local package is installed, with six action groups observed in battle logs. Crusader shoulders and hems remain in revision. New Blender stills and a shooting preview show the current work; full visual and motion acceptance remains open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -40,7 +40,7 @@ The sword wrist, blade tip and shield center were marked manually in the native 
 
 ![Original and the sword/shield pose revision, before the body proportion edit; both model images use the same crop and scale](/images/castle-crusader-1629/comparison.png)
 
-![Current Crusader study, 1200 × 1400 Blender still; unaccepted and not installed](/images/castle-crusader-1651/holding.png)
+![Crusader shoulder coverage and hem revision, 1200 × 1400 Blender still; unaccepted and not installed](/images/castle-study-1660/crusader.png)
 
 After reopening, six selected triangle-intersection checks returned zero: each of the three cloth panels against the body, blade against body, shield disk against body, and blade against shield. These checks do not establish full-action clearance or likeness. Shoulder rims, gold trim distribution, body proportions, helmet and clothing details still need work.
 
@@ -52,13 +52,26 @@ With the camera and scale fixed, the waist sat too high in the reference compari
 
 The first proportion edit misclassified duplicate vertex groups and changed some bone orientations, turning the weapons and feet incorrectly. It was rejected. The revision filters bindings against actual bones, snapshots bone positions before editing the rest rig, and preserves head, hand and foot orientations. The upper crest was raised while retaining its attachment to the helmet. The torso and near foot moved right in the image while equipment placement stayed fixed. Warmer gold was applied to the shoulder rims, knee plates and helmet bands, preserving the silver armor and white cloth. The comparison uses a shared camera registration and scale, without resizing each silhouette to equal height. Shoulder shape and tabard coverage still differ from the original; likeness remains unaccepted.
 
-![Original, previous proportion study and current model, compared in a fixed image frame](/images/castle-crusader-1651/comparison.png)
+![Original and the crest, stance and gold revision, before shoulder and hem edits](/images/castle-crusader-1651/comparison.png)
 
 The eight-frame idle was retargeted to the revised rest skeleton, with both feet held by leg IK. After reopening the scene, 65 samples including interpolated times found no triangle intersections among the six selected mesh pairs. Sole heights stayed constant and the loop endpoints matched. The largest hand-local vertex deviation for the grips and handles was about 0.048 mm. This covers only the current idle: the crest has no independent motion, the remaining actions still need retargeting, and the study is not installed.
 
-![Eight-frame idle on the revised skeleton, rendered in Blender; unaccepted and not installed](/images/castle-crusader-1651/holding.gif)
+![Revised-skeleton idle before shoulder and hem edits, rendered in Blender; not installed](/images/castle-crusader-1651/holding.gif)
 
 ![Rejected shoulder trial: the far rim rises into a horn; actual Blender render](/images/castle-crusader-1619/rejected-shoulders.png)
+
+The shoulder caps now cover more of the front and back and extend farther down, without raising their outer tips. Both front hems were lengthened by about 5.5 cm. This introduced thigh intersections: pushing in one fixed direction left contacts, while nearest-surface normal pushes produced folds and persistent intersections in the far panel. Both trials were rejected. The far panel was then fitted over the forward-facing leg surface, retaining the split hem. After reopening, the six selected mesh pairs had no intersections at 65 idle samples. The cloth side profile and overall silhouette still need work; the contact result does not establish likeness.
+
+![Original and the shoulder/hem revision, with camera registration and scale held fixed](/images/castle-study-1660/comparison.png)
+
+<details>
+<summary>Before shoulder/hem edits and rejected fit trial (history, 2026-09-20)</summary>
+
+![Current Crusader study, 1200 × 1400 Blender still; unaccepted and not installed](/images/castle-crusader-1651/holding.png)
+
+![Rejected nearest-surface fit: the far hem retained intersections and developed creases; actual Blender render](/images/castle-study-1660/rejected-cloth.png)
+
+</details>
 
 <details>
 <summary>Before crest, stance and idle revisions (history, 2026-09-20)</summary>
@@ -799,6 +812,23 @@ Previous homepage summary:
 
 </details>
 
+## Archer local test package
+
+The Archer's 16 active groups and 96 frames are now packaged at 1×/2×, with a precomputed 4× cache resized from the 2× images rather than newly rendered at 4×. Installation into Castle mod 0.11.0 preserved the other creatures' assets. Native action-layout and image-format checks returned no errors or warnings; motion quality remains under review.
+
+![Archer idle, actual 1200 × 1400 Blender render; test model](/images/castle-study-1660/archer.png)
+
+The test battle reached its end. Client logs confirm loading 43 body images across six groups: holding, hit, death and all three shooting directions. Text-encoding, audio-device and one query error remain in the log, so this was not an error-free run. There is no game screenshot establishing full visual acceptance. The shooting preview uses the exported sequence; fingers and transitions still need review.
+
+![Archer front shot, nearest-neighbor enlargement of exported frames; not a game screenshot](/images/castle-study-1660/archer-shoot.gif)
+
+<details>
+<summary>Archer status before installation (history, 2026-09-20)</summary>
+
+<s>| Archer | Offline drafts cover 16 active groups and 96 frame slots. Three shooting recoveries and selection motion have revised body/crossbow clearance; melee, native appearance, hands, transitions, layered export and installation remain unfinished. |</s>
+
+</details>
+
 ## All fourteen meshes
 
 ![Fourteen independently reviewed Castle mesh bootstraps, ordered by level and upgrade](/images/castle-halberdier-01/roster-bootstrap-01.png)
@@ -809,7 +839,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
-| Archer | Offline drafts cover 16 active groups and 96 frame slots. Three shooting recoveries and selection motion have revised body/crossbow clearance; melee, native appearance, hands, transitions, layered export and installation remain unfinished. |
+| Archer | Installed in private test mod 0.11.0: 16 active groups and 96 frames with body, shadow and outline layers. The test battle loaded 43 body images across six groups. Full visual review, fingers, transitions and unobserved native actions remain open. |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
