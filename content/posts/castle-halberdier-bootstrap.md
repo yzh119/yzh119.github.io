@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T12:24:25+00:00
+lastmod: 2026-09-20T12:47:37+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader skirt trials now include an independent collision copy, with seam, inherited-scale and collision-direction checks. Reopened intersections remain, so none was adopted; panel-to-leg shape needs revision."
+homeSummary: "Crusader garment studies continue against the original. A simpler cloth mesh reduced some intersections; the existing modeled garment still lacks the long hem. Neither trial was adopted."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -155,6 +155,14 @@ A separate collision copy was also audited. The body mesh had 16,829 boundary ed
 The copy also had its inherited 0.01 scale applied. Three checked poses retained world positions within one micrometre. Trials using the closed copy, unit scale and two-sided, normal-directed collisions were baked and reopened. The final trial still had skirt/body intersections at 160 and 161 of 161 checked times, so it was not adopted. These checks did not establish seams or scale as the cause of the intersections; the panel-to-leg shape relationship needs direct revision.
 
 ![Baked Blender render using a closed, unit-scale collision copy; garment intersections remain and the trial was not adopted](/images/castle-crusader-1772/proxy-trial.png)
+
+The next trial reduced each skirt control mesh from 960 vertices to 99 and used separate convex collision surfaces for the pelvis and thighs, with subdivision for rendering. After baking and reopening, one panel had no detected body intersections at 161 sampled times; the other still intersected at 119 times. Chest-panel intersections also remain, so this did not replace the retained candidate.
+
+The Meshy body already contains white-and-blue garment geometry. A separate comparison hid the added panels and changed the existing garment surface to rough, nonmetallic ivory while preserving blue edging. The rendered lower garment is still too short to reproduce the original tabard reaching down the thighs. This replacement approach was also rejected. Hem geometry and coverage need revision; the material change does not resolve them.
+
+![Original final hit frame, simplified cloth trial, and existing-garment material trial; the latter two are actual Blender stills, neither adopted](/images/castle-crusader-1788/garment-comparison.jpg)
+
+The original is enlarged independently with nearest-neighbour sampling. Both Blender images use the same canvas scale. This is a silhouette comparison, not a pixel-alignment check or an in-game screenshot.
 
 Death still has only an overall height correction: all 22 bound meshes, including the helmet, stayed above the floor at 81 sampled times. Back support, limb placement and cloth/shield intersections remain unresolved. The revised Crusader is not installed.
 
