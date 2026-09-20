@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T07:08:46+00:00
+lastmod: 2026-09-20T07:26:38+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader sword and shield placement now follows native-frame estimates, with a same-model lighting comparison. Six selected holding-pose intersection checks are clear; likeness and full motions remain unaccepted, and the study is not installed."
+homeSummary: "Crusader shoulder rims and rest proportions were revised, lowering the waist while retaining equipment placement. Sole offsets were corrected. Fixed-camera comparisons and the rejected binding trial are shown; likeness and full motions remain unaccepted."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -38,15 +38,32 @@ At the original silhouette height of 87 pixels, the model was too dark. Geometry
 
 The sword wrist, blade tip and shield center were marked manually in the native holding frame, with roughly one or two pixels of uncertainty. Astra used those estimates to lower the sword hand, raise the blade angle by about 8 degrees and lengthen the blade by about 9 percent. The shield disk was enlarged by about 7 percent and the shield arm moved slightly outward and down. Handles and closed gauntlets follow their corresponding hand bones; blade and shield dimensions were edited separately.
 
-![Original, pose before the sword and shield edits, and current study; both model images use the same crop and scale](/images/castle-crusader-1629/comparison.png)
+![Original and the sword/shield pose revision, before the body proportion edit; both model images use the same crop and scale](/images/castle-crusader-1629/comparison.png)
 
-![Revised sword and shield placement, a 1200 × 1400 Blender still; likeness remains unaccepted and the study is not installed](/images/castle-crusader-1629/holding.png)
+![Crusader proportion study, a 1200 × 1400 Blender still; likeness and full motions remain unaccepted](/images/castle-crusader-1640/holding.png)
 
 After reopening, six selected triangle-intersection checks returned zero: each of the three cloth panels against the body, blade against body, shield disk against body, and blade against shield. These checks do not establish full-action clearance or likeness. Shoulder rims, gold trim distribution, body proportions, helmet and clothing details still need work.
 
-Another shoulder extension and lift made the far pauldron into a tall horn. That edit was rejected and is absent from the current garment study. The next modeling work concerns the garment and shoulder silhouette, followed by the native stance, equipment placement and helmet. These static studies do not complete the action set.
+The earlier shoulder extension also raised the rims and produced a horn on the far side, so it was rejected. The new edit extends the rims laterally. Evaluated vertex checks confirm no intended height increase and no changes to unselected body vertices. Underside fit and dynamic deformation remain open.
+
+With the camera and scale fixed, the waist sat too high in the reference comparison. The latest trial revises both the base mesh and rest skeleton, lowers the pelvis and shoulder line, then solves the arms and legs again. The two girdle bands move roughly four to five reference pixels downward while the sword, shield and both closed grips retain their world positions within numerical error. A roughly one-centimeter rise at the soles was corrected; the remaining support-height differences from the prior study are about 0.14–0.21 mm. The six selected static intersection checks still return zero after reopening.
+
+![Original, previous proportions and current study; model camera, crop and scale remain fixed without renormalizing silhouette height](/images/castle-crusader-1640/comparison.png)
+
+The first proportion edit misclassified duplicate vertex groups and changed some bone orientations, turning the weapons and feet incorrectly. It was rejected. The revision filters bindings against actual bones, snapshots bone positions before editing the rest rig, and preserves head, hand and foot orientations. These remain provisional proportions. Crest height, gold trim, garment silhouette and overall likeness are unresolved. The changed rest skeleton also requires motion retargeting; this study is not installed.
 
 ![Rejected shoulder trial: the far rim rises into a horn; actual Blender render](/images/castle-crusader-1619/rejected-shoulders.png)
+
+<details>
+<summary>Before the proportion edit and rejected binding trial (history, 2026-09-20)</summary>
+
+<s>Another shoulder extension and lift made the far pauldron into a tall horn. That edit was rejected and is absent from the current garment study. The next modeling work concerns the garment and shoulder silhouette, followed by the native stance, equipment placement and helmet. These static studies do not complete the action set.</s>
+
+![Revised sword and shield placement, a 1200 × 1400 Blender still; likeness remains unaccepted and the study is not installed](/images/castle-crusader-1629/holding.png)
+
+![Rejected proportion trial: binding and bone-orientation errors turned the weapons and feet; actual Blender render](/images/castle-crusader-1640/rejected-binding.png)
+
+</details>
 
 <details>
 <summary>Before the sword and shield pose revision (history, 2026-09-20)</summary>
