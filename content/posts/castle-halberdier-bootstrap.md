@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T06:50:36+00:00
+lastmod: 2026-09-20T07:08:46+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader likeness remains unaccepted. New cloth meshes and rejected shoulder and floating-panel trials are shown; the pinned-boundary study still needs silhouette work and is not installed."
+homeSummary: "Crusader sword and shield placement now follows native-frame estimates, with a same-model lighting comparison. Six selected holding-pose intersection checks are clear; likeness and full motions remain unaccepted, and the study is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -22,7 +22,7 @@ The Crusader still fails the likeness review. Comparing five native poses expose
 
 ![Five original Crusader poses enlarged with nearest-neighbor sampling, for silhouette, color and equipment comparison](/images/castle-crusader-1565/native.png)
 
-The body, rig, separate helmet and closed gauntlets retain the earlier Meshy API results. Astra wrote the Blender garment edits in this round; no additional Meshy task was submitted. Models and complete mod assets remain private. The images here are actual renders, including unsuccessful trials.
+The body, rig, separate helmet and closed gauntlets retain the earlier Meshy API results. Astra wrote the garment, sword-and-shield pose and lighting edits in Blender; no additional Meshy task was submitted. Models and complete mod assets remain private. The images here are actual renders, including unsuccessful trials.
 
 A separate chest panel and two split skirt panels inherit weights sampled from the body. The first fitting copied too much armor relief into the cloth. A broad surface fit then placed the garment too far forward, making it resemble a floating apron. Smoothing without pinned boundaries exaggerated that separation. Neither smoothing approach was adopted.
 
@@ -30,15 +30,36 @@ A separate chest panel and two split skirt panels inherit weights sampled from t
 
 ![Rejected smoothing trial: the side view exposes a floating chest panel; not a delivery candidate](/images/castle-crusader-1619/rejected-floating-cloth.png)
 
-The latest trial pins the panel boundaries and limits departure from the sampled surface. Full-body, front and side renders were produced after reopening the saved scene. This remains a design study: the neckline, garment coverage, natural folds and overall proportions need further work. Full-action intersections have not been validated.
+Local fitting checks found remaining intersections at the chest and left skirt. After corrections around those triangles, reopening the scene produced zero cloth/body triangle intersections for all three panels in this holding pose. The neckline, panel edges, coverage and natural folds remain unfinished; this check does not cover animation.
+
+At the original silhouette height of 87 pixels, the model was too dark. Geometry and materials were held constant while exposure, environment strength and a soft fill light were adjusted. White cloth, silver armor and gold trim became easier to read. The comparison is reduced to native height and then enlarged sixfold with nearest-neighbor sampling. These are Blender renders, not game screenshots.
+
+![Original, previous lighting and revised lighting; the latter two share identical geometry and materials](/images/castle-crusader-1629/lighting.png)
+
+The sword wrist, blade tip and shield center were marked manually in the native holding frame, with roughly one or two pixels of uncertainty. Astra used those estimates to lower the sword hand, raise the blade angle by about 8 degrees and lengthen the blade by about 9 percent. The shield disk was enlarged by about 7 percent and the shield arm moved slightly outward and down. Handles and closed gauntlets follow their corresponding hand bones; blade and shield dimensions were edited separately.
+
+![Original, pose before the sword and shield edits, and current study; both model images use the same crop and scale](/images/castle-crusader-1629/comparison.png)
+
+![Revised sword and shield placement, a 1200 × 1400 Blender still; likeness remains unaccepted and the study is not installed](/images/castle-crusader-1629/holding.png)
+
+After reopening, six selected triangle-intersection checks returned zero: each of the three cloth panels against the body, blade against body, shield disk against body, and blade against shield. These checks do not establish full-action clearance or likeness. Shoulder rims, gold trim distribution, body proportions, helmet and clothing details still need work.
+
+Another shoulder extension and lift made the far pauldron into a tall horn. That edit was rejected and is absent from the current garment study. The next modeling work concerns the garment and shoulder silhouette, followed by the native stance, equipment placement and helmet. These static studies do not complete the action set.
+
+![Rejected shoulder trial: the far rim rises into a horn; actual Blender render](/images/castle-crusader-1619/rejected-shoulders.png)
+
+<details>
+<summary>Before the sword and shield pose revision (history, 2026-09-20)</summary>
+
+<s>| Crusader | Installed 0.10.0 likeness rejected. Meshy body, helmet and closed gauntlets remain a static study, now with separate white-blue cloth. Horned shoulders and floating-panel trials were rejected; the pinned-boundary garment still needs silhouette and fit work. Uninstalled; full actions unfinished. |</s>
+
+<s>The latest trial pins the panel boundaries and limits departure from the sampled surface. Full-body, front and side renders were produced after reopening the saved scene. This remains a design study: the neckline, garment coverage, natural folds and overall proportions need further work. Full-action intersections have not been validated.</s>
 
 ![Pinned-boundary garment study, a 1200 × 1400 Blender still; likeness unaccepted and not installed](/images/castle-crusader-1619/holding.png)
 
 ![Side view of the same study, used to inspect garment separation; clothing fit remains unaccepted](/images/castle-crusader-1619/side.png)
 
-Another shoulder extension and lift made the far pauldron into a tall horn. That edit was rejected and is absent from the current garment study. The next modeling work concerns the garment and shoulder silhouette, followed by the native stance, equipment placement and helmet. These static studies do not complete the action set.
-
-![Rejected shoulder trial: the far rim rises into a horn; actual Blender render](/images/castle-crusader-1619/rejected-shoulders.png)
+</details>
 
 <details>
 <summary>Before the garment silhouette revision (history, 2026-09-20)</summary>
@@ -764,7 +785,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | Installed 0.10.0 likeness rejected. Meshy body, helmet and closed gauntlets remain a static study, now with separate white-blue cloth. Horned shoulders and floating-panel trials were rejected; the pinned-boundary garment still needs silhouette and fit work. Uninstalled; full actions unfinished. |
+| Crusader | Installed 0.10.0 likeness rejected. The Meshy study now has separate cloth, revised lighting and native-referenced sword/shield placement. Six selected static intersection checks are clear; shoulders, body proportions, likeness and full motions remain unfinished. Not installed. |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
