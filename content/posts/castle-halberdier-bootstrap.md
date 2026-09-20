@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T21:41:21+00:00
+lastmod: 2026-09-20T21:53:52+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman grip orientation revised; idle and forward-thrust trials added. Cuffs, finger closure and remaining actions are unfinished; not installed."
+homeSummary: "Pikeman grip transferred to all three attack directions with shared idle endpoints. Fingers, cuffs and remaining actions are unfinished; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1145,7 +1145,22 @@ The revised grip has a seven-frame idle and a ten-frame forward-thrust trial. Re
 
 ![Forward-thrust trial with the revised grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2056/front.png)
 
-The fingers still need a tighter grip, and the cuff/skin connection remains unfinished. Upward and downward attacks have not received this grip; the other nine action groups are still missing. The earlier four-action, 38-frame record remains in the history below and must not be combined with these trials as a completed animation set. The new Pikeman is not installed, and the fourteen-unit Castle roster remains in progress.
+The revised grip now has idle, forward, upward and downward drafts covering 38 native frames. The upward draft clears the pike/hand, pike/body and selected arm/body surface tests at 361 sampled times. Downward thrust: Arm/torso intersections remain in the 401-sample audit; unfinished.
+
+All three attacks now copy the same idle bone and pike channels at their endpoints. Reopened endpoint matrices match idle; another 18 times per action check the edited neighborhoods. This removes the small discrepancy from repeated pose solving, without establishing velocity or acceleration continuity.
+
+![Upward thrust with the revised grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2070/up.png)
+
+![Downward thrust with the revised grip, actual 1200 × 1400 Blender still; an uninstalled draft](/images/castle-pikeman-2070/down.png)
+
+The first downward transfer cleared the shaft but left both sleeves intersecting torso-weighted surfaces near the armor. Further elbow-path revisions addressed those locations; moving only the right arm did not remove the left-side intersection. Another elbow path cleared the peak pose but still intersected during the full motion, so it was not adopted. These tests remain limited by sampling and mesh partitions. Finger closure, cuff connections, full footwork and the other nine action groups are unfinished. The new Pikeman is not installed.
+
+<details>
+<summary>Status before the directional transfer (history)</summary>
+
+<s>The fingers still need a tighter grip, and the cuff/skin connection remains unfinished. Upward and downward attacks have not received this grip; the other nine action groups are still missing. The earlier four-action, 38-frame record remains in the history below and must not be combined with these trials as a completed animation set. The new Pikeman is not installed, and the fourteen-unit Castle roster remains in progress.</s>
+
+</details>
 
 <details>
 <summary>Rejected wrist-weight and skinning trials</summary>
