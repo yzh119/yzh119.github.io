@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T03:58:30+00:00
+lastmod: 2026-09-20T04:27:15+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader 0.10.0 likeness was rejected. Revised concepts now have a new Meshy body, shown in Blender stills alongside failed attempts; plume, materials and sword-carrying pose still need work. No replacement installed."
+homeSummary: "The new Crusader body now has a sword-and-shield holding study, a taller helmet and separate feathers. Native comparisons and Blender stills show the remaining grip and proportion issues; full motions and installation are unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -28,13 +28,36 @@ Built-in imagegen produced three reference iterations. The first invented a tall
 
 ![High-resolution modeling reference sent to Meshy, generated with built-in imagegen](/images/castle-crusader-1565/concept.jpg)
 
-A new body completed through the Meshy API using meshy-7.1 for **30 credits**, with a requested 30,000-polygon target and 4K textures. Image enhancement was disabled to preserve the reviewed input. Astra wrote the Blender import and inspection script. The saved scene was reopened and rendered from four directions at **1200 × 1400**, with no cropped silhouettes.
+Meshy API model meshy-7.1 supplied the new body and humanoid rig for 30 and 5 credits respectively. This round made no further Meshy requests. Astra authored Blender scripts to assemble the existing sword and shield, revise a static holding pose, replace the plume and adjust armor materials.
+
+Copying the previous joint rotations initially put too much of the shield across the chest. Solving wrist positions against the new arm lengths moved it back toward the side, and the sword's upward angle was revised. An equal-height comparison with the original then exposed a short helmet and crest, prompting a taller helmet and longer feathers.
+
+![Original at left, the installed but visually rejected 0.10.0 in the middle, and a holding study of the new body at right. Complete silhouettes share a displayed height with aspect ratios preserved.](/images/castle-crusader-1578/comparison.png)
+
+![Static sword-and-shield study of the new body, a 1200 × 1400 Blender render; not installed](/images/castle-crusader-1578/holding.png)
+
+Separate feather shafts and barbs now follow the head in place of the thick generated plume. The first feather assembly sank into the helmet. Correcting its curve still left a torn rear surface: the helmet-height edit had moved only vertices with strong head-bone weights, missing vertices also influenced by the neck. The revised edit moves the plate consistently and binds its rigid surface to the head bone. Armor and cloth use different metallic and roughness values, with a separate adjustment for the silver helmet surface.
+
+![Helmet and separate feather geometry, an actual Blender close-up; plume distribution and material response still need native comparison](/images/castle-crusader-1578/head.png)
+
+![Rear inspection still exposes helmet seams and surface remnants that need repair](/images/castle-crusader-1578/rear-head.png)
+
+These static studies were rendered after saving and reopening the scene. Rear helmet seams and surface remnants still need repair. The fingers still do not close around the sword and shield handles. Waist, equipment proportions and plume distribution remain different, and the new body's full motions, deformation and intersection checks are unfinished. The game still uses the earlier 0.10.0 test assets; overall likeness remains unaccepted.
+
+<details>
+<summary>Initial new-body import (history, before static assembly on 2026-09-20)</summary>
+
+<s>A new body completed through the Meshy API using meshy-7.1 for **30 credits**, with a requested 30,000-polygon target and 4K textures. Image enhancement was disabled to preserve the reviewed input. Astra wrote the Blender import and inspection script. The saved scene was reopened and rendered from four directions at **1200 × 1400**, with no cropped silhouettes.</s>
 
 ![Three-quarter view of the new Meshy body, an actual Blender still; no sword/shield assembly or game installation](/images/castle-crusader-1565/three-quarter.png)
 
 ![Side view of the same mesh, an actual Blender still showing the thick plume geometry and shoulder profile](/images/castle-crusader-1565/side.png)
 
-Meshy also returned a humanoid rig for 5 credits. Import inspection confirms the required head, hand and foot bones are present; skin deformation and motion remain unvalidated. The mesh retains the narrower white chest panel and thinner gold pauldrons, but the plume became a thick sheet and the armor looks matte. This is still an empty-handed modeling pose. Gauntlets, feathers, material response and the native sword-carrying silhouette need further work before overall likeness can be accepted. The game continues to use the previous 0.10.0 test assets; this new body has not been exported as a replacement.
+<s>Meshy also returned a humanoid rig for 5 credits. Import inspection confirms the required head, hand and foot bones are present; skin deformation and motion remain unvalidated. The mesh retains the narrower white chest panel and thinner gold pauldrons, but the plume became a thick sheet and the armor looks matte. This is still an empty-handed modeling pose. Gauntlets, feathers, material response and the native sword-carrying silhouette need further work before overall likeness can be accepted. The game continues to use the previous 0.10.0 test assets; this new body has not been exported as a replacement.</s>
+
+<s>| Crusader | Installed test 0.10.0 received a likeness rejection. Revised references produced a new Meshy body with four-view static inspection; plume, materials, hands and the native sword pose remain unfinished. New body not installed. |</s>
+
+</details>
 
 <details>
 <summary>0.10.0 installation and appearance revisions (history; returned to modeling on 2026-09-20)</summary>
@@ -599,7 +622,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | Installed test 0.10.0 received a likeness rejection. Revised references produced a new Meshy body with four-view static inspection; plume, materials, hands and the native sword pose remain unfinished. New body not installed. |
+| Crusader | Installed 0.10.0 likeness rejected. The new Meshy body has sword/shield assembly, separate feathers and a static holding comparison; grip, waist, equipment proportions and full motions remain unfinished. Not installed. |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
