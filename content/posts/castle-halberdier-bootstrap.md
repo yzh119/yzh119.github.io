@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T17:31:28+00:00
+lastmod: 2026-09-20T18:23:05+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman pike placement is repaired; failed grip trials exposed fused source fingers, and the unit remains uninstalled. Crusader likeness and the full fourteen-unit Castle roster remain in progress."
+homeSummary: "Pikeman now has separate hand meshes and a static grip draft; wrist fit and animated contact remain unfinished and it is not installed. Crusader likeness and the fourteen-unit roster remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,6 +1135,27 @@ Previous homepage summary:
 
 ## Pikeman model and motion {#pikeman-thrust}
 
+The current draft reuses independent Meshy hand meshes retained from the Archer work and adds 28 finger bones. Astra rebinds the hands, trims the cuffs, changes the right-hand approach to the shaft, and curls the fingers and thumbs. The left thumb is no longer raised; the conspicuous right sleeve/shaft intersection is also corrected. These are actual Blender stills. Wrist openings remain loose, and full surface contact, joint deformation and animated grip have not been accepted. The new Pikeman is not installed. No new Meshy calls were made for this pass.
+
+![Current pike-holding draft, actual 1200 × 1400 Blender render; not installed](/images/castle-pikeman-1973/holding.png)
+
+![Left thumb curl, actual 800 × 800 Blender close-up; contact and wrist fit still need review](/images/castle-pikeman-1973/left.png)
+
+![Right-hand grip draft, actual 800 × 800 Blender close-up; not validated in motion](/images/castle-pikeman-1973/right.png)
+
+<details>
+<summary>Failed hand replacement trials</summary>
+
+Cutting the old hands at the wrist left the sleeve covering the palm and the shaft passing through the right sleeve. Shortening the cuff reduced the obstruction; changing the right-hand approach then avoided that intersection. A separate attempt to distinguish sleeve and skin by texture color left fragmented edges and was rejected.
+
+![Earlier sleeve/shaft intersection, actual Blender close-up; rejected](/images/castle-pikeman-1973/failed-cuff.png)
+
+![Shorter cuff with the thumb still raised, actual intermediate Blender render; revised afterward](/images/castle-pikeman-1973/open-thumb.png)
+
+</details>
+
+The earlier body rebuild, source-hand defects and assembly work are retained below.
+
 The old Pikeman’s beige sleeves, fleur-de-lis tabard and long skirt differed from the original. Reviewing native holding and all six walking frames led to a new reference with silver chest and waist armor, blue-and-gold sleeves and trousers, and brown boots. The first revision still had a long skirt; that was removed before submission to Meshy.
 
 ![Six original Pikeman walking frames, enlarged with nearest-neighbor sampling to inspect costume blocks and trouser silhouettes](/images/castle-pikeman-1946/native-walk.png)
@@ -1153,7 +1174,7 @@ The Meshy rig has 24 bones and no finger bones. Astra extracted the old pike’s
 
 ![New body and pike assembly draft, actual 1200 × 1400 Blender still; fingers remain open and the unit is not installed](/images/castle-pikeman-1964/assembly.png)
 
-The finger-curl trials failed review. The first bent from the palm; the second moved the bend to the finger roots and adjusted the arm pose. Another camera angle still exposed severe right-hand deformation. Inspection of the untouched body then showed fused fingers and incomplete tips. The hand geometry needs repair or replacement before gripping work continues; a whole-hand cylindrical bend cannot resolve those structural defects. The full action set remains untransferred, the new Pikeman is not installed, and Castle mod retains 0.13.0.
+The finger-curl trials failed review. The first bent from the palm; the second moved the bend to the finger roots and adjusted the arm pose. Another camera angle still exposed severe right-hand deformation. Inspection of the untouched body then showed fused fingers and incomplete tips. <s>The hand geometry needs repair or replacement before gripping work continues;</s> separate hands have since been fitted, as shown above; a whole-hand cylindrical bend cannot resolve those structural defects. The full action set remains untransferred, the new Pikeman is not installed, and Castle mod retains 0.13.0.
 
 <details>
 <summary>Failed assembly and grip trials</summary>
