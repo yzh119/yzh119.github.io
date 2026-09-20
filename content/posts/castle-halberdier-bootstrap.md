@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T08:20:23+00:00
+lastmod: 2026-09-20T08:30:44+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer’s 96-frame local package is installed, with six action groups observed in battle logs. Crusader shoulders and hems remain in revision. New Blender stills and a shooting preview show the current work; full visual and motion acceptance remains open."
+homeSummary: "Archer’s test package is installed. Crusader walking now uses the revised skeleton, with floor and hem-contact corrections shown in a Blender preview. Stride, native timing, likeness and the remaining actions still need work."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -63,6 +63,12 @@ The eight-frame idle was retargeted to the revised rest skeleton, with both feet
 The shoulder caps now cover more of the front and back and extend farther down, without raising their outer tips. Both front hems were lengthened by about 5.5 cm. This introduced thigh intersections: pushing in one fixed direction left contacts, while nearest-surface normal pushes produced folds and persistent intersections in the far panel. Both trials were rejected. The far panel was then fitted over the forward-facing leg surface, retaining the split hem. After reopening, the six selected mesh pairs had no intersections at 65 idle samples. The cloth side profile and overall silhouette still need work; the contact result does not establish likeness.
 
 ![Original and the shoulder/hem revision, with camera registration and scale held fixed](/images/castle-study-1660/comparison.png)
+
+Walking is now being retargeted to the revised skeleton. The first trial transferred the old foot translations and rotations, but the right foot penetrated the floor by about 1.3 cm and the longer hems intersected the legs at most samples. Leg IK corrected floor contact. Pose-dependent Blender shape keys were then added to both hems while preserving their split and original skin weights; the extra local forward displacement reaches about 2 cm. This is authored mesh deformation, not a cloth simulation.
+
+After saving and reopening, 129 samples including shape-key interpolation found no intersections among the six selected mesh pairs. The right sole stays about 1 mm above the floor at its lowest point, and loop endpoint meshes match. The eight-frame preview remains provisional: stride, body motion and native timing need comparison, the crest has no independent motion, and the remaining actions are unfinished. The game’s Crusader was not replaced.
+
+![Eight-frame walk on the revised skeleton, rendered in Blender; unaccepted and not installed](/images/castle-crusader-1668/moving.gif)
 
 <details>
 <summary>Before shoulder/hem edits and rejected fit trial (history, 2026-09-20)</summary>
