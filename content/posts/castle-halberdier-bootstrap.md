@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T13:03:26+00:00
+lastmod: 2026-09-20T13:15:49+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader chest panel passed sampled body-intersection checks across hit recoil. The broader skirts remain, with leg intersections and crumpling still unresolved; a new high-resolution still is included."
+homeSummary: "The Crusader tabard revision now covers idle, with 257 sampled intersection checks and a matching loop seam. Hit recoil has an intermediate-frame preview; walking and attacks still need the same garment design."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -170,7 +170,15 @@ The chest panel now has pose-dependent local deformation, with a maximum adjustm
 
 ![Opening hit pose after chest-panel correction; 1200 × 1400 Blender still, skirt intersections and crumpling remain unresolved](/images/castle-crusader-1806/recoil.png)
 
-The working draft retains the broader tabard while its skirt motion is revised. Overall likeness, complete animation and in-game presentation remain unaccepted, and it is not installed.
+<s>The working draft retains the broader tabard while its skirt motion is revised. Overall likeness, complete animation and in-game presentation remain unaccepted, and it is not installed.</s>
+
+The skirts were subsequently fitted to smoother surfaces with their waist roots fixed, fading the adjustment out during hit recovery. The panels still intersect the body at 148 and 153 sampled times; the chest and final-pose corrections remain. Twenty-one renders include intermediate poses. The frame grid shows no abrupt skirt inversion, though the raised-leg cloth still sits too close to the armor. The [slow hit inspection video](/images/castle-crusader-1818/hit-inspection.mp4) uses those Blender frames at 12 fps for inspection, not measured game playback speed.
+
+The broader, longer tabard was also adapted to eight idle frames and the loop endpoint. The first pass intersected the right thigh. After local correction and reopening, the six previously listed mesh pairs had no detected intersections at 257 times including interpolation, and the endpoint meshes matched exactly. This covers idle and the stated checks; overall likeness is not accepted.
+
+![Crusader idle with the broader tabard, an actual Blender still; not installed](/images/castle-crusader-1818/holding.png)
+
+Idle and hit now follow the same garment-coverage design. Walking, attacks, death and the other actions still need that revision, and the new draft is not installed.
 
 <details>
 <summary>Before local clearance correction (history)</summary>
