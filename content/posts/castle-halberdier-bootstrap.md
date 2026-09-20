@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T11:21:20+00:00
+lastmod: 2026-09-20T12:04:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader hit recovery was reposed; the blade cleared body and shield at 161 samples. New Blender still and slowed recovery preview show the motion. Garments and overall likeness remain unresolved; not installed."
+homeSummary: "Crusader skirt studies now include volume-preserving skinning and two cloth simulations, with Blender renders. The second unfolds at the end but still crumples in recoil. None was adopted; current candidate and game assets are unchanged."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -133,6 +133,16 @@ Further surface fitting still pinched the panels and was not adopted. Moving the
 ![Hit draft with previous skirt weights](/images/castle-crusader-1728/hitted.gif)
 
 </details>
+
+Volume-preserving skinning was also tested on the skirt. At the same 161 reopened samples, skirt intersection counts fell from 82/131 to 48/129, without a clear improvement to the raised-leg silhouette, so it was not adopted. Two cloth simulations then used waist pins and body collision. The first crumpled the panels and did not unfold at recovery. Increasing bending stiffness and adding self-collision in the second let the final pose unfold, but recoil still crumpled the fabric. Neither simulation was promoted.
+
+![First cloth simulation, crumpled during recoil; rejected actual Blender render](/images/castle-crusader-1753/soft-hit.png)
+
+![Higher bending stiffness and self-collision still leave folds compressed at the raised leg; rejected Blender render](/images/castle-crusader-1753/stiff-hit.png)
+
+![Final recovery pose of the second simulation, with the panels unfolded; this frame does not validate the full action](/images/castle-crusader-1753/stiff-recovery.png)
+
+The simulations include an idle warm-up and transition and use a different timescale. These are cloth studies, not in-game animation. The saved scenes contain simulation setup, not baked exportable animation. Panel shape and collision surfaces need further investigation; current game assets are unchanged.
 
 Death still has only an overall height correction: all 22 bound meshes, including the helmet, stayed above the floor at 81 sampled times. Back support, limb placement and cloth/shield intersections remain unresolved. The revised Crusader is not installed.
 
