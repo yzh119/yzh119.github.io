@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T15:19:12+00:00
+lastmod: 2026-09-20T15:41:11+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Revised Crusader installed in private 0.12.0: thirteen groups, 76 frames. A test battle read 40 body images across seven groups. New panel comparison; likeness and full motion remain under review."
+homeSummary: "Crusader 0.12.0 remains installed locally. Pikeman now has a ten-frame articulated thrust draft with grip, garment-weight and stepping revisions, plus high-resolution stills and failed trials; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -21,6 +21,8 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 The revised Crusader is installed in private Castle mod **0.12.0**, replacing the rejected 0.10.0 appearance. The latest Blender helmet, crest, shoulders and white-and-blue tabard now cover the native **thirteen active groups and 76 frames**. This remains a test package. Overall likeness, the downward-attack hem, falling pose and movement transitions are not fully accepted, and the fourteen-unit Castle roster remains in progress.
 
 ![Original sprite, previous installed draft and 0.12.0 test package, composited offline into the same Castle panel; not game captures](/images/castle-crusader-1883/panels.png)
+
+The panel comparison still shows thinner limbs, a less prominent shield and a more open stance than the original. The armor needs more weight in the silhouette and the sword-and-shield pose needs to be more compact. The helmet and shoulder revisions do not resolve these remaining design differences.
 
 Holding uses a fixed projection with an 87-logical-pixel silhouette and a horizontal center near pixel 49 of the 100-pixel panel. Every action retains the same camera and registration, without per-frame scaling or recentering. Geometry bounds for all 76 frames fit within the logical 450 × 400 canvas.
 
@@ -1046,6 +1048,35 @@ Previous homepage summary:
 
 </details>
 
+## Pikeman articulated thrust {#pikeman-thrust}
+
+The previous Pikeman front-lunge probe mainly translated the body and pike together. Its limbs did not perform a thrust. Astra has now authored two-arm constraints, torso lean, pelvis travel and a front-leg step in Blender, retaining the separate Meshy body, pike and humanoid rig. Lowering the weapon, thrusting and recovery follow the native ten-frame layout. No new Meshy task was submitted.
+
+![Original Pikeman front attack, ten frames enlarged with nearest-neighbor sampling to compare weapon lowering, thrust and recovery](/images/castle-pikeman-1899/native-attack.png)
+
+![Pikeman ready pose, actual 1400 × 1260 Blender still; offline draft, not installed](/images/castle-pikeman-1899/ready.png)
+
+![Pikeman thrust at frame six, actual 1400 × 1260 Blender still; costume and overall likeness still differ from the original](/images/castle-pikeman-1899/impact.png)
+
+<video controls loop muted playsinline preload="none" width="800" src="/images/castle-pikeman-1899/attack-front.mp4"></video>
+
+The video uses ten Blender-rendered frames at 8 fps for inspection, independently of game timing.
+
+The first articulated trial pulled the skirt into a raised sheet. Some vertices below the waist still carried arm-bone influence. Removing that influence with a hard height cutoff created long triangles at the waist and was rejected. A smooth spatial transition, with the hand and forearm neighborhoods protected, reduced the large lift. The knees now bend toward the thrust direction, with corresponding toe alignment.
+
+<details>
+<summary>Rejected garment and weight trials</summary>
+
+![The initial articulated thrust lifts the garment into a sheet; rejected Blender trial](/images/castle-pikeman-1899/rejected-cloth.png)
+
+![A hard weight cutoff produces long waist triangles; rejected Blender trial](/images/castle-pikeman-1899/rejected-weights.png)
+
+</details>
+
+Grip targets use approximate palm centers rather than wrist joints. The ten key poses aligned, but reopening exposed up to 8.6 cm of drift between them. After solving 91 skeleton poses, a fresh check at 181 times, including interpolation, measured at most 1.36 mm of anchor drift and a minimum body-mesh height about 1.63 mm above the floor. These measurements cover reference points and floor position; they do not establish finger contact, garment quality or native likeness.
+
+Only the front thrust has reached this articulated draft. The complete Pikeman action set, costume revision and game integration remain unfinished. Work on all fourteen Castle creatures continues, with the Crusader 0.12.0 local test still installed.
+
 ## Archer local test package
 
 The Archer's 16 active groups and 96 frames are now packaged at 1×/2×, with a precomputed 4× cache resized from the 2× images rather than newly rendered at 4×. Installation into Castle mod 0.11.0 preserved the other creatures' assets. Native action-layout and image-format checks returned no errors or warnings; motion quality remains under review.
@@ -1072,7 +1103,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Unit | reviewed state |
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
-| Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
+| Pikeman | Ten-frame articulated front-thrust draft with two-arm grips, torso motion and stepping; between-frame anchor checks completed. Costume, fingers, full action set and integration remain unfinished. |
 | Archer | Installed in private test mod 0.11.0: 16 active groups and 96 frames with body, shadow and outline layers. The test battle loaded 43 body images across six groups. Full visual review, fingers, transitions and unobserved native actions remain open. |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
@@ -1091,6 +1122,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | Previous record |
 | --- | --- |
+| Pikeman | <s>mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass</s> |
 | Crusader | <s>Installed 0.10.0 likeness rejected. The Meshy study now has separate cloth, revised lighting and native-referenced sword/shield placement. Six selected static intersection checks are clear; shoulders, body proportions, likeness and full motions remain unfinished. Not installed.</s> |
 | Monk | <s>Fourteen body-action drafts plus an eleven-frame death trial rejected for robe deformation. All fifteen groups have been attempted; death repair, clothing, effects and integration remain unfinished</s> |
 | Monk | <s>Fourteen body drafts preserved; corrected skirt collision lengths and eleven new death renders. Pose, clothing and boot connections still need repair; uninstalled</s> |
@@ -1931,15 +1963,20 @@ The original Griffin has eight holding frames and four walking frames; the Sword
 
 <s>The Pikeman’s first ten-frame `CPKMAN.DEF` front-thrust trial keeps the long weapon attached but rotates it around only one hand. The shaft cuts through the torso and the free hand never supports it. A second trial added a two-bone grip constraint, but it pulled apart the rigid sleeve and tabard components without producing a natural thrust. Both are rejected; the next attempt needs a component-level two-hand hierarchy. </s>
 
-<s>A second full Meshy Pikeman candidate explicitly generated a complete visible pike with two grip points and passes static review. Its automatic humanoid weights still do not provide a controllable two-hand attack chain: the first ten-frame action reads as an upward lift, and a later axis probe still cannot reach the original horizontal rightward impact. All three dynamic attempts are rejected and will not export.</s> The next pass needs a dedicated hand-to-pike constraint reconstruction.
+<s>A second full Meshy Pikeman candidate explicitly generated a complete visible pike with two grip points and passes static review. Its automatic humanoid weights still do not provide a controllable two-hand attack chain: the first ten-frame action reads as an upward lift, and a later axis probe still cannot reach the original horizontal rightward impact. All three dynamic attempts are rejected and will not export.</s> <s>The next pass needs a dedicated hand-to-pike constraint reconstruction.</s> See the [current articulated-thrust work](#pikeman-thrust).
 
-The dedicated reconstruction now uses a separately generated Meshy body with two explicit grip points and a separately generated Meshy pike. The pike is placed on the measured line between both rig wrist joints, then body and pike share a 10-frame lunge carrier. Front and oblique checks keep both hands, the shaft and tip continuous through the lunge and recovery. This validates the two-hand equipment constraint; the next pass will add a stronger arm-driven push. It remains Blender review only, with no DEF or game installation.
+<details>
+<summary>Earlier whole-body translation probe (history)</summary>
+
+<s>The dedicated reconstruction now uses a separately generated Meshy body with two explicit grip points and a separately generated Meshy pike. The pike is placed on the measured line between both rig wrist joints, then body and pike share a 10-frame lunge carrier. Front and oblique checks keep both hands, the shaft and tip continuous through the lunge and recovery. This validates the two-hand equipment constraint; the next pass will add a stronger arm-driven push. It remains Blender review only, with no DEF or game installation.</s>
 
 ![Pikeman two-hand pike holding review](/images/castle-halberdier-01/pikeman-twohand-holding.png)
 
 ![Pikeman two-hand pike ATTACK_FRONT, impact frame six](/images/castle-halberdier-01/pikeman-twohand-attack-06.png)
 
 ![Pikeman two-hand pike oblique impact review](/images/castle-halberdier-01/pikeman-twohand-attack-oblique-06.png)
+
+</details>
 
 <s>The first Griffin trial rigidly parented 2,829 disconnected components to bones. Its chest feathers separated in motion. Continuous surface weights repaired holding, but its gait then pulled apart layered surfaces near the legs and tail, so the four-frame walk was rejected.</s>
 
