@@ -1125,7 +1125,7 @@ The first articulated trial pulled the skirt into a raised sheet. Some vertices 
 
 Grip targets use approximate palm centers rather than wrist joints. The ten key poses aligned, but reopening exposed up to 8.6 cm of drift between them. After solving 91 skeleton poses, a fresh check at 181 times, including interpolation, measured at most 1.36 mm of anchor drift and a minimum body-mesh height about 1.63 mm above the floor. These measurements cover reference points and floor position; they do not establish finger contact, garment quality or native likeness.
 
-Only the front thrust has reached this articulated draft. The complete Pikeman action set, costume revision and game integration remain unfinished. Work on all fourteen Castle creatures continues, with the Crusader 0.12.0 local test still installed.
+Only the front thrust has reached this articulated draft. The complete Pikeman action set, costume revision and game integration remain unfinished. Work on all fourteen Castle creatures continues. <s>The Crusader 0.12.0 local test is still installed.</s> The current Crusader installation is 0.13.0, as documented above.
 
 ## Archer local test package
 
