@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T06:25:51+00:00
+lastmod: 2026-09-20T06:50:36+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader helmet smoothing was rejected for damaging plate edges; the failed render is retained. The current study adds a neck lining, with mesh and weight checks. Artifacts, neck fit and full motions remain unfinished."
+homeSummary: "Crusader likeness remains unaccepted. New cloth meshes and rejected shoulder and floating-panel trials are shown; the pinned-boundary study still needs silhouette work and is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,55 +18,86 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ## Crusader design correction
 
-The installed **0.10.0 Crusader still received a likeness rejection**. The new attempt returns to its modeling reference. Native idle, walk, attack, defence and turn frames expose differences in the helmet, pauldrons, torso proportions and silver-white-gold-blue color layout. Work on the fourteen Castle units continues; the installation record does not establish visual acceptance.
+The Crusader still fails the likeness review. Comparing five native poses exposes insufficient white-and-blue cloth coverage, rounded pauldrons, and differences in the helmet, crest and sword stance. Earlier wrist, girdle, mesh and weight checks cover individual constraints; they do not establish a faithful design. The fourteen-unit Castle roster remains in progress. The game still contains the rejected **0.10.0 Crusader test assets**.
+
+![Five original Crusader poses enlarged with nearest-neighbor sampling, for silhouette, color and equipment comparison](/images/castle-crusader-1565/native.png)
+
+The body, rig, separate helmet and closed gauntlets retain the earlier Meshy API results. Astra wrote the Blender garment edits in this round; no additional Meshy task was submitted. Models and complete mod assets remain private. The images here are actual renders, including unsuccessful trials.
+
+A separate chest panel and two split skirt panels inherit weights sampled from the body. The first fitting copied too much armor relief into the cloth. A broad surface fit then placed the garment too far forward, making it resemble a floating apron. Smoothing without pinned boundaries exaggerated that separation. Neither smoothing approach was adopted.
+
+![First separate cloth meshes, still carrying too much armor relief; actual Blender render](/images/castle-crusader-1619/first-cloth.png)
+
+![Rejected smoothing trial: the side view exposes a floating chest panel; not a delivery candidate](/images/castle-crusader-1619/rejected-floating-cloth.png)
+
+The latest trial pins the panel boundaries and limits departure from the sampled surface. Full-body, front and side renders were produced after reopening the saved scene. This remains a design study: the neckline, garment coverage, natural folds and overall proportions need further work. Full-action intersections have not been validated.
+
+![Pinned-boundary garment study, a 1200 × 1400 Blender still; likeness unaccepted and not installed](/images/castle-crusader-1619/holding.png)
+
+![Side view of the same study, used to inspect garment separation; clothing fit remains unaccepted](/images/castle-crusader-1619/side.png)
+
+Another shoulder extension and lift made the far pauldron into a tall horn. That edit was rejected and is absent from the current garment study. The next modeling work concerns the garment and shoulder silhouette, followed by the native stance, equipment placement and helmet. These static studies do not complete the action set.
+
+![Rejected shoulder trial: the far rim rises into a horn; actual Blender render](/images/castle-crusader-1619/rejected-shoulders.png)
+
+<details>
+<summary>Before the garment silhouette revision (history, 2026-09-20)</summary>
+
+<s>| Crusader | Installed 0.10.0 likeness rejected. The new Meshy body has sword/shield assembly, separate feathers and a static holding comparison; closed gauntlets are fitted; cuff contact, waist, equipment proportions and full motions remain unfinished. Not installed. |</s>
+
+## Crusader design correction
+
+<s>The installed **0.10.0 Crusader still received a likeness rejection**. The new attempt returns to its modeling reference. Native idle, walk, attack, defence and turn frames expose differences in the helmet, pauldrons, torso proportions and silver-white-gold-blue color layout. Work on the fourteen Castle units continues; the installation record does not establish visual acceptance.</s>
 
 ![Five original Crusader poses, enlarged with nearest-neighbor sampling for silhouette and color comparison](/images/castle-crusader-1565/native.png)
 
-Built-in imagegen produced three reference iterations. The first invented a tall chimney above the helmet and pointed shoulders. The second removed the chimney and narrowed the white chest panel, but retained shoulder ornaments and horns. The third removed those ornaments and flattened the gold plates while retaining bright silver armor and a blue-white plume. That third image became the new Meshy input.
+<s>Built-in imagegen produced three reference iterations. The first invented a tall chimney above the helmet and pointed shoulders. The second removed the chimney and narrowed the white chest panel, but retained shoulder ornaments and horns. The third removed those ornaments and flattened the gold plates while retaining bright silver armor and a blue-white plume. That third image became the new Meshy input.</s>
 
 ![Generated concept iterations: rejected chimney helmet, intermediate shoulders, and the input selected for a Meshy trial](/images/castle-crusader-1565/iterations.jpg)
 
 ![High-resolution modeling reference sent to Meshy, generated with built-in imagegen](/images/castle-crusader-1565/concept.jpg)
 
-Meshy supplied the new body and humanoid rig for 30 and 5 credits. This round adds a separately generated helmet and blue-white crest through meshy-7.1 for another 30 credits. The body, sword, shield, closed gauntlets and fitted girdle are retained. Astra authored the Blender assembly, sizing and material edits.
+<s>Meshy supplied the new body and humanoid rig for 30 and 5 credits. This round adds a separately generated helmet and blue-white crest through meshy-7.1 for another 30 credits. The body, sword, shield, closed gauntlets and fitted girdle are retained. Astra authored the Blender assembly, sizing and material edits.</s>
 
-The static holding pose uses wrist positions solved for the new arm lengths, placing the shield toward the side. The comparison shows the original, the previous procedural helmet and the independent Meshy component assembly at equal silhouette heights.
+<s>The static holding pose uses wrist positions solved for the new arm lengths, placing the shield toward the side. The comparison shows the original, the previous procedural helmet and the independent Meshy component assembly at equal silhouette heights.</s>
 
 ![Original, previous procedural helmet and independent Meshy component assembly, at equal silhouette heights with aspect ratios preserved](/images/castle-crusader-1610/comparison.png)
 
 ![Static holding study with the independent Meshy helmet, a 1200 × 1400 Blender render; not installed](/images/castle-crusader-1610/holding.png)
 
-Previously generated Meshy gauntlets replace the open hands. Each closed grip is fitted in hand-bone coordinates and moves rigidly with its wrist, preserving the corresponding sword or shield handle placement. The first assembly left a cuff gap. A lining weighted between forearm and hand is being fitted across it. The initially protruding cylinder was narrowed toward the forearm, but the cuff fit remains unfinished.
+<s>Previously generated Meshy gauntlets replace the open hands. Each closed grip is fitted in hand-bone coordinates and moves rigidly with its wrist, preserving the corresponding sword or shield handle placement. The first assembly left a cuff gap. A lining weighted between forearm and hand is being fitted across it. The initially protruding cylinder was narrowed toward the forearm, but the cuff fit remains unfinished.</s>
 
 ![Right sword grip and wrist lining, a 1200 × 1400 Blender close-up; seam and dynamic contact checks remain open](/images/castle-crusader-1587/right.png)
 
 ![Left hand behind the shield handle, an actual Blender close-up; this is a rigid, preposed grasp](/images/castle-crusader-1587/left.png)
 
-The procedural shell remained cylindrical, and its continuous feather vanes looked like ribbons. A separate helmet reference was generated with built-in imagegen from the native Crusader sheet, then sent to Meshy with image enhancement disabled, no remeshing and PBR textures requested. The concept and prompt are saved locally. The two images below distinguish the generated reference from the actual mesh.
+<s>The procedural shell remained cylindrical, and its continuous feather vanes looked like ribbons. A separate helmet reference was generated with built-in imagegen from the native Crusader sheet, then sent to Meshy with image enhancement disabled, no remeshing and PBR textures requested. The concept and prompt are saved locally. The two images below distinguish the generated reference from the actual mesh.</s>
 
 ![Isolated helmet reference generated with built-in imagegen and sent to Meshy; not a 3D render](/images/castle-crusader-1602/concept.png)
 
 ![Actual Blender render of the raw Meshy component, showing dark metal and raised surface artifacts](/images/castle-crusader-1602/raw.png)
 
-The result has about 2.79 million vertices and 5.14 million triangles, with two 4K images and one 2K image. Four views rendered after reopening the saved scene remain inside their frames. Astra binds the component rigidly to the head, replacing the procedural shell and plume, then lowers it, widens it slightly and compresses the rear extent. Metallic albedo is lifted without bleaching the feather colors, and normal strength is reduced. Faceted face plates and feather contours survive, but raised artifacts, rear neck fit and the thick crest remain unfinished. There is no independent plume motion yet.
+<s>The result has about 2.79 million vertices and 5.14 million triangles, with two 4K images and one 2K image. Four views rendered after reopening the saved scene remain inside their frames. Astra binds the component rigidly to the head, replacing the procedural shell and plume, then lowers it, widens it slightly and compresses the rear extent. Metallic albedo is lifted without bleaching the feather colors, and normal strength is reduced. Faceted face plates and feather contours survive, but raised artifacts, rear neck fit and the thick crest remain unfinished. There is no independent plume motion yet.</s>
 
 ![Assembled helmet after metallic albedo adjustment; raised artifacts and neck fit remain unfinished](/images/castle-crusader-1610/head.png)
 
 ![Rear inspection exposes crest volume, raised surface artifacts and the neck gap](/images/castle-crusader-1610/rear-head.png)
 
-The retained body includes the previous shoulder-rim and white-tabard edits, with two gold waist bands. Lifting and extending both pauldrons made the far shoulder too pointed. The revised edit removes the lift, reduces the far-side extension and uses a continuous spatial deformation across mesh islands.
+<s>The retained body includes the previous shoulder-rim and white-tabard edits, with two gold waist bands. Lifting and extending both pauldrons made the far shoulder too pointed. The revised edit removes the lift, reduces the far-side extension and uses a continuous spatial deformation across mesh islands.</s>
 
-The first elliptical bands disappeared into parts of the torso. Their replacements are sampled from the actual body surface, with skin weights interpolated from the intersected triangles. After reopening the scene, each band's 1,024 evaluated vertices measured roughly 1.1–4.0 mm from the nearest body surface, with positive distances along the nearest surface normals. This measures one static fit; it does not establish collision-free animation.
+<s>The first elliptical bands disappeared into parts of the torso. Their replacements are sampled from the actual body surface, with skin weights interpolated from the intersected triangles. After reopening the scene, each band's 1,024 evaluated vertices measured roughly 1.1–4.0 mm from the nearest body surface, with positive distances along the nearest surface normals. This measures one static fit; it does not establish collision-free animation.</s>
 
 ![Previous shoulder and girdle fitting close-up; the procedural helmet shown here has since been replaced](/images/castle-crusader-1596/torso.png)
 
-Two local smoothing trials were rejected. The original vertex indices form 5,134 components, but grouping coincident positions at micrometer precision connects them into one surface. Many small indexed islands are UV seams, so deleting them as debris would damage the model. A spatial mask missed parts of the tilted plates. A second mask using metallic and color textures reduced some bumps but softened the crown edges and introduced uneven surfaces.
+<s>Two local smoothing trials were rejected. The original vertex indices form 5,134 components, but grouping coincident positions at micrometer precision connects them into one surface. Many small indexed islands are UV seams, so deleting them as debris would damage the model. A spatial mask missed parts of the tilted plates. A second mask using metallic and color textures reduced some bumps but softened the crown edges and introduced uneven surfaces.</s>
 
 ![Rejected smoothing trial: softened crown edges and uneven plate surfaces, shown in an actual Blender render](/images/castle-crusader-1610/rejected-smoothing.png)
 
-The current study restores the unsmoothed helmet and adds only a dark neck lining with weights transitioning from neck to head. Reopening the scene and comparing every helmet vertex confirms that its coordinates are unchanged, with neither rejected modifier retained. All 448 lining vertices have normalized weight sums. This is still a static assembly trial: neck contour and turning clearance remain unaccepted, and the helmet artifacts have not been removed.
+<s>The current study restores the unsmoothed helmet and adds only a dark neck lining with weights transitioning from neck to head. Reopening the scene and comparing every helmet vertex confirms that its coordinates are unchanged, with neither rejected modifier retained. All 448 lining vertices have normalized weight sums. This is still a static assembly trial: neck contour and turning clearance remain unaccepted, and the helmet artifacts have not been removed.</s>
 
-The current full-body and head stills were rendered after saving and reopening the scene. Local mesh and weight checks do not establish likeness or full-action acceptance. Plate cleanup, neck fit, plume motion and the complete action set remain unfinished. The game continues to use the old 0.10.0 test assets.
+<s>The current full-body and head stills were rendered after saving and reopening the scene. Local mesh and weight checks do not establish likeness or full-action acceptance. Plate cleanup, neck fit, plume motion and the complete action set remain unfinished. The game continues to use the old 0.10.0 test assets.</s>
+
+</details>
 
 <details>
 <summary>Before the neck-lining trial (history, 2026-09-20)</summary>
@@ -733,7 +764,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | Installed 0.10.0 likeness rejected. The new Meshy body has sword/shield assembly, separate feathers and a static holding comparison; closed gauntlets are fitted; cuff contact, waist, equipment proportions and full motions remain unfinished. Not installed. |
+| Crusader | Installed 0.10.0 likeness rejected. Meshy body, helmet and closed gauntlets remain a static study, now with separate white-blue cloth. Horned shoulders and floating-panel trials were rejected; the pinned-boundary garment still needs silhouette and fit work. Uninstalled; full actions unfinished. |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
