@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T00:57:14+00:00
+lastmod: 2026-09-20T01:28:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The installed 0.9.0 Crusader received explicit likeness criticism. New Blender studies address proportions, materials and the crest; failed trials are documented, and the revisions remain offline."
+homeSummary: "Crusader likeness revisions remain unaccepted. Archer shooting, selection and string-driver repairs have four new Blender stills; melee and game integration remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -509,7 +509,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass |
-| Archer |New Meshy body, hands, crossbow and dagger; 17 offline groups cover 94 frame entries, including four reused turn entries. Six death frames, appearance repairs, layered export and installation remain unfinished |
+| Archer | Offline drafts cover 16 active groups and 96 frame slots. Three shooting recoveries and selection motion have revised body/crossbow clearance; melee, native appearance, hands, transitions, layered export and installation remain unfinished. |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
@@ -1433,7 +1433,30 @@ Cavalier and Champion each ran a local horse-and-rider probe against their own m
 
 </details>
 
-### Archer identity and rig correction (2026-09-19) {#archer-identity}
+### Archer motion repairs {#archer-identity}
+
+The replacement Meshy body, separate hands, light crossbow and dagger now have offline action drafts. Reading `CLCBOW.DEF` again establishes the complete scope as **16 active groups and 96 frame slots**, excluding duplicate turn groups 9 and 10. A six-frame death draft also exists. Appearance and transitions remain under review, and the Archer has not been installed.
+
+The three shooting recoveries now move the crossbow and both hands outward while retaining the original aim. Independent checks caught a regression: rewriting object motion had dropped the `string_draw` property curve that drives the bow's shape keys. Restoring its six original keys and reopening each scene recovered the original string deformation. Across 225 sampled poses per direction, the tested body and crossbow surfaces do not intersect; the largest wrist-to-bow position error is about 0.164 mm. Finger contact and full in-game behavior are outside those checks.
+
+![Forward shot, a 900 × 900 Blender still with restored string deformation; not installed](/images/castle-archer-1499/shoot-front.png)
+
+![Upward shot, a 900 × 900 Blender still](/images/castle-archer-1499/shoot-up.png)
+
+![Downward shot, a 900 × 900 Blender still](/images/castle-archer-1499/shoot-down.png)
+
+A selection-motion trial rotated the crossbow clear of the body but made it too upright and was rejected. The current draft keeps the previous orientation and raises both hands outward during the middle of the motion, limited by arm reach. Its 257 sampled poses have no tested body/crossbow surface intersections, with a maximum relative wrist error of about 0.425 mm. Bow angles in the other phases and the free right-hand motion still need comparison with the native animation.
+
+![Middle of the selection action, rendered in Blender at 900 × 900; a clearance draft with full motion review still open](/images/castle-archer-1499/selection.png)
+
+Melee remains unfinished. The right hand uses a dagger while the left carries the crossbow, whose stock still crosses the left thigh or hip in some phases. Translation, wrist-angle changes and a trial based on the idle left-arm pose have not passed. Meshy supplied the models and base rig; Astra authored the Blender motion repairs, driver restoration, renders and checks. This round used no additional Meshy requests and changed no installed game assets.
+
+<details>
+<summary>Earlier Archer modeling and motion records (current scope and status above)</summary>
+
+### Archer identity and rig correction (2026-09-19) {#archer-identity-history}
+
+<s>| Archer |New Meshy body, hands, crossbow and dagger; 17 offline groups cover 94 frame entries, including four reused turn entries. Six death frames, appearance repairs, layered export and installation remain unfinished |</s>
 
 The Archer is back in modeling. Comparing the old body with `CLCBOW.DEF` at battle scale exposed a mismatch: the long dark tunic, gold trim and tall pointed helmet had survived the earlier motion checks. The reference has a shorter blue tunic, visible white clothing and a low brimmed helmet. The old shooting experiments are retained below as history; their continuity results do not establish a faithful character design.
 
@@ -1681,10 +1704,11 @@ The original turn gathers the bow and faces forward in two frames. The draft sli
 
 Each reopened scene was sampled at 65 times. The selected soles stay at least 0.498 mm above the reference floor, arm-length errors remain below 0.001 mm, and hand anchors follow their changing grip targets within 0.05 mm. The reopened front-facing renders match in every RGBA channel. These checks do not establish a planted foot pivot or correct surface contact.
 
-The original groups 9 and 10 exactly duplicate both frames of the corresponding left and right turns, across body, shadow and overlay layers. VCMI marks these duplicate groups as unused. The current count is therefore **17 groups and 94 frame entries**, with four new turn renders reused for another four entries. Six death frames remain unauthored.
+<s>The original groups 9 and 10 exactly duplicate both frames of the corresponding left and right turns, across body, shadow and overlay layers. VCMI marks these duplicate groups as unused. The current count is therefore **17 groups and 94 frame entries**, with four new turn renders reused for another four entries. Six death frames remain unauthored.</s>
 
 VCMI changes facing between the two turn clips. Registration across that flip, the apparent change in bow side and transitions to holding remain unverified. These drafts are offline; grip, cloth, foot placement and game integration still need work.
 
+</details>
 
 ### Monk identity correction (2026-09-18)
 
