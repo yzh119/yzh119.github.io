@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T12:12:46+00:00
+lastmod: 2026-09-20T12:24:25+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "A third Crusader cloth trial reduces excessive initial collision margins and is baked for reopened inspection. Crumpling decreased but body intersections remain; it was not adopted and game assets are unchanged."
+homeSummary: "Crusader skirt trials now include an independent collision copy, with seam, inherited-scale and collision-direction checks. Reopened intersections remain, so none was adopted; panel-to-leg shape needs revision."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -149,6 +149,12 @@ The third trial first checked the initial clearance. Median skirt-to-body distan
 This version bakes 41 simulation samples per panel into shape keys on the original rig action and renders after reopening. At 161 checked times, however, the panels still intersect the body at 160 and 161 times respectively, so it was not adopted. The bake makes the result persistent and inspectable; garment contacts remain unresolved. The current candidate and game assets are unchanged.
 
 ![Reopened Blender render of the third baked skirt trial; less crumpling but intersections remain, not adopted](/images/castle-crusader-1758/baked-hit.png)
+
+A separate collision copy was also audited. The body mesh had 16,829 boundary edges; welding coincident vertices reduced that to 143, so most were unwelded seams rather than evidence of holes. Seven faces closed the remaining openings in the collision copy, leaving no boundary edges. The visible body was unchanged.
+
+The copy also had its inherited 0.01 scale applied. Three checked poses retained world positions within one micrometre. Trials using the closed copy, unit scale and two-sided, normal-directed collisions were baked and reopened. The final trial still had skirt/body intersections at 160 and 161 of 161 checked times, so it was not adopted. These checks did not establish seams or scale as the cause of the intersections; the panel-to-leg shape relationship needs direct revision.
+
+![Baked Blender render using a closed, unit-scale collision copy; garment intersections remain and the trial was not adopted](/images/castle-crusader-1772/proxy-trial.png)
 
 Death still has only an overall height correction: all 22 bound meshes, including the helmet, stayed above the floor at 81 sampled times. Back support, limb placement and cloth/shield intersections remain unresolved. The revised Crusader is not installed.
 
