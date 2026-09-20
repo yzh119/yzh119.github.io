@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T10:29:01+00:00
+lastmod: 2026-09-20T10:42:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All 13 Crusader groups and 76 frame slots now have revised-rig drafts, with selection and fixed movement joins corrected. New selection, turn and death diagnostics show the work; hit, death and likeness remain unresolved and the model is not installed."
+homeSummary: "Crusader hit now starts in recoil and uses revised reference sword directions, shown in Blender previews. Body and blade stayed above the floor at 161 samples; recovery contacts, garments and likeness remain unresolved. Not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -92,7 +92,22 @@ The turning-cloth fit initially picked a distant body surface and requested abou
 
 ![Two frames for each turn, rendered in Blender; game playback also uses sprite reversal](/images/castle-crusader-1714/turns.png)
 
-Hit and death remain unsuitable for delivery. The sword tip enters the floor during hit recovery and garments intersect the body; the original hit frames have been retrieved again to guide the weapon path. Death received a whole-body height correction. At 81 reopened samples, none of the 22 bound meshes, including the helmet, entered the floor. Adding a diagnostic floor still exposes unnatural back support and limb placement, while cloth and shield intersections remain. Complete draft coverage does not mean completion; the new Crusader is not installed.
+Hit received another pass against the six original frames. It now begins in recoil with a raised leg, removing the old idle lead-in. Visible sword directions were revised and the final frame returns to a forward diagonal. The original sword is obscured in frame five; the current interpolation still produces an awkward wrist and is not an accepted reconstruction. At 161 reopened samples, neither the body mesh nor the blade entered the floor. Late recovery still crosses the body and shield, and garment intersections remain.
+
+![Revised Crusader hit, six actual Blender frames; recoil starts immediately, with recovery and garments unresolved, not installed](/images/castle-crusader-1728/hitted.gif)
+
+![Actual Blender still of the first hit frame, with recoil, raised leg and near-vertical sword](/images/castle-crusader-1728/hit-start.png)
+
+Garment trials used forward fitting and nearest-body-surface correction. The latter cleared sampled chest-panel contacts, but both skirt panels still intersect during the raised-leg pose, so that branch was not promoted. A separate hand-matrix reconstruction initially dropped scale and enlarged the glove in frame five; it was corrected, with the failed file retained locally.
+
+Death still has only an overall height correction: all 22 bound meshes, including the helmet, stayed above the floor at 81 sampled times. Back support, limb placement and cloth/shield intersections remain unresolved. The revised Crusader is not installed.
+
+<details>
+<summary>Before the hit revision (history, 2026-09-20)</summary>
+
+<s>Hit and death remain unsuitable for delivery. The sword tip enters the floor during hit recovery and garments intersect the body; the original hit frames have been retrieved again to guide the weapon path. Death received a whole-body height correction. At 81 reopened samples, none of the 22 bound meshes, including the helmet, entered the floor. Adding a diagnostic floor still exposes unnatural back support and limb placement, while cloth and shield intersections remain. Complete draft coverage does not mean completion; the new Crusader is not installed.</s>
+
+</details>
 
 ![Rejected hit draft, with the sword tip below the feet; actual Blender render](/images/castle-crusader-1714/rejected-hit.png)
 
