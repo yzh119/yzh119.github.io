@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T09:52:08+00:00
+lastmod: 2026-09-20T10:29:01+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader’s revised rig now has 32 draft attack and defence frames, shown in Blender previews. Rotation interpolation and several contacts were corrected; upward-attack cloth intersections remain and the model is not installed."
+homeSummary: "All 13 Crusader groups and 76 frame slots now have revised-rig drafts, with selection and fixed movement joins corrected. New selection, turn and death diagnostics show the work; hit, death and likeness remain unresolved and the model is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -83,6 +83,22 @@ After reopening, 193 samples each for the front and downward attacks and 161 for
 ![Crusader downward attack draft, seven Blender frames; art and timing remain under review](/images/castle-crusader-1699/attack_down.gif)
 
 ![Crusader defence draft, eleven Blender frames; not installed](/images/castle-crusader-1699/defence.gif)
+
+All thirteen active groups and 76 frame slots now have drafts on the revised rig. The additions are selection, hit, death, both turns and movement start/stop. Selection endpoints return to the actual idle, movement start ends at the actual walk's first pose, and movement stop ends at idle. Bone poses and cloth shapes were transferred together. Reopened mesh comparisons put these specific joins within numerical error. Stopping from different walk phases still needs in-game review.
+
+![Crusader selection, eight actual Blender frames; endpoints match idle, still a draft](/images/castle-crusader-1714/selection.gif)
+
+The turning-cloth fit initially picked a distant body surface and requested about 24 cm of chest-panel displacement; that trial stopped. Searching nearby along the body's facing direction resolved the sampled contacts. Both turns and start/stop were checked at 33 times each, and selection at 225: the six selected mesh pairs had no intersections. The turn image shows raw half-turn frames only, not accepted full in-game reversal playback.
+
+![Two frames for each turn, rendered in Blender; game playback also uses sprite reversal](/images/castle-crusader-1714/turns.png)
+
+Hit and death remain unsuitable for delivery. The sword tip enters the floor during hit recovery and garments intersect the body; the original hit frames have been retrieved again to guide the weapon path. Death received a whole-body height correction. At 81 reopened samples, none of the 22 bound meshes, including the helmet, entered the floor. Adding a diagnostic floor still exposes unnatural back support and limb placement, while cloth and shield intersections remain. Complete draft coverage does not mean completion; the new Crusader is not installed.
+
+![Rejected hit draft, with the sword tip below the feet; actual Blender render](/images/castle-crusader-1714/rejected-hit.png)
+
+![Death floor diagnostic, a 1200 × 900 Blender still; only overall height is corrected, with pose and intersections unresolved](/images/castle-crusader-1714/death-floor.png)
+
+
 
 <details>
 <summary>Before shoulder/hem edits and rejected fit trial (history, 2026-09-20)</summary>
@@ -824,7 +840,7 @@ The eight-frame mouse-over draft follows the original small lift-and-return swor
 
 Previous roster-table record:
 
-| Crusader | <s><s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified  **User rejected the old design; installation does not imply art acceptance.** <s>The new body has sword/shield assembly, wrist liners and eight offline drafts covering 52 frame entries, including all three attack directions and defence, with unresolved stop-entry jumps. Full scope: 15 groups / 80 frame entries; replacement is not installed.</s> New-body drafts cover 13 groups / 68 entries; hit review and death remain. Appearance revisions are not unified; replacement is not installed.</s> Test 0.8.0 remains installed and visually unaccepted. New crown and shorter tabard are unified across thirteen drafts with limited interface, floor and cloth-intersection checks; uninstalled, with overall appearance and full contact unaccepted. |
+<s>| Crusader | <s><s>Meshy mesh and rig; 11-frame defence candidate corrects shield folding, hand penetration and duplicate grip; 8-frame holding/walk and 6-frame recoil drafts added; recoil hand/shield contact remains unresolved; no game installation</s> <s>Thirteen groups and 76 draft frames; hand/shield crossings and corpse support revised; battle camera and turns under adjustment; no game installation</s> Crusader 1×/2× test package installed and mod loading verified; battle playback and creature panel still unverified  **User rejected the old design; installation does not imply art acceptance.** <s>The new body has sword/shield assembly, wrist liners and eight offline drafts covering 52 frame entries, including all three attack directions and defence, with unresolved stop-entry jumps. Full scope: 15 groups / 80 frame entries; replacement is not installed.</s> New-body drafts cover 13 groups / 68 entries; hit review and death remain. Appearance revisions are not unified; replacement is not installed.</s> Test 0.8.0 remains installed and visually unaccepted. New crown and shorter tabard are unified across thirteen drafts with limited interface, floor and cloth-intersection checks; uninstalled, with overall appearance and full contact unaccepted. |</s>
 
 Previous homepage summary:
 
