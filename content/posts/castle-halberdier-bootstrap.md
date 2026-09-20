@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T05:47:33+00:00
+lastmod: 2026-09-20T06:25:51+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader now has an independent Meshy helmet and blue-white crest study, with concept, raw-mesh and assembled Blender stills. Surface artifacts, neck fit and full motions remain unfinished; it is not installed."
+homeSummary: "Crusader helmet smoothing was rejected for damaging plate edges; the failed render is retained. The current study adds a neck lining, with mesh and weight checks. Artifacts, neck fit and full motions remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -32,9 +32,9 @@ Meshy supplied the new body and humanoid rig for 30 and 5 credits. This round ad
 
 The static holding pose uses wrist positions solved for the new arm lengths, placing the shield toward the side. The comparison shows the original, the previous procedural helmet and the independent Meshy component assembly at equal silhouette heights.
 
-![Original, previous procedural helmet and independent Meshy component assembly, at equal silhouette heights with aspect ratios preserved](/images/castle-crusader-1602/comparison.png)
+![Original, previous procedural helmet and independent Meshy component assembly, at equal silhouette heights with aspect ratios preserved](/images/castle-crusader-1610/comparison.png)
 
-![Static holding study with the independent Meshy helmet, a 1200 × 1400 Blender render; not installed](/images/castle-crusader-1602/holding.png)
+![Static holding study with the independent Meshy helmet, a 1200 × 1400 Blender render; not installed](/images/castle-crusader-1610/holding.png)
 
 Previously generated Meshy gauntlets replace the open hands. Each closed grip is fitted in hand-bone coordinates and moves rigidly with its wrist, preserving the corresponding sword or shield handle placement. The first assembly left a cuff gap. A lining weighted between forearm and hand is being fitted across it. The initially protruding cylinder was narrowed toward the forearm, but the cuff fit remains unfinished.
 
@@ -50,9 +50,9 @@ The procedural shell remained cylindrical, and its continuous feather vanes look
 
 The result has about 2.79 million vertices and 5.14 million triangles, with two 4K images and one 2K image. Four views rendered after reopening the saved scene remain inside their frames. Astra binds the component rigidly to the head, replacing the procedural shell and plume, then lowers it, widens it slightly and compresses the rear extent. Metallic albedo is lifted without bleaching the feather colors, and normal strength is reduced. Faceted face plates and feather contours survive, but raised artifacts, rear neck fit and the thick crest remain unfinished. There is no independent plume motion yet.
 
-![Assembled helmet after metallic albedo adjustment; raised artifacts and neck fit remain unfinished](/images/castle-crusader-1602/head.png)
+![Assembled helmet after metallic albedo adjustment; raised artifacts and neck fit remain unfinished](/images/castle-crusader-1610/head.png)
 
-![Rear inspection exposes crest volume, raised surface artifacts and the neck gap](/images/castle-crusader-1602/rear-head.png)
+![Rear inspection exposes crest volume, raised surface artifacts and the neck gap](/images/castle-crusader-1610/rear-head.png)
 
 The retained body includes the previous shoulder-rim and white-tabard edits, with two gold waist bands. Lifting and extending both pauldrons made the far shoulder too pointed. The revised edit removes the lift, reduces the far-side extension and uses a continuous spatial deformation across mesh islands.
 
@@ -60,7 +60,28 @@ The first elliptical bands disappeared into parts of the torso. Their replacemen
 
 ![Previous shoulder and girdle fitting close-up; the procedural helmet shown here has since been replaced](/images/castle-crusader-1596/torso.png)
 
-The three assembled high-resolution stills were also rendered after saving and reopening the scene. Earlier wrist and girdle checks cover their documented local constraints only; they do not validate this helmet, plume or the complete action set. Overall proportions, surface cleanup, rear neck fit and full motion remain unfinished. The game retains the old 0.10.0 test assets.
+Two local smoothing trials were rejected. The original vertex indices form 5,134 components, but grouping coincident positions at micrometer precision connects them into one surface. Many small indexed islands are UV seams, so deleting them as debris would damage the model. A spatial mask missed parts of the tilted plates. A second mask using metallic and color textures reduced some bumps but softened the crown edges and introduced uneven surfaces.
+
+![Rejected smoothing trial: softened crown edges and uneven plate surfaces, shown in an actual Blender render](/images/castle-crusader-1610/rejected-smoothing.png)
+
+The current study restores the unsmoothed helmet and adds only a dark neck lining with weights transitioning from neck to head. Reopening the scene and comparing every helmet vertex confirms that its coordinates are unchanged, with neither rejected modifier retained. All 448 lining vertices have normalized weight sums. This is still a static assembly trial: neck contour and turning clearance remain unaccepted, and the helmet artifacts have not been removed.
+
+The current full-body and head stills were rendered after saving and reopening the scene. Local mesh and weight checks do not establish likeness or full-action acceptance. Plate cleanup, neck fit, plume motion and the complete action set remain unfinished. The game continues to use the old 0.10.0 test assets.
+
+<details>
+<summary>Before the neck-lining trial (history, 2026-09-20)</summary>
+
+![Static holding study with the independent Meshy helmet, a 1200 × 1400 Blender render; not installed](/images/castle-crusader-1602/holding.png)
+
+![Original, previous procedural helmet and independent Meshy component assembly, at equal silhouette heights with aspect ratios preserved](/images/castle-crusader-1602/comparison.png)
+
+![Assembled helmet after metallic albedo adjustment; raised artifacts and neck fit remain unfinished](/images/castle-crusader-1602/head.png)
+
+![Rear inspection exposes crest volume, raised surface artifacts and the neck gap](/images/castle-crusader-1602/rear-head.png)
+
+<s>The three assembled high-resolution stills were also rendered after saving and reopening the scene. Earlier wrist and girdle checks cover their documented local constraints only; they do not validate this helmet, plume or the complete action set. Overall proportions, surface cleanup, rear neck fit and full motion remain unfinished. The game retains the old 0.10.0 test assets.</s>
+
+</details>
 
 <details>
 <summary>Before the independent Meshy helmet (history, 2026-09-20)</summary>
