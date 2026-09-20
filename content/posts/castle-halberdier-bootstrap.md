@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T19:13:59+00:00
+lastmod: 2026-09-20T19:22:05+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Pikeman now has separate hand meshes and a static grip draft; wrist fit and animated contact remain unfinished and it is not installed. Crusader likeness and the fourteen-unit roster remain in progress."
@@ -1136,6 +1136,19 @@ Previous homepage summary:
 ## Pikeman model and motion {#pikeman-thrust}
 
 This pass continues hand/shaft contact repair. The previous close-ups looked plausible, but triangle checks found both hands intersecting the wood. After moving the palms, remaining intersections were concentrated in the ring and little fingers. Their joints were adjusted individually, then the thumbs curled along the outside of the shaft. Reopening the saved scene found no hand/shaft triangle intersections in this static pose; radial checks of all 44,925 vertices per hand also found none inside the shaft. This does not cover hand self-intersection, body contact or animation. Natural grip and wrist fit still need work; the new Pikeman is not installed.
+
+A reversible shape key subsequently narrows the cuffs while retaining the original mesh. A new 25-frame grip probe lowers the pike from 58 to roughly 33 degrees and raises it again, solving both arms against the moving shaft. After saving and reopening, 49 samples including interpolated times showed no hand/shaft triangle intersections. Close-ups still reveal wrist skin deformation that needs work; the check also excludes body self-collision and cuff collisions. This is a grip probe only. The native thrust, walk and full action set have not been transferred, and the new Pikeman is not installed.
+
+![Narrower left cuff, actual 800 × 800 Blender still](/images/castle-pikeman-1991/cuff.png)
+
+![Lowered-pike motion probe, actual 1200 × 1400 Blender still; not a completed thrust animation](/images/castle-pikeman-1991/lowered.png)
+
+<details>
+<summary>Wrist close-up and remaining skin deformation</summary>
+
+![Wrists in the lowered pose, actual 800 × 800 Blender still; seams and deformation still need repair](/images/castle-pikeman-1991/wrists.png)
+
+</details>
 
 ![Revised left contact, actual 800 × 800 Blender still; only this pose was checked](/images/castle-pikeman-1986/left.png)
 
