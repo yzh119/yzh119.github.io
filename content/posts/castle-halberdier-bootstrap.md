@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T04:48:03+00:00
+lastmod: 2026-09-20T04:56:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader helmet reconstruction adds a visor and brass bands, with new native comparisons and Blender stills. The cylindrical shell and ribbon-like plume remain unaccepted; this study is not installed."
+homeSummary: "The Crusader study revises shoulder rims, the white lower tabard and fitted gold waist bands, with updated comparisons and close-ups. Helmet, plume and full motions remain unfinished; the study is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -30,11 +30,11 @@ Built-in imagegen produced three reference iterations. The first invented a tall
 
 Meshy API model meshy-7.1 supplied the new body and humanoid rig for 30 and 5 credits respectively. This round made no further Meshy requests. Astra authored Blender scripts to assemble the existing sword and shield, revise a static holding pose, replace the plume and adjust armor materials.
 
-Wrist positions were solved for the new arm lengths to move the shield toward the side. The subsequent helmet-height trial made the head too tall and narrow. This reconstruction shortens and widens the shell. The comparison shows the original, the preceding new-body study and the current trial at equal silhouette heights.
+Wrist positions were solved for the new arm lengths to move the shield toward the side. The subsequent helmet-height trial made the head too tall and narrow. This reconstruction shortens and widens the shell. The comparison now shows the original, the previous helmet study and the current shoulder/waist revision at equal silhouette heights.
 
-![Original, previous new-body study and current helmet reconstruction, at equal silhouette heights with aspect ratios preserved; Blender studies are not game captures](/images/castle-crusader-1590/comparison.png)
+![Original, previous helmet study and current shoulder/waist revision, at equal silhouette heights with aspect ratios preserved](/images/castle-crusader-1596/comparison.png)
 
-![Current static holding study, a 1200 × 1400 Blender render; likeness remains unaccepted](/images/castle-crusader-1590/holding.png)
+![Current shoulder and waist study, a 1200 × 1400 Blender still; not installed](/images/castle-crusader-1596/holding.png)
 
 Previously generated Meshy gauntlets replace the open hands. Each closed grip is fitted in hand-bone coordinates and moves rigidly with its wrist, preserving the corresponding sword or shield handle placement. The first assembly left a cuff gap. A lining weighted between forearm and hand is being fitted across it. The initially protruding cylinder was narrowed toward the forearm, but the cuff fit remains unfinished.
 
@@ -48,7 +48,26 @@ Astra replaced the broken helmet surface in Blender with a capped plate shell, a
 
 ![Current rear Blender close-up; feathers obscure much of the shell, and intersections and full motions remain unchecked](/images/castle-crusader-1590/rear-head.png)
 
-All three stills were rendered after saving and reopening the scene. The earlier four wrist rotations per hand checked rigid attachment of the gauntlets and equipment only; the reconstructed helmet has not been validated across a full action set. Shoulder shape, waist, equipment proportions, cuff fit and plume construction remain unfinished. The installed 0.10.0 assets are unchanged, and overall likeness remains unaccepted.
+The next static pass extends the shoulder rims and broadens the white lower tabard, with two gold bands at the waist. Lifting and extending both pauldrons made the far shoulder too pointed. The revised edit removes the lift, reduces the far-side extension and uses a continuous spatial deformation across mesh islands.
+
+The first elliptical bands disappeared into parts of the torso. Their replacements are sampled from the actual body surface, with skin weights interpolated from the intersected triangles. After reopening the scene, each band's 1,024 evaluated vertices measured roughly 1.1–4.0 mm from the nearest body surface, with positive distances along the nearest surface normals. This measures one static fit; it does not establish collision-free animation.
+
+![Shoulder rims, wider white lower tabard and fitted waist bands, a 1200 × 1400 Blender close-up; full motion and likeness remain unaccepted](/images/castle-crusader-1596/torso.png)
+
+The new stills were rendered after saving and reopening the scene. Earlier wrist tests cover rigid gauntlet/equipment attachment only; the revised helmet, shoulders and girdle have no full-action validation. Overall proportions, the cylindrical helmet, ribbon-like plume and cuff fit still need work. The game retains the old 0.10.0 test assets.
+
+<details>
+<summary>Before the shoulder and girdle revision (history, 2026-09-20)</summary>
+
+![Current static holding study, a 1200 × 1400 Blender render; likeness remains unaccepted](/images/castle-crusader-1590/holding.png)
+
+![Original, previous new-body study and current helmet reconstruction, at equal silhouette heights with aspect ratios preserved; Blender studies are not game captures](/images/castle-crusader-1590/comparison.png)
+
+<s>All three stills were rendered after saving and reopening the scene. The earlier four wrist rotations per hand checked rigid attachment of the gauntlets and equipment only; the reconstructed helmet has not been validated across a full action set. Shoulder shape, waist, equipment proportions, cuff fit and plume construction remain unfinished. The installed 0.10.0 assets are unchanged, and overall likeness remains unaccepted.</s>
+
+<s>The comparison shows the original, the preceding new-body study and the current trial at equal silhouette heights.</s>
+
+</details>
 
 <details>
 <summary>Study before helmet reconstruction (history, 2026-09-20)</summary>
