@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T19:57:40+00:00
+lastmod: 2026-09-20T20:40:11+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman has idle and three attack drafts. Upward/downward revisions avoid the pike, but sleeve/torso contact remains under review. None is installed."
+homeSummary: "Pikeman idle, forward and upward drafts clear the tested arm/body surfaces. Downward contact, grip appearance and remaining actions are unfinished; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,7 +1135,31 @@ Previous homepage summary:
 
 ## Pikeman model and motion {#pikeman-thrust}
 
-Four action drafts now exist; none is installed:
+Four offline drafts cover 38 native frames; the new Pikeman is not installed. Close-ups confirmed that the idle left sleeve entered the breastplate. Astra moved the elbow outward while retaining the hand and pike transforms, then carried that correction into all three attacks. Idle and upward thrust now clear the tested arm/body surfaces. The forward thrust needed an additional elbow path; downward thrust still intersects the body.
+
+| Action | Native frames | Checks after reopening the saved scene |
+| --- | --- | --- |
+| Idle | 7 | 241 sampled times: no pike or selected arm/body triangle intersections. |
+| Forward thrust | 10 | 361 samples: those surface checks are clear; a small bone-matrix difference remains at the idle transition. |
+| Upward thrust | 10 | 361 samples: those checks are clear; endpoint bone poses match idle within the previously used tolerance. |
+| Downward thrust | 11 | 401 samples: no pike intersections, but both arm/body partitions still intersect. |
+
+![Idle with the left elbow moved outward, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2035/holding.png)
+
+![Revised forward thrust, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2035/front.png)
+
+![Revised upward thrust, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2035/up.png)
+
+![Downward thrust still has arm/torso intersections, actual 1200 × 1400 Blender still; unfinished](/images/castle-pikeman-2035/down.png)
+
+Samples are spaced 0.025 frame apart. The arm/body test uses skin-weight partitions, excluding mixed-weight seams; it is not a complete self-collision or containment test. The grip still looks loose and the wrist connections need work. Shaft clearance does not establish convincing contact. Full footwork, the other nine action groups and game installation remain unfinished.
+
+A larger fixed elbow rotation cleared one downward pose but failed elsewhere in the motion, so that trial was rejected. The first forward revision cleared the breastplate but introduced a few wrist/pike intersections; a smaller left-elbow adjustment cleared those checks. This work used existing Meshy assets without a new API request. The installed Castle test mod remains 0.13.0.
+
+<details>
+<summary>Earlier shaft-contact revisions and action drafts (history)</summary>
+
+<s>Four action drafts now exist; none is installed:</s>
 
 | Action | Native frames | Current checks |
 | --- | --- | --- |
@@ -1150,7 +1174,7 @@ The upward and downward revisions retain the pike and grip positions while routi
 
 ![Downward candidate retaining the original grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2023/down.png)
 
-Broader arm/body checks found intersections near the left sleeve already in idle, plus right-arm/torso contact during the downward thrust. Their locations and visible impact still need close-up review. Minimizing elbow rotation around the shaft crowded the right arm against the chest; a separate trial sliding the right grip 6 cm along the shaft increased detected body intersections and was rejected. The results address shaft contact, not complete collision or appearance acceptance.
+<s>Broader arm/body checks found intersections near the left sleeve already in idle, plus right-arm/torso contact during the downward thrust. Their locations and visible impact still need close-up review. Minimizing elbow rotation around the shaft crowded the right arm against the chest; a separate trial sliding the right grip 6 cm along the shaft increased detected body intersections and was rejected. The results address shaft contact, not complete collision or appearance acceptance.</s>
 
 Both knees previously bent in the attack direction despite the outward-facing toes. The revision retains foot positions and orientations and changes the knee bend planes. Key-frame measurements show the rear sole staying near the ground while the front foot rises during the step. Dense samples still contain small negative heights below about 0.07 mm, so this does not establish complete ground-contact correctness. Wrist skin, body self-collision and full footwork remain under review.
 
@@ -1178,6 +1202,8 @@ This retained preview predates the knee revision and contains ten actual Blender
 ![Maximum extension, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-1995/thrust.png)
 
 After saving and reopening the scene, triangle checks at 181 times found no intersections between the pike and either hand or the body mesh. This excludes body self-intersection, containment and ground contact. Knee posture, wrist skin deformation, footwork and fidelity to the original still need review. <s>Only a forward-thrust candidate exists on the new body;</s> the additional drafts are listed above; walking and the full action set have not been transferred. The Pikeman is not installed, and the fourteen-unit Castle roster remains unfinished.
+
+</details>
 
 <details>
 <summary>Earlier grip repairs and lowering probe (historical)</summary>
