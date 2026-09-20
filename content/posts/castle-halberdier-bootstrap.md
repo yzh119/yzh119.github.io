@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T12:47:37+00:00
+lastmod: 2026-09-20T12:56:04+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader garment studies continue against the original. A simpler cloth mesh reduced some intersections; the existing modeled garment still lacks the long hem. Neither trial was adopted."
+homeSummary: "The Crusader now has a broader, longer white-and-blue tabard in six draft hit frames, with a new high-resolution still. Garment intersections remain unresolved; the revision is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -163,6 +163,12 @@ The Meshy body already contains white-and-blue garment geometry. A separate comp
 ![Original final hit frame, simplified cloth trial, and existing-garment material trial; the latter two are actual Blender stills, neither adopted](/images/castle-crusader-1788/garment-comparison.jpg)
 
 The original is enlarged independently with nearest-neighbour sampling. Both Blender images use the same canvas scale. This is a silhouette comparison, not a pixel-alignment check or an in-game screenshot.
+
+Diagnostic renders confirmed that the added panels were visible, but the skirts were narrow and left a gap below the belt. The new working draft broadens and lengthens them, raises their top edges and adds blue edging across six hit poses. The first surface-fitting pass could select the other leg or a distant surface; it now uses nearby geometry from the corresponding leg and pelvis.
+
+The 1200 × 1400 still below was rendered after reopening the saved scene. The white-and-blue tabard has fuller coverage, but the broader panels intersect the body at 154 and 161 of 161 sampled times, more often than the previous candidate. Chest-panel intersections also remain. This is a working shape revision; other actions have not received the same garment geometry, and it is not installed.
+
+![Crusader hit recovery with a broader, longer white-and-blue tabard; 1200 × 1400 Blender still, garment intersections unresolved, not a delivery](/images/castle-crusader-1798/recovery.png)
 
 Death still has only an overall height correction: all 22 bound meshes, including the helmet, stayed above the floor at 81 sampled times. Back support, limb placement and cloth/shield intersections remain unresolved. The revised Crusader is not installed.
 
