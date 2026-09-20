@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T20:48:25+00:00
+lastmod: 2026-09-20T21:41:21+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman idle, forward and upward drafts clear the tested arm/body surfaces. Downward contact, grip appearance and remaining actions are unfinished; not installed."
+homeSummary: "Pikeman grip orientation revised; idle and forward-thrust trials added. Cuffs, finger closure and remaining actions are unfinished; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,7 +1135,31 @@ Previous homepage summary:
 
 ## Pikeman model and motion {#pikeman-thrust}
 
-Four offline drafts cover 38 native frames; the new Pikeman is not installed. Close-ups confirmed that the idle left sleeve entered the breastplate. Astra moved the elbow outward while retaining the hand and pike transforms, then carried that correction into all three attacks. Idle and upward thrust now clear the tested arm/body surfaces. The forward thrust needed an additional elbow path; downward thrust still intersects the body.
+The Pikeman grip now has a different orientation around the shaft. In the old idle pose, the left palm axis made an angle of about 147° with the forearm axis, folding the wrist back unnaturally. Astra retained the Meshy hand geometry and pike position, rotated the grip around the shaft and solved the elbow with the original arm lengths. The idle angle is now about 34°. These model axes use the wrist, finger roots and elbow; the values compare poses rather than measure a human joint.
+
+![Revised idle grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2056/holding.png)
+
+![Left-hand close-up, actual 800 × 800 Blender still; cuff gap and finger closure remain unfinished](/images/castle-pikeman-2056/left-close.png)
+
+The revised grip has a seven-frame idle and a ten-frame forward-thrust trial. Reopening the saved scenes and sampling every 0.025 frame gave: holding at 241 times: no intersections in the five tested surface pairs/partitions; front at 361 times: no intersections in the five tested surface pairs/partitions. The tests cover pike/hand and pike/body surfaces plus skin-weight partitions of each arm against the remaining body. They do not establish complete collision or appearance acceptance. A separate set of 19 forward-thrust poses gave axis angles of roughly 17–61° on the left and 9–67° on the right; those samples do not prove continuous-motion extrema.
+
+![Forward-thrust trial with the revised grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2056/front.png)
+
+The fingers still need a tighter grip, and the cuff/skin connection remains unfinished. Upward and downward attacks have not received this grip; the other nine action groups are still missing. The earlier four-action, 38-frame record remains in the history below and must not be combined with these trials as a completed animation set. The new Pikeman is not installed, and the fourteen-unit Castle roster remains in progress.
+
+<details>
+<summary>Rejected wrist-weight and skinning trials</summary>
+
+Assigning all wrist skin to the hand bone exposed a cut stump disconnected from the sleeve. Disabling volume preservation and adjusting the wrist weight transition also failed to resolve the folded pose. None of those changes was carried into the new grip. The revision retains the existing hand mesh, weights and skinning settings; it changes grip orientation and arm pose without another Meshy request.
+
+![Assigning the wrist entirely to the hand bone exposed disconnected ends, actual 800 × 800 Blender still; rejected](/images/castle-pikeman-2056/failed-rigid.png)
+
+</details>
+
+<details>
+<summary>Earlier grip orientation and action checks (history)</summary>
+
+<s>Four offline drafts cover 38 native frames; the new Pikeman is not installed. Close-ups confirmed that the idle left sleeve entered the breastplate. Astra moved the elbow outward while retaining the hand and pike transforms, then carried that correction into all three attacks. Idle and upward thrust now clear the tested arm/body surfaces. The forward thrust needed an additional elbow path; downward thrust still intersects the body.</s>
 
 | Action | Native frames | Checks after reopening the saved scene |
 | --- | --- | --- |
@@ -1155,6 +1179,8 @@ Four offline drafts cover 38 native frames; the new Pikeman is not installed. Cl
 Samples are spaced 0.025 frame apart. The arm/body test uses skin-weight partitions, excluding mixed-weight seams; it is not a complete self-collision or containment test. The grip still looks loose and the wrist connections need work. Shaft clearance does not establish convincing contact. Full footwork, the other nine action groups and game installation remain unfinished.
 
 A larger fixed elbow rotation cleared one downward pose but failed elsewhere in the motion, so that trial was rejected. The first forward revision cleared the breastplate but introduced a few wrist/pike intersections; a smaller left-elbow adjustment cleared those checks. This work used existing Meshy assets without a new API request. The installed Castle test mod remains 0.13.0.
+
+</details>
 
 <details>
 <summary>Downward elbow and guard-position trials (not adopted)</summary>
