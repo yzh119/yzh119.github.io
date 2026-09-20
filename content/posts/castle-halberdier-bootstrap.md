@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T08:30:44+00:00
+lastmod: 2026-09-20T09:52:08+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Archer’s test package is installed. Crusader walking now uses the revised skeleton, with floor and hem-contact corrections shown in a Blender preview. Stride, native timing, likeness and the remaining actions still need work."
+homeSummary: "Crusader’s revised rig now has 32 draft attack and defence frames, shown in Blender previews. Rotation interpolation and several contacts were corrected; upward-attack cloth intersections remain and the model is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -69,6 +69,20 @@ Walking is now being retargeted to the revised skeleton. The first trial transfe
 After saving and reopening, 129 samples including shape-key interpolation found no intersections among the six selected mesh pairs. The right sole stays about 1 mm above the floor at its lowest point, and loop endpoint meshes match. The eight-frame preview remains provisional: stride, body motion and native timing need comparison, the crest has no independent motion, and the remaining actions are unfinished. The game’s Crusader was not replaced.
 
 ![Eight-frame walk on the revised skeleton, rendered in Blender; unaccepted and not installed](/images/castle-crusader-1668/moving.gif)
+
+The revised rig now also has seven frames for each attack direction and eleven for defence: 32 draft frames. Initial floor and garment intersections were accompanied by shield/body contacts in the upward and front attacks. Quaternion sign discontinuities in the upward attack's forearm and the downward attack's shield hand made interpolation take the long rotation path. Aligning adjacent quaternion signs preserved the integer-frame poses, but some shield intersections remained and required a separate recovery-path revision.
+
+Translating the upward attack's shield hand outward did not resolve the contacts and was rejected. The next trial changes the shield's turn during recovery. A fixed camera-forward cloth correction also failed when the torso turned sideways: one trial requested more than twenty centimeters of chest-cloth displacement and stopped before saving. Fitting now follows the torso's orientation. These are Meshy body and equipment meshes animated and revised through Blender scripts written by Astra.
+
+After reopening, 193 samples each for the front and downward attacks and 161 for defence found no intersections among the six selected mesh pairs. The upward attack still has chest-cloth intersections at two sampled times. The previews below are actual Blender sequences, with a wider preview camera to contain the sword sweep; they are not game screenshots. Wrist motion, attack timing, likeness and the remaining actions still need review. The new model is not installed.
+
+![Crusader upward attack draft, seven Blender frames; chest-cloth contacts remain between frames, not installed](/images/castle-crusader-1699/attack_up.gif)
+
+![Crusader front attack draft, seven Blender frames; art and timing remain under review](/images/castle-crusader-1699/attack_front.gif)
+
+![Crusader downward attack draft, seven Blender frames; art and timing remain under review](/images/castle-crusader-1699/attack_down.gif)
+
+![Crusader defence draft, eleven Blender frames; not installed](/images/castle-crusader-1699/defence.gif)
 
 <details>
 <summary>Before shoulder/hem edits and rejected fit trial (history, 2026-09-20)</summary>
