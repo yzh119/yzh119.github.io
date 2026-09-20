@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T11:13:27+00:00
+lastmod: 2026-09-20T11:21:20+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader hit skirt weights were revised, with same-pose Blender diagnostics. Raised-leg intersections decreased but remain; hand and elbow clearance trials failed. The revised model is not installed."
+homeSummary: "Crusader hit recovery was reposed; the blade cleared body and shield at 161 samples. New Blender still and slowed recovery preview show the motion. Garments and overall likeness remain unresolved; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -92,11 +92,30 @@ The turning-cloth fit initially picked a distant body surface and requested abou
 
 ![Two frames for each turn, rendered in Blender; game playback also uses sprite reversal](/images/castle-crusader-1714/turns.png)
 
-Hit received another pass against the six original frames. It now begins in recoil with a raised leg, removing the old idle lead-in. Visible sword directions were revised and the final frame returns to a forward diagonal. The original sword is obscured in frame five; the current interpolation still produces an awkward wrist and is not an accepted reconstruction. At 161 reopened samples, neither the body mesh nor the blade entered the floor. Late recovery still crosses the body and shield, and garment intersections remain.
+Hit now starts in recoil with a raised leg and ends with the sword on a forward diagonal. In frame five, the sword returns toward the viewer, shortening its projected silhouette before turning forward. The original frame is occluded and does not uniquely determine its 3D direction; this remains a candidate interpretation of that silhouette. The opening hand moves 4.5 cm toward screen left and eases back between frames one and two to clear the shoulder armour.
 
-![Revised Crusader hit, six actual Blender frames; recoil starts immediately, with recovery and garments unresolved, not installed](/images/castle-crusader-1735/hitted.gif)
+At 161 reopened samples, the blade intersected neither the body nor the shield, and neither the body mesh nor the blade entered the floor. Sampled glove and grip drift relative to the hand bones stayed below 0.1 mm. Garment intersections remain, overall likeness and native playback are unaccepted, and the revised Crusader is not installed.
 
-![Actual Blender still of the first hit frame, with recoil, raised leg and near-vertical sword](/images/castle-crusader-1728/hit-start.png)
+![Crusader hit candidate, six actual Blender frames; sword recovery revised, garment intersections remain, not installed](/images/castle-crusader-1748/hitted.gif)
+
+![Blender still of frame five; the sword returns toward the viewer, an inferred direction from an occluded reference silhouette](/images/castle-crusader-1748/recovery-pose.png)
+
+![Recovery rendered at quarter-frame intervals and slowed for inspection; actual Blender frames, not native game frame count or playback speed](/images/castle-crusader-1748/recovery.gif)
+
+An away-from-viewer sword pose still crossed the arm and shield, while an oblique pose retained a sampled arm contact; neither was adopted. A separate skirt fit restricted its surface search to the corresponding leg, but requested over 12 cm of displacement in the first frame. It stopped at the deformation limit and was not promoted.
+
+<details>
+<summary>Before the sword-recovery revision (history, 2026-09-20)</summary>
+
+<s>Hit received another pass against the six original frames. It now begins in recoil with a raised leg, removing the old idle lead-in. Visible sword directions were revised and the final frame returns to a forward diagonal. The original sword is obscured in frame five; the current interpolation still produces an awkward wrist and is not an accepted reconstruction. At 161 reopened samples, neither the body mesh nor the blade entered the floor. Late recovery still crosses the body and shield, and garment intersections remain.</s>
+
+![Previous hit recovery retained for comparison](/images/castle-crusader-1735/hitted.gif)
+
+![Previous opening pose, before moving the hand clear of the shoulder armour](/images/castle-crusader-1728/hit-start.png)
+
+</details>
+
+
 
 Garment trials used forward fitting and nearest-body-surface correction. The latter cleared sampled chest-panel contacts, but both skirt panels still intersect during the raised-leg pose, so that branch was not promoted. A separate hand-matrix reconstruction initially dropped scale and enlarged the glove in frame five; it was corrected, with the failed file retained locally.
 
