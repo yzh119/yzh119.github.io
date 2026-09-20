@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T16:39:03+00:00
+lastmod: 2026-09-20T16:57:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader 0.13.0 test installed: thirteen groups, 76 frames, revised armor and shield proportions and attack/hit shield arms. Likeness, garments and transitions remain unfinished."
+homeSummary: "New native-referenced Pikeman body with silver armor and blue-and-gold sleeves/trousers: 35 Meshy credits for modeling and rigging, with HD Blender stills. Not installed; Crusader 0.13.0 remains installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1098,7 +1098,35 @@ Previous homepage summary:
 
 </details>
 
-## Pikeman articulated thrust {#pikeman-thrust}
+## Pikeman model and motion {#pikeman-thrust}
+
+The old Pikeman’s beige sleeves, fleur-de-lis tabard and long skirt differed from the original. Reviewing native holding and all six walking frames led to a new reference with silver chest and waist armor, blue-and-gold sleeves and trousers, and brown boots. The first revision still had a long skirt; that was removed before submission to Meshy.
+
+![Six original Pikeman walking frames, enlarged with nearest-neighbor sampling to inspect costume blocks and trouser silhouettes](/images/castle-pikeman-1946/native-walk.png)
+
+![New Pikeman modeling reference; a generated concept, not a Blender render or game capture](/images/castle-pikeman-1946/concept.png)
+
+The Meshy API generated the new body and returned a humanoid rig: **30 credits** for the mesh and **5 credits** for rigging. Actual renders from four directions retained the short waist armor, blue sleeves and separate trouser legs. Submission used Meshy 7.1, a 30,000-face remeshing target and 4K textures; these parameters do not establish completed animation.
+
+![Rigged Pikeman body, actual 1200 × 1400 Blender still; pike not assembled and not installed](/images/castle-pikeman-1946/body.png)
+
+Astra adjusted preview lighting and matched the UV coordinates of all 57,952 triangles between the original and rigged models before restoring the original material. The earlier rigged preview looked too matte; restoring the material recovered metal reflections on the chest and waist armor. No emission or repainted highlights were added.
+
+![Bent-elbow skinning probe, actual 1200 × 1400 Blender still; this checks one sleeve pose, not an attack animation](/images/castle-pikeman-1946/elbows.png)
+
+The returned rig has 24 bones and no finger bones. The first pose probe was overridden by the imported armature animation and rendered at rest. Clearing that animation allowed the bent-elbow pose to persist in the saved scene; reopening confirmed about 20 cm of hand displacement from the resting pose on each side. Finger closure, pike assembly, the full action set and native-panel appearance remain unfinished. The old separate pike and front-thrust authoring logic are preserved but have not been transferred to this body. Castle mod remains the installed Crusader 0.13.0 test; the new Pikeman is not installed.
+
+<details>
+<summary>Unadopted reference and material previews from this revision</summary>
+
+![First reference revision with the long skirt still present; not submitted to Meshy](/images/castle-pikeman-1946/rejected-skirt.png)
+
+![Matte preview before the original material was restored; not the selected metal appearance](/images/castle-pikeman-1946/matte-trial.png)
+
+</details>
+
+<details>
+<summary>Front-thrust work on the old body (retained motion research, not yet transferred)</summary>
 
 The previous Pikeman front-lunge probe mainly translated the body and pike together. Its limbs did not perform a thrust. Astra has now authored two-arm constraints, torso lean, pelvis travel and a front-leg step in Blender, retaining the separate Meshy body, pike and humanoid rig. Lowering the weapon, thrusting and recovery follow the native ten-frame layout. No new Meshy task was submitted.
 
@@ -1127,6 +1155,8 @@ Grip targets use approximate palm centers rather than wrist joints. The ten key 
 
 Only the front thrust has reached this articulated draft. The complete Pikeman action set, costume revision and game integration remain unfinished. Work on all fourteen Castle creatures continues. <s>The Crusader 0.12.0 local test is still installed.</s> The current Crusader installation is 0.13.0, as documented above.
 
+</details>
+
 ## Archer local test package
 
 The Archer's 16 active groups and 96 frames are now packaged at 1×/2×, with a precomputed 4× cache resized from the 2× images rather than newly rendered at 4×. Installation into Castle mod 0.11.0 preserved the other creatures' assets. Native action-layout and image-format checks returned no errors or warnings; motion quality remains under review.
@@ -1153,7 +1183,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Unit | reviewed state |
 | --- | --- |
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
-| Pikeman | Ten-frame articulated front-thrust draft with two-arm grips, torso motion and stepping; between-frame anchor checks completed. Costume, fingers, full action set and integration remain unfinished. |
+| Pikeman | New silver-armor, blue-sleeve body and 24-bone rig generated; resting and elbow-probe renders completed. Fingers, pike, full actions and integration remain unfinished. Old-body thrust research preserved. |
 | Archer | Installed in private test mod 0.11.0: 16 active groups and 96 frames with body, shadow and outline layers. The test battle loaded 43 body images across six groups. Full visual review, fingers, transitions and unobserved native actions remain open. |
 | Griffin | Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
@@ -1172,6 +1202,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 
 | Unit | Previous record |
 | --- | --- |
+| Pikeman | <s>Ten-frame articulated front-thrust draft with two-arm grips, torso motion and stepping; between-frame anchor checks completed. Costume, fingers, full action set and integration remain unfinished.</s> |
 | Pikeman | <s>mesh, local rig, 7-frame holding and 6-frame walk; separate body/pike two-hand constraint and 10-frame front-lunge probe pass</s> |
 | Crusader | <s>Installed 0.10.0 likeness rejected. The Meshy study now has separate cloth, revised lighting and native-referenced sword/shield placement. Six selected static intersection checks are clear; shoulders, body proportions, likeness and full motions remain unfinished. Not installed.</s> |
 | Monk | <s>Fourteen body-action drafts plus an eleven-frame death trial rejected for robe deformation. All fifteen groups have been attempted; death repair, clothing, effects and integration remain unfinished</s> |
