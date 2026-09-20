@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T01:54:15+00:00
+lastmod: 2026-09-20T02:28:22+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader comparison and Blender stills show revised gold shoulders and headgear. Waist proportions and sword posture remain unfinished; Archer motion work continues."
+homeSummary: "Crusader waist, neck and headgear revisions now share one mesh and rig across thirteen offline motion drafts. Native comparisons and Blender stills are added; likeness remains unaccepted and the game version is unchanged."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -20,18 +20,38 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 Private Crusader test 0.9.0 is installed with thirteen active groups and 76 native frame entries, but the user has explicitly rejected its likeness to the original. Comparison with the native frames still exposes differences in proportions, helmet, shoulders and stance. Art acceptance has failed; work on the full fourteen-unit Castle roster continues.
 
-### Still studies after the likeness feedback
+### Proportions and motion revisions
 
-Matching the full silhouettes to the same displayed height makes the shoulder colors and headgear easier to compare. The latest Blender study gives the upper pauldrons a broad brass surface, increases the helmet and crest-mount height, and extends the trailing feathers. Astra authored the Blender changes to the existing Meshy body; this round made no new Meshy requests.
+The revised Crusader has a lower belt and sword hand and a shorter gap between helmet and shoulders, retaining the broad gold pauldrons and longer feathers. These proportions now live in the rest mesh and skeleton. The world-space lattice used for the still studies has been removed; sword, shield and gauntlets remain rigid and follow their hand joints.
 
-![Original at left, previous study in the middle, latest Blender study at right. Each retains its aspect ratio at equal silhouette height; the original uses nearest-neighbor enlargement.](/images/castle-crusader-1516/comparison.png)
+![Original at left, previous static study in the middle, current rest mesh and skeleton at right. Silhouettes share a displayed height without changing aspect ratios.](/images/castle-crusader-1531/comparison.png)
 
-The comparison still shows a high belt and sword hand, a different blade angle and shield placement, and mismatched white-and-blue cloth areas. These are static studies. The proportion deformation has not been transferred to the rig and full motion set, and the installed 0.9.0 test still has the rejected appearance. Overall likeness remains unaccepted.
+All thirteen motion drafts now use identical mesh coordinates and the revised skeleton. Keyframes and interpolation match the previous motion curves except for pelvis translations used to maintain ground contact and two explicit right-wrist rotation repairs. Meshy supplied the body; Astra authored the Blender revisions and checks. This round submitted no new Meshy requests.
 
-![Latest Crusader appearance study, a 1000 × 1000 Blender still; not installed or visually accepted](/images/castle-crusader-1516/holding.png)
+![Holding pose with the revised proportions, a 1000 × 1000 Blender still; not installed](/images/castle-crusader-1531/holding.png)
+
+![Walking mid-pose from the same model, a 1000 × 1000 Blender still; complete playback review remains open](/images/castle-crusader-1531/moving.png)
+
+Body-versus-sword, shield and feather surface checks found no intersections. A separate floor check caught blade penetration of about 7.5 cm during recoil and 7.9 cm during the downward attack. Local wrist-angle corrections removed these failures in a repeat check at 1/64-frame intervals, without introducing intersections in the tested surface pairs. Finger contact, body self-intersections and full playback are still unverified.
+
+![Downward attack after the blade-floor correction, a 1000 × 1000 Blender still](/images/castle-crusader-1531/attack-down.png)
+
+Cloth color distribution, equipment shapes and overall resemblance still need comparison with the original. Likeness remains unaccepted. The game continues to use test 0.9.0; the installation record below does not include these new proportions.
 
 <details>
 <summary>Earlier proportion, material and short-crest trials (historical; revised above)</summary>
+
+<s>Matching the full silhouettes to the same displayed height makes the shoulder colors and headgear easier to compare. The latest Blender study gives the upper pauldrons a broad brass surface, increases the helmet and crest-mount height, and extends the trailing feathers. Astra authored the Blender changes to the existing Meshy body; this round made no new Meshy requests.</s>
+
+![Original at left, previous study in the middle, latest Blender study at right. Each retains its aspect ratio at equal silhouette height; the original uses nearest-neighbor enlargement.](/images/castle-crusader-1516/comparison.png)
+
+<s>The comparison still shows a high belt and sword hand, a different blade angle and shield placement, and mismatched white-and-blue cloth areas. These are static studies. The proportion deformation has not been transferred to the rig and full motion set, and the installed 0.9.0 test still has the rejected appearance. Overall likeness remains unaccepted.</s>
+
+![Latest Crusader appearance study, a 1000 × 1000 Blender still; not installed or visually accepted](/images/castle-crusader-1516/holding.png)
+
+<s>| Crusader | Test 0.9.0 is installed (13 groups, 76 frames), but the user rejected its likeness. New proportion, material and crest studies are offline stills, not installed revisions. Full motion and in-game visual acceptance remain incomplete. |</s>
+
+
 
 <s>The first trials separate body proportions from shading. Inspection found the body material set to metallic 1 and roughness 1 throughout, including its cloth. A texture-color mask now tests separate metal and cloth responses, alongside shorter legs and a broader torso. The mask is provisional. The proportion changes are a holding-pose study and have not been transferred to the rest mesh, rig and full motion set.</s>
 
@@ -530,7 +550,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | Test 0.9.0 is installed (13 groups, 76 frames), but the user rejected its likeness. New proportion, material and crest studies are offline stills, not installed revisions. Full motion and in-game visual acceptance remain incomplete. |
+| Crusader | Test 0.9.0 remains installed with the user-rejected appearance. Revised mesh, rig proportions and headgear are shared by thirteen offline drafts; recoil and downward-attack blade-floor contacts were repaired. The new drafts are uninstalled, with overall likeness and full playback unaccepted. |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
