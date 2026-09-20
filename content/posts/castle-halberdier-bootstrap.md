@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T12:56:04+00:00
+lastmod: 2026-09-20T13:03:26+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader now has a broader, longer white-and-blue tabard in six draft hit frames, with a new high-resolution still. Garment intersections remain unresolved; the revision is not installed."
+homeSummary: "The Crusader chest panel passed sampled body-intersection checks across hit recoil. The broader skirts remain, with leg intersections and crumpling still unresolved; a new high-resolution still is included."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -166,7 +166,18 @@ The original is enlarged independently with nearest-neighbour sampling. Both Ble
 
 Diagnostic renders confirmed that the added panels were visible, but the skirts were narrow and left a gap below the belt. The new working draft broadens and lengthens them, raises their top edges and adds blue edging across six hit poses. The first surface-fitting pass could select the other leg or a distant surface; it now uses nearby geometry from the corresponding leg and pelvis.
 
-The 1200 × 1400 still below was rendered after reopening the saved scene. The white-and-blue tabard has fuller coverage, but the broader panels intersect the body at 154 and 161 of 161 sampled times, more often than the previous candidate. Chest-panel intersections also remain. This is a working shape revision; other actions have not received the same garment geometry, and it is not installed.
+The chest panel now has pose-dependent local deformation, with a maximum adjustment of about 3.5 mm. After reopening, no chest/body intersections were detected at 161 times including between-frame samples. The skirt panels still intersect at 138 and 153 times, and the raised-leg poses retain crumpling. All three cloth/body pairs are clear in the final native frame. These are authored mesh deformations, not cloth physics.
+
+![Opening hit pose after chest-panel correction; 1200 × 1400 Blender still, skirt intersections and crumpling remain unresolved](/images/castle-crusader-1806/recoil.png)
+
+The working draft retains the broader tabard while its skirt motion is revised. Overall likeness, complete animation and in-game presentation remain unaccepted, and it is not installed.
+
+<details>
+<summary>Before local clearance correction (history)</summary>
+
+<s>The 1200 × 1400 still below was rendered after reopening the saved scene. The white-and-blue tabard has fuller coverage, but the broader panels intersect the body at 154 and 161 of 161 sampled times, more often than the previous candidate. Chest-panel intersections also remain. This is a working shape revision; other actions have not received the same garment geometry, and it is not installed.</s>
+
+</details>
 
 ![Crusader hit recovery with a broader, longer white-and-blue tabard; 1200 × 1400 Blender still, garment intersections unresolved, not a delivery](/images/castle-crusader-1798/recovery.png)
 
