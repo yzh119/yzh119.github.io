@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T14:07:46+00:00
+lastmod: 2026-09-20T14:29:55+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader tabard revision now covers all thirteen draft groups. Selection and turns passed the stated local checks; combat and death remain unresolved. Three high-resolution combat stills are included."
+homeSummary: "Crusader likeness work continues with a taller helmet face and narrower crest. New reference comparisons and high-resolution front and side renders; the old in-game test assets remain installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -19,6 +19,22 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 ## Crusader design correction
 
 The Crusader still fails the likeness review. Comparing five native poses exposes insufficient white-and-blue cloth coverage, rounded pauldrons, and differences in the helmet, crest and sword stance. Earlier wrist, girdle, mesh and weight checks cover individual constraints; they do not establish a faithful design. The fourteen-unit Castle roster remains in progress. The game still contains the rejected **0.10.0 Crusader test assets**.
+
+### Helmet and crest revision (September 20)
+
+The side-by-side holding comparison makes the short helmet face and broad crest easier to see. Astra modified vertices in the existing Meshy helmet, keeping the lower rim registered at the neck, extending the face, and narrowing the crest while reducing its rearward reach. The topology, UVs, textures and Head weights remain unchanged. This used a Blender script with no new Meshy submission.
+
+![Original sprite, previous helmet and revised draft; the Blender panels share camera, crop and scale, while the sprite is enlarged separately for reference](/images/castle-crusader-1860/comparison.png)
+
+![Revised Crusader holding design, actual 1200 × 1400 Blender still; not installed](/images/castle-crusader-1860/holding.png)
+
+![Three-quarter helmet close-up, actual Blender render](/images/castle-crusader-1860/head.png)
+
+![Side helmet close-up, actual Blender render](/images/castle-crusader-1860/side.png)
+
+Both views have been inspected. This revision changes only the holding scene; shoulder armor, cloth folds and overall proportions still need work, and the crest has no independent animation. The earlier design and motion trials remain below, with images from their respective versions. They do not show this helmet applied to every action.
+
+### Earlier garment, proportion and motion trials
 
 ![Five original Crusader poses enlarged with nearest-neighbor sampling, for silhouette, color and equipment comparison](/images/castle-crusader-1565/native.png)
 
