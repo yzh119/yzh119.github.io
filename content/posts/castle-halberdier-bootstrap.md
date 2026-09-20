@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T16:57:18+00:00
+lastmod: 2026-09-20T17:10:26+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "New native-referenced Pikeman body with silver armor and blue-and-gold sleeves/trousers: 35 Meshy credits for modeling and rigging, with HD Blender stills. Not installed; Crusader 0.13.0 remains installed."
+homeSummary: "Crusader helmet, shield and stance revisions include new Blender stills and an unadopted trial; installed 0.13.0 is unchanged. The new Pikeman body and rig still need the full action set."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -17,6 +17,19 @@ All fourteen Castle units have Meshy bootstrap attempts, with modeling, motion r
 The concept fixes the features that need to survive generation: blue-and-gold tabard, brown boots, uncovered face under a steel cap, and a halberd held vertically at the left side. It is a reference for construction rather than an in-game image.
 
 ## Crusader local test package
+
+The installed 0.13.0 appearance was again judged unlike the original. The comparison still shows differences in the straight-sided helmet, shoulder silhouette and stance. A round shield is consistent with the reference; its thickness and raised profile need attention. A new offline candidate tapers the lower helmet, emphasizes the brow and adjusts the shield curvature. Narrowing the stance also raises the pelvis to avoid increasing the knee bend. This actual 1200 × 1400 Blender still belongs to the holding branch only. It is not installed and does not establish likeness acceptance.
+
+![Crusader holding revision candidate, actual Blender render; not installed](/images/castle-crusader-1950/holding.png)
+
+<details>
+<summary>Unadopted stance trial</summary>
+
+The first trial brought the feet closer while retaining pelvis height, increasing the visible knee bend. The second adjusts pelvis height as well. Both remain offline modeling records; neither has been propagated to walking, attacks or the other actions.
+
+![First stance trial, actual Blender still; not adopted](/images/castle-crusader-1950/rejected-stance.png)
+
+</details>
 
 The revised Crusader proportions and shield-arm motions are installed in private Castle mod **0.13.0**. Thirteen groups and 76 frames use a fixed projection, with thicker forearm and leg armor and a larger shield. The front-attack and hit-reaction shield arms were solved again. The first hit frame put the blade into the right shoulder armor; a 3-degree wrist adjustment cleared it. Reopening and sampling 161 times found no blade–body, blade–shield or body–shield intersections. These three surface pairs do not establish complete motion or likeness acceptance.
 
