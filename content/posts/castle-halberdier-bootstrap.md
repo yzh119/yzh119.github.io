@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T10:42:53+00:00
+lastmod: 2026-09-20T11:13:27+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader hit now starts in recoil and uses revised reference sword directions, shown in Blender previews. Body and blade stayed above the floor at 161 samples; recovery contacts, garments and likeness remain unresolved. Not installed."
+homeSummary: "Crusader hit skirt weights were revised, with same-pose Blender diagnostics. Raised-leg intersections decreased but remain; hand and elbow clearance trials failed. The revised model is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -94,11 +94,26 @@ The turning-cloth fit initially picked a distant body surface and requested abou
 
 Hit received another pass against the six original frames. It now begins in recoil with a raised leg, removing the old idle lead-in. Visible sword directions were revised and the final frame returns to a forward diagonal. The original sword is obscured in frame five; the current interpolation still produces an awkward wrist and is not an accepted reconstruction. At 161 reopened samples, neither the body mesh nor the blade entered the floor. Late recovery still crosses the body and shield, and garment intersections remain.
 
-![Revised Crusader hit, six actual Blender frames; recoil starts immediately, with recovery and garments unresolved, not installed](/images/castle-crusader-1728/hitted.gif)
+![Revised Crusader hit, six actual Blender frames; recoil starts immediately, with recovery and garments unresolved, not installed](/images/castle-crusader-1735/hitted.gif)
 
 ![Actual Blender still of the first hit frame, with recoil, raised leg and near-vertical sword](/images/castle-crusader-1728/hit-start.png)
 
 Garment trials used forward fitting and nearest-body-surface correction. The latter cleared sampled chest-panel contacts, but both skirt panels still intersect during the raised-leg pose, so that branch was not promoted. A separate hand-matrix reconstruction initially dropped scale and enlarged the glove in frame five; it was corrected, with the failed file retained locally.
+
+The skirt weights also needed revision: roughly half of their influence came from the pelvis, leaving the hem behind when the leg rose. The waist edge now follows the pelvis while the lower half fully follows its corresponding thigh. Inverse skinning preserves the holding-reference silhouette. The same-pose diagnostic shows less folding into the leg armour. At the same 161 reopened samples, the two skirt/body intersection counts fell from 160/155 to 82/131; contacts remain. This revision currently applies only to the hit draft, not the other actions.
+
+![Same-pose skirt-weight comparison, with cloth in red and body in grey; actual Blender diagnostics, with intersections still present](/images/castle-crusader-1735/weight-diagnostic.png)
+
+Further surface fitting still pinched the panels and was not adopted. Moving the sword hand forward by up to 12 cm also failed. Inspection of intersecting vertices located the opening contact in the shoulder armour and recovery contacts mainly in the sword arm's own forearm. An elbow-routing trial cleared its discrete sample points but rapidly reversed direction, and a denser check found another intersection. Restricting it to one direction did not pass either. These motion trials were not promoted.
+
+<details>
+<summary>Hit preview before the skirt-weight revision (history, 2026-09-20)</summary>
+
+<s>The following preview uses the old skirt weights.</s>
+
+![Hit draft with previous skirt weights](/images/castle-crusader-1728/hitted.gif)
+
+</details>
 
 Death still has only an overall height correction: all 22 bound meshes, including the helmet, stayed above the floor at 81 sampled times. Back support, limb placement and cloth/shield intersections remain unresolved. The revised Crusader is not installed.
 
