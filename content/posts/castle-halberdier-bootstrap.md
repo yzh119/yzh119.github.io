@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-19T23:46:18+00:00
+lastmod: 2026-09-20T00:17:04+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The replacement Crusader is rigged and undergoing motion repairs. Blender stills show holding, hit, low-attack and turn poses; upward attack and death remain unresolved, and the draft is not installed."
+homeSummary: "Crusader drafts now include shield release, a revised fall and repaired attack recovery. Blender stills show the changes; full visual and transition review remains unfinished, and the replacement is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -34,7 +34,24 @@ Turning exposed intersections between the sword guard and shield. Moving only th
 
 ![Turn pose after adjusting both arms, a 1000 × 1000 Blender still; not installed](/images/castle-crusader-1438/turn.png)
 
-Upward-attack recovery and death still contain intersections. Another hit-reaction trial passed the body/equipment surface check but left the sword nearly vertical instead of swinging outward as in the original; that trial was rejected. Crest shape, shoulders, material contrast and stance also await full visual review against the native frames. No VCMI source changes were made.
+The upward-attack recovery now uses revised hand paths. Across 385 sampled poses, the tested body, blade, sword guard and shield have no surface intersections. The sword orientation is preserved; only the hand positions change within that short recovery interval.
+
+The death draft also missed a visible part of the original motion: the Crusader throws the shield into the air as he falls. Previously, it stayed bound to his left hand. The shield, rear grip and straps now move independently after release. The body turns toward the camera, the arms spread, and the sword stays upright before the final collapse.
+
+![Shield release during death, a 1000 × 1000 Blender still of the uninstalled draft](/images/castle-crusader-1449/death-release.png)
+
+An early version lowered the torso too soon and left the flat shield propped up by its rear grip. The current draft delays the collapse and lands the shield at an angle behind the head. At 321 sampled poses, the tested body/equipment and sword/shield surfaces do not intersect, and visible meshes stay above the floor. This does not validate body self-intersections, containment, stable ground support or continuous playback.
+
+![Final body pose and shield landing, a 1000 × 1000 Blender still; timing, hands and landing details remain under review](/images/castle-crusader-1449/death-landed.png)
+
+A separate hit-reaction trial passed the body/equipment surface check but made the sword nearly vertical instead of swinging outward as in the original; that trial was rejected. All thirteen actions remain drafts. Crest shape, shoulders, material contrast, hands, stance and action transitions still need full review. The replacement is not installed, and no VCMI source changes were made.
+
+<details>
+<summary>Recovery and death audit before these revisions (superseded)</summary>
+
+<s>Upward-attack recovery and death still contain intersections. Another hit-reaction trial passed the body/equipment surface check but left the sword nearly vertical instead of swinging outward as in the original; that trial was rejected. Crest shape, shoulders, material contrast and stance also await full visual review against the native frames. No VCMI source changes were made.</s>
+
+</details>
 
 <details>
 <summary>Initial model-generation record (superseded by the rigging and motion work above)</summary>
