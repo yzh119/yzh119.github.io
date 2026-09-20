@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T15:51:50+00:00
+lastmod: 2026-09-20T16:19:31+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "New Crusader armor, shield and stance draft with eight holding frames; not yet replacing installed 0.12.0. Pikeman thrust remains offline."
+homeSummary: "Revised Crusader armor and shield now cover thirteen offline action groups, with a corrected front-attack shield-arm path. Garment intersections and transitions remain unfinished; installed version stays 0.12.0."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -40,7 +40,19 @@ Astra thickened the forearm and leg armor on the existing Meshy model while reta
 
 ![Revised Crusader proportions, actual 1200 × 1400 Blender still; offline holding draft](/images/castle-crusader-1905/holding.png)
 
-All eight holding frames were rendered again and checked in the fixed panel crop, which contains their body silhouettes. Reopening the scene and sampling 113 times measured a minimum body-mesh height about 1.64 mm above the floor. This covers holding-frame placement and body height, not all collisions or other actions. Shoulder and chest contours and shield detailing still differ from the original. The full action set and transitions have not received these changes; the game still uses 0.12.0 as documented above.
+All eight holding frames were rendered again and checked in the fixed panel crop, which contains their body silhouettes. Reopening the scene and sampling 113 times measured a minimum body-mesh height about 1.64 mm above the floor. This covers holding-frame placement and body height, not all collisions or other actions. Shoulder and chest contours and shield detailing still differ from the original. <s>The full action set and transitions have not received these changes; the game still uses 0.12.0 as documented above.</s> Armor and shield proportions now cover all thirteen action groups. The narrower stance remains a holding-only draft, and the game still uses 0.12.0.
+
+### Proportions in motion
+
+Matching the original body and shield vertex coordinates across all thirteen scenes allowed the same proportion changes to be applied consistently. The enlarged thighs also intersected the previously fitted tabard. Transferring body displacement to each garment shape reduced skirt triangle intersections, but did not remove them; the fit remains unfinished.
+
+![Walking pose with revised proportions, actual 1000 × 1167 Blender still; garment fitting remains unfinished](/images/castle-crusader-1915/moving.png)
+
+The larger shield contacted the body during the front attack and recovery. The shield arm was solved again, moving the hand outward along the shield normal by up to 6 cm with a smoothed displacement. Reopening and checking 97 times found no surface intersections for body–shield, blade–shield or body–blade. Chest cloth and both skirt panels still intersected the body. These selected mesh pairs do not establish complete motion or likeness acceptance.
+
+![Front attack frame four, actual 1000 × 1167 Blender still; revised shield-arm path, not installed](/images/castle-crusader-1915/attack.png)
+
+New shield contact during the hit reaction, garment fitting, narrower-stance transitions and overall native likeness remain unfinished. No new Meshy task was submitted and the game package was not updated.
 
 <details>
 <summary>Design and motion trials before the 0.12.0 installation (history, September 20, 2026)</summary>
