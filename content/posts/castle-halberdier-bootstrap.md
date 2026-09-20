@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T13:15:49+00:00
+lastmod: 2026-09-20T13:35:15+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Crusader tabard revision now covers idle, with 257 sampled intersection checks and a matching loop seam. Hit recoil has an intermediate-frame preview; walking and attacks still need the same garment design."
+homeSummary: "The Crusader tabard now covers walking and start/stop transitions, with the specified idle/start/walk and stop/idle joins checked. Walking still has local intersections; the remaining actions need the same revision."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -178,7 +178,17 @@ The broader, longer tabard was also adapted to eight idle frames and the loop en
 
 ![Crusader idle with the broader tabard, an actual Blender still; not installed](/images/castle-crusader-1818/holding.png)
 
-Idle and hit now follow the same garment-coverage design. Walking, attacks, death and the other actions still need that revision, and the new draft is not installed.
+<s>Idle and hit now follow the same garment-coverage design. Walking, attacks, death and the other actions still need that revision, and the new draft is not installed.</s>
+
+Walking now uses the broader, longer white-and-blue tabard while retaining the existing bones and sword/shield motion. The first pass had skirt/body intersections at 50 and 202 sampled times; local correction reduced these to 7 and 142 out of 257 times. Intersections remain unresolved. The loop endpoint meshes match.
+
+![Eight walking draft frames with the new tabard, read left to right across the top then bottom row; actual Blender renders, not game screenshots](/images/castle-crusader-1833/walking.png)
+
+The [walking inspection video](/images/castle-crusader-1833/walking-inspection.mp4) uses these eight frames at 8 fps for inspection. It does not establish the intended in-game gait timing.
+
+Start and stop transitions now use bone poses and cloth shapes from the actual adjoining scenes. Each was reopened and checked at 33 times with no detected intersections among the six listed mesh pairs. At the specified idle→start, start→walk and stop→idle endpoints, the six checked meshes differ by less than one micrometre. Stopping from arbitrary walking phases still needs in-game inspection.
+
+The tabard revision now covers idle, walking, start, stop and hit. Selection, turns, attacks, defence and death still need the same treatment. Overall likeness is unaccepted, and the new draft is not installed.
 
 <details>
 <summary>Before local clearance correction (history)</summary>
