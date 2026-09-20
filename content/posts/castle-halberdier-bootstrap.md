@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T15:41:11+00:00
+lastmod: 2026-09-20T15:51:50+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader 0.12.0 remains installed locally. Pikeman now has a ten-frame articulated thrust draft with grip, garment-weight and stepping revisions, plus high-resolution stills and failed trials; not installed."
+homeSummary: "New Crusader armor, shield and stance draft with eight holding frames; not yet replacing installed 0.12.0. Pikeman thrust remains offline."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -31,6 +31,16 @@ Holding uses a fixed projection with an 87-logical-pixel silhouette and a horizo
 The package includes 1× and 2× bodies and shadows, plus outlines for the relevant groups. Its 4× cache is generated from the 2× images to avoid display-time resizing; it adds no native 4× detail. Format and native-layout validation reported no errors or warnings. Installation updated 507 Crusader resource files, preserved 3,316 other files byte-for-byte, and backed up the old resources. No VCMI source was changed. Models and the complete mod remain private.
 
 A local test battle reached its end. Client logs confirm 40 body images across seven groups: holding, selection, moving, movement start/end, downward attack and death. Only six of the seven downward-attack frames were observed, so this does not establish runtime coverage of all 76 frames. The log also contains 27 encoding, audio and query errors. Window capture failed, leaving no game screenshot to establish visual acceptance. Temporary display settings were restored from the original file after the test.
+
+### Proportion revision draft
+
+Astra thickened the forearm and leg armor on the existing Meshy model while retaining bone lengths and hand grips. The shield expands 16% in its own plane without increasing its thickness. The holding stance narrows foot spacing to 78% of the previous span, with knee and ankle positions solved again while retaining foot orientation. No new Meshy task was submitted.
+
+![Original, installed 0.12.0 and the new proportion draft; fixed-projection offline panel composites, with the new draft not installed](/images/castle-crusader-1905/panels.png)
+
+![Revised Crusader proportions, actual 1200 × 1400 Blender still; offline holding draft](/images/castle-crusader-1905/holding.png)
+
+All eight holding frames were rendered again and checked in the fixed panel crop, which contains their body silhouettes. Reopening the scene and sampling 113 times measured a minimum body-mesh height about 1.64 mm above the floor. This covers holding-frame placement and body height, not all collisions or other actions. Shoulder and chest contours and shield detailing still differ from the original. The full action set and transitions have not received these changes; the game still uses 0.12.0 as documented above.
 
 <details>
 <summary>Design and motion trials before the 0.12.0 installation (history, September 20, 2026)</summary>
