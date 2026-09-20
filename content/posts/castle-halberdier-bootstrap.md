@@ -1,7 +1,7 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T16:19:31+00:00
+lastmod: 2026-09-20T16:25:26+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Revised Crusader armor and shield now cover thirteen offline action groups, with a corrected front-attack shield-arm path. Garment intersections and transitions remain unfinished; installed version stays 0.12.0."
@@ -52,7 +52,15 @@ The larger shield contacted the body during the front attack and recovery. The s
 
 ![Front attack frame four, actual 1000 × 1167 Blender still; revised shield-arm path, not installed](/images/castle-crusader-1915/attack.png)
 
-New shield contact during the hit reaction, garment fitting, narrower-stance transitions and overall native likeness remain unfinished. No new Meshy task was submitted and the game package was not updated.
+<s>New shield contact during the hit reaction, garment fitting, narrower-stance transitions and overall native likeness remain unfinished.</s> The hit-reaction shield arm has since been revised; local blade–body contact, garments, stance transitions and overall likeness remain unfinished. No new Meshy task was submitted and the game package was not updated.
+
+The hit reaction retains six frames, with the shield hand moved outward by up to about 2 cm. Reopening and sampling 81 times found no body–shield or blade–shield intersections. Blade–body contact remains at the first frame, so the full reaction is not accepted. All six frames were rendered again and inspected.
+
+![Hit reaction frame three, actual 1000 × 1167 Blender still; shield-arm revision draft, not installed](/images/castle-crusader-1923/hit.png)
+
+A separate garment trial pushed vertices along nearby body-surface normals, then smoothed their displacement. Intersections remained and local folds looked unnatural. At the same 17 holding samples, smoothing reduced intersecting triangle-pair counts on both skirt panels but increased them on the chest. It was not adopted as the replacement garment set.
+
+![Smoothed garment trial, actual 1000 × 1167 Blender still; unadopted and retained as a failed experiment](/images/castle-crusader-1923/cloth-trial.png)
 
 <details>
 <summary>Design and motion trials before the 0.12.0 installation (history, September 20, 2026)</summary>
