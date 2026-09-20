@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T03:22:57+00:00
+lastmod: 2026-09-20T03:58:30+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader 0.10.0 is installed locally with revised proportions, gold pauldrons, narrower white cloth, a steel shield boss and a blue-white crest. Native comparisons and Blender stills are added; likeness remains under review."
+homeSummary: "Crusader 0.10.0 likeness was rejected. Revised concepts now have a new Meshy body, shown in Blender stills alongside failed attempts; plume, materials and sword-carrying pose still need work. No replacement installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -18,25 +18,52 @@ The concept fixes the features that need to survive generation: blue-and-gold ta
 
 ## Crusader design correction
 
-The user rejected the likeness of Crusader test 0.9.0. Revisions to its proportions, neck, shoulders, white chest cloth, shield boss and crest are now installed as **private test 0.10.0**, with thirteen active groups and 76 native frame entries. Installation and resource loading are verified; overall likeness and continuous playback remain unaccepted. The fourteen-unit Castle roster is still unfinished.
+The installed **0.10.0 Crusader still received a likeness rejection**. The new attempt returns to its modeling reference. Native idle, walk, attack, defence and turn frames expose differences in the helmet, pauldrons, torso proportions and silver-white-gold-blue color layout. Work on the fourteen Castle units continues; the installation record does not establish visual acceptance.
+
+![Five original Crusader poses, enlarged with nearest-neighbor sampling for silhouette and color comparison](/images/castle-crusader-1565/native.png)
+
+Built-in imagegen produced three reference iterations. The first invented a tall chimney above the helmet and pointed shoulders. The second removed the chimney and narrowed the white chest panel, but retained shoulder ornaments and horns. The third removed those ornaments and flattened the gold plates while retaining bright silver armor and a blue-white plume. That third image became the new Meshy input.
+
+![Generated concept iterations: rejected chimney helmet, intermediate shoulders, and the input selected for a Meshy trial](/images/castle-crusader-1565/iterations.jpg)
+
+![High-resolution modeling reference sent to Meshy, generated with built-in imagegen](/images/castle-crusader-1565/concept.jpg)
+
+A new body completed through the Meshy API using meshy-7.1 for **30 credits**, with a requested 30,000-polygon target and 4K textures. Image enhancement was disabled to preserve the reviewed input. Astra wrote the Blender import and inspection script. The saved scene was reopened and rendered from four directions at **1200 × 1400**, with no cropped silhouettes.
+
+![Three-quarter view of the new Meshy body, an actual Blender still; no sword/shield assembly or game installation](/images/castle-crusader-1565/three-quarter.png)
+
+![Side view of the same mesh, an actual Blender still showing the thick plume geometry and shoulder profile](/images/castle-crusader-1565/side.png)
+
+Meshy also returned a humanoid rig for 5 credits. Import inspection confirms the required head, hand and foot bones are present; skin deformation and motion remain unvalidated. The mesh retains the narrower white chest panel and thinner gold pauldrons, but the plume became a thick sheet and the armor looks matte. This is still an empty-handed modeling pose. Gauntlets, feathers, material response and the native sword-carrying silhouette need further work before overall likeness can be accepted. The game continues to use the previous 0.10.0 test assets; this new body has not been exported as a replacement.
+
+<details>
+<summary>0.10.0 installation and appearance revisions (history; returned to modeling on 2026-09-20)</summary>
+
+## Crusader design correction
+
+<s>The user rejected the likeness of Crusader test 0.9.0. Revisions to its proportions, neck, shoulders, white chest cloth, shield boss and crest are now installed as **private test 0.10.0**, with thirteen active groups and 76 native frame entries. Installation and resource loading are verified; overall likeness and continuous playback remain unaccepted. The fourteen-unit Castle roster is still unfinished.</s>
 
 ### Proportions and motion revisions
 
-The revised proportions lower the belt and sword hand and reduce the long gap between helmet and shoulders. Native holding, walking and defence frames also show a narrower white chest panel and more exposed steel. The new material layout follows that distribution, replaces the gold shield boss with dark steel, and makes the pale feathers more visible beside the blue crest.
+<s>The revised proportions lower the belt and sword hand and reduce the long gap between helmet and shoulders. Native holding, walking and defence frames also show a narrower white chest panel and more exposed steel. The new material layout follows that distribution, replaces the gold shield boss with dark steel, and makes the pale feathers more visible beside the blue crest.</s>
 
 ![Original at left, 0.9.0 model in the middle, 0.10.0 model at right. The model images are Blender renders, compared at equal silhouette height with aspect ratios preserved.](/images/castle-crusader-1550/comparison.png)
 
-All thirteen actions share the revised rest mesh and skeleton. Sword and shield remain rigid, and the recoil and downward-attack blade-floor regressions have local wrist corrections. This material revision preserves mesh coordinates, object transforms and animation curves, checked against the preceding drafts. Meshy supplied the body; Astra authored the revisions and motion tools. No new Meshy requests were made in this round.
+<s>All thirteen actions share the revised rest mesh and skeleton. Sword and shield remain rigid, and the recoil and downward-attack blade-floor regressions have local wrist corrections. This material revision preserves mesh coordinates, object transforms and animation curves, checked against the preceding drafts. Meshy supplied the body; Astra authored the revisions and motion tools. No new Meshy requests were made in this round.</s>
 
 ![Test 0.10.0 holding model, a 1000 × 1000 Blender still](/images/castle-crusader-1550/holding.png)
 
 ![Test 0.10.0 walking mid-pose, a 1000 × 1000 Blender still](/images/castle-crusader-1550/moving.png)
 
-All 76 exported frames fit the fixed game camera and canvas. The 1×/2× body, shadow and outline package passes format checks, with a 4× display cache derived from the 2× images; the cache adds no rendered detail. The previous installation was backed up, 507 asset/config files were verified, and 2,684 other existing files were preserved. An automated battle ended and its log confirms 98 distinct 4× resources loaded across seven groups. Audio, encoding and query -1 errors remain in that log, so this establishes resource loading rather than a clean runtime or full in-game visual acceptance. Temporary display settings were restored.
+<s>All 76 exported frames fit the fixed game camera and canvas. The 1×/2× body, shadow and outline package passes format checks, with a 4× display cache derived from the 2× images; the cache adds no rendered detail. The previous installation was backed up, 507 asset/config files were verified, and 2,684 other existing files were preserved. An automated battle ended and its log confirms 98 distinct 4× resources loaded across seven groups. Audio, encoding and query -1 errors remain in that log, so this establishes resource loading rather than a clean runtime or full in-game visual acceptance. Temporary display settings were restored.</s>
 
 ![Offline body-and-shadow composite using the game camera and exported frames; not an in-game screenshot](/images/castle-crusader-1550/game-camera.png)
 
-Blade proportions, armor detail and crest movement still need comparison with the original. Hands, body self-contact, continuous playback and transitions also remain under review. The 0.9.0 installation account below is retained as version history.
+<s>Blade proportions, armor detail and crest movement still need comparison with the original. Hands, body self-contact, continuous playback and transitions also remain under review. The 0.9.0 installation account below is retained as version history.</s>
+
+<s>| Crusader | Private test 0.10.0 installed: 13 groups / 76 frames, with revised proportions, pauldrons, white chest cloth, steel shield boss and blue-white crest. Logs confirm new resources loaded and the test battle ended; likeness, hands and continuous playback remain unaccepted. |</s>
+
+</details>
 
 <details>
 <summary>Earlier proportion, material and short-crest trials (historical; revised above)</summary>
@@ -572,7 +599,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Angel | Meshy humanoid rig, four local wing bones; 8-frame holding and 7-frame flight review accepted; <s>first sword rebind leaves a second vertical rest weapon and is rejected</s>; separate Meshy sword passes static review, but the matching unarmed-body candidate has perforated wings and is rejected |
 | Marksman | Installed 1×/2× test package has 16 active groups /97 frames; combined native logs read 87 body images in 15 groups, with the prone death revision installed. Defence coverage, fingers and action transitions unfinished |
 | Royal Griffin | New flight-specific Meshy mesh has flight, front pounce, hit and defence trials; directional attacks, death, full layers and integration unfinished |
-| Crusader | Private test 0.10.0 installed: 13 groups / 76 frames, with revised proportions, pauldrons, white chest cloth, steel shield boss and blue-white crest. Logs confirm new resources loaded and the test battle ended; likeness, hands and continuous playback remain unaccepted. |
+| Crusader | Installed test 0.10.0 received a likeness rejection. Revised references produced a new Meshy body with four-view static inspection; plume, materials, hands and the native sword pose remain unfinished. New body not installed. |
 | Zealot | Mantle revision 638 installed: 18 groups, 150 slots, 1×/2×. New native logs read 113 body images across 14 groups and three projectile directions. Defence, three special groups and visual acceptance remain unfinished |
 | Champion | Mounted gait and skin-weight repair remain experimental; version26 rejected, with local joint deformation and original gait still unresolved in version25; not installed |
 | Archangel | Separate Meshy sword with a local-wing humanoid rig; holding, 7-frame flight, three 6-frame sword attacks, 10-frame defence, 6-frame hit, and move transitions accepted in review |
