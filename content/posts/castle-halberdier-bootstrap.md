@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T17:20:34+00:00
+lastmod: 2026-09-20T17:31:28+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Crusader helmet and crest proportions remain under revision, with actual Blender front/rear stills and an unadopted trial. Installed 0.13.0 is unchanged; the fourteen-unit Castle roster remains in progress."
+homeSummary: "Pikeman pike placement is repaired; failed grip trials exposed fused source fingers, and the unit remains uninstalled. Crusader likeness and the full fourteen-unit Castle roster remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1149,7 +1149,29 @@ Astra adjusted preview lighting and matched the UV coordinates of all 57,952 tri
 
 ![Bent-elbow skinning probe, actual 1200 × 1400 Blender still; this checks one sleeve pose, not an attack animation](/images/castle-pikeman-1946/elbows.png)
 
-The returned rig has 24 bones and no finger bones. The first pose probe was overridden by the imported armature animation and rendered at rest. Clearing that animation allowed the bent-elbow pose to persist in the saved scene; reopening confirmed about 20 cm of hand displacement from the resting pose on each side. Finger closure, pike assembly, the full action set and native-panel appearance remain unfinished. The old separate pike and front-thrust authoring logic are preserved but have not been transferred to this body. Castle mod remains the installed Crusader 0.13.0 test; the new Pikeman is not installed.
+The Meshy rig has 24 bones and no finger bones. Astra extracted the old pike’s evaluated geometry and placed it from its physical shaft axis, fixing the detached weapon and reversed spearhead. Reopening the scene confirms a 58-degree shaft elevation and both grip targets on that axis. This checks weapon placement and targets; it does not establish a closed hand grip.
+
+![New body and pike assembly draft, actual 1200 × 1400 Blender still; fingers remain open and the unit is not installed](/images/castle-pikeman-1964/assembly.png)
+
+The finger-curl trials failed review. The first bent from the palm; the second moved the bend to the finger roots and adjusted the arm pose. Another camera angle still exposed severe right-hand deformation. Inspection of the untouched body then showed fused fingers and incomplete tips. The hand geometry needs repair or replacement before gripping work continues; a whole-hand cylindrical bend cannot resolve those structural defects. The full action set remains untransferred, the new Pikeman is not installed, and Castle mod retains 0.13.0.
+
+<details>
+<summary>Failed assembly and grip trials</summary>
+
+![Previous detached pike with a reversed spearhead; actual Blender render, not adopted](/images/castle-pikeman-1964/failed-assembly.png)
+
+![Right hand from the second grip trial, actual 800 × 800 Blender close-up; not adopted](/images/castle-pikeman-1964/failed-grip.png)
+
+![Original right hand before grip deformation, actual 600 × 600 Blender close-up showing the source geometry defects](/images/castle-pikeman-1964/source-hand.png)
+
+</details>
+
+<details>
+<summary>Pre-assembly rig inspection (history)</summary>
+
+<s>The returned rig has 24 bones and no finger bones. The first pose probe was overridden by the imported armature animation and rendered at rest. Clearing that animation allowed the bent-elbow pose to persist in the saved scene; reopening confirmed about 20 cm of hand displacement from the resting pose on each side. Finger closure, pike assembly, the full action set and native-panel appearance remain unfinished. The old separate pike and front-thrust authoring logic are preserved but have not been transferred to this body. Castle mod remains the installed Crusader 0.13.0 test; the new Pikeman is not installed.</s>
+
+</details>
 
 <details>
 <summary>Unadopted reference and material previews from this revision</summary>
