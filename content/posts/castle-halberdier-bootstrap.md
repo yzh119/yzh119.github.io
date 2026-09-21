@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T00:29:12+00:00
+lastmod: 2026-09-21T00:41:32+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman hit-reaction draft added: five groups, 44 frames. Release/regrip, downward thrust, cuffs and fingers remain unfinished; not installed."
+homeSummary: "Pikeman hit draft clears the sampled shaft and body checks, with a rendered preview. Downward thrust, cuffs and remaining actions are unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1157,13 +1157,32 @@ The first downward transfer cleared the shaft but left both sleeves intersecting
 
 ### Six-frame hit-reaction draft
 
-The native six-frame reaction informed the backward lean, nearly upright pike, released right hand and return to the idle grip. The left hand continues holding the shaft while the feet retain their positions. Arm targets use the original bone lengths without stretching. The reopened 201-sample audit still finds intersections; this action has not passed review. The added hand/body test excludes the attached arm partition; it still does not cover every self-collision or seam.
+The six-frame reaction retains the native sequence: recoil, raise the pike, release the right hand and return to the grip. A small sideways route keeps the rear shaft away from the leg. The right hand opens before leaving the shaft and reverses that order on recovery. The thumb crossed the shaft halfway through a direct opening, so its bone path now makes a small outward detour; the other fingers retain their opening paths.
+
+![Revised peak recoil, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2103/hit.png)
+
+<video controls loop muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2103/hit.mp4"></video>
+
+This review loop uses six actual Blender renders at 800 × 934 and 12 fps. It is not game footage or an accepted in-game playback rate.
+
+Reopened checks at 201 times found no intersections among the tested pike/hand, pike/body, arm/body and hand/body surface pairs. Bone and pike endpoints match idle; 18 additional samples around those endpoints also cleared the same tests. Sampling and skin-weight partitions limit that result. Seam, footwork and appearance acceptance remain separate work.
+
+![Fifth recovery frame, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2103/recover.png)
+
+The draft set still contains five groups and 44 native frames, with eight groups and 36 frames absent. Downward-thrust intersections, cuffs and finger closure remain unfinished. The new Pikeman is not installed, and this revision used no new Meshy request.
+
+<details>
+<summary>Initial hit draft and failed checks (history)</summary>
+
+<s>The native six-frame reaction informed the backward lean, nearly upright pike, released right hand and return to the idle grip. The left hand continues holding the shaft while the feet retain their positions. Arm targets use the original bone lengths without stretching. The reopened 201-sample audit still finds intersections; this action has not passed review. The added hand/body test excludes the attached arm partition; it still does not cover every self-collision or seam.</s>
 
 ![Peak recoil, actual 1200 × 1400 Blender still; uninstalled action draft](/images/castle-pikeman-2092/hit.png)
 
 ![Fifth frame during recovery, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2092/recover.png)
 
 The endpoints copy the same idle bone and pike channels and match after reopening. Release, regrip and shaft travel require their own checks between those endpoints. Five draft groups now cover 44 native frames; eight groups containing 36 frames remain absent. Downward-thrust intersections, cuffs, finger closure and overall appearance remain unfinished, and the new Pikeman is not installed.
+
+</details>
 
 <details>
 <summary>Rejected recoil poses and paths</summary>
