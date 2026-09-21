@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T17:45:47+00:00
+lastmod: 2026-09-21T17:58:40+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin adds a nine-frame death draft, fixes grounding biased by orphan vertices and settles the wing planes. New stills include a failed trial; acceptance remains open."
+homeSummary: "Royal Griffin stance and visible-height calibration revised across thirteen drafts. New Blender stills accompany a clearly scoped production history; in-game acceptance remains open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,6 +1135,27 @@ Previous homepage summary:
 
 ## Royal Griffin folded wings and stance {#royal-griffin-up}
 
+The Royal Griffin still uses the existing Meshy body and main wings, with Blender repair, rigging and animation tools written by Astra. The working set contains **thirteen offline clips and 85 native frames**: holding, hover, hit, defence, three attack directions, takeoff, flight, landing, two turn halves and death. It has not passed visual or in-game acceptance and is not installed.
+
+The standing pose now tucks the tail behind the body and raises the two foreclaws at different angles. The earlier tail and forward-reaching claws made the silhouette too wide. A separate sizing error came from orphan vertices with no faces: a nominal 95-pixel height produced only about 71 visible pixels. Calibration now uses the actual surface. At matching height, the new pose is roughly 80 pixels wide against 81 for the native image, without horizontal image compression. Head placement, body proportions and feather contours still differ; matching width is not visual acceptance.
+
+![Equal-height comparison: native, previous pose and revised pose; a silhouette check, not a game screenshot](/images/castle-royal-griffin-2787/native-size-comparison.jpg)
+
+![Tail tuck and raised foreclaws, actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2787/holding-oblique.png)
+
+![Revised standing pose, side inspection](/images/castle-royal-griffin-2787/holding-side.png)
+
+All thirteen drafts now use the revised standing pose. The correction fades away at attack peaks, during sustained flight and in the later death frames to retain those authored motions. Turns release the tail tuck gradually, preventing it from swinging out beside the body. Surface vertices remain finite across 1,181 sampled times, and 23 specified seams match within 0.001 mm. Preserved key poses also match their sources. This does not establish collision safety or seamless landing from any flight phase; the hit reaction still dips roughly 0.24 mm below the floor.
+
+![Frontal turn draft, actual 1200 × 1200 Blender still; feathers behind the head still overlap](/images/castle-royal-griffin-2787/turn_l-oblique.png)
+
+![The same turn pose from the side](/images/castle-royal-griffin-2787/turn_l-side.png)
+
+Remaining work includes head and leg deformation, feather intersections, placement within the canvas, timing and game playback. Death has a nine-frame draft grounded from visible surfaces. Sustained flight exports four native frames, with an additional non-exported key for its loop. The record below retains earlier stills, failed trials and stage-specific conclusions; references to a “current” draft inside it refer only to that earlier stage.
+
+<details>
+<summary>September 21 and earlier: Royal Griffin production record and superseded drafts</summary>
+
 The Royal Griffin still uses Meshy body and folded-wing geometry, with Astra authoring the Blender repair, rigging and checks. More shoulder and medial-feather surfaces have been recovered, bringing the wings to 11,848 faces. Two skinned root caps now close selected boundaries. Their color is closer to the adjacent plumage. <s>Their smooth surfaces still need feather relief and a better-looking join.</s> September 21 revision: the short-coverts study below adds surface relief, while the join remains unfinished. Full unfolding and native animation delivery remain unfinished; this Griffin is not installed.
 
 ![Cap-texture candidate before adding coverts, actual 1000 × 1000 Blender still with an additional rear inspection light; not a native action or game capture](/images/castle-royal-griffin-2578/front.png)
@@ -1598,6 +1619,8 @@ Normalizing the weight-selection and playback coordinates, then blending the win
 
 <s>This revision covers the upward-attack trial only. Wing-root shape, claw motion, native likeness and consistency with the other clips still need review. Nothing from this pass is installed in the game.</s>
 
+
+</details>
 
 </details>
 
@@ -4853,5 +4876,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>September 21: homepage summary before the death draft</summary>
 
 <s>Royal Griffin hover and turn drafts, corrected pivot drift, and new Blender stills with discarded poses; feather and in-game transition review remain open.</s>
+
+</details>
+
+<details>
+<summary>September 21: homepage summary before stance calibration</summary>
+
+<s>Royal Griffin adds a nine-frame death draft, fixes grounding biased by orphan vertices and settles the wing planes. New stills include a failed trial; acceptance remains open.</s>
 
 </details>
