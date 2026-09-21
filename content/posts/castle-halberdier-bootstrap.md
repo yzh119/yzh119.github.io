@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T02:35:42+00:00
+lastmod: 2026-09-21T02:56:33+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman gains a six-frame walk with revised foot baselines and pike clearance. Rendered preview added; transitions, cuffs and missing actions remain."
+homeSummary: "Pikeman gains turning and four-frame selection drafts, with HD Blender stills. Death, transitions and appearance remain unfinished; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1145,7 +1145,7 @@ The revised grip has a seven-frame idle and a ten-frame forward-thrust trial. Re
 
 ![Forward-thrust trial with the revised grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2056/front.png)
 
-<s>The revised grip now has idle, forward, upward and downward drafts covering 38 native frames.</s> <s>Adding hit reaction brings the draft set to five groups and 44 frames.</s> <s>Defence adds a sixth draft group, for 57 frames; acceptance remains unfinished.</s> Walking brings the set to seven draft groups and 63 frames, with six groups and 17 frames absent; appearance remains unaccepted. The upward draft clears the pike/hand, pike/body and selected arm/body surface tests at 361 sampled times. Downward thrust: Arm/torso intersections remain in the 401-sample audit; unfinished.
+<s>The revised grip now has idle, forward, upward and downward drafts covering 38 native frames.</s> <s>Adding hit reaction brings the draft set to five groups and 44 frames.</s> <s>Defence adds a sixth draft group, for 57 frames; acceptance remains unfinished.</s> <s>Walking brings the set to seven draft groups and 63 frames, with six groups and 17 frames absent; appearance remains unaccepted.</s> Ten authored drafts now cover twelve native groups and 75 slots, including duplicate turns; five death frames remain absent and appearance is unaccepted. The upward draft clears the pike/hand, pike/body and selected arm/body surface tests at 361 sampled times. Downward thrust: Arm/torso intersections remain in the 401-sample audit; unfinished.
 
 All three attacks now copy the same idle bone and pike channels at their endpoints. Reopened endpoint matrices match idle; another 18 times per action check the edited neighborhoods. This removes the small discrepancy from repeated pose solving, without establishing velocity or acceleration continuity.
 
@@ -1153,7 +1153,7 @@ All three attacks now copy the same idle bone and pike channels at their endpoin
 
 ![Downward thrust with the revised grip, actual 1200 × 1400 Blender still; an uninstalled draft](/images/castle-pikeman-2070/down.png)
 
-The first downward transfer cleared the shaft but left both sleeves intersecting torso-weighted surfaces near the armor. Further elbow-path revisions addressed those locations; moving only the right arm did not remove the left-side intersection. Another elbow path cleared the peak pose but still intersected during the full motion, so it was not adopted. These tests remain limited by sampling and mesh partitions. Finger closure, cuff connections, full footwork and the other <s>nine</s> eight action groups are unfinished. The new Pikeman is not installed.
+The first downward transfer cleared the shaft but left both sleeves intersecting torso-weighted surfaces near the armor. Further elbow-path revisions addressed those locations; moving only the right arm did not remove the left-side intersection. Another elbow path cleared the peak pose but still intersected during the full motion, so it was not adopted. These tests remain limited by sampling and mesh partitions. Finger closure, cuff connections, full footwork and the remaining <s>nine</s> <s>eight</s> death action group are unfinished. The new Pikeman is not installed.
 
 ### Six-frame hit-reaction draft
 
@@ -1169,7 +1169,27 @@ Reopened checks at 201 times found no intersections among the tested pike/hand, 
 
 ![Fifth recovery frame, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2103/recover.png)
 
-<s>The draft set still contains five groups and 44 native frames, with eight groups and 36 frames absent.</s> <s>The September 21 defence trial brings this to six draft groups and 57 frames; seven groups containing 23 frames remain absent.</s> Walking brings the set to seven draft groups and 63 frames, with six groups and 17 frames absent; appearance remains unaccepted. <s>Defence and downward-thrust intersections, cuffs and finger closure remain unresolved. The new Pikeman is not installed.</s> The revised defence clears the current surface checks; downward thrust, cuffs, finger closure and appearance remain unfinished. The new Pikeman is still not installed.
+<s>The draft set still contains five groups and 44 native frames, with eight groups and 36 frames absent.</s> <s>The September 21 defence trial brings this to six draft groups and 57 frames; seven groups containing 23 frames remain absent.</s> <s>Walking brings the set to seven draft groups and 63 frames, with six groups and 17 frames absent; appearance remains unaccepted.</s> Ten authored drafts now cover twelve native groups and 75 slots, including duplicate turns; five death frames remain absent and appearance is unaccepted. <s>Defence and downward-thrust intersections, cuffs and finger closure remain unresolved. The new Pikeman is not installed.</s> The revised defence clears the current surface checks; downward thrust, cuffs, finger closure and appearance remain unfinished. The new Pikeman is still not installed.
+
+### Turning and selection drafts
+
+The native turn uses two halves of two frames each. Battle playback runs the first half, flips the creature’s facing, then runs the second. All four source images in groups 9 and 10 match groups 7 and 8 byte for byte, so those groups reuse the same drafts. They are not movement-start and movement-end animations; this Pikeman source has no groups 20 or 21.
+
+![Front-facing turn pose, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2161/turn-front.png)
+
+![Side-facing pose from the second half, actual Blender still; the in-game facing-flip transition remains untested](/images/castle-pikeman-2161/turn-side.png)
+
+The first attempt drove the pike butt through the right thigh and shin. A small outward and forward translation moves the weapon clear while both hands follow the shaft. Reopening each revised scene and checking 41 times found no intersections among the seven tested pike/hand, pike/body, arm/body and hand/body surface categories. This is a limited surface test. Foot pivots, idle transitions and the facing flip after native crop registration still need review. These halves also cannot serve directly as a complete 180-degree turn in the 3D battlefield.
+
+The four-frame selection draft follows the source’s short pike lift: dip the tip slightly, then bring the weapon toward vertical. Both feet stay in place, the hands retain their grip and the torso leans back slightly.
+
+![Second selection frame, actual 1200 × 1400 Blender still](/images/castle-pikeman-2161/select-start.png)
+
+![Raised-pike final selection pose, actual Blender still; its return to idle remains unfinished](/images/castle-pikeman-2161/select-raised.png)
+
+A reopened 121-time audit found no intersections in the same seven surface categories. The fourth pose retains the native raised weapon; the jump back to idle has not been resolved, so this is not an accepted loop. Ten authored action drafts now cover twelve native groups and 75 frame slots, including duplicate turn groups. The five death frames remain absent. Downward-thrust intersections, cuffs, fingers and appearance remain unfinished; the new Pikeman is not installed.
+
+Walking direction needs another check as well. The averaged toe direction differs from the current stride direction by about 43 degrees. Toe direction is only a proxy for facing, and neither torso alignment nor runtime heading has been calibrated. The earlier hypothetical-speed test did not cover this issue.
 
 ### Six-frame walking draft
 
@@ -1185,7 +1205,7 @@ This review loop uses six actual Blender renders at 800 × 934 and 12 fps, not g
 
 The first draft inherited staggered idle foot positions, producing one large step and one small step. Its pike butt also crossed the advancing right leg. The revision aligns the fore–aft foot baselines and moves the pike slightly to the creature’s right. Changing the pike yaw alone still intersected the leg and was rejected.
 
-A separate trajectory check adds hypothetical constant forward travel and finds the planted foot-bone position nearly stable. That speed has not been connected to VCMI or the 3D battlefield, so this is not proof of in-game foot planting. Start/stop transitions, foot roll, cuffs and fingers remain unfinished. There are now seven draft groups and 63 frames, with six groups containing 17 frames absent. The new Pikeman is not installed.
+A separate trajectory check adds hypothetical constant forward travel and finds the planted foot-bone position nearly stable. That speed has not been connected to VCMI or the 3D battlefield, so this is not proof of in-game foot planting. Start/stop transitions, foot roll, cuffs and fingers remain unfinished. <s>There are now seven draft groups and 63 frames, with six groups containing 17 frames absent.</s> Ten authored drafts now cover twelve native groups and 75 slots, including duplicate turns; five death frames remain absent and appearance is unaccepted. The new Pikeman is not installed.
 
 ### Thirteen-frame defence trial
 
@@ -1201,7 +1221,7 @@ Yaw changes, lateral shifts and grip shifts alone did not resolve the contact. A
 
 ![Rejected raised-elbow pose, actual Blender still; a clear local collision test does not establish pose fidelity](/images/castle-pikeman-2133/rejected-elbow.png)
 
-<s>The set remains six draft groups and 57 frames, with seven groups containing 23 frames absent.</s> Walking brings the set to seven draft groups and 63 frames, with six groups and 17 frames absent; appearance remains unaccepted. Downward-thrust intersections, cuffs, finger closure, bracing and overall appearance remain unfinished. The new Pikeman is not installed.
+<s>The set remains six draft groups and 57 frames, with seven groups containing 23 frames absent.</s> <s>Walking brings the set to seven draft groups and 63 frames, with six groups and 17 frames absent; appearance remains unaccepted.</s> Ten authored drafts now cover twelve native groups and 75 slots, including duplicate turns; five death frames remain absent and appearance is unaccepted. Downward-thrust intersections, cuffs, finger closure, bracing and overall appearance remain unfinished. The new Pikeman is not installed.
 
 <details>
 <summary>Earlier defence draft and failed checks (September 21 history)</summary>
