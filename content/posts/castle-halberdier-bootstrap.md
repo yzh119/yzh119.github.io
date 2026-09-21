@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin wing-root work, lighting diagnostics and lower folded wing tips, with new Blender stills. The idle silhouette remains unfinished."
+homeSummary: "Royal Griffin wing-root and lighting studies, followed by earlier wing lift and folding during the lunge. New Blender stills document the unfinished attack draft."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1203,11 +1203,22 @@ The original idle frame also shows the creature standing on its hind legs with r
 
 Across 65 sampled times, the wing stays approximately 16 centimeters above the floor at its lowest point, and loop endpoints match. This does not establish collision clearance or pose fidelity. Folded width, feather intersections and the complete action set remain unfinished.
 
-A separate **nine-frame front-attack draft** now starts from the folded stance, lunges forward and returns. Sampling 65 times confirms identical body and wing vertices at the endpoints, with the first pose also matching the new folded stance. This remains an offline draft: lunge timing, claw deformation, collision clearance, other attack directions and game integration are unfinished.
+The front attack now lifts its wings earlier. Reviewing all nine original frames showed that the wings rise before the forward strike and lower as the claws reach. The revised draft opens fully at frame three, then folds through the lunge. Its body and wing vertices match the standing pose at both endpoints across the 65-time check. Foreclaw extension, hind-leg motion, feather intersections and the game camera still need work; this remains an offline Blender study.
+
+![Earlier wing lift, frame three of the revised draft; actual 1200 × 1200 Blender render](/images/castle-royal-griffin-2673/attack-03.png)
+
+![Wings lowering during the forward lunge, frame five; actual Blender render, not an accepted game animation](/images/castle-royal-griffin-2673/attack-05.png)
+
+<details>
+<summary>September 21: earlier attack draft with delayed wing lift</summary>
+
+<s>A separate **nine-frame front-attack draft** now starts from the folded stance, lunges forward and returns. Sampling 65 times confirms identical body and wing vertices at the endpoints, with the first pose also matching the new folded stance. This remains an offline draft: lunge timing, claw deformation, collision clearance, other attack directions and game integration are unfinished.</s>
 
 ![Starting stance of the nine-frame front-attack draft, actual Blender still](/images/castle-royal-griffin-2667/attack-01.png)
 
 ![Forward reach in the same draft, actual Blender still; this is not an accepted in-game animation](/images/castle-royal-griffin-2667/attack-05.png)
+
+</details>
 
 <details>
 <summary>September 21: dark-band and fill-light comparisons</summary>
