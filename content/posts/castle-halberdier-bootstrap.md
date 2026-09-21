@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T19:25:52+00:00
+lastmod: 2026-09-21T20:09:49+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin holding and nine-frame death drafts now share the revised rig and standing pose. Wing deformation and the remaining actions are unfinished."
+homeSummary: "Ordinary Griffin now has 13 Blender action drafts and 85 native frames; wing deformation and in-game review remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,44 @@ Previous homepage summary:
 
 </details>
 
-## Griffin standing and death drafts {#griffin-binding}
+## Griffin action drafts {#griffin-binding}
+
+The ordinary Griffin now has **13 editable Blender clips, covering 85 native frames**, on the revised rig: holding, hover, hit, defence, three attacks, takeoff, flight, landing, two turn halves and death. Meshy supplied the textured mesh; Astra wrote the rigging and animation scripts. These are offline drafts. Wing-root deformation, feather overlap and likeness still need work before installation and battle review.
+
+Flight uses four poses for each of takeoff, movement and landing. A tail control brings the tail behind the flying body, while the wing stroke now has a clearer downstroke. The movement loop keeps a fixed body height. Reopening confirms the authored takeoff-to-flight seam, flight loop and the chosen flight-to-landing seam; the engine can begin landing at other wing phases, which remains unverified.
+
+![Flight downstroke, actual 900 × 900 Blender render](/images/castle-griffin-2852/flight.png)
+
+The first upward attack looked like horizontal flight. The revision raises the torso and lets the hind legs trail below. The downward attack has less body pitch than its first draft, though it still looks too steep from this camera. All three attack groups retain nine frames and return to the common standing pose.
+
+![Forward attack draft, actual Blender render](/images/castle-griffin-2852/front.png)
+
+![Upward attack with revised torso and hind legs, actual Blender render](/images/castle-griffin-2852/up.png)
+
+![Downward attack draft; dive angle and claw reach remain under review](/images/castle-griffin-2852/down.png)
+
+Defence opens the wings while the feet stay down. Hover turns the head with a small claw gesture. Hit adds recoil; keeping the centres of the foot regions fixed initially allowed the toes to sink about 0.0219 model units below the floor. A further pass adjusts each hind leg against its selected foot-surface minimum. This does not establish rigid soles or correct leg anatomy. Reopening and sampling the corrected hit at 385 times reduces the minimum surface height error to less than 0.000001 model units.
+
+![Defence draft, actual Blender render; the far-wing contour still rises behind the head](/images/castle-griffin-2852/defence.png)
+
+![Recoil after the foot-height correction, actual Blender render](/images/castle-griffin-2852/hit.png)
+
+Each turn half has three native frames. The body rotates around the hind-foot region and slightly opens its wings. The two halves meet exactly in the unmirrored scene. The game's facing flip and double-wide placement still need a separate screen-space check.
+
+![Frontal turn pose, actual Blender render; asymmetric wings and shoulder shape remain unfinished](/images/castle-griffin-2852/turn.png)
+
+<details>
+<summary>Earlier attack poses from this pass</summary>
+
+![Superseded upward attack: the body stayed too horizontal](/images/castle-griffin-2852/rejected-up.png)
+
+![Superseded downward attack: excessive pitch made the lunge look vertical](/images/castle-griffin-2852/rejected-down.png)
+
+</details>
+
+<details>
+<summary>September 21: previous two-clip stage, superseded by the action set above</summary>
+
 
 The regular Griffin keeps its existing Meshy flight-pose mesh. Astra’s revised Blender rig now supports an **eight-frame holding draft and a nine-frame death draft** from the same standing pose. These two clips use the newer continuous weights and head/leg controls. The seven earlier animation candidates remain on their older branch; they are not a unified delivery. Nothing from this new Griffin branch is installed.
 
@@ -1190,6 +1227,8 @@ The death trial remains rejected. Its original last frame looked airborne, with 
 
 </details>
 
+
+</details>
 
 </details>
 
