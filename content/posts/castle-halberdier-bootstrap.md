@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T06:05:22+00:00
+lastmod: 2026-09-21T06:39:42+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman wrists and cuffs now share a revised working set, with corrected thrust and death poses, new Blender close-ups and previews. Not installed."
+homeSummary: "Revised Pikeman finger curls now cover eleven offline action drafts, with new close-ups of a rejected thumb pose and a weight-smoothing trial. The grip remains unfinished and is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1139,6 +1139,8 @@ Eleven Pikeman action drafts cover thirteen native groups and 80 frame slots, in
 
 ![Current downward-thrust peak, actual 1200 × 1400 Blender still; blog review framing, not installed](/images/castle-pikeman-2294/down-full.png)
 
+The later [finger revision](#pikeman-fingers) is in the working set; its thumb experiments remain separate. The wrist images below retain the finger poses from that earlier stage.
+
 ### Cuffs and wrist poses {#pikeman-cuffs}
 
 Astra reused the existing Meshy body and donor hands, shortened the excess wrist stumps, revised their weights and rebuilt the connection from each sleeve opening. Earlier skin extensions and longer sleeves left the folded stump underneath unresolved.
@@ -1153,9 +1155,30 @@ The downward-thrust right wrist and falling left wrist also folded back too far.
 
 Reopening all eleven scenes and sampling 671 times found no intersections in the tested hand, arm, cuff, shaft and body surface combinations, including mutual hands. Denser checks at 401 times for thrust and 161 for death also passed those comparisons. Sampling and mesh partitions limit this evidence: complete self-collision, seam topology and ground contact remain unproven. The fingers and cuff materials still need work.
 
-### Current thrust and death previews
+### Finger curls and the thumb trial {#pikeman-fingers}
 
-These eleven-frame thrust and five-frame death previews use actual renders of the current Blender scenes at 800 × 934 and 12 fps. Both retain one fixed blog-review camera without per-frame resizing. They are not gameplay footage, and the playback rate has not been calibrated to the game.
+The September 21 finger revision is now in all eleven offline action drafts. Hit and death retain their release timing. Across 671 sampled poses, the tested hand/shaft, body and cuff combinations, plus five modified digit regions against the rest of their respective hands, showed no surface intersections. Another 87 samples covered rapid release windows. Body and pike motion stayed unchanged. These tests do not establish complete self-collision, containment or contact area, and the grip is still unfinished.
+
+![Revised finger curls in idle, actual 800 × 800 Blender still; adopted offline draft with the thumb still unfinished](/images/castle-pikeman-2313/four-fingers.png)
+
+Rotating the thumb exposed a skinning problem at its base. Across one mesh edge only about 0.68 mm long, the thumb-root weight jumps from roughly 0.74 to 0.02. Bringing the thumb toward the shaft exaggerated that discontinuity into stretched strips of skin.
+
+<details>
+<summary>Rejected thumb pose</summary>
+
+![Rejected trial: tested shaft intersections are zero, but the thumb base is visibly distorted; actual 800 × 800 Blender still](/images/castle-pikeman-2313/rejected-thumb.png)
+
+The tested hand/shaft and thumb/other-hand surface pairs were clear. The render still looked poor. Smoothing weights along mesh adjacency reduced the strips without fixing them, so neither trial replaced the working set.
+
+</details>
+
+A later trial smooths palm and thumb-root weights by spatial distance before adjusting opposition again. The left-hand candidate below reduces the strips and clears the same static surface tests. The right hand, animated deformation and palm details still need review. This candidate is saved separately from the adopted finger-curl revision and is not installed. Astra authored the Blender repair scripts using existing Meshy geometry; this batch made no new Meshy requests.
+
+![Left-thumb candidate after spatial weight smoothing, actual 800 × 800 Blender still; static trial, not yet propagated to animation](/images/castle-pikeman-2313/thumb-weight-trial.png)
+
+### Thrust and death previews from the wrist revision
+
+These eleven-frame thrust and five-frame death previews use actual renders of <s>the current Blender scenes</s> the scenes saved at the wrist-revision stage at 800 × 934 and 12 fps. Both retain one fixed blog-review camera without per-frame resizing. They are not gameplay footage, and the playback rate has not been calibrated to the game.
 
 <video controls loop muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2294/down.mp4"></video>
 
