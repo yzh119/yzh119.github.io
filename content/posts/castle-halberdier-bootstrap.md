@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T06:39:42+00:00
+lastmod: 2026-09-21T07:45:37+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Revised Pikeman finger curls now cover eleven offline action drafts, with new close-ups of a rejected thumb pose and a weight-smoothing trial. The grip remains unfinished and is not installed."
+homeSummary: "Pikeman thumb weights, grip and release paths are revised across eleven offline action drafts. New hand close-ups accompany the sampled checks; the model is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1139,7 +1139,7 @@ Eleven Pikeman action drafts cover thirteen native groups and 80 frame slots, in
 
 ![Current downward-thrust peak, actual 1200 × 1400 Blender still; blog review framing, not installed](/images/castle-pikeman-2294/down-full.png)
 
-The later [finger revision](#pikeman-fingers) is in the working set; its thumb experiments remain separate. The wrist images below retain the finger poses from that earlier stage.
+The later [finger and thumb revision](#pikeman-fingers) is in the working set; rejected trials are retained in its history section. The wrist images below retain the finger poses from that earlier stage.
 
 ### Cuffs and wrist poses {#pikeman-cuffs}
 
@@ -1155,7 +1155,24 @@ The downward-thrust right wrist and falling left wrist also folded back too far.
 
 Reopening all eleven scenes and sampling 671 times found no intersections in the tested hand, arm, cuff, shaft and body surface combinations, including mutual hands. Denser checks at 401 times for thrust and 161 for death also passed those comparisons. Sampling and mesh partitions limit this evidence: complete self-collision, seam topology and ground contact remain unproven. The fingers and cuff materials still need work.
 
-### Finger curls and the thumb trial {#pikeman-fingers}
+### Finger grip and release motion {#pikeman-fingers}
+
+The later thumb revision is now part of all eleven offline action drafts. Astra smoothed weights between the palm, thumb root and distal segment, then adjusted opposition using the existing Meshy geometry. The old thumb segments formed an axis angle of about 128°. The closed poses now measure roughly 85° on the left and 65° on the right, reducing the folded-back tip. These are model-pose comparisons, not clinical joint measurements.
+
+![Current left grip, actual 800 × 800 Blender still; body hidden to inspect the palm, adopted offline draft](/images/castle-pikeman-2346/left-grip.png)
+
+![Current right grip, actual 800 × 800 Blender still; body hidden, with palm folds and contact appearance still under review](/images/castle-pikeman-2346/right-grip.png)
+
+Animation exposed contacts that the idle pose did not. Sliding grips during front thrust, defence and downward thrust brought the shaft into the thumb base; the downward thrust also caught the right thumb tip. Closed-pose corrections cleared those cases, but denser sampling found brief contacts while releasing the shaft during hit and death. Small release detours now take the thumb around the shaft. The downward thrust adds a correction following its existing thrust envelope, returning to the same grip at both ends.
+
+![Right hand opening during hit, actual 800 × 800 Blender still along the revised release path](/images/castle-pikeman-2346/release.png)
+
+Reopened scenes cleared the tested hand, cuff, body and shaft surface combinations, plus ten digit regions against the rest of their respective hands, across 1,283 sampled poses. Of these, 805 cover denser hit, death and downward-thrust checks. Body and pike motion were retained. At the checked idle joins, evaluated mesh positions differ by less than 0.001 mm. Sampling and mesh partitions do not establish continuous collision freedom, complete self-collision or contact area, and velocity continuity remains unaccepted. This Pikeman is not installed; native likeness, materials, walk heading and landings still need work.
+
+<details>
+<summary>Earlier finger curls and thumb trials (history, including rejected images)</summary>
+
+The earlier account is retained below. Those static candidates remain separate from the later animated revision adopted above.
 
 The September 21 finger revision is now in all eleven offline action drafts. Hit and death retain their release timing. Across 671 sampled poses, the tested hand/shaft, body and cuff combinations, plus five modified digit regions against the rest of their respective hands, showed no surface intersections. Another 87 samples covered rapid release windows. Body and pike motion stayed unchanged. These tests do not establish complete self-collision, containment or contact area, and the grip is still unfinished.
 
@@ -1172,9 +1189,11 @@ The tested hand/shaft and thumb/other-hand surface pairs were clear. The render 
 
 </details>
 
-A later trial smooths palm and thumb-root weights by spatial distance before adjusting opposition again. The left-hand candidate below reduces the strips and clears the same static surface tests. The right hand, animated deformation and palm details still need review. This candidate is saved separately from the adopted finger-curl revision and is not installed. Astra authored the Blender repair scripts using existing Meshy geometry; this batch made no new Meshy requests.
+A later trial smooths palm and thumb-root weights by spatial distance before adjusting opposition again. The left-hand candidate below reduces the strips and clears the same static surface tests. <s>The right hand, animated deformation and palm details still need review.</s> The later revision has passed the sampled motion checks above; palm appearance remains under review. This candidate is saved separately from the adopted finger-curl revision and is not installed. Astra authored the Blender repair scripts using existing Meshy geometry; this batch made no new Meshy requests.
 
 ![Left-thumb candidate after spatial weight smoothing, actual 800 × 800 Blender still; static trial, not yet propagated to animation](/images/castle-pikeman-2313/thumb-weight-trial.png)
+
+</details>
 
 ### Thrust and death previews from the wrist revision
 
