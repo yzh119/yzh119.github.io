@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T20:35:16+00:00
+lastmod: 2026-09-21T20:47:19+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin elbow-rig study reduces standing stretch, but the folded silhouette is unfinished; the thirteen-action branch remains separate."
+homeSummary: "Griffin shoulder-and-elbow rig now has 13 experimental clips; turns revised, folded silhouette and game review remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,33 @@ Previous homepage summary:
 
 </details>
 
-## Griffin action drafts {#griffin-binding}
+## Griffin shoulder-and-elbow motion {#griffin-binding}
+
+The eleven-bone Griffin rig now has **thirteen experimental clips and 85 native frames**. Meshy's textured mesh is unchanged; Astra's Blender scripts divide the folding motion between shoulders and elbows. The wings fold slightly farther back than in the single-pose study, but their width and asymmetry remain unfinished. This branch is offline and has not replaced the game's Griffin. The preceding nine-bone clips remain available separately.
+
+![Holding on the eleven-bone rig, actual 1200 × 1200 Blender render; folded silhouette remains under review](/images/castle-griffin-2887/holding.png)
+
+As an action opens the wings, the extra elbow fold fades out. Flight, the checked attack peaks and the later death poses retain their previous surfaces within 0.000001 model units. The new work mainly changes the approach to and return from those poses. It does not resolve the pre-existing feather intersections or establish faithful timing.
+
+![Early attack, with the elbows beginning to unfold](/images/castle-griffin-2887/front.png)
+
+![Early defence pose on the same rig](/images/castle-griffin-2887/defence.png)
+
+![Takeoff transition; body and wing controls remain independently editable](/images/castle-griffin-2887/move_start.png)
+
+![Flight downstroke; the fully unfolded pose is preserved](/images/castle-griffin-2887/moving.png)
+
+The first turn migration partly unfolded the wings during the rotation and raised the measured maximum edge stretch to about 4.98×. Keeping the folded wing pose while the body turns brings that measurement to about 2.94×. Both figures use rest edges longer than 0.003 model units. The two turn halves meet in the unmirrored scene; the engine's facing flip and double-wide screen placement are still unverified.
+
+![Revised frontal turn pose; the wings stay folded during the body rotation](/images/castle-griffin-2887/turn.png)
+
+All 85 native frames were rendered and reviewed. Reopening and sampling the first migration at 2,317 times found finite coordinates and standing seams below 0.000001 model units; the revised turns were checked separately at 130 times. Death still dips roughly 0.000023 model units below the floor between grounding keys. Collision, the folded silhouette, claw reach, arbitrary-phase landing and in-game playback remain unfinished.
+
+![Early death transition on the eleven-bone rig](/images/castle-griffin-2887/death.png)
+
+<details>
+<summary>September 21: nine-bone actions and the separate elbow standing study</summary>
+
 
 The ordinary Griffin now has **13 editable Blender clips, covering 85 native frames**, on the revised rig: holding, hover, hit, defence, three attacks, takeoff, flight, landing, two turn halves and death. Meshy supplied the textured mesh; Astra wrote the rigging and animation scripts. These are offline drafts. Wing-root deformation, feather overlap and likeness still need work before installation and battle review.
 
@@ -1287,6 +1313,8 @@ The death trial remains rejected. Its original last frame looked airborne, with 
 
 </details>
 
+
+</details>
 
 </details>
 
