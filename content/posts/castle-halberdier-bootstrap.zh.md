@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
-homeSummary: "皇家狮鹫三组攻击草稿局部减轻了腹部和尾根牵拉；更新 Blender 静帧并记录未采用的变形试验，髋部与脚踝问题仍待修整。"
+homeSummary: "皇家狮鹫在三组攻击之外补了待机、受击和防御草稿，加入独立头颈骨骼；新增六张 Blender 静帧，移动、转身和死亡仍待完成。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1223,6 +1223,29 @@ imagegen 根据现有银甲、金色铆钉和短护腕制作[新参考图](/imag
 ![向上攻击侧面](/images/castle-royal-griffin-2701/up-side-05.png)
 
 ![向下攻击侧面](/images/castle-royal-griffin-2701/down-side-05.png)
+
+</details>
+
+同一骨架还补了 **8 帧待机、7 帧受击和 8 帧防御草稿**，帧数与原版一致。新增头颈骨骼，让受击时能单独仰头；防御主要展开双翼，待机只保留轻微的头部、前爪和尾巴活动。三组攻击也同步到了这套骨架：每组采样 65 个时刻，身体顶点与上一版的差异小于 0.0005 毫米，翼面位置一致。
+
+三组新动作都回到攻击使用的站姿。163 个采样时刻的几何坐标有效，首尾吻合；受击在关键帧之间仍有约 0.24 毫米的地面下探。目前都是离线动作试稿，脚部接触、头颈和羽片变形、节奏与游戏接入还需检查。这套骨架的移动、转身、鼠标悬停和死亡动作仍未完成。
+
+![待机草稿，1200 × 1200 实际 Blender 静帧](/images/castle-royal-griffin-2720/holding-oblique.png)
+
+![受击草稿，头部独立后仰；实际 Blender 静帧](/images/castle-royal-griffin-2720/hitted-oblique.png)
+
+![防御展翼草稿；实际 Blender 静帧，尚未接入游戏](/images/castle-royal-griffin-2720/defence-oblique.png)
+
+<details>
+<summary>侧面检查与修正过的设置错误</summary>
+
+![待机侧面](/images/castle-royal-griffin-2720/holding-side.png)
+
+![受击侧面](/images/castle-royal-griffin-2720/hitted-side.png)
+
+![防御侧面](/images/castle-royal-griffin-2720/defence-side.png)
+
+第一次划定的头部权重范围漏掉了大部分头部，另一版又把尾巴原有姿势清零，导致起始站姿对不上。之后按整个身体的最低点纠正高度，尾巴下垂时竟把双脚抬离地面。当前版本保留尾巴原始旋转，改用后脚顶点纠正关键帧高度，后仰时再让尾巴反向抬起。这还不是全程脚部锁定。
 
 </details>
 

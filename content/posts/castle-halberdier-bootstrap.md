@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Three Royal Griffin attack drafts now include a partial belly and tail-root weight correction. Updated Blender stills and failed deformation trials; hip and ankle issues remain."
+homeSummary: "Royal Griffin adds holding, hit and defence drafts to its three attacks, with an independent head bone. Six new Blender stills; movement, turns and death remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1223,6 +1223,29 @@ A local weight revision now reduces some belly and tail-root pulling. Part of th
 ![Upward attack, side view](/images/castle-royal-griffin-2701/up-side-05.png)
 
 ![Downward attack, side view](/images/castle-royal-griffin-2701/down-side-05.png)
+
+</details>
+
+The same rig now also has **eight-frame holding, seven-frame hit and eight-frame defence drafts**, matching the original sequence lengths. A new head bone lets the hit reaction tilt the head independently; defence opens the wings, while holding uses small head, claw and tail movements. The three attacks were moved onto this rig too: across 65 samples per attack, body vertices differ by less than 0.0005 mm from the previous version, with identical wing positions.
+
+The three new clips return to the attack standing pose. Their 163 sampled times keep finite geometry and matching endpoints; the hit reaction dips about 0.24 mm below the floor between keys. These remain offline motion studies. Foot contact, head and feather deformation, timing and game integration still need review; movement, turns, hover interaction and death remain unfinished on this rig.
+
+![Holding draft, actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2720/holding-oblique.png)
+
+![Hit reaction with independent head motion, actual Blender still](/images/castle-royal-griffin-2720/hitted-oblique.png)
+
+![Defence wing spread, actual Blender still; not an installed game animation](/images/castle-royal-griffin-2720/defence-oblique.png)
+
+<details>
+<summary>Side views and corrected setup errors</summary>
+
+![Holding, side view](/images/castle-royal-griffin-2720/holding-side.png)
+
+![Hit reaction, side view](/images/castle-royal-griffin-2720/hitted-side.png)
+
+![Defence, side view](/images/castle-royal-griffin-2720/defence-side.png)
+
+The first head-weight region missed most of the head. Another trial reset the tail's existing pose and broke the standing match. A later floor check used the lowest point of the whole body, so the descending tail lifted the feet off the floor. The current draft preserves the tail's original rotation, uses hind-foot vertices for keyframe height correction and counter-rotates the tail during recoil. It does not lock the feet throughout the motion.
 
 </details>
 
