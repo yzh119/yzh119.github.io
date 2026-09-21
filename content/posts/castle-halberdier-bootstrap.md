@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T19:01:33+00:00
+lastmod: 2026-09-21T19:13:20+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin wing weights corrected across seven offline drafts; corpse support remains unfinished. Royal Griffin is installed as a private test."
+homeSummary: "Griffin head and hind-leg controls added; continuous weights reduce a failed corpse pose’s surface stretching. Full actions and body support remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1142,6 +1142,21 @@ The regular Griffin uses its existing flight-pose Meshy mesh. A larger wing rota
 ![Flight candidate with revised wing weights, actual Blender still](/images/castle-griffin-2817/moving.png)
 
 An artificial 0.8-radian wing perturbation previously displaced selected head vertices by as much as 0.434 model units. Across all seven corrected scenes, the same 2,468-vertex region stays fixed under that test. Reopening also confirms unchanged mesh coordinates, topology, UVs and action curves; 199 sampled times contain finite vertices. This checks the selected head region and preservation of the old motions, not the quality of those motions or the full shoulder surface.
+
+A separate rig candidate now adds head and hind-leg controls and replaces the inherited binary partitions with continuous weights. Simply multiplying the old mask left abrupt boundaries: selected neighboring vertices still followed different parts of the rig. One attempted leg split also stretched the body across its centre. That version is rejected. The revised split reduces the worst edge-length ratio in this corpse pose from about 51 to 4.63, measured only on rest edges longer than 0.003 model units. The remaining deformation is still substantial.
+
+![Head lowered and hind legs gathered, actual Blender pose candidate; not a finished death action](/images/castle-griffin-2829/corpse-oblique.png)
+
+![Low side view of the same candidate; wing-root shape and body support remain under review](/images/castle-griffin-2829/corpse-side.png)
+
+The neutral rig retains the Meshy coordinates, topology and UVs. Reopening and resetting the controls restores the surface within 0.000001 model units. This rig and the single corpse pose are separate from the seven animation drafts above; they have not been propagated into a complete action set or installed.
+
+<details>
+<summary>Discarded leg-weight split</summary>
+
+![The earlier split stretched the underside and tail-side surface; rejected Blender trial](/images/castle-griffin-2829/rejected-midline.png)
+
+</details>
 
 The death trial remains rejected. Its original last frame looked airborne, with an upright wing. Rotating the body onto its side and lowering the wings first stretched the face; correcting the binding removed that defect, but the subsequent pose rests on a wingtip and leaves the body raised. It still needs proper shoulder folding and body support before a nine-frame death action can be finished. The earlier production record below describes its own versions; these new candidates supersede only their wing weights.
 
