@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T18:15:33+00:00
+lastmod: 2026-09-21T18:34:18+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin turn-wing intersections receive a partial correction, with colored diagnostics and new Blender stills. Folded and transitional poses remain unresolved."
+homeSummary: "Royal Griffin 1×/2× animation draft installed locally: thirteen groups, projected shadows and selection outlines. Battle playback and appearance remain under review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,7 +1135,11 @@ Previous homepage summary:
 
 ## Royal Griffin folded wings and stance {#royal-griffin-up}
 
-The Royal Griffin still uses the existing Meshy body and main wings, with Blender repair, rigging and animation tools written by Astra. The working set contains **thirteen offline clips and 85 native frames**: holding, hover, hit, defence, three attack directions, takeoff, flight, landing, two turn halves and death. It has not passed visual or in-game acceptance and is not installed.
+The Royal Griffin still uses the existing Meshy body and main wings, with Blender repair, rigging and animation tools written by Astra. The working set contains **thirteen offline clips and 85 native frames**: holding, hover, hit, defence, three attack directions, takeoff, flight, landing, two turn halves and death. <s>It has not passed visual or in-game acceptance and is not installed.</s> September 21: the 1×/2× draft is now installed in the private Castle mod, version 0.15.0. The client loads the mod and reaches the main menu; Royal Griffin battle playback and visual acceptance remain unverified.
+
+The package contains 85 body frames at each scale, with shadow layers and selection outlines, for 372 PNGs. Native group counts and file validation pass without warnings, and the other 4,153 installed files remain unchanged. The shadows use a continuous-alpha projection onto a fixed image ground plane; they are not traced from the 3D scene. The sheet below is an offline composite of rendered frames, not a battle capture. Temporal shadow behavior and flight-to-landing transitions still need review.
+
+![Selected poses with projected shadows on a neutral ground; offline Blender-frame composites](/images/castle-royal-griffin-2809/layers.jpg)
 
 The standing pose now tucks the tail behind the body and raises the two foreclaws at different angles. The earlier tail and forward-reaching claws made the silhouette too wide. A separate sizing error came from orphan vertices with no faces: a nominal 95-pixel height produced only about 71 visible pixels. Calibration now uses the actual surface. At matching height, the new pose is roughly 80 pixels wide against 81 for the native image, without horizontal image compression. Head placement, body proportions and feather contours still differ; matching width is not visual acceptance.
 
