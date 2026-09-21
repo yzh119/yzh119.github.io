@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T22:05:15+00:00
+lastmod: 2026-09-21T22:19:47+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Gold Griffin material now spans 13 draft clips, with revised collapse; claw reach and game review remain unfinished."
+homeSummary: "Forward Griffin claws now span takeoff, flight and landing; forearm feathers and game review remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,26 @@ Previous homepage summary:
 
 </details>
 
-## Griffin colour and collapse motion {#griffin-binding}
+## Griffin forelimbs and flight motion {#griffin-binding}
+
+The ordinary Griffin has **thirteen experimental clips and 85 native frame slots**, including gold head-and-neck shading and the revised collapse. Forward claw reach now extends through takeoff, flight and landing. Meshy supplied the textured model; Astra authors the Blender repair, rigging and animation scripts. The set remains an offline draft, without game installation or final likeness approval.
+
+![Flight downstroke with raised foreclaws, an actual 900 × 900 Blender render](/images/castle-griffin-2941/flight.png)
+
+Rotating the old claw controls left the paws hanging down or tucked into the chest. Inspection found that the right pivot lay outside the mesh region carrying most of its influence. Moving the experimental pivots toward the forelimb roots allowed the claws to rise in front of the chest. The resulting deformation was then converted back to pose channels on the original skeleton, retaining its rest pose.
+
+The claws rise during takeoff and return during landing. Each saved clip was reopened and checked at 97 sample times. Takeoff ends at the first flight pose; flight frame four meets the first landing pose; both standing endpoints are unchanged. These checks cover the selected transition phases, not arbitrary interruption during game playback. A separate comparison confirms unchanged geometry, UVs, weights and rest bones, with every other bone and the carrier motion unchanged at 129 sample times.
+
+![Original frames above the Blender versions: four frames each of takeoff, flight and landing. Each tile is cropped and resized separately for pose review, not a comparison of game pixel dimensions](/images/castle-griffin-2941/comparison.jpg)
+
+Raising the claws exposes the bulky forearm feather fans. Two local mesh-narrowing trials compressed the forearms around their axes, but even the stronger setting left the outer fan visible. That geometry change was not adopted. The feather region needs more precise identification before further reshaping. Head and wing proportions, the corpse silhouette and actual game playback also remain unfinished.
+
+![Unadopted forearm-narrowing trial, an actual 1100 × 1100 Blender render; the outer feather fan remains](/images/castle-griffin-2941/forearm-trial.png)
+
+<details>
+<summary>September 21: before forward claws and flight transitions</summary>
+
+~~Flight still holds the claws too low, with forelimb control unchanged.~~ The current branch raises the claws through takeoff, flight and landing; likeness and game review remain outstanding.
 
 The ordinary Griffin now uses a gold head-and-neck material across **thirteen experimental clips and 85 native frames**. The textured model originated in Meshy; Astra's Blender scripts repair the mesh, animate it and apply the colour mask. All 85 frames were rendered and reviewed again. These remain offline drafts, with no game installation or final likeness approval.
 
@@ -1154,6 +1173,8 @@ Several trials were discarded. Lowering only the head stretched the neck feather
 Flight still holds the claws too low compared with the original. Simple claw rotations either leave them pointing down or tuck them into the chest; those trials were not included. Forelimb control, feather intersections, corpse anatomy and game playback remain outstanding.
 
 ![Current flight downstroke; forward claw reach still needs correction](/images/castle-griffin-2933/moving.png)
+
+</details>
 
 <details>
 <summary>September 21: earlier repaired-mesh migration, before gold shading and coordinated collapse</summary>
