@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T20:09:49+00:00
+lastmod: 2026-09-21T20:20:34+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Ordinary Griffin now has 13 Blender action drafts and 85 native frames; wing deformation and in-game review remain unfinished."
+homeSummary: "Griffin shoulder weights revised across 13 drafts; the downward attack now follows a diagonal lunge. Export and game review remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1137,6 +1137,45 @@ Previous homepage summary:
 
 The ordinary Griffin now has **13 editable Blender clips, covering 85 native frames**, on the revised rig: holding, hover, hit, defence, three attacks, takeoff, flight, landing, two turn halves and death. Meshy supplied the textured mesh; Astra wrote the rigging and animation scripts. These are offline drafts. Wing-root deformation, feather overlap and likeness still need work before installation and battle review.
 
+The projection above the head was partly a binding defect. Shoulder feathers retained too much body weight, so they stayed raised while the rest of the wing folded. Changing shoulder angles alone barely moved the tip. A broader weight correction then pulled the crest, so that trial was rejected. The revised mask transfers weight on 4,220 vertices while preserving all 3,928 vertices whose head weight is at least 0.15. Their positions are unchanged at the native frames across the thirteen original clips. This is a selected-region check, not proof that every neck feather is correct.
+
+![Standing after the shoulder-weight correction, actual Blender render; the tip is lower, while the remaining folded-wing shape still needs work](/images/castle-griffin-2865/standing.png)
+
+Flight uses four poses for each of takeoff, movement and landing. A tail control brings the tail behind the flying body, while the wing stroke now has a clearer downstroke. The movement loop keeps a fixed body height. Reopening confirms the authored takeoff-to-flight seam, flight loop and the chosen flight-to-landing seam; the engine can begin landing at other wing phases, which remains unverified.
+
+![Flight downstroke, actual 900 × 900 Blender render](/images/castle-griffin-2865/flight.png)
+
+The first upward attack looked like horizontal flight. The revision raises the torso and lets the hind legs trail below. The downward attack now uses less pitch and turns less directly toward the camera, giving the body a diagonal lunge. Claw reach remains unfinished. All three attack groups retain nine frames and return to the common standing pose.
+
+![Forward attack draft, actual Blender render](/images/castle-griffin-2865/front.png)
+
+![Upward attack with revised torso and hind legs, actual Blender render](/images/castle-griffin-2865/up.png)
+
+![Revised diagonal downward attack; claw reach remains under review](/images/castle-griffin-2865/down.png)
+
+Defence opens the wings while the feet stay down. Hover turns the head with a small claw gesture. Hit adds recoil; keeping the centres of the foot regions fixed initially allowed the toes to sink about 0.0219 model units below the floor. A further pass adjusts each hind leg against its selected foot-surface minimum. This does not establish rigid soles or correct leg anatomy. After the shoulder and dive edits, 589 sampled times across the thirteen reopened clips have finite surface coordinates. The largest checked standing-seam difference is below 0.000001 model units. The surface still shows substantial local stretching; this pass does not establish collision or visual acceptance.
+
+![Defence draft after the shoulder-weight revision, actual Blender render](/images/castle-griffin-2865/defence.png)
+
+![Recoil after the foot-height correction, actual Blender render](/images/castle-griffin-2865/hit.png)
+
+Each turn half has three native frames. The body rotates around the hind-foot region and slightly opens its wings. The two halves meet exactly in the unmirrored scene. The game's facing flip and double-wide placement still need a separate screen-space check.
+
+![Frontal turn pose, actual Blender render; asymmetric wings and shoulder shape remain unfinished](/images/castle-griffin-2865/turn.png)
+
+<details>
+<summary>Rejected shoulder mask</summary>
+
+![The broad shoulder mask also pulled crest feathers backward; rejected Blender trial](/images/castle-griffin-2865/rejected-crest.png)
+
+</details>
+
+<details>
+<summary>September 21: action set before the shoulder and dive revisions</summary>
+
+
+The ordinary Griffin now has **13 editable Blender clips, covering 85 native frames**, on the revised rig: holding, hover, hit, defence, three attacks, takeoff, flight, landing, two turn halves and death. Meshy supplied the textured mesh; Astra wrote the rigging and animation scripts. These are offline drafts. Wing-root deformation, feather overlap and likeness still need work before installation and battle review.
+
 Flight uses four poses for each of takeoff, movement and landing. A tail control brings the tail behind the flying body, while the wing stroke now has a clearer downstroke. The movement loop keeps a fixed body height. Reopening confirms the authored takeoff-to-flight seam, flight loop and the chosen flight-to-landing seam; the engine can begin landing at other wing phases, which remains unverified.
 
 ![Flight downstroke, actual 900 × 900 Blender render](/images/castle-griffin-2852/flight.png)
@@ -1227,6 +1266,8 @@ The death trial remains rejected. Its original last frame looked airborne, with 
 
 </details>
 
+
+</details>
 
 </details>
 
