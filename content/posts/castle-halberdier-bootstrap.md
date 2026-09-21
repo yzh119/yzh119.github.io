@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T18:34:18+00:00
+lastmod: 2026-09-21T19:01:33+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin 1×/2× animation draft installed locally: thirteen groups, projected shadows and selection outlines. Battle playback and appearance remain under review."
+homeSummary: "Griffin wing weights corrected across seven offline drafts; corpse support remains unfinished. Royal Griffin is installed as a private test."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1130,6 +1130,27 @@ Previous homepage summary:
 </details>
 
 </details>
+
+</details>
+
+## Griffin wing binding {#griffin-binding}
+
+The regular Griffin uses its existing flight-pose Meshy mesh. A larger wing rotation exposed a problem in the old Blender rig: its binary wing mask included part of the head. Astra revised the weights so those vertices follow the body, with a gradual transition near the wing roots. The correction has been carried into seven offline candidates: flight, three attack directions, hit, defence and the old death trial. None is installed or visually accepted.
+
+![Front-attack candidate after the binding correction, actual 900 × 900 Blender still](/images/castle-griffin-2817/front.png)
+
+![Flight candidate with revised wing weights, actual Blender still](/images/castle-griffin-2817/moving.png)
+
+An artificial 0.8-radian wing perturbation previously displaced selected head vertices by as much as 0.434 model units. Across all seven corrected scenes, the same 2,468-vertex region stays fixed under that test. Reopening also confirms unchanged mesh coordinates, topology, UVs and action curves; 199 sampled times contain finite vertices. This checks the selected head region and preservation of the old motions, not the quality of those motions or the full shoulder surface.
+
+The death trial remains rejected. Its original last frame looked airborne, with an upright wing. Rotating the body onto its side and lowering the wings first stretched the face; correcting the binding removed that defect, but the subsequent pose rests on a wingtip and leaves the body raised. It still needs proper shoulder folding and body support before a nine-frame death action can be finished. The earlier production record below describes its own versions; these new candidates supersede only their wing weights.
+
+<details>
+<summary>Rejected corpse poses and remaining support problem</summary>
+
+![Rejected corpse trial before the binding correction: the wing pulls part of the head](/images/castle-griffin-2817/rejected-head.png)
+
+![Head restored, but wingtip support still holds the body above the floor; unfinished Blender pose](/images/castle-griffin-2817/corpse-pending.png)
 
 </details>
 
