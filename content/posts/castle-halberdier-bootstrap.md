@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T13:27:56+00:00
+lastmod: 2026-09-21T13:35:14+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman added to the local Castle test mod, with upright walking, native-frame checks and a rejected crouched trial. Battle appearance and the remaining Castle roster are unfinished."
+homeSummary: "Pikeman local test 0.14.1 corrects frame registration and reduces the turn-position jump; upright walking, failures and remaining battle checks are illustrated."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1231,7 +1231,7 @@ Normalizing the weight-selection and playback coordinates, then blending the win
 
 ## Pikeman model and motion {#pikeman-thrust}
 
-Eleven Pikeman drafts cover thirteen native groups and 80 frame slots, including duplicate turns. Wrist, cuff and grip revisions are in the offline working set. Later work corrects the gait heading and adds supplemental start/stop clips for 3D inspection. The sections below distinguish each revision’s checks and rejected trials. <s>This Pikeman is not installed.</s> September 21 installation update: the upright-walk export is now in the enabled local Castle test mod, version 0.14.0. Native likeness, materials and runtime motion remain under review, and all fourteen Castle creatures remain in scope.
+Eleven Pikeman drafts cover thirteen native groups and 80 frame slots, including duplicate turns. Wrist, cuff and grip revisions are in the offline working set. Later work corrects the gait heading and adds supplemental start/stop clips for 3D inspection. The sections below distinguish each revision’s checks and rejected trials. <s>This Pikeman is not installed.</s> September 21 installation update: the upright-walk export is now in the enabled local Castle test mod, version <s>0.14.0</s> 0.14.1 after the registration correction below. Native likeness, materials and runtime motion remain under review, and all fourteen Castle creatures remain in scope.
 
 <details>
 <summary>Wrist-stage overview (history)</summary>
@@ -1316,7 +1316,13 @@ The current candidate keeps the original body height, shortens the stride and re
 
 <video controls muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2564/walk-comparison.mp4"></video>
 
-The upper row uses the earlier frames; the lower row uses the upright revision. This diagnostic composites ten sprite frames per second over continuous screen translation. It is not a game capture. Meshy supplied the underlying body; Astra authored the Blender motion, export and checks. Turning transitions, overall likeness and in-game review remain unfinished.
+The upper row uses the earlier frames; the lower row uses the upright revision before the registration correction below. This diagnostic composites ten sprite frames per second over continuous screen translation. It is not a game capture. Meshy supplied the underlying body; Astra authored the Blender motion, export and checks. Turning transitions, overall likeness and in-game review remain unfinished.
+
+The local test package is now **0.14.1**. One seven-logical-pixel rightward correction applies to every frame, with shadows and outlines rebuilt from the registered bodies. The earlier camera fit used the combined body-and-weapon bounds, leaving the body too far left. Matching both the idle foot region and the native turn pose brings the foot-region center within one logical pixel of the reference.
+
+![Turn sequence registration: original frames above, previous export in the middle, corrected export below; enlarged sprite crops with a fixed guide, not game captures](/images/castle-pikeman-2572/turn-registration.png)
+
+The test includes the engine’s horizontal reflection and its 58-pixel change in sprite origin when facing switches. Alpha-centroid displacement at that join fell from 27.5 to 13.5 logical pixels; the original sequence measures 11.9. These are image-registration measurements, not proof of matched anatomy or smooth gameplay. The client startup probe stalled after OpenGL renderer creation, so battle appearance is still unverified.
 
 <details>
 <summary>Earlier September 21 continuous walking and transition study (history; original images retained)</summary>
