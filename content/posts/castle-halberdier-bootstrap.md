@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin open-wing assembly from an existing Meshy flight model, with three views and extraction failures. The new wings are not rigged yet."
+homeSummary: "Royal Griffin wing-rigging and backward-sweep study, with HD Blender stills. Shoulder openings and feather intersections remain unresolved."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1181,7 +1181,34 @@ Across 129 sampled times after reopening, source UVs match exactly and the loop 
 
 ![Unresolved recess during partial opening, actual Blender still; the transplant remains an unadopted trial](/images/castle-royal-griffin-2623/middle.png)
 
-### An assembly study using already-open wings
+### Rigging the open wings and testing a backward sweep
+
+Astra added shoulder, elbow and wrist bones to the Meshy wing pair, then authored an opening–sweeping–opening study. Retained wings in the body mesh were contributing to the uneven silhouette. This candidate removes part of that geometry and moves the new wings and their joints toward the body's center. The original scenes remain available separately.
+
+![Open pose after partial remnant removal and alignment, actual 1200 × 1200 Blender still; shoulder joins remain unfinished](/images/castle-royal-griffin-2643/open.png)
+
+![Intermediate backward sweep, actual Blender still; a complete native action set has not been authored](/images/castle-royal-griffin-2643/half.png)
+
+![Front view at the end of the backward sweep, actual Blender still; local deformation and intersections need work](/images/castle-royal-griffin-2643/folded.png)
+
+![Side view of the same pose; the visible shoulder opening prevents delivery acceptance](/images/castle-royal-griffin-2643/side-folded.png)
+
+![Rear view after trimming, retained to inspect the unfinished wing-to-body joins](/images/castle-royal-griffin-2643/rear.png)
+
+Reopening the scene and sampling **65 times** confirms matching wing vertices at the loop endpoints. The first weight assignment blended the proximal wing between the stationary body root and rotating shoulder, producing edge-length ratios of **0.141–3.475**. Moving those weights to the shoulder reduces the range to **0.657–1.045** under the same sampling. Some compression remains, and this check does not establish collision clearance. Body cuts, shoulder attachment and feather intersections need further work; the Royal Griffin has not been delivered or installed.
+
+<details>
+<summary>September 21: rejected folding and the earlier static assembly</summary>
+
+The first experiment bent the three joints sharply in opposing directions, producing a zigzag silhouette. A shoulder-led backward sweep produced the current candidate above, which still needs a more natural resting fold.
+
+![Rejected large opposing joint rotations, actual Blender still](/images/castle-royal-griffin-2643/rejected-fold.png)
+
+The earlier root-weight blend also stretched the wing locally during rotation. Its side view is retained below.
+
+![Rejected root-weight blend, actual Blender still; sampled geometry showed severe local stretching](/images/castle-royal-griffin-2643/rejected-root-blend.png)
+
+The pre-rigging record follows. **September 21 correction: the new wings now have an experimental rig and motion, and the body has undergone partial trimming. Statements about an unchanged body and unrigged wings apply only to this earlier version.**
 
 A separate branch reuses an earlier Meshy flight model. The more usable wing is extracted and mirrored to form a pair, retaining its texture and the earlier silver material adjustment. The two wings contain **11,748 faces** and are rendered with the existing body. This pass makes no new Meshy API request.
 
@@ -1191,7 +1218,7 @@ A separate branch reuses an earlier Meshy flight model. The more usable wing is 
 
 ![Rear assembly view, actual Blender still; neither an in-game screenshot nor animation acceptance](/images/castle-royal-griffin-2631/rear.png)
 
-Checks confirm that the mirrored face UVs match the selected source and that body vertices, faces and weights remain unchanged. **The new wings are not rigged and have no folding or native action set.** Root contact and collision clearance are also unverified. This explores construction from the open shape while preserving the previous folded-wing working model; the Royal Griffin remains unfinished.
+<s>Checks confirm that the mirrored face UVs match the selected source and that body vertices, faces and weights remain unchanged. **The new wings are not rigged and have no folding or native action set.** Root contact and collision clearance are also unverified. This explores construction from the open shape while preserving the previous folded-wing working model; the Royal Griffin remains unfinished.</s>
 
 <details>
 <summary>Rejected pivot and extraction trials from this pass</summary>
@@ -1205,6 +1232,9 @@ The first spatial extraction retained fragments of the donor's head. An addition
 ![Rejected extraction including an extra head, actual Blender still](/images/castle-royal-griffin-2631/rejected-head.png)
 
 ![Rejected tighter extraction with cut wing roots, actual Blender still](/images/castle-royal-griffin-2631/rejected-cut.png)
+
+</details>
+
 
 </details>
 
