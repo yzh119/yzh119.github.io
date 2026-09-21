@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T21:41:13+00:00
+lastmod: 2026-09-21T22:05:15+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Repaired Griffin mesh now runs through 13 draft clips; corpse contact, likeness and game review remain unfinished."
+homeSummary: "Gold Griffin material now spans 13 draft clips, with revised collapse; claw reach and game review remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,32 @@ Previous homepage summary:
 
 </details>
 
-## Griffin repaired mesh in motion {#griffin-binding}
+## Griffin colour and collapse motion {#griffin-binding}
+
+The ordinary Griffin now uses a gold head-and-neck material across **thirteen experimental clips and 85 native frames**. The textured model originated in Meshy; Astra's Blender scripts repair the mesh, animate it and apply the colour mask. All 85 frames were rendered and reviewed again. These remain offline drafts, with no game installation or final likeness approval.
+
+![Current folded pose, actual 1200 × 1200 Blender render](/images/castle-griffin-2933/holding.png)
+
+The colour adjustment preserves the texture detail and dark flight feathers. Its mask follows the mesh vertices. Reopening every saved clip confirms identical geometry, UVs and weights, and identical evaluated surface positions at all native frames, compared with the preceding motion branch. It changes shading rather than the poses.
+
+The latest offline facing test, performed before the colour-only change, gives about 84% silhouette overlap after mirroring and placement adjustment. The head-to-foot camera was recalibrated for the current pose, so this is not a controlled comparison with the earlier 45% and 69% measurements. Body asymmetry and actual game playback still need review.
+
+![Frontal turn pose on the current material](/images/castle-griffin-2933/turn.png)
+
+Death now relaxes the wings and limbs together during its final four frames. The first five frames remain unchanged. In the endpoint study, the selected central torso's gap above the lowest surface fell from about 0.052 to 0.009 model units. The full transition still has sampled penetration of about 0.000038 units, and the corpse outline has not passed artistic review.
+
+![Current death endpoint; body support and native proportions remain unfinished](/images/castle-griffin-2933/death.png)
+
+Several trials were discarded. Lowering only the head stretched the neck feathers. Rotating the whole body produced head-first or belly-up poses. An unconstrained contact adjustment pulled the forelimb feathers out of shape; limiting joint changes and added edge stretch produced the current candidate. The maximum checked edge ratio across death is about 4.72×, slightly above the previous 4.56×, so the closer contact is not a general deformation fix.
+
+Flight still holds the claws too low compared with the original. Simple claw rotations either leave them pointing down or tuck them into the chest; those trials were not included. Forelimb control, feather intersections, corpse anatomy and game playback remain outstanding.
+
+![Current flight downstroke; forward claw reach still needs correction](/images/castle-griffin-2933/moving.png)
+
+<details>
+<summary>September 21: earlier repaired-mesh migration, before gold shading and coordinated collapse</summary>
+
+~~The head remains white and death only has a height correction.~~ The current branch adds gold shading and coordinated late collapse. The earlier measurements below describe the preceding version.
 
 The repaired Griffin mesh now runs through **thirteen experimental clips and 85 native frames**. Meshy supplied the textured geometry; Astra's Blender scripts replaced one wing, reconnected the root, adjusted its binding and migrated the motions. The preceding mesh and animation branches remain available. This version is offline and has not replaced the game's Griffin.
 
@@ -1152,6 +1177,8 @@ All 85 frames were rendered and reviewed. Reopening the clips at 589 times found
 The changed wing crossed the floor by about 0.024 model units during death. A separate height correction reduces the worst sampled penetration to about 0.000030 units over 513 reopened samples. The corpse still appears supported by protruding feathers, so this is not accepted ground contact.
 
 ![Death endpoint after the height correction; feather support and the corpse silhouette remain unfinished](/images/castle-griffin-2912/death.png)
+
+</details>
 
 <details>
 <summary>September 21: separate root repair before animation migration</summary>
