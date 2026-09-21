@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T01:05:15+00:00
+lastmod: 2026-09-21T02:20:17+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman gains a thirteen-frame defence draft; shaft contact with the upper arm remains. Castle art, motion and integration are still in progress."
+homeSummary: "Pikeman defence clears the current sampled surface checks, with a rendered thirteen-frame preview. Downward thrust, cuffs and missing actions remain."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1169,15 +1169,34 @@ Reopened checks at 201 times found no intersections among the tested pike/hand, 
 
 ![Fifth recovery frame, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2103/recover.png)
 
-<s>The draft set still contains five groups and 44 native frames, with eight groups and 36 frames absent.</s> The September 21 defence trial brings this to six draft groups and 57 frames; seven groups containing 23 frames remain absent. Defence and downward-thrust intersections, cuffs and finger closure remain unresolved. The new Pikeman is not installed.
+<s>The draft set still contains five groups and 44 native frames, with eight groups and 36 frames absent.</s> The September 21 defence trial brings this to six draft groups and 57 frames; seven groups containing 23 frames remain absent. <s>Defence and downward-thrust intersections, cuffs and finger closure remain unresolved. The new Pikeman is not installed.</s> The revised defence clears the current surface checks; downward thrust, cuffs, finger closure and appearance remain unfinished. The new Pikeman is still not installed.
 
 ### Thirteen-frame defence trial
 
-The native guard raises the pike across the chest, keeps both hands on the shaft and returns to idle. The first draft intersected the body with both the shaft and right hand. Moving the pike forward and changing the grip rolls removed the sampled right-hand/body contacts, but the shaft still meets the right upper arm. Moving farther forward exceeded the left arm’s reach and was rejected rather than stretching the bones.
+The revised guard moves the pike forward while the left hand slides slightly back along the shaft, narrowing the grip spacing. A small elbow-path change works with the right-hand roll. The native thirteen frames and pike angles remain; IK uses the original bone lengths, and both endpoints return to the shared idle pose.
+
+![Revised pike guard, actual 1200 × 1400 Blender still; unaccepted art draft, not installed](/images/castle-pikeman-2133/defence.png)
+
+<video controls loop muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2133/defence.mp4"></video>
+
+The review loop contains thirteen actual Blender renders at 800 × 934 and 12 fps. It is neither game footage nor an accepted playback rate. Reopening and sampling at 481 times found no intersections among the tested shaft/hand, shaft/body, arm/body and hand/body surfaces. Because the grips moved closer together, a separate 481-time check also compared the two hand surfaces and found no intersections. Bone and pike endpoint matrices match idle. Sampling and weight-based partitions limit these results; they do not establish complete seam, containment or appearance acceptance.
+
+Yaw changes, lateral shifts and grip shifts alone did not resolve the contact. Another draft cleared the entry into defence but still crossed the upper arm when the pike became more horizontal. Raising the elbow further cleared the static peak but produced an unfaithful pose, so it was rejected.
+
+![Rejected raised-elbow pose, actual Blender still; a clear local collision test does not establish pose fidelity](/images/castle-pikeman-2133/rejected-elbow.png)
+
+The set remains six draft groups and 57 frames, with seven groups containing 23 frames absent. Downward-thrust intersections, cuffs, finger closure, bracing and overall appearance remain unfinished. The new Pikeman is not installed.
+
+<details>
+<summary>Earlier defence draft and failed checks (September 21 history)</summary>
+
+<s>The native guard raises the pike across the chest, keeps both hands on the shaft and returns to idle. The first draft intersected the body with both the shaft and right hand. Moving the pike forward and changing the grip rolls removed the sampled right-hand/body contacts, but the shaft still meets the right upper arm. Moving farther forward exceeded the left arm’s reach and was rejected rather than stretching the bones.</s>
 
 ![Chest-level pike guard, actual 1200 × 1400 Blender still; right-upper-arm contact remains, not installed](/images/castle-pikeman-2115/defence.png)
 
-The saved scene reopens with bone and pike endpoints matching idle. A 481-time audit still detects shaft/body intersections. Localization identified the right upper arm; a further outward and downward elbow-pole adjustment did not clear it and was not adopted. Native bracing, cuffs and grip details also need more work.
+<s>The saved scene reopens with bone and pike endpoints matching idle. A 481-time audit still detects shaft/body intersections. Localization identified the right upper arm; a further outward and downward elbow-pole adjustment did not clear it and was not adopted. Native bracing, cuffs and grip details also need more work.</s>
+
+</details>
 
 <details>
 <summary>Initial hit draft and failed checks (history)</summary>
