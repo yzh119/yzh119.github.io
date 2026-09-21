@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T14:24:51+00:00
+lastmod: 2026-09-21T14:34:16+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin short coverts with surface-frame attachment and four HD Blender stills. Intersections, shoulder joins and the full action set remain unfinished."
+homeSummary: "Royal Griffin short coverts and shoulder diagnosis, with rejected sculpt and feather-overlay renders. The creature remains unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1164,6 +1164,23 @@ The previous constraint attached each root while leaving its feather orientation
 With the same 327-feather geometry, accumulated edge-to-cap crossings across nine poses fall from 5,156 with root-only attachment to 3,537 with the surface frame. **Intersections remain.** Those counts are not directly comparable with the older 59-feather study. The frontal shoulder concavity is also unchanged. Full unfolding, native actions and game integration remain unfinished.
 
 ![Front inspection render showing the remaining shoulder concavity; rear coverage does not establish a finished model](/images/castle-royal-griffin-2605/front-09.png)
+
+<details>
+<summary>September 21: frontal shoulder diagnosis and rejected trials</summary>
+
+Inspection rays through the frontal dark area hit the existing main-wing surface, then the body along its lower edge. The diagnostic render colors the body red and the wings blue. This identifies the visible surfaces in the sampled region; it does not establish that the entire model is closed.
+
+![Object-color diagnostic, actual Blender still; the blue wing surface continues behind the dark region](/images/castle-royal-griffin-2614/objects.png)
+
+Parts of the wing sit substantially behind the breast feathers. Two trials moved this region forward in the open pose and solved the displacement back into rest geometry, including the caps. Neither removed the recess, and the larger displacement bulged the folded silhouette. Both were rejected. An unlit base-color inspection did not retain the same black patch, while disconnecting the normal map left the recess visible. Shape and occlusion still need work.
+
+![Rejected forward-sculpt trial, actual Blender still; the shoulder recess persists](/images/castle-royal-griffin-2614/sculpt.png)
+
+A separate layer of shoulder feathers was attached to wing-surface anchors and their triangle frames. It reads as flat white patches and leaves an unnatural central opening in the coverage, so it is also rejected. The short-coverts study above remains the working candidate, without game integration.
+
+![Rejected shoulder-feather overlay, actual Blender still; white patches do not match the existing plumage](/images/castle-royal-griffin-2614/patch.png)
+
+</details>
 
 <details>
 <summary>September 21: earlier 59-feather and clearance trials (history; text and images retained)</summary>
