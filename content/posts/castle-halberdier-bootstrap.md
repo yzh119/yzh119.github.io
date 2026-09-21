@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin body-surface reshaping and wing-root seating, with new HD Blender stills. Native actions and intersection checks remain unfinished."
+homeSummary: "Royal Griffin wing-root work, lighting diagnostics and lower folded wing tips, with new Blender stills. The idle silhouette remains unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1192,6 +1192,27 @@ Removing the old wings left openings along the body's sides. This candidate rest
 ![Side view at the end of the sweep; feather transitions and intersections still need review, and this is not delivered or installed](/images/castle-royal-griffin-2657/side-folded.png)
 
 After reopening, the body's **18,168 faces**, UVs and skin weights match the pre-cut source. The existing foot-placement corrective retains its original delta. Across 65 sampled times, the seated wings differ from the previous motion only by the intended translation, with a maximum discrepancy below 0.001 millimeters. These checks establish data preservation and the assembly transform. The shoulder surfaces currently overlap; seamless coverage from all views, collision clearance and a complete native action set remain unverified.
+
+The dark band during folding was investigated separately. Disabling the normal map and switching to a low-specular material did not substantially remove it. It disappeared in a base-color-only render and became much lighter with illumination from the lower front. Lighting therefore contributes strongly to this region; its darkness is not evidence that more geometry is needed. The review scene now uses a weaker fill without changing the mesh or source textures.
+
+The original idle frame also shows the creature standing on its hind legs with raised foreclaws and lower wing tips. Increasing the downward shoulder rotation brings the tips closer to that silhouette. The images below show this later pose study; the body-repair images above retain the preceding pose and lighting.
+
+![Lower wing tips in side view, actual 1200 × 1200 Blender still; this remains a pose study](/images/castle-royal-griffin-2667/lower-fold.png)
+
+![Front view of the same study; the folded span is still too wide for idle-pose acceptance](/images/castle-royal-griffin-2667/front-fold.png)
+
+Across 65 sampled times, the wing stays approximately 16 centimeters above the floor at its lowest point, and loop endpoints match. This does not establish collision clearance or pose fidelity. Folded width, feather intersections and the complete action set remain unfinished.
+
+<details>
+<summary>September 21: dark-band and fill-light comparisons</summary>
+
+![The dark band persists with normal mapping disabled, actual Blender diagnostic render](/images/castle-royal-griffin-2667/normal-off.png)
+
+![Base-color-only diagnostic with surface lighting bypassed; the dark band disappears](/images/castle-royal-griffin-2667/albedo.png)
+
+![The stronger fill flattens feather and body shading; this intensity was not adopted](/images/castle-royal-griffin-2667/strong-fill.png)
+
+</details>
 
 <details>
 <summary>September 21: rejected surface-reshaping trials</summary>
