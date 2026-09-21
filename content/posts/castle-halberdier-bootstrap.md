@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T20:47:19+00:00
+lastmod: 2026-09-21T21:09:43+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin shoulder-and-elbow rig now has 13 experimental clips; turns revised, folded silhouette and game review remain unfinished."
+homeSummary: "Griffin facing test exposed a turn jump; wing-root repair remains separate from the 13 draft clips."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,32 @@ Previous homepage summary:
 
 </details>
 
-## Griffin shoulder-and-elbow motion {#griffin-binding}
+## Griffin facing changes and wing-root repair {#griffin-binding}
+
+The ordinary Griffin still has **thirteen experimental clips covering 85 native frames**, with no game installation. A separate geometry repair now replaces one wing and reconnects its root. Meshy supplied the textured model; Astra wrote the Blender edits and motion tools. The repaired mesh has not been propagated to those thirteen clips.
+
+Rendering all 85 frames on the native-sized canvas at 2× found no edge clipping. The turn check exposed a different problem: after applying the facing mirror and the double-wide placement offset, the silhouette overlap is only about **45%**. Matching endpoints in the unmirrored Blender scene did not establish a clean screen transition. This remains an offline reconstruction of placement, not a battle capture.
+
+![Offline facing comparison: original draft above, two wing-replacement trials below; the last column shows silhouette overlap](/images/castle-griffin-2899/flip.png)
+
+Mirroring the entire body cut or duplicated the off-centre head and distorted the tail. Recentering those regions did not produce a usable model. Replacing only the right wing with a mirrored left wing raised the measured overlap to roughly 70%, but opening the wings revealed a large gap and a leftover shoulder projection. Both initial replacement trials were rejected.
+
+![Rejected wing replacement, actual 1000 × 1000 Blender render; the root is visibly disconnected](/images/castle-griffin-2899/gap.png)
+
+The next repair joins the two root boundaries with 153 faces and reshapes 665 nearby shoulder vertices. The selected seam edges no longer form an open boundary, and the large shoulder spike is reduced. The texture seam and an angular transition remain visible. Closing this particular boundary does not establish a watertight mesh or finished anatomy.
+
+![Reconnected root with the wings open; actual Blender render, still an experimental repair](/images/castle-griffin-2899/root.png)
+
+![Folded rear view of the repaired mesh](/images/castle-griffin-2899/rear.png)
+
+Reopening the saved scene and sampling a simple unfolding sweep at 33 positions found finite coordinates. The maximum edge stretch remains about 4.99× for rest edges longer than 0.003 model units. This checks a limited deformation sweep; attacks, flight, death, the repaired turn silhouette and game playback still need validation. The original thirteen-clip branch is retained unchanged.
+
+![Halfway through the unfolding check, actual Blender render](/images/castle-griffin-2899/partial.png)
+
+<details>
+<summary>September 21: earlier shoulder-and-elbow animation branch, before the facing test and mesh repair</summary>
+
+~~The facing flip has not yet been checked.~~ The offline test above now exposes a discontinuity. The unchanged-mesh description below applies to this earlier animation branch only.
 
 The eleven-bone Griffin rig now has **thirteen experimental clips and 85 native frames**. Meshy's textured mesh is unchanged; Astra's Blender scripts divide the folding motion between shoulders and elbows. The wings fold slightly farther back than in the single-pose study, but their width and asymmetry remain unfinished. This branch is offline and has not replaced the game's Griffin. The preceding nine-bone clips remain available separately.
 
@@ -1156,6 +1181,8 @@ The first turn migration partly unfolded the wings during the rotation and raise
 All 85 native frames were rendered and reviewed. Reopening and sampling the first migration at 2,317 times found finite coordinates and standing seams below 0.000001 model units; the revised turns were checked separately at 130 times. Death still dips roughly 0.000023 model units below the floor between grounding keys. Collision, the folded silhouette, claw reach, arbitrary-phase landing and in-game playback remain unfinished.
 
 ![Early death transition on the eleven-bone rig](/images/castle-griffin-2887/death.png)
+
+</details>
 
 <details>
 <summary>September 21: nine-bone actions and the separate elbow standing study</summary>
