@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin wing-root and lighting studies, followed by earlier wing lift and folding during the lunge. New Blender stills document the unfinished attack draft."
+homeSummary: "Royal Griffin now has three nine-frame attack drafts on the folded-wing rig, with independent claws and hind legs. Six new Blender stills; deformation and game integration remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1203,11 +1203,37 @@ The original idle frame also shows the creature standing on its hind legs with r
 
 Across 65 sampled times, the wing stays approximately 16 centimeters above the floor at its lowest point, and loop endpoints match. This does not establish collision clearance or pose fidelity. Folded width, feather intersections and the complete action set remain unfinished.
 
-The front attack now lifts its wings earlier. Reviewing all nine original frames showed that the wings rise before the forward strike and lower as the claws reach. The revised draft opens fully at frame three, then folds through the lunge. Its body and wing vertices match the standing pose at both endpoints across the 65-time check. Foreclaw extension, hind-leg motion, feather intersections and the game camera still need work; this remains an offline Blender study.
+The new wing rig now has **three nine-frame attack drafts**, all beginning and ending in the same folded standing pose. They reuse the existing Meshy geometry; Astra authored the wing, claw and hind-leg motion in Blender. Front attack opens its wings before the lunge, upward attack lifts the body and raises the claws, and downward attack pitches forward with a lower reach. All three were compared with their original nine-frame references.
+
+The first leg pass tucked the calves too tightly, and the first upward pass kept the torso too upright. Those trials remain archived. The revised clips add independent hind-leg extension and lower the wings earlier during contact. They remain offline: wing-root intersections, hip and ankle deformation, camera calibration and the rest of the action set still need work. Across 65 samples per clip, the endpoints match, but some body edges approach twice their standing length. The continuity check does not establish acceptable deformation.
+
+![Front attack with independent claw and hind-leg motion; actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2688/front-oblique-05.png)
+
+![Upward attack draft, with a raised claw reach; actual Blender still](/images/castle-royal-griffin-2688/up-oblique-05.png)
+
+![Downward attack draft with a lower claw reach; actual Blender still, not installed in the game](/images/castle-royal-griffin-2688/down-oblique-05.png)
+
+<details>
+<summary>Side views of the three current attack drafts</summary>
+
+![Front attack, side view](/images/castle-royal-griffin-2688/front-side-05.png)
+
+![Upward attack, side view](/images/castle-royal-griffin-2688/up-side-05.png)
+
+![Downward attack, side view](/images/castle-royal-griffin-2688/down-side-05.png)
+
+</details>
+
+<details>
+<summary>September 21: wing-phase revision before independent leg motion</summary>
+
+<s>The front attack now lifts its wings earlier. Reviewing all nine original frames showed that the wings rise before the forward strike and lower as the claws reach. The revised draft opens fully at frame three, then folds through the lunge. Its body and wing vertices match the standing pose at both endpoints across the 65-time check. Foreclaw extension, hind-leg motion, feather intersections and the game camera still need work; this remains an offline Blender study.</s>
 
 ![Earlier wing lift, frame three of the revised draft; actual 1200 × 1200 Blender render](/images/castle-royal-griffin-2673/attack-03.png)
 
 ![Wings lowering during the forward lunge, frame five; actual Blender render, not an accepted game animation](/images/castle-royal-griffin-2673/attack-05.png)
+
+</details>
 
 <details>
 <summary>September 21: earlier attack draft with delayed wing lift</summary>
