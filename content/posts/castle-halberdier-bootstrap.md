@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-20T21:53:52+00:00
+lastmod: 2026-09-21T00:29:12+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman grip transferred to all three attack directions with shared idle endpoints. Fingers, cuffs and remaining actions are unfinished; not installed."
+homeSummary: "Pikeman hit-reaction draft added: five groups, 44 frames. Release/regrip, downward thrust, cuffs and fingers remain unfinished; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1145,7 +1145,7 @@ The revised grip has a seven-frame idle and a ten-frame forward-thrust trial. Re
 
 ![Forward-thrust trial with the revised grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2056/front.png)
 
-The revised grip now has idle, forward, upward and downward drafts covering 38 native frames. The upward draft clears the pike/hand, pike/body and selected arm/body surface tests at 361 sampled times. Downward thrust: Arm/torso intersections remain in the 401-sample audit; unfinished.
+<s>The revised grip now has idle, forward, upward and downward drafts covering 38 native frames.</s> Adding hit reaction brings the draft set to five groups and 44 frames. The upward draft clears the pike/hand, pike/body and selected arm/body surface tests at 361 sampled times. Downward thrust: Arm/torso intersections remain in the 401-sample audit; unfinished.
 
 All three attacks now copy the same idle bone and pike channels at their endpoints. Reopened endpoint matrices match idle; another 18 times per action check the edited neighborhoods. This removes the small discrepancy from repeated pose solving, without establishing velocity or acceleration continuity.
 
@@ -1153,7 +1153,26 @@ All three attacks now copy the same idle bone and pike channels at their endpoin
 
 ![Downward thrust with the revised grip, actual 1200 × 1400 Blender still; an uninstalled draft](/images/castle-pikeman-2070/down.png)
 
-The first downward transfer cleared the shaft but left both sleeves intersecting torso-weighted surfaces near the armor. Further elbow-path revisions addressed those locations; moving only the right arm did not remove the left-side intersection. Another elbow path cleared the peak pose but still intersected during the full motion, so it was not adopted. These tests remain limited by sampling and mesh partitions. Finger closure, cuff connections, full footwork and the other nine action groups are unfinished. The new Pikeman is not installed.
+The first downward transfer cleared the shaft but left both sleeves intersecting torso-weighted surfaces near the armor. Further elbow-path revisions addressed those locations; moving only the right arm did not remove the left-side intersection. Another elbow path cleared the peak pose but still intersected during the full motion, so it was not adopted. These tests remain limited by sampling and mesh partitions. Finger closure, cuff connections, full footwork and the other <s>nine</s> eight action groups are unfinished. The new Pikeman is not installed.
+
+### Six-frame hit-reaction draft
+
+The native six-frame reaction informed the backward lean, nearly upright pike, released right hand and return to the idle grip. The left hand continues holding the shaft while the feet retain their positions. Arm targets use the original bone lengths without stretching. The reopened 201-sample audit still finds intersections; this action has not passed review. The added hand/body test excludes the attached arm partition; it still does not cover every self-collision or seam.
+
+![Peak recoil, actual 1200 × 1400 Blender still; uninstalled action draft](/images/castle-pikeman-2092/hit.png)
+
+![Fifth frame during recovery, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2092/recover.png)
+
+The endpoints copy the same idle bone and pike channels and match after reopening. Release, regrip and shaft travel require their own checks between those endpoints. Five draft groups now cover 44 native frames; eight groups containing 36 frames remain absent. Downward-thrust intersections, cuffs, finger closure and overall appearance remain unfinished, and the new Pikeman is not installed.
+
+<details>
+<summary>Rejected recoil poses and paths</summary>
+
+The first released-hand pose looked like a hand on the hip and was rejected. Lowering the hand and aligning it with the forearm improved that pose, but the original timing let the shaft pass through the fingers and the rear shaft sweep through the right leg. A radial withdrawal followed by opening introduced hand/body contact on recovery and was also rejected. The current draft returns to the natural lowering path and revises when the pike moves forward; each change is checked through the motion.
+
+![Early hand-on-hip recoil, actual 1200 × 1400 Blender still; rejected](/images/castle-pikeman-2092/rejected-hip.png)
+
+</details>
 
 <details>
 <summary>Status before the directional transfer (history)</summary>
