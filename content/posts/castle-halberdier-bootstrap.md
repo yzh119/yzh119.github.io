@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T14:34:16+00:00
+lastmod: 2026-09-21T14:44:55+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin short coverts and shoulder diagnosis, with rejected sculpt and feather-overlay renders. The creature remains unfinished."
+homeSummary: "Royal Griffin textured shoulder transplant: open, folded, intermediate and rejected views. The intermediate recess remains; the trial is not adopted."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1164,6 +1164,22 @@ The previous constraint attached each root while leaving its feather orientation
 With the same 327-feather geometry, accumulated edge-to-cap crossings across nine poses fall from 5,156 with root-only attachment to 3,537 with the surface frame. **Intersections remain.** Those counts are not directly comparable with the older 59-feather study. The frontal shoulder concavity is also unchanged. Full unfolding, native actions and game integration remain unfinished.
 
 ![Front inspection render showing the remaining shoulder concavity; rear coverage does not establish a finished model](/images/castle-royal-griffin-2605/front-09.png)
+
+### Transplanting a textured shoulder patch
+
+A separate shoulder trial reuses actual feather geometry from the existing Meshy wing: **282 faces and 428 vertices**, with the original UVs and materials. Its texture fits the surrounding plumage better than the procedural white leaves. Moving and rotating the patch improves coverage in the open inspection pose, but the result is not appearance-approved.
+
+![Textured shoulder-patch trial, actual 1500 × 1500 Blender still; the open pose gains coverage while its edges still need work](/images/castle-royal-griffin-2623/open.png)
+
+Rigid attachment to one wing-surface frame made the patch protrude when folded, so that version was rejected. The revised trial follows the original donor vertices in the folded pose and blends toward a corrective shape as the wing surface rotates. A roughly 0.8 mm normal offset separates the otherwise coincident surfaces.
+
+![Rejected rigid transplant, actual Blender still; a thin flap protrudes above the folded shoulder](/images/castle-royal-griffin-2623/rejected-rigid.png)
+
+![Revised folded view, actual Blender still; the patch returns with the donor surface](/images/castle-royal-griffin-2623/folded.png)
+
+Across 129 sampled times after reopening, source UVs match exactly and the loop endpoints have identical vertex positions. Tested edge-length ratios range from approximately 0.525 to 1.684: this patch deforms with the source wing rather than remaining rigid. **The intermediate pose still exposes a substantial recess.** The image below records that unresolved result. Collision clearance, joins, applicability to other actions and game export remain unverified; the transplant has not replaced the previous working model.
+
+![Unresolved recess during partial opening, actual Blender still; the transplant remains an unadopted trial](/images/castle-royal-griffin-2623/middle.png)
 
 <details>
 <summary>September 21: frontal shoulder diagnosis and rejected trials</summary>
