@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T13:35:14+00:00
+lastmod: 2026-09-21T13:46:29+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman local test 0.14.1 corrects frame registration and reduces the turn-position jump; upright walking, failures and remaining battle checks are illustrated."
+homeSummary: "Royal Griffin root-cap color and lighting checks with matched Blender renders. Pikeman local test 0.14.1 remains installed; the full Castle roster is unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,9 +1133,26 @@ Previous homepage summary:
 
 </details>
 
-## Royal Griffin folded wings and standing pose {#royal-griffin-up}
+## Royal Griffin folded wings and stance {#royal-griffin-up}
 
-The current Royal Griffin study combines folded wings from an earlier Meshy model with the repaired standing body. These are **offline Blender renders**. The shoulder attachment remains open, medial feathers still have extraction cuts, and full wing unfolding is unfinished. This candidate has not been installed or accepted for appearance; all fourteen Castle creatures remain in production.
+The Royal Griffin still uses Meshy body and folded-wing geometry, with Astra authoring the Blender repair, rigging and checks. More shoulder and medial-feather surfaces have been recovered, bringing the wings to 11,848 faces. Two skinned root caps now close selected boundaries. Their color is closer to the adjacent plumage, but their smooth surfaces still need feather relief and a better-looking join. Full unfolding and native animation delivery remain unfinished; this Griffin is not installed.
+
+![Current wing-root candidate, actual 1000 × 1000 Blender still with an additional rear inspection light; not a native action or game capture](/images/castle-royal-griffin-2578/front.png)
+
+The dark rear patches had two causes to separate. The earlier color bake sampled the complete Meshy donor, introducing brown areas into the caps. Both inspection lights were also in front of the model. A texture-free clay render remained dark underneath the wings, while an unlit base-color render showed gray plumage. Material color and illumination needed separate checks.
+
+![Rejected cap bake under rear fill lighting; the brown-black patch remains visible in this actual Blender render](/images/castle-royal-griffin-2578/rejected-color.png)
+
+The replacement samples the nearest same-side silver-feather surface for each cap texel and retains the wing material’s silver color treatment. It excludes body faces and avoids interpolating across unrelated regions of the source texture atlas. The following image uses the same camera and fill light as the rejected version. The color match improves, but the cap’s smooth surface remains conspicuous.
+
+![Revised cap color with the same inspection lighting, actual Blender render; feather relief and the visible join remain unfinished](/images/castle-royal-griffin-2578/rear.png)
+
+Reopening the saved scenes confirmed unchanged vertices, triangle connectivity and skin weights for the body, wings and caps. Evaluated positions matched across 33 poses. This verifies that the material edit preserved geometry and binding; it does not establish appearance acceptance, complete collision checks or a finished animation set.
+
+<details>
+<summary>Earlier September 21 feather extraction and shoulder checks (history; original images retained)</summary>
+
+<s>The current Royal Griffin study combines folded wings from an earlier Meshy model with the repaired standing body. These are **offline Blender renders**. The shoulder attachment remains open, medial feathers still have extraction cuts, and full wing unfolding is unfinished. This candidate has not been installed or accepted for appearance; all fourteen Castle creatures remain in production.</s>
 
 ![Current Royal Griffin study, actual 900 × 900 Blender still, not concept art or a game screenshot](/images/castle-royal-griffin-2493/standing.png)
 
@@ -1164,6 +1181,9 @@ Keeping more of the old wing root also retained protruding feather remnants. A s
 ![Rejected attachment strip, actual Blender close-up showing angular shoulder panels](/images/castle-royal-griffin-2493/rejected-strip.png)
 
 Work continues on the shoulder and medial feather boundaries. The sole correction still needs pose-dependent control, and this standing branch has not been merged into the three directional attack drafts.
+
+
+</details>
 
 <details>
 <summary>Earlier flight-mesh folding study (history, September 21, 2026; superseded by donor wings)</summary>
