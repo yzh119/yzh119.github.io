@@ -1203,6 +1203,12 @@ The original idle frame also shows the creature standing on its hind legs with r
 
 Across 65 sampled times, the wing stays approximately 16 centimeters above the floor at its lowest point, and loop endpoints match. This does not establish collision clearance or pose fidelity. Folded width, feather intersections and the complete action set remain unfinished.
 
+A separate **nine-frame front-attack draft** now starts from the folded stance, lunges forward and returns. Sampling 65 times confirms identical body and wing vertices at the endpoints, with the first pose also matching the new folded stance. This remains an offline draft: lunge timing, claw deformation, collision clearance, other attack directions and game integration are unfinished.
+
+![Starting stance of the nine-frame front-attack draft, actual Blender still](/images/castle-royal-griffin-2667/attack-01.png)
+
+![Forward reach in the same draft, actual Blender still; this is not an accepted in-game animation](/images/castle-royal-griffin-2667/attack-05.png)
+
 <details>
 <summary>September 21: dark-band and fill-light comparisons</summary>
 
