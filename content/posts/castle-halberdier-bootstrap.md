@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T22:32:48+00:00
+lastmod: 2026-09-21T22:51:42+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Independent Griffin forearm controls span 13 reviewed draft clips; likeness and game validation remain unfinished."
+homeSummary: "Raised standing claws and lower folded shoulders span 13 Griffin draft clips; head proportions and game review remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,28 @@ Previous homepage summary:
 
 </details>
 
-## Griffin forearm binding {#griffin-binding}
+## Griffin standing pose and folded wings {#griffin-binding}
+
+The ordinary Griffin now raises its foreclaws while standing and carries its folded wings lower at the shoulders. Both changes span **thirteen experimental clips and 85 native frame slots**. Meshy supplied the model; Astra authors the Blender repair, rigging and animation scripts. This is still an offline candidate, without game installation or completion of the full Castle roster.
+
+![Raised foreclaws and lower folded shoulders, an actual 1200 × 1200 Blender render](/images/castle-griffin-2965/standing.png)
+
+Raising only the claws left the forearm feathers hanging behind them. Coordinating the independent forearm controls brings both upward. The revised stance now appears in idle, turning and the standing endpoints of other actions. Its correction fades during attacks, retaining their middle poses.
+
+Several folded-wing trials were discarded. Changing the folding angle barely lowered the upper outline while dropping the feather tips. Shortening the wings helped the folded height but made the extended wings look too small. The current version retains wing length and lowers the shoulders while folded, blending back as the wings open and preserving the established flight pose. Rear and oblique high-resolution renders were reviewed; the wing-root shape and texture remain rough.
+
+![Takeoff frame two, an actual 1200 × 1200 Blender render; shoulder placement transitions as the wings open](/images/castle-griffin-2965/takeoff.png)
+
+All 85 frames were rendered and reviewed again. Each of the thirteen saved scenes was reopened and checked at 65 sample times. Geometry, UVs, weights and rest bones are unchanged. The selected takeoff-to-flight and flight-frame-four-to-landing joins match; other checked standing endpoints differ by less than 0.000001 model units. Arbitrary flight-phase changes and facing during game playback remain untested.
+
+Compared with the preceding shoulder position, the maximum edge-length ratio in idle falls from about 3.08× to 2.76×. The downward attack rises slightly from about 3.66× to 3.68×, with a small increase in the upward attack too. The closer folded silhouette does not resolve every deformation issue.
+
+Head and neck proportions are next. Pixel-to-mesh inspection shows that the apparent continuous feather mass includes regions driven by the head, torso and claws, so a single shrinking operation would affect different anatomical parts. No head-and-neck reshaping has been adopted yet. The corpse silhouette, game playback and final visual review are also unfinished.
+
+<details>
+<summary>September 21: before raised standing claws and lower folded shoulders</summary>
+
+~~Standing claws remain low and folded wing height is unchanged.~~ The current branch revises both and integrates the action endpoints; the preceding account and images are retained below.
 
 The ordinary Griffin now has independent left and right forearm feather controls across **thirteen experimental clips and 85 native frame slots**. The feathers follow the raised forelimbs during flight; attacks, standing and other actions retain their earlier surface deformation. Meshy supplied the textured model, and Astra authors the Blender repair, rigging and animation scripts. This remains an offline draft without game installation or final likeness approval.
 
@@ -1152,6 +1173,8 @@ All thirteen saved scenes were reopened and compared at 65 sample times each. Ge
 The comparison still shows low foreclaws in the standing pose, higher folded wing tips and a bulkier head-and-neck outline. Those differences need further work.
 
 Head, wing and corpse silhouettes still need comparison and refinement against the original. Independent forearm control currently improves feather following during locomotion only. In-game facing, playback and final visual review remain outstanding.
+
+</details>
 
 <details>
 <summary>September 21: before independent forearm controls</summary>
