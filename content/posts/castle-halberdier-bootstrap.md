@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T17:33:15+00:00
+lastmod: 2026-09-21T17:45:47+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin hover and turn drafts, corrected pivot drift, and new Blender stills with discarded poses; feather and in-game transition review remain open."
+homeSummary: "Royal Griffin adds a nine-frame death draft, fixes grounding biased by orphan vertices and settles the wing planes. New stills include a failed trial; acceptance remains open."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1228,7 +1228,7 @@ A local weight revision now reduces some belly and tail-root pulling. Part of th
 
 The same rig now also has **eight-frame holding, seven-frame hit and eight-frame defence drafts**, matching the original sequence lengths. A new head bone lets the hit reaction tilt the head independently; defence opens the wings, while holding uses small head, claw and tail movements. The three attacks were moved onto this rig too: across 65 samples per attack, body vertices differ by less than 0.0005 mm from the previous version, with identical wing positions.
 
-The three new clips return to the attack standing pose. Their 163 sampled times keep finite geometry and matching endpoints; the hit reaction dips about 0.24 mm below the floor between keys. These remain offline motion studies. Foot contact, head and feather deformation, timing and game integration still need review; <s>movement, turns, hover interaction and death remain unfinished on this rig.</s> <s>September 21: movement now has the drafts below; turns, hover interaction and death still need their new-rig clips.</s> September 21: movement, hover and turns now have the offline drafts below; death remains unfinished.
+The three new clips return to the attack standing pose. Their 163 sampled times keep finite geometry and matching endpoints; the hit reaction dips about 0.24 mm below the floor between keys. These remain offline motion studies. Foot contact, head and feather deformation, timing and game integration still need review; <s>movement, turns, hover interaction and death remain unfinished on this rig.</s> <s>September 21: movement now has the drafts below; turns, hover interaction and death still need their new-rig clips.</s> <s>September 21: movement, hover and turns now have the offline drafts below; death remains unfinished.</s> September 21: these clips and death now have offline drafts; art and runtime acceptance remain open.
 
 ![Holding draft, actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2720/holding-oblique.png)
 
@@ -1272,7 +1272,7 @@ The first flight pass did not lower the wings far enough. Increasing the downstr
 
 </details>
 
-An **eight-frame hover interaction** now gives the head a small glance and relaxes the foreclaws before returning to the standing pose. Turning has two **three-frame halves**, with the game reversing the facing between them. There are now twelve offline draft clips totaling 76 native frames. Death is still missing, and this set is not installed.
+An **eight-frame hover interaction** now gives the head a small glance and relaxes the foreclaws before returning to the standing pose. Turning has two **three-frame halves**, with the game reversing the facing between them. <s>There are now twelve offline draft clips totaling 76 native frames. Death is still missing, and this set is not installed.</s> September 21: the death draft brings this to thirteen clips and 85 frames; the set remains uninstalled.
 
 The latest turn raises the wing roots while bending the elbows back, so the long feathers hang downward. The previous pose pointed both fans upward. The new front silhouette is still broad, and the feathers behind the head need an intersection review; this is not an accepted final model.
 
@@ -1290,6 +1290,25 @@ The ground pivot also drifted between keys despite matching at the keys themselv
 ![Earlier shoulder-only lift: upward feathers unlike the native turn silhouette](/images/castle-royal-griffin-2758/rejected-raised.png)
 
 Changing the backward sweep alone left the fans too low; raising the shoulders alone pointed them upward. The current trial coordinates shoulders and elbows. The first translation correction also failed: using an unnormalized interpolated quaternion left about 9 mm of drift and introduced floor penetration. That version is discarded.
+
+</details>
+
+Death now has a **nine-frame draft**, matching the native sequence length: wing spread, loss of balance, a sideways fall, and wings settling toward the floor. The working set now contains thirteen clips and 85 native frames. Clip coverage does not mean the set has passed acceptance: feather intersections, landing timing, camera calibration and in-game playback remain open.
+
+![Early death wing spread, actual 1000 × 1000 Blender still](/images/castle-royal-griffin-2774/spread.png)
+
+![Sideways fall in the death draft, actual Blender still](/images/castle-royal-griffin-2774/fall.png)
+
+![Resting draft after flattening the wing planes, actual Blender still; not installed](/images/castle-royal-griffin-2774/settled.png)
+
+Across 257 sampled times, surface vertices remain finite, the first pose matches holding within 0.001 mm, and the largest floor penetration is about 0.007 mm. Grounding now considers only vertices referenced by faces. Orphan vertices left in the body mesh are excluded. This is still not a complete collision or contact test.
+
+<details>
+<summary>September 21: floating death trial</summary>
+
+![Discarded trial: orphan vertices biased the floor calculation and lifted the visible corpse](/images/castle-royal-griffin-2774/rejected-floating.png)
+
+The first pass used every vertex to find the lowest point. Leftover vertices with no faces lifted the visible model; changing the frame evaluation time did not fix it. After checking the topology, grounding was corrected, but the upright wings still propped the body up. Reducing the sideways roll produced a foreclaw-supported pose instead. The current draft retains the side fall and twists each wing around its long axis during settling. Overlapping upper feathers still need work.
 
 </details>
 
@@ -4827,5 +4846,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>September 21: previous homepage summary</summary>
 
 <s>Royal Griffin adds four-frame takeoff, flight and landing drafts. New Blender stills show the wingbeat; landing from arbitrary animation phases still needs game review.</s>
+
+</details>
+
+<details>
+<summary>September 21: homepage summary before the death draft</summary>
+
+<s>Royal Griffin hover and turn drafts, corrected pivot drift, and new Blender stills with discarded poses; feather and in-game transition review remain open.</s>
 
 </details>
