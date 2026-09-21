@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T13:46:29+00:00
+lastmod: 2026-09-21T14:00:53+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin root-cap color and lighting checks with matched Blender renders. Pikeman local test 0.14.1 remains installed; the full Castle roster is unfinished."
+homeSummary: "Royal Griffin covert geometry and surface-root attachment, including two rejected shapes. Pikeman local test 0.14.1 is unchanged; the Castle roster remains unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1137,7 +1137,7 @@ Previous homepage summary:
 
 The Royal Griffin still uses Meshy body and folded-wing geometry, with Astra authoring the Blender repair, rigging and checks. More shoulder and medial-feather surfaces have been recovered, bringing the wings to 11,848 faces. Two skinned root caps now close selected boundaries. Their color is closer to the adjacent plumage, but their smooth surfaces still need feather relief and a better-looking join. Full unfolding and native animation delivery remain unfinished; this Griffin is not installed.
 
-![Current wing-root candidate, actual 1000 × 1000 Blender still with an additional rear inspection light; not a native action or game capture](/images/castle-royal-griffin-2578/front.png)
+![Cap-texture candidate before adding coverts, actual 1000 × 1000 Blender still with an additional rear inspection light; not a native action or game capture](/images/castle-royal-griffin-2578/front.png)
 
 The dark rear patches had two causes to separate. The earlier color bake sampled the complete Meshy donor, introducing brown areas into the caps. Both inspection lights were also in front of the model. A texture-free clay render remained dark underneath the wings, while an unlit base-color render showed gray plumage. Material color and illumination needed separate checks.
 
@@ -1147,7 +1147,21 @@ The replacement samples the nearest same-side silver-feather surface for each ca
 
 ![Revised cap color with the same inspection lighting, actual Blender render; feather relief and the visible join remain unfinished](/images/castle-royal-griffin-2578/rear.png)
 
-Reopening the saved scenes confirmed unchanged vertices, triangle connectivity and skin weights for the body, wings and caps. Evaluated positions matched across 33 poses. This verifies that the material edit preserved geometry and binding; it does not establish appearance acceptance, complete collision checks or a finished animation set.
+At the color-only stage, reopening the saved scenes confirmed unchanged vertices, triangle connectivity and skin weights for the body, wings and caps. Evaluated positions matched across 33 poses. This verifies that the material edit preserved geometry and binding; it does not establish appearance acceptance, complete collision checks or a finished animation set.
+
+### Three-dimensional root coverts
+
+An experimental layer adds **59 modeled covert feathers** over the caps. They still use a plain gray material. The first surface-bound version formed regular transverse ridges when the wings opened. A sparser root-bound version avoided those rows, but its feathers pointed toward the rear inspection camera and read as short pellets. Both were rejected.
+
+![Rejected regular covert rows, actual Blender still; the opened pose resembles corrugation](/images/castle-royal-griffin-2587/rejected-rows.png)
+
+![Rejected root-bound trial, actual Blender still; the viewing direction makes the feathers read as pellets](/images/castle-royal-griffin-2587/rejected-pellets.png)
+
+The next trial chooses feather directions on the opened inspection pose and transforms them back into the folded rest arrangement. Interpolated bone weights alone still allowed roots to separate from the caps by roughly 1.4 cm. A post-armature Geometry Nodes stage now moves each feather as a unit so its root stays on a barycentric cap-surface anchor.
+
+![Current root-attachment candidate, actual 1000 × 1000 Blender still; feather shape, occlusion and material remain under review](/images/castle-royal-griffin-2587/coverts.png)
+
+Across 65 poses from the reopened scene, all 59 roots stayed within 0.001 mm of their surface anchors. Tested nonzero edge-length ratios ranged from approximately 0.902 to 1.000. These checks cover root attachment and deformation, not feather-tip intersections, coverage quality, full unfolding or native action acceptance. The Geometry Nodes attachment also needs explicit treatment when exporting an animated model; Blender playback does not establish engine support.
 
 <details>
 <summary>Earlier September 21 feather extraction and shoulder checks (history; original images retained)</summary>
