@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T13:03:32+00:00
+lastmod: 2026-09-21T13:27:56+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman native-frame export, upright walking and slip checks, with Blender stills and a rejected crouched trial. Royal Griffin and the remaining Castle roster are still in progress."
+homeSummary: "Pikeman added to the local Castle test mod, with upright walking, native-frame checks and a rejected crouched trial. Battle appearance and the remaining Castle roster are unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1231,7 +1231,7 @@ Normalizing the weight-selection and playback coordinates, then blending the win
 
 ## Pikeman model and motion {#pikeman-thrust}
 
-Eleven Pikeman drafts cover thirteen native groups and 80 frame slots, including duplicate turns. Wrist, cuff and grip revisions are in the offline working set. Later work corrects the gait heading and adds supplemental start/stop clips for 3D inspection. The sections below distinguish each revision’s checks and rejected trials. This Pikeman is not installed; native likeness, materials and runtime motion remain under review, and all fourteen Castle creatures remain in scope.
+Eleven Pikeman drafts cover thirteen native groups and 80 frame slots, including duplicate turns. Wrist, cuff and grip revisions are in the offline working set. Later work corrects the gait heading and adds supplemental start/stop clips for 3D inspection. The sections below distinguish each revision’s checks and rejected trials. <s>This Pikeman is not installed.</s> September 21 installation update: the upright-walk export is now in the enabled local Castle test mod, version 0.14.0. Native likeness, materials and runtime motion remain under review, and all fourteen Castle creatures remain in scope.
 
 <details>
 <summary>Wrist-stage overview (history)</summary>
@@ -1272,7 +1272,7 @@ Animation exposed contacts that the idle pose did not. Sliding grips during fron
 
 ![Right hand opening during hit, actual 800 × 800 Blender still along the revised release path](/images/castle-pikeman-2346/release.png)
 
-At the thumb-revision stage, reopened scenes cleared the tested hand, cuff, body and shaft surface combinations, plus ten digit regions against the rest of their respective hands, across 1,283 sampled poses. Of these, 805 cover denser hit, death and downward-thrust checks. Body and pike motion were retained. At the checked idle joins, evaluated mesh positions differ by less than 0.001 mm. Sampling and mesh partitions do not establish continuous collision freedom, complete self-collision or contact area, and velocity continuity remains unaccepted. This Pikeman is not installed. <s>Native likeness, materials, walk heading and landings still need work.</s> September 21 correction: the offline gait and transition revisions are described [below](#pikeman-walk); native likeness, materials and in-game motion remain unaccepted.
+At the thumb-revision stage, reopened scenes cleared the tested hand, cuff, body and shaft surface combinations, plus ten digit regions against the rest of their respective hands, across 1,283 sampled poses. Of these, 805 cover denser hit, death and downward-thrust checks. Body and pike motion were retained. At the checked idle joins, evaluated mesh positions differ by less than 0.001 mm. Sampling and mesh partitions do not establish continuous collision freedom, complete self-collision or contact area, and velocity continuity remains unaccepted. <s>This Pikeman is not installed.</s> The later local test installation is recorded [below](#pikeman-walk). <s>Native likeness, materials, walk heading and landings still need work.</s> September 21 correction: the offline gait and transition revisions are described [below](#pikeman-walk); native likeness, materials and in-game motion remain unaccepted.
 
 <details>
 <summary>Earlier finger curls and thumb trials (history, including rejected images)</summary>
@@ -1302,7 +1302,7 @@ A later trial smooths palm and thumb-root weights by spatial distance before adj
 
 ### Native-frame export and walking revision {#pikeman-walk}
 
-The Pikeman now has a complete **13-group, 80-frame** body export on a shared 900 × 800 transparent canvas, twice the original dimensions. Its four-frame hover motion returns the pike before the engine switches to idle. Fixed-ground shadow and selection layers have also been generated. These are private test assets; the new Pikeman has not been installed.
+The Pikeman now has a complete **13-group, 80-frame** body export on a shared 900 × 800 transparent canvas, twice the original dimensions. Its four-frame hover motion returns the pike before the engine switches to idle. Fixed-ground shadow and selection layers have also been generated. <s>These are private test assets; the new Pikeman has not been installed.</s> September 21: the package has now been copied into the enabled local Castle test mod. Its 11 used groups contain 76 frames per scale; the four unused turn-duplicate frames remain in the source export. All 326 body, shadow and selection PNGs passed resource validation at 1× and 2×. The installation preserved 3,825 existing mod files; only the mod metadata and new Pikeman resources changed. This establishes a local test installation, not live battle or appearance acceptance.
 
 ![Current upright walk candidate, actual 1200 × 1400 Blender still with blog framing; not gameplay or an accepted final model](/images/castle-pikeman-2564/upright.png)
 
