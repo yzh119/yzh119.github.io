@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T15:16:09+00:00
+lastmod: 2026-09-21T17:09:57+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin adds holding, hit and defence drafts to its three attacks, with an independent head bone. Six new Blender stills; movement, turns and death remain unfinished."
+homeSummary: "Royal Griffin adds four-frame takeoff, flight and landing drafts. New Blender stills show the wingbeat; landing from arbitrary animation phases still needs game review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1228,7 +1228,7 @@ A local weight revision now reduces some belly and tail-root pulling. Part of th
 
 The same rig now also has **eight-frame holding, seven-frame hit and eight-frame defence drafts**, matching the original sequence lengths. A new head bone lets the hit reaction tilt the head independently; defence opens the wings, while holding uses small head, claw and tail movements. The three attacks were moved onto this rig too: across 65 samples per attack, body vertices differ by less than 0.0005 mm from the previous version, with identical wing positions.
 
-The three new clips return to the attack standing pose. Their 163 sampled times keep finite geometry and matching endpoints; the hit reaction dips about 0.24 mm below the floor between keys. These remain offline motion studies. Foot contact, head and feather deformation, timing and game integration still need review; movement, turns, hover interaction and death remain unfinished on this rig.
+The three new clips return to the attack standing pose. Their 163 sampled times keep finite geometry and matching endpoints; the hit reaction dips about 0.24 mm below the floor between keys. These remain offline motion studies. Foot contact, head and feather deformation, timing and game integration still need review; <s>movement, turns, hover interaction and death remain unfinished on this rig.</s> September 21: movement now has the drafts below; turns, hover interaction and death still need their new-rig clips.
 
 ![Holding draft, actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2720/holding-oblique.png)
 
@@ -1246,6 +1246,29 @@ The three new clips return to the attack standing pose. Their 163 sampled times 
 ![Defence, side view](/images/castle-royal-griffin-2720/defence-side.png)
 
 The first head-weight region missed most of the head. Another trial reset the tail's existing pose and broke the standing match. A later floor check used the lowest point of the whole body, so the descending tail lifted the feet off the floor. The current draft preserves the tail's original rotation, uses hind-foot vertices for keyframe height correction and counter-rotates the tail during recoil. It does not lock the feet throughout the motion.
+
+</details>
+
+Takeoff, flight and landing now have **four-frame drafts each**. Flight keeps four wingbeat phases: level, down, level and up. An extra fifth key closes the Blender loop for checking but is excluded from the four native output frames. The body leans into flight, the hind legs trail behind, and the head and tail counter-rotate to avoid simply tilting the entire character.
+
+Across 163 sampled times, the geometry stays finite. Takeoff joins flight frame one exactly; flight frame four joins the landing draft exactly; the standing endpoints differ by less than 0.0002 mm. Those are specific pose checks. In the local VCMI implementation, movement ends when the destination is reached and immediately selects the landing group, so it can interrupt another wingbeat phase. Arbitrary-phase landing still needs game review. Feather intersections, camera calibration and the earlier skinning issues also remain open; these clips are not installed.
+
+![Takeoff wing lift, actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2733/move_start-oblique-03.png)
+
+![Flight downstroke, actual Blender still](/images/castle-royal-griffin-2733/moving-oblique-02.png)
+
+![Flight upstroke, actual Blender still](/images/castle-royal-griffin-2733/moving-oblique-04.png)
+
+![Landing recovery toward the folded stance, actual Blender still](/images/castle-royal-griffin-2733/move_end-oblique-03.png)
+
+<details>
+<summary>Side views and flight-pose revisions</summary>
+
+![Downstroke, side view](/images/castle-royal-griffin-2733/moving-side-02.png)
+
+![Upstroke, side view](/images/castle-royal-griffin-2733/moving-side-04.png)
+
+The first flight pass did not lower the wings far enough. Increasing the downstroke made that phase clearer, but a side view then exposed the upstroke covering the head. Backward sweep alone did not clear the head; the current draft also counter-rotates the shoulders as the body pitches into flight. These revisions remain pose studies, with no collision or in-game acceptance claim.
 
 </details>
 
