@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T08:31:38+00:00
+lastmod: 2026-09-21T09:26:05+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman locomotion demonstration and Royal Griffin upward-attack draft, including rejected transition and wing-binding trials. Offline work; not installed."
+homeSummary: "Royal Griffin folded-wing and standing studies, connected mesh repair and rejected trials, with Blender stills. Offline work; appearance remains under review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,51 @@ Previous homepage summary:
 
 </details>
 
-## Royal Griffin upward attack and wing binding {#royal-griffin-up}
+## Royal Griffin folded wings and standing pose {#royal-griffin-up}
+
+The Royal Griffin is getting a standing pose from its airborne Meshy base. The upward, forward and downward attack drafts now share a binding, but still begin and end with spread wings and suspended hind legs. The original idle stands with folded wings, so these clips cannot yet form a consistent action set. The Blender stills below show the current offline candidate. Its wings remain too open and asymmetric. **It is not installed, and its appearance has not been accepted.** Work continues across all fourteen Castle creatures.
+
+![Current Royal Griffin standing candidate, actual 900 × 900 Blender render; not concept art or a game screenshot](/images/castle-royal-griffin-2433/standing.png)
+
+![Side view of the same candidate; wing roots and folded silhouette still need work](/images/castle-royal-griffin-2433/side.png)
+
+There were no new Meshy requests in this round. Meshy supplied the textured base mesh. Astra wrote the Blender tools for three-segment wings, articulated hind legs, tail control, weight repair, posing and validation.
+
+### Mesh connectivity and wing roots
+
+The imported mesh contained 47,400 vertices in 8,729 disconnected pieces, including many vertices at identical positions. Welding those duplicates produced one connected mesh with 15,495 vertices. All 31,018 faces and per-corner UV coordinates were preserved; the largest change in the evaluated standing pose was about 0.0003 mm. Welding also changed the shading. Copying the original rest normals did not preserve their deformed result, so a hidden copy of the original mesh currently supplies posed normals without appearing in renders.
+
+Connected topology allows weights to blend along actual mesh neighbors. An early welded candidate had 121 unique edges stretched beyond three times their rest length. The latest candidate has at most one across 161 diagnostic poses, with a maximum ratio of about 3.40. Both counts use the same welded topology and exclude rest edges shorter than 0.1 mm. This test interpolates the wings from open to folded while holding the body in its standing pose. It does not validate a complete animation, collisions or resemblance to the original.
+
+### Hind legs and paws
+
+Each hind leg now has hip, knee and ankle joints, with foot placement solved using its segment lengths. The tail and left wingtip have also been raised clear of the ground. The two paws initially shared weights incorrectly because they were separated by X coordinate alone; the revised assignment uses their actual three-dimensional positions.
+
+The paws remained too rounded for a convincing stance. A reversible sole shape key changes the surface by up to about 12 mm to create broader support. The close-up below belongs to that intermediate paw-repair stage. Claw tips and paw anatomy still need review. The correction is currently static and must be controlled by the pose before it can be used alongside flight.
+
+![Blender close-up from the sole-correction stage; reversible shape key, with claw shape still under review](/images/castle-royal-griffin-2433/paws.png)
+
+<details>
+<summary>Rejected folding, paw and smoothing trials</summary>
+
+A shared spatial mask initially left one wing partly attached to the body and pulled the crown and neck into the fold. Separate left/right regions and head exclusion fixed that assignment, but later three-segment poses pointed feathers forward or left them hanging too low. A tighter fold twisted the feather surface severely, reaching an edge-length ratio close to 80. It was rejected.
+
+![Rejected tight-fold trial, actual Blender still](/images/castle-royal-griffin-2433/rejected-fold.png)
+
+An automatic search for greater paw contact chose a curled-down right foot. Its contact metric improved while the paw looked more like a fist, so that result was also rejected.
+
+![Rejected contact-area-driven paw orientation, actual Blender close-up](/images/castle-royal-griffin-2433/rejected-paws.png)
+
+Corrective smoothing on the disconnected mesh tore the feathers into strips. Repeating it after welding still damaged the surface, and neither version was retained. The direct rest-normal copy was also superseded because shading differences remained after deformation.
+
+![Rejected smoothing on disconnected geometry, actual Blender still](/images/castle-royal-griffin-2433/rejected-smooth.png)
+
+</details>
+
+<details>
+<summary>Earlier upward-attack and binding record (historical; status corrected September 21, 2026)</summary>
+
+The earlier checks addressed the coordinate and weight problems in that upward-attack draft. Later work corrected the foreclaw rotation direction in upward and forward attacks, then identified the mismatch between their airborne endpoints and the original folded idle. The new standing branch has not been merged into those attack drafts. The previous text and images are retained below.
 
 A nine-frame upward-attack draft now raises the torso, spreads the wings and reaches with the foreclaws, following the distinct pose in the original attack. Astra reused the existing Meshy model; this pass made no new generation request.
 
@@ -1145,7 +1189,10 @@ Normalizing the weight-selection and playback coordinates, then blending the win
 
 ![Revised Royal Griffin upward attack, actual Blender still from an offline draft](/images/castle-royal-griffin-2372/up.png)
 
-This revision covers the upward-attack trial only. Wing-root shape, claw motion, native likeness and consistency with the other clips still need review. Nothing from this pass is installed in the game.
+<s>This revision covers the upward-attack trial only. Wing-root shape, claw motion, native likeness and consistency with the other clips still need review. Nothing from this pass is installed in the game.</s>
+
+
+</details>
 
 ## Pikeman model and motion {#pikeman-thrust}
 
