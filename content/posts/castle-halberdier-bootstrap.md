@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T21:09:43+00:00
+lastmod: 2026-09-21T21:41:13+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin facing test exposed a turn jump; wing-root repair remains separate from the 13 draft clips."
+homeSummary: "Repaired Griffin mesh now runs through 13 draft clips; corpse contact, likeness and game review remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,30 @@ Previous homepage summary:
 
 </details>
 
-## Griffin facing changes and wing-root repair {#griffin-binding}
+## Griffin repaired mesh in motion {#griffin-binding}
+
+The repaired Griffin mesh now runs through **thirteen experimental clips and 85 native frames**. Meshy supplied the textured geometry; Astra's Blender scripts replaced one wing, reconnected the root, adjusted its binding and migrated the motions. The preceding mesh and animation branches remain available. This version is offline and has not replaced the game's Griffin.
+
+![Upright folded pose on the repaired mesh, actual 1200 × 1200 Blender render](/images/castle-griffin-2912/holding.png)
+
+Raising the wings made the standing outline narrower, but exposed a sharp binding change: adjacent root vertices carried about 3% and 26% wing weight. Smoothing only the local body/wing weight split reduced the maximum stretch in the same unfolding sweep from about 8.04× to 3.06×. Geometry, UVs and the protected head weights stayed unchanged during that weight correction. The remaining root texture seam still needs work.
+
+The new right wing uses mirrored left-wing rotations, replacing the old compensating motion for the asymmetric mesh. The upright fold fades out as the action opens the wings. An initial import mistakenly cleared the transferred weights; that branch was discarded, the import order was fixed, and every vertex's weight sum was checked before regenerating the clips.
+
+![Attack transition using the repaired wing binding](/images/castle-griffin-2912/front.png)
+
+All 85 frames were rendered and reviewed. Reopening the clips at 589 times found finite coordinates; checked standing transitions differ by less than 0.000001 model units. The authored flight transitions and unmirrored turn endpoints match. Facing flips, arbitrary-phase landing, feather collisions and resemblance to the original still require work. Head colour and forward claw reach remain visibly different.
+
+![Flight downstroke on the repaired mesh](/images/castle-griffin-2912/moving.png)
+
+The changed wing crossed the floor by about 0.024 model units during death. A separate height correction reduces the worst sampled penetration to about 0.000030 units over 513 reopened samples. The corpse still appears supported by protruding feathers, so this is not accepted ground contact.
+
+![Death endpoint after the height correction; feather support and the corpse silhouette remain unfinished](/images/castle-griffin-2912/death.png)
+
+<details>
+<summary>September 21: separate root repair before animation migration</summary>
+
+~~The repaired mesh has not been propagated to the thirteen clips.~~ The migration described above supersedes that status; the earlier repair measurements and failed approaches follow.
 
 The ordinary Griffin still has **thirteen experimental clips covering 85 native frames**, with no game installation. A separate geometry repair now replaces one wing and reconnects its root. Meshy supplied the textured model; Astra wrote the Blender edits and motion tools. The repaired mesh has not been propagated to those thirteen clips.
 
@@ -1154,6 +1177,8 @@ The next repair joins the two root boundaries with 153 faces and reshapes 665 ne
 Reopening the saved scene and sampling a simple unfolding sweep at 33 positions found finite coordinates. The maximum edge stretch remains about 4.99× for rest edges longer than 0.003 model units. This checks a limited deformation sweep; attacks, flight, death, the repaired turn silhouette and game playback still need validation. The original thirteen-clip branch is retained unchanged.
 
 ![Halfway through the unfolding check, actual Blender render](/images/castle-griffin-2899/partial.png)
+
+</details>
 
 <details>
 <summary>September 21: earlier shoulder-and-elbow animation branch, before the facing test and mesh repair</summary>
