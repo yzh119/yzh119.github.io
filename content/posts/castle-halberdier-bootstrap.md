@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T14:17:08+00:00
+lastmod: 2026-09-21T14:24:51+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin feather-clearance trials: rejected Shrinkwrap deformation and spiky bends. Pikeman local test remains 0.14.1; Castle production continues."
+homeSummary: "Royal Griffin short coverts with surface-frame attachment and four HD Blender stills. Intersections, shoulder joins and the full action set remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,7 +1135,7 @@ Previous homepage summary:
 
 ## Royal Griffin folded wings and stance {#royal-griffin-up}
 
-The Royal Griffin still uses Meshy body and folded-wing geometry, with Astra authoring the Blender repair, rigging and checks. More shoulder and medial-feather surfaces have been recovered, bringing the wings to 11,848 faces. Two skinned root caps now close selected boundaries. Their color is closer to the adjacent plumage, but their smooth surfaces still need feather relief and a better-looking join. Full unfolding and native animation delivery remain unfinished; this Griffin is not installed.
+The Royal Griffin still uses Meshy body and folded-wing geometry, with Astra authoring the Blender repair, rigging and checks. More shoulder and medial-feather surfaces have been recovered, bringing the wings to 11,848 faces. Two skinned root caps now close selected boundaries. Their color is closer to the adjacent plumage. <s>Their smooth surfaces still need feather relief and a better-looking join.</s> September 21 revision: the short-coverts study below adds surface relief, while the join remains unfinished. Full unfolding and native animation delivery remain unfinished; this Griffin is not installed.
 
 ![Cap-texture candidate before adding coverts, actual 1000 × 1000 Blender still with an additional rear inspection light; not a native action or game capture](/images/castle-royal-griffin-2578/front.png)
 
@@ -1149,9 +1149,28 @@ The replacement samples the nearest same-side silver-feather surface for each ca
 
 At the color-only stage, reopening the saved scenes confirmed unchanged vertices, triangle connectivity and skin weights for the body, wings and caps. Evaluated positions matched across 33 poses. This verifies that the material edit preserved geometry and binding; it does not establish appearance acceptance, complete collision checks or a finished animation set.
 
+### Short coverts and surface orientation
+
+The current offline study uses **327 shorter coverts**, approximately 4.5–5.3 cm long, arranged in denser staggered rows. Meshy's body and main wings remain in place. Astra authored the supplementary feather geometry and attachment tools in Blender. A procedural UV shader adds subtle barb and shaft detail; the material is still provisional.
+
+![Current short-coverts study with folded wings, actual 1500 × 1500 Blender still](/images/castle-royal-griffin-2605/rear-01.png)
+
+![The same study in its open inspection pose; coverage improves, but intersections and joins remain](/images/castle-royal-griffin-2605/rear-09.png)
+
+The previous constraint attached each root while leaving its feather orientation to interpolated bone weights. The revised attachment constructs a local frame from the three evaluated corners of the root's cap triangle, then translates and rotates the feather as a rigid piece. Reopening the shaded scene and sampling 65 poses gives root errors below 0.001 mm and edge-length ratios of 0.999963–1.000028. That is consistent with rigid feathers, not evidence of collision clearance.
+
+![Rear oblique inspection render; the new layer still needs a better join to the existing feathers](/images/castle-royal-griffin-2605/side-09.png)
+
+With the same 327-feather geometry, accumulated edge-to-cap crossings across nine poses fall from 5,156 with root-only attachment to 3,537 with the surface frame. **Intersections remain.** Those counts are not directly comparable with the older 59-feather study. The frontal shoulder concavity is also unchanged. Full unfolding, native actions and game integration remain unfinished.
+
+![Front inspection render showing the remaining shoulder concavity; rear coverage does not establish a finished model](/images/castle-royal-griffin-2605/front-09.png)
+
+<details>
+<summary>September 21: earlier 59-feather and clearance trials (history; text and images retained)</summary>
+
 ### Three-dimensional root coverts
 
-An experimental layer adds **59 modeled covert feathers** over the caps. They still use a plain gray material. The first surface-bound version formed regular transverse ridges when the wings opened. A sparser root-bound version avoided those rows, but its feathers pointed toward the rear inspection camera and read as short pellets. Both were rejected.
+<s>An experimental layer adds **59 modeled covert feathers** over the caps.</s> This records the stage before the 327 short-coverts study. They still use a plain gray material. The first surface-bound version formed regular transverse ridges when the wings opened. A sparser root-bound version avoided those rows, but its feathers pointed toward the rear inspection camera and read as short pellets. Both were rejected.
 
 ![Rejected regular covert rows, actual Blender still; the opened pose resembles corrugation](/images/castle-royal-griffin-2587/rejected-rows.png)
 
@@ -1176,6 +1195,8 @@ A separate trial bends the feather geometry outward while retaining the root att
 ![Rejected 4 cm bend, actual 1000 × 1000 Blender still; exposed tips form an unnatural arrangement](/images/castle-royal-griffin-2598/bend40.png)
 
 ![Rejected 6 cm bend under the same camera and lighting; fewer crossings but more prominent spikes](/images/castle-royal-griffin-2598/bend60.png)
+
+</details>
 
 <details>
 <summary>Earlier September 21 feather extraction and shoulder checks (history; original images retained)</summary>
