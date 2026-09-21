@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T22:19:47+00:00
+lastmod: 2026-09-21T22:32:48+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Forward Griffin claws now span takeoff, flight and landing; forearm feathers and game review remain unfinished."
+homeSummary: "Independent Griffin forearm controls span 13 reviewed draft clips; likeness and game validation remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,30 @@ Previous homepage summary:
 
 </details>
 
-## Griffin forelimbs and flight motion {#griffin-binding}
+## Griffin forearm binding {#griffin-binding}
+
+The ordinary Griffin now has independent left and right forearm feather controls across **thirteen experimental clips and 85 native frame slots**. The feathers follow the raised forelimbs during flight; attacks, standing and other actions retain their earlier surface deformation. Meshy supplied the textured model, and Astra authors the Blender repair, rigging and animation scripts. This remains an offline draft without game installation or final likeness approval.
+
+![Current flight downstroke, an actual 1200 × 1200 Blender render; the forearm feathers sit closer to the raised limb](/images/castle-griffin-2949/moving.png)
+
+Narrowing the forearm mesh had left the feather fan visible. Mapping pixels back to mesh faces revealed that two sampled points on its edge still assigned about 77–78% of their weight to the torso. They stayed behind as the claw rose. Transferring that influence directly to the claw improved flight but increased attack stretching: with the same sampling, the maximum edge-length ratio rose from about 4.40× to 6.41× in the frontal attack, and from 3.66× to 5.04× in the downward attack. That version was rejected.
+
+Two additional forearm bones now receive the selected feathers' former torso influence. Their motion blends through takeoff and landing, follows the claw in flight, and retains torso motion in the other clips. Frontal and downward attacks therefore return to their earlier deformation levels. Existing stretching still needs work. The flight maximum rises slightly from about 4.38× to 4.45×, so the tighter silhouette is not a complete deformation fix.
+
+![Current frontal attack, an actual 1200 × 1200 Blender render; previous attack deformation is retained and the forearm outline remains unfinished](/images/castle-griffin-2949/front.png)
+
+All thirteen saved scenes were reopened and compared at 65 sample times each. Geometry, UVs, original rest bones and original animation channels are unchanged. The ten non-locomotion clips differ by less than 0.00001 model units at the surface. The selected takeoff-to-flight and flight-frame-four-to-landing joins match, as do the flight loop endpoints. All 85 frames were rendered and reviewed again. These checks do not cover arbitrary phase changes during game playback.
+
+![Original and current game-camera views: standing, flight and frontal attack. Native frames are enlarged 2× before applying the same canvas crop](/images/castle-griffin-2949/comparison.jpg)
+
+The comparison still shows low foreclaws in the standing pose, higher folded wing tips and a bulkier head-and-neck outline. Those differences need further work.
+
+Head, wing and corpse silhouettes still need comparison and refinement against the original. Independent forearm control currently improves feather following during locomotion only. In-game facing, playback and final visual review remain outstanding.
+
+<details>
+<summary>September 21: before independent forearm controls</summary>
+
+~~The feather region still needs identification.~~ Pixel-to-mesh correspondence now identifies it, and independent controls are in place; likeness remains unfinished.
 
 The ordinary Griffin has **thirteen experimental clips and 85 native frame slots**, including gold head-and-neck shading and the revised collapse. Forward claw reach now extends through takeoff, flight and landing. Meshy supplied the textured model; Astra authors the Blender repair, rigging and animation scripts. The set remains an offline draft, without game installation or final likeness approval.
 
@@ -1148,6 +1171,8 @@ The claws rise during takeoff and return during landing. Each saved clip was reo
 Raising the claws exposes the bulky forearm feather fans. Two local mesh-narrowing trials compressed the forearms around their axes, but even the stronger setting left the outer fan visible. That geometry change was not adopted. The feather region needs more precise identification before further reshaping. Head and wing proportions, the corpse silhouette and actual game playback also remain unfinished.
 
 ![Unadopted forearm-narrowing trial, an actual 1100 × 1100 Blender render; the outer feather fan remains](/images/castle-griffin-2941/forearm-trial.png)
+
+</details>
 
 <details>
 <summary>September 21: before forward claws and flight transitions</summary>
