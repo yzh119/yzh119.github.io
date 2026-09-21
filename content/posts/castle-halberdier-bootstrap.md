@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T14:00:53+00:00
+lastmod: 2026-09-21T14:17:08+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin covert geometry and surface-root attachment, including two rejected shapes. Pikeman local test 0.14.1 is unchanged; the Castle roster remains unfinished."
+homeSummary: "Royal Griffin feather-clearance trials: rejected Shrinkwrap deformation and spiky bends. Pikeman local test remains 0.14.1; Castle production continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1162,6 +1162,20 @@ The next trial chooses feather directions on the opened inspection pose and tran
 ![Current root-attachment candidate, actual 1000 × 1000 Blender still; feather shape, occlusion and material remain under review](/images/castle-royal-griffin-2587/coverts.png)
 
 Across 65 poses from the reopened scene, all 59 roots stayed within 0.001 mm of their surface anchors. Tested nonzero edge-length ratios ranged from approximately 0.902 to 1.000. These checks cover root attachment and deformation, not feather-tip intersections, coverage quality, full unfolding or native action acceptance. The Geometry Nodes attachment also needs explicit treatment when exporting an animated model; Blender playback does not establish engine support.
+
+### Feather-tip intersections and rejected clearance trials
+
+The root-attached study above still lets feather tips enter the cap. An edge-to-cap test found 2,239 crossings accumulated over nine inspection poses. Edges incident to feather roots are excluded, and an edge can count again in another pose. Removing the normal-direction correction produced identical counts.
+
+Adding Shrinkwrap after the root constraint reduced crossings, but damaged the feathers. Across 65 sampled poses, some edges collapsed to roughly 0.0055 times their first-frame length; others stretched to 68.95 times. This candidate was rejected.
+
+![Rejected Shrinkwrap clearance trial, actual Blender still; one pose cannot show the full deformation failure](/images/castle-royal-griffin-2598/shrinkwrap.png)
+
+A separate trial bends the feather geometry outward while retaining the root attachment. Tip offsets of 2, 4 and 6 cm reduced the nine-pose crossing totals to 496, 180 and 73. The 4 and 6 cm versions kept edge-length ratios around 0.902–1.000 across 65 poses and root errors below 0.001 mm. Their rendered feathers nevertheless stand up like spikes, so neither is adopted. Feather lengths, directions and overlap still need revision. These tests only examine feather edges against the cap; they do not establish complete collision clearance, appearance acceptance or game integration.
+
+![Rejected 4 cm bend, actual 1000 × 1000 Blender still; exposed tips form an unnatural arrangement](/images/castle-royal-griffin-2598/bend40.png)
+
+![Rejected 6 cm bend under the same camera and lighting; fewer crossings but more prominent spikes](/images/castle-royal-griffin-2598/bend60.png)
 
 <details>
 <summary>Earlier September 21 feather extraction and shoulder checks (history; original images retained)</summary>
