@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T19:13:20+00:00
+lastmod: 2026-09-21T19:25:52+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin head and hind-leg controls added; continuous weights reduce a failed corpse pose’s surface stretching. Full actions and body support remain unfinished."
+homeSummary: "Griffin holding and nine-frame death drafts now share the revised rig and standing pose. Wing deformation and the remaining actions are unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,28 @@ Previous homepage summary:
 
 </details>
 
-## Griffin wing binding {#griffin-binding}
+## Griffin standing and death drafts {#griffin-binding}
+
+The regular Griffin keeps its existing Meshy flight-pose mesh. Astra’s revised Blender rig now supports an **eight-frame holding draft and a nine-frame death draft** from the same standing pose. These two clips use the newer continuous weights and head/leg controls. The seven earlier animation candidates remain on their older branch; they are not a unified delivery. Nothing from this new Griffin branch is installed.
+
+Standing now uses the native hind-leg stance with raised foreclaws and folded wings. The generated legs had different floor heights: the selected right-foot region was about 0.056 model units above the left. Hip rotation barely changed it. A small translation of that leg brings both selected foot minima to the ground, though this does not establish full sole contact or correct anatomy.
+
+![Holding draft on the revised rig, actual 900 × 900 Blender still](/images/castle-griffin-2836/holding.png)
+
+Death now starts at that same stance, spreads the wings, leans back, falls sideways and settles the wings. The full nine-frame sheet below documents the draft rather than a finished in-game action. Timing, wing-root deformation and body support still need comparison with the original.
+
+![Wing spread early in the death draft, actual Blender still](/images/castle-griffin-2836/spread.png)
+
+![Sideways fall, actual Blender still](/images/castle-griffin-2836/fall.png)
+
+![Final corpse pose, actual Blender still; support and feather overlap remain unaccepted](/images/castle-griffin-2836/corpse.png)
+
+![All nine death frames at a fixed camera](/images/castle-griffin-2836/death-sheet.jpg)
+
+After reopening, 482 sampled times have finite surface coordinates. Holding closes exactly and its selected foot vertices stay fixed. Both clips start within 0.000001 model units of the standing source. The death surface dips about 0.000023 model units below the floor between baked grounding keys. These checks do not resolve the visible wing-root distortion: the largest native-key edge stretch is still about 5.51× for original edges longer than 0.003 model units. The high far-wing contour also needs correction. Flight, attacks, reactions and turns still need to be brought onto this rig before export and game review.
+
+<details>
+<summary>September 21: earlier Griffin weights and corpse trials; stage-specific records</summary>
 
 The regular Griffin uses its existing flight-pose Meshy mesh. A larger wing rotation exposed a problem in the old Blender rig: its binary wing mask included part of the head. Astra revised the weights so those vertices follow the body, with a gradual transition near the wing roots. The correction has been carried into seven offline candidates: flight, three attack directions, hit, defence and the old death trial. None is installed or visually accepted.
 
@@ -1166,6 +1187,9 @@ The death trial remains rejected. Its original last frame looked airborne, with 
 ![Rejected corpse trial before the binding correction: the wing pulls part of the head](/images/castle-griffin-2817/rejected-head.png)
 
 ![Head restored, but wingtip support still holds the body above the floor; unfinished Blender pose](/images/castle-griffin-2817/corpse-pending.png)
+
+</details>
+
 
 </details>
 
