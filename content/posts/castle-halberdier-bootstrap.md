@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T04:09:33+00:00
+lastmod: 2026-09-21T05:18:41+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman downward thrust clears the current surface audit, with an eleven-frame preview and rejected pose. Cuffs, fidelity and transitions remain; not installed."
+homeSummary: "Pikeman cuff trials now include Blender close-ups and rejected approaches. Death and downward thrust still overlap locally; unaccepted and uninstalled."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1139,7 +1139,12 @@ The Pikeman grip now has a different orientation around the shaft. In the old id
 
 ![Revised idle grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2056/holding.png)
 
+<details>
+<summary>Earlier grip close-up, before the cuff connection trial</summary>
+
 ![Left-hand close-up, actual 800 × 800 Blender still; cuff gap and finger closure remain unfinished](/images/castle-pikeman-2056/left-close.png)
+
+</details>
 
 The revised grip has a seven-frame idle and a ten-frame forward-thrust trial. Reopening the saved scenes and sampling every 0.025 frame gave: holding at 241 times: no intersections in the five tested surface pairs/partitions; front at 361 times: no intersections in the five tested surface pairs/partitions. The tests cover pike/hand and pike/body surfaces plus skin-weight partitions of each arm against the remaining body. They do not establish complete collision or appearance acceptance. A separate set of 19 forward-thrust poses gave axis angles of roughly 17–61° on the left and 9–67° on the right; those samples do not prove continuous-motion extrema.
 
@@ -1150,6 +1155,31 @@ The revised grip has a seven-frame idle and a ten-frame forward-thrust trial. Re
 All three attacks now copy the same idle bone and pike channels at their endpoints. Reopened endpoint matrices match idle; another 18 times per action check the edited neighborhoods. This removes the small discrepancy from repeated pose solving, without establishing velocity or acceleration continuity.
 
 ![Upward thrust with the revised grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2070/up.png)
+
+### Cuff connection trial {#pikeman-cuffs}
+
+On September 21, Astra added a connecting surface between the existing sleeve opening and the cut edge of the hand. Its outer bands use the original blue cloth material, with skin next to the wrist. The hand meshes, grip targets and bone animation stay unchanged; this pass required no new Meshy task. These are actual 800 × 800 Blender close-ups of an unadopted, uninstalled candidate.
+
+![Defence close-up with the candidate cuff connection; offline trial, not adopted](/images/castle-pikeman-2271/defence-cuffs.png)
+
+![Turning close-up of the same candidate; wrist creases, finger closure and the cuff silhouette remain unfinished](/images/castle-pikeman-2271/turn-cuff.png)
+
+The candidate now exists in eleven action scenes. Reopened checks at 671 times found no new-surface intersections with the pike or the selected other-body regions. A further check against each hand exposed overlaps at the left wrist during death and the right wrist during downward thrust, so the current working set has not been replaced. Original body, hand and pike vertices match at the start, middle and end of each action. Sampling, body partitions and the excluded connecting band limit these tests; they do not establish complete model acceptance.
+
+<details>
+<summary>Rejected wrist extension and cuff-weight trials</summary>
+
+Extending the skin into the sleeve reduced the gap but looked like a rigid tube in the defence close-up. Lengthening and narrowing the sleeve, then adding more wrist-following weight, pulled sharp folds into the cloth. Neither approach was adopted.
+
+![Rejected skin extension, actual Blender still; rigid wrist shape and stretched texture](/images/castle-pikeman-2271/rejected-tube.png)
+
+![Rejected sleeve shape and weight trial, actual Blender still; conspicuous folds at the opening](/images/castle-pikeman-2271/rejected-weights.png)
+
+The first edge-based connection also acquired stray gold lines from UV interpolation across the original texture islands. Avoiding those crossings removed the erroneous stripes. The donor wrist creases and material transition still need work.
+
+</details>
+
+The action previews below retain the working set from before this cuff experiment. Installation is unchanged, and the new Pikeman remains outside the game.
 
 ### Downward-thrust grip and elbow path
 
