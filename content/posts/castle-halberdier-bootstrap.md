@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T20:20:34+00:00
+lastmod: 2026-09-21T20:35:16+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin shoulder weights revised across 13 drafts; the downward attack now follows a diagonal lunge. Export and game review remain pending."
+homeSummary: "Griffin elbow-rig study reduces standing stretch, but the folded silhouette is unfinished; the thirteen-action branch remains separate."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1140,6 +1140,27 @@ The ordinary Griffin now has **13 editable Blender clips, covering 85 native fra
 The projection above the head was partly a binding defect. Shoulder feathers retained too much body weight, so they stayed raised while the rest of the wing folded. Changing shoulder angles alone barely moved the tip. A broader weight correction then pulled the crest, so that trial was rejected. The revised mask transfers weight on 4,220 vertices while preserving all 3,928 vertices whose head weight is at least 0.15. Their positions are unchanged at the native frames across the thirteen original clips. This is a selected-region check, not proof that every neck feather is correct.
 
 ![Standing after the shoulder-weight correction, actual Blender render; the tip is lower, while the remaining folded-wing shape still needs work](/images/castle-griffin-2865/standing.png)
+
+A separate **eleven-bone standing study** adds an elbow to each wing. Dividing the fold and backward sweep between shoulder and elbow reduces the maximum checked edge stretch in this pose from 4.99× to 2.94×, for rest edges longer than 0.003 model units. The wings remain too broad and asymmetric. This study has not replaced the thirteen-clip branch shown below, and it is not installed.
+
+![Shoulder-and-elbow folding study, actual 900 × 900 Blender render; unfinished standing pose](/images/castle-griffin-2880/elbow.png)
+
+![Front view of the same study: the asymmetry remains visible](/images/castle-griffin-2880/front.png)
+
+![Rear view; feather overlap and folded-wing width remain under review](/images/castle-griffin-2880/rear.png)
+
+Reopening confirms identical mesh coordinates, face topology and UVs. Resetting the controls restores the neutral surface within 0.000001 model units. This verifies the new rig's rest state, not its motions; the elbow controls still need a suitable folded silhouette before any action migration.
+
+<details>
+<summary>Wing-root approaches rejected in this pass</summary>
+
+Weight diffusion did not give a consistent improvement: the tested standing ratios ranged from 4.76× to 8.53×, with more iterations sometimes making the result worse. Broader lower-wing masks and moving the shoulder pivot also failed to improve the maximum stretch. Preserve-volume skinning raised the standing ratio to 6.02× and left the last death pose about 0.0071 model units above the floor. These variants were not promoted.
+
+![Rejected preserve-volume death trial; the contact changed as well as the wing deformation](/images/castle-griffin-2880/rejected-volume.png)
+
+Corrective smoothing on the original split mesh left the measured maximum unchanged. A separate weld retained all 31,105 faces while reducing coincident vertices from 47,397 to 15,535, but smoothing that mesh produced much larger stretch, reaching 17.60× in the strongest trial. That branch was also discarded. The eleven-bone study retains the original, unwelded geometry.
+
+</details>
 
 Flight uses four poses for each of takeoff, movement and landing. A tail control brings the tail behind the flying body, while the wing stroke now has a clearer downstroke. The movement loop keeps a fixed body height. Reopening confirms the authored takeoff-to-flight seam, flight loop and the chosen flight-to-landing seam; the engine can begin landing at other wing phases, which remains unverified.
 
