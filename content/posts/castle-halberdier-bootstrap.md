@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T17:58:40+00:00
+lastmod: 2026-09-21T18:15:33+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin stance and visible-height calibration revised across thirteen drafts. New Blender stills accompany a clearly scoped production history; in-game acceptance remains open."
+homeSummary: "Royal Griffin turn-wing intersections receive a partial correction, with colored diagnostics and new Blender stills. Folded and transitional poses remain unresolved."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1147,9 +1147,26 @@ The standing pose now tucks the tail behind the body and raises the two foreclaw
 
 All thirteen drafts now use the revised standing pose. The correction fades away at attack peaks, during sustained flight and in the later death frames to retain those authored motions. Turns release the tail tuck gradually, preventing it from swinging out beside the body. Surface vertices remain finite across 1,181 sampled times, and 23 specified seams match within 0.001 mm. Preserved key poses also match their sources. This does not establish collision safety or seamless landing from any flight phase; the hit reaction still dips roughly 0.24 mm below the floor.
 
+The turn now uses less shoulder sweep and a revised elbow fold. Side-colored diagnostics identified the feathers crossing behind the head as parts of the opposite wings. No non-coplanar intersections between those wings are detected at the new frontal key, but the folded stance and some intermediate poses still intersect. The spread silhouette also needs further comparison with the native pose. Both three-frame halves retain their standing endpoints, and all six frames fit the native-canvas preview.
+
+![Revised sweep and fold, actual 1000 × 1000 Blender still; a partial correction, not an accepted final pose](/images/castle-royal-griffin-2801/turn-front.png)
+
+![Intermediate frame from the revised turn](/images/castle-royal-griffin-2801/turn-middle.png)
+
+<details>
+<summary>September 21: opposite-wing diagnostics and discarded poses</summary>
+
+![Old pose with each wing colored separately; diagnostic colors, not final materials](/images/castle-royal-griffin-2801/diagnostic.png)
+
+![Discarded elbow-rotation trial: a tidier outline concealed more opposite-wing intersections](/images/castle-royal-griffin-2801/rejected-elbow.png)
+
+One elbow-only trial hid the overlap behind the body while increasing intersecting triangle pairs at the frontal key from 2,231 to 2,696. It was discarded. Reducing the backward sweep brought that key to zero. Across 33 sampled times in the first turn half, the new pose path still totals 29,848 detected pairs, compared with 73,040 previously. Folded and transitional intersections remain unresolved. This test excludes same-wing, body and coplanar intersections. Earlier stills are retained below:
+
 ![Frontal turn draft, actual 1200 × 1200 Blender still; feathers behind the head still overlap](/images/castle-royal-griffin-2787/turn_l-oblique.png)
 
 ![The same turn pose from the side](/images/castle-royal-griffin-2787/turn_l-side.png)
+
+</details>
 
 Remaining work includes head and leg deformation, feather intersections, placement within the canvas, timing and game playback. Death has a nine-frame draft grounded from visible surfaces. Sustained flight exports four native frames, with an additional non-exported key for its loop. The record below retains earlier stills, failed trials and stage-specific conclusions; references to a “current” draft inside it refer only to that earlier stage.
 
@@ -4883,5 +4900,12 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>September 21: homepage summary before stance calibration</summary>
 
 <s>Royal Griffin adds a nine-frame death draft, fixes grounding biased by orphan vertices and settles the wing planes. New stills include a failed trial; acceptance remains open.</s>
+
+</details>
+
+<details>
+<summary>September 21: homepage summary before the wing revision</summary>
+
+<s>Royal Griffin stance and visible-height calibration revised across thirteen drafts. New Blender stills accompany a clearly scoped production history; in-game acceptance remains open.</s>
 
 </details>
