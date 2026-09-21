@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T05:18:41+00:00
+lastmod: 2026-09-21T06:05:22+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman cuff trials now include Blender close-ups and rejected approaches. Death and downward thrust still overlap locally; unaccepted and uninstalled."
+homeSummary: "Pikeman wrists and cuffs now share a revised working set, with corrected thrust and death poses, new Blender close-ups and previews. Not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1135,6 +1135,35 @@ Previous homepage summary:
 
 ## Pikeman model and motion {#pikeman-thrust}
 
+Eleven Pikeman action drafts cover thirteen native groups and 80 frame slots, including duplicate turns. The offline working set now shares revised wrists and cuff connections, with new hand orientations during downward thrust and death. Finger closure, cloth transitions, native likeness and motion joins remain unfinished. This Pikeman is not installed, and the fourteen-creature Castle roster remains in progress.
+
+![Current downward-thrust peak, actual 1200 × 1400 Blender still; blog review framing, not installed](/images/castle-pikeman-2294/down-full.png)
+
+### Cuffs and wrist poses {#pikeman-cuffs}
+
+Astra reused the existing Meshy body and donor hands, shortened the excess wrist stumps, revised their weights and rebuilt the connection from each sleeve opening. Earlier skin extensions and longer sleeves left the folded stump underneath unresolved.
+
+![Revised idle left hand, actual 800 × 800 Blender still; finger closure remains unfinished](/images/castle-pikeman-2294/holding-close.png)
+
+The downward-thrust right wrist and falling left wrist also folded back too far. Comparing forearm and palm axes put the old poses at roughly 139° and 118°. The thrust now uses a different roll around the shaft with an original-length arm solve. After release during death, the palm gradually levels out. These axis angles compare model poses; they are not clinical joint measurements.
+
+![Revised right wrist during downward thrust, actual 800 × 800 Blender still](/images/castle-pikeman-2294/down-close.png)
+
+![Left hand after releasing the pike during the fall, actual 800 × 800 Blender still](/images/castle-pikeman-2294/death-close.png)
+
+Reopening all eleven scenes and sampling 671 times found no intersections in the tested hand, arm, cuff, shaft and body surface combinations, including mutual hands. Denser checks at 401 times for thrust and 161 for death also passed those comparisons. Sampling and mesh partitions limit this evidence: complete self-collision, seam topology and ground contact remain unproven. The fingers and cuff materials still need work.
+
+### Current thrust and death previews
+
+These eleven-frame thrust and five-frame death previews use actual renders of the current Blender scenes at 800 × 934 and 12 fps. Both retain one fixed blog-review camera without per-frame resizing. They are not gameplay footage, and the playback rate has not been calibrated to the game.
+
+<video controls loop muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2294/down.mp4"></video>
+
+<video controls loop muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2294/death.mp4"></video>
+
+<details>
+<summary>Earlier Pikeman modeling, motion and failed trials (history; original images retained)</summary>
+
 The Pikeman grip now has a different orientation around the shaft. In the old idle pose, the left palm axis made an angle of about 147° with the forearm axis, folding the wrist back unnaturally. Astra retained the Meshy hand geometry and pike position, rotated the grip around the shaft and solved the elbow with the original arm lengths. The idle angle is now about 34°. These model axes use the wrist, finger roots and elbow; the values compare poses rather than measure a human joint.
 
 ![Revised idle grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2056/holding.png)
@@ -1156,7 +1185,7 @@ All three attacks now copy the same idle bone and pike channels at their endpoin
 
 ![Upward thrust with the revised grip, actual 1200 × 1400 Blender still; not installed](/images/castle-pikeman-2070/up.png)
 
-### Cuff connection trial {#pikeman-cuffs}
+### Cuff connection trial {#pikeman-cuffs-2271}
 
 On September 21, Astra added a connecting surface between the existing sleeve opening and the cut edge of the hand. Its outer bands use the original blue cloth material, with skin next to the wrist. The hand meshes, grip targets and bone animation stay unchanged; this pass required no new Meshy task. These are actual 800 × 800 Blender close-ups of an unadopted, uninstalled candidate.
 
@@ -1164,7 +1193,7 @@ On September 21, Astra added a connecting surface between the existing sleeve op
 
 ![Turning close-up of the same candidate; wrist creases, finger closure and the cuff silhouette remain unfinished](/images/castle-pikeman-2271/turn-cuff.png)
 
-The candidate now exists in eleven action scenes. Reopened checks at 671 times found no new-surface intersections with the pike or the selected other-body regions. A further check against each hand exposed overlaps at the left wrist during death and the right wrist during downward thrust, so the current working set has not been replaced. Original body, hand and pike vertices match at the start, middle and end of each action. Sampling, body partitions and the excluded connecting band limit these tests; they do not establish complete model acceptance.
+The candidate now exists in eleven action scenes. Reopened checks at 671 times found no new-surface intersections with the pike or the selected other-body regions. <s>A further check against each hand exposed overlaps at the left wrist during death and the right wrist during downward thrust, so the current working set has not been replaced.</s> A later September 21 revision adopted shorter wrists and corrected hand poses, as documented in the current account above; this earlier candidate remains unadopted. Original body, hand and pike vertices match at the start, middle and end of each action. Sampling, body partitions and the excluded connecting band limit these tests; they do not establish complete model acceptance.
 
 <details>
 <summary>Rejected wrist extension and cuff-weight trials</summary>
@@ -1572,6 +1601,8 @@ The first articulated trial pulled the skirt into a raised sheet. Some vertices 
 Grip targets use approximate palm centers rather than wrist joints. The ten key poses aligned, but reopening exposed up to 8.6 cm of drift between them. After solving 91 skeleton poses, a fresh check at 181 times, including interpolation, measured at most 1.36 mm of anchor drift and a minimum body-mesh height about 1.63 mm above the floor. These measurements cover reference points and floor position; they do not establish finger contact, garment quality or native likeness.
 
 Only the front thrust has reached this articulated draft. The complete Pikeman action set, costume revision and game integration remain unfinished. Work on all fourteen Castle creatures continues. <s>The Crusader 0.12.0 local test is still installed.</s> The current Crusader installation is 0.13.0, as documented above.
+
+</details>
 
 </details>
 
