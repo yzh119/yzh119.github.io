@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin now has three nine-frame attack drafts on the folded-wing rig, with independent claws and hind legs. Six new Blender stills; deformation and game integration remain unfinished."
+homeSummary: "Three Royal Griffin attack drafts now include a partial belly and tail-root weight correction. Updated Blender stills and failed deformation trials; hip and ankle issues remain."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1207,6 +1207,28 @@ The new wing rig now has **three nine-frame attack drafts**, all beginning and e
 
 The first leg pass tucked the calves too tightly, and the first upward pass kept the torso too upright. Those trials remain archived. The revised clips add independent hind-leg extension and lower the wings earlier during contact. They remain offline: wing-root intersections, hip and ankle deformation, camera calibration and the rest of the action set still need work. Across 65 samples per clip, the endpoints match, but some body edges approach twice their standing length. The continuity check does not establish acceptable deformation.
 
+A local weight revision now reduces some belly and tail-root pulling. Part of the calf influence in torso-blended vertices is reassigned to the thigh; thigh influence near the tail is partly returned to the body root. Rebinding all shape keys preserves the standing pose. At the front-attack peak, one tracked belly edge falls from 1.81 to 1.66 times its standing length. The ankle maximum remains unchanged, and hip compression is still unresolved. All three clips retain their topology, UVs, wing geometry and rig keyframes; the new stills below show this partial correction.
+
+![Front attack with independent claw and hind-leg motion; actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2701/front-oblique-05.png)
+
+![Upward attack draft, with a raised claw reach; actual Blender still](/images/castle-royal-griffin-2701/up-oblique-05.png)
+
+![Downward attack draft with a lower claw reach; actual Blender still, not installed in the game](/images/castle-royal-griffin-2701/down-oblique-05.png)
+
+<details>
+<summary>Side views of the three current attack drafts</summary>
+
+![Front attack, side view](/images/castle-royal-griffin-2701/front-side-05.png)
+
+![Upward attack, side view](/images/castle-royal-griffin-2701/up-side-05.png)
+
+![Downward attack, side view](/images/castle-royal-griffin-2701/down-side-05.png)
+
+</details>
+
+<details>
+<summary>September 21: attack stills before the local weight revision</summary>
+
 ![Front attack with independent claw and hind-leg motion; actual 1200 × 1200 Blender still](/images/castle-royal-griffin-2688/front-oblique-05.png)
 
 ![Upward attack draft, with a raised claw reach; actual Blender still](/images/castle-royal-griffin-2688/up-oblique-05.png)
@@ -1223,6 +1245,16 @@ The first leg pass tucked the calves too tightly, and the first upward pass kept
 ![Downward attack, side view](/images/castle-royal-griffin-2688/down-side-05.png)
 
 </details>
+
+</details>
+
+<details>
+<summary>Weight and deformation trials that were not adopted</summary>
+
+Averaging neighboring leg weights preserved the standing pose but increased the front-attack peak's maximum edge-length ratio from 1.84 to 2.37. Local corrective smoothing reduced the largest absolute edge-length change from 4.65 to 3.33 cm, while making another edge stretch to 2.63 times its standing length. Neither result was an overall fix. A full-strength transfer to parent bones improved the monitored belly region but created another 1.90-ratio edge. The current version uses half that transfer strength. These are measurements of the same peak pose, not whole-character quality scores; none establishes acceptable anatomy or collision clearance.
+
+</details>
+
 
 <details>
 <summary>September 21: wing-phase revision before independent leg motion</summary>

@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-21T15:16:09+00:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
-homeSummary: "皇家狮鹫的新收翼骨架已接三组九帧攻击草稿，补上独立探爪和后腿动作；新增六张 Blender 静帧，变形修整与游戏接入尚未完成。"
+homeSummary: "皇家狮鹫三组攻击草稿局部减轻了腹部和尾根牵拉；更新 Blender 静帧并记录未采用的变形试验，髋部与脚踝问题仍待修整。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1207,6 +1207,28 @@ imagegen 根据现有银甲、金色铆钉和短护腕制作[新参考图](/imag
 
 第一版后腿把小腿收得太紧，最初的向上攻击又过于直立，这两份试稿都保留了。修订后，后腿能独立后摆，接触阶段也更早压低双翼。目前仍是离线草稿：翼根穿插、髋部和脚踝变形、游戏视角以及其它动作还要继续做。每组采样 65 个时刻，首尾一致；但局部身体网格边长接近站姿的两倍，衔接检查通过不代表变形合格。
 
+这一轮局部调整减轻了腹部和尾根的牵拉：躯干附近混入的小腿权重，部分转给大腿；尾根附近的大腿权重，部分转回躯干。所有形态键同步重绑定，保住原有站姿。正面攻击峰值处，一条跟踪的腹部网格边从站姿长度的 1.81 倍降到 1.66 倍；脚踝最大拉伸没有改善，髋部挤压也仍在。三组动作的拓扑、UV、翼面几何和骨骼关键帧都未改，下方静帧已更新为这份局部修订。
+
+![正面攻击，前爪和后腿加入独立运动；1200 × 1200 实际 Blender 静帧](/images/castle-royal-griffin-2701/front-oblique-05.png)
+
+![向上攻击草稿，抬身并向高处探爪；实际 Blender 静帧](/images/castle-royal-griffin-2701/up-oblique-05.png)
+
+![向下攻击草稿，前倾并降低爪部落点；实际 Blender 静帧，尚未接入游戏](/images/castle-royal-griffin-2701/down-oblique-05.png)
+
+<details>
+<summary>三组当前攻击草稿的侧面</summary>
+
+![正面攻击侧面](/images/castle-royal-griffin-2701/front-side-05.png)
+
+![向上攻击侧面](/images/castle-royal-griffin-2701/up-side-05.png)
+
+![向下攻击侧面](/images/castle-royal-griffin-2701/down-side-05.png)
+
+</details>
+
+<details>
+<summary>9 月 21 日：局部权重修订前的攻击静帧</summary>
+
 ![正面攻击，前爪和后腿加入独立运动；1200 × 1200 实际 Blender 静帧](/images/castle-royal-griffin-2688/front-oblique-05.png)
 
 ![向上攻击草稿，抬身并向高处探爪；实际 Blender 静帧](/images/castle-royal-griffin-2688/up-oblique-05.png)
@@ -1223,6 +1245,16 @@ imagegen 根据现有银甲、金色铆钉和短护腕制作[新参考图](/imag
 ![向下攻击侧面](/images/castle-royal-griffin-2688/down-side-05.png)
 
 </details>
+
+</details>
+
+<details>
+<summary>未采用的权重与变形试验</summary>
+
+邻接权重平均虽然保住了站姿，却把正面攻击峰值处的最大边长比例从 1.84 推高到 2.37。局部变形平滑把最大边长变化从 4.65 厘米降到 3.33 厘米，但另一条边又被拉到站姿长度的 2.63 倍，两者都没有全面解决问题。把影响全部转给上一级骨骼，能改善跟踪的腹部区域，却又产生一条 1.90 倍的边；当前版本只采用一半转移强度。这些数字来自同一攻击峰值，只用于定位问题，不能当作整个人物的质量分数，也不能代替外观与碰撞检查。
+
+</details>
+
 
 <details>
 <summary>9 月 21 日：尚未加入独立后腿动作的展翼节奏修订</summary>
