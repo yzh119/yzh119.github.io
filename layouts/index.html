@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{ $posts := where site.RegularPages "Section" "posts" }}
 {{ $posts = $posts.ByLastmod.Reverse }}
+{{ $battle := site.GetPage "/posts/battle-lab" }}
 {{ $castle := site.GetPage "/posts/castle-halberdier-bootstrap" }}
 {{ $necropolis := site.GetPage "/posts/necropolis-bootstrap" }}
 {{ $adventure := site.GetPage "/posts/h3-environment-hd" }}
@@ -19,7 +20,7 @@
   <dl class="snapshot-grid">
     <div>
       <dt>{{ if eq site.Language.Lang "zh" }}城堡兵种{{ else }}Castle creatures{{ end }}</dt>
-      <dd>{{ if eq site.Language.Lang "zh" }}14 个独立 Meshy 网格；狂热者已完成主要动作的本地审查，僧侣候选 03 已完成局部重绑、三方向施法与独立三维手部特效，弓箭手已完成三方向射击与独立 Meshy 弩矢层审查，神射手候选 02 已通过待机、移动、起止步、上方攻击、三方向射击、受击、防御、死亡、三方向弩矢层、左右转向与独立近战三方向攻击审查；天使的独立剑和飞行、三方向挥剑、受击、防御与起止步也已通过；大天使的独立剑、飞行、三方向挥剑、防御、受击和起止步均已通过正侧面审查。{{ else }}14 separate Meshy meshes; Zealot has its principal motions locally reviewed; Monk candidate 03 has a local rebind, three cast directions and independent three-dimensional hand VFX; Archer passes three shooting directions with independent Meshy bolt layers; and Marksman candidate 02 passes holding, moving, move start/end, upward attack, three-direction shooting, hit, defence, death, three-direction bolt layers, left/right turns and separate melee three-direction attack review; Angel passes its independent sword, flight, three sword directions, hit, defence and move transitions; Archangel passes its independent sword, flight, three sword directions, defence, hit and move transitions in front and side review.{{ end }}</dd>
+      <dd>{{ if eq site.Language.Lang "zh" }}十四种兵种已有独立建模尝试；整套造型、动作与接入尚未完成。剑士和十字军有本地安装测试版本，枪兵的新模型仍在逐组制作动作。{{ else }}All fourteen creatures have separate modeling attempts; the full roster’s appearance, animation and integration remain unfinished. Swordsman and Crusader have local installation test versions; the new Pikeman is still receiving action drafts.{{ end }}</dd>
     </div>
     <div>
       <dt>{{ if eq site.Language.Lang "zh" }}墓园兵种{{ else }}Necropolis creatures{{ end }}</dt>
@@ -34,20 +35,22 @@
 
 <section class="current-focus" aria-label="{{ if eq site.Language.Lang "zh" }}当前制作重点{{ else }}Current production focus{{ end }}">
   <h2>{{ if eq site.Language.Lang "zh" }}当前制作重点{{ else }}Current production focus{{ end }}</h2>
-  {{ if eq site.Language.Lang "zh" }}
-  <p>城堡线正在从已审查的单体网格进入逐帧动作阶段：狂热者已完成主要动作；僧侣候选 03 的正面、上方、下方施法及独立三维手部特效已通过；弓箭手的三方向射击与独立 Meshy 弩矢层已通过；神射手的远程与独立近战动作已完成本地审查。皇家狮鹫候选 02、03、04 已分别因胸羽缺陷、侧视平面化和胸前网格孔洞拒绝，现转入分件建模重建；剑士候选 02 的待机、三种攻击与行走已通过本地审查，枪兵的独立人体／长枪双手约束及 10 帧前冲已通过；长戟兵现以原始长戟组件完成三方向攻击、受击和防御。天使和大天使采用独立剑层；天使已通过飞行、三方向挥剑、受击、防御与起止步，大天使已通过飞行、三方向挥剑、防御、受击和起止步的正侧面检查。所有这些均为私有 Blender 审查资产，尚未导出或接入游戏。</p>
-  {{ else }}
-  <p>The Castle track has moved from reviewed individual meshes into frame-by-frame motion work: Zealot’s principal motions pass; Monk candidate 03 passes front, upward and downward casts with independent 3D hand VFX; Archer passes three shooting directions with independent Meshy bolt layers; and Marksman’s ranged and separate melee motions pass local review. Royal Griffin candidates 02, 03 and 04 are rejected respectively for chest-feather defects, planar side review and chest mesh holes; it now moves to component-model reconstruction; Swordsman candidate 02’s holding, three attacks and walk now pass local review, while Pikeman’s separate body/pike two-hand constraint and 10-frame lunge now pass; Halberdier now passes three attack directions, hit and defence with its original long-weapon components. Angel and Archangel use a separate sword layer: Angel passes flight, three sword directions, hit, defence and move transitions, while Archangel passes flight, three sword directions, defence, hit and move transitions in front and side review. All of this remains private Blender review work, with no export or in-game integration.</p>
-  {{ end }}
+  <p>{{ if eq site.Language.Lang "zh" }}枪兵的新握持已有六组、57 帧草稿，防御中的枪杆碰右上臂、下刺穿插、袖口和握持细节仍在修订。独立三维战场已接入六种本地兵种，支持自选双方阵容；剑士与十字军明确标为草稿。{{ else }}Pikeman has six draft groups covering 57 frames; defence shaft/upper-arm contact, downward-thrust intersections, cuffs and grip details remain. The separate 3D battlefield now offers six local creature types and editable armies, with Swordsman and Crusader marked as drafts.{{ end }}</p>
 </section>
 
 <section class="project-overview" aria-label="{{ if eq site.Language.Lang "zh" }}项目主线{{ else }}Project tracks{{ end }}">
   <h2>{{ if eq site.Language.Lang "zh" }}项目主线{{ else }}Project tracks{{ end }}</h2>
   <div class="project-grid">
+    {{ with $battle }}<article class="project-card">
+      <p class="project-kicker">{{ if eq site.Language.Lang "zh" }}实时战场{{ else }}Realtime battlefield{{ end }}</p>
+      <h3><a href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}三维战场实验{{ else }}3D battlefield experiments{{ end }}</a></h3>
+      <p>{{ .Params.homeSummary }}</p>
+      <a class="project-link" href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}查看阵容与实机截图{{ else }}Explore armies and realtime captures{{ end }} →</a>
+    </article>{{ end }}
     {{ with $castle }}<article class="project-card project-card-current">
       <p class="project-kicker">{{ if eq site.Language.Lang "zh" }}当前推进{{ else }}Current work{{ end }}</p>
       <h3><a href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}城堡兵种建模{{ else }}Castle creature modelling{{ end }}</a></h3>
-      <p>{{ if eq site.Language.Lang "zh" }}十四种兵各有独立 Meshy 网格，动作按原版帧组在 Blender 中逐组审查。狂热者已通过主要动作审查；僧侣候选 03 修正持法手臂权重后，正面、上方与下方施法及独立三维手部特效均已通过。神射手候选 02 的新网格和骨架通过静态审查，8 帧待机、移动，2 帧起止步，6 帧上方攻击、8 帧三方向射击、6 帧受击／死亡、10 帧防御、三方向弩矢层，以及独立近战的三方向攻击也已通过。天使的独立剑、飞行、三方向挥剑、受击、防御与起止步已通过；大天使的独立剑、飞行与三方向挥剑均通过正侧面审查。城堡资产仍是私有审查件，尚未导出或装入游戏。{{ else }}All fourteen units have separate Meshy meshes and Blender reviews follow the original frame groups action by action. Zealot’s principal motions pass local review; after a local cast-arm rebind, Monk candidate 03 passes front, upward and downward casts plus independent three-dimensional hand VFX. Marksman candidate 02 passes static mesh/rig review plus its eight-frame holding/moving, two-frame move start/end, six-frame upward attack, eight-frame three-direction shooting, six-frame hit/death, ten-frame defence plus its three-direction bolt layers, left/right turns and separate melee three-direction attacks. Angel passes its independent sword, flight, three sword directions, hit, defence and move transitions; Archangel passes its independent sword, flight, three sword directions, defence, hit and move transitions in front and side review. Castle assets remain private review work, with no export or in-game installation yet.{{ end }}</p>
+      <p>{{ .Params.homeSummary }}</p>
       <a class="project-link" href="{{ .RelPermalink }}">{{ if eq site.Language.Lang "zh" }}查看城堡进展{{ else }}Open Castle progress{{ end }} →</a>
     </article>{{ end }}
     {{ with $necropolis }}<article class="project-card">
@@ -64,6 +67,16 @@
     </article>{{ end }}
   </div>
 </section>
+<details class="home-history">
+<summary>{{ if eq site.Language.Lang "zh" }}早期城堡阶段摘要（已过时，2026-09-21 标注）{{ else }}Earlier Castle summaries (superseded, marked 2026-09-21){{ end }}</summary>
+      <p><s>{{ if eq site.Language.Lang "zh" }}14 个独立 Meshy 网格；狂热者已完成主要动作的本地审查，僧侣候选 03 已完成局部重绑、三方向施法与独立三维手部特效，弓箭手已完成三方向射击与独立 Meshy 弩矢层审查，神射手候选 02 已通过待机、移动、起止步、上方攻击、三方向射击、受击、防御、死亡、三方向弩矢层、左右转向与独立近战三方向攻击审查；天使的独立剑和飞行、三方向挥剑、受击、防御与起止步也已通过；大天使的独立剑、飞行、三方向挥剑、防御、受击和起止步均已通过正侧面审查。{{ else }}14 separate Meshy meshes; Zealot has its principal motions locally reviewed; Monk candidate 03 has a local rebind, three cast directions and independent three-dimensional hand VFX; Archer passes three shooting directions with independent Meshy bolt layers; and Marksman candidate 02 passes holding, moving, move start/end, upward attack, three-direction shooting, hit, defence, death, three-direction bolt layers, left/right turns and separate melee three-direction attack review; Angel passes its independent sword, flight, three sword directions, hit, defence and move transitions; Archangel passes its independent sword, flight, three sword directions, defence, hit and move transitions in front and side review.{{ end }}</s></p>
+  {{ if eq site.Language.Lang "zh" }}
+  <p><s>城堡线正在从已审查的单体网格进入逐帧动作阶段：狂热者已完成主要动作；僧侣候选 03 的正面、上方、下方施法及独立三维手部特效已通过；弓箭手的三方向射击与独立 Meshy 弩矢层已通过；神射手的远程与独立近战动作已完成本地审查。皇家狮鹫候选 02、03、04 已分别因胸羽缺陷、侧视平面化和胸前网格孔洞拒绝，现转入分件建模重建；剑士候选 02 的待机、三种攻击与行走已通过本地审查，枪兵的独立人体／长枪双手约束及 10 帧前冲已通过；长戟兵现以原始长戟组件完成三方向攻击、受击和防御。天使和大天使采用独立剑层；天使已通过飞行、三方向挥剑、受击、防御与起止步，大天使已通过飞行、三方向挥剑、防御、受击和起止步的正侧面检查。所有这些均为私有 Blender 审查资产，尚未导出或接入游戏。</s></p>
+  {{ else }}
+  <p><s>The Castle track has moved from reviewed individual meshes into frame-by-frame motion work: Zealot’s principal motions pass; Monk candidate 03 passes front, upward and downward casts with independent 3D hand VFX; Archer passes three shooting directions with independent Meshy bolt layers; and Marksman’s ranged and separate melee motions pass local review. Royal Griffin candidates 02, 03 and 04 are rejected respectively for chest-feather defects, planar side review and chest mesh holes; it now moves to component-model reconstruction; Swordsman candidate 02’s holding, three attacks and walk now pass local review, while Pikeman’s separate body/pike two-hand constraint and 10-frame lunge now pass; Halberdier now passes three attack directions, hit and defence with its original long-weapon components. Angel and Archangel use a separate sword layer: Angel passes flight, three sword directions, hit, defence and move transitions, while Archangel passes flight, three sword directions, defence, hit and move transitions in front and side review. All of this remains private Blender review work, with no export or in-game integration.</s></p>
+  {{ end }}
+      <p><s>{{ if eq site.Language.Lang "zh" }}十四种兵各有独立 Meshy 网格，动作按原版帧组在 Blender 中逐组审查。狂热者已通过主要动作审查；僧侣候选 03 修正持法手臂权重后，正面、上方与下方施法及独立三维手部特效均已通过。神射手候选 02 的新网格和骨架通过静态审查，8 帧待机、移动，2 帧起止步，6 帧上方攻击、8 帧三方向射击、6 帧受击／死亡、10 帧防御、三方向弩矢层，以及独立近战的三方向攻击也已通过。天使的独立剑、飞行、三方向挥剑、受击、防御与起止步已通过；大天使的独立剑、飞行与三方向挥剑均通过正侧面审查。城堡资产仍是私有审查件，尚未导出或装入游戏。{{ else }}All fourteen units have separate Meshy meshes and Blender reviews follow the original frame groups action by action. Zealot’s principal motions pass local review; after a local cast-arm rebind, Monk candidate 03 passes front, upward and downward casts plus independent three-dimensional hand VFX. Marksman candidate 02 passes static mesh/rig review plus its eight-frame holding/moving, two-frame move start/end, six-frame upward attack, eight-frame three-direction shooting, six-frame hit/death, ten-frame defence plus its three-direction bolt layers, left/right turns and separate melee three-direction attacks. Angel passes its independent sword, flight, three sword directions, hit, defence and move transitions; Archangel passes its independent sword, flight, three sword directions, defence, hit and move transitions in front and side review. Castle assets remain private review work, with no export or in-game installation yet.{{ end }}</s></p>
+</details>
 {{ with index $posts 0 }}
 <section class="latest-update">
   <p class="latest-label">{{ if eq site.Language.Lang "zh" }}最新进展{{ else }}Latest update{{ end }}</p>
