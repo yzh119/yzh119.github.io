@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T07:45:37+00:00
+lastmod: 2026-09-21T08:31:38+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Pikeman thumb weights, grip and release paths are revised across eleven offline action drafts. New hand close-ups accompany the sampled checks; the model is not installed."
+homeSummary: "Pikeman locomotion demonstration and Royal Griffin upward-attack draft, including rejected transition and wing-binding trials. Offline work; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,9 +1133,32 @@ Previous homepage summary:
 
 </details>
 
+## Royal Griffin upward attack and wing binding {#royal-griffin-up}
+
+A nine-frame upward-attack draft now raises the torso, spreads the wings and reaches with the foreclaws, following the distinct pose in the original attack. Astra reused the existing Meshy model; this pass made no new generation request.
+
+The first trial stretched feathers into long strips. Its weight-selection coordinates included a parent scale that was lost when the mesh was reparented for animation. Hard region boundaries also assigned neighboring vertices entirely to different bones. At the sampled peak, 1,516 tested edges stretched beyond three times their initial length, with a worst ratio of about 47.7. That trial was rejected.
+
+![Rejected upward-attack trial, actual Blender render with conspicuous feather stretching](/images/castle-royal-griffin-2372/rejected.png)
+
+Normalizing the weight-selection and playback coordinates, then blending the wing-root and claw weights, removed the visible strips in the reviewed peak views. Across 161 sampled poses the largest tested edge-length ratio was about 2.11, and the final mesh returned to its starting pose. Edges shorter than 0.1 mm were excluded from this ratio test; it does not establish natural deformation or motion.
+
+![Revised Royal Griffin upward attack, actual Blender still from an offline draft](/images/castle-royal-griffin-2372/up.png)
+
+This revision covers the upward-attack trial only. Wing-root shape, claw motion, native likeness and consistency with the other clips still need review. Nothing from this pass is installed in the game.
+
 ## Pikeman model and motion {#pikeman-thrust}
 
-Eleven Pikeman action drafts cover thirteen native groups and 80 frame slots, including duplicate turns. The offline working set now shares revised wrists and cuff connections, with new hand orientations during downward thrust and death. Finger closure, cloth transitions, native likeness and motion joins remain unfinished. This Pikeman is not installed, and the fourteen-creature Castle roster remains in progress.
+Eleven Pikeman drafts cover thirteen native groups and 80 frame slots, including duplicate turns. Wrist, cuff and grip revisions are in the offline working set. Later work corrects the gait heading and adds supplemental start/stop clips for 3D inspection. The sections below distinguish each revision’s checks and rejected trials. This Pikeman is not installed; native likeness, materials and runtime motion remain under review, and all fourteen Castle creatures remain in scope.
+
+<details>
+<summary>Wrist-stage overview (history)</summary>
+
+<s>Eleven Pikeman action drafts cover thirteen native groups and 80 frame slots, including duplicate turns. The offline working set now shares revised wrists and cuff connections, with new hand orientations during downward thrust and death. Finger closure, cloth transitions, native likeness and motion joins remain unfinished. This Pikeman is not installed, and the fourteen-creature Castle roster remains in progress.</s>
+
+September 21 correction: later grip, gait and supplemental 3D transition revisions are described below; runtime acceptance remains incomplete.
+
+</details>
 
 ![Current downward-thrust peak, actual 1200 × 1400 Blender still; blog review framing, not installed](/images/castle-pikeman-2294/down-full.png)
 
@@ -1167,7 +1190,7 @@ Animation exposed contacts that the idle pose did not. Sliding grips during fron
 
 ![Right hand opening during hit, actual 800 × 800 Blender still along the revised release path](/images/castle-pikeman-2346/release.png)
 
-Reopened scenes cleared the tested hand, cuff, body and shaft surface combinations, plus ten digit regions against the rest of their respective hands, across 1,283 sampled poses. Of these, 805 cover denser hit, death and downward-thrust checks. Body and pike motion were retained. At the checked idle joins, evaluated mesh positions differ by less than 0.001 mm. Sampling and mesh partitions do not establish continuous collision freedom, complete self-collision or contact area, and velocity continuity remains unaccepted. This Pikeman is not installed; native likeness, materials, walk heading and landings still need work.
+At the thumb-revision stage, reopened scenes cleared the tested hand, cuff, body and shaft surface combinations, plus ten digit regions against the rest of their respective hands, across 1,283 sampled poses. Of these, 805 cover denser hit, death and downward-thrust checks. Body and pike motion were retained. At the checked idle joins, evaluated mesh positions differ by less than 0.001 mm. Sampling and mesh partitions do not establish continuous collision freedom, complete self-collision or contact area, and velocity continuity remains unaccepted. This Pikeman is not installed. <s>Native likeness, materials, walk heading and landings still need work.</s> September 21 correction: the offline gait and transition revisions are described [below](#pikeman-walk); native likeness, materials and in-game motion remain unaccepted.
 
 <details>
 <summary>Earlier finger curls and thumb trials (history, including rejected images)</summary>
@@ -1194,6 +1217,26 @@ A later trial smooths palm and thumb-root weights by spatial distance before adj
 ![Left-thumb candidate after spatial weight smoothing, actual 800 × 800 Blender still; static trial, not yet propagated to animation](/images/castle-pikeman-2313/thumb-weight-trial.png)
 
 </details>
+
+### Walking direction and transitions {#pikeman-walk}
+
+The previous gait moved along camera-right while the pelvis faced about 43° away from that direction. Astra rebuilt the foot paths around the body’s heading, narrowed the stance and toe-out, and matched horizontal motion at lift-off and touchdown. The existing Meshy geometry and upper-body grip animation were retained. The walk still uses the original six frames; its in-game orientation and travel speed remain unverified.
+
+![Revised Pikeman walk pose, actual Blender still from the offline working draft](/images/castle-pikeman-2366/walking.png)
+
+Pikeman has no separate start/stop groups in its original frame table. Two supplemental clips were made for 3D playback without changing that table. A first attempt blended local bone transforms between idle and walking. Its endpoints matched, but intermediate poses sank the boots roughly 1.3 cm into the floor and briefly intersected the left hand with the shaft. That trial was rejected.
+
+![Rejected transform-blend trial, actual intermediate Blender pose; checks found floor penetration and left-hand/shaft contact](/images/castle-pikeman-2366/rejected-transition.png)
+
+The replacement solves the legs from Cartesian foot targets, lifting one foot at a time and correcting against the evaluated boot surface. Hand targets are defined relative to the pike before solving the elbows. Reopening both clips and sampling 241 poses each found no intersections among the tested hand, body, cuff and shaft surfaces. Floor penetration fell to numerical scale. These remain supplemental offline clips, not an installed game update.
+
+![Constrained start pose, actual Blender render with foot and grip targets](/images/castle-pikeman-2366/constrained-transition.png)
+
+The assembled sequence ramps gait playback speed up and down and drives body travel from the same phase: four cycles cover 2.72 m. Measured foot-velocity jumps at the walk joins are about 95% smaller than with direct switching, though they are not exactly zero. Across 271 sampled sequence poses the same surface combinations remained clear. During planted phases, world-space foot-bone displacement between samples stays below 0.01 mm. These checks do not establish runtime behavior, arbitrary-phase transitions, full self-collision or visual acceptance.
+
+<video controls muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2366/sequence.mp4"></video>
+
+This 24 fps Blender demonstration uses a diagnostic floor to make foot placement visible; it is not a game battlefield. The new Pikeman is not installed. Materials, native likeness and runtime motion still need review, and the full fourteen-creature Castle roster remains in progress.
 
 ### Thrust and death previews from the wrist revision
 
