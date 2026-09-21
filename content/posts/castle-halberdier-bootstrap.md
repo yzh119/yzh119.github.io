@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T10:18:54+00:00
+lastmod: 2026-09-21T13:03:32+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Royal Griffin donor wings, recovered feather surfaces and shoulder motion, with Blender stills and rejected attachment trials. Still offline."
+homeSummary: "Pikeman native-frame export, upright walking and slip checks, with Blender stills and a rejected crouched trial. Royal Griffin and the remaining Castle roster are still in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1300,9 +1300,30 @@ A later trial smooths palm and thumb-root weights by spatial distance before adj
 
 </details>
 
-### Walking direction and transitions {#pikeman-walk}
+### Native-frame export and walking revision {#pikeman-walk}
 
-The previous gait moved along camera-right while the pelvis faced about 43° away from that direction. Astra rebuilt the foot paths around the body’s heading, narrowed the stance and toe-out, and matched horizontal motion at lift-off and touchdown. The existing Meshy geometry and upper-body grip animation were retained. The walk still uses the original six frames; its in-game orientation and travel speed remain unverified.
+The Pikeman now has a complete **13-group, 80-frame** body export on a shared 900 × 800 transparent canvas, twice the original dimensions. Its four-frame hover motion returns the pike before the engine switches to idle. Fixed-ground shadow and selection layers have also been generated. These are private test assets; the new Pikeman has not been installed.
+
+![Current upright walk candidate, actual 1200 × 1400 Blender still with blog framing; not gameplay or an accepted final model](/images/castle-pikeman-2564/upright.png)
+
+The local VCMI playback code advances a walking stack by one horizontal hex, 44 logical pixels, over five animation frames. A six-frame cycle therefore travels 52.8 pixels. Our earlier continuous Blender demonstration supplied its own root travel, so its planted feet did not establish that the exported frames would plant correctly in the game.
+
+Astra tried matching that screen travel exactly. The rig needed a lower center of mass to reach the longer steps, producing a crouched advance. Comparing all six frames with the original showed that the posture had moved too far from its upright walk. That version was rejected.
+
+![Rejected long-stride version, actual 1200 × 1400 Blender still; horizontal travel matched but the crouched posture departed from the reference](/images/castle-pikeman-2564/rejected-crouch.png)
+
+The current candidate keeps the original body height, shortens the stride and reduces foot lift. Hand, cuff and pike motion remains unchanged. Forty-nine samples from the reopened scene retained loop closure. Over the same horizontal stance interval, measured foot drift fell from about 14.8 to 9.2 logical pixels. Residual drift remains, and these continuous bone measurements do not cover frame holding, diagonal routes or live gameplay.
+
+<video controls muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2564/walk-comparison.mp4"></video>
+
+The upper row uses the earlier frames; the lower row uses the upright revision. This diagnostic composites ten sprite frames per second over continuous screen translation. It is not a game capture. Meshy supplied the underlying body; Astra authored the Blender motion, export and checks. Turning transitions, overall likeness and in-game review remain unfinished.
+
+<details>
+<summary>Earlier September 21 continuous walking and transition study (history; original images retained)</summary>
+
+The study below uses its own root travel. Its results apply to that offline sequence rather than the native playback ratio checked above.
+
+<s>The previous gait moved along camera-right while the pelvis faced about 43° away from that direction. Astra rebuilt the foot paths around the body’s heading, narrowed the stance and toe-out, and matched horizontal motion at lift-off and touchdown. The existing Meshy geometry and upper-body grip animation were retained. The walk still uses the original six frames; its in-game orientation and travel speed remain unverified.</s>
 
 ![Revised Pikeman walk pose, actual Blender still from the offline working draft](/images/castle-pikeman-2366/walking.png)
 
@@ -1319,6 +1340,9 @@ The assembled sequence ramps gait playback speed up and down and drives body tra
 <video controls muted playsinline preload="metadata" style="max-width:100%;height:auto" src="/images/castle-pikeman-2366/sequence.mp4"></video>
 
 This 24 fps Blender demonstration uses a diagnostic floor to make foot placement visible; it is not a game battlefield. The new Pikeman is not installed. Materials, native likeness and runtime motion still need review, and the full fourteen-creature Castle roster remains in progress.
+
+
+</details>
 
 ### Thrust and death previews from the wrist revision
 
