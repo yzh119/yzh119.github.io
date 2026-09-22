@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-22T00:02:17+00:00
+lastmod: 2026-09-22T00:22:29+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin forearm reconstruction, wrist controls and an attack-binding fix, with HD stills; all 13 clips remain offline candidates."
+homeSummary: "An alternate Meshy Griffin mesh with corrected forelimb and abdomen weights, shown in HD bilateral and independent claw-lift studies; not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,36 @@ Previous homepage summary:
 
 </details>
 
-## Griffin forearms and wrists {#griffin-binding}
+## Griffin candidate mesh and forelimb binding {#griffin-binding}
+
+There are now two offline Griffin branches: the existing fifteen-bone experimental set with thirteen clips and 85 native frame slots, and an older Meshy mesh being evaluated again. The alternate mesh has more distinct talons, ankles and short forelimb feathers. Its new rig currently contains just a root and two forelimb bones. It has not replaced the full action set or been installed in the game. The fourteen-creature Castle roster remains unfinished.
+
+![Both foreclaws raised on the candidate mesh, an actual 1100 × 1100 Blender still; a forelimb rig study, not a game installation](/images/castle-griffin-3025/candidate.png)
+
+This uses an existing Meshy asset, with no new API task. Meshy supplied the textured geometry; Astra wrote the Blender binding, pose and verification scripts. Body proportions still need comparison with the original, and the folded wings need an unfolding test before choosing between the whole alternate mesh and its forelimbs alone.
+
+### Chest feathers and talons
+
+Moving the previous model's foreclaws forward and down separated them from the chin but stretched the chest feathers into long strips. Picking points on the rendered surface showed that some chest vertices followed the claw bone almost entirely. Local controls that held the upper chest in place still left elongated feather shapes. None of those trials entered the full animation set.
+
+![Rejected translation trial on the previous mesh, an actual 1100 × 1100 Blender still showing elongated chest feathers](/images/castle-griffin-3025/translation-rejected.png)
+
+The first rig on the alternate mesh missed the rear toes, stretching them into thin strips during a lift. Expanding the foot weights restored the toes but also pulled the abdomen forward. The revised selection keeps the toes fully attached to the forelimbs while excluding the upper abdominal region and blending toward the shoulders.
+
+### Independent left and right motion
+
+Synchronous motion concealed a hard left/right weight boundary. Raising only one limb stretched the connecting mesh severely, producing a maximum sampled edge-length ratio of about 79. Blending the two influences across the centre reduced the maximum ratios over the same angular range to **2.59 for both limbs, 2.89 for the left alone and 3.24 for the right alone**. These measurements flag deformation problems; they do not establish resemblance to the original creature.
+
+![Left foreclaw raised independently after the centre-weight correction, an actual 1100 × 1100 Blender still](/images/castle-griffin-3025/left.png)
+
+![Right foreclaw raised independently, an actual 1100 × 1100 Blender still; shoulder and chest joins still need refinement](/images/castle-griffin-3025/right.png)
+
+The saved scene was reopened and sampled at 65 angles for each of the three motion patterns. Vertex coordinates, faces and UVs were unchanged. The selected protected abdominal region stayed fixed, and fully weighted toe edges changed length by less than 0.000001 model units. This covers a forelimb pose study only, with no complete animation, collision or runtime validation. The existing thirteen-clip experimental branch remains unchanged.
+
+<details>
+<summary>Earlier full action set and local forearm repairs (historical branch)</summary>
+
+~~The current offline candidate has **15 bones, thirteen clips and 85 native frame slots**.~~ September 22 note: translation and local-control trials still elongated the chest feathers, so an existing alternate Meshy mesh is now under evaluation. The previous account and images are retained below. “Current” in this record refers to the preserved thirteen-clip offline branch.
 
 The ordinary Griffin's heavy forearm feathers obscure its talons at gameplay scale. This iteration repairs part of the Meshy mesh, reshapes the forearms and adds separate wrist controls. Astra authors the Blender tools, binding and motion. The current offline candidate has **15 bones, thirteen clips and 85 native frame slots**. It has not been installed in the game, and the full Castle roster remains unfinished.
 
@@ -1158,6 +1187,9 @@ All thirteen saved scenes were reopened and sampled at 65 times each, and all 85
 ![Current flight frame two, an actual 1400 × 1400 Blender render with the standing wrist correction released](/images/castle-griffin-3009/flight.png)
 
 The native-camera comparison still shows heavy forearms and insufficiently distinct talons. Wing roots and local textures also need work. This complete experimental action set is retained alongside the older fallback; final appearance review and game testing are unfinished.
+
+
+</details>
 
 <details>
 <summary>September 21: before the local forearm reconstruction and wrist controls</summary>
