@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-22T02:26:14+00:00
+lastmod: 2026-09-22T03:03:40+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin now has 13 draft clips, with hind-paw and corpse-contact fixes, HD Blender stills and failed attempts; not yet installed."
+homeSummary: "Ordinary Griffin installed as private test 0.16.0, with actual battle screenshots and an HD Blender still; full motion and appearance review continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,36 @@ Previous homepage summary:
 
 </details>
 
-## Griffin animation and ground contact {#griffin-binding}
+## Griffin local battle test {#griffin-binding}
+
+The ordinary Griffin is installed in Castle mod **0.16.0 as a private test**. Its fifteen-bone rig supplies thirteen clips and 85 frames, exported as 1×/2× body, shadow and required outline layers: 372 PNGs in total. Existing creature files were preserved, with backups and a validated rollback procedure. Appearance, the complete animation set and the full fourteen-creature Castle roster remain unaccepted.
+
+![Ordinary Griffins on both sides of an actual VCMI test battle; an in-game screenshot](/images/castle-griffin-3150/battle-standing.png)
+
+The textured mesh came from an earlier Meshy task. Astra wrote the rigging, animation, rendering and packaging tools. This stage used no new Meshy request and made no VCMI source changes.
+
+### Attacks, transitions and shadows
+
+All three attack directions now rotate the foreclaws downward during the lunge. Takeoff spreads and raises the wings before leaving the ground. Landing places the hind feet, lowers the body and returns to standing. Reopened checks at 257 times per transition found no floor penetration at those samples, with matching endpoints for the designated idle and flight poses. Landing from arbitrary flight phases still needs runtime coverage.
+
+![Attack key pose after the foreclaw revision, an actual 1200 × 1200 Blender still; appearance remains under review](/images/castle-griffin-3150/attack.png)
+
+Several forearm repair trials were rejected. Preserve Volume skinning increased local stretching; reducing torso weights and smoothing weights along mesh edges also made neighboring edges worse. Converting the original short edge's roughly threefold stretch to the game camera gave an upper bound of about 0.57 extra pixels at 2×. The current weights were retained while review continues on visible shape and motion.
+
+Each shadow projects the actual posed 3D mesh in a fixed direction onto the same ground plane, followed by a uniform opacity reduction and edge blur. All 85 body-and-shadow pairs were exported and inspected. This directional projection does not use Cycles ray tracing; shadow appearance during continuous playback remains under review.
+
+### Runtime coverage
+
+The first automated battle logged nine groups and 62 distinct 2× body frames. The second battle used for screenshots logged eight groups and 54 frames. The image below shows an attack pose and a corpse. Neither test covered all thirteen groups; turning, defence, upward attacks and the creature information panel still need separate checks.
+
+![Attack and corpse poses in the actual VCMI test battle; this screenshot does not establish acceptance of every animation](/images/castle-griffin-3150/battle-action.png)
+
+Two test setups failed along the way. The first command omitted the map resource's `Maps/` prefix and could not find the map. Another trial used equal armies; the AI did not initiate the intended fight and the game ended through the townless defeat condition. The screenshots came from an isolated map that reliably triggered combat, with timed automatic captures.
+
+<details>
+<summary>Complete draft set and ground-contact stage (historical record)</summary>
+
+~~The ordinary Griffin is not installed, its attacking palms face upward, and takeoff and landing only blend poses.~~ September 22, 2026 correction: attack and transition poses have been revised and installed as private test 0.16.0. Current runtime coverage and limitations are described above. The earlier text and images below are retained as history.
 
 The alternate Meshy Griffin now has **15 bones, 13 animation clips and 85 draft frames**. Editable Blender scenes cover idle, flight, takeoff, landing, three attack directions, defence, hit reaction, selection, both turn segments and death. Claw posing, wing-root detail, transition timing and fidelity to the original silhouette remain unfinished. This draft set has not been installed in the game, and work continues on the full fourteen-creature Castle roster.
 
@@ -1164,6 +1193,11 @@ The revised pose levels the body's long axis, then adjusts the head and tail joi
 After the hock bones were added, the old calibration script counted only hind-leg vertices and missed the paws. That made the preview roughly 25% too large. Calibration now includes both hind-leg and hock regions. Size judgments based on the earlier previews need to be revisited; this correction did not deform or rescale the underlying mesh.
 
 Turning was also compared again at the corrected scale. Keeping the engine's existing mirror offset, a position adjustment at the intermediate turn pose reduced the silhouette-centroid difference across the flip from about 2.38 pixels to 0.015 pixels. The silhouettes still differ. This is an offline render check; the transition has not been accepted in an actual battle.
+
+
+<s>Griffin now has 13 draft clips, with hind-paw and corpse-contact fixes, HD Blender stills and failed attempts; not yet installed.</s>
+
+</details>
 
 <details>
 <summary>Thirteen-bone rig and first flight stage (historical record)</summary>
@@ -2756,7 +2790,7 @@ All fourteen models were generated from separate reviewed concepts and then chec
 | Halberdier | 1×/2× test package installed: 11 groups /63 frames with geometry shadows; native battle read 38 body frames in eight groups. Grip, shoulder cloth, death and transitions remain under review |
 | Pikeman | New silver-armor, blue-sleeve body and 24-bone rig generated; resting and elbow-probe renders completed. Fingers, pike, full actions and integration remain unfinished. Old-body thrust research preserved. |
 | Archer | Installed in private test mod 0.11.0: 16 active groups and 96 frames with body, shadow and outline layers. The test battle loaded 43 body images across six groups. Full visual review, fingers, transitions and unobserved native actions remain open. |
-| Griffin | <s>Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished</s><br>2026-09-22: the alternate model has 15 bones, 13 offline clips and 85 draft frames, with revised corpse contact. Claws, wing roots and native fidelity remain unfinished; not installed. See [animation and ground contact](#griffin-binding). |
+| Griffin | <s>Flight-specific mesh has offline flight, three melee directions, hit and defence trials; death13 rejected, full layered export and integration unfinished</s><br><s>2026-09-22: the alternate model has 15 bones, 13 offline clips and 85 draft frames, with revised corpse contact. Claws, wing roots and native fidelity remain unfinished; not installed. See [animation and ground contact](#griffin-binding).</s><br>2026-09-22: installed as private test 0.16.0, thirteen clips and 85 frames at 1×/2×. New models seen in battle; first log loaded nine groups and 62 2× body frames. Full motion and appearance remain unaccepted. See [battle test](#griffin-binding). |
 | Swordsman | Thirteen groups and 76 frames installed at 1×/2×; a test battle read 45 distinct 2× body frames across nine groups; offline holding crop is centred, with native visual and transition review pending |
 | Monk | Installed local 0.6.0 candidate: fifteen groups, 109 frames, 1×/2× bodies, shadows, outlines and spell projectiles. Native logs read 109 body images across 15 groups; appearance and transitions remain under review |
 | Cavalier | Separate rider, horse and lance have a melee draft; grip, full horse attack and original cadence unresolved, not installed |
