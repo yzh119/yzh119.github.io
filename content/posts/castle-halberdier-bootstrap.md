@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-22T00:56:58+00:00
+lastmod: 2026-09-22T02:26:14+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin body, head and forearm controls, with HD Blender stills and initial idle and flight drafts; the complete action set remains unfinished."
+homeSummary: "Griffin now has 13 draft clips, with hind-paw and corpse-contact fixes, HD Blender stills and failed attempts; not yet installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,42 @@ Previous homepage summary:
 
 </details>
 
-## Griffin stance and first flight cycle {#griffin-binding}
+## Griffin animation and ground contact {#griffin-binding}
+
+The alternate Meshy Griffin now has **15 bones, 13 animation clips and 85 draft frames**. Editable Blender scenes cover idle, flight, takeoff, landing, three attack directions, defence, hit reaction, selection, both turn segments and death. Claw posing, wing-root detail, transition timing and fidelity to the original silhouette remain unfinished. This draft set has not been installed in the game, and work continues on the full fourteen-creature Castle roster.
+
+Meshy supplied the existing textured mesh. Astra wrote the Blender rigging, repair, animation and verification scripts. This stage used no new Meshy generation task and made no VCMI source changes.
+
+### Hind paws and attack drafts
+
+Two hock controls were added to tuck the dangling hind paws during flight. The first bend stretched the toes because some vertices still followed the torso instead of the paw. Reassigning weights on 315 body vertices reduced the maximum measured edge stretch in the flight cycle from about 3.78 to 2.76 times its rest length. This measurement helps locate deformation problems; appearance and intersections still need inspection.
+
+![Flight after the hind-paw binding correction, an actual 1200 × 1200 Blender still; wing roots and claw posing remain unfinished](/images/castle-griffin-3127/flight.png)
+
+All three attack directions now have drafts. The image below shows an unresolved problem: the palms face upward and the pose lacks a convincing claw strike. Takeoff and landing currently connect the poses but still need anticipation and impact response.
+
+![Key pose from the front attack draft, an actual 1200 × 1200 Blender still; claw orientation and striking motion remain unfinished](/images/castle-griffin-3127/attack.png)
+
+### The floating corpse
+
+The earlier death animation put the lowest vertex on the floor, but that contact came from a foreclaw while the torso and head remained elevated. Increasing the roll raised the head further; another rotation hid the face. Those trials were not retained as the final pose.
+
+![Rejected earlier corpse pose, an actual 1200 × 1200 Blender still; elevated body and rigid limbs](/images/castle-griffin-3127/death-rejected.png)
+
+The revised pose levels the body's long axis, then adjusts the head and tail joints separately. A diagnostic floor makes the contact visible below; it is not saved in the creature scene. The pose is now part of the nine-frame death clip. Reopening the scene and sampling 1,025 times found no floor penetration at those samples, with wing-root patch boundaries remaining coincident. The claws are still stiff, and a complete self-intersection check remains outstanding.
+
+![Revised side-lying pose with a diagnostic floor, an actual 1200 × 1200 Blender still; still an offline draft](/images/castle-griffin-3127/death-contact.png)
+
+### A native-view calibration error
+
+After the hock bones were added, the old calibration script counted only hind-leg vertices and missed the paws. That made the preview roughly 25% too large. Calibration now includes both hind-leg and hock regions. Size judgments based on the earlier previews need to be revisited; this correction did not deform or rescale the underlying mesh.
+
+Turning was also compared again at the corrected scale. Keeping the engine's existing mirror offset, a position adjustment at the intermediate turn pose reduced the silhouette-centroid difference across the flip from about 2.38 pixels to 0.015 pixels. The silhouettes still differ. This is an offline render check; the transition has not been accepted in an actual battle.
+
+<details>
+<summary>Thirteen-bone rig and first flight stage (historical record)</summary>
+
+~~The alternate model has thirteen bones, with attack and death actions still to be added.~~ September 22, 2026 correction: it now has fifteen bones and thirteen draft clips. The current status and limitations are described above. The earlier text, measurements and images below are retained as history.
 
 The alternate Meshy Griffin now has **13 bones**, including head, hind-leg, tail and separate forearm controls. It has an eight-frame idle draft and a four-frame flight draft. The body stands more upright, and the foreclaws can curl upward independently. Flight posture still needs work: the hind feet hang too low and the wing roots remain bulky. These scenes have not been installed in the game. The earlier fifteen-bone branch with thirteen clips remains unchanged, and the full fourteen-creature Castle roster is unfinished.
 
@@ -1160,6 +1195,13 @@ The flight draft pitches the body forward, adds vertical movement and coordinate
 ![Raised wing phase from the same flight draft, an actual 1200 × 1200 Blender still](/images/castle-griffin-3076/flight-high.png)
 
 A reopened 65-sample check found finite geometry, a loop endpoint difference below 0.000001 world units, and coincident patch boundaries. The maximum measured body-edge stretch was about 3.78 times its rest length. These checks do not establish collision-free motion or fidelity to the original flight silhouette. Hind-leg posing, wing-root detail, attack and death actions, transitions and game validation remain to be completed.
+
+
+Earlier homepage summary:
+
+<s>Griffin body, head and forearm controls, with HD Blender stills and initial idle and flight drafts; the complete action set remains unfinished.</s>
+
+</details>
 
 <details>
 <summary>Wing separation and root-patch stage (historical record)</summary>
