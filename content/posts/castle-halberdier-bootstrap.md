@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-21T22:51:42+00:00
+lastmod: 2026-09-22T00:02:17+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Raised standing claws and lower folded shoulders span 13 Griffin draft clips; head proportions and game review remain unfinished."
+homeSummary: "Griffin forearm reconstruction, wrist controls and an attack-binding fix, with HD stills; all 13 clips remain offline candidates."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,36 @@ Previous homepage summary:
 
 </details>
 
-## Griffin standing pose and folded wings {#griffin-binding}
+## Griffin forearms and wrists {#griffin-binding}
+
+The ordinary Griffin's heavy forearm feathers obscure its talons at gameplay scale. This iteration repairs part of the Meshy mesh, reshapes the forearms and adds separate wrist controls. Astra authors the Blender tools, binding and motion. The current offline candidate has **15 bones, thirteen clips and 85 native frame slots**. It has not been installed in the game, and the full Castle roster remains unfinished.
+
+![Current standing pose, an actual 1400 × 1400 Blender render; golden forelimbs and independently raised wrists](/images/castle-griffin-3009/standing.png)
+
+Earlier trials narrowed the neck, pulled the feathers inward and smoothed the local surface. The neck change made little difference at gameplay scale. Pulling produced elongated strips, while smoothing left a bulky pad. Disabling the normal map reduced surface wrinkles without correcting the silhouette. None of these trials was accepted as the finished appearance.
+
+Inspection identified 24 problematic edges in the chosen forearm region. Removing small surplus faces and separating shared connections resolved that selected set; other mesh connectivity issues remain elsewhere. Five boundary loops were retained while the patch was reduced from 3,748 faces to 636 and its hanging fringe shortened. The talon tips and outer interfaces remain in place. Separate wrist controls lift the claws in the standing pose and relax during flight and attacks.
+
+![Rear oblique view, an actual 1400 × 1400 Blender render; wing-root and feather joins still need refinement](/images/castle-griffin-3009/rear.png)
+
+The first full action migration exposed a regression in the frontal attack. In the rejected render below, the underside of the forearm stretches into a long strip. Adjacent vertices follow the claw and torso by sharply different amounts.
+
+![Rejected attack candidate, an actual 1400 × 1400 Blender render showing the stretched forearm underside](/images/castle-griffin-3009/attack-rejected.png)
+
+The correction smooths the transition among torso, claw and forearm weights on 329 local vertices while retaining their combined weight at each vertex. The maximum edge-length ratio in the frontal attack falls from **12.2× to 4.18×**; flight returns from roughly 6.49× to 4.45×. Idle remains slightly higher than in the earlier full version, at about 2.81× versus 2.76×. These measurements detect deformation regressions; appearance still needs visual review.
+
+![Frontal attack after the binding correction, the same fifth frame in an actual 1400 × 1400 Blender render](/images/castle-griffin-3009/attack.png)
+
+All thirteen saved scenes were reopened and sampled at 65 times each, and all 85 rendered frames were reviewed. This binding correction leaves geometry, UVs, other weights and bone animation unchanged. The checked action joins differ by less than 0.000001 model units. In-game facing changes, arbitrary flight-phase transitions and collisions remain untested.
+
+![Current flight frame two, an actual 1400 × 1400 Blender render with the standing wrist correction released](/images/castle-griffin-3009/flight.png)
+
+The native-camera comparison still shows heavy forearms and insufficiently distinct talons. Wing roots and local textures also need work. This complete experimental action set is retained alongside the older fallback; final appearance review and game testing are unfinished.
+
+<details>
+<summary>September 21: before the local forearm reconstruction and wrist controls</summary>
+
+~~Head and neck proportions are next; the forearm reconstruction has not been integrated.~~ The current experimental branch includes local reconstruction, wrist controls and corrected binding. The earlier account and images are preserved below.
 
 The ordinary Griffin now raises its foreclaws while standing and carries its folded wings lower at the shoulders. Both changes span **thirteen experimental clips and 85 native frame slots**. Meshy supplied the model; Astra authors the Blender repair, rigging and animation scripts. This is still an offline candidate, without game installation or completion of the full Castle roster.
 
@@ -1150,6 +1179,8 @@ All 85 frames were rendered and reviewed again. Each of the thirteen saved scene
 Compared with the preceding shoulder position, the maximum edge-length ratio in idle falls from about 3.08× to 2.76×. The downward attack rises slightly from about 3.66× to 3.68×, with a small increase in the upward attack too. The closer folded silhouette does not resolve every deformation issue.
 
 Head and neck proportions are next. Pixel-to-mesh inspection shows that the apparent continuous feather mass includes regions driven by the head, torso and claws, so a single shrinking operation would affect different anatomical parts. No head-and-neck reshaping has been adopted yet. The corpse silhouette, game playback and final visual review are also unfinished.
+
+</details>
 
 <details>
 <summary>September 21: before raised standing claws and lower folded shoulders</summary>
