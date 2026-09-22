@@ -1,10 +1,10 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-22T00:22:29+00:00
+lastmod: 2026-09-22T00:56:58+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "An alternate Meshy Griffin mesh with corrected forelimb and abdomen weights, shown in HD bilateral and independent claw-lift studies; not installed."
+homeSummary: "Griffin wing elbows, separate wing meshes and root patches, with HD open, folded and rear views; full animation remains unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,38 @@ Previous homepage summary:
 
 </details>
 
-## Griffin candidate mesh and forelimb binding {#griffin-binding}
+## Griffin wing unfolding and root surfaces {#griffin-binding}
+
+The alternate Meshy Griffin now has shoulder and elbow controls, bringing its experimental rig to seven bones. The outer feathers can unfold, and the wings have been separated from the body mesh to reduce the pull on its back. Root surfaces and body proportions remain unfinished. The earlier fifteen-bone branch with thirteen clips and 85 native frame slots is unchanged. Neither branch has been installed as a new game version in this iteration, and the fourteen-creature Castle roster is still in progress.
+
+![Unfolding study with separate wings and patched roots, an actual 1200 × 1200 Blender still; not installed in the game](/images/castle-griffin-3055/open.png)
+
+The geometry and original textures come from an existing Meshy task. No new generation was requested. Astra wrote the mesh partitioning, binding, pose, patch and verification tools. The current rig covers the forelimbs, shoulders, wing elbows and root; complete flight motion and controls for the remaining anatomy still need work.
+
+### Separating wings from the body
+
+The first spatial selection included parts of the back and hindquarters. Weights interpolated along mesh connections improved shoulder rotation. Adding elbows unfolded the feather fans, but the body attachment still stretched. A threshold adjustment moved the strain elsewhere. Another interpolation trial anchored too few feather tips and pulled them into spikes. Those versions were rejected.
+
+![Rejected binding trial with too few feather-tip anchors, an actual 1200 × 1200 Blender still](/images/castle-griffin-3055/rejected.png)
+
+The next trial partitioned the source into a body and two wing meshes. All **41,523 original faces** were retained exactly once, with their original vertex coordinates and UVs. At the same open pose, the maximum edge-length ratio fell from about 5.96 to 3.86 on the left wing and 3.78 on the right; the body's maximum was about 2.59. This measures reduced deformation coupling, without establishing final shape or motion quality.
+
+The cuts form two closed boundaries with 67 and 66 vertices. Both the body and wing sides receive their own patches so they can move independently. Flat caps were conspicuous, so the patches were curved. Reusing an arbitrary neighbourhood of the original texture introduced unrelated colour stripes. The current material instead samples colours around each boundary and interpolates inward. The rear view still exposes plain patches that lack fur and feather detail.
+
+![Rear view of the current study, an actual 1200 × 1200 Blender still; root patches remain visible and need material and feather detail](/images/castle-griffin-3055/rear.png)
+
+### Folding and boundary checks
+
+The saved scene was reopened and checked at 17 poses each for bilateral, left-only and right-only unfolding. All four patch boundaries stayed coincident with their respective meshes at those samples, with no zero-area patch triangles. This does not cover surface overlap, collisions, a complete flight cycle or game rendering.
+
+![Folded pose with the same material candidate, an actual 1200 × 1200 Blender still; proportions and root detail still need comparison with the original](/images/castle-griffin-3055/folded.png)
+
+Four independent render comparisons checked the sampled colour conversion against the original image shader. The largest difference in mean 8-bit channel values was about 0.14. That checks the conversion only. Surface detail, original-game proportions, the complete rig and action transitions remain unfinished.
+
+<details>
+<summary>Candidate mesh and forelimb-binding stage (historical record)</summary>
+
+~~Its new rig currently contains just a root and two forelimb bones.~~ September 22 note: the candidate now adds shoulder and elbow controls, separate wings and root patches. The account and images below describe the earlier three-bone stage.
 
 There are now two offline Griffin branches: the existing fifteen-bone experimental set with thirteen clips and 85 native frame slots, and an older Meshy mesh being evaluated again. The alternate mesh has more distinct talons, ankles and short forelimb feathers. Its new rig currently contains just a root and two forelimb bones. It has not replaced the full action set or been installed in the game. The fourteen-creature Castle roster remains unfinished.
 
@@ -1158,6 +1189,9 @@ Synchronous motion concealed a hard left/right weight boundary. Raising only one
 ![Right foreclaw raised independently, an actual 1100 × 1100 Blender still; shoulder and chest joins still need refinement](/images/castle-griffin-3025/right.png)
 
 The saved scene was reopened and sampled at 65 angles for each of the three motion patterns. Vertex coordinates, faces and UVs were unchanged. The selected protected abdominal region stayed fixed, and fully weighted toe edges changed length by less than 0.000001 model units. This covers a forelimb pose study only, with no complete animation, collision or runtime validation. The existing thirteen-clip experimental branch remains unchanged.
+
+
+</details>
 
 <details>
 <summary>Earlier full action set and local forearm repairs (historical branch)</summary>
