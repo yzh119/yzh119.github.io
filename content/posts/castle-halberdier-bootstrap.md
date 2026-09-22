@@ -4,7 +4,7 @@ date: 2026-09-16T17:10:00+08:00
 lastmod: 2026-09-22T00:56:58+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Griffin wing elbows, separate wing meshes and root patches, with HD open, folded and rear views; full animation remains unfinished."
+homeSummary: "Griffin body, head and forearm controls, with HD Blender stills and initial idle and flight drafts; the complete action set remains unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 ---
 
@@ -1133,7 +1133,38 @@ Previous homepage summary:
 
 </details>
 
-## Griffin wing unfolding and root surfaces {#griffin-binding}
+## Griffin stance and first flight cycle {#griffin-binding}
+
+The alternate Meshy Griffin now has **13 bones**, including head, hind-leg, tail and separate forearm controls. It has an eight-frame idle draft and a four-frame flight draft. The body stands more upright, and the foreclaws can curl upward independently. Flight posture still needs work: the hind feet hang too low and the wing roots remain bulky. These scenes have not been installed in the game. The earlier fifteen-bone branch with thirteen clips remains unchanged, and the full fourteen-creature Castle roster is unfinished.
+
+![Upright body and adjusted head direction, an actual 1200 × 1200 Blender still; experimental stance](/images/castle-griffin-3076/standing.png)
+
+Meshy supplied the existing textured mesh. Astra wrote the Blender rigging, weight-transfer, animation and verification scripts. This stage used no new Meshy generation task.
+
+### Standing and forearm controls
+
+Tilting the whole model made the chest more upright but also tilted the feet and pushed the tail below the floor. Separate hind-leg and tail controls allowed those parts to be adjusted. One tail-weight mask also caught a hind paw; narrowing the mask near the tail root removed that unwanted coupling. Head rotation then corrected the upward gaze, and a small left-foot adjustment brought both fully weighted hind-foot regions to floor level. This is a limited contact check, not a complete sole or collision test.
+
+The foreclaws still reached too far forward. Two forearm bones now bend the distal limbs without moving the entire chest attachment. A moderate bend was retained for further work; the larger trial brought the claws too close to the head. Reopening the scene confirmed unchanged mesh coordinates, faces and UVs, with unrelated weights preserved.
+
+![Moderate forearm bend, an actual 1200 × 1200 Blender still; original-game proportions are still under review](/images/castle-griffin-3076/forearms.png)
+
+The native-view comparison now uses head and foot regions for vertical alignment, excluding the tail and wings. The horizontal position is still provisional. All eight idle frames were rendered and inspected; 65 samples of the reopened scene showed a matching loop endpoint and no movement in the fully weighted hind-foot regions.
+
+### Flight draft
+
+The flight draft pitches the body forward, adds vertical movement and coordinates wing rotation with elbow folding. All four frames were rendered and inspected. The images below show two phases of that same draft.
+
+![Lower wing phase, an actual 1200 × 1200 Blender still; hind-leg pose and wing-root shape remain unfinished](/images/castle-griffin-3076/flight-low.png)
+
+![Raised wing phase from the same flight draft, an actual 1200 × 1200 Blender still](/images/castle-griffin-3076/flight-high.png)
+
+A reopened 65-sample check found finite geometry, a loop endpoint difference below 0.000001 world units, and coincident patch boundaries. The maximum measured body-edge stretch was about 3.78 times its rest length. These checks do not establish collision-free motion or fidelity to the original flight silhouette. Hind-leg posing, wing-root detail, attack and death actions, transitions and game validation remain to be completed.
+
+<details>
+<summary>Wing separation and root-patch stage (historical record)</summary>
+
+~~Its experimental rig has seven bones, and the remaining anatomy still needs controls.~~ September 22 update: the alternate rig now has thirteen bones and initial idle and flight drafts. The text and images below record the earlier wing-patch stage.
 
 The alternate Meshy Griffin now has shoulder and elbow controls, bringing its experimental rig to seven bones. The outer feathers can unfold, and the wings have been separated from the body mesh to reduce the pull on its back. Root surfaces and body proportions remain unfinished. The earlier fifteen-bone branch with thirteen clips and 85 native frame slots is unchanged. Neither branch has been installed as a new game version in this iteration, and the fourteen-creature Castle roster is still in progress.
 
@@ -1160,6 +1191,8 @@ The saved scene was reopened and checked at 17 poses each for bilateral, left-on
 ![Folded pose with the same material candidate, an actual 1200 × 1200 Blender still; proportions and root detail still need comparison with the original](/images/castle-griffin-3055/folded.png)
 
 Four independent render comparisons checked the sampled colour conversion against the original image shader. The largest difference in mean 8-bit channel values was about 0.14. That checks the conversion only. Surface detail, original-game proportions, the complete rig and action transitions remain unfinished.
+
+</details>
 
 <details>
 <summary>Candidate mesh and forelimb-binding stage (historical record)</summary>
