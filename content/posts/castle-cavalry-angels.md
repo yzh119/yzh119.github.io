@@ -123,6 +123,24 @@ The new bodies keep all the old animation. Both skeletons are Meshy humanoid rig
 
 The Royal Griffin's body shape is still off, as the original is leaner with tighter wings, and was not touched this round. The mod is now at 0.26.7.
 
+## Dropping FLUX: Meshy only (26 September)
+
+The FLUX concepts from the previous round came out cartoonish, most visibly on the Pikeman, Swordsman and Archer. So every Castle model built from a FLUX concept was replaced: the Pikeman, Halberdier, Archer, Marksman and Swordsman, plus the Angel and Archangel, including the Archangel's sword and shield. Tracing the sources showed that the other seven units never used FLUX.
+
+All the new models come straight from Meshy, with no concept step:
+
+- The infantry use Meshy's multi-image mode, fed the original idle, turn and walk frames (upscaled) together with an A-pose request. With a single frame, Meshy baked the pixels into the texture and invented helmets.
+- The Angel was built directly from its original idle frame. The Archangel used four frames: idle, both turn directions, and mouse-over.
+- The Archangel's sword and shield were made separately with Meshy text-to-3D.
+
+Meshy's direct output welds wings, shield and weapons to the body in one mesh. The wings need their own bones to flap, so the mesh is cut by region: behind the back and away from the spine is wing, beyond the right hand is weapon, in front of the left arm is shield. The wing roots at the shoulders sit too close to the back for that, so a colour rule catches them: pale, colourless texture above the waist and not on the front is feather. The pike, which isn't weighted to the hands, is cut by distance from the skeleton, with a brown-wood colour test added.
+
+The Swordsman's scene used Blender's AgX tone mapping, which flattened dark steel to grey, and the installed version had the same problem. Switching to Standard and darkening the grey steel on the finished frames brings it closer to the original's near-black armour with bright highlights. Meshy read the Swordsman's bare arms as armour, so the arms are tinted to skin by their bone weights.
+
+![Original (top) and the new models (bottom): Pikeman, Halberdier, Archer, Marksman, Swordsman, Angel, Archangel](/images/castle-top-tier-01/meshy-only.png)
+
+The mod is now at 0.27.6. Remaining gaps: the Pikeman wears a hat the original doesn't have, and the Marksman draws no sword in melee.
+
 ## What is installed
 
 | Unit | Version | Frames | PNGs |
@@ -132,7 +150,7 @@ The Royal Griffin's body shape is still off, as the original is leaner with tigh
 | Archangel | 0.22.2 | 91 | 394 |
 | Champion | 0.22.0 | 81 | 342 |
 
-Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Versions are the whole mod's version at each install; it is now at 0.26.7. Every install backs up the files it replaces and has a checked rollback.
+Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Versions are the whole mod's version at each install; it is now at 0.27.6. Every install backs up the files it replaces and has a checked rollback.
 
 <s>The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.</s> A battle screenshot was added on 26 September; see the previous section.
 
