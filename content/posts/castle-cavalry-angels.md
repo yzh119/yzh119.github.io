@@ -107,6 +107,22 @@ Standing, the Angel's and Archangel's folded wings went partly into the body. Wi
 
 This round installs up to 0.24.7: walks for the Crusader, Pikeman, Halberdier, Archer, Marksman and Swordsman, the trot for the Cavalier and Champion, and both angels' wings.
 
+## Likeness against the originals (26 September)
+
+The Crusader and Zealot already look like the originals; the rest did not. Putting all fourteen idle frames next to the originals at a large size showed two kinds of problem. Some were colour: the Angel's robe was cream, the Archangel's armour brown leather, the Champion's horse armoured only at the head and neck, the Griffin too pale. Others were the wrong costume: the Swordsman wore a cloth hood and carried a shield, where the original has a steel helmet, bare arms and no shield; the Pikeman wore a helmet he doesn't have; the Marksman lacked his mail coif.
+
+Colour problems were fixed in the textures or materials. The Archangel's dark brown leather became gunmetal with the gold left alone; the Angel's robe went white with royal blue trim; the Champion's whole horse is plated, with the blue barding kept; the Griffin was recoloured to golden-ochre on the finished frames. The Cavalier's rider had been scaled to 0.73 with his steel multiplied by a dark 0.24; he is now 1.2 times larger and silver.
+
+The five infantry units with the wrong costume (Pikeman, Halberdier, Archer, Marksman, Swordsman) were remodelled. The concepts use FLUX.2 [pro] image editing with the original idle frame, upscaled, as the reference, asking for the same costume and colours in an empty-handed A-pose, at 6 credits each. Meshy then built and rigged them.
+
+Is the FLUX step necessary, or could Meshy do it directly? A test on the Halberdier: feeding the original sprite straight into Meshy's image-to-3D gave a surprisingly good likeness, with the right colours, stripes and eagle. But it kept the combat pose with the halberd grown into the hand, so it can neither be rigged nor reuse the existing animation. Meshy's text-to-3D got the colours wrong and fused the weapon too. Reusing the existing animation needs an empty-handed A-pose, and for now only the FLUX step provides that.
+
+The new bodies keep all the old animation. Both skeletons are Meshy humanoid rigs with the same bone names, but their rest poses hold the arms at different angles, so copying local rotations sent the arms elsewhere. Instead, each frame aligns every new bone's direction with the old bone's. Separately animated props such as the pike or crossbow find the bone they move with most rigidly and are re-attached to it. Before touching each unit, its original scene and camera re-rendered one frame and it was compared with the installed sprite; all overlap at 0.99 or better.
+
+![Original (top), before (middle), after (bottom), idle frames: Pikeman, Halberdier, Archer, Marksman, Swordsman, Griffin, Cavalier, Champion, Angel, Archangel](/images/castle-top-tier-01/likeness.png)
+
+The Royal Griffin's body shape is still off, as the original is leaner with tighter wings, and was not touched this round. The mod is now at 0.26.7.
+
 ## What is installed
 
 | Unit | Version | Frames | PNGs |
@@ -116,7 +132,7 @@ This round installs up to 0.24.7: walks for the Crusader, Pikeman, Halberdier, A
 | Archangel | 0.22.2 | 91 | 394 |
 | Champion | 0.22.0 | 81 | 342 |
 
-Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Versions are the whole mod's version at each install; it is now at 0.24.7. Every install backs up the files it replaces and has a checked rollback.
+Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Versions are the whole mod's version at each install; it is now at 0.26.7. Every install backs up the files it replaces and has a checked rollback.
 
 <s>The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.</s> A battle screenshot was added on 26 September; see the previous section.
 
