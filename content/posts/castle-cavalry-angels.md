@@ -71,17 +71,37 @@ The Archangel uses the same scripts, with a bronze cuirass, white skirt, wavy sw
 
 The Angels' DEFs contain three shooting groups. Neither unit shoots, so those groups reuse the melee attack frames.
 
+## Battle screenshot and a round of fixes (26 September)
+
+All four units loaded their new sprites in one test battle: the log references the Cavalier 213 times, the Champion 204, the Angel 171 and the Archangel 201. Below is a game screenshot.
+
+![In battle: the Angel flying, the Archangel standing with its shield, the Cavalier and Champion on the right](/images/castle-top-tier-01/battle.jpg)
+
+The same round fixed several things:
+
+- The Champion's barding has its white hem. The blue cloth is found from the horse texture, each panel gets a band along its lowest edge, and the band alternates between two heights to make the crenellation.
+- In the last death frames the Angel's and Archangel's wings now hang to the ground on both sides instead of spreading backwards.
+- The Archangel's attack glow is a bronze gold instead of orange, and weaker.
+
+Comparing all fourteen Castle units against the originals turned up two more clear problems. The Royal Griffin was nearly white all over, where the original has silver-grey wings and a brown lion body. The fix is a colour correction on the packaged frames: unsaturated feathers go to silver-grey and the warm lion body goes to brown, across 170 body frames, without re-rendering.
+
+![Original (top), before (middle), after (bottom)](/images/castle-top-tier-01/royal-griffin-palette.png)
+
+When the Pikeman died, the man fell and the pike stayed standing in place. Now the pike tips over at frame 3 and lies flat under the body from frame 4; the first two frames overlap the previous render at 0.99.
+
+![Original (top), before (middle) and after (bottom), five death frames](/images/castle-top-tier-01/pikeman-death.png)
+
 ## What is installed
 
 | Unit | Version | Frames | PNGs |
 | --- | --- | --- | --- |
 | Cavalier | 0.17.1 | 81 | 342 |
-| Angel | 0.18.1 | 94 | 412 |
-| Archangel | 0.19.1 | 91 | 394 |
-| Champion | 0.20.0 | 81 | 342 |
+| Angel | 0.22.1 | 94 | 412 |
+| Archangel | 0.22.2 | 91 | 394 |
+| Champion | 0.22.0 | 81 | 342 |
 
-Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. With the new wings the mod is at 0.21.0. Every install backs up the files it replaces and has a checked rollback.
+Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Versions are the whole mod's version at each install; it is now at 0.22.4. Every install backs up the files it replaces and has a checked rollback.
 
-The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.
+<s>The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.</s> A battle screenshot was added on 26 September; see the previous section.
 
-Known issues: the Angel's wings open wider than the original's in the last death frame; the Archangel's glow is too orange overall; the Cavalier's idle lance is held level where the original holds it upright; the Champion's barding lacks the white hem.
+Known issues: the Cavalier's idle lance is held level where the original holds it upright; the Royal Griffin's talons are still brown where the original's are gold.
