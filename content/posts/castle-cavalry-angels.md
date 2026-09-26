@@ -91,6 +91,22 @@ When the Pikeman died, the man fell and the pike stayed standing in place. Now t
 
 ![Original (top), before (middle) and after (bottom), five death frames](/images/castle-top-tier-01/pikeman-death.png)
 
+## Walking and wing clipping (26 September)
+
+The Castle walkers limped. Comparing all eight walk cycles with the originals frame by frame, the fault was in the legs. The two feet took unequal steps, a ratio of 0.40 to 0.69 against the original's 0.72 to 0.98; they were not half a cycle apart; and the body did not bob.
+
+The fix keeps the upper-body motion and redoes the legs. Both feet share one stride, exactly half a cycle apart. The planted foot slides back at constant speed while the other swings forward on an arc, and the body rises and falls twice per cycle. The legs are solved analytically as two segments with the knee forward. The originals walk more side-on than they stand, so the body turns about 15° toward screen-right while walking. Separately animated weapons (pike, halberd, crossbow) follow the hip correction so they stay in the hands.
+
+Before changing anything, each unit's original scene and camera re-rendered one frame and it was compared with the installed sprite. All five overlap at 0.99 or better, so the same setup is in use.
+
+The Cavalier's and Champion's horses now trot: diagonal legs move together, the stride is longer, and the hoof folds back when lifted. This change is small, since the old horse already lifted its legs.
+
+![Original (top), before (middle), after (bottom): Crusader, Pikeman, Cavalier](/images/castle-top-tier-01/walk-cycles.png)
+
+Standing, the Angel's and Archangel's folded wings went partly into the body. With the wing roots on the spine, **14.9%** of the wing vertices were inside the body. Moving the roots 10 cm back and 8 cm out brings that to **0.7%**; the Archangel's armour is thicker, so 14 cm back, giving 0.2%.
+
+This round installs up to 0.24.7: walks for the Crusader, Pikeman, Halberdier, Archer, Marksman and Swordsman, the trot for the Cavalier and Champion, and both angels' wings.
+
 ## What is installed
 
 | Unit | Version | Frames | PNGs |
@@ -100,7 +116,7 @@ When the Pikeman died, the man fell and the pike stayed standing in place. Now t
 | Archangel | 0.22.2 | 91 | 394 |
 | Champion | 0.22.0 | 81 | 342 |
 
-Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Versions are the whole mod's version at each install; it is now at 0.22.4. Every install backs up the files it replaces and has a checked rollback.
+Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Versions are the whole mod's version at each install; it is now at 0.24.7. Every install backs up the files it replaces and has a checked rollback.
 
 <s>The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.</s> A battle screenshot was added on 26 September; see the previous section.
 
