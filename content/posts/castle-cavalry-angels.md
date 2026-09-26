@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Full action sets for the Cavalier, Champion, Angel and Archangel are in the local test mod, compared frame by frame with the originals; battle screenshots and art review are still to do."
+homeSummary: "Full action sets for the Cavalier, Champion, Angel and Archangel are in the local test mod, with rebuilt angel wings, compared frame by frame with the originals; battle screenshots and art review are still to do."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -47,7 +47,15 @@ The new concept comes from [FLUX.2 [pro]](https://bfl.ai/) by Black Forest Labs:
 
 ![Left: the old draft, static render. Right: the new Angel body, Blender still, wings not attached](/images/castle-top-tier-01/angel-models.jpg)
 
-Each wing has three bones hung off the chest, with weights blended by distance from the root, so body, wings and sword share one pose. A folded wing bends 110–130° at the wrist; at 170° the outer part folds back onto the shoulder.
+Each wing has three bones hung off the chest, with weights blended by distance from the root, so body, wings and sword share one pose. <s>A folded wing bends 110–130° at the wrist; at 170° the outer part folds back onto the shoulder.</s>
+
+### Wings rebuilt (26 September)
+
+The first wings came from a FLUX concept of a single wing. They were short and broad, the feathers ran together, they stood straight up in flight, and folded they made a large fan behind the back. The rebuilt wings come from Meshy's text-to-3D, straight from a text prompt with no concept image. Two candidates cost 20 credits each for the preview and 10 for the texture. The one kept came back as a spread pair joined by a small piece of body, with layered coverts and separate primaries. Cut down the middle with the body removed, each half is one wing.
+
+The poses were redone against the original frames too. In flight the original sweeps the wings back almost level, then raises them and strokes forward and down; they do not pump straight up and down. Folded, they hang flat against the back with the top above the shoulders and the tips at the thighs. Folding within the wing's own plane had turned the underside out, leaving a dark hole in the middle.
+
+![Original (top), first wings (middle), rebuilt (bottom): idle and three flight frames](/images/castle-top-tier-01/angel-wings.png)
 
 The original glows gold when attacking and when selected. The draft adds the glow during packaging, only on the frames that glow in the original, by pushing each pixel toward gold according to its brightness.
 
@@ -68,12 +76,12 @@ The Angels' DEFs contain three shooting groups. Neither unit shoots, so those gr
 | Unit | Version | Frames | PNGs |
 | --- | --- | --- | --- |
 | Cavalier | 0.17.1 | 81 | 342 |
-| Angel | 0.18.0 | 94 | 412 |
-| Archangel | 0.19.0 | 91 | 394 |
+| Angel | 0.18.1 | 94 | 412 |
+| Archangel | 0.19.1 | 91 | 394 |
 | Champion | 0.20.0 | 81 | 342 |
 
-Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. Every install backs up the files it replaces and has a checked rollback.
+Frame counts and canvases come from each unit's original DEF, and the packaging check reports 0 errors and 0 warnings. With the new wings the mod is at 0.21.0. Every install backs up the files it replaces and has a checked rollback.
 
 The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.
 
-Known issues: the Angel flies too upright and its wings are larger than the original's; the Archangel's glow is too orange overall; the Cavalier's idle lance is held level where the original holds it upright; the Champion's barding lacks the white hem.
+Known issues: the Angel's wings open wider than the original's in the last death frame; the Archangel's glow is too orange overall; the Cavalier's idle lance is held level where the original holds it upright; the Champion's barding lacks the white hem.
