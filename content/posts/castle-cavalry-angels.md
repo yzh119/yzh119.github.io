@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Castle body revisions are installed in 0.27.19. The ordinary Griffin now has a 13-group, 85-frame offline animation draft with corrected claw weights. Mouth opening, the death fold and local deformation remain unfinished; it is not installed."
+homeSummary: "The ordinary Griffin has a 13-group, 85-frame animation draft with an articulated mandible and mouth interior. Ear quality, deformation, death and the Royal variant remain unfinished; installed Griffins are unchanged."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -366,7 +366,34 @@ The first death endpoint exposed the belly and lifted the hind legs too high. Th
 
 ![Revised death endpoint after changing the roll direction, hind legs and tail; a Blender still of an unfinished draft](/images/castle-top-tier-01/griffin-death51-draft.png)
 
-Motion coverage is complete as a draft. Mouth opening, ear-tuft surface quality, chest deformation and some wing angles remain unfinished, and the Royal Griffin has not adopted the new body. The installed Griffins are unchanged.
+<details>
+<summary>Status before mouth integration on 27 September</summary>
+
+<s>Motion coverage is complete as a draft. Mouth opening, ear-tuft surface quality, chest deformation and some wing angles remain unfinished, and the Royal Griffin has not adopted the new body. The installed Griffins are unchanged.</s>
+
+</details>
+
+### Griffin mouth
+
+The Meshy body's upper and lower beak were joined, leaving the mouth closed throughout attacks. The Blender revision separates the lower mandible and adds a jaw bone, beak tip, oral lining and tongue, while retaining the existing body, limb, tail and wing animation.
+
+The first capping attempt treated duplicate vertices along texture seams as holes, leaving a dark gap even with the jaw closed. Welding coincident vertices in the mandible before filling the actual cut largely restored the closed outline. An additional surface connects the moving jaw at its hinge.
+
+<details>
+<summary>Failed capping in the closed-mouth render</summary>
+
+![Rejected capping attempt: the closed mouth still has a dark gap, shown in an actual Blender still](/images/castle-top-tier-01/griffin-jaw-cut-failed.png)
+
+</details>
+
+![Blender close-up with the separate mandible and oral lining; mouth corners and interior remain a draft](/images/castle-top-tier-01/griffin-jaw-open-draft.png)
+
+The mouth assembly is now present in all 13 action scenes and their 85 frames. Independent reopening confirmed unchanged transforms for every existing bone at every integer frame; only the jaw adds motion. All nine forward-attack frames were rendered, plus one probe from each other group. The full game asset set has not been re-exported with the new mouth.
+
+![Mouth-opening trial during the forward pounce, a Blender still of the complete assembly rather than a battle capture](/images/castle-top-tier-01/griffin-jaw-attack-draft.png)
+
+Mouth corners and interior shape still need refinement, alongside ear-tuft quality, chest deformation, death and wing poses. The Royal Griffin, shared game framing and installation remain unfinished.
+
 
 <details>
 <summary>Incorrect reference and unrigged-body record from 27 September</summary>
