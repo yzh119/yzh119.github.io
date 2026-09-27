@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The revised Swordsman is installed in 0.27.17 with all 76 frames, articulated hands and a repaired sword grip. The Crusader is retained; Angel and Archangel revisions are next."
+homeSummary: "The Swordsman is installed in 0.27.17. New Angel and Archangel bodies are modelled and rigged, with Blender stills; Angel robe deformation and grip remain unresolved, and neither is installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -184,6 +184,26 @@ The first transfer aimed the blade toward the camera, making it look short. Corr
 Initial transfer record from 26 September: <s>The existing motion sources cover 13 groups and 76 frames. An initial transfer produced the eight idle frames, but sword orientation and grip still need work against the original reference. This body is not installed; the local game remains at 0.27.16, with the Crusader unchanged.</s> The installed result above supersedes that pending status; the original failure image remains below.
 
 ![First idle-transfer frame through the Blender game camera. Sword orientation and grip remain unresolved; this is a trial record](/images/castle-top-tier-01/swordsman-realism03-holding-probe.png)
+
+## Revising the Angel and Archangel bodies
+
+Work on these two models began on 27 September. The original Angel has dark shoulder-length hair, bare arms and an ankle-length white robe with blue edging. The Archangel wears dark steel armour with gold borders, white skirt panels and a winged headpiece. The earlier drafts departed from those references in robe length, trim, armour materials and shield shape. This pass builds separate bodies, leaving wings, swords and the Archangel's tall shield as independent attachments.
+
+![Angel body reference generated with built-in image_gen; wings and sword are separate components](/images/castle-top-tier-01/angel-realism03-concept.jpg)
+
+![Archangel body reference generated with built-in image_gen; tall shield, wings and sword are separate components](/images/castle-top-tier-01/archangel-realism03-concept.jpg)
+
+Meshy has generated and rigged both bodies, at 30 + 5 credits each. Astra inspected eight Blender views of each model and restored their source PBR materials. These 1400 × 1600 stills show the actual 3D bodies; neither is a complete creature yet.
+
+![Actual high-resolution Blender still of the revised Angel body, with long hair, a long robe and blue edging](/images/castle-top-tier-01/angel-realism03-model.png)
+
+![Actual high-resolution Blender still of the revised Archangel body, with dark steel, gold borders and white skirt panels](/images/castle-top-tier-01/archangel-realism03-model.png)
+
+The Angel's first motion probe covers eight idle and seven flight frames, using the existing wings and sword. The idle silhouette is closer to the original, but automatic skinning pulls the flying robe into two trouser-like legs. The wings also intersect the new body, and the sword grip remains open. Robe controls, hand grips and wing attachment need further work; the Archangel's tall shield and complete motion set are also pending. The original layouts have been checked: 16 groups and 94 frames for the Angel, 16 groups and 91 frames for the Archangel.
+
+![The Angel's first 15 Blender motion probes. Flight robe deformation, sword grip and wing intersections remain unresolved; this sheet records the failed transfer](/images/castle-top-tier-01/angel-realism03-probes.jpg)
+
+Neither revised Angel body is installed. The local game remains at the Swordsman update, **0.27.17**. The Crusader is retained, and Griffin review follows these two units.
 
 ## Historical record: 0.17.1–0.27.8
 
