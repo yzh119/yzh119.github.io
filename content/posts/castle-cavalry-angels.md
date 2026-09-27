@@ -3,11 +3,11 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The revised Angel is installed in 0.27.18 with all 94 frames, a complete Blender portrait and motion sheet. Battle display remains unverified. Archangel attachments and actions are next."
+homeSummary: "Angel: 94 frames installed in 0.27.18. The Archangel has a corrected griffin shield and 65 checked non-death poses, with new Blender stills and failure records; final death folding remains pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions proceeding unit by unit. Local mod **0.27.18** installs the revised Angel after the Marksman and Swordsman, with a blue-edged long robe and all 16 native groups, 94 frames. The new Archangel body is modelled; its attachments and actions remain pending, followed by Griffin review. The approved Crusader is retained. The game stayed on a black startup screen during this check, so there is no new Angel battle capture yet.
+All fourteen Castle units have local drafts, with realism revisions proceeding unit by unit. Local mod **0.27.18** installs the revised Angel after the Marksman and Swordsman, with a blue-edged long robe and all 16 native groups, 94 frames. The Archangel has new grips and a corrected griffin shield with non-death poses checked; its collapse still needs work before installation, followed by Griffin review. The approved Crusader is retained. The game stayed on a black startup screen during this check, so there is no new Angel battle capture yet.
 
 ![Complete 0.27.18 Angel assembly, a 1400 × 1600 Blender still with revised body, wing roots and blade; this is not a battle capture](/images/castle-top-tier-01/angel-realism03-complete.png)
 
@@ -237,6 +237,48 @@ A high-resolution still exposed another inherited defect: the sword tip carried 
 Each final scene was reopened to check all 76 independent exported poses: no wrist-seam separation or surface intersections between the body, sword and either wing were detected. The original body normal, metallic and roughness maps remain linked. These checks cover the integer frames used by VCMI; they do not certify every finger contact, self-intersection or continuous 3D interpolation. The 16-group, 94-frame package passes format validation with zero errors and warnings. All 414 installed files match their recorded hashes, with a backup and rollback script retained.
 
 The local mod is now **0.27.18**, updating only the Angel. The bounded runtime check stayed on a black screen after renderer startup and was ended by the script; it does not demonstrate entry into battle. Older captures have not been presented as evidence for this version. The game still uses the previous Archangel assets while its new body's attachments and actions are adapted.
+
+## Archangel grips, shield and collapse drafts
+
+On 27 September, the revised Archangel body received separate closed gauntlets, a sword and wings. The body's original open hands did not grip the weapon. Existing Meshy gauntlet geometry supplies the closed grip; assembly aligns its cavity with the actual sword handle, shortens the excessive handle length and adds wrist liners. These gloves follow the wrists; this draft does not add individually articulated fingers.
+
+![High-resolution Blender close-up of the Archangel sword grip, shortened handle and wrist connection](/images/castle-top-tier-01/archangel-realism03-grip.png)
+
+The first replacement shield was a mistake. Reading the idle silhouette alone led to a rectangular shield with a central boss. The original turn, defence and death frames show that idle mostly exposes the back, while the front carries a gold griffin. I had also oriented the new front toward the idle camera. This shield cost 30 Meshy credits and remains a rejected trial; it was not installed.
+
+<details>
+<summary>Rejected shield concept and assembled Blender render</summary>
+
+![Rejected shield concept from built-in image_gen; the central boss and missing griffin differ from the original](/images/castle-top-tier-01/archangel-realism03-shield-concept.jpg)
+
+![1400 × 1600 Blender still with the rejected shield. The body and grips remain usable; shield design and orientation need replacement](/images/castle-top-tier-01/archangel-realism03-assembled.png)
+
+</details>
+
+With this trial shield, 12 non-death actions have been rendered as 65 independent poses. One attack wind-up needed both upper-arm and wing-root adjustments to clear the sword. The shield arm had also inherited the Angel's free-hand motion, requiring corrected attack, mouse-over and recovery poses. Reopening these scenes confirms retained body PBR maps and no intersections among the tested body, sword, shield and wing surfaces at those exported frames. These results apply to the rejected trial shield and integer frames only; the replacement needs fresh checks, and appearance remains unapproved.
+
+<details>
+<summary>Uninstalled motion-transfer review</summary>
+
+![Blender review of 65 non-death poses, still carrying the rejected shield; neither final assets nor a battle capture](/images/castle-top-tier-01/archangel-realism03-actions-pending.jpg)
+
+</details>
+
+The replacement shield has now been generated for another 30 Meshy credits, retaining the gold griffin and rounded lower edge. Meshy duplicated the emblem on the rear, so Astra replaced rear shading in Blender and added a grip, mounts and a continuous metal rim. The shield faces forward and outward from the body: idle exposes the back, while turning reveals the front. Both turn actions also restore the carrying arm pose instead of inheriting the empty-hand motion that tipped the shield sideways.
+
+![Latest 1400 × 1600 Blender assembly still, showing the shield back in idle; not installed](/images/castle-top-tier-01/archangel-realism03-shield-corrected.png)
+
+![High-resolution Blender still of the shield front, retaining Meshy's gold griffin](/images/castle-top-tier-01/archangel-realism03-shield-front.png)
+
+![High-resolution Blender still of the corrected plain back, grip and geometric rim](/images/castle-top-tier-01/archangel-realism03-shield-back.png)
+
+Reopening all 65 non-death poses with this replacement shows no intersections among the tested body, sword, main shield surface and wings, with body PBR maps retained. This excludes the grip, small rim, complete finger contacts and continuous interpolation. Full replacement still requires the death animation.
+
+The inherited death script also needed replacement. It knelt forward, whereas the original recoils, lifts its legs and falls backward, with the wings closing around the body. The new backward-collapse draft clears the tested equipment surfaces, but its final wings remain too flat and the shield sits incorrectly. It is still being revised and has not been installed. The comparison below includes the original, the rejected kneeling version and the backward-fall draft.
+
+![Original and two rejected collapse drafts; new images are Blender renders, with final wing folding still incomplete](/images/castle-top-tier-01/archangel-realism03-death-rejected.jpg)
+
+The local mod remains **0.27.18** and still uses the previous Archangel. The revised shield is assembled and checked across non-death poses; installation waits for the complete revised action set. Griffins follow afterward.
 
 ## Historical record: 0.17.1–0.27.8
 
