@@ -3,11 +3,11 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local test version 0.27.21 updates the Archangel collapse with folded legs, closer wings and downward tips. The final two transitions were checked at 257 samples; shape details and battle display still need review."
+homeSummary: "Local test version 0.27.21 updates the Archangel collapse with folded legs, closer wings and downward tips. The final two transitions were checked at 257 samples; shape details and battle display still need review. A Griffin claw revision remains offline."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.21** includes the revised Griffins and an updated Archangel collapse with folded legs, closer wings and downward feather tips. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review.
+All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.21** includes the revised Griffins and an updated Archangel collapse with folded legs, closer wings and downward feather tips. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review. The latest Griffin claw revision is described below and remains offline while its complete animation is exported.
 
 <details>
 <summary>Status recorded at version 0.27.20</summary>
@@ -519,8 +519,22 @@ All **170 body frames and their shadows** are exported. Each shadow projects the
 
 The local Castle mod is now **0.27.20**. All 748 installed asset and configuration files were hash-checked, and 6,395 untouched files were verified unchanged. Backups and a rollback script are retained. The approved Crusader is unchanged. The desktop is locked, so visual verification inside the game remains pending.
 
-This is still a test build. The foreclaws are small, and mouth corners, feather joins and late-death deformation need refinement. Hit and defence amplitudes also differ from the original. The Archangel final death wing fold remains unfinished as well.
+Outstanding work recorded at 0.27.20: <s>This is still a test build. The foreclaws are small, and mouth corners, feather joins and late-death deformation need refinement. Hit and defence amplitudes also differ from the original. The Archangel final death wing fold remains unfinished as well.</s> The Archangel collapse was updated in 0.27.21 above; further Griffin claw work follows below. Other shape and motion details still require review.
 
+
+### Claw size and forearm pose
+
+Offline revision after 0.27.21, September 27: the original Griffin has conspicuous raised talons, while the current model holds its smaller claws close to its chest. They become difficult to distinguish at game scale. Astra adjusted the existing Meshy geometry with a tapered enlargement from the wrist to 1.3× at the distal claws, then extended the forearms. Other body vertices and skin weights are unchanged.
+
+![Original, currently installed art, and the offline claw revision, with identical game framing, crop and scale. The last two columns are Blender renders; the right column is not installed](/images/castle-top-tier-01/griffin-claw129-comparison.jpg)
+
+![900 × 900 static Blender render of the claw revision, using the existing Meshy body and wings with local geometry and pose changes by Astra. Neither concept art nor an in-game screenshot](/images/castle-top-tier-01/griffin-claw129-still.png)
+
+The size-only trial was rejected: it increased claw/chest intersections and introduced ground penetration in some actions. Extending the forearms improved most poses, but hit reactions, downward attacks and collapse required separate adjustments. The final collapse pose also needed a wrist rotation.
+
+All 170 exported poses across both variants passed the claw/torso surface-intersection and claw-ground checks used here. Intermediate sampling then found brief ground penetration in downward attacks and collapse, reaching roughly four centimetres. After adding transition keys, those two actions were checked at 32 intervals per frame, totaling 1,028 sampled poses, with neither issue detected. These checks cover the claws, selected torso surfaces and ground; they do not certify all body parts, feathers or motion.
+
+The claw revision remains offline while complete action frames and shadows are rendered with the shared game camera. The installed mod remains **0.27.21**. Full export, installation checks and in-game review are still pending.
 
 <details>
 <summary>Incorrect reference and unrigged-body record from 27 September</summary>
