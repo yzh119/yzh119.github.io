@@ -3,11 +3,19 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Both Griffins have all 170 frames installed in local test version 0.27.20, with shared framing and lighting, shadows and selection outlines. In-game visual verification and local shape refinements remain pending."
+homeSummary: "Local test version 0.27.21 updates the Archangel collapse with folded legs, closer wings and downward tips. The final two transitions were checked at 257 samples; shape details and battle display still need review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions continuing. The local mod is **0.27.20**, including the revised Griffin and Royal Griffin alongside the Marksman, Swordsman, Angel and Archangel drafts. The approved Crusader is unchanged. Further Archangel leg-fold and wing-enclosure work remains offline in Blender and has not replaced its installed animation. The desktop is locked, so in-game visual verification remains pending.
+All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.21** includes the revised Griffins and an updated Archangel collapse with folded legs, closer wings and downward feather tips. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review.
+
+<details>
+<summary>Status recorded at version 0.27.20</summary>
+
+<s>All fourteen Castle units have local drafts, with realism revisions continuing. The local mod is **0.27.20**, including the revised Griffin and Royal Griffin alongside the Marksman, Swordsman, Angel and Archangel drafts. The approved Crusader is unchanged. Further Archangel leg-fold and wing-enclosure work remains offline in Blender and has not replaced its installed animation. The desktop is locked, so in-game visual verification remains pending.</s>
+
+</details>
+
 
 <details>
 <summary>Status recorded at version 0.27.19</summary>
@@ -334,6 +342,14 @@ The outer feather tips now turn downward, with local 3D bending where feathers r
 ![Archangel final-pose draft with folded legs and downward feather tips; a high-resolution Blender still, not installed](/images/castle-top-tier-01/archangel-death93-still.png)
 
 Sampling the transition from frame seven to eight at one-eighth-frame intervals found brief shield–body intersections. The installed predecessor has the same shield problem, along with intermediate wing intersections. Integer-frame checks did not cover those instants. The game currently uses pre-rendered frames; this is an interpolation issue in the 3D scene that remains to be corrected. Eight checked images do not establish a clean continuous animation.
+
+### Collapse update in 0.27.21
+
+The still and intersection findings above record the work before installation. Subsequent wrist and wing-root adjustments route the shield around the body and keep feather tips above ground. Added keys initially changed the incoming curve handle at frame seven, introducing a right-wing intersection in the preceding interval. Restoring that incoming curve and separately correcting the earlier shield path resolved the sampled contacts.
+
+Reopening the scene and checking frames six through eight at 1/128-frame intervals covers **257 samples**. The tested main body, sword, shield and wing surface pairs clear, and visible meshes remain above ground. The eight exported poses are preserved. This result covers the final two intervals and specified surface pairs, not complete body self-intersection or every other action's interpolation.
+
+The eight replacement frames and shadows are installed in local **0.27.21**. All 396 staged file hashes were checked. Actual changes are 32 death images and the mod metadata; another 7,111 files remain unchanged. Installed format validation reports zero errors or warnings, with backup and rollback verified. Griffins and the Crusader are unchanged by this update. The desktop remains locked, so battle display is unverified. Feather joins and details of the original silhouette remain refinement work.
 
 ## Griffin reference correction and rigging trials
 
