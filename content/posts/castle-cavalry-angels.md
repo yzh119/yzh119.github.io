@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The ordinary Griffin has a 13-group, 85-frame animation draft with an articulated mandible and mouth interior. Ear quality, deformation, death and the Royal variant remain unfinished; installed Griffins are unchanged."
+homeSummary: "Both Griffins now have the new body and articulated mouth in 13 action scenes covering 85 frames each. New Blender stills show the Royal palette; ear and motion quality remain unfinished, and neither version is installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -341,7 +341,7 @@ The actual mesh has a pronounced fragmented surface. Disabling the normal map an
 
 ![Blender still of the Meshy ear-tuft model, showing the fragmented surface and its gap from the concept](/images/castle-top-tier-01/griffin-ear-mesh-trial.png)
 
-After scaling and head attachment, the paired upright silhouette is restored. A smoothing trial pulled isolated vertices towards the origin; removing it fixed the attachment check at head rotations of 25 degrees in either direction. This verifies attachment only. Granularity, colour and root blending remain unfinished. Status at this trial: <s>The full animation set and Royal variant remain unfinished. No new Griffin has been installed.</s> The ordinary Griffin motion draft was subsequently completed, as described next; the Royal variant and installation remain pending.
+After scaling and head attachment, the paired upright silhouette is restored. A smoothing trial pulled isolated vertices towards the origin; removing it fixed the attachment check at head rotations of 25 degrees in either direction. This verifies attachment only. Granularity, colour and root blending remain unfinished. Status at this trial: <s>The full animation set and Royal variant remain unfinished. No new Griffin has been installed.</s> The ordinary Griffin motion draft and Royal material variant were subsequently added, as described below; neither is installed.
 
 ![1200 × 1400 Blender assembly trial with paired upright ear tufts; surface quality remains unfinished, and this is not an installed result](/images/castle-top-tier-01/griffin-ear-assembly-trial.png)
 
@@ -392,7 +392,30 @@ The mouth assembly is now present in all 13 action scenes and their 85 frames. I
 
 ![Mouth-opening trial during the forward pounce, a Blender still of the complete assembly rather than a battle capture](/images/castle-top-tier-01/griffin-jaw-attack-draft.png)
 
-Mouth corners and interior shape still need refinement, alongside ear-tuft quality, chest deformation, death and wing poses. The Royal Griffin, shared game framing and installation remain unfinished.
+Status before the Royal material pass on 27 September: <s>Mouth corners and interior shape still need refinement, alongside ear-tuft quality, chest deformation, death and wing poses. The Royal Griffin, shared game framing and installation remain unfinished.</s>
+
+### The Royal Griffin body
+
+The Royal variant uses the same Meshy body and wings with the Blender rig. Its materials now follow the original silver-white head, neck and wings, gold beak and foreclaws, and brown lion body, retaining detail from the source textures. The first gold mask reached onto the forehead; the revised mask confines that area to the beak.
+
+![Royal Griffin idle assembly, a 1200 × 1400 Blender still; ear quality and motion remain unfinished, and this version is not installed](/images/castle-top-tier-01/royal-griffin-newbody-idle.png)
+
+The Royal materials are present in **13 action scenes covering 85 frames**. Independently reopening every scene confirmed identical mesh geometry and bone transforms at every integer frame, including the articulated mandible. One frame per group was rendered for material review. The complete Royal frame set has not been exported or installed.
+
+![Royal Griffin open-mouth attack, a 1200 × 1400 Blender still using the same articulated mouth and animation](/images/castle-top-tier-01/royal-griffin-newbody-attack.png)
+
+The ear tufts remain granular. A voxel reconstruction trial attempted to merge the fragments and project the Meshy texture back onto the surface. The finer result retained extensive holes; the coarser result formed lumpy masses. Neither was adopted.
+
+<details>
+<summary>Two rejected ear reconstructions, shown as Blender close-ups</summary>
+
+![Fine voxel reconstruction retains fragments and holes; rejected](/images/castle-top-tier-01/griffin-tuft-remesh-fine-failed.png)
+
+![Coarse reconstruction produces lumps rather than feathers; rejected](/images/castle-top-tier-01/griffin-tuft-remesh-coarse-failed.png)
+
+</details>
+
+Both Griffins remain offline drafts. Ear tufts, mouth corners, chest deformation, death and some wing poses need further work before shared game framing, full rendering and installation. The installed Griffins are unchanged.
 
 
 <details>
