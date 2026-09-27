@@ -331,7 +331,20 @@ The [proxy skinning tool and usage notes](https://github.com/yzh119/h3-art-pipel
 
 ![1400 × 1600 Blender still of the rigged Griffin assembly trial, with attached wings; the original upright ear tufts are still missing and the folded-wing silhouette is unfinished](/images/castle-top-tier-01/griffin-realism04-assembly.png)
 
-Work currently covers an idle pose trial and four flight poses. Claw height, tail direction, ear tufts and wing folding still need adjustment against the actual original. Stretching the head feathers and assembling clipped wing tips as ear tufts both failed visual review. The full action set, Royal Griffin variant and installation remain unfinished; the game still uses the earlier Griffins.
+Record before the local ear-tuft modelling trial on 27 September: <s>Work currently covers an idle pose trial and four flight poses. Claw height, tail direction, ear tufts and wing folding still need adjustment against the actual original. Stretching the head feathers and assembling clipped wing tips as ear tufts both failed visual review. The full action set, Royal Griffin variant and installation remain unfinished; the game still uses the earlier Griffins.</s>
+
+The holding draft now has eight poses. Individually modelled ear feathers looked like smooth comb teeth, so built-in image_gen supplied a local tuft reference and Meshy generated a replacement for 30 credits.
+
+![Isolated ear-tuft concept from image_gen for Meshy modelling; not a 3D render](/images/castle-top-tier-01/griffin-ear-concept.png)
+
+The actual mesh has a pronounced fragmented surface. Disabling the normal map and fixing roughness did not remove it, so normal settings alone do not explain the result. The rejected close-up is retained below.
+
+![Blender still of the Meshy ear-tuft model, showing the fragmented surface and its gap from the concept](/images/castle-top-tier-01/griffin-ear-mesh-trial.png)
+
+After scaling and head attachment, the paired upright silhouette is restored. A smoothing trial pulled isolated vertices towards the origin; removing it fixed the attachment check at head rotations of 25 degrees in either direction. This verifies attachment only. Granularity, colour and root blending remain unfinished, as do the full animation set and Royal variant. No new Griffin has been installed.
+
+![1200 × 1400 Blender assembly trial with paired upright ear tufts; surface quality remains unfinished, and this is not an installed result](/images/castle-top-tier-01/griffin-ear-assembly-trial.png)
+
 
 <details>
 <summary>Incorrect reference and unrigged-body record from 27 September</summary>
