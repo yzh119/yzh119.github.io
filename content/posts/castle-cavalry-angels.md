@@ -3,11 +3,20 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "More realistic Pikeman, Halberdier and Archer models are installed in 0.27.15. The Archer has all 96 frames, repaired crossbow clearance and separate waist equipment, with a new battle capture."
+homeSummary: "The realistic Marksman is installed in 0.27.16 with 16 actions and 97 frames, complete render samples and a local battle capture. Next: Swordsman, then Angel and Archangel, followed by Griffins; retain the approved Crusader."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.15** includes the revised Pikeman's 76 frames, Halberdier's 63 frames and Archer's 96 frames. The Archer now has separate waist equipment and repaired crossbow clearance in all three shooting directions and its display action. All three have entered a test battle. Their revised style awaits the user's review; the remaining creatures still need individual attention.
+All fourteen Castle units have local drafts, and several still need substantial work. Local mod **0.27.16** adds the revised Marksman, matching the more realistic Pikeman, Halberdier and Archer, with all 16 actions and 97 frames installed. The new Marksman stands second from the top on the left in the battle below. The user liked the Archer revision. Next comes the Swordsman, while retaining the approved Crusader, then the Angel and Archangel, followed by a review of the Griffins.
+
+![Local VCMI battle with 0.27.16: revised Marksman second from the top on the left, Archer opposite on the right. This bounded run verifies loading and display, not complete playback of every action](/images/castle-top-tier-01/castle-battle02716.png)
+
+## Version record: 0.27.8–0.27.15
+
+<details>
+<summary>Earlier introduction and battle captures through 0.27.15</summary>
+
+<s>All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.15** includes the revised Pikeman's 76 frames, Halberdier's 63 frames and Archer's 96 frames. The Archer now has separate waist equipment and repaired crossbow clearance in all three shooting directions and its display action. All three have entered a test battle. Their revised style awaits the user's review; the remaining creatures still need individual attention.</s>
 
 ![Local VCMI battle running 0.27.15. The new Archer is second from the top on the right, below the Pikeman; the revised Halberdier is at the upper left](/images/castle-top-tier-01/castle-battle02715.png)
 
@@ -15,7 +24,7 @@ All fourteen Castle units have local drafts, and several still need substantial 
 
 ![Local VCMI battle running 0.27.13. The revised Pikeman is at the upper right; the other creatures retain their earlier drafts](/images/castle-top-tier-01/castle-battle02713.png)
 
-## Version record: 0.27.8–0.27.12
+</details>
 
 The following records each version's changes and verification at the time. The latest Pikeman work appears under “Realism revision.” Earlier status on 26 September: <s>The local mod is at 0.27.12, refining the Marksman's three melee impact poses. It retains the bareheaded, blue-clad Pikeman, upright cavalry lances and gold Royal Griffin forelegs and talons.</s> Version 0.27.13 replaces that Pikeman while retaining the other units.
 
@@ -136,7 +145,17 @@ The user asked for the Marksman to match the new Archer's realism. Built-in imag
 
 ![Static Blender render of the actual Meshy model. Stray pale motifs on the rear skirt are separately tinted blue with a local material mask; source textures remain intact](/images/castle-top-tier-01/marksman-realism03-model.png)
 
-The melee scenes retain both an older rig and the more recently repaired body rig. Motion transfer now explicitly selects the repaired one so those pose changes survive. The first 28 frames cover idle, forward shooting, forward melee and downward melee; weapon and hand-attachment transforms match their repaired sources. The replacement body introduces crossbow/body intersections, and two melee recovery frames also intersect the blade. This version is not installed; motion adaptation remains necessary alongside the style change.
+Version 0.27.16 installs all 97 Marksman frames. The replacement retains the articulated hands and separate weapons. Walking and display poses adjust the two-handed crossbow hold; melee uses a steadier left-arm hold while the right arm swings the sword. Defence, hit reactions, death and movement transitions were also fitted to the new body. All exported frames retain PBR materials and pass body/weapon surface-intersection checks. Format validation reports zero errors and warnings, and an independent reread verifies all 424 installed files. Backups and rollback instructions are retained. The battle capture at the top confirms local loading and display.
+
+![Blender render samples from all 16 Marksman actions, comprising 97 exported frames](/images/castle-top-tier-01/marksman-realism03-actions.jpg)
+
+![Exported poses for the three melee directions and defence: separate crossbow and sword grips, with the crossbow raised for defence](/images/castle-top-tier-01/marksman-realism03-combat.jpg)
+
+Several failed repairs exposed tooling faults. Choosing the older of two body rigs discarded earlier pose corrections. Restoring world-space bone matrices repeatedly during pose search accumulated parent-transform errors: one candidate cleared the weapon while detaching the wrist. Restoring local bone poses and checking wrist alignment separately caught that failure. Existing fractional-frame keys also survived newly inserted keys, so complete replacement of the edited curves was necessary for continuous-motion repairs.
+
+**This delivery covers VCMI's discrete sprite frames.** Some source scenes still have cuff intersections or grip misalignment between those frames. They need further curve work before use as continuous three.js animation. The exported-frame checks do not certify containment, every finger contact or body self-intersection.
+
+Initial trial recorded on 26 September, before installation: <s>The melee scenes retain both an older rig and the more recently repaired body rig. Motion transfer now explicitly selects the repaired one so those pose changes survive. The first 28 frames cover idle, forward shooting, forward melee and downward melee; weapon and hand-attachment transforms match their repaired sources. The replacement body introduces crossbow/body intersections, and two melee recovery frames also intersect the blade. This version is not installed; motion adaptation remains necessary alongside the style change.</s> The installed result above supersedes that pending status; the early failure sheet remains below.
 
 ![Samples from the first 28 Marksman frames, rendered in Blender. Melee intersections remain; this sheet records the pre-repair state](/images/castle-top-tier-01/marksman-realism03-probes.jpg)
 
