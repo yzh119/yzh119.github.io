@@ -7,7 +7,15 @@ homeSummary: "Both Griffins have all 170 frames installed in local test version 
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.19** installs the revised Archangel after the Marksman, Swordsman and Angel: its new body, griffin shield and thin-feather wings cover all 16 native groups and 91 frames. The final death fold remains too wide, so this is a local test version with further refinement pending. Griffin review and revision have begun; the approved Crusader is retained. This GUI capture was black, and the Mac was confirmed locked, so battle display of the new assets remains unverified.
+All fourteen Castle units have local drafts, with realism revisions continuing. The local mod is **0.27.20**, including the revised Griffin and Royal Griffin alongside the Marksman, Swordsman, Angel and Archangel drafts. The approved Crusader is unchanged. Further Archangel leg-fold and wing-enclosure work remains offline in Blender and has not replaced its installed animation. The desktop is locked, so in-game visual verification remains pending.
+
+<details>
+<summary>Status recorded at version 0.27.19</summary>
+
+<s>All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.19** installs the revised Archangel after the Marksman, Swordsman and Angel: its new body, griffin shield and thin-feather wings cover all 16 native groups and 91 frames. The final death fold remains too wide, so this is a local test version with further refinement pending. Griffin review and revision have begun; the approved Crusader is retained. This GUI capture was black, and the Mac was confirmed locked, so battle display of the new assets remains unverified.</s>
+
+</details>
+
 
 ![Complete 0.27.18 Angel assembly, a 1400 × 1600 Blender still with revised body, wing roots and blade; this is not a battle capture](/images/castle-top-tier-01/angel-realism03-complete.png)
 
@@ -314,6 +322,18 @@ The collapse now begins with lowered wings that open as the body falls, closer t
 ![Installed 0.27.19 Archangel collapse frames, rendered in Blender. The opening has changed, while the final fold remains wide; animation fidelity is not complete](/images/castle-top-tier-01/archangel-realism03-death-installed19.jpg)
 
 The full set contains 73 independent rendered poses and melee-action aliases, matching all 91 native frames. Tested main surface pairs clear at integer poses, render bounds are intact, and format validation reports zero errors or warnings. After installation, 396 file hashes were independently verified, with backup and rollback retained. VCMI source and the approved Crusader were unchanged. The GUI capture was black; a subsequent system-state check confirmed that the Mac was locked. This does not establish an asset-loading failure or a successful battle test.
+
+### Folded legs, feather tips and between-frame checks
+
+Comparison with the original also exposed how strongly the boot soles faced the camera. Revised calves and ankles in the final two frames keep the body grounded, while wing-root rotations bring the wings closer to its sides. Simply moving the roots inward caused body or shield intersections. Larger tilts required raising the roots away from the back; those trials were rejected.
+
+![Rejected narrower wing pose with remaining body intersections; an actual Blender still](/images/castle-top-tier-01/archangel-death83-rejected.png)
+
+The outer feather tips now turn downward, with local 3D bending where feathers reach the ground. The following 1000 × 800 Blender still shows the new final-pose draft. All eight frames have been rendered again. Tested main body, sword, shield and wing surface pairs clear at integer frames, with no floor penetration. Feather joins and the final silhouette still need review.
+
+![Archangel final-pose draft with folded legs and downward feather tips; a high-resolution Blender still, not installed](/images/castle-top-tier-01/archangel-death93-still.png)
+
+Sampling the transition from frame seven to eight at one-eighth-frame intervals found brief shield–body intersections. The installed predecessor has the same shield problem, along with intermediate wing intersections. Integer-frame checks did not cover those instants. The game currently uses pre-rendered frames; this is an interpolation issue in the 3D scene that remains to be corrected. Eight checked images do not establish a clean continuous animation.
 
 ## Griffin reference correction and rigging trials
 
