@@ -3,11 +3,13 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Pikeman now has restrained clothing shapes and restored PBR materials. All 76 frames are installed in 0.27.13, with a new battle capture; the remaining Castle creatures still need individual review."
+homeSummary: "The Pikeman and Halberdier now use more realistic models, restored materials and repaired grips. Both full animation sets are installed in 0.27.14, with a battle capture; other Castle units still need individual revisions."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.13** replaces the Pikeman with more restrained clothing shapes and restored PBR materials across all 11 unique action groups and 76 frames. It has entered a test battle. The revised style awaits the user's review, and the other creatures still need the same individual attention.
+All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.14** includes the revised Pikeman's 76 frames and Halberdier's 63 frames, with restrained clothing shapes, restored PBR materials and retained grip and release geometry. Both have entered a test battle. Their revised style awaits the user's review; the remaining creatures still need individual attention.
+
+![Local VCMI battle running 0.27.14, with the new Halberdier at the upper left and Pikeman at the upper right](/images/castle-top-tier-01/castle-battle02714.png)
 
 ![Local VCMI battle running 0.27.13. The revised Pikeman is at the upper right; the other creatures retain their earlier drafts](/images/castle-top-tier-01/castle-battle02713.png)
 
@@ -89,7 +91,13 @@ The previous Halberdier covered the original's visible face with a closed facepl
 
 ![Static Blender render of the actual Meshy model, retaining the open helmet and clean emblem. The back has also been inspected; animation integration is still pending](/images/castle-top-tier-01/halberdier-realism03-model.png)
 
-Rigging subsequently completed for 5 credits. The source material was restored after verifying matching UVs across 74,318 triangles. The game still uses the earlier Halberdier. Grip and motion work remain: the source action scene has no separate finger bones, so the Pikeman hand-repair script cannot simply be reused.
+Rigging subsequently completed for 5 credits. The source material was restored after verifying matching UVs across 74,318 triangles. Status at the single-frame trial: <s>The game still uses the earlier Halberdier. Grip and motion work remain: the source action scene has no separate finger bones, so the Pikeman hand-repair script cannot simply be reused.</s>
+
+The earlier model already had closed-grip geometry and release shape keys. Its hands were retained separately, with the new arms fitted to the original wrists and the hit/death release drivers preserved. All 11 groups and 63 frames are rendered. Material maps and hand-release values passed frame-by-frame checks, and samples from every group were visually inspected. Format validation reports zero errors and warnings; all 278 installed files match their hashes. Version 0.27.14 retains backups and a rollback script.
+
+![Blender frame samples from the revised Halberdier, including attacks, hit reactions with hand release, and death](/images/castle-top-tier-01/halberdier-realism03-actions.jpg)
+
+The battle capture at the beginning of this article confirms loading and display. The short run did not cover complete playback of every action, and the art still needs further review.
 
 ## Historical record: 0.17.1–0.27.8
 
