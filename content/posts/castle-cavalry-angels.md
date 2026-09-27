@@ -3,11 +3,17 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Castle roster entered a test battle, but the Pikeman and other drafts were rejected as too cartoonish. Costume exaggeration and materials altered during rigging are being addressed, with a new photographic concept and failure notes."
+homeSummary: "The Pikeman now has restrained clothing shapes and restored PBR materials. All 76 frames are installed in 0.27.13, with a new battle capture; the remaining Castle creatures still need individual review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.12**, refining the Marksman's three melee impact poses. It retains the bareheaded, blue-clad Pikeman, upright cavalry lances and gold Royal Griffin forelegs and talons. A new test-battle screenshot appears below.
+All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.13** replaces the Pikeman with more restrained clothing shapes and restored PBR materials across all 11 unique action groups and 76 frames. It has entered a test battle. The revised style awaits the user's review, and the other creatures still need the same individual attention.
+
+![Local VCMI battle running 0.27.13. The revised Pikeman is at the upper right; the other creatures retain their earlier drafts](/images/castle-top-tier-01/castle-battle02713.png)
+
+## Version record: 0.27.8–0.27.12
+
+The following records each version's changes and verification at the time. The latest Pikeman work appears under “Realism revision.” Earlier status on 26 September: <s>The local mod is at 0.27.12, refining the Marksman's three melee impact poses. It retains the bareheaded, blue-clad Pikeman, upright cavalry lances and gold Royal Griffin forelegs and talons.</s> Version 0.27.13 replaces that Pikeman while retaining the other units.
 
 Both carry the lance upward while standing and moving, lower it during an attack, and raise it again afterward. Each retains the original 13 groups and 81 frames. Body, shadow and selection layers at 1× and 2× total 342 PNGs per unit. Both packages passed format validation with zero errors and warnings, and installation preserved backups and rollback scripts. This update checked the exported frames and installed files; it has no new battle screenshot. The battle image in the historical record below shows an earlier version.
 
@@ -67,7 +73,13 @@ The restoration tool first verifies matching UVs across all 74,835 triangles, th
 
 ![Original, installed draft rejected as cartoonish, and new candidate with restored material. New and old drafts use the same game camera and registered crop; the idle frames are enlarged for inspection](/images/castle-top-tier-01/pikeman-realism04-game-scale.png)
 
-Idle motion and the separate gripping hands have been transferred, and one frame rendered at game resolution. Costume volume and bright decoration are reduced, but the full animation set and battle checks remain unfinished. This candidate has not replaced the old model in 0.27.12, and its style has not been signed off.
+Status during the single-frame experiment on 26 September: <s>Idle motion and the separate gripping hands have been transferred, and one frame rendered at game resolution. Costume volume and bright decoration are reduced, but the full animation set and battle checks remain unfinished. This candidate has not replaced the old model in 0.27.12, and its style has not been signed off.</s>
+
+All 76 frames are now rendered with a more directional key light and weaker ambient and frontal fill, giving the cloth folds and boots clearer form. Every action scene retains the normal, roughness and metallic maps without emission. The separate finger animation is preserved, with the new arms fitted to its grip positions. Format validation reports zero errors and warnings, and all 328 installed files match their hashes. Backups and a rollback script are retained.
+
+![Samples from every Pikeman action in 0.27.13, rendered in Blender with a shared camera and lighting, including three attacks and death](/images/castle-top-tier-01/pikeman-realism04-actions.jpg)
+
+The revised unit has entered a local test battle, shown at the beginning of this article. This short run confirms loading and display; it does not validate every animation in playback or establish that the other Castle creatures have completed their realism revisions.
 
 ## Historical record: 0.17.1–0.27.8
 
