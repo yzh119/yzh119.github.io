@@ -81,6 +81,16 @@ All 76 frames are now rendered with a more directional key light and weaker ambi
 
 The revised unit has entered a local test battle, shown at the beginning of this article. This short run confirms loading and display; it does not validate every animation in playback or establish that the other Castle creatures have completed their realism revisions.
 
+## Halberdier helmet and clothing
+
+The previous Halberdier covered the original's visible face with a closed faceplate and reproduced its chest emblem as pixel blocks. A new built-in image_gen reference retains the blue-and-yellow clothing, white griffin and shoulder plates, with less inflated fabric. Meshy generated the replacement with PBR maps for 30 credits.
+
+![Realistic Halberdier modelling reference from built-in image_gen. Empty hands allow the polearm to be attached separately](/images/castle-top-tier-01/halberdier-realism03-concept.jpg)
+
+![Static Blender render of the actual Meshy model, retaining the open helmet and clean emblem. The back has also been inspected; animation integration is still pending](/images/castle-top-tier-01/halberdier-realism03-model.png)
+
+Rigging subsequently completed for 5 credits. The source material was restored after verifying matching UVs across 74,318 triangles. The game still uses the earlier Halberdier. Grip and motion work remain: the source action scene has no separate finger bones, so the Pikeman hand-repair script cannot simply be reused.
+
 ## Historical record: 0.17.1–0.27.8
 
 Status before the new Pikeman installation on 26 September: <s>Idle motion has been transferred, but the two-handed grip still needs adjustment; the other actions are being exported for inspection. The new Pikeman is not installed.</s> Version 0.27.10 completes this grip repair and installation; a new battle check is still pending.
