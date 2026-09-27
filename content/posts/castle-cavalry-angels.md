@@ -3,9 +3,26 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Full action sets for the Cavalier, Champion, Angel and Archangel are in the local test mod, with rebuilt angel wings, compared frame by frame with the originals; battle screenshots and art review are still to do."
+homeSummary: "All fourteen Castle units have local drafts. The Cavalier and Champion now carry upright lances in mod 0.27.8, with an original/before/installed comparison; likeness still needs work."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
+
+All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.8**, with the previously rendered upright-lance changes for the Cavalier and Champion now packaged and installed.
+
+Both carry the lance upward while standing and moving, lower it during an attack, and raise it again afterward. Each retains the original 13 groups and 81 frames. Body, shadow and selection layers at 1× and 2× total 342 PNGs per unit. Both packages passed format validation with zero errors and warnings, and installation preserved backups and rollback scripts. This update checked the exported frames and installed files; it has no new battle screenshot. The battle image in the historical record below shows an earlier version.
+
+![Original H3, version 0.27.6, and installed 0.27.8, from left to right; Cavalier above, Champion below. The new sprites are Blender renders; original pixels are enlarged with nearest-neighbour sampling](/images/castle-top-tier-01/cavalry-upright3274.png)
+
+The Royal Griffin's gold talons are still awaiting installation, and its proportions need work. The latest Pikeman mesh needs review; the Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Further model replacements will use image_gen concepts grounded in the original art, followed by Meshy geometry and rigging. The FLUX and direct-Meshy experiments below remain part of the project history.
+
+Codex handled this handover, packaging and installation. The upright-lance scenes and exports were already available at handover.
+
+## Historical record: 0.17.1–0.27.6
+
+The earlier text and images are retained below. References to the “new draft” or “current version” describe that particular iteration; superseded conclusions are struck through. The opening paragraphs describe the installed state today.
+
+<details>
+<summary>Earlier modelling work, failed attempts and battle evidence</summary>
 
 None of the four units in Castle's top two tiers had a version that could go into the game. The Cavalier had offline drafts, the Champion was stuck on leg skin weights, and the Angel and Archangel had motion but the wrong models. This round all four got every animation group and went into the local Castle mod (0.17.1 to 0.20.0). They are test drafts; the art has not been signed off.
 
@@ -37,7 +54,7 @@ The original Champion has exactly the same bounding box and horse width as the C
 
 ![Original (top) and new draft (bottom): idle, front attack, upward attack, death](/images/castle-top-tier-01/champion.png)
 
-The original's barding has a white crenellated hem, which the draft does not have yet.
+<s>The original's barding has a white crenellated hem, which the draft does not have yet.</s> A later update on 26 September added it, as recorded in the battle-and-fixes section below.
 
 ## Angel and Archangel
 
@@ -115,7 +132,7 @@ Colour problems were fixed in the textures or materials. The Archangel's dark br
 
 The five infantry units with the wrong costume (Pikeman, Halberdier, Archer, Marksman, Swordsman) were remodelled. The concepts use FLUX.2 [pro] image editing with the original idle frame, upscaled, as the reference, asking for the same costume and colours in an empty-handed A-pose, at 6 credits each. Meshy then built and rigged them.
 
-Is the FLUX step necessary, or could Meshy do it directly? A test on the Halberdier: feeding the original sprite straight into Meshy's image-to-3D gave a surprisingly good likeness, with the right colours, stripes and eagle. But it kept the combat pose with the halberd grown into the hand, so it can neither be rigged nor reuse the existing animation. Meshy's text-to-3D got the colours wrong and fused the weapon too. Reusing the existing animation needs an empty-handed A-pose, and for now only the FLUX step provides that.
+Is the FLUX step necessary, or could Meshy do it directly? A test on the Halberdier: feeding the original sprite straight into Meshy's image-to-3D gave a surprisingly good likeness, with the right colours, stripes and eagle. But it kept the combat pose with the halberd grown into the hand, so it can neither be rigged nor reuse the existing animation. Meshy's text-to-3D got the colours wrong and fused the weapon too. Reusing the existing animation needs an empty-handed A-pose, <s>and for now only the FLUX step provides that.</s> Correction, 26 September: that described the experiments tried at the time. Further concepts will use image_gen.
 
 The new bodies keep all the old animation. Both skeletons are Meshy humanoid rigs with the same bone names, but their rest poses hold the arms at different angles, so copying local rotations sent the arms elsewhere. Instead, each frame aligns every new bone's direction with the old bone's. Separately animated props such as the pike or crossbow find the bone they move with most rigidly and are re-attached to it. Before touching each unit, its original scene and camera re-rendered one frame and it was compared with the installed sprite; all overlap at 0.99 or better.
 
@@ -154,4 +171,6 @@ Frame counts and canvases come from each unit's original DEF, and the packaging 
 
 <s>The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.</s> A battle screenshot was added on 26 September; see the previous section.
 
-Known issues: the Cavalier's idle lance is held level where the original holds it upright; the Royal Griffin's talons are still brown where the original's are gold.
+Known issues: <s>the Cavalier's idle lance is held level where the original holds it upright</s> (corrected in 0.27.7–0.27.8 on 26 September); the Royal Griffin's talons are still brown where the original's are gold.
+
+</details>
