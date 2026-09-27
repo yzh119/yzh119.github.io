@@ -3,11 +3,11 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All fourteen Castle units have local drafts. Version 0.27.10 installs the bareheaded, blue-clad Pikeman with repaired grips and all actions, alongside gold Griffin talons and upright cavalry lances. Includes failed drafts and Blender comparisons."
+homeSummary: "All fourteen Castle units have local drafts. The new Pikeman has all actions; 0.27.11 improves the Marksman's melee blade and grip. Includes failed drafts, Blender stills and original-art comparisons."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.10**, with a bareheaded, blue-clad Pikeman and its full set of actions. It retains upright cavalry lances and gold Royal Griffin forelegs and talons.
+All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.11**, with a repaired Marksman melee blade orientation and grip. It retains the bareheaded, blue-clad Pikeman, upright cavalry lances and gold Royal Griffin forelegs and talons.
 
 Both carry the lance upward while standing and moving, lower it during an attack, and raise it again afterward. Each retains the original 13 groups and 81 frames. Body, shadow and selection layers at 1× and 2× total 342 PNGs per unit. Both packages passed format validation with zero errors and warnings, and installation preserved backups and rollback scripts. This update checked the exported frames and installed files; it has no new battle screenshot. The battle image in the historical record below shows an earlier version.
 
@@ -32,6 +32,14 @@ The first motion transfer left open hands several centimetres away from the shaf
 ![Previous installed Pikeman, new body with loose grips, and installed repair with articulated hands. Idle above and front attack below; these are Blender game frames](/images/castle-top-tier-01/pikeman-grip04.png)
 
 Codex handled this handover, packaging and installation. The upright-lance scenes and exports were already available at handover.
+
+## Marksman melee blade
+
+<s>The Marksman's melee sword direction remains unresolved.</s> Version 0.27.11, installed on 26 September, rotates the blade face and wrist and reduces foreshortening at impact. The previous blade faced the camera nearly edge-on and looked like a thin line. The repair also restores the separately modelled sword hand with its finger animation. All 18 frames across upward, front and downward attacks were updated. Surface intersection checks found no blade contacts with the body or crossbow. Format validation passed and all 424 installed files match their hashes; there is no new battle check yet.
+
+![Original, previous draft and 0.27.11 for each melee direction. New images are Blender game frames. Columns are cropped and fitted independently for inspection, so they do not compare in-game sizes](/images/castle-top-tier-01/marksman-melee05.png)
+
+The blade is easier to see, but the full motion still differs from the original: the upward strike angle and arm extension need further work. The Halberdier's open helmet and the Royal Griffin's proportions and folded wings also remain unfinished.
 
 ## Historical record: 0.17.1–0.27.8
 
