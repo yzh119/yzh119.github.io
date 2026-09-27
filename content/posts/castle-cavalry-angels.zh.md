@@ -3,7 +3,7 @@ title: "[AI]城堡骑士与天使"
 date: 2026-09-26T12:20:00+08:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
-homeSummary: "神射手、剑士、天使和大天使的新身体已安装到 0.27.19；大天使倒地收翼仍需细修。狮鹫开始返工，新增原版对照与写实身体概念。"
+homeSummary: "神射手、剑士、天使和大天使的新身体已安装到 0.27.19；大天使倒地收翼仍需细修。狮鹫的新身体模型已生成，补了概念图与 Blender 高清静帧，翅膀和动作待接。"
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -319,9 +319,13 @@ Meshy 已完成新身体和绑定，分别消耗 30、5 credits。Astra 检查�
 
 ![左为原版普通狮鹫，中为已安装普通狮鹫，右为已安装皇家狮鹫；不是三个版本等比例的游戏截图](/images/castle-top-tier-01/griffin-realism04-installed-review.jpg)
 
-新的身体概念仍由内置 image_gen 生成，按原版保留平展的鹰头、金褐羽毛、较瘦的狮身和前爪。图中刻意省略翅膀，方便身体和可活动翼片分别建模。概念已送入 Meshy，三维模型尚在生成；这张图不是 Blender 渲染，也没有替换游戏里的狮鹫。
+新的身体概念仍由内置 image_gen 生成，按原版保留平展的鹰头、金褐羽毛、较瘦的狮身和前爪。图中刻意省略翅膀，方便身体和可活动翼片分别建模。提交时的状态：<s>概念已送入 Meshy，三维模型尚在生成；这张图不是 Blender 渲染，也没有替换游戏里的狮鹫。</s> 同日，Meshy 已完成新身体，消耗 30 credits。下面分别放概念图与实际模型；狮鹫仍未替换进游戏。
 
-![狮鹫身体概念，内置 image_gen 生成；为独立建模而省略翅膀，后续仍需 Meshy 模型、绑定与动画](/images/castle-top-tier-01/griffin-realism04-body-concept.jpg)
+![狮鹫身体概念，内置 image_gen 生成；为独立建模而省略翅膀](/images/castle-top-tier-01/griffin-realism04-body-concept.jpg)
+
+正面、侧面和背面的 Blender 渲染已检查：高尖角和粗厚胸腹改善了，鹰嘴、鳞爪、狮腿和尾巴保留。模型仍是未绑定的身体，尚无翅膀；爪子活动、关节变形和装翼后的完整轮廓还没有通过动作检查。
+
+![Meshy 新狮鹫身体的 1400 × 1600 Blender 高清静态渲染，尚未绑定或装配翅膀；不是概念图，也不是游戏截图](/images/castle-top-tier-01/griffin-realism04-body-mesh.png)
 
 ## 历史记录：0.17.1–0.27.8
 

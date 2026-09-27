@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Revised Marksman, Swordsman, Angel and Archangel bodies are installed in 0.27.19. The Archangel death fold still needs refinement. Griffin revisions begin with a reference comparison and body concept."
+homeSummary: "Revised Marksman, Swordsman, Angel and Archangel bodies are installed in 0.27.19. The Archangel death fold still needs refinement. The new Griffin body mesh is ready, with concept art and a Blender still; wings and animation remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -319,9 +319,13 @@ The current Griffins still differ visibly from the reference. The ordinary Griff
 
 ![Original ordinary Griffin, installed ordinary Griffin, and installed Royal Griffin; independently fitted for comparison, not equal-scale game captures](/images/castle-top-tier-01/griffin-realism04-installed-review.jpg)
 
-Built-in image_gen supplied a revised body concept with a swept-back eagle head, buff-gold feathers, a leaner lion body and raised foreclaws. Wings are deliberately omitted so the body and movable wings can be modeled separately. The concept has been submitted to Meshy, with the 3D result still pending. This is not a Blender render or an installed Griffin replacement.
+Built-in image_gen supplied a revised body concept with a swept-back eagle head, buff-gold feathers, a leaner lion body and raised foreclaws. Wings are deliberately omitted so the body and movable wings can be modeled separately. Status at submission: <s>The concept has been submitted to Meshy, with the 3D result still pending. This is not a Blender render or an installed Griffin replacement.</s> Meshy completed the body later that day for 30 credits. The concept and actual mesh are shown separately below; the installed Griffin is unchanged.
 
-![Griffin body concept from built-in image_gen; wings deliberately omitted for separate modeling. Meshy geometry, rigging and animation still follow](/images/castle-top-tier-01/griffin-realism04-body-concept.jpg)
+![Griffin body concept from built-in image_gen; wings deliberately omitted for separate modeling](/images/castle-top-tier-01/griffin-realism04-body-concept.jpg)
+
+Front, side and rear Blender views have been reviewed. The tall tufts and thick torso are reduced, while the beak, scaled claws, lion legs and tail remain. This is still an unrigged body without wings; claw articulation, joint deformation and the assembled silhouette have not passed motion review.
+
+![1400 × 1600 Blender still of the new Meshy Griffin body, without a rig or attached wings; neither concept art nor a game capture](/images/castle-top-tier-01/griffin-realism04-body-mesh.png)
 
 ## Historical record: 0.17.1–0.27.8
 
