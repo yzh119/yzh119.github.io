@@ -3,21 +3,33 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All fourteen Castle units have local drafts. The Cavalier and Champion now carry upright lances in mod 0.27.8, with an original/before/installed comparison; likeness still needs work."
+homeSummary: "All fourteen Castle units have local drafts. Version 0.27.9 adds gold Royal Griffin talons; upright cavalry lances are installed. The Pikeman returns to concept design, with the rejected mesh shown alongside it."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.8**, with the previously rendered upright-lance changes for the Cavalier and Champion now packaged and installed.
+All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.9**: it retains the upright Cavalier and Champion lances from 0.27.8 and adds gold forelegs and talons to the Royal Griffin.
 
 Both carry the lance upward while standing and moving, lower it during an attack, and raise it again afterward. Each retains the original 13 groups and 81 frames. Body, shadow and selection layers at 1× and 2× total 342 PNGs per unit. Both packages passed format validation with zero errors and warnings, and installation preserved backups and rollback scripts. This update checked the exported frames and installed files; it has no new battle screenshot. The battle image in the historical record below shows an earlier version.
 
 ![Original H3, version 0.27.6, and installed 0.27.8, from left to right; Cavalier above, Champion below. The new sprites are Blender renders; original pixels are enlarged with nearest-neighbour sampling](/images/castle-top-tier-01/cavalry-upright3274.png)
 
-The Royal Griffin's gold talons are still awaiting installation, and its proportions need work. The latest Pikeman mesh needs review; the Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Further model replacements will use image_gen concepts grounded in the original art, followed by Meshy geometry and rigging. The FLUX and direct-Meshy experiments below remain part of the project history.
+Six missing Royal Griffin turn frames are now rendered, bringing the gold talons to all 13 groups and 85 frames. The first colour-threshold pass missed highlights and shaded areas, leaving brown and yellow patches. The replacement mask comes from paired renders of the same pose before and after talon colouring, preserving the silver feathers and brown lion body. The body silhouettes retain their registration. The package passed validation with zero errors or warnings and is installed with rollback files; 0.27.9 has not had a new battle check. The body is still too broad and the folded wings need work.
+
+![Original, previous draft, rejected colour mask, and installed 0.27.9; idle above and a turn below. New images are Blender game frames, not a new battle capture](/images/castle-top-tier-01/royal-gold-talons05.png)
+
+The latest multi-image Meshy Pikeman also failed visual review. It still has a helmet, a mostly white chest and a blocky heraldic motif inherited from the low-resolution references. This candidate was not installed.
+
+![Rejected Pikeman candidate: a high-resolution static Blender render of the Meshy model, with the incorrect helmet and white chest](/images/castle-top-tier-01/pikeman-rejected-multi2.png)
+
+Codex's built-in image_gen produced a new concept from original idle and turn references: bare head, navy clothing, empty hands and an A-pose. It has been submitted to Meshy; model review, rigging and motion transfer are still ahead. The image below is concept art, not a delivered 3D model. The Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Earlier FLUX and direct-Meshy experiments are retained below.
+
+![New image_gen Pikeman concept, not installed in the game. The pike will be assembled as a separate prop](/images/castle-top-tier-01/pikeman-concept03.jpg)
 
 Codex handled this handover, packaging and installation. The upright-lance scenes and exports were already available at handover.
 
-## Historical record: 0.17.1–0.27.6
+## Historical record: 0.17.1–0.27.8
+
+Status recorded on 26 September at 0.27.8: <s>The Royal Griffin's gold talons are still awaiting installation, and its proportions need work. The latest Pikeman mesh needs review; the Marksman's melee sword direction and the Halberdier's open helmet remain unresolved.</s> Version 0.27.9 installs the talons; the Pikeman candidate has been reviewed and rejected. The other issues remain open.
 
 The earlier text and images are retained below. References to the “new draft” or “current version” describe that particular iteration; superseded conclusions are struck through. The opening paragraphs describe the installed state today.
 
