@@ -3,11 +3,13 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Pikeman and Halberdier now use more realistic models, restored materials and repaired grips. Both full animation sets are installed in 0.27.14, with a battle capture; other Castle units still need individual revisions."
+homeSummary: "More realistic Pikeman, Halberdier and Archer models are installed in 0.27.15. The Archer has all 96 frames, repaired crossbow clearance and separate waist equipment, with a new battle capture."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.14** includes the revised Pikeman's 76 frames and Halberdier's 63 frames, with restrained clothing shapes, restored PBR materials and retained grip and release geometry. Both have entered a test battle. Their revised style awaits the user's review; the remaining creatures still need individual attention.
+All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.15** includes the revised Pikeman's 76 frames, Halberdier's 63 frames and Archer's 96 frames. The Archer now has separate waist equipment and repaired crossbow clearance in all three shooting directions and its display action. All three have entered a test battle. Their revised style awaits the user's review; the remaining creatures still need individual attention.
+
+![Local VCMI battle running 0.27.15. The new Archer is second from the top on the right, below the Pikeman; the revised Halberdier is at the upper left](/images/castle-top-tier-01/castle-battle02715.png)
 
 ![Local VCMI battle running 0.27.14, with the new Halberdier at the upper left and Pikeman at the upper right](/images/castle-top-tier-01/castle-battle02714.png)
 
@@ -115,7 +117,16 @@ The recovery pose in shooting frame 7 put the crossbow stock through the new che
 
 ![Recovery frame 7: initial transfer, single-key trial and continuous repair, using the same camera and crop. The middle trial fails between frames, which this still alone cannot show](/images/castle-top-tier-01/archer-realism03-recovery.jpg)
 
-The other actions remain unexported. Melee equipment clearance and the original waist equipment also need review. This version has not been installed.
+Status during the 22-frame trial: <s>The other actions remain unexported. Melee equipment clearance and the original waist equipment also need review. This version has not been installed.</s> All 16 groups and 96 frames are now exported. Upward and downward shooting had the same recovery collision and received the continuous repair. An 8 cm offset in the display action exceeded arm reach; reducing it to 6 cm passed the sampled check. A separate slender leather attachment at the right hip was modelled in Blender and follows the pelvis.
+
+Across all 96 exported frames, PBR maps are retained, with no crossbow/dagger surface overlaps against the body and no waist-case overlaps with weapons or floor penetration by the case. These checks exclude finger contact, body self-intersection and complete subframe motion. Samples from every action were visually inspected. Format validation reports zero errors and warnings, and all 630 installed files match their hashes. Version 0.27.15 retains backups and rollback instructions. The battle capture at the beginning confirms loading and display; complete in-game playback of every action has not been recorded.
+
+<details>
+<summary>Archer samples from every action</summary>
+
+![All 16 Archer actions in 0.27.15, rendered through the game camera in Blender, including waist equipment and repaired crossbow recovery](/images/castle-top-tier-01/archer-realism03-actions.jpg)
+
+</details>
 
 ## Historical record: 0.17.1–0.27.8
 
