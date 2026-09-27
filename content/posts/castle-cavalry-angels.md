@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Revised Marksman, Swordsman, Angel and Archangel bodies are installed in 0.27.19. Griffin rig and wing trials now include a binding comparison and Blender still. A mistaken original reference is corrected; ear tufts, wing folding and full animation remain unfinished."
+homeSummary: "Revised Marksman, Swordsman, Angel and Archangel bodies are installed in 0.27.19. Griffin trials now include eight idle poses and attached ear tufts, with reference corrections and failed meshes documented. Surface quality and full animation remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
