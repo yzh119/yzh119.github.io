@@ -3,15 +3,22 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Angel: 94 frames installed. The Archangel has new thin-feather wings and 65 rechecked non-death poses, with concept art and a Blender still. Main collapse intersections are repaired; the folded silhouette still needs work. Not installed."
+homeSummary: "Revised Marksman, Swordsman, Angel and Archangel bodies are installed in 0.27.19. The Archangel death fold still needs refinement. Griffin revisions begin with a reference comparison and body concept."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions proceeding unit by unit. Local mod **0.27.18** installs the revised Angel after the Marksman and Swordsman, with a blue-edged long robe and all 16 native groups, 94 frames. The Archangel has new grips, a corrected griffin shield and replacement wings, with 65 non-death poses rechecked; its collapse now clears the main surface checks but needs a tighter folded silhouette before installation, followed by Griffin review. The approved Crusader is retained. The game stayed on a black startup screen during this check, so there is no new Angel battle capture yet.
+All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.19** installs the revised Archangel after the Marksman, Swordsman and Angel: its new body, griffin shield and thin-feather wings cover all 16 native groups and 91 frames. The final death fold remains too wide, so this is a local test version with further refinement pending. Griffin review and revision have begun; the approved Crusader is retained. This GUI capture was black, and the Mac was confirmed locked, so battle display of the new assets remains unverified.
 
 ![Complete 0.27.18 Angel assembly, a 1400 × 1600 Blender still with revised body, wing roots and blade; this is not a battle capture](/images/castle-top-tier-01/angel-realism03-complete.png)
 
-## Version record: 0.27.8–0.27.17
+## Version record: 0.27.8–0.27.18
+
+<details>
+<summary>Status when the Angel was installed in 0.27.18</summary>
+
+<s>All fourteen Castle units have local drafts, with realism revisions proceeding unit by unit. Local mod **0.27.18** installs the revised Angel after the Marksman and Swordsman, with a blue-edged long robe and all 16 native groups, 94 frames. The Archangel has new grips, a corrected griffin shield and replacement wings, with 65 non-death poses rechecked; its collapse now clears the main surface checks but needs a tighter folded silhouette before installation, followed by Griffin review. The approved Crusader is retained. The game stayed on a black startup screen during this check, so there is no new Angel battle capture yet.</s>
+
+</details>
 
 <details>
 <summary>Earlier introduction and battle captures through 0.27.17</summary>
@@ -298,7 +305,23 @@ A later repair adjusts the final two wing-root poses and gives frame seven a sep
 
 The wide mesh also exposed a preview-tool problem: a fixed camera cropped the wing tips. The tool now fits one shared frame across eight viewing angles, checked with this mesh. The [public tool change](https://github.com/yzh119/h3-art-pipeline/commit/746dab3) is available.
 
-The local mod remains **0.27.18** and still uses the previous Archangel. Installation waits for the complete action and appearance review. Griffins follow afterward.
+Plan recorded before installation on 27 September: <s>The local mod remains **0.27.18** and still uses the previous Archangel. Installation waits for the complete action and appearance review. Griffins follow afterward.</s> The complete action set was subsequently installed as a local test version so the new body can be viewed in game. Final wing enclosure remains unfinished.
+
+## Archangel test version 0.27.19 and Griffin revision
+
+The collapse now begins with lowered wings that open as the body falls, closer to the original opening frames. Several tighter final folds were also tried, but introduced wing intersections with the body, shield and opposite wing. Those trials were rejected. Version 0.27.19 retains the wider fold that clears the tested main surfaces; final enclosure and the later wing-opening timing still need refinement.
+
+![Installed 0.27.19 Archangel collapse frames, rendered in Blender. The opening has changed, while the final fold remains wide; animation fidelity is not complete](/images/castle-top-tier-01/archangel-realism03-death-installed19.jpg)
+
+The full set contains 73 independent rendered poses and melee-action aliases, matching all 91 native frames. Tested main surface pairs clear at integer poses, render bounds are intact, and format validation reports zero errors or warnings. After installation, 396 file hashes were independently verified, with backup and rollback retained. VCMI source and the approved Crusader were unchanged. The GUI capture was black; a subsequent system-state check confirmed that the Mac was locked. This does not establish an asset-loading failure or a successful battle test.
+
+The current Griffins still differ visibly from the reference. The ordinary Griffin has overly tall head tufts and a thick torso; the Royal Griffin has conspicuous white feathers and gold talons, with body proportions also needing work. The comparison below scales each subject to its display area, for shape review only.
+
+![Original ordinary Griffin, installed ordinary Griffin, and installed Royal Griffin; independently fitted for comparison, not equal-scale game captures](/images/castle-top-tier-01/griffin-realism04-installed-review.jpg)
+
+Built-in image_gen supplied a revised body concept with a swept-back eagle head, buff-gold feathers, a leaner lion body and raised foreclaws. Wings are deliberately omitted so the body and movable wings can be modeled separately. The concept has been submitted to Meshy, with the 3D result still pending. This is not a Blender render or an installed Griffin replacement.
+
+![Griffin body concept from built-in image_gen; wings deliberately omitted for separate modeling. Meshy geometry, rigging and animation still follow](/images/castle-top-tier-01/griffin-realism04-body-concept.jpg)
 
 ## Historical record: 0.17.1–0.27.8
 
