@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Both Griffins now use broad layered ear feathers across 13 action scenes and 85 frames each. Chest deformation, death and game export remain unfinished; new Blender close-ups show the replacement."
+homeSummary: "Both Griffins have revised nine-frame death renders and fixes for stale chest and claw weights. All 170 poses were checked again; late-death deformation and game export remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -436,7 +436,32 @@ The ears are present in both Griffins' **13 action scenes and 85 frames each**. 
 
 ![Royal Griffin with the same layered ear geometry, a 1200 × 1400 Blender still; not installed](/images/castle-top-tier-01/royal-griffin-layered-ears.png)
 
-Both remain offline drafts. Mouth corners, chest deformation, death and some wing poses still need work, followed by shared game framing, export and installation. The installed Griffins are unchanged.
+Status before the death and weight corrections on 27 September: <s>Both remain offline drafts. Mouth corners, chest deformation, death and some wing poses still need work, followed by shared game framing, export and installation. The installed Griffins are unchanged.</s>
+
+### Death poses and weight corrections
+
+The final pose still looked suspended: foreclaws tucked beneath the body, hind legs raised and wings spread sideways. Extending the forelegs and lowering the hindquarters exposed another problem. Ground alignment used the tail tip as the lowest point, lifting the whole body back up whenever the torso was lowered. The tail had to be laid down before reviewing contact across the body.
+
+<details>
+<summary>The floating intermediate pose exposed by a ground render</summary>
+
+![Rejected intermediate pose with actual Blender ground and shadows; one grounded vertex does not establish that the torso has settled](/images/castle-top-tier-01/griffin-death-ground-failed.png)
+
+</details>
+
+Chest feathers also carried influence from both forearms. During correction, a code bug emerged: saving `list(vertex.groups)` before removing memberships leaves stale Blender data references as the collection changes. Some old weights survived and were added to the replacement weights, producing totals as high as **1.81**. Copying numeric group indices before removal fixed that operation. The earlier claw repair had the same bug, so its 4,136 affected vertices were recalculated from the scene preceding that repair.
+
+The [weight replacement helper and Blender regression test](https://github.com/yzh119/h3-art-pipeline/commit/68df57d) are public. The test checks that old memberships disappear and neighboring vertices remain unchanged; it does not establish anatomical fidelity.
+
+Both variants' **13 groups and 85 frames each** were reopened. Body vertex weights now sum to one, with mesh geometry unchanged. The revised chest weights reduce the worst local stretch in the flight trial, although other regions and the later death poses still need work.
+
+The second half of the death sequence now repositions the forelegs, hind legs and tail, with the wings laid flatter over the back. All nine frames were rendered for both Griffins. The stills below frame the final pose separately at high resolution; the animation uses one fixed camera throughout each sequence.
+
+![Ordinary Griffin final death pose, a 1400 × 900 Blender still; local deformation remains unfinished](/images/castle-top-tier-01/griffin-death94-ordinary.png)
+
+![Royal Griffin with the same death animation, a 1400 × 900 Blender still; not installed](/images/castle-top-tier-01/griffin-death94-royal.png)
+
+These remain offline drafts. The forearm-to-chest transition still stretches in the later death poses, and mouth corners and some feather joins need refinement. Shared game framing, export and installation follow those corrections. The installed Griffins are unchanged.
 
 
 <details>
