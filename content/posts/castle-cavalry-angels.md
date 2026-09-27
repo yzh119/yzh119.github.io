@@ -3,11 +3,18 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local test version 0.27.21 updates the Archangel collapse with folded legs, closer wings and downward tips. The final two transitions were checked at 257 samples; shape details and battle display still need review. A Griffin claw revision remains offline."
+homeSummary: "Local test version 0.27.22 installs revised claws and poses for both Griffins across 170 frames, retaining the Archangel collapse update. Asset checks pass; in-game display remains unverified."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.21** includes the revised Griffins and an updated Archangel collapse with folded legs, closer wings and downward feather tips. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review. The latest Griffin claw revision is described below and remains offline while its complete animation is exported.
+All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.22** installs larger, more visible claws and revised poses for both Griffins, retaining the Archangel collapse from 0.27.21. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review.
+
+<details>
+<summary>Status recorded at version 0.27.21</summary>
+
+<s>All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.21** includes the revised Griffins and an updated Archangel collapse with folded legs, closer wings and downward feather tips. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review. The latest Griffin claw revision is described below and remains offline while its complete animation is exported.</s>
+
+</details>
 
 <details>
 <summary>Status recorded at version 0.27.20</summary>
@@ -534,7 +541,15 @@ The size-only trial was rejected: it increased claw/chest intersections and intr
 
 All 170 exported poses across both variants passed the claw/torso surface-intersection and claw-ground checks used here. Intermediate sampling then found brief ground penetration in downward attacks and collapse, reaching roughly four centimetres. After adding transition keys, those two actions were checked at 32 intervals per frame, totaling 1,028 sampled poses, with neither issue detected. These checks cover the claws, selected torso surfaces and ground; they do not certify all body parts, feathers or motion.
 
-The claw revision remains offline while complete action frames and shadows are rendered with the shared game camera. The installed mod remains **0.27.21**. Full export, installation checks and in-game review are still pending.
+Recorded before installation on September 27: <s>The claw revision remains offline while complete action frames and shadows are rendered with the shared game camera. The installed mod remains **0.27.21**. Full export, installation checks and in-game review are still pending.</s>
+
+### Claw revision installed in 0.27.22
+
+All 170 frames and their shadows are exported using the shared game camera and fixed ground projection. Local **0.27.22** replaces 744 images across the 1× and 2× bodies, shadows and selection outlines, retaining the original 13 active groups and 85 frames per variant. The offline revision shown above is now installed.
+
+![Both Griffins: original, 0.27.21 and revised claws, with identical framing and scale. The right column was labeled offline when this comparison was made; those assets are now installed in 0.27.22. These are not in-game screenshots](/images/castle-top-tier-01/griffin-claw133-both.jpg)
+
+All 748 staged asset and configuration hashes match the installation, and installed format validation reports zero errors or warnings. Actual changes are 744 images and the mod metadata; another 6,399 files remain unchanged, including the Archangel and Crusader. Backup and rollback validation passed without applying a rollback. The desktop remains locked, so this version has not been visually verified in-game. Claw shape, feather joins and differences from the original motion remain open to refinement.
 
 <details>
 <summary>Incorrect reference and unrigged-body record from 27 September</summary>
