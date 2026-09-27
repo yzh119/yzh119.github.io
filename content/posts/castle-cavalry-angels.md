@@ -3,18 +3,22 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Swordsman is installed in 0.27.17. Angel robe and grip repairs pass local checks across 15 poses; flight wing intersections remain. The revised Archangel body is modelled."
+homeSummary: "The revised Angel is installed in 0.27.18 with all 94 frames, a complete Blender portrait and motion sheet. Battle display remains unverified. Archangel attachments and actions are next."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, but the Angel, Archangel and other models still need substantial revision. Local mod **0.27.17** installs the realistic Swordsman after the Marksman, with all 13 actions and 76 frames. The approved Crusader is retained. The Angel and Archangel are next, followed by a review of the Griffins.
+All fourteen Castle units have local drafts, with realism revisions proceeding unit by unit. Local mod **0.27.18** installs the revised Angel after the Marksman and Swordsman, with a blue-edged long robe and all 16 native groups, 94 frames. The new Archangel body is modelled; its attachments and actions remain pending, followed by Griffin review. The approved Crusader is retained. The game stayed on a black startup screen during this check, so there is no new Angel battle capture yet.
 
-![Local VCMI battle running 0.27.17: revised Swordsman fourth from the top on the right, below the Griffin. This bounded run confirms loading and display, not every action in full](/images/castle-top-tier-01/castle-battle02717.png)
+![Complete 0.27.18 Angel assembly, a 1400 × 1600 Blender still with revised body, wing roots and blade; this is not a battle capture](/images/castle-top-tier-01/angel-realism03-complete.png)
 
-## Version record: 0.27.8–0.27.16
+## Version record: 0.27.8–0.27.17
 
 <details>
-<summary>Earlier introduction and battle captures through 0.27.16</summary>
+<summary>Earlier introduction and battle captures through 0.27.17</summary>
+
+<s>All fourteen Castle units have local drafts, but the Angel, Archangel and other models still need substantial revision. Local mod **0.27.17** installs the realistic Swordsman after the Marksman, with all 13 actions and 76 frames. The approved Crusader is retained. The Angel and Archangel are next, followed by a review of the Griffins.</s>
+
+![Local VCMI battle running 0.27.17: revised Swordsman fourth from the top on the right, below the Griffin. This bounded run confirms loading and display, not every action in full](/images/castle-top-tier-01/castle-battle02717.png)
 
 <s>All fourteen Castle units have local drafts, and several still need substantial work. Local mod **0.27.16** adds the revised Marksman, matching the more realistic Pikeman, Halberdier and Archer, with all 16 actions and 97 frames installed. The new Marksman stands second from the top on the left in the battle below. The user liked the Archer revision. Next comes the Swordsman, while retaining the approved Crusader, then the Angel and Archangel, followed by a review of the Griffins.</s>
 
@@ -209,9 +213,30 @@ Two local repairs followed the initial 15-frame probe. A shared three-part robe 
 
 ![Static Blender close-up of the Angel sword grip and wrist transition; this remains an action-adaptation candidate](/images/castle-top-tier-01/angel-realism03-grip-repair.png)
 
-Reopening all eight idle and seven flight poses shows no separation between the wrist bridge and forearm, and no sword/body surface intersections. This is a local check of those 15 exported poses, not certification of every finger contact or continuous interpolation. Adjusting the idle wing-root angle also removes the earlier arm intersections. Flight wings still intersect the waist and back: modest root translations did not clear every frame, and shortening the inner trailing feathers only reduced some contacts. That wing reshaping has not been selected for delivery. Remaining Angel actions and the Archangel's attachments and animations still need adaptation.
+27 September, before the full motion adaptation:
 
-Neither revised Angel body is installed. The local game remains at the Swordsman update, **0.27.17**. The Crusader is retained, and Griffin review follows these two units.
+<s>Reopening all eight idle and seven flight poses shows no separation between the wrist bridge and forearm, and no sword/body surface intersections. This is a local check of those 15 exported poses, not certification of every finger contact or continuous interpolation. Adjusting the idle wing-root angle also removes the earlier arm intersections. Flight wings still intersect the waist and back: modest root translations did not clear every frame, and shortening the inner trailing feathers only reduced some contacts. That wing reshaping has not been selected for delivery. Remaining Angel actions and the Archangel's attachments and animations still need adaptation.</s>
+
+<s>Neither revised Angel body is installed. The local game remains at the Swordsman update, **0.27.17**. The Crusader is retained, and Griffin review follows these two units.</s>
+
+The flight problem was traced to wing geometry extending roughly 35 cm inward beyond the root joint. Translating the roots, twisting the whole wings and shortening inner feathers had not cleared the body consistently. Astra trimmed and capped the surplus root geometry, retained the outer feathers and textures, then made small pose adjustments for flight, turns and hit reactions. Wrist angles in the three attack windups were adjusted to clear the raised wings.
+
+The first full death sequence kept the robe straight, lifting the kneeling body off its intended position. Folding the three robe controls let the body settle lower; the final two poses also needed wing-root clearance adjustments. Every action uses the same 3D body and rig.
+
+A high-resolution still exposed another inherited defect: the sword tip carried a second handle-like structure. That candidate was briefly installed locally and then rolled back. The final version keeps the Meshy hilt and guard, with a single-point blade repaired by Astra in Blender, followed by a fresh export of every action.
+
+<details>
+<summary>Retained failed sword render</summary>
+
+![The high-resolution assembly render exposed the extra handle-like geometry at the sword tip; this rejected version is retained as a failure record](/images/castle-top-tier-01/angel-realism03-rejected-sword.png)
+
+</details>
+
+![Final Angel Blender review sheet: 13 independent groups, 76 frames. Three shooting groups reuse the corresponding melee actions, giving 94 packaged frames](/images/castle-top-tier-01/angel-realism03-actions.jpg)
+
+Each final scene was reopened to check all 76 independent exported poses: no wrist-seam separation or surface intersections between the body, sword and either wing were detected. The original body normal, metallic and roughness maps remain linked. These checks cover the integer frames used by VCMI; they do not certify every finger contact, self-intersection or continuous 3D interpolation. The 16-group, 94-frame package passes format validation with zero errors and warnings. All 414 installed files match their recorded hashes, with a backup and rollback script retained.
+
+The local mod is now **0.27.18**, updating only the Angel. The bounded runtime check stayed on a black screen after renderer startup and was ended by the script; it does not demonstrate entry into battle. Older captures have not been presented as evidence for this version. The game still uses the previous Archangel assets while its new body's attachments and actions are adapted.
 
 ## Historical record: 0.17.1–0.27.8
 
