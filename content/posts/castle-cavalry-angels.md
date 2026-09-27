@@ -128,6 +128,18 @@ Across all 96 exported frames, PBR maps are retained, with no crossbow/dagger su
 
 </details>
 
+## Matching the Marksman's style
+
+The user asked for the Marksman to match the new Archer's realism. Built-in image_gen used the original equipment and the Archer reference to retain a pointed helmet, shoulder-covering mail and reinforced bracers while matching the human proportions, blue fabric and leather boots. Meshy completed modelling and rigging for 30 and 5 credits. Material restoration verified matching UVs across 74,003 triangles.
+
+![Marksman modelling reference from built-in image_gen, matching the new Archer's visual style](/images/castle-top-tier-01/marksman-realism03-concept.jpg)
+
+![Static Blender render of the actual Meshy model. Stray pale motifs on the rear skirt are separately tinted blue with a local material mask; source textures remain intact](/images/castle-top-tier-01/marksman-realism03-model.png)
+
+The melee scenes retain both an older rig and the more recently repaired body rig. Motion transfer now explicitly selects the repaired one so those pose changes survive. The first 28 frames cover idle, forward shooting, forward melee and downward melee; weapon and hand-attachment transforms match their repaired sources. The replacement body introduces crossbow/body intersections, and two melee recovery frames also intersect the blade. This version is not installed; motion adaptation remains necessary alongside the style change.
+
+![Samples from the first 28 Marksman frames, rendered in Blender. Melee intersections remain; this sheet records the pre-repair state](/images/castle-top-tier-01/marksman-realism03-probes.jpg)
+
 ## Historical record: 0.17.1–0.27.8
 
 Status before the new Pikeman installation on 26 September: <s>Idle motion has been transferred, but the two-handed grip still needs adjustment; the other actions are being exported for inspection. The new Pikeman is not installed.</s> Version 0.27.10 completes this grip repair and installation; a new battle check is still pending.
