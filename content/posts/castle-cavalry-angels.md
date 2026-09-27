@@ -57,9 +57,17 @@ After seeing the battle capture, the user found the Pikeman and other drafts too
 
 The material audit also found a pipeline error. The original Pikeman mesh GLB has metallic 0, roughness 0.8 and no emission. Meshy's rigged GLB adds emissive colour and strength 1, while omitting metallic, which imports into Blender as the default 1. The modelling preview had corrected these settings, but motion transfer did not restore the original material. The inspected Marksman, Halberdier and Archer action scenes have similar settings. A controlled render with metallic and emission disabled still looks stylized, so geometry, textures and lighting need attention too.
 
-The new image_gen concept reduces shoulder volume, narrows the pale trim and uses fitted trousers. It has been submitted to Meshy with [PBR maps enabled](https://docs.meshy.ai/en/api/image-to-3d) for roughness, normal and other material information. The next checks must cover material preservation through rigging and appearance at game size. This concept has not replaced the installed model.
+The new image_gen concept reduces shoulder volume, narrows the pale trim and uses fitted trousers. Meshy completed the mesh and rig for 30 + 5 credits, with [PBR maps enabled](https://docs.meshy.ai/en/api/image-to-3d). The material loss reproduced: the source had normal and metallic/roughness maps, while the rigged result omitted them and added emission.
 
 ![New photographic-direction Pikeman concept from image_gen, with restrained clothing shapes and trim. This is concept art, not a Blender render or installed asset](/images/castle-top-tier-01/pikeman-realism04.jpg)
+
+The restoration tool first verifies matching UVs across all 74,835 triangles, then restores the source material while retaining the rig and animation. Its exported GLB keeps the normal and metallic/roughness maps without the added emission. The tool and usage notes are available in the [public code repository](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/restore_rig_materials.py).
+
+![High-resolution static Blender render of the new candidate in an empty-handed A-pose, shown separately from its concept](/images/castle-top-tier-01/pikeman-realism04-model.png)
+
+![Original, installed draft rejected as cartoonish, and new candidate with restored material. New and old drafts use the same game camera and registered crop; the idle frames are enlarged for inspection](/images/castle-top-tier-01/pikeman-realism04-game-scale.png)
+
+Idle motion and the separate gripping hands have been transferred, and one frame rendered at game resolution. Costume volume and bright decoration are reduced, but the full animation set and battle checks remain unfinished. This candidate has not replaced the old model in 0.27.12, and its style has not been signed off.
 
 ## Historical record: 0.17.1–0.27.8
 

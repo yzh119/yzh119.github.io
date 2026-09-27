@@ -57,9 +57,17 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 
 又查到一个材质问题。枪兵建模 GLB 的金属度是 0、粗糙度是 0.8，没有自发光；Meshy 绑定返回的 GLB 却加上了自发光贴图和强度 1，并省略金属度，导入 Blender 后取默认值 1。模型预览曾修正过材质，动作移植时没有恢复原材质。检查的神射手、长戟兵、弓箭手动作场景也有同类设置。只关闭金属与自发光的对照仍然偏卡通，因此造型、纹理和灯光也要一起修，不能把全部问题归因于一个参数。
 
-新的 image_gen 概念图缩小肩部衣料体积、收窄浅色滚边，换成贴近人体的裤型。已交给 Meshy 生成新候选，并显式启用 [PBR 贴图](https://docs.meshy.ai/en/api/image-to-3d)，补充粗糙度、法线等材质信息。之后还要检查绑定是否保留贴图、在游戏尺寸下是否仍显得写实；这张图尚未替换游戏模型。
+新的 image_gen 概念图缩小肩部衣料体积、收窄浅色滚边，换成贴近人体的裤型。Meshy 新候选已完成建模和绑定，消耗 30 + 5 credits，并显式启用 [PBR 贴图](https://docs.meshy.ai/en/api/image-to-3d)。这次又复现了绑定时材质丢失：原模型有法线和金属度／粗糙度贴图，绑定产物丢掉了它们，并加上自发光。
 
 ![写实方向的新枪兵概念图，image_gen 生成。服装细节和轮廓已收敛；不是 Blender 渲染，也不是已安装素材](/images/castle-top-tier-01/pikeman-realism04.jpg)
+
+修复工具先核对绑定前后全部 74,835 个三角形的 UV 一致，再恢复原模型材质，保留骨骼和动作。重新导出的 GLB 保留了法线、金属度／粗糙度贴图，没有新增自发光。工具代码和使用说明已放到 [公开工具仓库](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/restore_rig_materials.py)。
+
+![新候选模型的 Blender 高清静态渲染，空手 A 字站姿；与概念图分开展示](/images/castle-top-tier-01/pikeman-realism04-model.png)
+
+![原版、被指出太卡通的已安装稿、恢复原材质的新候选。新旧稿使用相同游戏相机与画面坐标，待机帧放大供检查](/images/castle-top-tier-01/pikeman-realism04-game-scale.png)
+
+新候选已移植待机和独立握枪双手，并渲染了一帧游戏尺寸对照。服装体积和亮色装饰收敛了，但还没有完成整套动作与实战检查，未替换 0.27.12 里的旧模型，也没有视为风格验收通过。
 
 ## 历史记录：0.17.1–0.27.8
 
