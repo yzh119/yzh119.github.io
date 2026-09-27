@@ -111,6 +111,10 @@ Source scenes for all 16 action groups and 96 frames have been located and check
 
 ![Three Archer motion probes rendered through the game camera in Blender; these are not battle captures](/images/castle-top-tier-01/archer-realism03-probes.jpg)
 
+The recovery pose in shooting frame 7 put the crossbow stock through the new chest. Moving the weapon and both hands forward by 4 cm cleared that frame, but intermediate poses still collided and wrist mismatch reached almost 6 cm. A second attempt applies a smooth forward offset between frames 6 and 8, peaking at 8 cm, and refits both arms at denser intervals. After reopening the scene, 113 samples showed no crossbow/body surface overlaps. Intermediate wrist mismatch remains about 7 mm. This check excludes finger contact, containment and the other clips.
+
+![Recovery frame 7: initial transfer, single-key trial and continuous repair, using the same camera and crop. The middle trial fails between frames, which this still alone cannot show](/images/castle-top-tier-01/archer-realism03-recovery.jpg)
+
 The other actions remain unexported. Melee equipment clearance and the original waist equipment also need review. This version has not been installed.
 
 ## Historical record: 0.17.1–0.27.8
