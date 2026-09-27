@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Both Griffins now share game framing calibrated to the original standing height and foot position. Ten action probes are rendered; the full sequence is exporting and has not replaced the installed versions."
+homeSummary: "Both Griffins have all 170 frames installed in local test version 0.27.20, with shared framing and lighting, shadows and selection outlines. In-game visual verification and local shape refinements remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -471,7 +471,19 @@ The modelling previews had been framed separately for each action, with differen
 
 ![Ordinary and Royal Griffin camera checks: death, flight, downward attack, forward attack and standing; every cell uses the same crop and scale, from offline Blender renders](/images/castle-top-tier-01/griffin-fixed-camera114.jpg)
 
-All ten probes fit inside the canvas. The complete 170-frame sequence is being exported with this registration, alongside shadows projected from each posed mesh onto a fixed ground plane. Full export, shadow review, packaging and in-game verification remain pending, as do checks of local feather joins and mouth corners. The installed Griffins are unchanged.
+27 September, before full export: <s>All ten probes fit inside the canvas. The complete 170-frame sequence is being exported with this registration, alongside shadows projected from each posed mesh onto a fixed ground plane. Full export, shadow review, packaging and in-game verification remain pending, as do checks of local feather joins and mouth corners. The installed Griffins are unchanged.</s>
+
+### Local test version 0.27.20
+
+Reviewing the full action set exposed inconsistent lighting. Idle, mouse-over and both turn groups retained a darker environment, making the creature brighten abruptly when attacking. Both variants now share the same environment lighting. The 44 affected frames were rendered again; reopened scenes have identical geometry and bone motion, and exported alpha channels match pixel for pixel.
+
+![Old dark idle, corrected idle, and attack opening frame; Blender renders with the same camera](/images/castle-top-tier-01/griffin-lighting120.jpg)
+
+All **170 body frames and their shadows** are exported. Each shadow projects the actual posed mesh onto fixed ground and receives the same opacity and blur settings. The 1× and 2× bodies, shadows and selection outlines total 744 images. Native active groups, frame counts and file-format checks pass; validation after installation reports zero errors and zero warnings.
+
+The local Castle mod is now **0.27.20**. All 748 installed asset and configuration files were hash-checked, and 6,395 untouched files were verified unchanged. Backups and a rollback script are retained. The approved Crusader is unchanged. The desktop is locked, so visual verification inside the game remains pending.
+
+This is still a test build. The foreclaws are small, and mouth corners, feather joins and late-death deformation need refinement. Hit and defence amplitudes also differ from the original. The Archangel final death wing fold remains unfinished as well.
 
 
 <details>
