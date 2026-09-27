@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Swordsman is installed in 0.27.17. New Angel and Archangel bodies are modelled and rigged, with Blender stills; Angel robe deformation and grip remain unresolved, and neither is installed."
+homeSummary: "The Swordsman is installed in 0.27.17. Angel robe and grip repairs pass local checks across 15 poses; flight wing intersections remain. The revised Archangel body is modelled."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -199,9 +199,17 @@ Meshy has generated and rigged both bodies, at 30 + 5 credits each. Astra inspec
 
 ![Actual high-resolution Blender still of the revised Archangel body, with dark steel, gold borders and white skirt panels](/images/castle-top-tier-01/archangel-realism03-model.png)
 
-The Angel's first motion probe covers eight idle and seven flight frames, using the existing wings and sword. The idle silhouette is closer to the original, but automatic skinning pulls the flying robe into two trouser-like legs. The wings also intersect the new body, and the sword grip remains open. Robe controls, hand grips and wing attachment need further work; the Archangel's tall shield and complete motion set are also pending. The original layouts have been checked: 16 groups and 94 frames for the Angel, 16 groups and 91 frames for the Archangel.
+Initial transfer recorded on 27 September: <s>The Angel's first motion probe covers eight idle and seven flight frames, using the existing wings and sword. The idle silhouette is closer to the original, but automatic skinning pulls the flying robe into two trouser-like legs. The wings also intersect the new body, and the sword grip remains open. Robe controls, hand grips and wing attachment need further work; the Archangel's tall shield and complete motion set are also pending. The original layouts have been checked: 16 groups and 94 frames for the Angel, 16 groups and 91 frames for the Archangel.</s>
 
 ![The Angel's first 15 Blender motion probes. Flight robe deformation, sword grip and wing intersections remain unresolved; this sheet records the failed transfer](/images/castle-top-tier-01/angel-realism03-probes.jpg)
+
+Two local repairs followed the initial 15-frame probe. A shared three-part robe control replaces independent leg influence on the lower skirt, restoring a single trailing cloth silhouette in flight. An existing articulated Meshy hand was fitted to the sword, with a skinned wrist transition. Raising the hand-removal weight threshold left skin fragments, and moving the replacement hand did not close the seam; those attempts are retained, while the current candidate uses a separate wrist bridge.
+
+![Angel flight robe before and after repair: automatic leg weights above, shared three-part robe controls below, rendered in Blender](/images/castle-top-tier-01/angel-realism03-cloth-repair.jpg)
+
+![Static Blender close-up of the Angel sword grip and wrist transition; this remains an action-adaptation candidate](/images/castle-top-tier-01/angel-realism03-grip-repair.png)
+
+Reopening all eight idle and seven flight poses shows no separation between the wrist bridge and forearm, and no sword/body surface intersections. This is a local check of those 15 exported poses, not certification of every finger contact or continuous interpolation. Adjusting the idle wing-root angle also removes the earlier arm intersections. Flight wings still intersect the waist and back: modest root translations did not clear every frame, and shortening the inner trailing feathers only reduced some contacts. That wing reshaping has not been selected for delivery. Remaining Angel actions and the Archangel's attachments and animations still need adaptation.
 
 Neither revised Angel body is installed. The local game remains at the Swordsman update, **0.27.17**. The Crusader is retained, and Griffin review follows these two units.
 
