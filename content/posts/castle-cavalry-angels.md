@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Revised Marksman, Swordsman, Angel and Archangel bodies are installed in 0.27.19. Griffin trials now include eight idle poses and attached ear tufts, with reference corrections and failed meshes documented. Surface quality and full animation remain unfinished."
+homeSummary: "Castle body revisions are installed in 0.27.19. The ordinary Griffin now has a 13-group, 85-frame offline animation draft with corrected claw weights. Mouth opening, the death fold and local deformation remain unfinished; it is not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -341,10 +341,32 @@ The actual mesh has a pronounced fragmented surface. Disabling the normal map an
 
 ![Blender still of the Meshy ear-tuft model, showing the fragmented surface and its gap from the concept](/images/castle-top-tier-01/griffin-ear-mesh-trial.png)
 
-After scaling and head attachment, the paired upright silhouette is restored. A smoothing trial pulled isolated vertices towards the origin; removing it fixed the attachment check at head rotations of 25 degrees in either direction. This verifies attachment only. Granularity, colour and root blending remain unfinished, as do the full animation set and Royal variant. No new Griffin has been installed.
+After scaling and head attachment, the paired upright silhouette is restored. A smoothing trial pulled isolated vertices towards the origin; removing it fixed the attachment check at head rotations of 25 degrees in either direction. This verifies attachment only. Granularity, colour and root blending remain unfinished. Status at this trial: <s>The full animation set and Royal variant remain unfinished. No new Griffin has been installed.</s> The ordinary Griffin motion draft was subsequently completed, as described next; the Royal variant and installation remain pending.
 
 ![1200 × 1400 Blender assembly trial with paired upright ear tufts; surface quality remains unfinished, and this is not an installed result](/images/castle-top-tier-01/griffin-ear-assembly-trial.png)
 
+
+
+## Complete Griffin animation draft
+
+On 27 September, the ordinary Griffin draft reached **13 groups and 85 frames**: holding, hover response, turns, takeoff, flight, landing, three attack directions, hit reaction, defence and death. Six additional source frames duplicate the turns and are not counted as independent motion. All scenes were reopened to check frame counts, and all 85 previews have intact image bounds. Groups still use offline review framing; game registration and installation remain pending.
+
+<details>
+<summary>All 13 groups in Blender previews</summary>
+
+![Ordinary Griffin: 13 groups and 85 Blender draft frames. Preview framing differs between groups; these are neither equally registered game frames nor battle captures](/images/castle-top-tier-01/griffin-actions52.jpg)
+
+</details>
+
+Larger movements exposed another binding error. A left talon crosses the body centreline, and automatic weights assigned it to both hands. Reassigning weights by the two connected claw regions reduced the stretching. Lower chest feathers still carry some arm weights. A position-based attempt to remove those weights damaged the transition further and was rejected.
+
+The first death endpoint exposed the belly and lifted the hind legs too high. The revision changes the side of the fall and lowers the legs and tail, but ground contact and wing folding still need work. Both versions below remain unfinished.
+
+![Rejected death endpoint, a Blender still with exposed belly and raised hind legs](/images/castle-top-tier-01/griffin-death50-rejected.png)
+
+![Revised death endpoint after changing the roll direction, hind legs and tail; a Blender still of an unfinished draft](/images/castle-top-tier-01/griffin-death51-draft.png)
+
+Motion coverage is complete as a draft. Mouth opening, ear-tuft surface quality, chest deformation and some wing angles remain unfinished, and the Royal Griffin has not adopted the new body. The installed Griffins are unchanged.
 
 <details>
 <summary>Incorrect reference and unrigged-body record from 27 September</summary>
