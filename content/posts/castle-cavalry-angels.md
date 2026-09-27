@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Both Griffins have revised nine-frame death renders and fixes for stale chest and claw weights. All 170 poses were checked again; late-death deformation and game export remain unfinished."
+homeSummary: "Both Griffins now share game framing calibrated to the original standing height and foot position. Ten action probes are rendered; the full sequence is exporting and has not replaced the installed versions."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -461,7 +461,17 @@ The second half of the death sequence now repositions the forelegs, hind legs an
 
 ![Royal Griffin with the same death animation, a 1400 × 900 Blender still; not installed](/images/castle-top-tier-01/griffin-death94-royal.png)
 
-These remain offline drafts. The forearm-to-chest transition still stretches in the later death poses, and mouth corners and some feather joins need refinement. Shared game framing, export and installation follow those corrections. The installed Griffins are unchanged.
+27 September, before shared camera registration: <s>These remain offline drafts. The forearm-to-chest transition still stretches in the later death poses, and mouth corners and some feather joins need refinement. Shared game framing, export and installation follow those corrections. The installed Griffins are unchanged.</s>
+
+Further trials ruled out weight smoothing, which moved strain to another seam, and volume-preserving deformation, which introduced ground penetration. A smaller elbow and foreclaw adjustment in the final two frames reduced local strain while keeping the claws visible ahead of the head. The first seven frames and the body, head and wing motion are unchanged. The two high-resolution stills above precede this small adjustment.
+
+### Shared game camera
+
+The modelling previews had been framed separately for each action, with different scales for standing and attacking. Both variants now use one fixed orthographic camera across their actions. Registration matches the original standing height of 89 pixels, horizontal centre and foot position. Scale is uniform; the model is not squeezed to match the original width.
+
+![Ordinary and Royal Griffin camera checks: death, flight, downward attack, forward attack and standing; every cell uses the same crop and scale, from offline Blender renders](/images/castle-top-tier-01/griffin-fixed-camera114.jpg)
+
+All ten probes fit inside the canvas. The complete 170-frame sequence is being exported with this registration, alongside shadows projected from each posed mesh onto a fixed ground plane. Full export, shadow review, packaging and in-game verification remain pending, as do checks of local feather joins and mouth corners. The installed Griffins are unchanged.
 
 
 <details>
