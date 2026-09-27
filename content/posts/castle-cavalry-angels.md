@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Both Griffins now have the new body and articulated mouth in 13 action scenes covering 85 frames each. New Blender stills show the Royal palette; ear and motion quality remain unfinished, and neither version is installed."
+homeSummary: "Both Griffins now use broad layered ear feathers across 13 action scenes and 85 frames each. Chest deformation, death and game export remain unfinished; new Blender close-ups show the replacement."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -404,7 +404,7 @@ The Royal materials are present in **13 action scenes covering 85 frames**. Inde
 
 ![Royal Griffin open-mouth attack, a 1200 × 1400 Blender still using the same articulated mouth and animation](/images/castle-top-tier-01/royal-griffin-newbody-attack.png)
 
-The ear tufts remain granular. A voxel reconstruction trial attempted to merge the fragments and project the Meshy texture back onto the surface. The finer result retained extensive holes; the coarser result formed lumpy masses. Neither was adopted.
+The earlier ear tufts were granular. A voxel reconstruction trial attempted to merge the fragments and project the Meshy texture back onto the surface. The finer result retained extensive holes; the coarser result formed lumpy masses. Neither was adopted.
 
 <details>
 <summary>Two rejected ear reconstructions, shown as Blender close-ups</summary>
@@ -415,7 +415,28 @@ The ear tufts remain granular. A voxel reconstruction trial attempted to merge t
 
 </details>
 
-Both Griffins remain offline drafts. Ear tufts, mouth corners, chest deformation, death and some wing poses need further work before shared game framing, full rendering and installation. The installed Griffins are unchanged.
+Status before the ear replacement on 27 September: <s>Both Griffins remain offline drafts. Ear tufts, mouth corners, chest deformation, death and some wing poses need further work before shared game framing, full rendering and installation. The installed Griffins are unchanged.</s>
+
+### Broad ear feathers
+
+The previous mesh contained **1,571 disconnected components** in one ear tuft, including fragments at the tips. A new built-in image_gen reference uses seven broad, continuous feathers with much less fine fluff. Meshy 6 reconstructed it for **30 credits**.
+
+<details>
+<summary>The new modelling reference</summary>
+
+![Built-in image_gen concept of seven broad feathers for Meshy reconstruction; not a 3D render](/images/castle-top-tier-01/griffin-ear-broad-concept.png)
+
+</details>
+
+The resulting feathers are coherent, but the asset is thin from the side. The first head attachment looked like spikes at a distance. Shortening, spreading and curving the cluster in Blender, then adding a shorter rear layer, gives it more volume. The render below shows the replacement for the fragmented surface. The roots could still blend more naturally into the head.
+
+![Actual Blender close-up of the layered ear assembly, retaining the Meshy texture and feather geometry](/images/castle-top-tier-01/griffin-ear-layered-closeup.png)
+
+The ears are present in both Griffins' **13 action scenes and 85 frames each**. Reopening every scene verified 170 integer-frame poses: existing bone transforms and non-ear geometry are unchanged, and the tufts follow the head without the earlier pull towards the origin. Idle, forward attack, flight and turn probes were rendered for each variant. Full game-frame export remains pending.
+
+![Royal Griffin with the same layered ear geometry, a 1200 × 1400 Blender still; not installed](/images/castle-top-tier-01/royal-griffin-layered-ears.png)
+
+Both remain offline drafts. Mouth corners, chest deformation, death and some wing poses still need work, followed by shared game framing, export and installation. The installed Griffins are unchanged.
 
 
 <details>
