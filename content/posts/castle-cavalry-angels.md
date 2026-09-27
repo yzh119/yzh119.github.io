@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The realistic Marksman is installed in 0.27.16 with 16 actions and 97 frames, complete render samples and a local battle capture. Next: Swordsman, then Angel and Archangel, followed by Griffins; retain the approved Crusader."
+homeSummary: "The Marksman is installed in 0.27.16 with 97 frames. The new Swordsman body is modelled and rigged, with a high-resolution Blender still; grip and motion work remain. The Crusader is retained."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -158,6 +158,20 @@ Several failed repairs exposed tooling faults. Choosing the older of two body ri
 Initial trial recorded on 26 September, before installation: <s>The melee scenes retain both an older rig and the more recently repaired body rig. Motion transfer now explicitly selects the repaired one so those pose changes survive. The first 28 frames cover idle, forward shooting, forward melee and downward melee; weapon and hand-attachment transforms match their repaired sources. The replacement body introduces crossbow/body intersections, and two melee recovery frames also intersect the blade. This version is not installed; motion adaptation remains necessary alongside the style change.</s> The installed result above supersedes that pending status; the early failure sheet remains below.
 
 ![Samples from the first 28 Marksman frames, rendered in Blender. Melee intersections remain; this sheet records the pre-repair state](/images/castle-top-tier-01/marksman-realism03-probes.jpg)
+
+## Revising the Swordsman
+
+The user asked to keep the Crusader, revise the Swordsman next, then address the Angel and Archangel before reviewing the Griffins. The previous Swordsman had mail sleeves, an overly pointed helmet and a slender build with light-looking leg armour. The new reference follows the original costume, using the Crusader for believable materials and the Archer for a consistent photographic treatment. It restores bare upper arms, dark steel head and leg protection, and a short blue-and-white tabard, without adding a shield, cloak or scabbard.
+
+![Swordsman modelling reference generated with built-in image_gen; sword and grip work are separate](/images/castle-top-tier-01/swordsman-realism03-concept.jpg)
+
+Meshy completed the body and humanoid rig for 30 and 5 credits. Astra inspected eight Blender views and restored the source PBR materials after verifying matching UVs across 74,006 triangles. The following 1400 × 1600 still shows the actual mesh.
+
+![High-resolution static Blender render of the new Meshy Swordsman body, not yet installed](/images/castle-top-tier-01/swordsman-realism03-model.png)
+
+The existing motion sources cover 13 groups and 76 frames. An initial transfer produced the eight idle frames, but sword orientation and grip still need work against the original reference. This body is not installed; the local game remains at 0.27.16, with the Crusader unchanged.
+
+![First idle-transfer frame through the Blender game camera. Sword orientation and grip remain unresolved; this is a trial record](/images/castle-top-tier-01/swordsman-realism03-holding-probe.png)
 
 ## Historical record: 0.17.1–0.27.8
 
