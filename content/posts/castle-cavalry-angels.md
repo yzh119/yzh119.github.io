@@ -21,9 +21,11 @@ The latest multi-image Meshy Pikeman also failed visual review. It still has a h
 
 ![Rejected Pikeman candidate: a high-resolution static Blender render of the Meshy model, with the incorrect helmet and white chest](/images/castle-top-tier-01/pikeman-rejected-multi2.png)
 
-Codex's built-in image_gen produced a new concept from original idle and turn references: bare head, navy clothing, empty hands and an A-pose. It has been submitted to Meshy; model review, rigging and motion transfer are still ahead. The image below is concept art, not a delivered 3D model. The Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Earlier FLUX and direct-Meshy experiments are retained below.
+Codex's built-in image_gen produced a new concept from original idle and turn references: bare head, navy clothing, empty hands and an A-pose. Meshy has finished the mesh and rig, at 30 and 5 credits respectively. Front and back review confirms that the helmet and large white chest are gone. Idle motion has been transferred, but the two-handed grip still needs adjustment; the other actions are being exported for inspection. The new Pikeman is not installed. The Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Earlier FLUX and direct-Meshy experiments are retained below.
 
 ![New image_gen Pikeman concept, not installed in the game. The pike will be assembled as a separate prop](/images/castle-top-tier-01/pikeman-concept03.jpg)
+
+![High-resolution static Blender render of the new Pikeman mesh in an empty-handed A-pose, shown separately from its concept. Motion review is incomplete](/images/castle-top-tier-01/pikeman-mesh03.png)
 
 Codex handled this handover, packaging and installation. The upright-lance scenes and exports were already available at handover.
 

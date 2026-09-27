@@ -21,9 +21,11 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 
 ![被退回的枪兵，Meshy 模型在 Blender 中的高清静态渲染：头盔和白色胸前服装仍不符合原版](/images/castle-top-tier-01/pikeman-rejected-multi2.png)
 
-新的概念图由 Codex 内置 image_gen 根据原版待机与转身参考生成，要求裸头、藏青主色、空手 A 字站姿。已提交 Meshy 建模，之后还要检查模型、绑定和移植动作；下图只是概念图，不能当成交付的 3D 模型。神射手近战剑的朝向、长戟兵的开面盔仍待修正。下方保留 FLUX 和 Meshy 直接建模的尝试经过。
+新的概念图由 Codex 内置 image_gen 根据原版待机与转身参考生成，要求裸头、藏青主色、空手 A 字站姿。Meshy 已完成建模和绑定，分别消耗 30 和 5 credits。正背面的服装已检查，头盔和大片白色胸前服装的问题消除了。待机动作已移植，双手握枪仍需要细调，其余动作正在导出检查，新枪兵尚未安装。神射手近战剑的朝向、长戟兵的开面盔仍待修正。下方保留 FLUX 和 Meshy 直接建模的尝试经过。
 
 ![新的枪兵概念图，image_gen 生成；尚未接入游戏，长枪将作为独立道具装配](/images/castle-top-tier-01/pikeman-concept03.jpg)
+
+![新枪兵模型的 Blender 高清静态渲染，空手 A 字站姿。与上面的概念图分开展示；动作检查尚未完成](/images/castle-top-tier-01/pikeman-mesh03.png)
 
 这次接手、打包与安装由 Codex 完成，竖枪模型和导出沿用交接时已完成的工作。
 
