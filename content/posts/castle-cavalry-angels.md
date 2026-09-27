@@ -99,6 +99,20 @@ The earlier model already had closed-grip geometry and release shape keys. Its h
 
 The battle capture at the beginning of this article confirms loading and display. The short run did not cover complete playback of every action, and the art still needs further review.
 
+## Archer colour placement and proportions
+
+The previous Archer expanded the costume into a large blue-and-white chest split and had a visibly washed-out face. A new built-in image_gen reference follows the original's dark kettle helmet, pale neck protection, blue chest with white heraldry and asymmetric hose. The crossbow and melee dagger remain separate props. Meshy generated the replacement body with PBR maps for 30 credits, and its front and back have been inspected in Blender.
+
+![Realistic Archer modelling reference from built-in image_gen, with empty hands for separately attached weapons](/images/castle-top-tier-01/archer-realism03-concept.jpg)
+
+![Static Blender render of the actual Meshy Archer model, retaining the blue chest and asymmetric hose](/images/castle-top-tier-01/archer-realism03-model.png)
+
+Source scenes for all 16 action groups and 96 frames have been located and checked. Rigging cost another 5 credits; source materials were restored after matching UVs across 72,659 triangles. The first 22 frames cover idle, forward shooting and forward melee, retaining the existing hands, crossbow, bolt and dagger motion.
+
+![Three Archer motion probes rendered through the game camera in Blender; these are not battle captures](/images/castle-top-tier-01/archer-realism03-probes.jpg)
+
+The other actions remain unexported. Melee equipment clearance and the original waist equipment also need review. This version has not been installed.
+
 ## Historical record: 0.17.1–0.27.8
 
 Status before the new Pikeman installation on 26 September: <s>Idle motion has been transferred, but the two-handed grip still needs adjustment; the other actions are being exported for inspection. The new Pikeman is not installed.</s> Version 0.27.10 completes this grip repair and installation; a new battle check is still pending.
