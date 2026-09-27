@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Version 0.27.12 refines Marksman melee poses. The blue Pikeman, gold Griffin talons and Castle roster have entered a test battle, with a new screenshot and original-pose comparisons. Likeness work continues."
+homeSummary: "The Castle roster entered a test battle, but the Pikeman and other drafts were rejected as too cartoonish. Costume exaggeration and materials altered during rigging are being addressed, with a new photographic concept and failure notes."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -50,6 +50,16 @@ All 18 melee frames were exported again, the 424 installed files match their has
 The local test map includes all fourteen Castle creatures and successfully entered combat. The new blue Pikeman is visible at the upper right, and the Royal Griffin's gold forelegs on the left. The capture also shows scale, colour and occlusion against the actual battlefield. This short run verifies loading and display; it did not capture complete playback of all three Marksman melee directions and does not sign off the full animation set.
 
 ![Local VCMI test battle running 0.27.12, with Castle's base and upgraded creatures on opposing sides](/images/castle-top-tier-01/castle-battle02712.png)
+
+## Realism revision
+
+After seeing the battle capture, the user found the Pikeman and other drafts too cartoonish. This iteration has not passed visual review. A bare head, blue clothing and working animations address only part of the problem; balloon sleeves, broad bright edging, puffed trousers and smooth surfaces still suggest a toy.
+
+The material audit also found a pipeline error. The original Pikeman mesh GLB has metallic 0, roughness 0.8 and no emission. Meshy's rigged GLB adds emissive colour and strength 1, while omitting metallic, which imports into Blender as the default 1. The modelling preview had corrected these settings, but motion transfer did not restore the original material. The inspected Marksman, Halberdier and Archer action scenes have similar settings. A controlled render with metallic and emission disabled still looks stylized, so geometry, textures and lighting need attention too.
+
+The new image_gen concept reduces shoulder volume, narrows the pale trim and uses fitted trousers. It has been submitted to Meshy with [PBR maps enabled](https://docs.meshy.ai/en/api/image-to-3d) for roughness, normal and other material information. The next checks must cover material preservation through rigging and appearance at game size. This concept has not replaced the installed model.
+
+![New photographic-direction Pikeman concept from image_gen, with restrained clothing shapes and trim. This is concept art, not a Blender render or installed asset](/images/castle-top-tier-01/pikeman-realism04.jpg)
 
 ## Historical record: 0.17.1–0.27.8
 
