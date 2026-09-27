@@ -21,7 +21,7 @@ The latest multi-image Meshy Pikeman also failed visual review. It still has a h
 
 ![Rejected Pikeman candidate: a high-resolution static Blender render of the Meshy model, with the incorrect helmet and white chest](/images/castle-top-tier-01/pikeman-rejected-multi2.png)
 
-Codex's built-in image_gen produced a new concept from original idle and turn references: bare head, navy clothing, empty hands and an A-pose. Meshy has finished the mesh and rig, at 30 and 5 credits respectively. Front and back review confirms that the helmet and large white chest are gone. All 11 unique action groups and 76 frames are now transferred and installed in 0.27.10. The Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Earlier FLUX and direct-Meshy experiments are retained below.
+Codex's built-in image_gen produced a new concept from original idle and turn references: bare head, navy clothing, empty hands and an A-pose. Meshy has finished the mesh and rig, at 30 and 5 credits respectively. Front and back review confirms that the helmet and large white chest are gone. All 11 unique action groups and 76 frames are now transferred and installed in 0.27.10. The Marksman's arm extension and the Halberdier's open helmet still need work. Earlier FLUX and direct-Meshy experiments are retained below.
 
 ![New image_gen Pikeman concept. The pike is assembled separately; finished game frames appear below](/images/castle-top-tier-01/pikeman-concept03.jpg)
 
