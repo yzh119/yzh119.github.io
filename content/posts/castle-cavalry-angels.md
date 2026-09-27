@@ -3,11 +3,11 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All fourteen Castle units have local drafts. The new Pikeman has all actions; 0.27.11 improves the Marksman's melee blade and grip. Includes failed drafts, Blender stills and original-art comparisons."
+homeSummary: "Version 0.27.12 refines Marksman melee poses. The blue Pikeman, gold Griffin talons and Castle roster have entered a test battle, with a new screenshot and original-pose comparisons. Likeness work continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.11**, with a repaired Marksman melee blade orientation and grip. It retains the bareheaded, blue-clad Pikeman, upright cavalry lances and gold Royal Griffin forelegs and talons.
+All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.12**, refining the Marksman's three melee impact poses. It retains the bareheaded, blue-clad Pikeman, upright cavalry lances and gold Royal Griffin forelegs and talons. A new test-battle screenshot appears below.
 
 Both carry the lance upward while standing and moving, lower it during an attack, and raise it again afterward. Each retains the original 13 groups and 81 frames. Body, shadow and selection layers at 1× and 2× total 342 PNGs per unit. Both packages passed format validation with zero errors and warnings, and installation preserved backups and rollback scripts. This update checked the exported frames and installed files; it has no new battle screenshot. The battle image in the historical record below shows an earlier version.
 
@@ -39,7 +39,17 @@ Codex handled this handover, packaging and installation. The upright-lance scene
 
 ![Original, previous draft and 0.27.11 for each melee direction. New images are Blender game frames. Columns are cropped and fitted independently for inspection, so they do not compare in-game sizes](/images/castle-top-tier-01/marksman-melee05.png)
 
-The blade is easier to see, but the full motion still differs from the original: the upward strike angle and arm extension need further work. The Halberdier's open helmet and the Royal Griffin's proportions and folded wings also remain unfinished.
+The assessment at 0.27.11 was: <s>The blade is easier to see, but the full motion still differs from the original: the upward strike angle and arm extension need further work.</s> Version 0.27.12 uses the original impact frames to adjust grip positions and blade angles. The front and upward strikes use arm and clavicle changes; the downward strike also changes the torso, left arm and crossbow. Moving the right hand alone first produced an unreachable target. Bending the torso then left the crossbow overhead, so the left hand and weapon had to move together toward the original upper-left position.
+
+![Original, 0.27.11 and 0.27.12 impact poses, using the same registered crop to compare hand and weapon positions. These are rendered frames, not battle captures](/images/castle-top-tier-01/marksman-pose07.png)
+
+All 18 melee frames were exported again, the 424 installed files match their hashes, and rollback files are retained. Landmarks were read manually from the original images. Body proportions, shoulder deformation and playback still need review; matching a hand position does not establish overall likeness. The Halberdier's open helmet and the Royal Griffin's proportions and folded wings remain unfinished.
+
+## Version 0.27.12 test battle
+
+The local test map includes all fourteen Castle creatures and successfully entered combat. The new blue Pikeman is visible at the upper right, and the Royal Griffin's gold forelegs on the left. The capture also shows scale, colour and occlusion against the actual battlefield. This short run verifies loading and display; it did not capture complete playback of all three Marksman melee directions and does not sign off the full animation set.
+
+![Local VCMI test battle running 0.27.12, with Castle's base and upgraded creatures on opposing sides](/images/castle-top-tier-01/castle-battle02712.png)
 
 ## Historical record: 0.17.1–0.27.8
 
