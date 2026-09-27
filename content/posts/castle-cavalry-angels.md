@@ -3,11 +3,11 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "All fourteen Castle units have local drafts. Version 0.27.9 adds gold Royal Griffin talons; upright cavalry lances are installed. The Pikeman returns to concept design, with the rejected mesh shown alongside it."
+homeSummary: "All fourteen Castle units have local drafts. Version 0.27.10 installs the bareheaded, blue-clad Pikeman with repaired grips and all actions, alongside gold Griffin talons and upright cavalry lances. Includes failed drafts and Blender comparisons."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.9**: it retains the upright Cavalier and Champion lances from 0.27.8 and adds gold forelegs and talons to the Royal Griffin.
+All fourteen Castle units now have local drafts. Several still need substantial work on costume, colour, proportions and motion. The local mod is at **0.27.10**, with a bareheaded, blue-clad Pikeman and its full set of actions. It retains upright cavalry lances and gold Royal Griffin forelegs and talons.
 
 Both carry the lance upward while standing and moving, lower it during an attack, and raise it again afterward. Each retains the original 13 groups and 81 frames. Body, shadow and selection layers at 1× and 2× total 342 PNGs per unit. Both packages passed format validation with zero errors and warnings, and installation preserved backups and rollback scripts. This update checked the exported frames and installed files; it has no new battle screenshot. The battle image in the historical record below shows an earlier version.
 
@@ -21,15 +21,21 @@ The latest multi-image Meshy Pikeman also failed visual review. It still has a h
 
 ![Rejected Pikeman candidate: a high-resolution static Blender render of the Meshy model, with the incorrect helmet and white chest](/images/castle-top-tier-01/pikeman-rejected-multi2.png)
 
-Codex's built-in image_gen produced a new concept from original idle and turn references: bare head, navy clothing, empty hands and an A-pose. Meshy has finished the mesh and rig, at 30 and 5 credits respectively. Front and back review confirms that the helmet and large white chest are gone. Idle motion has been transferred, but the two-handed grip still needs adjustment; the other actions are being exported for inspection. The new Pikeman is not installed. The Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Earlier FLUX and direct-Meshy experiments are retained below.
+Codex's built-in image_gen produced a new concept from original idle and turn references: bare head, navy clothing, empty hands and an A-pose. Meshy has finished the mesh and rig, at 30 and 5 credits respectively. Front and back review confirms that the helmet and large white chest are gone. All 11 unique action groups and 76 frames are now transferred and installed in 0.27.10. The Marksman's melee sword direction and the Halberdier's open helmet remain unresolved. Earlier FLUX and direct-Meshy experiments are retained below.
 
-![New image_gen Pikeman concept, not installed in the game. The pike will be assembled as a separate prop](/images/castle-top-tier-01/pikeman-concept03.jpg)
+![New image_gen Pikeman concept. The pike is assembled separately; finished game frames appear below](/images/castle-top-tier-01/pikeman-concept03.jpg)
 
-![High-resolution static Blender render of the new Pikeman mesh in an empty-handed A-pose, shown separately from its concept. Motion review is incomplete](/images/castle-top-tier-01/pikeman-mesh03.png)
+![High-resolution static Blender render of the new Pikeman body in an A-pose, before attaching the separate articulated hands and pike](/images/castle-top-tier-01/pikeman-mesh03.png)
+
+The first motion transfer left open hands several centimetres away from the shaft. The repair keeps the earlier separately modelled hands and finger animation, then fits the new arms to their wrist positions. This also preserves the release during death. Four downward-attack frames needed up to about one centimetre of shoulder movement to reach, without stretching the arm bones. Rendering is complete; samples from every action were inspected for grip, turns and death. Format validation reports zero errors and warnings, all 328 installed files match their recorded hashes, and backups and rollback scripts are retained. Version 0.27.10 has not had a new battle check.
+
+![Previous installed Pikeman, new body with loose grips, and installed repair with articulated hands. Idle above and front attack below; these are Blender game frames](/images/castle-top-tier-01/pikeman-grip04.png)
 
 Codex handled this handover, packaging and installation. The upright-lance scenes and exports were already available at handover.
 
 ## Historical record: 0.17.1–0.27.8
+
+Status before the new Pikeman installation on 26 September: <s>Idle motion has been transferred, but the two-handed grip still needs adjustment; the other actions are being exported for inspection. The new Pikeman is not installed.</s> Version 0.27.10 completes this grip repair and installation; a new battle check is still pending.
 
 Status recorded on 26 September at 0.27.8: <s>The Royal Griffin's gold talons are still awaiting installation, and its proportions need work. The latest Pikeman mesh needs review; the Marksman's melee sword direction and the Halberdier's open helmet remain unresolved.</s> Version 0.27.9 installs the talons; the Pikeman candidate has been reviewed and rejected. The other issues remain open.
 
