@@ -3,11 +3,11 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Angel: 94 frames installed in 0.27.18. The Archangel has a corrected griffin shield and 65 checked non-death poses, with new Blender stills and failure records; final death folding remains pending."
+homeSummary: "Angel: 94 frames installed. The Archangel has new thin-feather wings and 65 rechecked non-death poses, with concept art and a Blender still. Main collapse intersections are repaired; the folded silhouette still needs work. Not installed."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions proceeding unit by unit. Local mod **0.27.18** installs the revised Angel after the Marksman and Swordsman, with a blue-edged long robe and all 16 native groups, 94 frames. The Archangel has new grips and a corrected griffin shield with non-death poses checked; its collapse still needs work before installation, followed by Griffin review. The approved Crusader is retained. The game stayed on a black startup screen during this check, so there is no new Angel battle capture yet.
+All fourteen Castle units have local drafts, with realism revisions proceeding unit by unit. Local mod **0.27.18** installs the revised Angel after the Marksman and Swordsman, with a blue-edged long robe and all 16 native groups, 94 frames. The Archangel has new grips, a corrected griffin shield and replacement wings, with 65 non-death poses rechecked; its collapse now clears the main surface checks but needs a tighter folded silhouette before installation, followed by Griffin review. The approved Crusader is retained. The game stayed on a black startup screen during this check, so there is no new Angel battle capture yet.
 
 ![Complete 0.27.18 Angel assembly, a 1400 × 1600 Blender still with revised body, wing roots and blade; this is not a battle capture](/images/castle-top-tier-01/angel-realism03-complete.png)
 
@@ -266,19 +266,39 @@ With this trial shield, 12 non-death actions have been rendered as 65 independen
 
 The replacement shield has now been generated for another 30 Meshy credits, retaining the gold griffin and rounded lower edge. Meshy duplicated the emblem on the rear, so Astra replaced rear shading in Blender and added a grip, mounts and a continuous metal rim. The shield faces forward and outward from the body: idle exposes the back, while turning reveals the front. Both turn actions also restore the carrying arm pose instead of inheriting the empty-hand motion that tipped the shield sideways.
 
-![Latest 1400 × 1600 Blender assembly still, showing the shield back in idle; not installed](/images/castle-top-tier-01/archangel-realism03-shield-corrected.png)
+![1400 × 1600 Blender assembly still from the shield revision, retaining the old wings, showing the shield back in idle; not installed](/images/castle-top-tier-01/archangel-realism03-shield-corrected.png)
 
 ![High-resolution Blender still of the shield front, retaining Meshy's gold griffin](/images/castle-top-tier-01/archangel-realism03-shield-front.png)
 
 ![High-resolution Blender still of the corrected plain back, grip and geometric rim](/images/castle-top-tier-01/archangel-realism03-shield-back.png)
 
-Reopening all 65 non-death poses with this replacement shows no intersections among the tested body, sword, main shield surface and wings, with body PBR maps retained. This excludes the grip, small rim, complete finger contacts and continuous interpolation. Full replacement still requires the death animation.
+At the shield-revision stage, still using the old wings, reopening all 65 non-death poses shows no intersections among the tested body, sword, main shield surface and wings, with body PBR maps retained. This excludes the grip, small rim, complete finger contacts and continuous interpolation. Full replacement still requires the death animation.
 
-The inherited death script also needed replacement. It knelt forward, whereas the original recoils, lifts its legs and falls backward, with the wings closing around the body. The new backward-collapse draft clears the tested equipment surfaces, but its final wings remain too flat and the shield sits incorrectly. It is still being revised and has not been installed. The comparison below includes the original, the rejected kneeling version and the backward-fall draft.
+The inherited death script also needed replacement. It knelt forward, whereas the original recoils, lifts its legs and falls backward, with the wings closing around the body. Recorded on 27 September before replacing the wings: <s>The new backward-collapse draft clears the tested equipment surfaces, but its final wings remain too flat and the shield sits incorrectly. It is still being revised and has not been installed.</s> The later draft below changes the shield tilt and wing geometry. The comparison below includes the original, the rejected kneeling version and the backward-fall draft.
 
 ![Original and two rejected collapse drafts; new images are Blender renders, with final wing folding still incomplete](/images/castle-top-tier-01/archangel-realism03-death-rejected.jpg)
 
-The local mod remains **0.27.18** and still uses the previous Archangel. The revised shield is assembled and checked across non-death poses; installation waits for the complete revised action set. Griffins follow afterward.
+## Replacement Archangel wings
+
+On 27 September, the thick, sculptural feathers prompted another wing model. Built-in image_gen supplied a thin-feather concept, and Meshy generated the mesh for 30 credits. Astra split the wings in Blender, bound each to the existing three-bone chain, and explicitly set non-metallic feather shading while retaining colour and normal maps.
+
+![Thin-feather concept from built-in image_gen; this is the Meshy input, not a finished game asset](/images/castle-top-tier-01/archangel-realism03-wing-concept.jpg)
+
+![1400 × 1600 Blender still with the replacement wings. The thinner feathers, wing roots and folded silhouette remain an unapproved draft; not installed](/images/castle-top-tier-01/archangel-realism03-new-wings.png)
+
+Two initial idle and flight poses were checked before transferring all 12 non-death actions, totalling 65 poses. A uniform root adjustment introduced intersections during flight, so each clip now uses a fixed correction. Reopening the saved scenes finds no intersections among the tested body, sword, main shield surface and wings, with body PBR and rigid grips retained. These are exported integer poses; the check excludes all small attachments, complete self-intersections and continuous animation, and does not establish appearance acceptance.
+
+The collapse silhouette remains unfinished. The first new-wing draft grounds the body, tilts the shield and bends the landing feathers through actual 3D deformation. Of its eight frames, the first six clear the tested main surface pairs. Frame seven still puts feathers below the floor, and the final two retain arm–feather intersections. The complete draft below records those remaining failures.
+
+![Eight-frame Blender collapse draft, using a common crop and scale. Floor penetration in frame seven and intersections in the final two remain unresolved; not delivered assets](/images/castle-top-tier-01/archangel-realism03-wing-death-draft.jpg)
+
+A later repair adjusts the final two wing-root poses and gives frame seven a separate feather-grounding shape key. Reopening all eight frames now finds no intersections among the tested main surface pairs; the wing tips in frames seven and eight remain about 3 mm above the floor. The result below still spreads the final wings too widely, like two side fans, whereas the original encloses the body more tightly. Passing these surface checks does not resolve that shape difference.
+
+![Eight Blender frames after the main intersection and floor repairs. The final fold remains wider than the original; not installed](/images/castle-top-tier-01/archangel-realism03-wing-death-repaired.jpg)
+
+The wide mesh also exposed a preview-tool problem: a fixed camera cropped the wing tips. The tool now fits one shared frame across eight viewing angles, checked with this mesh. The [public tool change](https://github.com/yzh119/h3-art-pipeline/commit/746dab3) is available.
+
+The local mod remains **0.27.18** and still uses the previous Archangel. Installation waits for the complete action and appearance review. Griffins follow afterward.
 
 ## Historical record: 0.17.1–0.27.8
 
