@@ -3,18 +3,22 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Marksman is installed in 0.27.16 with 97 frames. The new Swordsman body is modelled and rigged, with a high-resolution Blender still; grip and motion work remain. The Crusader is retained."
+homeSummary: "The revised Swordsman is installed in 0.27.17 with all 76 frames, articulated hands and a repaired sword grip. The Crusader is retained; Angel and Archangel revisions are next."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, and several still need substantial work. Local mod **0.27.16** adds the revised Marksman, matching the more realistic Pikeman, Halberdier and Archer, with all 16 actions and 97 frames installed. The new Marksman stands second from the top on the left in the battle below. The user liked the Archer revision. Next comes the Swordsman, while retaining the approved Crusader, then the Angel and Archangel, followed by a review of the Griffins.
+All fourteen Castle units have local drafts, but the Angel, Archangel and other models still need substantial revision. Local mod **0.27.17** installs the realistic Swordsman after the Marksman, with all 13 actions and 76 frames. The approved Crusader is retained. The Angel and Archangel are next, followed by a review of the Griffins.
 
-![Local VCMI battle with 0.27.16: revised Marksman second from the top on the left, Archer opposite on the right. This bounded run verifies loading and display, not complete playback of every action](/images/castle-top-tier-01/castle-battle02716.png)
+![Local VCMI battle running 0.27.17: revised Swordsman fourth from the top on the right, below the Griffin. This bounded run confirms loading and display, not every action in full](/images/castle-top-tier-01/castle-battle02717.png)
 
-## Version record: 0.27.8–0.27.15
+## Version record: 0.27.8–0.27.16
 
 <details>
-<summary>Earlier introduction and battle captures through 0.27.15</summary>
+<summary>Earlier introduction and battle captures through 0.27.16</summary>
+
+<s>All fourteen Castle units have local drafts, and several still need substantial work. Local mod **0.27.16** adds the revised Marksman, matching the more realistic Pikeman, Halberdier and Archer, with all 16 actions and 97 frames installed. The new Marksman stands second from the top on the left in the battle below. The user liked the Archer revision. Next comes the Swordsman, while retaining the approved Crusader, then the Angel and Archangel, followed by a review of the Griffins.</s>
+
+![Local VCMI battle with 0.27.16: revised Marksman second from the top on the left, Archer opposite on the right. This bounded run verifies loading and display, not complete playback of every action](/images/castle-top-tier-01/castle-battle02716.png)
 
 <s>All fourteen Castle units have local drafts, and several still need substantial work on costume, colour, proportions and motion. Local mod **0.27.15** includes the revised Pikeman's 76 frames, Halberdier's 63 frames and Archer's 96 frames. The Archer now has separate waist equipment and repaired crossbow clearance in all three shooting directions and its display action. All three have entered a test battle. Their revised style awaits the user's review; the remaining creatures still need individual attention.</s>
 
@@ -167,9 +171,17 @@ The user asked to keep the Crusader, revise the Swordsman next, then address the
 
 Meshy completed the body and humanoid rig for 30 and 5 credits. Astra inspected eight Blender views and restored the source PBR materials after verifying matching UVs across 74,006 triangles. The following 1400 × 1600 still shows the actual mesh.
 
-![High-resolution static Blender render of the new Meshy Swordsman body, not yet installed](/images/castle-top-tier-01/swordsman-realism03-model.png)
+![High-resolution static Blender render of the new Meshy Swordsman body, captured before action adaptation and installation](/images/castle-top-tier-01/swordsman-realism03-model.png)
 
-The existing motion sources cover 13 groups and 76 frames. An initial transfer produced the eight idle frames, but sword orientation and grip still need work against the original reference. This body is not installed; the local game remains at 0.27.16, with the Crusader unchanged.
+On 27 September, **0.27.17** installs all 13 Swordsman actions and 76 frames. Meshy supplied the body and humanoid rig. Astra reused articulated Meshy hands from existing work, replaced the open palms, built a leather hilt and steel pommel, adjusted the thumb and grip, and adapted walking, attacks, defence, reactions, death and turns.
+
+![Static Blender close-up of the Swordsman grip, showing articulated fingers and the rebuilt hilt and pommel](/images/castle-top-tier-01/swordsman-realism03-grip.png)
+
+The first transfer aimed the blade toward the camera, making it look short. Correcting its orientation exposed another problem: the old handle was only about 3.8 cm long. Subsequent action probes found a pommel/forearm collision during the wind-up and blade/body intersections during hit reactions. Wrist and weapon poses were adjusted together. Every rendered scene was reopened; all 76 exported poses pass body/blade, body/hilt and body/pommel surface-intersection checks, with no canvas clipping. Format validation reports zero errors and warnings, and an independent post-install read verifies 338 files. Backups and rollback records are retained. These checks cover exported game frames, not continuous 3D interpolation or detailed finger contact.
+
+![Blender review sheet of all 76 Swordsman frames. Subjects are cropped for pose inspection here; the game frames retain their fixed canvas](/images/castle-top-tier-01/swordsman-realism03-actions.jpg)
+
+Initial transfer record from 26 September: <s>The existing motion sources cover 13 groups and 76 frames. An initial transfer produced the eight idle frames, but sword orientation and grip still need work against the original reference. This body is not installed; the local game remains at 0.27.16, with the Crusader unchanged.</s> The installed result above supersedes that pending status; the original failure image remains below.
 
 ![First idle-transfer frame through the Blender game camera. Sword orientation and grip remain unresolved; this is a trial record](/images/castle-top-tier-01/swordsman-realism03-holding-probe.png)
 
