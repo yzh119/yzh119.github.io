@@ -3,13 +3,17 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.25 installs the Swordsman arm, larger Griffin wings and Angel proportion revisions. Added Blender stills, a 0.27.22 battle capture and a rejected fold trial. New in-game motion review remains pending."
+homeSummary: "Local 0.27.25 installs the Swordsman arm, larger Griffin wings and Angel proportion revisions. Added Blender stills, a 0.27.22 battle capture and a rejected fold trial. A new battle capture is included; exhaustive motion review remains pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts. On October 1, local mod **0.27.25** installed the Swordsman free-arm correction, larger wings for both Griffins, and revised Angel proportions and idle wings. A battle capture is available for 0.27.22; the new 0.27.25 revision has not yet been checked in battle. User feedback identified undersized Griffin wings, an awkward Swordsman arm, and problems with Angel proportions and idle wings. Those revisions are continuing, with ordinary Pikeman clothing queued afterwards.
+All fourteen Castle units have local drafts. On October 1, local mod **0.27.25** installed the Swordsman free-arm correction, larger wings for both Griffins, and revised Angel proportions and idle wings. Version 0.27.25 has entered a test battle and has a new capture; exhaustive motion review remains pending. These revisions address feedback on Griffin span, the Swordsman arm and Angel proportions and idle wings. Ordinary Pikeman clothing is next.
 
 ## October 1 model revisions
+
+Version 0.27.25 subsequently entered a local test battle. Capturing only the window owned by this test process produced 93 frames, with the revised assets visible as battle progressed. This does not establish acceptance of every action. Earlier status: <s>The new 0.27.25 revision has not yet been checked in battle.</s>
+
+![Local 0.27.25 test battle with revised Griffins, Swordsman and Angel visible; not exhaustive action acceptance](/images/castle-top-tier-01/castle-battle02725.png)
 
 The 0.27.22 test battle confirmed that all fourteen units could be displayed. This capture predates the latest Swordsman arm correction and does not establish full animation playback quality.
 
@@ -112,7 +116,7 @@ Six missing Royal Griffin turn frames are now rendered, bringing the gold talons
 
 ![Original, previous draft, rejected colour mask, and installed 0.27.9; idle above and a turn below. New images are Blender game frames, not a new battle capture](/images/castle-top-tier-01/royal-gold-talons05.png)
 
-The latest multi-image Meshy Pikeman also failed visual review. It still has a helmet, a mostly white chest and a blocky heraldic motif inherited from the low-resolution references. This candidate was not installed.
+<s>The latest multi-image Meshy Pikeman also failed visual review. It still has a helmet, a mostly white chest and a blocky heraldic motif inherited from the low-resolution references. This candidate was not installed.</s> October 1 correction: the helmet and blocky motif remain problems with that candidate, but treating the light chest region itself as an error was too broad. The subsequent navy-cloth costume also drifted from the original.
 
 ![Rejected Pikeman candidate: a high-resolution static Blender render of the Meshy model, with the incorrect helmet and white chest](/images/castle-top-tier-01/pikeman-rejected-multi2.png)
 
@@ -151,6 +155,12 @@ The local test map includes all fourteen Castle creatures and successfully enter
 After seeing the battle capture, the user found the Pikeman and other drafts too cartoonish. This iteration has not passed visual review. A bare head, blue clothing and working animations address only part of the problem; balloon sleeves, broad bright edging, puffed trousers and smooth surfaces still suggest a toy.
 
 The material audit also found a pipeline error. The original Pikeman mesh GLB has metallic 0, roughness 0.8 and no emission. Meshy's rigged GLB adds emissive colour and strength 1, while omitting metallic, which imports into Blender as the default 1. The modelling preview had corrected these settings, but motion transfer did not restore the original material. The inspected Marksman, Halberdier and Archer action scenes have similar settings. A controlled render with metallic and emission disabled still looks stylized, so geometry, textures and lighting need attention too.
+
+### Revisiting the Pikeman costume, October 1
+
+The attempt to reduce the cartoonish costume also simplified the light chest structure into a navy cloth doublet. After the user flagged the clothing, a fresh comparison with the original led to a reference with light silver chest protection, blue clothing and narrow yellow edging. Steel is a modeling interpretation of the low-resolution light region and still needs assessment in the actual mesh. The new built-in imagegen concept has been submitted to Meshy; it has not replaced the installed Pikeman.
+
+![Revised Pikeman modeling concept; no Blender render or game asset from this revision yet](/images/castle-top-tier-01/pikeman-costume05-concept.png)
 
 The new image_gen concept reduces shoulder volume, narrows the pale trim and uses fitted trousers. Meshy completed the mesh and rig for 30 + 5 credits, with [PBR maps enabled](https://docs.meshy.ai/en/api/image-to-3d). The material loss reproduced: the source had normal and metallic/roughness maps, while the rigged result omitted them and added emission.
 
