@@ -27,6 +27,26 @@ The first motion transfer tilted the head downward and compressed the neck. Astr
 
 Twelve poses were sampled across flight, display, forward attack, and death. Flight and the raised-sword pose show an improved neck transition, but the final death pose still stretches hair at the nape, and fitting the existing sword hand leaves a visible wrist seam. Welding vertices along UV seams and recalculating normals did not resolve these defects. A dark-color hair-weight trial also affected the blue neckline and was rejected. The full action set and in-game review remain unfinished. The Archangel has not received an integrated body yet.
 
+### Neck proportions and nape hair
+
+Further work on October 2 slightly shortened the neck and widened its base. The adjustment is a reversible Blender shape key. Selected idle, movement, attack, and death poses have been reviewed; the complete animation set has not.
+
+![Neck proportion revision, an actual high-resolution Blender still. Not installed.](/images/castle-top-tier-01/angel-neck220-proportions.png)
+
+The nape remains unfinished. Fine gaps already exist in the source hair geometry, and changing skin weights alone did not remove them. An inner backing exposed a smooth lid; a surface reconstructed from the hair envelope left visible edges. Both were rejected. Filling open boundaries repaired only a few gaps, so the source topology still needs work.
+
+![Rejected nape backing: a smooth lid becomes visible when the head bends. Actual Blender still; not installed.](/images/castle-top-tier-01/angel-nape222-rejected.png)
+
+### Joining the sword hand to the new forearm
+
+The existing sword hand retains its finger rig. The new body's open hand was cut away, and a deforming mesh joins the two boundaries. A wrist adjustment that worked in one pose curled into the palm during an attack. Rotating the whole hand changed the sword direction. Neither approach was retained.
+
+A separate animation defect came from recording the hand attachment in world space: between keys, it drifted away from the new wrist. Making adjacent quaternion keys consistent did not fix that separation. Parenting the attachment to the actual hand bone and recording local offsets removed the large gap in the reviewed transition pose while preserving the original integer-frame poses.
+
+![Attack transition after the attachment hierarchy correction. Actual Blender clay render for geometry review, not final materials.](/images/castle-top-tier-01/angel-wrist216-clay.png)
+
+Across four actions, 104 integer and quarter-frame samples showed the bridge endpoints following both source meshes. Local intersection candidates remain in attack and death, and texture and shading continuity are unfinished. The game remains on **0.27.32**; none of these neck, hair, or wrist revisions is installed. The Archangel head and wing attachments also remain in progress.
+
 ### Separate-head fitting history
 
 The workflow still uses imagegen references, Meshy geometry, and Astra's Blender assembly. The Angel keeps long black hair; the Archangel keeps brown hair and the winged circlet. The revisions focus on the brow, eye sockets, and jaw. Sculpting the existing heads first produced an awkward chin without the intended character, so separate replacement heads followed.
