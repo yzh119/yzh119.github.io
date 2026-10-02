@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The integrated Angel and all 94 frames are installed in local version 0.27.33 and shown in battle. The Archangel remains unchanged. Includes gameplay and rejected trials."
+homeSummary: "The Archangel body and 91 frames are installed in 0.27.34; the Angel retains its previous update. Includes gameplay and Blender stills. New curved wings remain in progress."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -15,7 +15,29 @@ The integrated Angel body, revised neck and hair, sword-hand connection, and fit
 
 ![Local VCMI battle in 0.27.33. The black-haired Angel in the white robe at lower right is updated; the nearby Archangel remains the previous draft. Actual gameplay capture.](/images/castle-top-tier-01/angel-02733-battle.png)
 
-A local test battle confirms the revised Angel appears on the battlefield. The wings follow the new spine, with a local root adjustment applied across all 94 frames. This remains a test draft: hair joins, wrist materials, robe texture borders, and some flight deformation need work. The screenshot and packaging checks do not constitute a complete visual review of every action. **The Archangel has not received these changes.**
+A local test battle confirms the revised Angel appears on the battlefield. The wings follow the new spine, with a local root adjustment applied across all 94 frames. This remains a test draft: hair joins, wrist materials, robe texture borders, and some flight deformation need work. The screenshot and packaging checks do not constitute a complete visual review of every action. <s>**The Archangel has not received these changes.**</s> The Archangel subsequently received its own body update in 0.27.34, described next.
+
+## Archangel body update (October 2, 0.27.34)
+
+The Archangel now uses one reconstruction for the head, neck, and armored body, retaining brown hair, the winged circlet, dark steel with gold trim, and the white tabard. Meshy 7 geometry cost 30 credits and rigging cost 5. Astra restored the original material maps, transferred the existing actions, and attached the sword, shield, and closed grips to the new wrists. The separate-head neck seam from earlier trials is no longer part of this model.
+
+![Archangel body update, an actual high-resolution Blender still. This assembly matches the body and equipment in 0.27.34 and retains the existing wings.](/images/castle-top-tier-01/archangel-02734-full.png)
+
+![Actual Blender close-up of the integrated head and neck. Shield and wings are hidden for this inspection view. Not concept art.](/images/castle-top-tier-01/archangel-02734-neck.png)
+
+All **16 groups and 91 frames** have been exported at 1× and 2× with shadows and selection outlines. Packaging reports 0 errors and 0 warnings. The local mod is now **0.27.34**, and a test battle confirms loading. The Angel and other creatures retain their previous assets; no VCMI source was changed.
+
+![Actual local VCMI test battle running 0.27.34.](/images/castle-top-tier-01/archangel-02734-battle.png)
+
+This update delivers the body and equipment assembly while **retaining the previously installed wing geometry and motion**. The new curved wings are not installed. Flight attachment and folded-wing fidelity remain unfinished, as do visible wrist, elbow, and death-pose deformation defects.
+
+### Rejected wing assembly trials
+
+The new wing trial exposed a hierarchy error: its armature followed the body, but its meshes did not follow the armature's object transform. The body fell while the wings stayed upright. Parenting the meshes correctly made them follow the fall, after which ground checks revealed substantial penetration. Rotating the roots using a ground-only objective pushed feathers through the legs. That trial was not installed.
+
+![Rejected wing assembly: the body has fallen while the wings remain upright. Actual Blender still; not installed.](/images/castle-top-tier-01/archangel-wing373-rejected.png)
+
+Bone naming also caused a misplaced attachment: in this Meshy rig, Spine is the upper chest and Spine02 is lower. Choosing by the name placed the roots too low. Refitting from measured bone positions still needs a complete flight and death review. The body update ships first; the wing candidates and rejected trials remain available for the next revision.
 
 <details>
 <summary>Pre-installation neck, hair, and wrist trials (status statements describe those earlier drafts)</summary>
@@ -106,7 +128,7 @@ The old flight animation also has a visible gap between the wing roots and the t
 
 ## Archangel folded-wing revision (October 1, not installed)
 
-<s>The game still runs 0.27.32.</s> The mod reached 0.27.33 on October 2, but the Archangel assets remain unchanged. Comparing the Archangel with the original showed that thinner feathers alone had not fixed the folded silhouette: the old wings hang like straight panels, missing the rounded upper edge and darker inner layers. Bending the old rig produced a pinched elbow. This revision keeps the body and equipment and rebuilds the wings.
+<s>The game still runs 0.27.32.</s> <s>The mod reached 0.27.33 on October 2, but the Archangel assets remain unchanged.</s> Version 0.27.34 subsequently replaced the Archangel body; the new wings in this section remain uninstalled. Comparing the Archangel with the original showed that thinner feathers alone had not fixed the folded silhouette: the old wings hang like straight panels, missing the rounded upper edge and darker inner layers. Bending the old rig produced a pinched elbow. This revision keeps the body and equipment and rebuilds the wings.
 
 ![Folded-wing reference generated with built-in image_gen for Meshy; not game animation](/images/castle-top-tier-01/archangel-wing116-concept.png)
 
