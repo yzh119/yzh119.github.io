@@ -3,11 +3,27 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.32 replaces the Cavalier downward attack’s rear with a grounded turn and downward thrust. Champion and upward-attack work remain pending."
+homeSummary: "Local 0.27.32 remains installed. New Meshy Archangel wings have a Blender fitting; unfolding failures, seam repairs and remaining work are documented with stills."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
 All fourteen Castle creatures have local drafts. On October 1, **0.27.32** gives the Cavalier downward attack a grounded turn and downward thrust, correcting slight hoof penetration during transitions. The Champion has not received these revisions; upward attacks and other roster motion remain under review.
+
+## Archangel folded-wing revision (October 1, not installed)
+
+The game still runs 0.27.32. Comparing the Archangel with the original showed that thinner feathers alone had not fixed the folded silhouette: the old wings hang like straight panels, missing the rounded upper edge and darker inner layers. Bending the old rig produced a pinched elbow. This revision keeps the body and equipment and rebuilds the wings.
+
+![Folded-wing reference generated with built-in image_gen for Meshy; not game animation](/images/castle-top-tier-01/archangel-wing116-concept.png)
+
+Meshy reconstructed front and back surfaces with depth, consuming 30 credits. Astra separated the wings in Blender and adjusted their size and attachment positions. This high-resolution still shows the actual 3D model. It is a folded-pose fitting, not an installed animation replacement.
+
+![High-resolution Blender still of the replacement Meshy wings fitted to the body; not concept art](/images/castle-top-tier-01/archangel-wing116-fit.png)
+
+Two unfolding attempts failed. Treating connected mesh components as individual feathers and assigning bones by their roots opened gaps at the elbow. Blending weights uniformly within each component then produced fragmentation. A diagnostic weld revealed why: the 199 / 227 components per side were separated by texture seams. Merging coincident vertices within 0.000001 scene units on a diagnostic copy produced one connected component per wing.
+
+![Rejected component-based binding with visible elbow gaps during unfolding; Blender still, not installed](/images/castle-top-tier-01/archangel-wing119-rejected.png)
+
+Continuous per-vertex weights now preserve the original texture layout while preventing those seams from separating. The wings have been tested on the seven-frame flying body animation, but the fully opened root still curls and the recovery silhouette needs more comparison with the original. Full action coverage, collision review and in-game acceptance remain unfinished. The Cavalier upward-attack and Champion candidates also remain local and uninstalled.
 
 ## Cavalier downward attack
 
