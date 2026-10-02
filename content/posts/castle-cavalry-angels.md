@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The game remains on 0.27.32. New Angel and Archangel heads, the failed cheek geometry, and unfinished neck and wing attachments are documented with Blender stills."
+homeSummary: "The game remains on 0.27.32. The Angel now has an integrated head, neck, and body, with corrected idle retargeting. Death-pose hair, wrist fitting, and Archangel wing attachment remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -12,6 +12,22 @@ All fourteen Castle creatures have local drafts. On October 1, **0.27.32** gives
 ## Angel and Archangel faces (October 2, not installed)
 
 The latest feedback identifies two problems: both faces look too youthful for mature warriors, and the Archangel's wings detach from the body in flight. The local game remains on **0.27.32**. None of the head or attachment revisions below has replaced the installed sprites.
+
+### An integrated head, neck, and body
+
+![Rejected separate-head fit with a visible neck transition. Actual Blender still; not installed](/images/castle-top-tier-01/angel-neck152-rejected.png)
+
+Separate head fitting left a neck ledge, broken hair edges, and mismatched materials. Boundary bridges, skin-color blending, and color-based hair trimming did not produce a usable fit. The Angel now uses a single Meshy 7 reconstruction of the head, neck, and body, keeping the white robe, blue trim, and mature face reference. Geometry cost 30 credits and the rig cost 5. Wings, sword, and the existing articulated sword hand remain separate.
+
+![Side view of the integrated Angel body, an actual high-resolution Blender still. Not installed.](/images/castle-top-tier-01/angel-body162-side.png)
+
+The first motion transfer tilted the head downward and compressed the neck. Astra corrected rotation transfer for the head and neck bones. The idle pose below shows the resulting transition on the rigged body.
+
+![Angel neck after the motion-transfer correction, an actual high-resolution Blender still. Not concept art; not installed.](/images/castle-top-tier-01/angel-body166-neck.png)
+
+Twelve poses were sampled across flight, display, forward attack, and death. Flight and the raised-sword pose show an improved neck transition, but the final death pose still stretches hair at the nape, and fitting the existing sword hand leaves a visible wrist seam. Welding vertices along UV seams and recalculating normals did not resolve these defects. A dark-color hair-weight trial also affected the blue neckline and was rejected. The full action set and in-game review remain unfinished. The Archangel has not received an integrated body yet.
+
+### Separate-head fitting history
 
 The workflow still uses imagegen references, Meshy geometry, and Astra's Blender assembly. The Angel keeps long black hair; the Archangel keeps brown hair and the winged circlet. The revisions focus on the brow, eye sockets, and jaw. Sculpting the existing heads first produced an awkward chin without the intended character, so separate replacement heads followed.
 
@@ -25,7 +41,9 @@ A new Angel reconstruction uses Meshy 7 with remeshing enabled, again costing 30
 
 ![New Archangel head, a Blender still of the actual 3D model, retaining the winged circlet. Not installed.](/images/castle-top-tier-01/archangel-head131-model.png)
 
-Both heads are being fitted to the existing bodies. Cutting the old heads by bone weights initially left jagged neck edges. A clean cut still needs the replacement bust base fitted to the original neck. Overlapping and projecting the surfaces left a protruding bust base, stretching, and flickering, so those fits were rejected. Directly bridging the cut boundaries and their textures is now being tested. Neck weights, material transitions, and the complete action set remain unfinished.
+~~Both heads are being fitted to the existing bodies. Cutting the old heads by bone weights initially left jagged neck edges. A clean cut still needs the replacement bust base fitted to the original neck. Overlapping and projecting the surfaces left a protruding bust base, stretching, and flickering, so those fits were rejected. Directly bridging the cut boundaries and their textures is now being tested. Neck weights, material transitions, and the complete action set remain unfinished.~~
+
+October 2 correction: this separate-head fitting route has been discontinued. The Angel now uses the integrated candidate above, with motion and attachment work still pending. The Archangel head candidates remain available as references.
 
 The old flight animation also has a visible gap between the wing roots and the torso. Earlier intersection checks missed attachment continuity. Moving the entire wings inward closed the gap but pushed long feathers through the legs during the downstroke. Local attachment and weight repairs are now under review. The folded-wing and seven-frame flight candidates described below also remain unfinished.
 
