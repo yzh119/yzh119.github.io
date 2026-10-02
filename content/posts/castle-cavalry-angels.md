@@ -3,11 +3,40 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local test version 0.27.22 installs revised claws and poses for both Griffins across 170 frames, retaining the Archangel collapse update. Asset checks pass; in-game display remains unverified."
+homeSummary: "Local 0.27.24 installs the Swordsman arm and larger Griffin wings. Added a 0.27.22 battle capture; Angel proportions remain offline, including a rejected feather-fold trial."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.22** installs larger, more visible claws and revised poses for both Griffins, retaining the Archangel collapse from 0.27.21. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review.
+All fourteen Castle units have local drafts. On October 1, local mod **0.27.24** installed the Swordsman free-arm correction and larger wings for both Griffins. A battle capture is available for 0.27.22; the new 0.27.24 revision has not yet been checked in battle. User feedback identified undersized Griffin wings, an awkward Swordsman arm, and problems with Angel proportions and idle wings. Those revisions are continuing, with ordinary Pikeman clothing queued afterwards.
+
+## October 1 model revisions
+
+The 0.27.22 test battle confirmed that all fourteen units could be displayed. This capture predates the latest Swordsman arm correction and does not establish full animation playback quality.
+
+![Local VCMI test battle with fourteen Castle units in 0.27.22; this predates completion of the latest revisions](/images/castle-top-tier-01/castle-battle02722.png)
+
+The Swordsman's free-side elbow projected forward before the forearm bent back down. Astra adjusted the wrist target and elbow direction, keeping the separate hand attached while preserving the sword arm and its existing swing. The correction covers 13 groups and 76 frames. Version **0.27.23** installs 336 body, shadow and outline images with unchanged animation configurations. Installed format validation reports zero errors or warnings; 6,805 other files remain unchanged, and backup and rollback validation passed. Full in-game motion still needs review.
+
+![High-resolution Blender still of the Swordsman free-arm correction, subsequently applied across the action set; not an in-game capture](/images/castle-top-tier-01/swordsman-arm20-still.png)
+
+Both Griffins now have larger wings while retaining their original folding proportions and body scale. All 170 revised poses fit the game canvas and keep the wings above the ground. The complete set is installed in **0.27.24**, with zero format errors or warnings. The update changes 744 images and the mod metadata; 6,399 other files remain unchanged, including the revised Swordsman. Backup and rollback validation passed. In-game playback still needs review.
+
+![Blender still of the Griffin with larger wings; the corresponding revision is installed in 0.27.24, not an in-game capture](/images/castle-top-tier-01/griffin-wings146-offline.png)
+
+The Angel continues to use Meshy body and wing geometry, with binding and motion edited by Astra. Comparison with the original led to a more compact idle-wing silhouette, broader shoulders, shorter forearms and a smaller free hand. The revision covers 94 frames and is being rendered; it remains an offline candidate.
+
+![High-resolution Blender still of the Angel proportion and compact-wing candidate; not installed](/images/castle-top-tier-01/angel-proportion28-offline.png)
+
+An earlier trial pointed the first wing joint upwards and folded the next two downwards. The existing weights curled the upper feathers into loops, so that version was rejected. The current candidate retains smoother feather geometry while reducing the idle silhouette, with the extended span retained in flight.
+
+![Rejected Angel fold trial with visibly curled upper feathers](/images/castle-top-tier-01/angel-fold26-rejected.png)
+
+<details>
+<summary>Opening recorded at version 0.27.22</summary>
+
+<s>All fourteen Castle units have local drafts, with realism revisions continuing. Local mod **0.27.22** installs larger, more visible claws and revised poses for both Griffins, retaining the Archangel collapse from 0.27.21. The approved Crusader is unchanged. Feather joins, motion fidelity and actual battle display still require review.</s>
+
+</details>
 
 <details>
 <summary>Status recorded at version 0.27.21</summary>
@@ -356,7 +385,7 @@ The still and intersection findings above record the work before installation. S
 
 Reopening the scene and checking frames six through eight at 1/128-frame intervals covers **257 samples**. The tested main body, sword, shield and wing surface pairs clear, and visible meshes remain above ground. The eight exported poses are preserved. This result covers the final two intervals and specified surface pairs, not complete body self-intersection or every other action's interpolation.
 
-The eight replacement frames and shadows are installed in local **0.27.21**. All 396 staged file hashes were checked. Actual changes are 32 death images and the mod metadata; another 7,111 files remain unchanged. Installed format validation reports zero errors or warnings, with backup and rollback verified. Griffins and the Crusader are unchanged by this update. The desktop remains locked, so battle display is unverified. Feather joins and details of the original silhouette remain refinement work.
+The eight replacement frames and shadows are installed in local **0.27.21**. All 396 staged file hashes were checked. Actual changes are 32 death images and the mod metadata; another 7,111 files remain unchanged. Installed format validation reports zero errors or warnings, with backup and rollback verified. Griffins and the Crusader are unchanged by this update. <s>The desktop remains locked, so battle display is unverified.</s> On October 1, a 0.27.22 battle-display capture was added above; full motion review remains pending. Feather joins and details of the original silhouette remain refinement work.
 
 ## Griffin reference correction and rigging trials
 
@@ -524,7 +553,7 @@ Reviewing the full action set exposed inconsistent lighting. Idle, mouse-over an
 
 All **170 body frames and their shadows** are exported. Each shadow projects the actual posed mesh onto fixed ground and receives the same opacity and blur settings. The 1× and 2× bodies, shadows and selection outlines total 744 images. Native active groups, frame counts and file-format checks pass; validation after installation reports zero errors and zero warnings.
 
-The local Castle mod is now **0.27.20**. All 748 installed asset and configuration files were hash-checked, and 6,395 untouched files were verified unchanged. Backups and a rollback script are retained. The approved Crusader is unchanged. The desktop is locked, so visual verification inside the game remains pending.
+The local Castle mod is now **0.27.20**. All 748 installed asset and configuration files were hash-checked, and 6,395 untouched files were verified unchanged. Backups and a rollback script are retained. The approved Crusader is unchanged. <s>The desktop is locked, so visual verification inside the game remains pending.</s> The October 1 section includes a 0.27.22 battle-display capture; full motion review remains pending.
 
 Outstanding work recorded at 0.27.20: <s>This is still a test build. The foreclaws are small, and mouth corners, feather joins and late-death deformation need refinement. Hit and defence amplitudes also differ from the original. The Archangel final death wing fold remains unfinished as well.</s> The Archangel collapse was updated in 0.27.21 above; further Griffin claw work follows below. Other shape and motion details still require review.
 
@@ -549,7 +578,7 @@ All 170 frames and their shadows are exported using the shared game camera and f
 
 ![Both Griffins: original, 0.27.21 and revised claws, with identical framing and scale. The right column was labeled offline when this comparison was made; those assets are now installed in 0.27.22. These are not in-game screenshots](/images/castle-top-tier-01/griffin-claw133-both.jpg)
 
-All 748 staged asset and configuration hashes match the installation, and installed format validation reports zero errors or warnings. Actual changes are 744 images and the mod metadata; another 6,399 files remain unchanged, including the Archangel and Crusader. Backup and rollback validation passed without applying a rollback. The desktop remains locked, so this version has not been visually verified in-game. Claw shape, feather joins and differences from the original motion remain open to refinement.
+All 748 staged asset and configuration hashes match the installation, and installed format validation reports zero errors or warnings. Actual changes are 744 images and the mod metadata; another 6,399 files remain unchanged, including the Archangel and Crusader. Backup and rollback validation passed without applying a rollback. <s>The desktop remains locked, so this version has not been visually verified in-game.</s> A 0.27.22 battle-display capture was added on October 1, above; it does not verify every action. Claw shape, feather joins and differences from the original motion remain open to refinement.
 
 <details>
 <summary>Incorrect reference and unrigged-body record from 27 September</summary>
