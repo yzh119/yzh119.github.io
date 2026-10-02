@@ -3,11 +3,22 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.30 revises the Cavalier’s front-attack lance timing and grip. Includes ten frames and close-ups of the failed and revised grips; other directions remain under review."
+homeSummary: "Local 0.27.31 extends the Cavalier grip revision across all 13 groups and 81 frames, fixing turn clearance and death transitions. Champion and attack-pose review continues."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle creatures have local drafts. On October 1, **0.27.30** revises the Cavalier’s front-attack lance timing and grip, retaining the Swordsman arm swing and earlier revisions. Other attack directions, the Champion and roster-wide motion comparisons remain under review.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.31** extends the Cavalier grip revision across all 13 groups and 81 frames, including leg clearance during turns and the transition into dropping the lance. The Champion has not received this revision. Native-pose comparisons for upward and downward attacks, and motion review of other creatures, continue.
+
+Local 0.27.31 entered a test battle, confirming loading and battle progression. Every action has not yet been captured in full.
+
+![Local VCMI battle running 0.27.31, with the Cavalier in the lower-right engagement](/images/castle-top-tier-01/castle-battle02731.png)
+
+<details>
+<summary>Status at 0.27.30</summary>
+
+<s>All fourteen Castle creatures have local drafts. On October 1, **0.27.30** revises the Cavalier’s front-attack lance timing and grip, retaining the Swordsman arm swing and earlier revisions. Other attack directions, the Champion and roster-wide motion comparisons remain under review.</s>
+
+</details>
 
 Local 0.27.30 entered a test battle and displayed normally. This capture does not cover the complete ten-frame attack playback.
 
@@ -196,6 +207,21 @@ The body frames and matching shadows are installed: 40 images and metadata chang
 ![Revised level-thrust grip, a high-resolution Blender close-up; the complete poses appear below](/images/castle-top-tier-01/cavalier-grip030.png)
 
 ![Ten Cavalier front-attack frames and matching shadows installed in 0.27.30, rendered in Blender at game resolution](/images/castle-top-tier-01/cavalier-front030.jpg)
+
+**The full-action grip revision in 0.27.31.** The remaining actions keep their lance trajectories while the palm and arm are repositioned together. The display action and left turn also exposed an old shaft–leg intersection. The hand and lance now move outward together, then return smoothly. Transition checks covered idle, movement start and stop, display, turns and death. The old right-turn wrist orientation did not match its neighbouring actions, and the death clip had missed the upright-lance revision. Reusing those transforms produced roughly 5–9 centimetres of wrist displacement at transitions. The revised right arm and lance now reverse the left-turn sequence. Death starts from the corrected carrying pose and blends into the previous falling trajectory during release.
+
+The reopened death scene was checked at 113 samples: no lance–horse surface intersections or lance penetration below the floor were detected. This does not certify every self-intersection in the model. The repaired right-turn and death boundaries now agree at the wrist within floating-point precision. All body frames and shadows are installed, with format and rollback checks passing. The movement-to-stop boundary retains an existing difference of roughly 3 centimetres; native-pose review of the upward and downward attacks remains unfinished.
+
+![The display grip moves outward to clear the leg, a high-resolution Blender still](/images/castle-top-tier-01/cavalier-clearance031.png)
+
+![Top: the death-transition trial; bottom: the revision beginning with an upright lance. Both rows are Blender frames](/images/castle-top-tier-01/cavalier-death031.jpg)
+
+<details>
+<summary>Sampled poses across 0.27.31 actions</summary>
+
+![Sampled Cavalier actions and matching shadows rendered in Blender](/images/castle-top-tier-01/cavalier-actions031.jpg)
+
+</details>
 
 Six missing Royal Griffin turn frames are now rendered, bringing the gold talons to all 13 groups and 85 frames. The first colour-threshold pass missed highlights and shaded areas, leaving brown and yellow patches. The replacement mask comes from paired renders of the same pose before and after talon colouring, preserving the silver feathers and brown lion body. The body silhouettes retain their registration. The package passed validation with zero errors or warnings and is installed with rollback files; 0.27.9 has not had a new battle check. The body is still too broad and the folded wings need work.
 
