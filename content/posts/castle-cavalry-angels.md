@@ -3,11 +3,32 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.31 extends the Cavalier grip revision across all 13 groups and 81 frames, fixing turn clearance and death transitions. Champion and attack-pose review continues."
+homeSummary: "Local 0.27.32 replaces the Cavalier downward attack’s rear with a grounded turn and downward thrust. Champion and upward-attack work remain pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle creatures have local drafts. On October 1, **0.27.31** extends the Cavalier grip revision across all 13 groups and 81 frames, including leg clearance during turns and the transition into dropping the lance. The Champion has not received this revision. Native-pose comparisons for upward and downward attacks, and motion review of other creatures, continue.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.32** gives the Cavalier downward attack a grounded turn and downward thrust, correcting slight hoof penetration during transitions. The Champion has not received these revisions; upward attacks and other roster motion remain under review.
+
+## Cavalier downward attack
+
+The previous downward attack reused a rotated front attack, including its rearing horse. The original instead turns into a low thrust. This revision retains the repaired grip and changes the horse stance, rider lean and turning phases. An intermediate attempt held a frontal orientation throughout the middle frames and looked stalled; the revised turn peaks at frame 4 and then eases back.
+
+![Nine Blender-rendered frames using the fixed game-export camera; not concept art](/images/castle-top-tier-01/cavalier-down032.jpg)
+
+![High-resolution Blender still: grip and arm at downward-attack frame 4](/images/castle-top-tier-01/cavalier-grip032.png)
+
+Reopening the Blender scene and sampling 33 poses found no lance–horse intersections. Endpoint meshes differ from holding by less than 0.000001 scene units at any vertex. These checks cover specific issues; they do not certify every self-intersection or the appearance of every action.
+
+Local 0.27.32 entered a test battle, confirming loading and battle progression. This capture does not cover all nine downward-attack frames in playback.
+
+![VCMI 0.27.32](/images/castle-top-tier-01/castle-battle02732.png)
+
+<details>
+<summary>Record at 0.27.31</summary>
+
+<s>All fourteen Castle creatures have local drafts. On October 1, **0.27.31** extends the Cavalier grip revision across all 13 groups and 81 frames, including leg clearance during turns and the transition into dropping the lance. The Champion has not received this revision. Native-pose comparisons for upward and downward attacks, and motion review of other creatures, continue.</s>
+
+</details>
 
 Local 0.27.31 entered a test battle, confirming loading and battle progression. Every action has not yet been captured in full.
 
