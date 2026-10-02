@@ -3,11 +3,20 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.26 installs the revised Pikeman costume alongside larger Griffin wings and Swordsman and Angel repairs, with Blender stills and a new battle capture."
+homeSummary: "Local 0.27.27 repairs Angel wing attachment and clearance, retaining the Pikeman costume, larger Griffin wings and Swordsman arm revisions. Includes new Blender stills and failed trials."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle creatures have local drafts. On October 1, **0.27.26** adds the revised Pikeman costume after the Griffin wings, Swordsman arm and Angel proportion and idle-wing repairs. The new assets have entered a test battle; detailed appearance and motion review remains necessary.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.27** repairs the Angel wing attachment and clearance while retaining the Pikeman costume, Griffin wings and Swordsman arm revisions. The revised assets have loaded in a test battle, with the Angel relocated and battle progressing after its attack. Detailed appearance and motion review remains necessary.
+
+![Local 0.27.27 test battle with the revised Angel at the lower right](/images/castle-top-tier-01/castle-battle02727.png)
+
+<details>
+<summary>Status at 0.27.26</summary>
+
+<s>All fourteen Castle creatures have local drafts. On October 1, **0.27.26** adds the revised Pikeman costume after the Griffin wings, Swordsman arm and Angel proportion and idle-wing repairs. The new assets have entered a test battle; detailed appearance and motion review remains necessary.</s>
+
+</details>
 
 ![Local 0.27.26 test battle; the revised Pikeman is at the upper right](/images/castle-top-tier-01/castle-battle02726.png)
 
@@ -37,6 +46,24 @@ Both Griffins now have larger wings while retaining their original folding propo
 ![Blender still of the Griffin with larger wings; the corresponding revision is installed in 0.27.24, not an in-game capture](/images/castle-top-tier-01/griffin-wings146-offline.png)
 
 The Angel continues to use Meshy body and wing geometry, with binding and motion edited by Astra. Comparison with the original led to a more compact idle-wing silhouette, broader shoulders, shorter forearms and a smaller free hand. All 94 frames and shadows are installed in **0.27.25**, with unchanged animation configurations. The update changes 412 images and the mod metadata, leaving 6,731 other files unchanged. Installed format validation reports zero errors or warnings; backup and rollback validation passed. Continuous in-game playback still needs review.
+
+### Revising the Angel wing attachment
+
+Further inspection found feathers entering the back in the compact-wing revision installed in 0.27.25. Moving the entire wings outward cleared the intersection checks but left visibly floating roots from behind. A broader blend into the back then stretched the inner feathers into bands. Neither trial was installed.
+
+![Rejected outward shift with floating wing roots in flight, a rear three-quarter Blender render](/images/castle-top-tier-01/angel-root41-rejected.png)
+
+![Rejected broad binding patch with stretched inner feathers, a Blender still](/images/castle-top-tier-01/angel-root45-rejected.png)
+
+The new candidate keeps the Meshy wings, with a smaller binding transition near each root following the torso. The roots now retain a fixed position relative to the torso while the wings rotate. A right-wing adjustment also clears the sword during the wind-up. All 94 poses were reopened: no sword/body or sword/wing surface intersections, body/wing contact confined to the designated attachment patch, and intact wrist seams and game framing. This does not certify every self-intersection or continuous interpolation. All 94 frames and their shadows are installed in local **0.27.27**. The update changes 412 images and mod metadata, leaving 6,731 other files unchanged. Animation configurations are unchanged; installed validation reports zero errors or warnings, and backup and rollback validation passed. The assets loaded and battle progressed in a test run; this spot check does not establish acceptance of every action.
+
+![High-resolution Blender idle still of the Angel revision candidate; corresponding actions installed in 0.27.27](/images/castle-top-tier-01/angel-root54-holding.png)
+
+![Flight pose of the same model, a high-resolution Blender still; corresponding actions installed in 0.27.27](/images/castle-top-tier-01/angel-root54-moving.png)
+
+![High-resolution Blender wind-up still after clearing the right wing; corresponding actions installed in 0.27.27](/images/castle-top-tier-01/angel-root54-attack.png)
+
+![Final death pose of the same model, a high-resolution Blender still; corresponding actions installed in 0.27.27](/images/castle-top-tier-01/angel-root54-death.png)
 
 <details>
 <summary>October 1 export-stage record</summary>
