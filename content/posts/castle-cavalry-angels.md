@@ -3,11 +3,22 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.29 adds the Swordsman’s walking arm swing. Includes an eight-frame original/previous/current comparison and a battle capture."
+homeSummary: "Local 0.27.30 revises the Cavalier’s front-attack lance timing and grip. Includes ten frames and close-ups of the failed and revised grips; other directions remain under review."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle creatures have local drafts. On October 1, **0.27.29** adds the Swordsman’s walking arm swing, retaining the Griffin, Angel and Pikeman revisions. The new version has entered a test battle. Motion and fidelity review across the roster continues.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.30** revises the Cavalier’s front-attack lance timing and grip, retaining the Swordsman arm swing and earlier revisions. Other attack directions, the Champion and roster-wide motion comparisons remain under review.
+
+Local 0.27.30 entered a test battle and displayed normally. This capture does not cover the complete ten-frame attack playback.
+
+![Local VCMI test battle running 0.27.30](/images/castle-top-tier-01/castle-battle02730.png)
+
+<details>
+<summary>Status at 0.27.29</summary>
+
+<s>All fourteen Castle creatures have local drafts. On October 1, **0.27.29** adds the Swordsman’s walking arm swing, retaining the Griffin, Angel and Pikeman revisions. The new version has entered a test battle. Motion and fidelity review across the roster continues.</s>
+
+</details>
 
 ![Local 0.27.29 test battle confirms loading and display; a single capture does not verify the complete walking loop](/images/castle-top-tier-01/castle-battle02729.png)
 
@@ -175,6 +186,16 @@ The following records each version's changes and verification at the time. The l
 Both carry the lance upward while standing and moving, lower it during an attack, and raise it again afterward. Each retains the original 13 groups and 81 frames. Body, shadow and selection layers at 1× and 2× total 342 PNGs per unit. Both packages passed format validation with zero errors and warnings, and installation preserved backups and rollback scripts. This update checked the exported frames and installed files; it has no new battle screenshot. The battle image in the historical record below shows an earlier version.
 
 ![Original H3, version 0.27.6, and installed 0.27.8, from left to right; Cavalier above, Champion below. The new sprites are Blender renders; original pixels are enlarged with nearest-neighbour sampling](/images/castle-top-tier-01/cavalry-upright3274.png)
+
+On October 1, **0.27.30** updates the Cavalier’s ten front-attack frames. The previous lance was already level in frame three; the revision delays lowering until around frame five. A wrist-only timing trial drove the rear shaft through the gauntlet, and two elbow-only trials failed too. The selected revision preserves the lance’s world position and direction, turns the palm relative to the handle and solves the arm with two-bone IK. During the level thrust, an additional palm rotation moves the forearm away from the shaft. Reopening 145 sampled poses gives a maximum wrist-target error of about 0.00000038 metres. Contact checks still include the grip and a small cuff transition; this is not a claim of zero intersections throughout the model.
+
+The body frames and matching shadows are installed: 40 images and metadata changed, 7,103 files stayed unchanged, and animation configurations were preserved. Installation and rollback checks passed. The native downward attack lowers its lance earlier, so it must be reviewed separately. Other directions and the Champion retain their previous assets.
+
+![Rejected wrist-only trial, with the rear shaft passing through the gauntlet; a high-resolution Blender close-up](/images/castle-top-tier-01/cavalier-grip-failed3275.png)
+
+![Revised level-thrust grip, a high-resolution Blender close-up; the complete poses appear below](/images/castle-top-tier-01/cavalier-grip030.png)
+
+![Ten Cavalier front-attack frames and matching shadows installed in 0.27.30, rendered in Blender at game resolution](/images/castle-top-tier-01/cavalier-front030.jpg)
 
 Six missing Royal Griffin turn frames are now rendered, bringing the gold talons to all 13 groups and 85 frames. The first colour-threshold pass missed highlights and shaded areas, leaving brown and yellow patches. The replacement mask comes from paired renders of the same pose before and after talon colouring, preserving the silver feathers and brown lion body. The body silhouettes retain their registration. The package passed validation with zero errors or warnings and is installed with rollback files; 0.27.9 has not had a new battle check. The body is still too broad and the folded wings need work.
 
