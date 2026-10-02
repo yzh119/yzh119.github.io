@@ -3,11 +3,20 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.25 installs the Swordsman arm, larger Griffin wings and Angel proportion revisions. Added Blender stills, a 0.27.22 battle capture and a rejected fold trial. A new battle capture is included; exhaustive motion review remains pending."
+homeSummary: "Local 0.27.26 installs the revised Pikeman costume alongside larger Griffin wings and Swordsman and Angel repairs, with Blender stills and a new battle capture."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts. On October 1, local mod **0.27.25** installed the Swordsman free-arm correction, larger wings for both Griffins, and revised Angel proportions and idle wings. Version 0.27.25 has entered a test battle and has a new capture; exhaustive motion review remains pending. These revisions address feedback on Griffin span, the Swordsman arm and Angel proportions and idle wings. The revised Pikeman body now has offline motions; skirt edging still needs repair and the model is not installed.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.26** adds the revised Pikeman costume after the Griffin wings, Swordsman arm and Angel proportion and idle-wing repairs. The new assets have entered a test battle; detailed appearance and motion review remains necessary.
+
+![Local 0.27.26 test battle; the revised Pikeman is at the upper right](/images/castle-top-tier-01/castle-battle02726.png)
+
+<details>
+<summary>Status at 0.27.25</summary>
+
+<s>All fourteen Castle units have local drafts. On October 1, local mod **0.27.25** installed the Swordsman free-arm correction, larger wings for both Griffins, and revised Angel proportions and idle wings. Version 0.27.25 has entered a test battle and has a new capture; exhaustive motion review remains pending. These revisions address feedback on Griffin span, the Swordsman arm and Angel proportions and idle wings. The revised Pikeman body now has offline motions; skirt edging still needs repair and the model is not installed.</s>
+
+</details>
 
 ## October 1 model revisions
 
@@ -160,13 +169,19 @@ The material audit also found a pipeline error. The original Pikeman mesh GLB ha
 
 The attempt to reduce the cartoonish costume also simplified the light chest structure into a navy cloth doublet. A fresh comparison restored light silver chest protection, blue clothing and narrow yellow edging. Steel remains a modeling interpretation of the low-resolution region, requiring fidelity review. Meshy completed the mesh and rig for 30 and 5 credits respectively. Restoring the original PBR material included verifying matching UVs across 74,521 triangles.
 
-The new body retains the existing pike and separate gripping hands across 11 groups and 76 frames. Maximum wrist-target error is approximately 0.0053 mm, with less than 0.6 mm of shoulder adjustment. All images fit the original canvas. These checks cover grip alignment and output, not appearance acceptance. The installed game remains at 0.27.25.
+The new body retains the existing pike and separate gripping hands across 11 groups and 76 frames. Maximum wrist-target error is approximately 0.0053 mm, with less than 0.6 mm of shoulder adjustment. All images fit the original canvas. These checks cover grip alignment and output. After the edging repair and shadow render, **0.27.26** installs 326 images across 11 groups and 76 frames. Installed validation reports zero errors or warnings, with other creature files unchanged. A test battle confirms loading; detailed action review remains outstanding.
 
-![High-resolution Blender still of the new Meshy Pikeman body; not installed](/images/castle-top-tier-01/pikeman-costume05-model.png)
+![High-resolution Blender still of the new Meshy Pikeman body; recorded before the edging repair; the revised version is installed in 0.27.26](/images/castle-top-tier-01/pikeman-costume05-model.png)
 
-![Blender still after attaching the existing pike and separate hands to the new body; not installed](/images/castle-top-tier-01/pikeman-costume05-holding.png)
+![Blender still after attaching the existing pike and separate hands to the new body; recorded before the edging repair; the revised version is installed in 0.27.26](/images/castle-top-tier-01/pikeman-costume05-holding.png)
 
-The skirt edging still has jagged gaps. An attempted vertex-material repair smeared yellow across the border and was rejected. The motion draft above retains its original material, with this detail still pending repair.
+The installed repair fits four front skirt-border curves and adjusts blue and yellow material only near those lines, across every action. Body geometry, motion and original PBR textures are preserved. One intermediate shader trial left the vertex alpha at its default and turned the body white; it was rejected. Correct initialization produced the installed revision. Fine texture irregularities remain.
+
+![High-resolution Blender idle still after the edging repair](/images/castle-top-tier-01/pikeman-costume05-trim09.png)
+
+![High-resolution Blender still of the revised Pikeman attack](/images/castle-top-tier-01/pikeman-costume05-attack.png)
+
+Earlier failed trial, October 1: <s>The skirt edging still has jagged gaps. An attempted vertex-material repair smeared yellow across the border and was rejected. The motion draft above retains its original material, with this detail still pending repair.</s>
 
 ![Rejected edging repair with smeared yellow borders, retained as a failed trial](/images/castle-top-tier-01/pikeman-trim04-rejected.png)
 
@@ -177,7 +192,7 @@ The skirt edging still has jagged gaps. An attempted vertex-material repair smea
 
 </details>
 
-![Revised Pikeman modeling concept; corresponding Blender stills appear above, not installed](/images/castle-top-tier-01/pikeman-costume05-concept.png)
+![Revised Pikeman modeling concept; corresponding Blender stills appear above, recorded before the edging repair; the revised version is installed in 0.27.26](/images/castle-top-tier-01/pikeman-costume05-concept.png)
 
 The new image_gen concept reduces shoulder volume, narrows the pale trim and uses fitted trousers. Meshy completed the mesh and rig for 30 + 5 credits, with [PBR maps enabled](https://docs.meshy.ai/en/api/image-to-3d). The material loss reproduced: the source had normal and metallic/roughness maps, while the rigged result omitted them and added emission.
 
