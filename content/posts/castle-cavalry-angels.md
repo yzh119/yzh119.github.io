@@ -3,11 +3,18 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.27 repairs Angel wing attachment and clearance, retaining the Pikeman costume, larger Griffin wings and Swordsman arm revisions. Includes new Blender stills and failed trials."
+homeSummary: "Local 0.27.28 improves Griffin wing layering during flight and death while retaining the larger span, Angel attachment repair and Pikeman costume revision. Includes Blender stills and failed trials."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle creatures have local drafts. On October 1, **0.27.27** repairs the Angel wing attachment and clearance while retaining the Pikeman costume, Griffin wings and Swordsman arm revisions. The revised assets have loaded in a test battle, with the Angel relocated and battle progressing after its attack. Detailed appearance and motion review remains necessary.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.28** improves Griffin wing layering during flight and death, retaining the larger span and the Angel, Pikeman and Swordsman revisions. Window captures from this test were black, so a usable battle capture of 0.27.28 is still missing. Detailed motion review remains necessary.
+
+<details>
+<summary>Status at 0.27.27</summary>
+
+<s>All fourteen Castle creatures have local drafts. On October 1, **0.27.27** repairs the Angel wing attachment and clearance while retaining the Pikeman costume, Griffin wings and Swordsman arm revisions. The revised assets have loaded in a test battle, with the Angel relocated and battle progressing after its attack. Detailed appearance and motion review remains necessary.</s>
+
+</details>
 
 ![Local 0.27.27 test battle with the revised Angel at the lower right](/images/castle-top-tier-01/castle-battle02727.png)
 
@@ -44,6 +51,12 @@ The Swordsman's free-side elbow projected forward before the forearm bent back d
 Both Griffins now have larger wings while retaining their original folding proportions and body scale. All 170 revised poses fit the game canvas and keep the wings above the ground. The complete set is installed in **0.27.24**, with zero format errors or warnings. The update changes 744 images and the mod metadata; 6,399 other files remain unchanged, including the revised Swordsman. Backup and rollback validation passed. In-game playback still needs review.
 
 ![Blender still of the Griffin with larger wings; the corresponding revision is installed in 0.27.24, not an in-game capture](/images/castle-top-tier-01/griffin-wings146-offline.png)
+
+Reviewing all 170 enlarged-wing poses found wing overlap in one flight frame and the end of the death action. Rotating the whole right wing raised the final pose too far, so that trial was rejected. The next revision makes a small flight adjustment and uses Blender shape keys to separate the crossing feathers locally during the fall, preserving the roots and prone silhouette. Some overlap remains at the root connection; this is not a claim of zero intersections across the model. The revision is installed in local **0.27.28**. Actual changes comprise 67 images and mod metadata, with 7,076 other files unchanged. All four animation configurations are unchanged; installed validation reports zero errors or warnings, and backup and rollback validation passed. Window captures from this test were black; a usable battle capture of this revision is still missing.
+
+![Rejected death correction with the right wing raised too far, a Blender still](/images/castle-top-tier-01/griffin-layer159-rejected.png)
+
+![Final death pose with locally separated feathers and a flat silhouette, a Blender still; installed in 0.27.28](/images/castle-top-tier-01/griffin-feather162-death.png)
 
 The Angel continues to use Meshy body and wing geometry, with binding and motion edited by Astra. Comparison with the original led to a more compact idle-wing silhouette, broader shoulders, shorter forearms and a smaller free hand. All 94 frames and shadows are installed in **0.27.25**, with unchanged animation configurations. The update changes 412 images and the mod metadata, leaving 6,731 other files unchanged. Installed format validation reports zero errors or warnings; backup and rollback validation passed. Continuous in-game playback still needs review.
 
