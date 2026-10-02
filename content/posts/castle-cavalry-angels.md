@@ -3,11 +3,20 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.28 improves Griffin wing layering during flight and death while retaining the larger span, Angel attachment repair and Pikeman costume revision. Includes Blender stills and failed trials."
+homeSummary: "Local 0.27.29 adds the Swordsman’s walking arm swing. Includes an eight-frame original/previous/current comparison and a battle capture."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle creatures have local drafts. On October 1, **0.27.28** improves Griffin wing layering during flight and death, retaining the larger span and the Angel, Pikeman and Swordsman revisions. A fresh test run produced a usable battle capture of 0.27.28, confirming that the revised assets load and display. Detailed motion review remains necessary.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.29** adds the Swordsman’s walking arm swing, retaining the Griffin, Angel and Pikeman revisions. The new version has entered a test battle. Motion and fidelity review across the roster continues.
+
+![Local 0.27.29 test battle confirms loading and display; a single capture does not verify the complete walking loop](/images/castle-top-tier-01/castle-battle02729.png)
+
+<details>
+<summary>Status at 0.27.28</summary>
+
+<s>All fourteen Castle creatures have local drafts. On October 1, **0.27.28** improves Griffin wing layering during flight and death, retaining the larger span and the Angel, Pikeman and Swordsman revisions. A fresh test run produced a usable battle capture of 0.27.28, confirming that the revised assets load and display. Detailed motion review remains necessary.</s>
+
+</details>
 
 ![Local VCMI battle running 0.27.28, showing the revised Griffins, Swordsman and Angel; the Pikeman is at the upper right](/images/castle-top-tier-01/castle-battle02728.png)
 
@@ -47,6 +56,10 @@ The 0.27.22 test battle confirmed that all fourteen units could be displayed. Th
 ![Local VCMI test battle with fourteen Castle units in 0.27.22; this predates completion of the latest revisions](/images/castle-top-tier-01/castle-battle02722.png)
 
 The Swordsman's free-side elbow projected forward before the forearm bent back down. Astra adjusted the wrist target and elbow direction, keeping the separate hand attached while preserving the sword arm and its existing swing. The correction covers 13 groups and 76 frames. Version **0.27.23** installs 336 body, shadow and outline images with unchanged animation configurations. Installed format validation reports zero errors or warnings; 6,805 other files remain unchanged, and backup and rollback validation passed. Full in-game motion still needs review.
+
+The October 1 walking comparison exposed another issue: the sword hand stayed almost fixed in front. **0.27.29** swings it back toward the hip, bringing the blade closer to horizontal while the free arm comes forward. Both independent hand attachments follow their wrists. The first trial intersected the body with the blade in frame five; reducing that frame’s swing cleared the tested blade, hilt and pommel surfaces in all eight exported poses. Body and matching shadows were rendered again, replacing 28 images while preserving all other actions and configurations. Installed validation and rollback checks passed without errors or warnings. This addresses the arm swing; the gait still differs from the original.
+
+![Top: original H3; middle: 0.27.28; bottom: 0.27.29. Eight walking frames at a common scale; both replacement rows are Blender renders](/images/castle-top-tier-01/swordsman-walk029.jpg)
 
 ![High-resolution Blender still of the Swordsman free-arm correction, subsequently applied across the action set; not an in-game capture](/images/castle-top-tier-01/swordsman-arm20-still.png)
 
