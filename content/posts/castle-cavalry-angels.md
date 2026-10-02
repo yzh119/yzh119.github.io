@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The game remains on 0.27.32. The Angel now has an integrated head, neck, and body, with corrected idle retargeting. Death-pose hair, wrist fitting, and Archangel wing attachment remain unfinished."
+homeSummary: "The game remains on 0.27.32. Angel hair fitting and UV repairs are staged, with face shading under review. Wrist appearance, the full action set, and Archangel wing attachment remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -25,7 +25,7 @@ The first motion transfer tilted the head downward and compressed the neck. Astr
 
 ![Angel neck after the motion-transfer correction, an actual high-resolution Blender still. Not concept art; not installed.](/images/castle-top-tier-01/angel-body166-neck.png)
 
-Twelve poses were sampled across flight, display, forward attack, and death. Flight and the raised-sword pose show an improved neck transition, but the final death pose still stretches hair at the nape, and fitting the existing sword hand leaves a visible wrist seam. Welding vertices along UV seams and recalculating normals did not resolve these defects. A dark-color hair-weight trial also affected the blue neckline and was rejected. The full action set and in-game review remain unfinished. The Archangel has not received an integrated body yet.
+Record from the first integrated-body fit on October 2: <s>Twelve poses were sampled across flight, display, forward attack, and death. Flight and the raised-sword pose show an improved neck transition, but the final death pose still stretches hair at the nape, and fitting the existing sword hand leaves a visible wrist seam. Welding vertices along UV seams and recalculating normals did not resolve these defects. A dark-color hair-weight trial also affected the blue neckline and was rejected. The full action set and in-game review remain unfinished. The Archangel has not received an integrated body yet.</s> Subsequent hair and wrist revisions follow below. The installed game has not changed.
 
 ### Neck proportions and nape hair
 
@@ -33,7 +33,17 @@ Further work on October 2 slightly shortened the neck and widened its base. The 
 
 ![Neck proportion revision, an actual high-resolution Blender still. Not installed.](/images/castle-top-tier-01/angel-neck220-proportions.png)
 
-The nape remains unfinished. Fine gaps already exist in the source hair geometry, and changing skin weights alone did not remove them. An inner backing exposed a smooth lid; a surface reconstructed from the hair envelope left visible edges. Both were rejected. Filling open boundaries repaired only a few gaps, so the source topology still needs work.
+Earlier repair record: <s>The nape remains unfinished. Fine gaps already exist in the source hair geometry, and changing skin weights alone did not remove them. An inner backing exposed a smooth lid; a surface reconstructed from the hair envelope left visible edges. Both were rejected. Filling open boundaries repaired only a few gaps, so the source topology still needs work.</s>
+
+Further work on October 2 retained the new forehead hairline and reused the complete rear locks from the earlier Meshy model. Missing faces were restored and the side lock was fitted around the neck and shoulder. Broad face deletion damaged shoulder skin; local smoothing pulled the collar. Both trials were rejected. These are actual Blender renders of the revised offline model.
+
+![Revised Angel side locks and hair UVs. Actual high-resolution Blender still; not installed.](/images/castle-top-tier-01/angel-hair298-front.png)
+
+![Rear hair and nape after repair. Actual high-resolution Blender still; not installed.](/images/castle-top-tier-01/angel-hair298-back.png)
+
+Skin-colored patches lay inside hair triangles and escaped the earlier vertex-color sampling. Sampling triangle interiors identified 154 faces for UV correction. The same scan found no remaining skin-colored samples afterward, and selected idle, movement, attack, and death stills were reviewed. Hard facets on the nose and brows had a separate shading cause: averaging normals across coincident vertices at UV splits improved the head surface. Remapping small forehead UV patches removed fine lines but left triangular shading patches; that trial has not been adopted.
+
+![Head normal correction preview. Actual Blender still; forehead marks and hairline joins remain unfinished. Not installed.](/images/castle-top-tier-01/angel-face304-normals.png)
 
 ![Rejected nape backing: a smooth lid becomes visible when the head bends. Actual Blender still; not installed.](/images/castle-top-tier-01/angel-nape222-rejected.png)
 
@@ -45,7 +55,9 @@ A separate animation defect came from recording the hand attachment in world spa
 
 ![Attack transition after the attachment hierarchy correction. Actual Blender clay render for geometry review, not final materials.](/images/castle-top-tier-01/angel-wrist216-clay.png)
 
-Across four actions, 104 integer and quarter-frame samples showed the bridge endpoints following both source meshes. Local intersection candidates remain in attack and death, and texture and shading continuity are unfinished. The game remains on **0.27.32**; none of these neck, hair, or wrist revisions is installed. The Archangel head and wing attachments also remain in progress.
+Earlier check: <s>Across four actions, 104 integer and quarter-frame samples showed the bridge endpoints following both source meshes. Local intersection candidates remain in attack and death, and texture and shading continuity are unfinished. The game remains on **0.27.32**; none of these neck, hair, or wrist revisions is installed. The Archangel head and wing attachments also remain in progress.</s>
+
+October 2 revision: a triangle-crossing check calibrated at small scales confirmed genuine folds in the earlier attack and death wrist bridge. Repairing a local notch in the forearm boundary removed detected bridge self-intersections across 104 samples in four actions. Sword world transforms stayed unchanged; the maximum endpoint gap was about 0.00024 mm. This checks the bridge itself, not every contact with the body, hand, or other parts. The wrist still resembles a smooth sleeve, and robe, elbow, and wing-root defects remain. The installed game stays on **0.27.32**. These revisions are offline; the Archangel and full action review remain unfinished.
 
 ### Separate-head fitting history
 
