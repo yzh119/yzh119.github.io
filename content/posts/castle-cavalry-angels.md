@@ -7,7 +7,9 @@ homeSummary: "Local 0.27.28 improves Griffin wing layering during flight and dea
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle creatures have local drafts. On October 1, **0.27.28** improves Griffin wing layering during flight and death, retaining the larger span and the Angel, Pikeman and Swordsman revisions. Window captures from this test were black, so a usable battle capture of 0.27.28 is still missing. Detailed motion review remains necessary.
+All fourteen Castle creatures have local drafts. On October 1, **0.27.28** improves Griffin wing layering during flight and death, retaining the larger span and the Angel, Pikeman and Swordsman revisions. A fresh test run produced a usable battle capture of 0.27.28, confirming that the revised assets load and display. Detailed motion review remains necessary.
+
+![Local VCMI battle running 0.27.28, showing the revised Griffins, Swordsman and Angel; the Pikeman is at the upper right](/images/castle-top-tier-01/castle-battle02728.png)
 
 <details>
 <summary>Status at 0.27.27</summary>
@@ -52,7 +54,7 @@ Both Griffins now have larger wings while retaining their original folding propo
 
 ![Blender still of the Griffin with larger wings; the corresponding revision is installed in 0.27.24, not an in-game capture](/images/castle-top-tier-01/griffin-wings146-offline.png)
 
-Reviewing all 170 enlarged-wing poses found wing overlap in one flight frame and the end of the death action. Rotating the whole right wing raised the final pose too far, so that trial was rejected. The next revision makes a small flight adjustment and uses Blender shape keys to separate the crossing feathers locally during the fall, preserving the roots and prone silhouette. Some overlap remains at the root connection; this is not a claim of zero intersections across the model. The revision is installed in local **0.27.28**. Actual changes comprise 67 images and mod metadata, with 7,076 other files unchanged. All four animation configurations are unchanged; installed validation reports zero errors or warnings, and backup and rollback validation passed. Window captures from this test were black; a usable battle capture of this revision is still missing.
+Reviewing all 170 enlarged-wing poses found wing overlap in one flight frame and the end of the death action. Rotating the whole right wing raised the final pose too far, so that trial was rejected. The next revision makes a small flight adjustment and uses Blender shape keys to separate the crossing feathers locally during the fall, preserving the roots and prone silhouette. Some overlap remains at the root connection; this is not a claim of zero intersections across the model. The revision is installed in local **0.27.28**. Actual changes comprise 67 images and mod metadata, with 7,076 other files unchanged. All four animation configurations are unchanged; installed validation reports zero errors or warnings, and backup and rollback validation passed. October 1 verification history: ~~Window captures from this test were black; a usable battle capture of this revision is still missing.~~ A retry that day entered battle and produced a usable capture. The cause of the first black capture remains undetermined.
 
 ![Rejected death correction with the right wing raised too far, a Blender still](/images/castle-top-tier-01/griffin-layer159-rejected.png)
 
