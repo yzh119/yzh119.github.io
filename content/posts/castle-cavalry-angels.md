@@ -3,7 +3,7 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The game remains on 0.27.32. Angel hair fitting and UV repairs are staged, with face shading under review. Wrist appearance, the full action set, and Archangel wing attachment remain unfinished."
+homeSummary: "The game remains on 0.27.32. The revised Angel now has 16 action groups and 94 frames, with 328 wrist-bridge samples checked. Appearance, wing attachment, and the Archangel remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
@@ -57,7 +57,19 @@ A separate animation defect came from recording the hand attachment in world spa
 
 Earlier check: <s>Across four actions, 104 integer and quarter-frame samples showed the bridge endpoints following both source meshes. Local intersection candidates remain in attack and death, and texture and shading continuity are unfinished. The game remains on **0.27.32**; none of these neck, hair, or wrist revisions is installed. The Archangel head and wing attachments also remain in progress.</s>
 
-October 2 revision: a triangle-crossing check calibrated at small scales confirmed genuine folds in the earlier attack and death wrist bridge. Repairing a local notch in the forearm boundary removed detected bridge self-intersections across 104 samples in four actions. Sword world transforms stayed unchanged; the maximum endpoint gap was about 0.00024 mm. This checks the bridge itself, not every contact with the body, hand, or other parts. The wrist still resembles a smooth sleeve, and robe, elbow, and wing-root defects remain. The installed game stays on **0.27.32**. These revisions are offline; the Archangel and full action review remain unfinished.
+Check recorded before extending the action set: <s>October 2 revision: a triangle-crossing check calibrated at small scales confirmed genuine folds in the earlier attack and death wrist bridge. Repairing a local notch in the forearm boundary removed detected bridge self-intersections across 104 samples in four actions. Sword world transforms stayed unchanged; the maximum endpoint gap was about 0.00024 mm. This checks the bridge itself, not every contact with the body, hand, or other parts. The wrist still resembles a smooth sleeve, and robe, elbow, and wing-root defects remain. The installed game stays on **0.27.32**. These revisions are offline; the Archangel and full action review remain unfinished.</s>
+
+### The revised Angel across the full action set
+
+Further work on October 2 removed 23 detached fragments around the neck, lowered protruding collar edges, and softened the serrated hair ends. Smoothing discontinuous skin weights improved some robe and elbow folds. Projecting hair outside the body distorted the hair sheets; transferring normals across the hair join introduced black patches. Neither trial was adopted.
+
+![Revised shoulder, collar, and hair ends. Actual high-resolution Blender still; hair joins and texture borders remain unfinished. Not installed.](/images/castle-top-tier-01/angel-hair350-front.png)
+
+The revised body now carries the existing **16 action groups and 94 frames**, including hit reactions, defence, turns, three attack directions, and movement transitions. The repaired hand-bone attachment hierarchy is retained, with local grip offsets recorded for each group. This step used the existing Meshy model and changed no VCMI source code.
+
+![A middle pose from the display animation on the revised body. Actual high-resolution Blender still; wing attachment remains incorrect. Not installed.](/images/castle-top-tier-01/angel-actions353-display.png)
+
+The wrist-bridge crossing check now covers all 16 groups at **328 integer and quarter-frame positions**, with no detected self-intersections in that mesh. This result covers only the bridge. Full-body contacts, complete playback, and comparison with the original motion still require review. Wrist materials, garment texture borders, local hair overlap, and wing attachment remain unfinished, and the Archangel has not received these changes. The installed game remains on **0.27.32**; these Blender scenes have not been exported as a new game replacement.
 
 ### Separate-head fitting history
 
