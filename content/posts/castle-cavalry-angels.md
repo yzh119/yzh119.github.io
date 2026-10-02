@@ -3,11 +3,31 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.32 remains installed. New Meshy Archangel wings have a Blender fitting; unfolding failures, seam repairs and remaining work are documented with stills."
+homeSummary: "The game remains on 0.27.32. New Angel and Archangel heads, the failed cheek geometry, and unfinished neck and wing attachments are documented with Blender stills."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
 All fourteen Castle creatures have local drafts. On October 1, **0.27.32** gives the Cavalier downward attack a grounded turn and downward thrust, correcting slight hoof penetration during transitions. The Champion has not received these revisions; upward attacks and other roster motion remain under review.
+
+## Angel and Archangel faces (October 2, not installed)
+
+The latest feedback identifies two problems: both faces look too youthful for mature warriors, and the Archangel's wings detach from the body in flight. The local game remains on **0.27.32**. None of the head or attachment revisions below has replaced the installed sprites.
+
+The workflow still uses imagegen references, Meshy geometry, and Astra's Blender assembly. The Angel keeps long black hair; the Archangel keeps brown hair and the winged circlet. The revisions focus on the brow, eye sockets, and jaw. Sculpting the existing heads first produced an awkward chin without the intended character, so separate replacement heads followed.
+
+![Rejected Angel head, actual Blender render. The black cheek regions are geometric tunnels; this model was not installed.](/images/castle-top-tier-01/angel-head131-rejected.png)
+
+The first Meshy 6 Angel head contained tunnels through both cheeks. They remained after disabling transparency and normal maps, and under a plain gray material. Rays passed through the cheek to the back of the head. Welding coincident vertices in a diagnostic copy left no boundary edges, but the tunnels still existed. Local patches then produced visible raised surfaces and UV seams; those repairs were rejected too.
+
+A new Angel reconstruction uses Meshy 7 with remeshing enabled, again costing 30 credits. Of 60 rays through the original cheek defect regions, 26 reached the rear surface on the rejected head and zero did on the new one. Front and side renders also show no recurrence of those holes. This is a regional check, not acceptance of the entire model or its animation.
+
+![New Angel head, a Blender still of the actual 3D model. Not concept art; not installed.](/images/castle-top-tier-01/angel-head137-model.png)
+
+![New Archangel head, a Blender still of the actual 3D model, retaining the winged circlet. Not installed.](/images/castle-top-tier-01/archangel-head131-model.png)
+
+Both heads are being fitted to the existing bodies. Cutting the old heads by bone weights initially left jagged neck edges. A clean cut still needs the replacement bust base fitted to the original neck. Overlapping and projecting the surfaces left a protruding bust base, stretching, and flickering, so those fits were rejected. Directly bridging the cut boundaries and their textures is now being tested. Neck weights, material transitions, and the complete action set remain unfinished.
+
+The old flight animation also has a visible gap between the wing roots and the torso. Earlier intersection checks missed attachment continuity. Moving the entire wings inward closed the gap but pushed long feathers through the legs during the downstroke. Local attachment and weight repairs are now under review. The folded-wing and seven-frame flight candidates described below also remain unfinished.
 
 ## Archangel folded-wing revision (October 1, not installed)
 
