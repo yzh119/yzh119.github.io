@@ -3,11 +3,11 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Local 0.27.24 installs the Swordsman arm and larger Griffin wings. Added a 0.27.22 battle capture; Angel proportions remain offline, including a rejected feather-fold trial."
+homeSummary: "Local 0.27.25 installs the Swordsman arm, larger Griffin wings and Angel proportion revisions. Added Blender stills, a 0.27.22 battle capture and a rejected fold trial. New in-game motion review remains pending."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
-All fourteen Castle units have local drafts. On October 1, local mod **0.27.24** installed the Swordsman free-arm correction and larger wings for both Griffins. A battle capture is available for 0.27.22; the new 0.27.24 revision has not yet been checked in battle. User feedback identified undersized Griffin wings, an awkward Swordsman arm, and problems with Angel proportions and idle wings. Those revisions are continuing, with ordinary Pikeman clothing queued afterwards.
+All fourteen Castle units have local drafts. On October 1, local mod **0.27.25** installed the Swordsman free-arm correction, larger wings for both Griffins, and revised Angel proportions and idle wings. A battle capture is available for 0.27.22; the new 0.27.25 revision has not yet been checked in battle. User feedback identified undersized Griffin wings, an awkward Swordsman arm, and problems with Angel proportions and idle wings. Those revisions are continuing, with ordinary Pikeman clothing queued afterwards.
 
 ## October 1 model revisions
 
@@ -23,9 +23,18 @@ Both Griffins now have larger wings while retaining their original folding propo
 
 ![Blender still of the Griffin with larger wings; the corresponding revision is installed in 0.27.24, not an in-game capture](/images/castle-top-tier-01/griffin-wings146-offline.png)
 
-The Angel continues to use Meshy body and wing geometry, with binding and motion edited by Astra. Comparison with the original led to a more compact idle-wing silhouette, broader shoulders, shorter forearms and a smaller free hand. The revision covers 94 frames and is being rendered; it remains an offline candidate.
+The Angel continues to use Meshy body and wing geometry, with binding and motion edited by Astra. Comparison with the original led to a more compact idle-wing silhouette, broader shoulders, shorter forearms and a smaller free hand. All 94 frames and shadows are installed in **0.27.25**, with unchanged animation configurations. The update changes 412 images and the mod metadata, leaving 6,731 other files unchanged. Installed format validation reports zero errors or warnings; backup and rollback validation passed. Continuous in-game playback still needs review.
 
-![High-resolution Blender still of the Angel proportion and compact-wing candidate; not installed](/images/castle-top-tier-01/angel-proportion28-offline.png)
+<details>
+<summary>October 1 export-stage record</summary>
+
+<s>local mod **0.27.24** installed the Swordsman free-arm correction and larger wings for both Griffins. A battle capture is available for 0.27.22; the new 0.27.24 revision has not yet been checked in battle.</s>
+
+<s>The Angel continues to use Meshy body and wing geometry, with binding and motion edited by Astra. Comparison with the original led to a more compact idle-wing silhouette, broader shoulders, shorter forearms and a smaller free hand. The revision covers 94 frames and is being rendered; it remains an offline candidate.</s>
+
+</details>
+
+![High-resolution Blender still of the Angel proportion and compact-wing revision, now installed across the action set in 0.27.25; not an in-game capture](/images/castle-top-tier-01/angel-proportion28-offline.png)
 
 An earlier trial pointed the first wing joint upwards and folded the next two downwards. The existing weights curled the upper feathers into loops, so that version was rejected. The current candidate retains smoother feather geometry while reducing the idle silhouette, with the extended span retained in flight.
 
