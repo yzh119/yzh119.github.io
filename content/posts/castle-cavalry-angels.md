@@ -3,15 +3,26 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The game remains on 0.27.32. The revised Angel now has 16 action groups and 94 frames, with 328 wrist-bridge samples checked. Appearance, wing attachment, and the Archangel remain unfinished."
+homeSummary: "The integrated Angel and all 94 frames are installed in local version 0.27.33 and shown in battle. The Archangel remains unchanged. Includes gameplay and rejected trials."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 ---
 
 All fourteen Castle creatures have local drafts. On October 1, **0.27.32** gives the Cavalier downward attack a grounded turn and downward thrust, correcting slight hoof penetration during transitions. The Champion has not received these revisions; upward attacks and other roster motion remain under review.
 
-## Angel and Archangel faces (October 2, not installed)
+## Angel installed in the game (October 2, 0.27.33)
 
-The latest feedback identifies two problems: both faces look too youthful for mature warriors, and the Archangel's wings detach from the body in flight. The local game remains on **0.27.32**. None of the head or attachment revisions below has replaced the installed sprites.
+The integrated Angel body, revised neck and hair, sword-hand connection, and fitted wing roots now replace the local CANGEL assets. All **16 groups and 94 frames** retain the native layout, with 1× and 2× images, shadows, and selection outlines. Packaging reports **0 errors and 0 warnings**. Replaced files were backed up, other creatures remain unchanged, and no VCMI source was modified.
+
+![Local VCMI battle in 0.27.33. The black-haired Angel in the white robe at lower right is updated; the nearby Archangel remains the previous draft. Actual gameplay capture.](/images/castle-top-tier-01/angel-02733-battle.png)
+
+A local test battle confirms the revised Angel appears on the battlefield. The wings follow the new spine, with a local root adjustment applied across all 94 frames. This remains a test draft: hair joins, wrist materials, robe texture borders, and some flight deformation need work. The screenshot and packaging checks do not constitute a complete visual review of every action. **The Archangel has not received these changes.**
+
+<details>
+<summary>Pre-installation neck, hair, and wrist trials (status statements describe those earlier drafts)</summary>
+
+## Angel and Archangel face revision history
+
+The latest feedback identifies two problems: both faces look too youthful for mature warriors, and the Archangel's wings detach from the body in flight. <s>The local game remains on **0.27.32**. None of the head or attachment revisions below has replaced the installed sprites.</s> This preserves the pre-installation record. The Angel was installed as 0.27.33 on October 2; the Archangel remains unchanged.
 
 ### An integrated head, neck, and body
 
@@ -91,9 +102,11 @@ October 2 correction: this separate-head fitting route has been discontinued. Th
 
 The old flight animation also has a visible gap between the wing roots and the torso. Earlier intersection checks missed attachment continuity. Moving the entire wings inward closed the gap but pushed long feathers through the legs during the downstroke. Local attachment and weight repairs are now under review. The folded-wing and seven-frame flight candidates described below also remain unfinished.
 
+</details>
+
 ## Archangel folded-wing revision (October 1, not installed)
 
-The game still runs 0.27.32. Comparing the Archangel with the original showed that thinner feathers alone had not fixed the folded silhouette: the old wings hang like straight panels, missing the rounded upper edge and darker inner layers. Bending the old rig produced a pinched elbow. This revision keeps the body and equipment and rebuilds the wings.
+<s>The game still runs 0.27.32.</s> The mod reached 0.27.33 on October 2, but the Archangel assets remain unchanged. Comparing the Archangel with the original showed that thinner feathers alone had not fixed the folded silhouette: the old wings hang like straight panels, missing the rounded upper edge and darker inner layers. Bending the old rig produced a pinched elbow. This revision keeps the body and equipment and rebuilds the wings.
 
 ![Folded-wing reference generated with built-in image_gen for Meshy; not game animation](/images/castle-top-tier-01/archangel-wing116-concept.png)
 
