@@ -1,12 +1,27 @@
 ---
 title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
-lastmod: 2026-09-22T03:03:40+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Ordinary Griffin installed as private test 0.16.0, with actual battle screenshots and an HD Blender still; full motion and appearance review continues."
+homeSummary: "Swordsman shoulder, elbow and wrist revisions are installed in 0.27.35; the current local mod is 0.27.36. Includes actual Blender stills."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
+lastmod: 2026-10-02T16:00:00Z
 ---
+
+## Current version and Swordsman poses (October 2)
+
+The local Castle mod is now **0.27.36**. The Swordsman pose update landed in 0.27.35. Its free arm had been too straight, with much of the walking swing rotating the entire arm at the shoulder. The revision bends the elbow, adjusts the wrist with the forearm, and changes the sword-arm elbow direction.
+
+![Revised Swordsman idle, an actual HD Blender still, installed locally](/images/castle-top-tier-01/swordsman-02735-holding.png)
+
+![Revised Swordsman walking pose, an actual Blender still, installed locally; the full gait remains open to further comparison with the original](/images/castle-top-tier-01/swordsman-02735-moving.png)
+
+The update replaces **53 frames** across idle, movement, inspection, turns, movement transitions and all three attack directions. The creature retains its native **13 groups and 76 frames**. Death, hit and defence remain from the previous version; the Crusader is unchanged. Astra edited Blender motion and hand attachments on the existing Meshy body and rig, without another model-generation job.
+
+The 1× and 2× assets are installed, packaging passed with zero errors and warnings, and a local test battle confirmed loading. These checks do not certify the appearance of every motion. Angel and Archangel sword effects are covered in the [cavalry and angels article](/posts/castle-cavalry-angels/).
+
+<details>
+<summary>Earlier production record (historical versions and statuses)</summary>
 
 <s>The Castle roster now has independently reviewed meshes for all fourteen units: Pikeman, Halberdier, Archer, Marksman, Griffin, Royal Griffin, Swordsman, Crusader, Monk, Zealot, Cavalier, Champion, Angel and Archangel. They span long held equipment, a two-handed light crossbow, a winged quadruped, shield-and-sword combat, and an unarmed spellcaster. Each asset needs its own mesh and its own animation constraints.</s>
 
@@ -5454,5 +5469,7 @@ Rejected experiments include seam welding with surface smoothing, which altered 
 <summary>September 21: homepage summary before the wing revision</summary>
 
 <s>Royal Griffin stance and visible-height calibration revised across thirteen drafts. New Blender stills accompany a clearly scoped production history; in-game acceptance remains open.</s>
+
+</details>
 
 </details>

@@ -3,9 +3,29 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The Archangel body and 91 frames are installed in 0.27.34; the Angel retains its previous update. Includes gameplay and Blender stills. New curved wings remain in progress."
+homeSummary: "Angel sword light and Archangel blade flames are installed in local 0.27.36. Includes Blender stills; wing revisions remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
+lastmod: 2026-10-02T16:00:00Z
 ---
+
+## Current version: 0.27.36 (October 2)
+
+Sword effects are now installed for both angels. The original attack frames show different effects: the Angel has a golden-white blade, a short white trail, and golden illumination near impact; the Archangel has orange-gold flames along the blade.
+
+![Angel sword light, an actual Blender still from the scene installed in 0.27.36](/images/castle-top-tier-01/angel-02736-light.png)
+
+![Archangel blade flames, an actual Blender still installed in 0.27.35 and retained in 0.27.36](/images/castle-top-tier-01/archangel-02735-flame.png)
+
+Astra added animated emissive geometry and lighting to the existing Blender scenes, following the sword at each attack frame. No new Meshy job was needed. Each of the three attack directions retains its six native frames, with the existing corresponding animation slots updated as well. Ground-shadow files are preserved byte for byte, so the light effects do not add flickering ground silhouettes.
+
+The Swordsman's shoulder, elbow and wrist poses were also revised in 0.27.35; see the [Castle roster article](/posts/castle-halberdier-bootstrap/). Both packages passed with zero errors and warnings, were backed up before installation, and required no VCMI source changes. The gameplay image below is from 0.27.35 and does not demonstrate the Angel light added afterward.
+
+![Actual VCMI test battle in 0.27.35; the Angel light was added afterward in 0.27.36](/images/castle-top-tier-01/castle-02735-battle.png)
+
+The integrated bodies from the previous release remain in use. The Archangel's new curved wings are still uninstalled; wing attachment, folding, and some body deformation remain unfinished. Castle town and thumbnail HD work is underway but has not been installed.
+
+<details>
+<summary>Earlier production record (historical versions and statuses)</summary>
 
 All fourteen Castle creatures have local drafts. On October 1, **0.27.32** gives the Cavalier downward attack a grounded turn and downward thrust, correcting slight hoof penetration during transitions. The Champion has not received these revisions; upward attacks and other roster motion remain under review.
 
@@ -1065,5 +1085,7 @@ Frame counts and canvases come from each unit's original DEF, and the packaging 
 <s>The 0.17.0 Cavalier loaded in a real battle, but that was before the camera fix. The four new versions have no battle screenshots yet: the test client hung during start-up this time.</s> A battle screenshot was added on 26 September; see the previous section.
 
 Known issues: <s>the Cavalier's idle lance is held level where the original holds it upright</s> (corrected in 0.27.7–0.27.8 on 26 September); the Royal Griffin's talons are still brown where the original's are gold.
+
+</details>
 
 </details>
