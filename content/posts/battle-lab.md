@@ -1,14 +1,14 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T00:25:00+00:00
+lastmod: 2026-10-03T02:42:36+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "An isolated native VCMI core executes a real double shot; Three.js event integration and WASM remain in development."
+homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Custom packs and WASM remain pending."
 tags: ["vcmi", "ai", "threejs", "graphics", "castle"]
 ---
 
-We want the existing 3D models in a battle where both armies can be selected and commanded under original H3 rules. [H3 Battle Lab](https://github.com/yzh119/h3-battle-lab) handles realtime presentation. Combat is moving to compiled VCMI; TypeScript will eventually retain the interface, rendering and event playback.
+We want the existing 3D models in a battle where both armies can be selected and commanded under original H3 rules. [H3 Battle Lab](https://github.com/yzh119/h3-battle-lab) handles realtime presentation. Compiled VCMI now computes combat; TypeScript retains the interface, rendering and event playback.
 
 ## VCMI integration progress — October 3, 2026
 
@@ -20,9 +20,21 @@ We then initialized the native library with an owned resource profile. It contai
 
 The real server battle processor now executes a fixed shooting scenario: twenty Marksmen fire twice at twenty Walking Dead with seed 1337. The attacks deal **55 and 54 damage**. Ammunition falls from 24 to 22; the target falls from 300 to 191 HP, leaving thirteen creatures, and becomes active next. VCMI computes the damage, ammunition and turn flow. Captured native messages include authoritative before/after state; the verifier checks casualties, health and state continuity. A separate run produces identical output. An in-memory SoD fixture supplies real game state without launching the graphical client. The [isolated profile and server battle commit](https://github.com/yzh119/h3-battle-lab/commit/33fa17a) includes reproduction commands.
 
-This is still a separate native smoke test. The browser uses the transitional TypeScript demonstration with twelve base creature definitions. The local Archer export now has a real shooting clip; Marksman art integration remains pending. Next, the wrapper needs arbitrary army requests and ordered movement, strikes, retaliation, round and spell events for Three.js playback. Once the native interface works, WASM should implement the same boundary. VCMI-Gym is reference material; this test does not depend on it. Original H3 behavior remains the target, and differences from VCMI still require verification and engine-side handling.
+The browser now connects to a general native interface. Both armies can contain up to seven stacks chosen from all 28 original Castle/Necropolis creatures. VCMI supplies deployment, double-wide footprints, legal movement and attack positions, the turn queue, damage, health, counts and ammunition. The old `battle.ts` and frontend base combat-stat table have been removed. Three.js animates native movement, strikes and retaliation, updating displayed casualties at impact. See the [browser integration commit](https://github.com/yzh119/h3-battle-lab/commit/660d381).
+
+Four native integration tests cover the full roster, double-wide deployment, movement, waiting, defense, double shots, melee retaliation and extra strikes, stale or illegal requests, victory cleanup and a fresh battle. Four browser tests passed, including real native shooting with artwork deliberately unavailable, impact timing, exact agreement between the final displayed state and the native response, defense/reset, and optional local GLB bone animation. Public CI has no game resources and checks the interface and missing-art scene; actual combat tests require a locally prepared engine and resource profile.
+
+Each browser session owns a native process and writable profile, sharing only the prepared game data. Without a configured engine, models and armies can still be inspected and edited, while combat is disabled. The interface currently runs with the local Vite development server; static hosting and the preview server do not launch an engine. Existing models load on demand and missing models use geometric stand-ins. A 28-creature selector does not mean all 28 artworks are integrated.
+
+Hero/skill/spell commands, configurable terrain and obstacles, custom-creature conversion, complete ability verification and WASM remain pending. The current fixture uses fixed sand terrain without obstacles or fighting heroes. The common creature JSON can be validated in the sidebar but cannot yet join a battle; its mechanics will execute only in the engine or engine scripts. WASM should later implement the same interface. VCMI-Gym is not a dependency. Installed rule mods are excluded, but the `base-reference` profile does not certify original H3 parity. Differences still need individual checks and engine-side corrections.
 
 Codex wrote this round's native wrapper and verification code. Existing models and animations were reused without overwriting source files. The public repository still contains code only; full game resources, models and textures stay local. The previous army-editor images and notes are preserved below.
+
+## October 3, 2026 native smoke-test record
+
+~~This is still a separate native smoke test. The browser uses the transitional TypeScript demonstration with twelve base creature definitions. The local Archer export now has a real shooting clip; Marksman art integration remains pending. Next, the wrapper needs arbitrary army requests and ordered movement, strikes, retaliation, round and spell events for Three.js playback. Once the native interface works, WASM should implement the same boundary. VCMI-Gym is reference material; this test does not depend on it. Original H3 behavior remains the target, and differences from VCMI still require verification and engine-side handling.~~
+
+(October 3 update: general army requests and browser event playback now work. Heroes, spells, custom packs and WASM remain pending.)
 
 ## September 21, 2026 army-editor record
 
@@ -50,6 +62,6 @@ Models load on demand. A failed replacement leaves the previous army intact. The
 
 ### Limits at that revision
 
-~~This is a rendering and interaction prototype with hex pathfinding, eight-step movement and fixed 25-point melee damage. It does not implement the full Heroes III combat rules or consume VCMI battle state.~~ (October 3: movement, damage and turn demonstrations have since changed. The native engine smoke test works; the browser connection remains pending.) Blender-to-realtime material fidelity still needs review. Castle likeness and cloth work remain tracked in the [modeling article](/posts/castle-halberdier-bootstrap/).
+~~This is a rendering and interaction prototype with hex pathfinding, eight-step movement and fixed 25-point melee damage. It does not implement the full Heroes III combat rules or consume VCMI battle state.~~ (October 3: movement, damage and turn demonstrations have since changed. The browser now uses native VCMI and the TypeScript simulator is removed; full original-game parity remains unverified.) Blender-to-realtime material fidelity still needs review. Castle likeness and cloth work remain tracked in the [modeling article](/posts/castle-halberdier-bootstrap/).
 
 The build, three logic tests and five browser tests passed. Coverage includes absent art, model loading, actual bone changes, army editing, team capacity, reset and failed loads. The implementation is in the [army-editor commit](https://github.com/yzh119/h3-battle-lab/commit/2e187a2).
