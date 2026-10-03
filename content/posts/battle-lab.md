@@ -1,7 +1,7 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T08:18:48+00:00
+lastmod: 2026-10-03T09:09:47+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Named heroes/specialties, combat spells, terrain/obstacle settings and custom-creature imports through isolated VCMI mods are connected; WASM remains pending."
@@ -77,6 +77,28 @@ An audit of the 28 exports found unsupported procedural base-colour graphs in Sk
 ![Black Knight after baking its missing material colours; actual Three.js browser capture](/images/battle-lab-materials/black-knight.png)
 
 ![Crusader with explicit steel plate and cloth normals; actual Three.js browser capture](/images/battle-lab-materials/crusader.png)
+
+## Asset revisions and further material checks, October 3, 2026
+
+The user continued to point out white Griffin wings, a flat white Crusader chest and a Zealot that looked worse in Three.js than in VCMI. Successful loading and animated poses had not checked those appearance problems. The next review inspected the source material graphs across all 28 creatures and compared sources with the currently installed art packages.
+
+Archangel now uses the wing and action sources delivered with Castle **0.27.41**. Black Knight, Dread Knight, Wight, Wraith, Bone Dragon and Ghost Dragon use the corresponding Necropolis **0.12.6** scenes. The ghosts replace only their updated attack scenes; dragons retain their delivered flight animation. All seven passed actual browser loading, changing walk poses and revision checks. The remaining roster still needs individual version checks. The editor now shows the revision of the asset that successfully loaded, or identifies the procedural stand-in after a failed load.
+
+Griffin already contained textures, but its source material multiplied them by vertex colours through a graph that glTF had not fully preserved. Baking that graph restored brown-gold coverts and dark grey flight feathers on the ordinary Griffin. Royal Griffin was also rebaked, retaining its source silver-grey palette. Pikeman, Archer, Marksman, Cavalier and Champion had additional procedural colour graphs and were re-exported for each action. Actual loading and animated poses passed for both Griffins and those five creatures.
+
+![Ordinary Griffin before its colour graph was baked; actual browser capture](/images/battle-lab-materials/griffin-before.png)
+
+![Ordinary Griffin after baking its source material; actual browser capture](/images/battle-lab-materials/griffin-after.png)
+
+Zealot's native632 body matches the body in the installed package; the filename alone does not establish that it is outdated. Its emission strength mask had been lost during export. The source limits emission to the face, while the exported material made the whole robe texture glow. The baking tool now combines emission colour and strength, retaining HDR brightness through glTF emission strength. Actual browser rendering now shows a deep navy robe with emission concentrated on the face, and all six clips remain available. Shape and overall appearance still need comparison with VCMI.
+
+![Zealot after restoring its emission mask; actual Three.js browser capture](/images/battle-lab-materials/zealot-emission.png)
+
+The Crusader cloth-normal change in the preceding section still left the chest looking flat. A further copied export now uses the colour, normal and roughness maps from [Poly Haven's scanned rough linen](https://polyhaven.com/a/rough_linen), retaining light cloth, steel plate and all five actions. Actual browser loading and animated poses passed. Cloth detail is still weak in the current close-up; folds and the comparison with VCMI remain unfinished.
+
+![Crusader with scanned linen; cloth detail still needs adjustment](/images/battle-lab-materials/crusader-linen.png)
+
+This code passed **21 browser regression tests, six material-graph regression tests and six exporter tests**, plus the production build. Browser checks cover missing art, WASD, seven-slot armies, native combat and Champion movement direction. See the [emission-mask and asset-revision commit](https://github.com/yzh119/h3-battle-lab/commit/399049b). Art stays local; these blog demonstrations are published separately. Passing tests does not establish appearance acceptance.
 
 ## A first 3D environment, October 3, 2026
 
