@@ -1,7 +1,7 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T09:09:47+00:00
+lastmod: 2026-10-03T09:39:21+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Named heroes/specialties, combat spells, terrain/obstacle settings and custom-creature imports through isolated VCMI mods are connected; WASM remains pending."
@@ -99,6 +99,22 @@ The Crusader cloth-normal change in the preceding section still left the chest l
 ![Crusader with scanned linen; cloth detail still needs adjustment](/images/battle-lab-materials/crusader-linen.png)
 
 This code passed **21 browser regression tests, six material-graph regression tests and six exporter tests**, plus the production build. Browser checks cover missing art, WASD, seven-slot armies, native combat and Champion movement direction. See the [emission-mask and asset-revision commit](https://github.com/yzh119/h3-battle-lab/commit/399049b). Art stays local; these blog demonstrations are published separately. Passing tests does not establish appearance acceptance.
+
+## Stack labels and movement inspection, October 3, 2026
+
+The user requested movement ranges when selecting either army, clearer hex boundaries and count labels that would stop covering other content. Counts now use Three.js sprites near each base, with a restrained screen size and depth testing. Nearer creatures and obstacles can cover the labels, and they cannot overlay the sidebar or army controls. A WebGL pixel regression places a red plane in front of a label and reads the plane's colour; disabling the label's depth test restores the overlay colour as a negative control.
+
+Selecting a creature or its army slot shows its native movement range: blue for the blue army, orange-red for the red army. This works in deployment preview and during combat, including enemies outside their own turn. VCMI supplies the cells using current speed, obstacles and two-cell occupancy; the browser colours the returned cells. Native checks confirm that Slow reduces a nonactive enemy's range and that obstacles and other stacks cannot become landing positions. Selecting an enemy now inspects it first; **攻击选中目标** executes the active stack's legal ranged or melee attack. Ground movement requires selecting the active stack.
+
+Hex lines are brighter with a thin dark border for pale sand and snow. The user initially reported that D did not work, then confirmed that Vimium was intercepting it. A separate reproduced focus problem was also fixed: a closed form control could retain focus and suppress WASD after clicking the battlefield. Battlefield clicks now take keyboard focus; editing actual form controls still suppresses camera movement.
+
+![Selected enemy's native movement range; actual missing-art browser capture](/images/battle-lab-materials/enemy-range.png)
+
+Halberdier, Swordsman, Monk, Zombie, Lich and Power Lich were also re-exported using the delivered October 2 gait sources. Each action keeps its own scene and materials, preserving changed hierarchies instead of fitting the new action into old geometry. All six passed actual model loading and changing walk-pose checks. Appearance acceptance remains open.
+
+![Actual Swordsman model, blue movement range and 3D count label](/images/battle-lab-materials/swordsman-range.png)
+
+This round passed **35 native integration tests, the full 23-test browser suite and a separate new pixel-occlusion regression**, plus the production build. See the [battlefield focus, 3D labels and native ranges commit](https://github.com/yzh119/h3-battle-lab/commit/a47077f). Full original-rule parity, siege, initial Tactics deployment and the remaining 3D battlefields are still unfinished.
 
 ## A first 3D environment, October 3, 2026
 
