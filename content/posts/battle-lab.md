@@ -1,7 +1,7 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T03:18:01+00:00
+lastmod: 2026-10-03T03:27:09+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Custom packs and WASM remain pending."
@@ -24,9 +24,11 @@ The browser now connects to a general native interface. Both armies can contain 
 
 A fixture check found that the army containers still occupied the upstream test map’s default grass while the battlefield was sand, allowing Castle stacks to inherit a native-terrain bonus. Both are now sand. Every creature in the 28-unit roster has its base engine speed in battle. The fix changes only the privately copied test fixture, preserving upstream VCMI files; see the [terrain correction commit](https://github.com/yzh119/h3-battle-lab/commit/ba8608e). The 55/54 damage measurements above belong to the earlier standalone smoke-test version.
 
-Five native integration tests cover the full roster, double-wide deployment, movement, waiting, defense, double shots, melee retaliation and extra strikes, stale or illegal requests, victory cleanup and a fresh battle. Six browser tests passed, including real native shooting with artwork deliberately unavailable, impact timing, exact agreement between the final displayed state and the native response, defense/reset, seven-slot army editing, canvas consistency, and optional local GLB bone animation. Public CI has no game resources and checks the interface and missing-art scene; actual combat tests require a locally prepared engine and resource profile.
+Six native integration tests cover the full roster, double-wide deployment, movement, waiting, defense, double shots, melee retaliation and extra strikes, stale or illegal requests, victory cleanup and a fresh battle. Seven browser tests passed, including real native shooting with artwork deliberately unavailable, impact timing, exact agreement between the final displayed state and the native response, defense/reset, seven-slot army editing, complete-town production presets, canvas consistency, and optional local GLB bone animation. Public CI has no game resources and checks the interface and missing-art scene; actual combat tests require a locally prepared engine and resource profile.
 
 Each army now has seven clickable numbered slots. Empty slots accept a creature and count directly; removing a stack preserves the gap, and battle creation/reset retain its slot ID. The blue army in the capture occupies only slots 1 and 7, which remain identifiable in native state. Overview and close-up use the same canvas rectangle; overview restores the selected backdrop, including after window resizing. See the [seven-slot army and canvas fix](https://github.com/yzh119/h3-battle-lab/commit/fb0d9a3).
+
+The **十周城镇产出** button fills all fourteen army slots with ten weeks of complete-town production. Upgraded creatures are selected initially; clearing the checkbox chooses their basic forms. Complete towns include the castle and faction growth buildings, excluding the Grail, external dwellings, hero/artifact bonuses and random-week effects. VCMI computes weekly growth through `CGTownInstance::getGrowthInfo` and returns the ten-week counts; the GUI has no growth formula. By tier, Castle supplies **280, 180, 170, 80, 60, 40, 20**, and Necropolis **300, 160, 140, 80, 60, 40, 20**. Slots remain editable before battle, and reset restores the configured armies. Native and browser tests verify the fourteen-stack creation and reset. See the [complete-town preset commit](https://github.com/yzh119/h3-battle-lab/commit/e9ade93).
 
 ![Seven-slot army bars with real native battle state; actual browser capture using procedural models and scenery](/images/battle-lab-roster/seven-slots-native.png)
 
