@@ -4,12 +4,48 @@ date: 2026-09-09T01:48:31+08:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
-lastmod: 2026-09-09T05:48:54+08:00
+lastmod: 2026-10-03T06:45:36Z
+homeSummary: "墓园 0.12.6 重做幽灵和阴魂举爪、前探与挥抓，修手部权重，附原版对照和高清静帧。"
 ---
+
+## 当前版本：把爪子伸出去（0.12.6）
+
+本地墓园动画包 **0.12.6** 重做了幽灵和阴魂的攻击。此前的模型与漂浮曾获认可，但用户这次指出：“攻击也没有伸爪子。”对照原版，旧动画主要让整个身体前倾，缺少举爪和挥抓的轮廓；先前的“定稿”不能继续当作攻击已经完成的结论。
+
+现在右臂先举起，随后前探挥抓，再收回；三个方向分别调整手臂轨迹。手掌和手指混入衣袍的权重也重新处理，让爪子能从袖口探出。早期只加大关节转角的试稿仍把爪子藏在脸旁，后来重新安排肩、肘、腕的姿势和袖子的伸展。下摆另作毫米级离地修正。
+
+0.12.5 的高清复查发现，举爪仍会带起一条长布片，伸手时还会出现细线。手部选择范围误选了衣袍，又把横跨范围边界的爪子一半绑到手、一半留在躯干。0.12.6 收紧衣袍权重，补齐爪子绑定，并平滑交界。
+
+![弃用的 0.12.5 举爪，衣袍被错误带起](/images/necro-flight-gait-20261002/ghost-cloth-rejected.jpg)
+
+![幽灵：原版、旧攻击与 0.12.6；各行按轮廓取景](/images/necro-flight-gait-20261002/CWIGHT-current-comparison.jpg)
+
+![幽灵的新攻击，实际 Blender 帧以 8 fps 离线播放](/images/necro-flight-gait-20261002/CWIGHT-current.webp)
+
+![阴魂：原版、旧攻击与 0.12.6](/images/necro-flight-gait-20261002/CWRAIT-current-comparison.jpg)
+
+![阴魂的新攻击，离线 8 fps 审阅](/images/necro-flight-gait-20261002/CWRAIT-current.webp)
+
+![幽灵举爪：最终场景的 1400×1400 Blender 静帧](/images/necro-flight-gait-20261002/CWIGHT-raise-hd.jpg)
+
+![幽灵伸爪：最终场景的 1400×1400 Blender 静帧](/images/necro-flight-gait-20261002/CWIGHT-claw-hd.jpg)
+
+![阴魂举爪：最终场景的 1400×1400 Blender 静帧](/images/necro-flight-gait-20261002/CWRAIT-raise-hd.jpg)
+
+![阴魂伸爪：最终场景的 1400×1400 Blender 静帧](/images/necro-flight-gait-20261002/CWRAIT-claw-hd.jpg)
+
+![0.12.6 幽灵、阴魂实际 VCMI 测试战斗](/images/necro-flight-gait-20261002/ghost-battle126.jpg)
+
+两种兵种各更新三组攻击及原资源中的三组 `SHOOT`，合计 84 张主体帧，保留原帧数与配套阴影。`SHOOT` 只是资源覆盖，不会增加远程攻击能力。已认可的漂浮、待机和死亡资源保持不变；本轮的新攻击仍需结合玩家实际观感继续验收，不能把旧版验收套在新动作上。
+
+基础模型仍来自 Meshy，本轮由 Astra 在 Blender 内修改绑定和动画，没有新生成调用或引擎改动。马蹄、龙飞行和咬击的同批修订见[骑士与骨龙文章](/zh/posts/necropolis-final-four/)。以下保留早期模型、漂浮和旧攻击记录。
+
+<details>
+<summary>0.9.0 模型、漂浮与旧攻击记录（历史）</summary>
 
 > 本文记录发布时的实现与测量。文中的版本号、费用和检查数量属于该阶段；后续兵种安装记录见[吸血鬼交付](/zh/posts/necropolis-vampires/)，现行工具入口见[独立仓库](/zh/posts/h3-art-tools/)。
 
-幽灵换用带贴图的基础模型后，漂浮、挥爪、转身和死亡动作已经做完，与阴魂一起接入本地游戏。本次交付版本为 **0.9.0**。这一版收到的验收反馈是：“幽灵完美交付。”幽灵的模型和动作据此定稿，尸巫的后续交付见[尸巫和尸巫王](/zh/posts/necropolis-liches/)。
+幽灵换用带贴图的基础模型后，漂浮、挥爪、转身和死亡动作已经做完，与阴魂一起接入本地游戏。本次交付版本为 **0.9.0**。这一版收到的验收反馈是：“幽灵完美交付。”~~幽灵的模型和动作据此定稿~~，尸巫的后续交付见[尸巫和尸巫王](/zh/posts/necropolis-liches/)。
 
 ![幽灵使用当前游戏背景的展示合成](/demos/necropolis-ghosts-01/cwight-showcase.png)
 
@@ -116,3 +152,5 @@ lastmod: 2026-09-09T05:48:54+08:00
 这轮由 Astra 编写绑定、动画和合包工具，基础模型来自前一篇记录的 imagegen 与 Meshy 流程。代码与复现说明在 [PR #10](https://github.com/yzh119/vcmi/pull/10)。[被否掉的程序造型和生成过程中的问题](/zh/posts/necropolis-bootstrap/)仍单独保留，后续失败也继续记录。
 
 {{< /history >}}
+
+</details>

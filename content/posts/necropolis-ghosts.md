@@ -4,12 +4,48 @@ date: 2026-09-09T01:48:31+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
-lastmod: 2026-09-09T05:48:54+08:00
+lastmod: 2026-10-03T06:45:36Z
+homeSummary: "Necropolis 0.12.6 revises Wight/Wraith claw preparation and reach, with hand-weight repairs, original comparisons and Blender stills."
 ---
+
+## Current version: reaching with the claw (0.12.6)
+
+The local **0.12.6** Necropolis mod revises Wight and Wraith attacks. Their earlier model and floating delivery had been accepted, but the user now pointed out that the attacks still failed to extend a claw. Against the original reference, the replacement mostly tilted the whole body and lacked the raised-hand and reaching silhouettes. The earlier “finished” assessment no longer covers these attacks.
+
+The right arm now rises, reaches into a swipe and recovers, with direction-specific paths. Palm and finger weights mixed with the robe are reassigned so the claw can emerge from its sleeve. An early attempt using larger joint rotations still hid the hand beside the face; the revision reworks shoulder, elbow and wrist poses with sleeve extension. A millimeter-scale hem correction keeps the garment above ground.
+
+High-resolution review of 0.12.5 exposed a long robe strip lifted by the hand and a thin strand during the reach. The hand-selection region included cloth while leaving part of a claw bound to the torso across its boundary. Version 0.12.6 restores the cloth weights, completes the claw binding and smooths the boundary.
+
+![Rejected 0.12.5 raised claw with cloth pulled up by the hand](/images/necro-flight-gait-20261002/ghost-cloth-rejected.jpg)
+
+![Wight: original H3, old attack and 0.12.6; each row framed for pose review](/images/necro-flight-gait-20261002/CWIGHT-current-comparison.jpg)
+
+![Revised Wight attack using Blender frames at an offline 8 fps review rate](/images/necro-flight-gait-20261002/CWIGHT-current.webp)
+
+![Wraith: original H3, old attack and 0.12.6](/images/necro-flight-gait-20261002/CWRAIT-current-comparison.jpg)
+
+![Revised Wraith attack, offline 8 fps review](/images/necro-flight-gait-20261002/CWRAIT-current.webp)
+
+![Wight raised claw: 1400×1400 Blender still from the final scene](/images/necro-flight-gait-20261002/CWIGHT-raise-hd.jpg)
+
+![Wight reaching claw: 1400×1400 Blender still from the final scene](/images/necro-flight-gait-20261002/CWIGHT-claw-hd.jpg)
+
+![Wraith raised claw: 1400×1400 Blender still from the final scene](/images/necro-flight-gait-20261002/CWRAIT-raise-hd.jpg)
+
+![Wraith reaching claw: 1400×1400 Blender still from the final scene](/images/necro-flight-gait-20261002/CWRAIT-claw-hd.jpg)
+
+![Actual VCMI Wight/Wraith test battle using 0.12.6](/images/necro-flight-gait-20261002/ghost-battle126.jpg)
+
+Each creature receives three attack clips plus the three `SHOOT` groups present in the source resources: 84 body frames in total, with native counts and matching shadows. Those resource groups do not grant ranged attacks. Accepted floating, holding and death assets remain unchanged. The new attacks still need player assessment; acceptance of the older delivery is not acceptance of these new poses.
+
+The Meshy base model remains in use; Astra edits binding and animation in Blender, with no new generation call or engine modification. See the [knight and dragon article](/posts/necropolis-final-four/) for the same delivery’s hoof, flight and bite changes. Early model, floating and superseded attack records remain below.
+
+<details>
+<summary>0.9.0 model, floating and old attack record (historical)</summary>
 
 > This article records the implementation and measurements at its publication stage. Versions, costs and check counts belong to that stage. See [Vampire delivery](/posts/necropolis-vampires/) for the subsequent installation and [the standalone tools](/posts/h3-art-tools/) for maintained commands.
 
-The textured wight now has floating, attacking, turning, and death animations, and was installed alongside the wraith in delivery **0.9.0**. The user accepted the wight delivery. Its current model and motion are now treated as the finished version while work moves on to the lich.
+The textured wight now has floating, attacking, turning, and death animations, and was installed alongside the wraith in delivery **0.9.0**. The user accepted the wight delivery. ~~Its current model and motion are now treated as the finished version~~ while work moves on to the lich.
 
 ![Wight showcase composite using the installed background](/demos/necropolis-ghosts-01/cwight-showcase.png)
 
@@ -116,3 +152,5 @@ All **2,324 installed files** match the candidate package. The preceding **1,462
 Astra wrote the binding, motion, and packaging tools, using the textured mesh from the imagegen/Meshy process documented previously. [PR #10](https://github.com/yzh119/vcmi/pull/10) contains the code and reproduction notes. The [rejected procedural designs and bootstrap failures](/posts/necropolis-bootstrap/) remain published as a separate record; future failures will be documented too.
 
 {{< /history >}}
+
+</details>

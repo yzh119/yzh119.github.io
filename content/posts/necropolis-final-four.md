@@ -4,13 +4,60 @@ date: 2026-09-09T07:23:02+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra", "meshy"]
-lastmod: 2026-10-03T02:40:00Z
-homeSummary: "Necropolis 0.12.3 revises six ground units and their transitions, with frame comparisons and an actual battle."
+lastmod: 2026-10-03T06:45:36Z
+homeSummary: "Necropolis 0.12.6 retains accepted dragon flight and revises hooves, bites and claws, with original comparisons and battles."
 ---
+
+## Current version: flight, hooves and bites (0.12.6)
+
+The local Necropolis animation mod is now **0.12.6**. Version 0.12.4 rebuilt Bone/Ghost Dragon flight, which the user accepted. The follow-up revises Black/Dread Knight hooves and both dragons’ attacks. Wight/Wraith claw work is covered in the [existing ghost article](/posts/necropolis-ghosts/).
+
+The old dragons flew almost upright with only a small wing oscillation. The revised torso leans forward while shoulder and outer-wing motion produce a full upstroke and downstroke, with matching takeoff and landing. Version 0.12.6 preserves those accepted flight and transition files byte for byte.
+
+![Accepted dragon flight from 0.12.4, retained in 0.12.6; Blender frames at an offline review rate of 8 fps, not measured game timing](/images/necro-flight-gait-20261002/dragons.webp)
+
+![Bone Dragon: original H3, 0.12.3, and retained 0.12.4 flight; each row is framed for pose comparison, not in-game size measurement](/images/necro-flight-gait-20261002/CNDRGN-comparison.jpg)
+
+### Hooves needed more than a longer stride
+
+The first revision made diagonal steps and hoof lifts clearer, but the user still found the hoof shapes strange. Comparing Castle cavalry exposed broad hoof shells, soles locked horizontally during swing, and skin weights that bent the hoof with the lower leg. The revision narrows the contour, keeps the shell rigid, lets it fold with the lifted lower leg and returns it to a flat stance. All 29 knight clips, totaling 205 frames, were rerendered to keep the same shape across holding, movement and attacks.
+
+![Hoof reference from the existing Castle cavalry Blender scene](/images/necro-flight-gait-20261002/castle-hoof-reference.jpg)
+
+![Black Knight: original H3, 0.12.4 and 0.12.6 movement](/images/necro-flight-gait-20261002/CBKNIG-current-comparison.jpg)
+
+![Revised Dread Knight movement, offline 8 fps review](/images/necro-flight-gait-20261002/CBLORD-current.webp)
+
+![Black Knight: 1400×1400 Blender still with revised hooves](/images/necro-flight-gait-20261002/CBKNIG-hoof-hd.jpg)
+
+![Dread Knight: 1400×1400 Blender still with revised hooves](/images/necro-flight-gait-20261002/CBLORD-hoof-hd.jpg)
+
+### Dragon attacks need preparation and a bite
+
+The original raises its head and opens its jaw before reaching down toward the target. The old replacement barely moved its neck. All three attack directions now have a clearer preparation, neck reach and recovery, with different bite heights. Leg solving retains support and the tail lifts during preparation. The first larger-motion attempt put the tail and then the toes below ground; both were corrected before delivery. High-resolution review of 0.12.5 also exposed a reversed jaw rotation that closed it into the skull. Version 0.12.6 corrects that direction and counter-rotates the head during the neck reach so the snout points toward the target instead of simply dipping down.
+
+![Rejected 0.12.5 jaw pose, caught in high-resolution review](/images/necro-flight-gait-20261002/dragon-jaw-rejected.jpg)
+
+![Bone Dragon frontal attack: original, previous and revised](/images/necro-flight-gait-20261002/CNDRGN-current-comparison.jpg)
+
+![Revised Ghost Dragon attack, offline 8 fps review](/images/necro-flight-gait-20261002/CHDRGN-current.webp)
+
+![Bone Dragon bite: high-resolution Blender still from the final scene](/images/necro-flight-gait-20261002/CNDRGN-bite-hd.jpg)
+
+![Ghost Dragon bite: high-resolution Blender still from the final scene](/images/necro-flight-gait-20261002/CHDRGN-bite-hd.jpg)
+
+![Actual VCMI test battle using 0.12.6](/images/necro-flight-gait-20261002/battle126.jpg)
+
+Version 0.12.5 first updated 47 clips and 331 native-count 2× body frames across six creatures, replacing 1932 resources. Version 0.12.6 then reexports 18 of those clips and 126 frames to correct dragon jaws and ghost weights. Across the final scenes, 615 native and intermediate samples stay above ground. Format validation reports zero errors or warnings; other files were checked individually. These checks do not establish zero cloth or membrane stretching, and model proportions still differ from the original. Thin stretching remains visible in the old flight membrane at high resolution; it is recorded here rather than silently replacing the flight motion the user accepted.
+
+Existing Meshy models remain in use. Astra edits Blender geometry, binding and motion; no new generation request or VCMI engine-source change was made. Older records and images remain below, scoped to their delivery versions.
+
+<details>
+<summary>0.12.3 ground gait record (historical; knight movement superseded)</summary>
 
 ## Ground gait revision (October 2, 0.12.3)
 
-The local Necropolis animation mod is now **0.12.3**. Walking Dead, Zombie, Lich, Power Lich, Black Knight and Dread Knight receive revised movement and transitions. Nine Castle units were updated alongside them in the [Castle roster article](/posts/castle-halberdier-bootstrap/).
+~~The local Necropolis animation mod is now **0.12.3**.~~ This was the version at that delivery. Walking Dead, Zombie, Lich, Power Lich, Black Knight and Dread Knight receive revised movement and transitions. Nine Castle units were updated alongside them in the [Castle roster article](/posts/castle-halberdier-bootstrap/).
 
 Both zombies have a smaller difference between foot lifts and less body bobbing while retaining their original dragging character. Liches gain modest foot travel and free-arm swing, with the staff held steady. Both horses receive revised diagonal support and lift paths. The installed Skeleton already has opposite arm/leg phase and remains unchanged; Wights, vampires and dragons also retain their motion.
 
@@ -21,6 +68,8 @@ The first Lich revision increased stride beyond the legs' reach, producing a tar
 ![Actual VCMI test battle with 0.12.3, including both zombies, liches and knights, plus Castle test units on the right](/images/gait-20261002/necropolis-battle.jpg)
 
 Existing Meshy models remain in use; Astra edited Blender motion without new modeling requests. Installation replaced 332 changed files and verified that other Necropolis files remained identical. Native frame counts, canvases and panel registration were retained without VCMI source changes. The attack, centering and modeling record below belongs to 0.12.2; walking clips in its older gallery no longer represent the current version.
+
+</details>
 
 <details>
 <summary>0.12.2 attacks, panel registration and models (historical record)</summary>
