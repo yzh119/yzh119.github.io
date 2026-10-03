@@ -5,12 +5,12 @@ series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "Angel sword light and Archangel blade flames are installed in local 0.27.36. Includes Blender stills; wing revisions remain unfinished."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
-lastmod: 2026-10-02T16:00:00Z
+lastmod: 2026-10-03T02:40:00Z
 ---
 
 ## Sword effects delivered in 0.27.36 (October 2)
 
-The current local mod is **0.27.37**, retaining these sword effects. Its additional [Swordsman revision](/posts/castle-halberdier-bootstrap/) is recorded separately.
+~~The current local mod is **0.27.37**.~~ Local **0.27.38** retains these sword effects and revises Cavalier and Champion diagonal support, hoof lift and transitions; see the [ground gait comparison](/posts/castle-halberdier-bootstrap/). Wing issues remain open.
 
 Sword effects are now installed for both angels. The original attack frames show different effects: the Angel has a golden-white blade, a short white trail, and golden illumination near impact; the Archangel has orange-gold flames along the blade.
 

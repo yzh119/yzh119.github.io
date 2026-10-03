@@ -4,12 +4,31 @@ date: 2026-09-09T07:23:02+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "astra", "meshy"]
-lastmod: 2026-09-09T04:33:06+00:00
+lastmod: 2026-10-03T02:40:00Z
+homeSummary: "Necropolis 0.12.3 revises six ground units and their transitions, with frame comparisons and an actual battle."
 ---
+
+## Ground gait revision (October 2, 0.12.3)
+
+The local Necropolis animation mod is now **0.12.3**. Walking Dead, Zombie, Lich, Power Lich, Black Knight and Dread Knight receive revised movement and transitions. Nine Castle units were updated alongside them in the [Castle roster article](/posts/castle-halberdier-bootstrap/).
+
+Both zombies have a smaller difference between foot lifts and less body bobbing while retaining their original dragging character. Liches gain modest foot travel and free-arm swing, with the staff held steady. Both horses receive revised diagonal support and lift paths. The installed Skeleton already has opposite arm/leg phase and remains unchanged; Wights, vampires and dragons also retain their motion.
+
+![Walking Dead, Lich and Black Knight: previous frames above each installed sequence; offline frame comparison](/images/gait-20261002/necropolis-walk.jpg)
+
+The first Lich revision increased stride beyond the legs' reach, producing a target error of about 2.9 cm. Lowering the hip reference restored reach before regenerating movement and transitions. Across all 39 revised clips, the final foot-target check stayed below 0.05 mm. This measures skeletal solving, not cloth intersections or zero foot sliding in the game.
+
+![Actual VCMI test battle with 0.12.3, including both zombies, liches and knights, plus Castle test units on the right](/images/gait-20261002/necropolis-battle.jpg)
+
+Existing Meshy models remain in use; Astra edited Blender motion without new modeling requests. Installation replaced 332 changed files and verified that other Necropolis files remained identical. Native frame counts, canvases and panel registration were retained without VCMI source changes. The attack, centering and modeling record below belongs to 0.12.2; walking clips in its older gallery no longer represent the current version.
+
+<details>
+<summary>0.12.2 attacks, panel registration and models (historical record)</summary>
+
 
 In-game feedback on the mounted knights was blunt: the attack looked very strange. Frame-by-frame comparison showed why. **In 0.12.0, the horse barely participated and the sword movement had been reduced to a small gesture beside the rider.** Limiting joint rotation removed large stretch warnings while also removing the defining attack poses.
 
-The local animation mod is now **0.12.2**. Both knights have a rebuilt weapon arm and saber, with nine reauthored attack groups. All **29 groups and 205 independent 2× body frames** for the pair were rerendered so holding, walking and attacking share the same arm. Other creatures retain their models and motion; all four final-tier creatures now have corrected panel registration. All fourteen Necropolis creatures remain covered, with no VCMI engine-source changes.
+~~The local animation mod is now **0.12.2**.~~ This was the version at that delivery. Both knights have a rebuilt weapon arm and saber, with nine reauthored attack groups. All **29 groups and 205 independent 2× body frames** for the pair were rerendered so holding, walking and attacking share the same arm. Other creatures retain their models and motion; all four final-tier creatures now have corrected panel registration. All fourteen Necropolis creatures remain covered, with no VCMI engine-source changes.
 
 ![Current four-creature panel composites](/demos/necropolis-final-four-03/showcase-four.png)
 
@@ -192,3 +211,5 @@ The native resource totals are **92, 125, 84 and 88 frames**, respectively. Drea
 [Tools, prompts and reproduction notes](https://github.com/yzh119/h3-art-pipeline/blob/main/creature-art/docs/necropolis-final-four.md). Models and complete mods remain local. Concept illustrations and actual Blender renders are labeled separately below.
 
 {{< /history >}}
+
+</details>

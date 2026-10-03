@@ -4,8 +4,11 @@ date: 2026-09-09T03:04:19+08:00
 series: ["用生成式ai增强英雄无敌3"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
-lastmod: 2026-09-09T05:48:54+08:00
+lastmod: 2026-10-03T02:40:00Z
 ---
+
+**10 月 2 日步态修订：**本地 **0.12.3** 已更新本文兵种的行走与起停，见[新版逐帧对照与实战](/zh/posts/necropolis-final-four/)。以下模型、费用和交付记录保留原阶段含义；旧视频的走路动作已由新版取代。
+
 
 > 本文记录发布时的实现与测量。文中的版本号、费用和检查数量属于该阶段；后续兵种安装记录见[吸血鬼交付](/zh/posts/necropolis-vampires/)，现行工具入口见[独立仓库](/zh/posts/h3-art-tools/)。
 

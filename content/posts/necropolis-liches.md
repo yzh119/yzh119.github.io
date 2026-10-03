@@ -4,8 +4,11 @@ date: 2026-09-09T03:04:19+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "astra"]
-lastmod: 2026-09-09T05:48:54+08:00
+lastmod: 2026-10-03T02:40:00Z
 ---
+
+**October 2 gait revision:** local **0.12.3** updates these creatures’ movement and transitions; see the [new frame comparisons and battle](/posts/necropolis-final-four/). Modeling, cost and delivery records below retain their historical scope; walking motion in older videos has been superseded.
+
 
 > This article records the implementation and measurements at its publication stage. Versions, costs and check counts belong to that stage. See [Vampire delivery](/posts/necropolis-vampires/) for the subsequent installation and [the standalone tools](/posts/h3-art-tools/) for maintained commands.
 

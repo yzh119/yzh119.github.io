@@ -3,16 +3,34 @@ title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Swordsman cuff joins and sword-arm gait revised again; all 76 frames installed in 0.27.37, with Blender stills, an actual battle and failed attempts."
+homeSummary: "Ground gait revised for 15 units across both factions; Castle 0.27.38 installed with before/after frames."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
-lastmod: 2026-10-02T16:00:00Z
+lastmod: 2026-10-03T02:40:00Z
 ---
 
-## Current Swordsman revision (October 2, 0.27.37)
+## Ground gait revision (October 2, 0.27.38)
+
+The review covered all 28 Castle and Necropolis creatures; this revision changes 15 ground units. Castle **0.27.38** is installed locally, updating Pikeman, Halberdier, Archer, Marksman, Swordsman, Monk, Zealot, Cavalier and Champion.
+
+The Swordsman combined an oversized stride and low body position with very little sword-arm swing. The revision shortens the stride, reduces vertical bobbing and swings the arm opposite the same-side foot. Pikemen and both archers receive revised support and foot-lift paths. Robed units get a modest increase in foot travel while retaining their cloth deformation. Both horses alternate diagonal support pairs; start and stop clips follow the revised gait.
+
+![Swordsman, Pikeman and Champion: previous frames above, installed frames below; offline comparison using a shared crop](/images/gait-20261002/castle-walk.jpg)
+
+Existing Meshy models remain in use. Astra edited their Blender motion without new Meshy requests or VCMI source changes. The first Pikeman trial accidentally used an older body scene; comparing its silhouette against installed assets caught the mismatch, and the current model was rendered again. The initial horse solver lifted the supporting hoof when reaching too far; limiting horizontal reach preserved its ground height.
+
+Across both factions, **39 movement and transition clips** were exported with native frame counts and canvases. Packaging checks passed; only changed files were installed, and all other files were checked for preservation. Frame review and actual test battles check poses and loading, but do not establish zero foot sliding at every game speed or terrain. The [Necropolis article](/posts/necropolis-final-four/) covers the other six units. Angel wing issues remain separate.
+
+![Actual Castle 0.27.38 test battle containing the nine revised units](/images/gait-20261002/castle-battle.jpg)
+
+<details>
+<summary>0.27.37 cuff and gait record (gait superseded by 0.27.38)</summary>
+
+
+## Swordsman revision (October 2, 0.27.37)
 
 The previous Swordsman still had a visible gap between the left hand and cuff. While walking, the sword arm pulled behind the body and the wrist folded unnaturally. The user's follow-up exposed a gap in the earlier checks: bone connections and selected poses had been inspected, but the actual hand-to-cuff surface join had been missed.
 
-Local version **0.27.37** re-exports all **13 groups and 76 frames**. Hand attachments now follow the deformed cuff surface with a small overlap. The walking sword arm has been adjusted, using the idle forearm orientation as its reference to avoid carrying forward the old motion's excessive twist. Death, hit and defence retain their earlier body motion while receiving the same hand-attachment correction.
+Local version **0.27.37** re-exports all **13 groups and 76 frames**. Hand attachments now follow the deformed cuff surface with a small overlap. ~~The walking sword arm has been adjusted~~ (historical 0.27.37 state), using the idle forearm orientation as its reference to avoid carrying forward the old motion's excessive twist. Death, hit and defence retain their earlier body motion while receiving the same hand-attachment correction.
 
 ![Swordsman idle: actual HD Blender render corresponding to installed version 0.27.37](/images/castle-top-tier-01/swordsman-02737-holding.png)
 
@@ -25,6 +43,9 @@ Two intermediate attempts were rejected. One lost the existing hand scale when r
 ![Actual VCMI test battle with Swordsman 0.27.37 loaded, including waiting, acting and fallen units](/images/castle-top-tier-01/swordsman-02737-battle.png)
 
 Packaging checks passed, all 338 installed files were verified against the delivery manifest, and a local battle confirmed loading. Portraits were updated too. Appearance still needs evaluation across full motions; format checks do not establish visual acceptance. Angel and Archangel sword effects remain in place, documented in the [cavalry and angels article](/posts/castle-cavalry-angels/). Portrait background corrections are in the [Castle town and interface article](/posts/castle-town-ui/).
+
+
+</details>
 
 <details>
 <summary>0.27.35–0.27.36 historical record (revised after user feedback)</summary>

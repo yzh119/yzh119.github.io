@@ -1,11 +1,14 @@
 ---
 title: "[AI] Zombie animation set"
 date: 2026-09-08T13:30:00+08:00
-lastmod: 2026-09-09T05:48:54+08:00
+lastmod: 2026-10-03T02:40:00Z
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 tags: ["vcmi", "ai", "graphics", "blender", "astra"]
 ---
+
+**October 2 gait revision:** local **0.12.3** updates these creatures’ movement and transitions; see the [new frame comparisons and battle](/posts/necropolis-final-four/). Modeling, cost and delivery records below retain their historical scope; walking motion in older videos has been superseded.
+
 
 **As of September 9, 2026:** creature mod ~~0.12.1~~ **0.12.2** covers all fourteen Necropolis creatures. Measurements here retain their delivery-version scope; see [mounted knights and skeletal dragons](/posts/necropolis-final-four/) for the latest integration.
 
