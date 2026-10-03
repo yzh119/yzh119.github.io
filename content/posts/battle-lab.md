@@ -1,10 +1,10 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T05:13:27+00:00
+lastmod: 2026-10-03T05:36:29+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Custom packs and WASM remain pending."
+homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Heroes, combat spells and custom-creature imports through isolated VCMI mods are connected; WASM remains pending."
 tags: ["vcmi", "ai", "threejs", "graphics", "castle"]
 ---
 
@@ -52,7 +52,17 @@ Artwork now loads in the background. Army edits, complete-town presets and reset
 
 The wrapper and adaptation code live in this repository, preserving upstream VCMI sources. Future rule adaptations should use mods/plugins where supported; any necessary source changes will be tracked here as reviewable patches with reproducible builds.
 
-~~Hero/skill/spell commands, configurable terrain and obstacles, custom-creature conversion, complete ability verification and WASM remain pending. The current fixture uses fixed sand terrain without obstacles or fighting heroes.~~ (October 3 update: custom heroes, skills and spell commands are connected. Named heroes, specialties, artifacts, configurable terrain/obstacles, custom-creature conversion, complete rule verification and WASM remain pending. The fixture still uses fixed sand without initial obstacles; spell-created obstacles are engine-managed.) The common creature JSON can be validated in the sidebar but cannot yet join a battle; its mechanics will execute only in the engine or engine scripts. WASM should later implement the same interface. VCMI-Gym is not a dependency. Installed rule mods are excluded, but the `base-reference` profile does not certify original H3 parity. Differences still need individual checks and engine-side corrections.
+## Custom creatures, October 3, 2026
+
+The common creature JSON can now join native battles. Import a file under **自定义兵种**, select its creatures in the army editor and set their counts. The format includes a version, unique author ID, label, display group, base statistics and mechanisms. Artwork uses the same author ID; missing GLBs use procedural models. The [public format guide](https://github.com/yzh119/h3-battle-lab/blob/main/docs/custom-creatures.md) links the Schema and example pack.
+
+VCMI does not allow new creature IDs to be registered after initialization. Import therefore validates the entire pack, generates a standard `battle-lab-custom` mod, prepares an isolated resource profile and starts a candidate engine. The session changes only after successful native initialization; failures preserve the previous process. Later files append to the current page's pack, with duplicate IDs rejected. Reset and reconnect preserve imported definitions; a page reload returns to the base profile. Custom mode is explicitly labeled, and original creature IDs and statistics remain protected.
+
+Eight mechanisms currently map to native bonuses: flight, additional attacks, regeneration, retaliation counts, blocked retaliation, shooters, undead and death cloud. Compiled VCMI determines attack ranges, cloud victims/casualties, regeneration and retaliation limits. The converter produces configuration only; TypeScript has no mechanism interpreter. The authoring `faction` field currently groups the selector, while imported creatures belong to the native neutral faction. Regeneration follows VCMI's current first-activation processing each round. These limits are documented; further behavior still requires native bonuses or engine scripts.
+
+**Seventeen native integration tests and twelve browser tests passed.** New native checks cover custom statistics/flight, melee extra attacks and blocked retaliation, double shots, death-cloud damage to adjacent living allies and immunity for undead neighbors, healing only the injured top creature, and zero/two retaliation limits. Browser checks import a creature, start combat, request native AI, reset, reject duplicate imports while retaining the session, reconnect and start another battle. Reconnection also preserves hero settings. Three resource-free converter tests cover whole-pack validation, protected original IDs and profile isolation. See the [custom-creature mod integration commit](https://github.com/yzh119/h3-battle-lab/commit/9707150).
+
+~~Hero/skill/spell commands, configurable terrain and obstacles, custom-creature conversion, complete ability verification and WASM remain pending. The current fixture uses fixed sand terrain without obstacles or fighting heroes.~~ (October 3 update: custom heroes, skills and spell commands are connected. Named heroes, specialties, artifacts, configurable terrain/obstacles, ~~custom-creature conversion~~, complete rule verification and WASM remain pending. The fixture still uses fixed sand without initial obstacles; spell-created obstacles are engine-managed.) ~~The common creature JSON can be validated in the sidebar but cannot yet join a battle;~~ (October 3 update: standard mod conversion and native battle imports are now connected, as described above.) its mechanics will execute only in the engine or engine scripts. WASM should later implement the same interface. VCMI-Gym is not a dependency. Installed rule mods are excluded, but the `base-reference` profile does not certify original H3 parity. Differences still need individual checks and engine-side corrections.
 
 Codex wrote this round's native wrapper and verification code. Existing models and animations were reused without overwriting source files. The public repository still contains code only; full game resources, models and textures stay local. The previous army-editor images and notes are preserved below.
 
