@@ -1,7 +1,7 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T06:34:26+00:00
+lastmod: 2026-10-03T08:18:48+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Named heroes/specialties, combat spells, terrain/obstacle settings and custom-creature imports through isolated VCMI mods are connected; WASM remains pending."
@@ -42,7 +42,7 @@ The exporter also handles actions that use different skeletons or scene roots, i
 
 ## Heroes and combat magic, October 3, 2026
 
-Either army can now enable a custom hero with attack, defense, spell power, knowledge, up to eight original secondary skills and their mastery levels, and an explicit spellbook. These heroes have no specialties or combat artifacts. VCMI supplies army bonuses, skill effects, spell mastery, mana capacity and spell costs.
+Either army can now enable a custom hero with attack, defense, spell power, knowledge, up to eight original secondary skills and their mastery levels, and an explicit spellbook. ~~These heroes have no specialties or combat artifacts.~~ (October 3 update: anonymous custom heroes still have no specialty; named heroes retain theirs, and combat equipment is connected.) VCMI supplies army bonuses, skill effects, spell mastery, mana capacity and spell costs.
 
 The spellbook displays **60 original combat spells**, current costs and availability, and legal targets supplied by the engine. Select a spell and target, then confirm the cast. Single targets can also be chosen on the battlefield; Teleport and other two-target spells use an ordered list. VCMI enforces one hero cast per side per round; casting normally leaves the same stack active. Native state also determines immunity, mass effects, resurrection, summons and the controller of hypnotized stacks. Summons and clones become additional rendered units, using procedural models when artwork is unavailable.
 
@@ -60,7 +60,29 @@ The hero editor now lists **32 original Castle/Necropolis heroes**, using native
 
 New checks initialize all thirty-two heroes, exercise level twenty and the interface's maximum level, reproduce preview/create, reject invalid configurations without replacing an existing battle, and allow both sides to use the same hero type. Combat comparisons use otherwise equal anonymous heroes: Valeska and Galthran grant native attack/defense/speed bonuses to their matching creatures, Orrin's Archery specialty increases actual shooting damage, and Sandro's Sorcery specialty increases spell damage. The browser selects level-twenty Galthran, checks hover attributes and reset, then casts Magic Arrow through an explicitly configured spellbook.
 
-**Twenty-seven native integration tests and fifteen browser tests passed.** These cases do not establish original-game parity for every specialty. Estates, Navigation, after-battle Necromancy and other adventure outcomes, combat artifacts and war machines remain unconnected. See the [original heroes, specialties and native progression commit](https://github.com/yzh119/h3-battle-lab/commit/5f23b99).
+**Twenty-seven native integration tests and fifteen browser tests passed.** These cases do not establish original-game parity for every specialty. Estates, Navigation, after-battle Necromancy and other adventure outcomes, ~~combat artifacts and war machines remain unconnected.~~ (Later October 3 update: equipment and war machines are connected, as described below.) See the [original heroes, specialties and native progression commit](https://github.com/yzh119/h3-battle-lab/commit/5f23b99).
+
+## Equipment, war machines and presentation fixes, October 3, 2026
+
+The hero equipment editor reads original artifacts and permitted slots from VCMI. The engine applies combination locks, scroll spells, primary bonuses and mana capacity after equipment. The editor separates base attributes from final totals, avoiding repeated bonuses when overriding attributes. Native starting equipment can be preserved or explicitly removed.
+
+Ballista, Ammo Cart and First Aid Tent use native extra positions outside the seven army slots. Real actions exercise ballista double shots, ammunition preservation and healing the injured top creature. Native queries select healing targets; tent AI calls compiled upstream `CBattleAI::useHealingTent`, while regular stacks still use `BattleEvaluator`. **Thirty-three native integration tests and twenty-one browser tests passed.** Adventure artifacts also appear in the catalogue; that does not implement their adventure outcomes. Siege, initial Tactics positioning and full original-game parity remain pending.
+
+Cavalier and Champion exports face -X, while movement playback assumed +Z, producing sideways movement. Their model forward axes are now normalized before turning along native paths. Humanoid scaling uses skeleton head/foot landmarks, excluding spear tips and wings; actual screenshots compare Pikeman and Archer body sizes. One/two-hex bases come from native footprints, with models centred between occupied hexes while movement retains the engine's leading hex. Crusader now uses the later helmet/surface candidate propagated to other action geometry, and Griffin includes later flight/death scenes. Original files and earlier exports remain preserved; content hashes refresh GLB URLs on reload. See the [equipment, war machines and presentation commit](https://github.com/yzh119/h3-battle-lab/commit/bdbd316).
+
+WASD now moves the viewpoint along the ground relative to the camera heading. Camera position and orbit target move together, while units retain their native positions. Input fields ignore movement shortcuts, and window blur clears held keys. Actual browser checks cover movement, text focus and stopping after blur.
+
+An audit of the 28 exports found unsupported procedural base-colour graphs in Skeleton, Skeleton Warrior, upgraded Zombie, Black Knight and Dread Knight. Those colour ramps became untextured white materials in glTF. A new local baking tool evaluates the original colour graphs as emission, excluding lighting, in copied scenes for every action. Actual Three.js captures show dark steel, oak and leather again; all five models still animate. Crusader had a separate source-material issue: its mixed shader exported pale non-metallic plate and a flat ivory tabard. A copied export now uses an explicit steel shader and baked cloth normals, retaining the ivory cloth. Its dense helmet was simplified in the export copy, reducing the GLB from about 252 MB to 85 MB. Actual Three.js loading and changing walk poses passed for all six revised models; each exposes five clips. The bake tool also follows the active surface rather than unused legacy nodes, covered by [three regression tests](https://github.com/yzh119/h3-battle-lab/commit/35dc1a3). Original Blender sources remain unchanged.
+
+![Black Knight after baking its missing material colours; actual Three.js browser capture](/images/battle-lab-materials/black-knight.png)
+
+![Crusader with explicit steel plate and cloth normals; actual Three.js browser capture](/images/battle-lab-materials/crusader.png)
+
+## A first 3D environment, October 3, 2026
+
+The requested quality is the realism of the existing 2D backgrounds in a fully rotatable 3D battlefield. An initial geometric hillside/tree/rock sketch was rejected and removed. Meshy then generated a ridge, pine grove and boulders, with an imagegen ground material. Those models loaded, but actual rendering showed poor foliage and assembled or floating slopes. That attempt did not meet the requested appearance.
+
+The current grass draft uses a [Poly Haven pine tree](https://polyhaven.com/a/pine_tree_01), rocks and scanned ground with albedo, normal and roughness maps. Terrain, grid, creatures and scenery rotate together; right-drag pans and the wheel zooms. The playing surface remains flat, with hills outside it; scenery does not add rule obstacles. Browser checks exercised real loading and rotation. Foliage density, composition and lighting are still being adjusted. This is the first grass draft; the other background themes have not been rebuilt, and appearance acceptance remains open. Artwork stays local.
 
 ## Archangel Resurrection, October 3, 2026
 
