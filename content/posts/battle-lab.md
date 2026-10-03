@@ -1,10 +1,10 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T06:18:51+00:00
+lastmod: 2026-10-03T06:34:26+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Heroes, combat spells, terrain/obstacle settings and custom-creature imports through isolated VCMI mods are connected; WASM remains pending."
+homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Named heroes/specialties, combat spells, terrain/obstacle settings and custom-creature imports through isolated VCMI mods are connected; WASM remains pending."
 tags: ["vcmi", "ai", "threejs", "graphics", "castle"]
 ---
 
@@ -52,6 +52,16 @@ Artwork now loads in the background. Army edits, complete-town presets and reset
 
 The wrapper and adaptation code live in this repository, preserving upstream VCMI sources. Future rule adaptations should use mods/plugins where supported; any necessary source changes will be tracked here as reviewable patches with reproducible builds.
 
+## Original heroes and specialties, October 3, 2026
+
+The hero editor now lists **32 original Castle/Necropolis heroes**, using native names, classes and specialty descriptions. Selecting a hero and level asks VCMI to initialize it from the experience table and allocate level-up attributes and skills automatically. The preview shows the actual generated configuration, and creation reproduces it with the same inputs and seed. These are the engine's automatic choices for a standalone battle; the interface does not play through a campaign's individual skill choices.
+
+**自定义属性、技能与魔法** enables explicit attribute, skill and spellbook overrides while keeping the selected hero's native specialty. **自定义英雄** retains the anonymous configuration without a specialty. The engine supplies level, attributes, skills, mana and casting outcomes; TypeScript has no specialty formulas.
+
+New checks initialize all thirty-two heroes, exercise level twenty and the interface's maximum level, reproduce preview/create, reject invalid configurations without replacing an existing battle, and allow both sides to use the same hero type. Combat comparisons use otherwise equal anonymous heroes: Valeska and Galthran grant native attack/defense/speed bonuses to their matching creatures, Orrin's Archery specialty increases actual shooting damage, and Sandro's Sorcery specialty increases spell damage. The browser selects level-twenty Galthran, checks hover attributes and reset, then casts Magic Arrow through an explicitly configured spellbook.
+
+**Twenty-seven native integration tests and fifteen browser tests passed.** These cases do not establish original-game parity for every specialty. Estates, Navigation, after-battle Necromancy and other adventure outcomes, combat artifacts and war machines remain unconnected. See the [original heroes, specialties and native progression commit](https://github.com/yzh119/h3-battle-lab/commit/5f23b99).
+
 ## Archangel Resurrection, October 3, 2026
 
 The **战斗魔法与兵种能力** panel now distinguishes hero magic from creature abilities. In the original Castle/Necropolis roster, Archangel Resurrection requires an active target choice. Native state supplies the available ability, remaining casts and current availability; native target queries include eligible dead stacks. Choose a target in the list or on the battlefield, then confirm VCMI's `MONSTER_SPELL` action. It consumes the creature's action and cast rather than hero mana or the hero's per-round spell allowance.
@@ -76,7 +86,7 @@ Eight mechanisms currently map to native bonuses: flight, additional attacks, re
 
 **Seventeen native integration tests and twelve browser tests passed.** New native checks cover custom statistics/flight, melee extra attacks and blocked retaliation, double shots, death-cloud damage to adjacent living allies and immunity for undead neighbors, healing only the injured top creature, and zero/two retaliation limits. Browser checks import a creature, start combat, request native AI, reset, reject duplicate imports while retaining the session, reconnect and start another battle. Reconnection also preserves hero settings. Three resource-free converter tests cover whole-pack validation, protected original IDs and profile isolation. See the [custom-creature mod integration commit](https://github.com/yzh119/h3-battle-lab/commit/9707150).
 
-~~Hero/skill/spell commands, configurable terrain and obstacles, custom-creature conversion, complete ability verification and WASM remain pending. The current fixture uses fixed sand terrain without obstacles or fighting heroes.~~ (October 3 update: custom heroes, skills and spell commands are connected. Named heroes, specialties, artifacts, ~~configurable terrain/obstacles~~, ~~custom-creature conversion~~, complete rule verification and WASM remain pending. ~~The fixture still uses fixed sand without initial obstacles;~~ spell-created obstacles are engine-managed. (Later October 3 update: terrain and initial obstacles are now configurable, as described above.)) ~~The common creature JSON can be validated in the sidebar but cannot yet join a battle;~~ (October 3 update: standard mod conversion and native battle imports are now connected, as described above.) its mechanics will execute only in the engine or engine scripts. WASM should later implement the same interface. VCMI-Gym is not a dependency. Installed rule mods are excluded, but the `base-reference` profile does not certify original H3 parity. Differences still need individual checks and engine-side corrections.
+~~Hero/skill/spell commands, configurable terrain and obstacles, custom-creature conversion, complete ability verification and WASM remain pending. The current fixture uses fixed sand terrain without obstacles or fighting heroes.~~ (October 3 update: custom heroes, skills and spell commands are connected. ~~Named heroes, specialties~~, artifacts, ~~configurable terrain/obstacles~~, ~~custom-creature conversion~~, complete rule verification and WASM remain pending. ~~The fixture still uses fixed sand without initial obstacles;~~ spell-created obstacles are engine-managed. (Later October 3 update: named heroes/specialties are connected, and terrain and initial obstacles are now configurable, as described above.)) ~~The common creature JSON can be validated in the sidebar but cannot yet join a battle;~~ (October 3 update: standard mod conversion and native battle imports are now connected, as described above.) its mechanics will execute only in the engine or engine scripts. WASM should later implement the same interface. VCMI-Gym is not a dependency. Installed rule mods are excluded, but the `base-reference` profile does not certify original H3 parity. Differences still need individual checks and engine-side corrections.
 
 Codex wrote this round's native wrapper and verification code. Existing models and animations were reused without overwriting source files. The public repository still contains code only; full game resources, models and textures stay local. The previous army-editor images and notes are preserved below.
 
