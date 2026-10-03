@@ -3,14 +3,42 @@ title: "[AI] Castle cavalry and angels"
 date: 2026-09-26T12:20:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Angel sword light and Archangel blade flames are installed in local 0.27.36. Includes Blender stills; wing revisions remain unfinished."
+homeSummary: "Archangel attachment repaired and the standing fold raised against original references; 0.27.41 installed, with comparisons and HD stills."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
-lastmod: 2026-10-03T02:40:00Z
+lastmod: 2026-10-03T05:15:19+00:00
 ---
+
+## Archangel wing attachment (October 2, 0.27.41)
+
+The user saw detached Archangel wings in the game again. Installed file hashes confirm that the 0.27.38 ground-gait update did not change this creature. The defect remained from 0.27.34: the replacement body retained wings driven by the old skeleton, whose animation also pushed the roots outward. Their motion no longer agreed with the new torso, exposing a gap during the upstroke. Shipping the body while deferring attachment repair left an incomplete result.
+
+Local **0.27.41** attaches both wing chains to the new upper torso with fitted root positions. The existing feather meshes and flapping rotations remain in use. All **16 groups and 91 native frames**, including takeoff, flight, attacks, hits and death, have been exported again with the flaming sword retained. Resting and fallen wing angles were adjusted to keep the feather tips above the ground.
+
+![Seven flight frames: 0.27.38 above and the attachment repair below; offline comparison with a shared game canvas](/images/archangel-wing-20261002/flight-comparison.jpg)
+
+![Revised flight pose, an actual high-resolution Blender still](/images/archangel-wing-20261002/flight-hd.jpg)
+
+![Rear close-up of both wing roots, rendered from the same flight scene used for export](/images/archangel-wing-20261002/root-hd.jpg)
+
+Astra edited the Blender rig and motion using the existing Meshy models. The first attempt transformed the base mesh but missed the death animation's feather shape keys, stretching the feathers into thin lines. Transforming those keys too fixed that regression; intermediate death poses were then checked for ground clearance. Both wings were sampled at quarter-frame intervals across every action, with all native export frames checked separately for canvas bounds and format. Skeletal attachment checks do not establish final acceptance of feather design, folded silhouettes or every body intersection.
+
+![Actual VCMI Archangel test battle with 0.27.41 installed](/images/archangel-wing-20261002/battle.jpg)
+
+After confirming flight, the user twice pointed out that the standing attachment still looked too low. The intermediate 0.27.40 raised the roots by about 7 cm, which was insufficient. Original CRANGL idle frames show an upper wing segment arching above the shoulder; ours hung almost straight down. Version 0.27.41 keeps the fitted roots, raises the upper segment, folds the elbow and lets the outer feathers descend. Landing and returns from attacks or hits follow this pose; the seven flight frames accepted by the user remain byte-identical.
+
+![Original Archangel and 0.27.41 folded silhouettes at the same display height; the original uses nearest-neighbor enlargement](/images/archangel-wing-20261002/native-fold-comparison.jpg)
+
+![Revised standing fold, an actual high-resolution Blender still](/images/archangel-wing-20261002/standing-full-hd.jpg)
+
+![Standing attachment at the shoulder blades, an actual Blender rear close-up](/images/archangel-wing-20261002/standing-root-hd.jpg)
+
+This delivery changes only Archangel resources and preserves the preceding ground-gait revisions, without VCMI source changes. Earlier sword-effect and body deliveries remain below as versioned records. Their pending root-attachment status is superseded here; the separate experimental curved-wing model is still not installed.
+
+
 
 ## Sword effects delivered in 0.27.36 (October 2)
 
-~~The current local mod is **0.27.37**.~~ Local **0.27.38** retains these sword effects and revises Cavalier and Champion diagonal support, hoof lift and transitions; see the [ground gait comparison](/posts/castle-halberdier-bootstrap/). Wing issues remain open.
+~~The current local mod is **0.27.37**.~~ ~~Local **0.27.38**~~ (the version at this stage) retains these sword effects and revises Cavalier and Champion diagonal support, hoof lift and transitions; see the [ground gait comparison](/posts/castle-halberdier-bootstrap/). ~~Wing issues remain open.~~ Root attachment is revised in 0.27.41 above.
 
 Sword effects are now installed for both angels. The original attack frames show different effects: the Angel has a golden-white blade, a short white trail, and golden illumination near impact; the Archangel has orange-gold flames along the blade.
 
@@ -24,7 +52,7 @@ The Swordsman's shoulder, elbow and wrist poses were also revised in 0.27.35; se
 
 ![Actual VCMI test battle in 0.27.35; the Angel light was added afterward in 0.27.36](/images/castle-top-tier-01/castle-02735-battle.png)
 
-The integrated bodies from the previous release remain in use. The Archangel's new curved wings are still uninstalled; wing attachment, folding, and some body deformation remain unfinished. ~~Castle town and thumbnail HD work is underway but has not been installed.~~ **Later on October 2:** the [Castle town and interface pack](/posts/castle-town-ui/) is installed locally as 0.1.2.
+The integrated bodies from the previous release remain in use. The Archangel's new curved wings are still uninstalled; ~~wing attachment, folding, and some body deformation remain unfinished.~~ Version 0.27.41 repairs attachment and adjusts ground folds; feather design and some body deformation remain open. ~~Castle town and thumbnail HD work is underway but has not been installed.~~ **Later on October 2:** the [Castle town and interface pack](/posts/castle-town-ui/) is installed locally as 0.1.2.
 
 <details>
 <summary>Earlier production record (historical versions and statuses)</summary>
