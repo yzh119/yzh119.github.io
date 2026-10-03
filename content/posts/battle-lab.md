@@ -1,7 +1,7 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T02:42:36+00:00
+lastmod: 2026-10-03T02:47:20+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Custom packs and WASM remain pending."
@@ -21,6 +21,8 @@ We then initialized the native library with an owned resource profile. It contai
 The real server battle processor now executes a fixed shooting scenario: twenty Marksmen fire twice at twenty Walking Dead with seed 1337. The attacks deal **55 and 54 damage**. Ammunition falls from 24 to 22; the target falls from 300 to 191 HP, leaving thirteen creatures, and becomes active next. VCMI computes the damage, ammunition and turn flow. Captured native messages include authoritative before/after state; the verifier checks casualties, health and state continuity. A separate run produces identical output. An in-memory SoD fixture supplies real game state without launching the graphical client. The [isolated profile and server battle commit](https://github.com/yzh119/h3-battle-lab/commit/33fa17a) includes reproduction commands.
 
 The browser now connects to a general native interface. Both armies can contain up to seven stacks chosen from all 28 original Castle/Necropolis creatures. VCMI supplies deployment, double-wide footprints, legal movement and attack positions, the turn queue, damage, health, counts and ammunition. The old `battle.ts` and frontend base combat-stat table have been removed. Three.js animates native movement, strikes and retaliation, updating displayed casualties at impact. See the [browser integration commit](https://github.com/yzh119/h3-battle-lab/commit/660d381).
+
+A fixture check found that the army containers still occupied the upstream test map’s default grass while the battlefield was sand, allowing Castle stacks to inherit a native-terrain bonus. Both are now sand. Every creature in the 28-unit roster has its base engine speed in battle. The fix changes only the privately copied test fixture, preserving upstream VCMI files; see the [terrain correction commit](https://github.com/yzh119/h3-battle-lab/commit/ba8608e). The 55/54 damage measurements above belong to the earlier standalone smoke-test version.
 
 Four native integration tests cover the full roster, double-wide deployment, movement, waiting, defense, double shots, melee retaliation and extra strikes, stale or illegal requests, victory cleanup and a fresh battle. Four browser tests passed, including real native shooting with artwork deliberately unavailable, impact timing, exact agreement between the final displayed state and the native response, defense/reset, and optional local GLB bone animation. Public CI has no game resources and checks the interface and missing-art scene; actual combat tests require a locally prepared engine and resource profile.
 
