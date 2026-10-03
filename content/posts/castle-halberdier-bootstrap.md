@@ -3,14 +3,35 @@ title: "[AI] Castle roster bootstrap"
 date: 2026-09-16T17:10:00+08:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
-homeSummary: "Swordsman shoulder, elbow and wrist revisions are installed in 0.27.35; the current local mod is 0.27.36. Includes actual Blender stills."
+homeSummary: "Swordsman cuff joins and sword-arm gait revised again; all 76 frames installed in 0.27.37, with Blender stills, an actual battle and failed attempts."
 tags: ["vcmi", "ai", "graphics", "blender", "meshy", "castle"]
 lastmod: 2026-10-02T16:00:00Z
 ---
 
+## Current Swordsman revision (October 2, 0.27.37)
+
+The previous Swordsman still had a visible gap between the left hand and cuff. While walking, the sword arm pulled behind the body and the wrist folded unnaturally. The user's follow-up exposed a gap in the earlier checks: bone connections and selected poses had been inspected, but the actual hand-to-cuff surface join had been missed.
+
+Local version **0.27.37** re-exports all **13 groups and 76 frames**. Hand attachments now follow the deformed cuff surface with a small overlap. The walking sword arm has been adjusted, using the idle forearm orientation as its reference to avoid carrying forward the old motion's excessive twist. Death, hit and defence retain their earlier body motion while receiving the same hand-attachment correction.
+
+![Swordsman idle: actual HD Blender render corresponding to installed version 0.27.37](/images/castle-top-tier-01/swordsman-02737-holding.png)
+
+![Swordsman mid-stride: actual HD Blender render for checking wrists and cuff joins](/images/castle-top-tier-01/swordsman-02737-moving.png)
+
+![Swordsman frontal attack: actual HD Blender render](/images/castle-top-tier-01/swordsman-02737-attack_front.png)
+
+Two intermediate attempts were rejected. One lost the existing hand scale when replacing its transform, producing oversized hands. Another retained the walking forearm rotation and twisted the bracer into a pointed shape. Restoring scale and using the idle orientation resolved those defects before export. The existing Meshy body and rig remain in use; Astra edited the Blender motion and attachment transforms.
+
+![Actual VCMI test battle with Swordsman 0.27.37 loaded, including waiting, acting and fallen units](/images/castle-top-tier-01/swordsman-02737-battle.png)
+
+Packaging checks passed, all 338 installed files were verified against the delivery manifest, and a local battle confirmed loading. Portraits were updated too. Appearance still needs evaluation across full motions; format checks do not establish visual acceptance. Angel and Archangel sword effects remain in place, documented in the [cavalry and angels article](/posts/castle-cavalry-angels/). Portrait background corrections are in the [Castle town and interface article](/posts/castle-town-ui/).
+
+<details>
+<summary>0.27.35–0.27.36 historical record (revised after user feedback)</summary>
+
 ## Current version and Swordsman poses (October 2)
 
-The local Castle mod is now **0.27.36**. The Swordsman pose update landed in 0.27.35. Its free arm had been too straight, with much of the walking swing rotating the entire arm at the shoulder. The revision bends the elbow, adjusts the wrist with the forearm, and changes the sword-arm elbow direction.
+~~The local Castle mod is now **0.27.36**.~~ This record has been superseded by 0.27.37. The Swordsman pose update landed in 0.27.35. Its free arm had been too straight, with much of the walking swing rotating the entire arm at the shoulder. The revision bends the elbow, adjusts the wrist with the forearm, and changes the sword-arm elbow direction.
 
 ![Revised Swordsman idle, an actual HD Blender still, installed locally](/images/castle-top-tier-01/swordsman-02735-holding.png)
 
@@ -19,6 +40,9 @@ The local Castle mod is now **0.27.36**. The Swordsman pose update landed in 0.2
 The update replaces **53 frames** across idle, movement, inspection, turns, movement transitions and all three attack directions. The creature retains its native **13 groups and 76 frames**. Death, hit and defence remain from the previous version; the Crusader is unchanged. Astra edited Blender motion and hand attachments on the existing Meshy body and rig, without another model-generation job.
 
 The 1× and 2× assets are installed, packaging passed with zero errors and warnings, and a local test battle confirmed loading. These checks do not certify the appearance of every motion. Angel and Archangel sword effects are covered in the [cavalry and angels article](/posts/castle-cavalry-angels/).
+
+
+</details>
 
 <details>
 <summary>Earlier production record (historical versions and statuses)</summary>

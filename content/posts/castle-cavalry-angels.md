@@ -8,7 +8,9 @@ tags: ["vcmi", "ai", "graphics", "blender", "meshy", "flux", "castle"]
 lastmod: 2026-10-02T16:00:00Z
 ---
 
-## Current version: 0.27.36 (October 2)
+## Sword effects delivered in 0.27.36 (October 2)
+
+The current local mod is **0.27.37**, retaining these sword effects. Its additional [Swordsman revision](/posts/castle-halberdier-bootstrap/) is recorded separately.
 
 Sword effects are now installed for both angels. The original attack frames show different effects: the Angel has a golden-white blade, a short white trail, and golden illumination near impact; the Archangel has orange-gold flames along the blade.
 
@@ -22,7 +24,7 @@ The Swordsman's shoulder, elbow and wrist poses were also revised in 0.27.35; se
 
 ![Actual VCMI test battle in 0.27.35; the Angel light was added afterward in 0.27.36](/images/castle-top-tier-01/castle-02735-battle.png)
 
-The integrated bodies from the previous release remain in use. The Archangel's new curved wings are still uninstalled; wing attachment, folding, and some body deformation remain unfinished. Castle town and thumbnail HD work is underway but has not been installed.
+The integrated bodies from the previous release remain in use. The Archangel's new curved wings are still uninstalled; wing attachment, folding, and some body deformation remain unfinished. ~~Castle town and thumbnail HD work is underway but has not been installed.~~ **Later on October 2:** the [Castle town and interface pack](/posts/castle-town-ui/) is installed locally as 0.1.2.
 
 <details>
 <summary>Earlier production record (historical versions and statuses)</summary>
