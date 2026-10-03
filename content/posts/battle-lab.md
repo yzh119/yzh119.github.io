@@ -1,7 +1,7 @@
 ---
 title: "[AI] 3D battlefield experiments"
 date: 2026-09-21T01:05:15+00:00
-lastmod: 2026-10-03T05:36:29+00:00
+lastmod: 2026-10-03T05:49:52+00:00
 series: ["Enhancing Heroes III with Generative AI"]
 ai: true
 homeSummary: "The browser now uses native VCMI combat for 28 Castle/Necropolis creatures; the TypeScript simulator is removed. Heroes, combat spells and custom-creature imports through isolated VCMI mods are connected; WASM remains pending."
@@ -51,6 +51,12 @@ The spellbook displays **60 original combat spells**, current costs and availabi
 Artwork now loads in the background. Army edits, complete-town presets and reset take effect immediately with procedural models; failed loads retain the chosen creature. A Cavalier loading test had taken about 55 seconds. Alternate-scene exports carried repeated geometry and textures; exact binary payloads and texture sources are now shared while each scene keeps its skeleton and animations. Cavalier shrank from about **178 MiB to 37 MiB**, and its loading/animation test took about **five seconds** in this run. These timings describe one local browser, rather than performance on every device. Original Blender scenes remain untouched, and previous exports are backed up. See the [scene resource sharing commit](https://github.com/yzh119/h3-battle-lab/commit/37dca55).
 
 The wrapper and adaptation code live in this repository, preserving upstream VCMI sources. Future rule adaptations should use mods/plugins where supported; any necessary source changes will be tracked here as reviewable patches with reproducible builds.
+
+## Archangel Resurrection, October 3, 2026
+
+The **战斗魔法与兵种能力** panel now distinguishes hero magic from creature abilities. In the original Castle/Necropolis roster, Archangel Resurrection requires an active target choice. Native state supplies the available ability, remaining casts and current availability; native target queries include eligible dead stacks. Choose a target in the list or on the battlefield, then confirm VCMI's `MONSTER_SPELL` action. It consumes the creature's action and cast rather than hero mana or the hero's per-round spell allowance.
+
+A native test had one Archangel restore ten dead Pikemen to **ten creatures and 100 HP**, reducing remaining casts from **one to zero**. Later rounds did not replenish the cast. Enemy/undead targets, noncasters and repeat use were rejected without state changes. The browser exercised the actual ability menu and displayed the restored stack and native spell event. **Nineteen native integration tests and thirteen browser tests passed.** This scenario does not establish complete creature/spell parity, and casting animation still needs refinement. See the [active creature ability integration commit](https://github.com/yzh119/h3-battle-lab/commit/b0e4a1f).
 
 ## Custom creatures, October 3, 2026
 
